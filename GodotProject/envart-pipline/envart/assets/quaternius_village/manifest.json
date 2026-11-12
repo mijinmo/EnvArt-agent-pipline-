@@ -35,7 +35,14 @@
     "Prop_Brick3",
     "Prop_Brick4",
     "Prop_Wagon",
-    "Roof_RoundTile_2x1_Long"
+    "Roof_RoundTile_2x1_Long",
+    "Roof_RoundTiles_4x4",
+    "Roof_RoundTiles_4x6",
+    "Roof_Front_Brick4",
+    "Roof_Tower_RoundTiles",
+    "Prop_Chimney",
+    "Prop_Chimney2",
+    "Door_1_Flat"
   ],
   "files": [
     {
@@ -85,6 +92,14 @@
     {
       "file": "DoorFrame_Flat_WoodDark.gltf",
       "sha256": "e12b923833fe91ba7c26c3984b0d7860a498bc955f6092b2af9fc0f3012105c6"
+    },
+    {
+      "file": "Door_1_Flat.bin",
+      "sha256": "f2235efcb17e3c7c761eba632bba8901f0299e65a27483528b486fbaece29bb5"
+    },
+    {
+      "file": "Door_1_Flat.gltf",
+      "sha256": "7e69ba9bcaf45238daa22b96461e9af6c80a59f422f9effb6de7f32e1fc677d8"
     },
     {
       "file": "Floor_UnevenBrick.bin",
@@ -137,6 +152,22 @@
     {
       "file": "Prop_Brick4.gltf",
       "sha256": "6801f77751b8def76043d0598cafc66d8293852bcbca36a31e0498ca7d0e3026"
+    },
+    {
+      "file": "Prop_Chimney.bin",
+      "sha256": "d8fb86bae7360511b362240c22431c6a463a38a3519059e0abf7fc343ef920f9"
+    },
+    {
+      "file": "Prop_Chimney.gltf",
+      "sha256": "eeda2bd328baa49ce2260b2df1f0280db4ebc3752fa784371b2da5752697c3ba"
+    },
+    {
+      "file": "Prop_Chimney2.bin",
+      "sha256": "07d34b621ea375292e907a92f9231da9539d44224b7b54ff0aaf8d4cc871dc09"
+    },
+    {
+      "file": "Prop_Chimney2.gltf",
+      "sha256": "45e93dfdacd304864ec90fd8a36392bf743b62a35d3b850ac3a25cb4330dc3c6"
     },
     {
       "file": "Prop_ExteriorBorder_Straight1.bin",
@@ -203,6 +234,14 @@
       "sha256": "f81bf401710cd59f1325a5cdb36d335c2e5277c8416d79eefffdc646ec3fae83"
     },
     {
+      "file": "Roof_Front_Brick4.bin",
+      "sha256": "749472d85fbbe9996b20162c8d58dbb49b7271a7d865b3856e761d0a288cc8e5"
+    },
+    {
+      "file": "Roof_Front_Brick4.gltf",
+      "sha256": "a231d35e4929f087526a6126a25a2732efa3799be6119d55107c241ca124564f"
+    },
+    {
       "file": "Roof_Log.bin",
       "sha256": "aa78387c070126a4b4b56f289dde263e315eb88b2733dc238d5a8d2a6ca97812"
     },
@@ -217,6 +256,30 @@
     {
       "file": "Roof_RoundTile_2x1_Long.gltf",
       "sha256": "a284ae84bd9eb0d9a6b05e42aa64e23d826f773ff8706619c80f4a346a0d279f"
+    },
+    {
+      "file": "Roof_RoundTiles_4x4.bin",
+      "sha256": "414067398f08e15e7c5c2c56b648770d3d49427489f073b0078ffde81673af67"
+    },
+    {
+      "file": "Roof_RoundTiles_4x4.gltf",
+      "sha256": "c6a7ce0649b897a7746929b44c448f4343f55ccd969ca1e4462f2f18b61676e4"
+    },
+    {
+      "file": "Roof_RoundTiles_4x6.bin",
+      "sha256": "f68f36721d6d1000c1f16d1d1482c33479aa6ea518d2872e9649ce762b01c52c"
+    },
+    {
+      "file": "Roof_RoundTiles_4x6.gltf",
+      "sha256": "4d969026106822eb2106a32a8d596416e069f63e20f53b475839076fb635ed5a"
+    },
+    {
+      "file": "Roof_Tower_RoundTiles.bin",
+      "sha256": "9b476b9ce73bb9fe17813f03316a674402a4cf9f91589cc2fbacdf2188cfbfef"
+    },
+    {
+      "file": "Roof_Tower_RoundTiles.gltf",
+      "sha256": "b484ef0275ec4012933f020a6d60d84ec8ed3816c7b97b19565db0e493cbb74e"
     },
     {
       "file": "Roof_Wooden_2x1.bin",
@@ -237,6 +300,14 @@
     {
       "file": "T_Brick_Roughness.png",
       "sha256": "981e7a4f8e3119749b2fb3d557e3d0ba0551e75a39b467cff0a3a948a9392716"
+    },
+    {
+      "file": "T_MetalOrnaments_BaseColor.png",
+      "sha256": "28603125908bb443ef7ac405d6bf2978dafdd348081c1dfd21630ac09862b668"
+    },
+    {
+      "file": "T_MetalOrnaments_Roughness.png",
+      "sha256": "2de0135d6ffc3021e2550860107f531d0e64fdd0b46b3bf06f2f85e30b818874"
     },
     {
       "file": "T_Plaster_BaseColor.png",

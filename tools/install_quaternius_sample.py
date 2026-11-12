@@ -17,7 +17,9 @@ Floor_UnevenBrick Floor_WoodDark Balcony_Cross_Straight Balcony_Simple_Straight
 Corner_Exterior_Wood Corner_Exterior_Brick Roof_Wooden_2x1 Roof_Log
 Prop_ExteriorBorder_Straight1 Prop_ExteriorBorder_Straight2 Prop_Support
 Prop_Vine1 Prop_Vine2 Prop_Vine4 Prop_Vine5 Prop_Brick1 Prop_Brick2
-Prop_Brick3 Prop_Brick4 Prop_Wagon Roof_RoundTile_2x1_Long""".split()
+Prop_Brick3 Prop_Brick4 Prop_Wagon Roof_RoundTile_2x1_Long
+Roof_RoundTiles_4x4 Roof_RoundTiles_4x6 Roof_Front_Brick4
+Roof_Tower_RoundTiles Prop_Chimney Prop_Chimney2 Door_1_Flat""".split()
 PROPS = """Barrel Barrel_Apples Barrel_Holder Crate_Wooden Crate_Metal Bag
 FarmCrate_Apple FarmCrate_Carrot FarmCrate_Empty Lantern_Wall Banner_1
 Workbench Workbench_Drawers Stool Bench Bucket_Wooden_1 Bucket_Metal
@@ -25,6 +27,10 @@ Rope_1 Rope_2 Rope_3 Chain_Coil Peg_Rack Pickaxe_Bronze Axe_Bronze
 Stall_Empty Stall_Cart_Empty Pot_1 Pot_1_Lid Vase_2 Vase_4 Vase_Rubble_Medium
 Bottle_1 SmallBottle Mug Scroll_1 Scroll_2 Book_5 Pouch_Large CandleStick
 Chest_Wood""".split()
+NATURE = """Bush_Common Bush_Common_Flowers Grass_Common_Short Grass_Common_Tall
+Grass_Wispy_Short Grass_Wispy_Tall Clover_1 Clover_2 Fern_1 Flower_3_Group
+Flower_4_Group CommonTree_1 CommonTree_3 Pine_1 Rock_Medium_1 Pebble_Round_1
+Pebble_Round_2""".split()
 
 
 def install(archive, folder, prefix, models, source):
@@ -63,3 +69,6 @@ if __name__ == "__main__":
             "https://opengameart.org/content/medieval-village-megakit")
     install(sys.argv[2], "quaternius_props", "Exports/glTF/", PROPS,
             "https://opengameart.org/content/fantasy-props-megakit")
+    if len(sys.argv) > 3:
+        install(sys.argv[3], "quaternius_nature", "glTF/", NATURE,
+                "https://opengameart.org/content/stylized-nature-megakit")

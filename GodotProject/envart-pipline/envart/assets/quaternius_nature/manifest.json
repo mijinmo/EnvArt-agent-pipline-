@@ -1,0 +1,210 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "edition": "Standard / free",
+  "source": "https://opengameart.org/content/stylized-nature-megakit",
+  "downloaded": "2026-11-12",
+  "archive_sha256": "298f6732b872e4cf7b30e6e7abf9641c7f6dc6b326df37ac089533ed7e3d58c9",
+  "models": [
+    "Bush_Common",
+    "Bush_Common_Flowers",
+    "Grass_Common_Short",
+    "Grass_Common_Tall",
+    "Grass_Wispy_Short",
+    "Grass_Wispy_Tall",
+    "Clover_1",
+    "Clover_2",
+    "Fern_1",
+    "Flower_3_Group",
+    "Flower_4_Group",
+    "CommonTree_1",
+    "CommonTree_3",
+    "Pine_1",
+    "Rock_Medium_1",
+    "Pebble_Round_1",
+    "Pebble_Round_2"
+  ],
+  "files": [
+    {
+      "file": "Bark_NormalTree.png",
+      "sha256": "f36e94fdd73255347325b998e02a0b2575fdf714b0315bfe5e8ff34bc8e13603"
+    },
+    {
+      "file": "Bark_NormalTree_Normal.png",
+      "sha256": "852f6155404b8c39e100e41e26970e02a6a5c81b482d3726618dab28e3ad03a2"
+    },
+    {
+      "file": "Bush_Common.bin",
+      "sha256": "a5e1a773c8ba78fd9c05a8b342131eba4879302a8fddd2c5186cab9ee1ef4966"
+    },
+    {
+      "file": "Bush_Common.gltf",
+      "sha256": "77811fca92610cb254713d3d49d5029ab6cf13050c3afb61aa942786a7b2ca90"
+    },
+    {
+      "file": "Bush_Common_Flowers.bin",
+      "sha256": "15f56a013afe0eecaded0eb97fd8f323305af11e1f0f7bb9b68472ec4cdc20d5"
+    },
+    {
+      "file": "Bush_Common_Flowers.gltf",
+      "sha256": "08768c680e3abeafd25858c9d3f369bcb7eed014661d3b6825a397f2a6a3deea"
+    },
+    {
+      "file": "Clover_1.bin",
+      "sha256": "788fabaffc3f8f2825ad88399bd4725d8bc397225d93d00926c3223fdee9516b"
+    },
+    {
+      "file": "Clover_1.gltf",
+      "sha256": "05fe48cdf1f3db879371a6ba0d843fcd407667b7680def5716c9f286efe0306b"
+    },
+    {
+      "file": "Clover_2.bin",
+      "sha256": "eeabca833167f3e20d6f157b3e7885e0ade908b1f1d61909812076ad52d44047"
+    },
+    {
+      "file": "Clover_2.gltf",
+      "sha256": "8ef8e861209c9b86e3d8f7a9c6d5653e5e0051a9a86cf22cb57849c63cc9cf10"
+    },
+    {
+      "file": "CommonTree_1.bin",
+      "sha256": "9dd689e84e1aa2f5b08db8def591254d582783c73737af54ba0d89b3e549c3ae"
+    },
+    {
+      "file": "CommonTree_1.gltf",
+      "sha256": "b51cdea6545edb51d102dd6c27caafe62aa75e3c328ac8f9039f4e7bfd690bfa"
+    },
+    {
+      "file": "CommonTree_3.bin",
+      "sha256": "24541f46fd9553e2389aba15575f2697009226e82118ed76868284114fd12b49"
+    },
+    {
+      "file": "CommonTree_3.gltf",
+      "sha256": "17c6537aa8042bb7255fbb501bf7aeb2b6db87c16766f794f9c37be3ce70c976"
+    },
+    {
+      "file": "Fern_1.bin",
+      "sha256": "5e92b87a27f81a69fe15347a533df3c77d567b48298dceeef43168ccb7c22853"
+    },
+    {
+      "file": "Fern_1.gltf",
+      "sha256": "d41915cffe9dbbde1ae88be381eb9c60f7caa2274511436cc78fe4de627468ab"
+    },
+    {
+      "file": "Flower_3_Group.bin",
+      "sha256": "5ab387dd3d6fe181df3af4eeac4df85533e4c27e77545ae39a61e0c2aaaab248"
+    },
+    {
+      "file": "Flower_3_Group.gltf",
+      "sha256": "4df1612371982c543f930d6b213967372e0d459622d7eff7fc2ed1ddbfaa3b6c"
+    },
+    {
+      "file": "Flower_4_Group.bin",
+      "sha256": "3ac30b4c9eaa5078a17c061aa29e2e9618cc9eb58cb6d5d2ab0c07fa0b851ae1"
+    },
+    {
+      "file": "Flower_4_Group.gltf",
+      "sha256": "69ead56b36b50f06a0cf18380797fce7434302e9b2da7bf68a85014b993c6134"
+    },
+    {
+      "file": "Flowers.png",
+      "sha256": "5c531f2329c241c625aafd6cb769de29f33b480ef2a16491c2489f3c68e62a6a"
+    },
+    {
+      "file": "Grass.png",
+      "sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd"
+    },
+    {
+      "file": "Grass_Common_Short.bin",
+      "sha256": "7a0f0f7a9ac39cfa4b303bac03a6594f43e48d873b73553fa06a79e4df1271e9"
+    },
+    {
+      "file": "Grass_Common_Short.gltf",
+      "sha256": "6957b50622c9e26e7296c1b47ea8653bc0d957e0a547de444e2ed96f0075a21a"
+    },
+    {
+      "file": "Grass_Common_Tall.bin",
+      "sha256": "d7422b9360dd644f4095ac77a00dfa5d1f1078af71ebf18865a28ef031651379"
+    },
+    {
+      "file": "Grass_Common_Tall.gltf",
+      "sha256": "783466c838163bf7da44e10675ace3851b8c9fb83322387125df7a080b05cd70"
+    },
+    {
+      "file": "Grass_Wispy_Short.bin",
+      "sha256": "c38f46e5a66ed3917fd45104effb914228d43d3724f4659416e1533dcd71776d"
+    },
+    {
+      "file": "Grass_Wispy_Short.gltf",
+      "sha256": "3c1d3bdd332420e070abde72d73611d1f13acfbe027e26b2fb943f9bcbd6b1c5"
+    },
+    {
+      "file": "Grass_Wispy_Tall.bin",
+      "sha256": "a46e091f39958242a96722ea331efa8d7fb055c6e24d21aea6b0ac091a7b1b66"
+    },
+    {
+      "file": "Grass_Wispy_Tall.gltf",
+      "sha256": "a05e3ac05e43abbdb89c5b61134e367c7d33e285ff8d2a6e0a40180cb335af0b"
+    },
+    {
+      "file": "Leaf_Pine_C.png",
+      "sha256": "86f7ff7a214f5424de48d269568f36a15485e61c80677e426c7be9f45181eef9"
+    },
+    {
+      "file": "Leaves.png",
+      "sha256": "23248cebe28a24e78add32db3c2ee2f4d7b9219e9d2467279722f0197a7b6bd5"
+    },
+    {
+      "file": "Leaves_NormalTree_C.png",
+      "sha256": "998612bdf0b76a22f5f54d65cd7a457815d2842d89653fa4348a4ebb42933ad3"
+    },
+    {
+      "file": "Leaves_TwistedTree_C.png",
+      "sha256": "0e459b56b14c0e81b1b7cf3d1e8c6f0bb71790eb6c46bb02a76a922d8df646ea"
+    },
+    {
+      "file": "License_Standard.txt",
+      "sha256": "120710e542c3ebaf83856c4eb55b4a1e680593b39302eba7fdc5d942dfe78c58"
+    },
+    {
+      "file": "PathRocks_Diffuse.png",
+      "sha256": "85a04abb2c136fee53b376daf3b7d7f96fdf3966de0258dff6fe2b24da792b23"
+    },
+    {
+      "file": "Pebble_Round_1.bin",
+      "sha256": "f3dacef3243ccaaad7df2beb5c72574a38fb3eae45357e1b5e2b40200d51c375"
+    },
+    {
+      "file": "Pebble_Round_1.gltf",
+      "sha256": "9f6261c81134915e73cf35eb4e37076238fd1e79434515ac686d15cbd1f779ab"
+    },
+    {
+      "file": "Pebble_Round_2.bin",
+      "sha256": "1bfde4a0934efd627c559a93d7ec28614b029efc48ce92c86060a6284ea911a9"
+    },
+    {
+      "file": "Pebble_Round_2.gltf",
+      "sha256": "d840c072326701dd5b6c884871948b67cb38e7d10d28773c89ee2ae89da810eb"
+    },
+    {
+      "file": "Pine_1.bin",
+      "sha256": "0cc0900d156359cab7028d87cd5d8897fbcb0479ddf1ddf524d5462c11e17af2"
+    },
+    {
+      "file": "Pine_1.gltf",
+      "sha256": "adc85a72e6f46f71317ca5f7630876bfb207f687427bc9e37cd97ec4af5f2cbc"
+    },
+    {
+      "file": "Rock_Medium_1.bin",
+      "sha256": "ea79527d4c2b3bdb7a28bf589bf0c1fd96d192a4d0738636753911dd58681e99"
+    },
+    {
+      "file": "Rock_Medium_1.gltf",
+      "sha256": "5d1ab1fa03218f4a908728ed0eabe6486344a7e4f510b0d3d6f837fd1d011bd8"
+    },
+    {
+      "file": "Rocks_Diffuse.png",
+      "sha256": "b813696df6081f469a127092eb0ce45cc39d56f3ccc0699152bfcd3804810b48"
+    }
+  ],
+  "modifications": "None; original glTF, buffers, and texture dependencies."
+}
