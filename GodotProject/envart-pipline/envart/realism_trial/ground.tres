@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://envart/assets/polyhaven/cobblestone_floor_03/cobblestone_floor_03_diff_2k.jpg" id="1_3vot5"]
+[ext_resource type="Texture2D" path="res://envart/assets/polyhaven/cobblestone_floor_03/cobblestone_floor_03_arm_2k.jpg" id="2_kigiu"]
+[ext_resource type="Texture2D" path="res://envart/assets/polyhaven/cobblestone_floor_03/cobblestone_floor_03_nor_gl_2k.jpg" id="3_648pa"]
+
+[resource]
+albedo_texture = ExtResource("1_3vot5")
+roughness_texture = ExtResource("2_kigiu")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("3_648pa")
+ao_enabled = true
+ao_texture = ExtResource("2_kigiu")
+uv1_scale = Vector3(0.41666666, 0.41666666, 0.41666666)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5

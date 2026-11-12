@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>写实素材替换实验 · Godot EnvArt</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#171d20;color:#e4e8e5;font:16px/1.8 system-ui,sans-serif}main{max-width:1250px;margin:auto;padding:40px 26px 80px}h1{font-size:clamp(30px,4vw,52px);line-height:1.2}h2{margin-top:48px;color:#d4bc88}a{color:#a6d3dd}p{max-width:880px}.tag{font-size:12px;letter-spacing:.16em;color:#c2b594}.note{border-left:3px solid #d4bc88;padding:12px 22px;background:#252c2e}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0}img{width:100%;display:block;background:#31393b;border-radius:8px}figcaption{padding:10px 2px;color:#aebcb9;font-size:14px}code{background:#293336;padding:3px 6px;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:12px;border-bottom:1px solid #435052}th{color:#d4bc88}li{margin:8px 0}@media(max-width:760px){.pair{grid-template-columns:1fr}main{padding:24px 16px}table{font-size:12px}td{padding:8px}}
+</style></head><body><main>
+<div class="tag">ENVART / EXPERIMENT 04 / POLY HAVEN</div>
+<h1>换一批素材，观察写实细节</h1>
+<p>针对上一批素材 Low Poly 风格明显的问题，新增独立的 Poly Haven 试验场。主要观察石砌门洞、墙面、木箱、酒桶、木桶、灯笼和工作台的近景表现。图片均为 Godot 4.7.2 Metal Forward+ 实机截图。</p>
+<p class="note">这是局部素材尝试，尚未确定采用这个美术方向。原有晴日、灰烬、科幻三场景和 F5 入口保持原样。此次同时调整了装配和照明，所以是同机位方向对比，并非严格控制变量的材质实验。</p>
+<h2>如何运行</h2>
+<ol><li>在 Godot 左下角 FileSystem 中找到 <code>res://envart/realism_trial/trial.tscn</code>，双击打开。</li><li>按 <strong>F6</strong> 运行当前场景；F5 仍运行原有三方向对比入口。</li><li>按 <strong>5</strong> 看门洞，<strong>7</strong> 看墙边道具。按 <strong>3</strong> 自由观察，点击画面后用 WASD 移动、鼠标看向、E/Q 升降。</li><li><strong>1 / 2</strong> 切第一 / 第三人称；<strong>4</strong> 切轨迹相机，P 播放暂停。<strong>0</strong> 白盒对照，H 隐藏提示，Esc 释放鼠标。</li></ol>
+<p>门洞、坡道、原有 17 个玩法碰撞体未修改；大件道具有简化盒形碰撞。门洞仍按原有 1.2 m × 2.3 m 碰撞净空试玩，上部拱券是装饰造型。白盒模式会隐藏新增美术并关闭新增碰撞。</p>
+<h2>门洞 · 同机位</h2>
+<div class="pair"><figure><img src="images/directions/ashen/door.png" alt="先前灰烬方向的门洞"><figcaption>先前：KayKit 石砌构件，轮廓和表面更简化。</figcaption></figure><figure><img src="images/realism-trial/door.png" alt="Poly Haven 石堡门洞与木制道具"><figcaption>本次：Poly Haven 石堡拱门、风化墙面和带完整 PBR 贴图的道具。</figcaption></figure></div>
+<h2>墙边道具 · 同机位</h2>
+<div class="pair"><figure><img src="images/directions/ashen/props.png" alt="先前灰烬方向的墙边道具"><figcaption>先前灰烬方向。</figcaption></figure><figure><img src="images/realism-trial/props.png" alt="写实方向的墙边道具"><figcaption>本次以货物储存、木桶维修为主题，观察木材与铁箍的材质区分。</figcaption></figure></div>
+<h2>近看：木纹、铁箍、接缝与地面</h2>
+<figure><img src="images/realism-trial/workbench_detail.png" alt="工作台、灯笼、铁锤、酒桶和石铺地面近景"><figcaption>工作台上的灯笼与铁锤；桶身木条、铁箍、提桶金属环与铺地缝隙均来自下载素材。没有用 AI 图片代替实机渲染。</figcaption></figure>
+<h2>素材来源与替换范围</h2>
+<table><thead><tr><th>素材</th><th>本次用途</th><th>作者</th></tr></thead><tbody>
+<tr><td><a href="https://polyhaven.com/a/modular_fort_01">Modular Fort 01</a></td><td>提取门洞、墙段、远景塔楼网格</td><td>Rico Cilliers</td></tr>
+<tr><td><a href="https://polyhaven.com/a/wooden_crate_01">Wooden Crate 01</a></td><td>门口与发货区堆叠货箱</td><td>James Ray Cock</td></tr>
+<tr><td><a href="https://polyhaven.com/a/wine_barrel_01">Wine Barrel 01</a></td><td>酒桶与储运组合</td><td>James Ray Cock</td></tr>
+<tr><td><a href="https://polyhaven.com/a/wooden_bucket_02">Wooden Bucket 02</a></td><td>工作区和门口小道具</td><td>James Ray Cock</td></tr>
+<tr><td><a href="https://polyhaven.com/a/wooden_lantern_01">Wooden Lantern 01</a> / <a href="https://polyhaven.com/a/wooden_hammer_01">Wooden Hammer 01</a></td><td>桌面细节</td><td>James Ray Cock</td></tr>
+<tr><td><a href="https://polyhaven.com/a/small_wooden_table_01">Small Wooden Table 01</a></td><td>维修工作台</td><td>Ulan Cabanilla</td></tr>
+<tr><td><a href="https://polyhaven.com/a/cobblestone_floor_03">Cobblestone Floor 03</a></td><td>连续地面与保留测试几何的表面</td><td>见素材页与 manifest</td></tr>
+</tbody></table>
+<p>共 7 个模型来源、1 套地面材质，30 处模型放置。下载 2K 版本，保留 glTF 的原始 UV、法线和金属/粗糙度贴图。地面使用 2.4 m 平铺尺度、OpenGL 法线与 ARM 通道（R=AO，G=粗糙度）。所有来源采用 <a href="https://polyhaven.com/license">Poly Haven CC0 许可</a>，可用于商业项目；来源、作者和 SHA-256 保存在 <code>envart/assets/polyhaven/manifest.json</code>。</p>
+<h2>当前结论与限制</h2>
+<ul><li>近景的木纹、铁箍、接缝与表面粗糙度更清楚，模型的简化轮廓不再是唯一的视觉信息。</li><li>石堡原始构件尺寸远大于测试场。为匹配现有白盒进行了非等比缩放，部分墙面产生拉伸感，近看清晰度也不均匀；正式采用前需要重新选择合适尺度的构件或适配 UV。</li><li>仅完成局部素材替换。坡道、跳台和台阶仍是测试几何，采用同套石材表面；没有新增植被、碎屑层、全场布景或远景地形。远景塔楼仅作为背景轮廓。</li><li>灯笼是未点亮的道具。未做完整灯光设计、烘焙、性能预算或全场美术验收。</li><li>已验证门洞双向通行、坡道到达平台、原始碰撞不变、四种相机和白盒/背景切换。技术通过不代表风格已获认可。</li></ul>
+<h2>可编辑与可重建</h2>
+<p>场景入口 <code>envart/realism_trial/trial.tscn</code>；美术放置 <code>art.tscn</code>；背景 <code>backdrop.tscn</code>；地面 <code>ground.tres</code>。模型按门洞、围墙、工作台、发货区分组，可直接调整节点位置。离线构建脚本 <code>envart/tools/build_realism_trial.gd</code> 会覆盖这些生成文件，手工修改前请另存场景。</p>
+<p>复现：先运行 <code>python3 tools/install_polyhaven_trial.py</code>，再由 Godot 导入资源并运行构建脚本。巡检沿用 <code>tests/direction_sample_visual.gd -- realism</code>，输出位于 <code>/tmp/envart-realism/</code>。</p>
+<p><a href="direction-comparison.html">返回三方向对比</a> · <a href="rail-camera-guide.html">Godot 相机操作图文教程</a></p>
+</main></body></html>

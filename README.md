@@ -10,6 +10,8 @@
 
 [三方向 HTML 同机位对比与教程](docs/direction-comparison.html) · [晴日局部样板说明](docs/local-asset-sample.html)。首轮三风格案例于 2026-11-12 未通过美术验收，仍保存在 `envart/envart_lab.tscn`，仅作历史技术试验。
 
+另有独立的 **Poly Haven 写实素材替换实验**：用石堡构件、PBR 木箱/酒桶/桌面道具和石铺地面观察近景差异，不改变三方向默认入口。打开 `envart/realism_trial/trial.tscn` 后按 **F6** 运行。仅完成局部尝试，墙体缩放与贴图密度仍需调整，尚未选定为正式方向。见 [写实素材实验 HTML 对比](docs/realism-trial.html)。
+
 ## 快速开始
 
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
