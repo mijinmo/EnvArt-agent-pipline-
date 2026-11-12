@@ -46,6 +46,11 @@ func source(pack: String, model: String, pos: Vector3, size := Vector3.ONE, yaw 
 					if "Wood" in tuned.resource_name or "Furniture" in tuned.resource_name:
 						tuned.albedo_color = Color(0.78,0.82,0.88)
 					if "Vine" in tuned.resource_name: tuned.albedo_color *= Color(0.85,0.90,0.80)
+					if pack == "nature":
+						tuned.albedo_color *= Color(0.68,0.77,0.58)
+						tuned.roughness = 1.0
+						if tuned.resource_name == "Leaves_TwistedTree":
+							tuned.albedo_texture = load("res://envart/assets/quaternius_nature/Leaves_NormalTree_C.png")
 					material_cache[original] = tuned
 				mesh.set_surface_override_material(surface,material_cache[original])
 	if collision:
@@ -205,6 +210,89 @@ func build() -> void:
 	# A few displaced stones at storage edges, never uniform noise on routes.
 	for pair in [[-3.05,-4.7],[-3.2,-4.5],[2.8,-4.75],[-8.2,-7.8],[-8.7,-0.4],[6.3,0.1],[6.4,0.4],[9.0,-9.7]]:
 		v("Prop_Brick%d" % (serial%4+1),Vector3(pair[0],0,pair[1]),Vector3.ONE*0.5,float(serial*31%360))
+	additional_details()
+	ground_vegetation()
 	var packed := PackedScene.new(); assert(packed.pack(art)==OK); assert(ResourceSaver.save(packed,DEST)==OK)
 	print("Saved local sample: ",serial," source instances / practical lights")
 	art.free(); quit()
+
+func additional_details() -> void:
+	section("YardBoundary")
+	# Dress the existing rear boundary, without moving or adding a gameplay wall.
+	for x in range(-11,12,2):
+		v("Wall_UnevenBrick_Straight",Vector3(x,0,-11.73),Vector3(1,1.30,1),0,false)
+		v("Prop_ExteriorBorder_Straight1",Vector3(x,4.02,-12.35),Vector3.ONE)
+	section("DeliveryDetails")
+	# Inspection paperwork and small consignments use the existing supports.
+	p("Pouch_Large",Vector3(-2.0,0.94,-3.68),0.42,18)
+	p("Scroll_2",Vector3(-2.35,0.94,-3.69),0.9,-12)
+	p("FarmCrate_Empty",Vector3(-3.38,0,-4.4),0.72,14,true)
+	p("Bottle_1",Vector3(-3.45,0.19,-4.40),0.48,10)
+	p("SmallBottle",Vector3(-3.19,0.19,-4.38),0.65,-8)
+	p("Pot_1_Lid",Vector3(2.63,0,-5.03),0.9,20)
+	v("Prop_Vine4",Vector3(2.53,0.75,-4.24),Vector3(0.28,0.22,0.28),10,false)
+	p("Chest_Wood",Vector3(-3.65,0,-5.56),0.75,90,true)
+	p("Rope_1",Vector3(-3.63,0.536,-5.6),0.52,20)
+	p("Bucket_Wooden_1",Vector3(-7.03,2,-6.62),0.75,-20)
+	p("FarmCrate_Empty",Vector3(-4.95,2,-7.38),0.65,15)
+	p("SmallBottle",Vector3(-4.92,2.18,-7.37),0.75,0)
+	section("MarketDetails")
+	p("Bench",Vector3(8.94,0,-9.15),0.95,-90,true)
+	p("Bag",Vector3(8.96,0.507,-9.48),0.6,10)
+	p("Mug",Vector3(8.95,0.507,-8.84),0.85,5)
+	p("Vase_4",Vector3(8.12,0,-9.4),0.9,0,true)
+	p("Bottle_1",Vector3(8.97,0.91,-7.13),0.46,8)
+	p("SmallBottle",Vector3(8.67,0.91,-7.2),0.65,-12)
+	p("Pouch_Large",Vector3(8.75,0.91,-5.78),0.38,10)
+	var rope := source("props","Rope_1",Vector3(9.34,1.40,-6.56),Vector3.ONE*0.50,-90,false)
+	rope.rotate_object_local(Vector3.RIGHT,PI/2)
+	p("Pot_1",Vector3(8.13,0,-1.95),0.7,30)
+	p("FarmCrate_Empty",Vector3(7.03,0,0.91),0.65,-14,true)
+	p("Pot_1_Lid",Vector3(7.03,0.18,0.91),0.6,16)
+	p("Scroll_1",Vector3(7.2,1.65,-0.04),0.9,80)
+	# Ground plants and broken stone collect at foundations, away from clear routes.
+	section("FoundationGrowth")
+	for data in [[-7.63,-6.8,90.0],[-4.37,-7.6,-90.0],[6.17,-0.54,0.0],[9.43,-8.15,-90.0],[9.41,-5.25,-90.0],[1.12,-3.56,0.0]]:
+		v("Prop_Vine4",Vector3(data[0],0.65,data[1]),Vector3(0.35,0.4,0.35),data[2],false)
+	for i in 12:
+		var x := -7.82 + sin(i*2.71)*0.28
+		var z := -7.7 + i*0.21
+		v("Prop_Brick%d" % (i%4+1),Vector3(x,0,z),Vector3.ONE*(0.24+0.03*(i%3)),i*39.0)
+
+func ground_vegetation() -> void:
+	section("GroundVegetation")
+	var random := RandomNumberGenerator.new(); random.seed = 81422
+	# Concentrated foundation patches. No scattering across the whole test floor.
+	var bushes := [Vector3(-7.97,0,-7.7),Vector3(-4.0,0,-8.48),Vector3(-8.03,0,-1.1),Vector3(-3.14,0,-4.96),Vector3(2.85,0,-5.3),Vector3(6.32,0,0.83),Vector3(9.59,0,1.02),Vector3(9.17,0,-10.65)]
+	for i in bushes.size():
+		var scale_value := 0.38 if i%3==0 else 0.31
+		source("nature","Bush_Common_Flowers" if i%3==0 else "Bush_Common",bushes[i],Vector3.ONE*scale_value,random.randf_range(-180,180))
+		for j in 6:
+			var angle := random.randf_range(0,TAU); var radius := random.randf_range(0.25,0.65)
+			var pos: Vector3 = bushes[i]+Vector3(cos(angle)*radius,0.013,sin(angle)*radius)
+			if not vegetation_clear(pos): continue
+			source("nature","Grass_Wispy_Short" if j%2==0 else "Clover_2",pos,Vector3.ONE*random.randf_range(0.13,0.28),random.randf_range(-180,180))
+	# Irregular grass along footings, with intentional gaps and clump size variation.
+	var lines := [[Vector3(-7.82,0,-7.8),Vector3(-7.82,0,-0.3)], [Vector3(-4.2,0,-8.1),Vector3(-4.2,0,-6.0)], [Vector3(6.15,0,0.77),Vector3(9.8,0,0.77)], [Vector3(9.40,0,-10.9),Vector3(9.4,0,-1.7)], [Vector3(-3.2,0,-4.8),Vector3(-1.7,0,-4.8)]]
+	for line in lines:
+		for i in 30:
+			var pos: Vector3 = line[0].lerp(line[1],random.randf())+Vector3(random.randf_range(-0.17,0.17),0.013,random.randf_range(-0.18,0.18))
+			if not vegetation_clear(pos): continue
+			source("nature","Grass_Common_Short" if i%3!=0 else "Grass_Wispy_Short",pos,Vector3.ONE*random.randf_range(0.10,0.25),random.randf_range(-180,180))
+	for pos in [Vector3(-7.95,0.01,-6.1),Vector3(6.26,0.01,0.6),Vector3(9.24,0.01,-8.1)]:
+		source("nature","Fern_1",pos,Vector3.ONE*0.075,random.randf_range(-180,180))
+	for pos in [Vector3(-8.15,0.01,-7.6),Vector3(6.25,0.01,1.12),Vector3(9.59,0.01,1.12)]:
+		source("nature","Flower_3_Group",pos,Vector3.ONE*0.19,random.randf_range(-180,180))
+	# Real pebbles settle the patches against the paved surface.
+	for pos in [Vector3(-7.9,0,-5.9),Vector3(-4.1,0,-8.3),Vector3(6.3,0,0.42)]:
+		source("nature","Pebble_Round_1",pos,Vector3.ONE*0.25,30)
+
+func vegetation_clear(pos: Vector3) -> bool:
+	if absf(pos.x)<0.95 and pos.z>-5.6 and pos.z<-2.8: return false
+	if pos.x>-7.65 and pos.x<-4.35 and pos.z>-8.2 and pos.z<0.4: return false
+	for body in art.find_children("*","StaticBody3D",true,false):
+		for shape in body.get_children():
+			if shape is CollisionShape3D and shape.shape is BoxShape3D:
+				var box: AABB=body.transform*shape.transform*AABB(-shape.shape.size/2,shape.shape.size)
+				if box.grow(0.10).has_point(Vector3(pos.x,box.get_center().y,pos.z)): return false
+	return true

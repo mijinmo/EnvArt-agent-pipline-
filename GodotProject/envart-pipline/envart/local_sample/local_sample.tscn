@@ -1,20 +1,21 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://envart/local_sample/sample.gd" id="1_oj40m"]
-[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="2_uwc1m"]
-[ext_resource type="Script" path="res://demo/controller_lab.gd" id="3_10j1n"]
-[ext_resource type="Shader" path="res://demo/grid.gdshader" id="4_3uah1"]
-[ext_resource type="Script" path="res://controllers/rail_camera.gd" id="5_aqsam"]
-[ext_resource type="Script" path="res://controllers/player_motor.gd" id="6_5jy47"]
-[ext_resource type="Resource" path="res://controllers/default_player_profile.tres" id="7_n8h5x"]
-[ext_resource type="Script" path="res://controllers/camera_rig.gd" id="8_icmks"]
-[ext_resource type="Script" path="res://controllers/player_input.gd" id="9_si6yf"]
-[ext_resource type="Script" path="res://demo/rail_controls.gd" id="10_sutcw"]
-[ext_resource type="PackedScene" path="res://envart/local_sample/art.tscn" id="11_2d2kv"]
+[ext_resource type="Script" path="res://envart/local_sample/sample.gd" id="1_uwc1m"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="2_10j1n"]
+[ext_resource type="Script" path="res://demo/controller_lab.gd" id="3_3uah1"]
+[ext_resource type="Shader" path="res://demo/grid.gdshader" id="4_aqsam"]
+[ext_resource type="Script" path="res://controllers/rail_camera.gd" id="5_5jy47"]
+[ext_resource type="Script" path="res://controllers/player_motor.gd" id="6_n8h5x"]
+[ext_resource type="Resource" path="res://controllers/default_player_profile.tres" id="7_icmks"]
+[ext_resource type="Script" path="res://controllers/camera_rig.gd" id="8_si6yf"]
+[ext_resource type="Script" path="res://controllers/player_input.gd" id="9_sutcw"]
+[ext_resource type="Script" path="res://demo/rail_controls.gd" id="10_2d2kv"]
+[ext_resource type="PackedScene" path="res://envart/local_sample/art.tscn" id="11_t20ii"]
+[ext_resource type="PackedScene" path="res://envart/local_sample/backdrop.tscn" id="12_jdjmc"]
 
 [sub_resource type="ShaderMaterial" id="Grid"]
 render_priority = 0
-shader = ExtResource("4_3uah1")
+shader = ExtResource("4_aqsam")
 shader_parameter/base_color = null
 shader_parameter/line_color = null
 
@@ -132,18 +133,18 @@ size = Vector3(2, 0.02, 2)
 [sub_resource type="BoxShape3D" id="SpawnPadShape"]
 size = Vector3(2, 0.02, 2)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t20ii"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nieog"]
 sky_top_color = Color(0.4, 0.53333336, 0.62352943, 1)
 sky_horizon_color = Color(0.827451, 0.84705883, 0.8117647, 1)
 ground_bottom_color = Color(0.4862745, 0.50980395, 0.43137255, 1)
 ground_horizon_color = Color(0.76862746, 0.7764706, 0.7254902, 1)
 
-[sub_resource type="Sky" id="Sky_jdjmc"]
-sky_material = SubResource("ProceduralSkyMaterial_t20ii")
+[sub_resource type="Sky" id="Sky_1gtmk"]
+sky_material = SubResource("ProceduralSkyMaterial_nieog")
 
-[sub_resource type="Environment" id="Environment_nieog"]
+[sub_resource type="Environment" id="Environment_ko2tq"]
 background_mode = 2
-sky = SubResource("Sky_jdjmc")
+sky = SubResource("Sky_1gtmk")
 ambient_light_source = 2
 ambient_light_color = Color(0.7490196, 0.83137256, 0.88235295, 1)
 ambient_light_energy = 0.5
@@ -153,6 +154,10 @@ ssao_radius = 0.8
 ssao_intensity = 1.6
 ssil_enabled = true
 ssil_intensity = 0.6
+fog_enabled = true
+fog_light_color = Color(0.7176471, 0.7882353, 0.7764706, 1)
+fog_density = 0.0022
+fog_sky_affect = 0.18
 
 [sub_resource type="StyleBoxFlat" id="PanelStyle"]
 bg_color = Color(0.025, 0.045, 0.07, 0.95)
@@ -172,11 +177,11 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="LocalAssetSample" type="Node3D" unique_id=808546785]
-script = ExtResource("1_oj40m")
+[node name="LocalAssetSample" type="Node3D" unique_id=773514744]
+script = ExtResource("1_uwc1m")
 
-[node name="BaseLab" parent="." unique_id=1041603611 instance=ExtResource("2_uwc1m")]
-script = ExtResource("3_10j1n")
+[node name="BaseLab" parent="." unique_id=1635215926 instance=ExtResource("2_10j1n")]
+script = ExtResource("3_3uah1")
 
 [node name="Floor" parent="BaseLab/World" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
@@ -402,7 +407,7 @@ text = "CAMERA OCCLUSION"
 font_size = 48
 
 [node name="WorldEnvironment" parent="BaseLab" index="1"]
-environment = SubResource("Environment_nieog")
+environment = SubResource("Environment_ko2tq")
 
 [node name="Sun" parent="BaseLab" index="2"]
 transform = Transform3D(0.7880108, 0.39573956, -0.47162408, 0, 0.76604444, 0.6427876, 0.6156615, -0.50652355, 0.6036513, 0, 0, 0)
@@ -414,22 +419,22 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 8)
 
 [node name="RailCamera" parent="BaseLab" index="4" node_paths=PackedStringArray("aim_target")]
-script = ExtResource("5_aqsam")
+script = ExtResource("5_5jy47")
 aim_target = NodePath("FocusTarget")
 
 [node name="Player" parent="BaseLab" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 8)
 collision_layer = 2
-script = ExtResource("6_5jy47")
-profile = ExtResource("7_n8h5x")
+script = ExtResource("6_n8h5x")
+profile = ExtResource("7_icmks")
 
 [node name="CameraRig" parent="BaseLab" index="6" node_paths=PackedStringArray("target", "rail_camera")]
-script = ExtResource("8_icmks")
+script = ExtResource("8_si6yf")
 target = NodePath("../Player")
 rail_camera = NodePath("../RailCamera")
 
 [node name="PlayerInput" parent="BaseLab" index="7" node_paths=PackedStringArray("player", "cameras")]
-script = ExtResource("9_si6yf")
+script = ExtResource("9_sutcw")
 player = NodePath("../Player")
 cameras = NodePath("../CameraRig")
 
@@ -445,7 +450,7 @@ offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("PanelStyle")
-script = ExtResource("10_sutcw")
+script = ExtResource("10_2d2kv")
 director = NodePath("../../CameraRig")
 
 [node name="Panel" parent="BaseLab/HUD" index="1"]
@@ -484,23 +489,30 @@ theme_override_font_sizes/font_size = 24
 text = "+"
 horizontal_alignment = 1
 
-[node name="Art" type="Node3D" parent="." unique_id=1441775823 instance=ExtResource("11_2d2kv")]
+[node name="Art" type="Node3D" parent="." unique_id=1892616857 instance=ExtResource("11_t20ii")]
 
-[node name="ReviewViews" type="Node3D" parent="." unique_id=1357261406]
+[node name="Backdrop" type="Node3D" parent="." unique_id=694404481 instance=ExtResource("12_jdjmc")]
+metadata/seed = 81421
+metadata/non_playable = true
 
-[node name="Door" type="Marker3D" parent="ReviewViews" unique_id=1258162243]
+[node name="ReviewViews" type="Node3D" parent="." unique_id=722117213]
+
+[node name="Door" type="Marker3D" parent="ReviewViews" unique_id=1855245943]
 transform = Transform3D(0.8333562, 0.074517705, -0.54769015, 0, 0.9908706, 0.13481602, 0.5527363, -0.11234976, 0.8257482, -3.4, 2.55, 0.9)
 
-[node name="Ramp" type="Marker3D" parent="ReviewViews" unique_id=1019362362]
+[node name="Ramp" type="Marker3D" parent="ReviewViews" unique_id=2040136984]
 transform = Transform3D(0.76822126, -0.19121763, 0.6109598, 0, 0.95434976, 0.29869148, -0.6401844, -0.22946115, 0.7331518, -1.5, 3.5, 1.6)
 
-[node name="Props" type="Marker3D" parent="ReviewViews" unique_id=587283628]
+[node name="Props" type="Marker3D" parent="ReviewViews" unique_id=1374189362]
 transform = Transform3D(-0.6718149, 0.17950013, -0.7186406, 0, 0.97019327, 0.2423323, 0.740719, 0.16280246, -0.6517903, 4.5, 2.7, -8.3)
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=102793598]
+[node name="Backdrop" type="Marker3D" parent="ReviewViews" unique_id=1954970351]
+transform = Transform3D(0.94174194, -0.033765204, 0.33463722, 0, 0.994948, 0.10039117, -0.3363364, -0.09454258, 0.93698424, 20, 14, 24)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=797309582]
 layer = 2
 
-[node name="Hint" type="Label" parent="HUD" unique_id=1351108674]
+[node name="Hint" type="Label" parent="HUD" unique_id=1672315700]
 offset_left = 22.0
 offset_top = 20.0
 offset_right = 22.0

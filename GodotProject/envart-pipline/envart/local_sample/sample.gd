@@ -1,7 +1,8 @@
 extends Node3D
 ## Small asset-first review slice. Gameplay remains in the original BaseLab.
-const DRESSED := ["DoorLeft","DoorRight","DoorLintel","Ramp","Landing","OcclusionWall","OcclusionReturn"]
+const DRESSED := ["DoorLeft","DoorRight","DoorLintel","Ramp","Landing","OcclusionWall","OcclusionReturn","BackWall"]
 var whitebox := false
+var backdrop_enabled := true
 var original_materials := {}
 var dressed_materials := {}
 @onready var lab: Node3D = $BaseLab
@@ -36,9 +37,11 @@ func _ready() -> void:
 	set_whitebox(false)
 	inspect(0)
 func update_hint() -> void:
-	$HUD/Hint.text = "DELIVERY YARD / LOCAL SAMPLE" + ("  [WHITEBOX]" if whitebox else "") + "\n5 Door  ·  6 Ramp  ·  7 Props  ·  0 Compare  ·  H Hide\n1 First  ·  2 Third  ·  3 Free  ·  4 Rail  ·  P Play  ·  Esc Cursor"
+	$HUD/Hint.text = "DELIVERY YARD / LOCAL SAMPLE" + ("  [WHITEBOX]" if whitebox else "") + "\n5 Door  ·  6 Ramp  ·  7 Props  ·  8 Vista  ·  B Backdrop\n0 Compare  ·  H Hide  ·  1 First  ·  2 Third  ·  3 Free  ·  4 Rail"
 func set_whitebox(enabled: bool) -> void:
 	whitebox = enabled; $Art.visible = not enabled
+	$Backdrop.visible = not enabled and backdrop_enabled
+	lab.get_node("WorldEnvironment").environment.fog_enabled = not enabled and backdrop_enabled
 	for name in ["OcclusionWall", "OcclusionReturn"]: lab.get_node("World/"+name+"/Mesh").visible = enabled
 	for mesh in original_materials:
 		mesh.material_override = original_materials[mesh] if enabled else dressed_materials[mesh]
@@ -55,6 +58,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_5: inspect(0)
 		KEY_6: inspect(1)
 		KEY_7: inspect(2)
+		KEY_8: inspect(3)
+		KEY_B:
+			backdrop_enabled = not backdrop_enabled
+			$Backdrop.visible = backdrop_enabled and not whitebox
+			lab.get_node("WorldEnvironment").environment.fog_enabled = backdrop_enabled and not whitebox
 		KEY_H: $HUD.visible = not $HUD.visible
 		_: return
 	get_viewport().set_input_as_handled()

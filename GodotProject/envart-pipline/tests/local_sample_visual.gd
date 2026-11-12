@@ -32,9 +32,38 @@ func run() -> void:
 	await capture("workbench_detail")
 	rig.free_camera.global_position=Vector3(5.5,2.0,3.7); rig.free_camera.look_at(Vector3(8.05,1.25,-0.6)); rig.free_camera.fov=55
 	await capture("shipment_detail")
+	rig.free_camera.global_position=Vector3(8.1,1.15,3.6); rig.free_camera.look_at(Vector3(8.1,0.55,0.3)); rig.free_camera.fov=62
+	await capture("vegetation_detail")
 	sample.inspect(0); sample.set_whitebox(true); await capture("door_whitebox"); sample.set_whitebox(false)
 	rig.free_camera.global_position=Vector3(13,10,12); rig.free_camera.look_at(Vector3(0,1,-4)); rig.free_camera.fov=60
 	await capture("overview")
+	sample.inspect(3); await capture("backdrop_vista")
+	check(sample.get_node("Backdrop").find_children("*","CollisionObject3D",true,false).is_empty(),"backdrop has no gameplay collision")
+	var tree_count:=0
+	var transforms_valid:=true
+	for child in sample.get_node("Backdrop").get_children():
+		if child is MultiMeshInstance3D:
+			tree_count+=child.multimesh.instance_count
+			for i in child.multimesh.instance_count:
+				var pos: Vector3=child.multimesh.get_instance_transform(i).origin
+				if maxf(absf(pos.x),absf(pos.z))<20: transforms_valid=false
+	check(tree_count==460 and transforms_valid,"460 serialized trees outside lab (no zero transforms)")
+	var vegetation_clear:=true
+	for plant in sample.get_node("Art/GroundVegetation").get_children():
+		if not plant is Node3D: continue
+		var pos: Vector3=plant.position
+		if absf(pos.x)<0.95 and pos.z>-5.6 and pos.z<-2.8: vegetation_clear=false
+		if pos.x>-7.65 and pos.x<-4.35 and pos.z>-8.2 and pos.z<0.4: vegetation_clear=false
+	check(vegetation_clear,"vegetation roots avoid door and ramp corridors")
+	for expected in [false,true]:
+		var event:=InputEventKey.new(); event.physical_keycode=KEY_B; event.pressed=true
+		Input.parse_input_event(event); await frames(2)
+		check(sample.get_node("Backdrop").visible==expected,"B toggles backdrop "+str(expected))
+		event=InputEventKey.new(); event.physical_keycode=KEY_B; Input.parse_input_event(event); await frames(1)
+	for child in sample.get_node("Backdrop").get_children():
+		if str(child.name).begins_with("VillageHouse"):
+			check(maxf(absf(child.position.x),absf(child.position.z))>24,"house outside protected lab "+str(child.name))
+	sample.set_whitebox(true); check(not sample.get_node("Backdrop").visible,"whitebox hides backdrop"); sample.set_whitebox(false)
 	# Compare protected original bodies, not the added prop footprints.
 	var reference=load("res://demo/controller_lab.tscn").instantiate()
 	for body in reference.get_node("World").get_children():

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EABackdropConfig" load_steps=2 format=3]
+[ext_resource type="Script" path="res://envart/local_sample/backdrop_config.gd" id="1"]
+[resource]
+script = ExtResource("1")
+seed_value = 81421
+terrain_extent = 220.0
+terrain_grid_step = 4.0
+tree_count = 460
+hill_height_scale = 1.0
