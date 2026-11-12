@@ -1,0 +1,442 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "edition": "Standard / free",
+  "source": "https://opengameart.org/content/sci-fi-essentials-kit",
+  "downloaded": "2026-11-12",
+  "archives": {
+    "scifi-props.zip": "f5cb9382a029730f9fa8f93e7fdb103c1aaaec094a22b1397833ce0e48bd1016",
+    "scifi-textures.zip": "d80b61c7be7200c68e584f25292df6d0620516d5eb4d2043aec2cc54decb1e55",
+    "scifi.zip": "4ca9acbc7a13e7baa48e24c4853b779889b7ab21587004c36668826e705c8a10"
+  },
+  "models": [
+    "Prop_Ammo_Closed",
+    "Prop_Ammo_Small",
+    "Prop_Barrel1",
+    "Prop_Barrel2_Closed",
+    "Prop_Chair",
+    "Prop_Crate",
+    "Prop_Crate_Large",
+    "Prop_Crate_Tarp",
+    "Prop_Crate_Tarp_Large",
+    "Prop_Desk_L",
+    "Prop_Desk_Medium",
+    "Prop_Desk_Small",
+    "Prop_HealthPack",
+    "Prop_HealthPack_Tube",
+    "Prop_KeyCard",
+    "Prop_Locker",
+    "Prop_Mug",
+    "Prop_SatelliteDish",
+    "Prop_Shelves_ThinShort",
+    "Prop_Shelves_ThinTall",
+    "Prop_Shelves_WideShort",
+    "Prop_Shelves_WideTall",
+    "Prop_Syringe"
+  ],
+  "files": [
+    {
+      "file": "License_Standard.txt",
+      "archive": "scifi-props.zip",
+      "archive_path": "License_Standard.txt",
+      "sha256": "2687fba65dca7bbd2f9ab2fb7a8c51dd0c7c8e9acd7579415612bec43f68b3f5"
+    },
+    {
+      "file": "Prop_Ammo_Closed.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Ammo_Closed.bin",
+      "sha256": "3d33965dffdd723cd20b218ecd54642d6d705545b2d6d1c7ef3ab59a131a2577"
+    },
+    {
+      "file": "Prop_Ammo_Closed.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Ammo_Closed.gltf",
+      "sha256": "2999c942bc91217be16e8e52f1faeb5c68c9b07105e8ced338cad8888389a3dc"
+    },
+    {
+      "file": "Prop_Ammo_Small.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Ammo_Small.bin",
+      "sha256": "ab5629ae246d03e005c1a6260409fd220cabc855c4233927ce67e646d34387b7"
+    },
+    {
+      "file": "Prop_Ammo_Small.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Ammo_Small.gltf",
+      "sha256": "c09acd240aae611121e29071ea66dd1a3b5d41a48cb4db871845479a538a9186"
+    },
+    {
+      "file": "Prop_Barrel1.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Barrel1.bin",
+      "sha256": "131b5646895f15c197e2c5a89b001033838bbdf2ef5f99abb1dcc7a0821e2acf"
+    },
+    {
+      "file": "Prop_Barrel1.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Barrel1.gltf",
+      "sha256": "b22e5ec50459b4e4a044941cbe523653d4001824d6238654c91819efac44d7cc"
+    },
+    {
+      "file": "Prop_Barrel2_Closed.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Barrel2_Closed.bin",
+      "sha256": "b477e6ca1d3cd0bf10ad020672bc74824ce4a7d4593b44caec281a76f9ebb197"
+    },
+    {
+      "file": "Prop_Barrel2_Closed.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Barrel2_Closed.gltf",
+      "sha256": "091626d31266b76acbd6ed82ffe0efd9dc7cdcb20e49a1b94bc5a17106ae87f4"
+    },
+    {
+      "file": "Prop_Chair.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Chair.bin",
+      "sha256": "2a127ae035fb1efb80b50bc85bd86cb7f99acb8dec496609a759029f88b18fee"
+    },
+    {
+      "file": "Prop_Chair.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Chair.gltf",
+      "sha256": "3b87c634abb635344606102d4272a7b2448b5ce64cab96cda41433cb4278d377"
+    },
+    {
+      "file": "Prop_Crate.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate.bin",
+      "sha256": "ec472c1c9ea48727d2a40085365b4bad6031a785b75b2dae083291bc1d295752"
+    },
+    {
+      "file": "Prop_Crate.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate.gltf",
+      "sha256": "593077978159b4d5283a60a291f5b55b80915896d82b0218dc3e5de2f92c3d6a"
+    },
+    {
+      "file": "Prop_Crate_Large.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Large.bin",
+      "sha256": "5f79642b6a60ed000a86477444c0c7a26197fd0df32b24d2bc9985092945d268"
+    },
+    {
+      "file": "Prop_Crate_Large.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Large.gltf",
+      "sha256": "2b54a8fd4da534507ff3bd976f97abfe2b8ee2106dd934a73890248e33f8014a"
+    },
+    {
+      "file": "Prop_Crate_Tarp.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Tarp.bin",
+      "sha256": "57dae62dbefc34f0649dfa0c2e9483be689e53a13a4fa3a83340d189f8dbe4cc"
+    },
+    {
+      "file": "Prop_Crate_Tarp.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Tarp.gltf",
+      "sha256": "4635986fa77090d1166bf1785856f450478c954902db9ddd8f43a7cf1ed5ab0c"
+    },
+    {
+      "file": "Prop_Crate_Tarp_Large.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Tarp_Large.bin",
+      "sha256": "91e6ffcc4635b4964ecfc3ca073f85ea1c359212591b3866fd123620fc31ddc3"
+    },
+    {
+      "file": "Prop_Crate_Tarp_Large.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Crate_Tarp_Large.gltf",
+      "sha256": "617c76ecbff5c4d1e147f6af8e248f0f596a1118c56834365598833729662973"
+    },
+    {
+      "file": "Prop_Desk_L.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_L.bin",
+      "sha256": "3e509e3fcae3829738171a04a5293d2f0a6196ff3435c5351c1f378a7994e001"
+    },
+    {
+      "file": "Prop_Desk_L.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_L.gltf",
+      "sha256": "c0777327bc808dfa0b71a7c60b1163532c686f8d41e83cbcc2baab906d037545"
+    },
+    {
+      "file": "Prop_Desk_Medium.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_Medium.bin",
+      "sha256": "5eaf07f59c8cd58374c6da564210e95b17ee11fc71a86eaa53c5472abab62ed5"
+    },
+    {
+      "file": "Prop_Desk_Medium.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_Medium.gltf",
+      "sha256": "6f26a2a78898ca79e2593fa4bae7bd95ef9e914ca56c0a0492a65ab0217f6a6a"
+    },
+    {
+      "file": "Prop_Desk_Small.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_Small.bin",
+      "sha256": "5fe24035cb2abd5cdc9c49644e6e5b26d00c94dc73abb8e4b58f0e6619b24c37"
+    },
+    {
+      "file": "Prop_Desk_Small.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Desk_Small.gltf",
+      "sha256": "b902113328237fd29e3dae13d61888fb861b1db24143705403933e7d772de6a1"
+    },
+    {
+      "file": "Prop_HealthPack.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_HealthPack.bin",
+      "sha256": "3f493562fbb728d7b3fbe7c44fec4e6a55a6d94c5d37079304823b9483a758c7"
+    },
+    {
+      "file": "Prop_HealthPack.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_HealthPack.gltf",
+      "sha256": "1272bab6b46f6011fc783e0c08fa5772cb52d1b799115f11f8612cf1fec60b0e"
+    },
+    {
+      "file": "Prop_HealthPack_Tube.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_HealthPack_Tube.bin",
+      "sha256": "916be0c81f05cec3ffc5931163472519bd946e78e76d333389d6f7cecf9e53eb"
+    },
+    {
+      "file": "Prop_HealthPack_Tube.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_HealthPack_Tube.gltf",
+      "sha256": "7d8c3210629244410a4fba5c7debaa9d5ae355b87ef71cead3f57d1a989ec2c2"
+    },
+    {
+      "file": "Prop_KeyCard.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_KeyCard.bin",
+      "sha256": "a4a5b563b7930d59cba05481fcf1941ac8a72bc347abcdbf4ff3bca5d7fa2ad0"
+    },
+    {
+      "file": "Prop_KeyCard.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_KeyCard.gltf",
+      "sha256": "24c62b29687346fb9bd045199ffe1622d6169770a07ec9235a1f34ba3dc83820"
+    },
+    {
+      "file": "Prop_Locker.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Locker.bin",
+      "sha256": "02ff3313a5905d349db9f2116d4effb942e904577aecb0f74a77371183910736"
+    },
+    {
+      "file": "Prop_Locker.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Locker.gltf",
+      "sha256": "99ce345d2d751ad23a20ef3153bc82a85d4d1cbc5787074fc1c54a3278f295c1"
+    },
+    {
+      "file": "Prop_Mug.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Mug.bin",
+      "sha256": "f0f0d8556e573b4aa9f2a54bbf16ad6c346f6040a475e311b20df14c4ba6c9dc"
+    },
+    {
+      "file": "Prop_Mug.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Mug.gltf",
+      "sha256": "81c6aca3656b84a338db681729f3a7e2abff11ceca19bed1fbe2739aaa8a5107"
+    },
+    {
+      "file": "Prop_SatelliteDish.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_SatelliteDish.bin",
+      "sha256": "70bca5b61df2904589b666ddef044ea3b25c5fc69697d395d2e1fdbc9d036a58"
+    },
+    {
+      "file": "Prop_SatelliteDish.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_SatelliteDish.gltf",
+      "sha256": "2d311ee9fa42ebc541036d934de2ceb989364c1e724de14a4b21b2e901a51b21"
+    },
+    {
+      "file": "Prop_Shelves_ThinShort.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_ThinShort.bin",
+      "sha256": "269874ce280233e5dc418fe252633fd123649ca9f7fc5c740eea41ab8adb3aa3"
+    },
+    {
+      "file": "Prop_Shelves_ThinShort.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_ThinShort.gltf",
+      "sha256": "e90fd40a9e04afd53616615cd24c2da844301edccf5e8cb92f726bbca19b29ee"
+    },
+    {
+      "file": "Prop_Shelves_ThinTall.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_ThinTall.bin",
+      "sha256": "a72089723b62b0f6a2de6d93c9d320cb0b8f4e45dae01dea6527c6e6405ee836"
+    },
+    {
+      "file": "Prop_Shelves_ThinTall.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_ThinTall.gltf",
+      "sha256": "6fffd2c3a37d736298b3f693c601e422ac2b2f8a62b7b50c2a747d010dd92675"
+    },
+    {
+      "file": "Prop_Shelves_WideShort.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_WideShort.bin",
+      "sha256": "721721fc19d6a9f93de487237f28e7f9539fff62ead8515afdd31d9f5411d73f"
+    },
+    {
+      "file": "Prop_Shelves_WideShort.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_WideShort.gltf",
+      "sha256": "96f68e5e43fc23f8f781d7d1eb9f96afa82b2988f04dd005e4f963ed2d21e242"
+    },
+    {
+      "file": "Prop_Shelves_WideTall.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_WideTall.bin",
+      "sha256": "b44561a46f711db92ecfc70f9f6bb6c930ddd77a8e29947cd8d77203363cd1d1"
+    },
+    {
+      "file": "Prop_Shelves_WideTall.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Shelves_WideTall.gltf",
+      "sha256": "5ae989d2547cb9331bf13fe078938c254645f85b5213105c91989577fc5011d9"
+    },
+    {
+      "file": "Prop_Syringe.bin",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Syringe.bin",
+      "sha256": "32e352df58d7e91cee2a09e74e0c484cce5a2a637a1e7d708e439a8b92773475"
+    },
+    {
+      "file": "Prop_Syringe.gltf",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/Prop_Syringe.gltf",
+      "sha256": "7280d2e9dfb44b3d280c45d52d84f7f2f4bc33bd64b46d51029c019b238b1f28"
+    },
+    {
+      "file": "T_Props_Batch1_BaseColor.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch1_BaseColor.png",
+      "sha256": "b8428a3df1d8e920e185d7a76bb6755f6ecbda3259d963263c92c149e94d85ca"
+    },
+    {
+      "file": "T_Props_Batch1_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch1_Normal.png",
+      "sha256": "3a0d462366e5d03ef13fb35efc97c38c2463c118a89e303d356bac54d941d4ee"
+    },
+    {
+      "file": "T_Props_Batch1_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch1_ORM.png",
+      "sha256": "4ec5e8db4c8cf5e849461d76bfeeb3d9e722380696c6688911e4751745d8021e"
+    },
+    {
+      "file": "T_Props_Batch2_BaseColor.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch2_BaseColor.png",
+      "sha256": "e94bc5ac9bd7c0d5771936da662bbed9c8fa8cb44d9ec51b59ccd6512104b4cc"
+    },
+    {
+      "file": "T_Props_Batch2_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch2_Normal.png",
+      "sha256": "5dc16d40e5e92c956f0fdbeea346d2b6792f9f25b13addee5f33d984d75072aa"
+    },
+    {
+      "file": "T_Props_Batch2_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Batch2_ORM.png",
+      "sha256": "30a45c78f17e41d6e85a1caedbeac5974121fe1aa8095f1a4887a9ab1ea1fab1"
+    },
+    {
+      "file": "T_Props_Crates_BaseColor.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Crates_BaseColor.png",
+      "sha256": "79d604644b8ef63731735cfb29a4a9ded81598d20ecffe75e2af3fd9e18d255c"
+    },
+    {
+      "file": "T_Props_Crates_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Crates_Normal.png",
+      "sha256": "9fe8aa4951198c0dd3e06a41cd7aca1e50e308c2629f620f4d5be53dfc835b21"
+    },
+    {
+      "file": "T_Props_Crates_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Props_Crates_ORM.png",
+      "sha256": "a36b59d07082dde265f13689f0acaacfa0cfb22b4769a2dad1bad282a39bf795"
+    },
+    {
+      "file": "T_Trim_01_BaseColor_Red.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_01_BaseColor_Red.png",
+      "sha256": "15fc0e344ed35483bc771aaa95c1c2a0b0ec2349a893cf24af18b8742f0842ac"
+    },
+    {
+      "file": "T_Trim_01_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_01_Normal.png",
+      "sha256": "1aec7ad47a642fc68216b5a3119341b7dca038c1fc9493df8a15ad4aa27ddbcf"
+    },
+    {
+      "file": "T_Trim_01_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_01_ORM.png",
+      "sha256": "6ab7ad231df22867652048ebfd602684a9072d45c483ca57df0fcd4cb2cb4feb"
+    },
+    {
+      "file": "T_Trim_02_BaseColor.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_02_BaseColor.png",
+      "sha256": "7b13c6a7d82b434314237c4b1930b8e12ddc69a70ffef28d73cbd178d3ff6293"
+    },
+    {
+      "file": "T_Trim_02_BaseColor_Red.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_02_BaseColor_Red.png",
+      "sha256": "4a08abf8dc0a5bf558a0ae38dc0d70eddc328eaa8060725d07b95d7c8a75663c"
+    },
+    {
+      "file": "T_Trim_02_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_02_Normal.png",
+      "sha256": "7faaa7059192f43aded9cc2f93917dd54fd14545509c37318d4e6bf0a8104960"
+    },
+    {
+      "file": "T_Trim_02_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_02_ORM.png",
+      "sha256": "2a433e6a7fbcec375b5c5e5c7aa57dbe1fd23ca6592f48c52d09dde2d622aab8"
+    },
+    {
+      "file": "T_Trim_03_BaseColor.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_03_BaseColor.png",
+      "sha256": "2a15eadbedbc928d771ed8f2a7a8c1a16bce89b2836a0ecf34ece7e2fab96769"
+    },
+    {
+      "file": "T_Trim_03_Cables.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_03_Cables.png",
+      "sha256": "758a95beccdc9f0621d8b8a283ee2593e04b56f1cd32776165ec85e1568e8eb8"
+    },
+    {
+      "file": "T_Trim_03_Normal.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_03_Normal.png",
+      "sha256": "b2c3238cbe2586e44df0b00179adf85e5b7ac7fed1713ec0b807482245a30738"
+    },
+    {
+      "file": "T_Trim_03_ORM.png",
+      "archive": "scifi-props.zip",
+      "archive_path": "glTF/T_Trim_03_ORM.png",
+      "sha256": "c57134b5d496b39b955a87765ea32b93567b1ab494fe6b890de24c75dcfd6fe4"
+    }
+  ],
+  "modifications": "Original source bytes unchanged. Shader and material adaptation lives in scene builders."
+}

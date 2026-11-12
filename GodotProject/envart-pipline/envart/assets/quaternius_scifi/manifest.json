@@ -1,0 +1,857 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "edition": "Standard / free",
+  "source": "https://opengameart.org/content/modular-sci-fi-megakit",
+  "downloaded": "2026-11-12",
+  "archives": {
+    "scifi.zip": "4ca9acbc7a13e7baa48e24c4853b779889b7ab21587004c36668826e705c8a10"
+  },
+  "models": [
+    "Column_Astra",
+    "Column_MetalSupport",
+    "Column_Pipes",
+    "Column_Round",
+    "Column_Simple",
+    "Door_Frame_Square",
+    "Door_Frame_SquareTall",
+    "Platform_3Plates",
+    "Platform_CenterPlate",
+    "Platform_DarkPlates",
+    "Platform_Metal",
+    "Platform_Metal2",
+    "Platform_Simple",
+    "Platform_Squares",
+    "Prop_AccessPoint",
+    "Prop_Barrel_Large",
+    "Prop_Cable_1",
+    "Prop_Cable_3",
+    "Prop_Chest",
+    "Prop_Clamp",
+    "Prop_Computer",
+    "Prop_Crate3",
+    "Prop_Crate4",
+    "Prop_Fan_Small",
+    "Prop_Fan_Small_Propeller",
+    "Prop_ItemHolder",
+    "Prop_Light_Corner",
+    "Prop_Light_Floor",
+    "Prop_Light_Small",
+    "Prop_Light_Wide",
+    "Prop_PipeHolder",
+    "Prop_Rail_2",
+    "Prop_Rail_3",
+    "Prop_Rail_4",
+    "Prop_Vent_Big",
+    "Prop_Vent_Small",
+    "Prop_Vent_Wide",
+    "BottomMetal_Straight",
+    "BottomSimple_Straight",
+    "ShortWall_AccentStrip_Straight",
+    "ShortWall_WhitePlate2_Straight",
+    "ShortWall_MetalPlates_Straight",
+    "TopAstra_Straight",
+    "TopCables_Straight",
+    "TopCables_Straight_Hanging",
+    "TopSimple_Straight",
+    "TopWindow_Straight",
+    "WallAstra_Straight",
+    "WallAstra_Straight_Flat",
+    "WallAstra_Straight_Window",
+    "WallBand_Straight",
+    "WallWindow_Straight",
+    "Decal_0",
+    "Decal_7",
+    "Decal_Line_Straight",
+    "Decal_Dashes"
+  ],
+  "files": [
+    {
+      "file": "BottomMetal_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/BottomMetal_Straight.bin",
+      "sha256": "31d18e02d8080cce604877dcb88a1f04a47b481bf38e07897b3bab6885c7000d"
+    },
+    {
+      "file": "BottomMetal_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/BottomMetal_Straight.gltf",
+      "sha256": "0989dd43997f9a970260e4b986865833527f8f5e8006e1b158a494d7ad08c5cd"
+    },
+    {
+      "file": "BottomSimple_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/BottomSimple_Straight.bin",
+      "sha256": "c92374b07f9d56586a7de11640ceac9d37e799d03c951ee05b62727ee9e6be53"
+    },
+    {
+      "file": "BottomSimple_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/BottomSimple_Straight.gltf",
+      "sha256": "36da5630c81f5076d68ac69b1442a217dc2afa16c836d49bf89a3a9e3fbd39fb"
+    },
+    {
+      "file": "Column_Astra.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Astra.bin",
+      "sha256": "c29f1fa5cd7fd93fdfc8cf5d45561721049a6a8aefbfdc5cb8de015a0df4e782"
+    },
+    {
+      "file": "Column_Astra.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Astra.gltf",
+      "sha256": "99a71b481b4b10d62b1698d85b1aa7ec843a8f5b14313880c77763db3e8d99e6"
+    },
+    {
+      "file": "Column_MetalSupport.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_MetalSupport.bin",
+      "sha256": "e7d613d9ce8c5c035a7e219eceeecd17d90f79cb8f5ee0b62fe0c6b809aa2865"
+    },
+    {
+      "file": "Column_MetalSupport.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_MetalSupport.gltf",
+      "sha256": "749f009007a20928a0f2596e19e79d4dcdd79f9545bcfd48b7dfaf602521c405"
+    },
+    {
+      "file": "Column_Pipes.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Pipes.bin",
+      "sha256": "e44dc8fc69a124e983dcb6c9b11a4d7e27300ae699fd6584224c2e00a450dd2d"
+    },
+    {
+      "file": "Column_Pipes.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Pipes.gltf",
+      "sha256": "7b5a852e82ae98fdb717a878372b1fa70a4efedc354ad9ac8cc106171d7e97b5"
+    },
+    {
+      "file": "Column_Round.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Round.bin",
+      "sha256": "904989e7c9af11f7cefd05e319df70108d8a43b21724ae49fd8a25e25bd23d6b"
+    },
+    {
+      "file": "Column_Round.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Round.gltf",
+      "sha256": "ab8f34a7cca817e39cec67c3802cf0592e90df44071e48b1453e207dd5164a16"
+    },
+    {
+      "file": "Column_Simple.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Simple.bin",
+      "sha256": "85f91d5bc4b03ae1da42b468e31f15d935fdee81323a29467cb80175a9a2b98b"
+    },
+    {
+      "file": "Column_Simple.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Simple.gltf",
+      "sha256": "6e2db23b3719f52c3ad5d548e3056ba60c26826d32e3edbdee1f504b705e18c5"
+    },
+    {
+      "file": "Decal_0.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_0.bin",
+      "sha256": "6df9bebd147e307d30e2a55a6fcd60a4eaa41a276cd7f765914017bd8c88d714"
+    },
+    {
+      "file": "Decal_0.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_0.gltf",
+      "sha256": "26868973a65f513c3a76a97558ae61c6bd2db73c70e33cfa51ad5907f832972b"
+    },
+    {
+      "file": "Decal_7.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_7.bin",
+      "sha256": "6aac62ba9fed2d4807678917757fef2761e8d9f928146ecb6b3b7edd3ffd3c14"
+    },
+    {
+      "file": "Decal_7.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_7.gltf",
+      "sha256": "dfb5bcd177807701ab6347130e7dfc07631bd700f261b91231a3091bdb01270b"
+    },
+    {
+      "file": "Decal_Dashes.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_Dashes.bin",
+      "sha256": "0e112c8b7ad0f43153cc891db18e6418ed8c6183372cd6459c903f38583c4ad8"
+    },
+    {
+      "file": "Decal_Dashes.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_Dashes.gltf",
+      "sha256": "2b511b1bf1e11df64a7b66891a98b547d5e47f3b5d31021e67e284ed6d72c1da"
+    },
+    {
+      "file": "Decal_Line_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_Line_Straight.bin",
+      "sha256": "4d1bcac3385813da3e40b79420b022ca9937153a1be4cfbcda71cda502914bb9"
+    },
+    {
+      "file": "Decal_Line_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Decals/Decal_Line_Straight.gltf",
+      "sha256": "6db8198166794a6280aacb406f3127a27d81c81e4f0659dac496cc98e2714bc9"
+    },
+    {
+      "file": "Door_Frame_Square.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_Square.bin",
+      "sha256": "34bc96ea81fdafbf7bca0f439c7b94f125108f58278d599df4c460c08259178e"
+    },
+    {
+      "file": "Door_Frame_Square.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_Square.gltf",
+      "sha256": "057175188e8899a281d5c768a2de314cf9721071210bcfe4efc193c8de5e2197"
+    },
+    {
+      "file": "Door_Frame_SquareTall.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_SquareTall.bin",
+      "sha256": "806f763b95a30b57eb7dd52197d743cbb1fa5b101b02450ace23dfe2ea9ed8a6"
+    },
+    {
+      "file": "Door_Frame_SquareTall.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_SquareTall.gltf",
+      "sha256": "f1251e11edcef8ecb5e186b4868304c618cfa34bb9ae9d4f643bab07240bb15d"
+    },
+    {
+      "file": "License_Standard.txt",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/License_Standard.txt",
+      "sha256": "885b700f02932c08a41163b35cc97d1abe0895a05de29d9a9062fde5132969a8"
+    },
+    {
+      "file": "Platform_3Plates.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_3Plates.bin",
+      "sha256": "ba461a5b8f1451bbf99a7f9e34dd3f7417ecb8f0d9e0fe6559591a9efa6b9164"
+    },
+    {
+      "file": "Platform_3Plates.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_3Plates.gltf",
+      "sha256": "b7498bf0c89b3508f7b1c7512a60586a02f4a396ecf9d4abc7c4db528e9b7305"
+    },
+    {
+      "file": "Platform_CenterPlate.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_CenterPlate.bin",
+      "sha256": "4995c330b1c465dfd0b269e6fe178eca019007a4b9d819020985c65ed2f49021"
+    },
+    {
+      "file": "Platform_CenterPlate.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_CenterPlate.gltf",
+      "sha256": "d31a64b1b5e300cbe38bbc212597e1230a36e17d3d44e0fe43225a419c7b5d04"
+    },
+    {
+      "file": "Platform_DarkPlates.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_DarkPlates.bin",
+      "sha256": "699fed9cc818a93f110a5a201e01ba18e40a9703e9afdfffb9f9c2fa1c7ce7b2"
+    },
+    {
+      "file": "Platform_DarkPlates.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_DarkPlates.gltf",
+      "sha256": "1fb445848b118fcda47b9c8c4ecd5c25d0120c4633877a0204564b285d3b262b"
+    },
+    {
+      "file": "Platform_Metal.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal.bin",
+      "sha256": "69620e7cf1c264771c9781f045785ee485939d7a4aaaf864ef53b9fa2c64565c"
+    },
+    {
+      "file": "Platform_Metal.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal.gltf",
+      "sha256": "ca900795e7c1a859a35b60f70ed88975a2853e80d7ae1edc3fb0b4d53eea7e39"
+    },
+    {
+      "file": "Platform_Metal2.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal2.bin",
+      "sha256": "29d1a4f2bdedd915a284f74cba49a5309fbab00e232609b545b32aaa37d09a61"
+    },
+    {
+      "file": "Platform_Metal2.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal2.gltf",
+      "sha256": "5cf0b1fd6b3ff948bbcefa733fa39f6024dc494acdf4c58a27518208338ad24f"
+    },
+    {
+      "file": "Platform_Simple.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Simple.bin",
+      "sha256": "5499764bea91114ee815504336565920deac0cd360b3b014c4e837bf58a4ee4b"
+    },
+    {
+      "file": "Platform_Simple.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Simple.gltf",
+      "sha256": "0918d17414e3cdb3008575e3e3714d53bf0df7d20ae09999e4403af9df8215c6"
+    },
+    {
+      "file": "Platform_Squares.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Squares.bin",
+      "sha256": "33d281df0eb7993fe515c689b47f552f38466cea19da18aa7745e187a1f97b3c"
+    },
+    {
+      "file": "Platform_Squares.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Squares.gltf",
+      "sha256": "f59779c3ce7317e432897c17a6cd8e8b6e9c976ead03239c57ee86b7dbd4517d"
+    },
+    {
+      "file": "Prop_AccessPoint.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_AccessPoint.bin",
+      "sha256": "b490a23edf6226c5c699376d8368bb4a86d30381ca95a1950264bc922143b5e8"
+    },
+    {
+      "file": "Prop_AccessPoint.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_AccessPoint.gltf",
+      "sha256": "23281aebdf5904403c71217c5ca45c4e901b978b452ddfba9e968fd01b0aac77"
+    },
+    {
+      "file": "Prop_Barrel_Large.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Barrel_Large.bin",
+      "sha256": "adca6b70127025b0ac32aeb86a807a33f821b8b54db12a44d26d0677d4227979"
+    },
+    {
+      "file": "Prop_Barrel_Large.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Barrel_Large.gltf",
+      "sha256": "b8655db69eef6db7718f2dcf0ab341d717f0306196449433958b055e87766093"
+    },
+    {
+      "file": "Prop_Cable_1.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Cable_1.bin",
+      "sha256": "cc1f47046fc1f3fdf8e02d1c7e867eadc5d5501e8fb2ebfe371c2dbf168efabe"
+    },
+    {
+      "file": "Prop_Cable_1.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Cable_1.gltf",
+      "sha256": "d121066c92686f1b22440393f40cb5faace5fd9f97da4fca81e144f0a80928f1"
+    },
+    {
+      "file": "Prop_Cable_3.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Cable_3.bin",
+      "sha256": "c40fb11f91f3abfacc05b58a647925b859811ebdbdc265ccc9654c4d9ffddcb7"
+    },
+    {
+      "file": "Prop_Cable_3.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Cable_3.gltf",
+      "sha256": "188197d1d0cb93daa001b326babbbe9af8936b1337585109f3ee21359862fecd"
+    },
+    {
+      "file": "Prop_Chest.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Chest.bin",
+      "sha256": "89f1183556b3e7625aa0e3890bf20902d03c45cd7c79a64bc42db3ab4bccad0f"
+    },
+    {
+      "file": "Prop_Chest.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Chest.gltf",
+      "sha256": "94642289dbe56dd98215e31c617791b1974628d9e3f9369868693acd3467cf38"
+    },
+    {
+      "file": "Prop_Clamp.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Clamp.bin",
+      "sha256": "df7b6631ccc019a9343a3847d17e11b079595dcc14c3af616ed2eb5330c31a69"
+    },
+    {
+      "file": "Prop_Clamp.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Clamp.gltf",
+      "sha256": "a2a6319e6254ca8a3113e29b9fb9bb95a6442a7ab8e2740b7e51b4be85943378"
+    },
+    {
+      "file": "Prop_Computer.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Computer.bin",
+      "sha256": "4edcd2674633831714ae8aafe7174be52c2f3d21f24e009fd7e9417e27eb788d"
+    },
+    {
+      "file": "Prop_Computer.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Computer.gltf",
+      "sha256": "724525353d0c24a0596f77d5d461bd3cf58685e6e2c3abc1b5df3141759912f4"
+    },
+    {
+      "file": "Prop_Crate3.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Crate3.bin",
+      "sha256": "fc89058d3c10c05b68108366e1d1e12d04489a977ecfb749bd9af75d785e8b36"
+    },
+    {
+      "file": "Prop_Crate3.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Crate3.gltf",
+      "sha256": "1ab1b25afaff0eea9b9112469d8ab252d341ac6a92bf0e9b16af1d518bdfe724"
+    },
+    {
+      "file": "Prop_Crate4.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Crate4.bin",
+      "sha256": "4f6c8e258818502078d4b18323c8eb49393c20b031cab5ef9fbfde41a9fab596"
+    },
+    {
+      "file": "Prop_Crate4.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Crate4.gltf",
+      "sha256": "a02ff58ba6f83e4a0550459b17bc5cdc22e36da3a6ec9f07677b22838e008e22"
+    },
+    {
+      "file": "Prop_Fan_Small.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Fan_Small.bin",
+      "sha256": "2c129f70b66e3a5c0c6dcee94ac8d239f10e274cd533c1702aa3efe2d9f39832"
+    },
+    {
+      "file": "Prop_Fan_Small.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Fan_Small.gltf",
+      "sha256": "71e53e5b9864d39cf401d13c6478c155e480b5635f0be0370d9ff4037f529914"
+    },
+    {
+      "file": "Prop_Fan_Small_Propeller.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Fan_Small_Propeller.bin",
+      "sha256": "86bcb35edd56c117729135b19a1f4ab04638474bd359409a1e553e6fd690f63f"
+    },
+    {
+      "file": "Prop_Fan_Small_Propeller.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Fan_Small_Propeller.gltf",
+      "sha256": "7d9bffe6a60b4fd9b5ce7e53b79ee2462aeb15126b71230d686416a477b971d6"
+    },
+    {
+      "file": "Prop_ItemHolder.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_ItemHolder.bin",
+      "sha256": "74bcb41e58d577bec18b850fa37f31c665b755ba0324f0525422d492483faa59"
+    },
+    {
+      "file": "Prop_ItemHolder.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_ItemHolder.gltf",
+      "sha256": "4e0c1867d92bd4d1ff2c96a5b1312defbdb4ace13d1d842f48bf201556f2f501"
+    },
+    {
+      "file": "Prop_Light_Corner.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Corner.bin",
+      "sha256": "7898e616183af9ff0c5bbf2c90aaace841ceb35d6d5bee4cc524a2975906dd31"
+    },
+    {
+      "file": "Prop_Light_Corner.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Corner.gltf",
+      "sha256": "532de4a47d9e9a78c3c8161299284b90d191cabf38f699242bce356306f08ef9"
+    },
+    {
+      "file": "Prop_Light_Floor.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Floor.bin",
+      "sha256": "6232f3a6a8dc1e589bf8f8f5804bf2242b396b5d2322d3092d7ab0b55344c0d5"
+    },
+    {
+      "file": "Prop_Light_Floor.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Floor.gltf",
+      "sha256": "101a2648b82e29deddc219968da1c632c4926f24c6d1c900b1daf4f83cbed0f0"
+    },
+    {
+      "file": "Prop_Light_Small.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Small.bin",
+      "sha256": "d31557d8a0bca16e31cb578cc90528cc484908b641c897b5bb0f55335e292054"
+    },
+    {
+      "file": "Prop_Light_Small.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Small.gltf",
+      "sha256": "0f9cbbe00a3ca817278dfac3e9f20eab3feec4c7a74b3d4ca32560a517e6f38a"
+    },
+    {
+      "file": "Prop_Light_Wide.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Wide.bin",
+      "sha256": "2ec8fa4cbe5d26f208a1b3a4a20635d1524359bbacdfed282ddc90e2358aa96c"
+    },
+    {
+      "file": "Prop_Light_Wide.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Wide.gltf",
+      "sha256": "bad2b6ffc330aaa185700edb7487f4c8315291fd23d834844f68d6c1695fff40"
+    },
+    {
+      "file": "Prop_PipeHolder.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_PipeHolder.bin",
+      "sha256": "a86f4a0c1e4fb91e456af2542fc520c4dbc99245212ad1dae5c1308550038c3d"
+    },
+    {
+      "file": "Prop_PipeHolder.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_PipeHolder.gltf",
+      "sha256": "897b39476c08efa9f7f118d36e2bf89a3493bb4caf9bdf50190ad5f43f286cfe"
+    },
+    {
+      "file": "Prop_Rail_2.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_2.bin",
+      "sha256": "5c1959b13e37c52bab4d524df455afb225e5788119beb66ace9f066da1e7566f"
+    },
+    {
+      "file": "Prop_Rail_2.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_2.gltf",
+      "sha256": "47726b85c4bfc9bcc91629421d4dd9e8ac69403178695b49426b7ca59fa2387f"
+    },
+    {
+      "file": "Prop_Rail_3.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_3.bin",
+      "sha256": "163c64bb39b2b4291556b91309ac51c6eebc78c788b0b5e5d1900d0025cd107d"
+    },
+    {
+      "file": "Prop_Rail_3.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_3.gltf",
+      "sha256": "09e15fa3ad3e83d5e99ab594c77e9799067695492ec5146ad7df0129ca938a0b"
+    },
+    {
+      "file": "Prop_Rail_4.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_4.bin",
+      "sha256": "3ead7504df7679c8b89bf88817c0b9c9b5dd2f84b83622546ad16c2f269f3b0f"
+    },
+    {
+      "file": "Prop_Rail_4.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_4.gltf",
+      "sha256": "8796d4c1b50fb0f7b86d59825af3f98de2c9bce2a65ce25cd01712f3f5efc971"
+    },
+    {
+      "file": "Prop_Vent_Big.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Big.bin",
+      "sha256": "80b875bd2e95104903f986fd3ec0325be28cba48740a9e76eb10dde8ea23bd66"
+    },
+    {
+      "file": "Prop_Vent_Big.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Big.gltf",
+      "sha256": "4adeab6bee9068ec96f60ec5395693568dd996bc26cda02d77509f9bc0960e3e"
+    },
+    {
+      "file": "Prop_Vent_Small.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Small.bin",
+      "sha256": "d577e41ecae119635009de90e5d18343764a5d1d0d2d08e677ca80d431020fa9"
+    },
+    {
+      "file": "Prop_Vent_Small.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Small.gltf",
+      "sha256": "4d0e84335dfba7780fe9463c631040e1f0aac7b7814effede3c589b3d4c9db72"
+    },
+    {
+      "file": "Prop_Vent_Wide.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Wide.bin",
+      "sha256": "20bdac5e69a095731643b34d37a31363a44dddb54d83baae92e5bd0dfa24dea7"
+    },
+    {
+      "file": "Prop_Vent_Wide.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Vent_Wide.gltf",
+      "sha256": "eb5501d4e1254f75268679f57a1c1b68e11fb47d26557159be4385399b2ea4f6"
+    },
+    {
+      "file": "ShortWall_AccentStrip_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_AccentStrip_Straight.bin",
+      "sha256": "3e36274bbda8884d9924b1207e9a21a53a270c4a9f256fa8aaad2d934195e1cb"
+    },
+    {
+      "file": "ShortWall_AccentStrip_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_AccentStrip_Straight.gltf",
+      "sha256": "edbe07c5e7eb6f6918955d193f5d5eaa627445fb427c1f2bfafdf23bda6293e8"
+    },
+    {
+      "file": "ShortWall_MetalPlates_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_MetalPlates_Straight.bin",
+      "sha256": "42f66326a8707e4c4f63d8e9b9dc94b0072778a59612d98e7f0aef92aaae7c92"
+    },
+    {
+      "file": "ShortWall_MetalPlates_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_MetalPlates_Straight.gltf",
+      "sha256": "2208fb9ea62337f4bc39d3c51766ab3a8a337c55dcb71c861df4307a169051c0"
+    },
+    {
+      "file": "ShortWall_WhitePlate2_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_WhitePlate2_Straight.bin",
+      "sha256": "11906200711b946bbd0ca106a3d563f52a082ed5fee6ef5c7ff209b2606ffa6e"
+    },
+    {
+      "file": "ShortWall_WhitePlate2_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_WhitePlate2_Straight.gltf",
+      "sha256": "5596b2a442eefa82a997f43adec90257613e24b6b49bca17cf50306ee5869493"
+    },
+    {
+      "file": "T_Decals.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Decals.png",
+      "sha256": "cfd1dfe9d3c86a7f5f9bc2e516d935599a70854090f413a29aec0ced1d6c908a"
+    },
+    {
+      "file": "T_PaddedWall_BaseColor.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_BaseColor.png",
+      "sha256": "7b431c76896c8d2de736e33271049fc869f2a8a5c0632678c9f030146e90c650"
+    },
+    {
+      "file": "T_PaddedWall_Normal.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_Normal.png",
+      "sha256": "141c075ee32a4dda83c4b954076ea563b86e2a6329d5c536aa7ddccb6c1328bf"
+    },
+    {
+      "file": "T_PaddedWall_ORM.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_ORM.png",
+      "sha256": "555039f51a71803be3d617ac03eac05e840ec5b36c269de2115a50e956bff3b2"
+    },
+    {
+      "file": "T_Trim_01_BaseColor.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_BaseColor.png",
+      "sha256": "a8f3271be2aa9c450ef5ef85c15bf8bcaeeaa48f5fc616df12d1334a96e78605"
+    },
+    {
+      "file": "T_Trim_01_BaseColor_Red.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_BaseColor_Red.png",
+      "sha256": "15fc0e344ed35483bc771aaa95c1c2a0b0ec2349a893cf24af18b8742f0842ac"
+    },
+    {
+      "file": "T_Trim_01_Emissive.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_Emissive.png",
+      "sha256": "e031d09286c602e5d5bd847a4f84e88a124a800c1eb151c40302650a955f69bb"
+    },
+    {
+      "file": "T_Trim_01_Normal.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_Normal.png",
+      "sha256": "1aec7ad47a642fc68216b5a3119341b7dca038c1fc9493df8a15ad4aa27ddbcf"
+    },
+    {
+      "file": "T_Trim_01_ORM.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_ORM.png",
+      "sha256": "6ab7ad231df22867652048ebfd602684a9072d45c483ca57df0fcd4cb2cb4feb"
+    },
+    {
+      "file": "T_Trim_02_BaseColor.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor.png",
+      "sha256": "7b13c6a7d82b434314237c4b1930b8e12ddc69a70ffef28d73cbd178d3ff6293"
+    },
+    {
+      "file": "T_Trim_02_BaseColor_Blue.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor_Blue.png",
+      "sha256": "f5b2289f70fed4997f01e6f774c918bc30813ee9ec37f83f479f9bc36e0b68de"
+    },
+    {
+      "file": "T_Trim_02_BaseColor_Red.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor_Red.png",
+      "sha256": "4a08abf8dc0a5bf558a0ae38dc0d70eddc328eaa8060725d07b95d7c8a75663c"
+    },
+    {
+      "file": "T_Trim_02_Normal.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_Normal.png",
+      "sha256": "7faaa7059192f43aded9cc2f93917dd54fd14545509c37318d4e6bf0a8104960"
+    },
+    {
+      "file": "T_Trim_02_ORM.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_ORM.png",
+      "sha256": "2a433e6a7fbcec375b5c5e5c7aa57dbe1fd23ca6592f48c52d09dde2d622aab8"
+    },
+    {
+      "file": "T_Trim_03_BaseColor.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_03_BaseColor.png",
+      "sha256": "2a15eadbedbc928d771ed8f2a7a8c1a16bce89b2836a0ecf34ece7e2fab96769"
+    },
+    {
+      "file": "T_Trim_03_Cables.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_03_Cables.png",
+      "sha256": "758a95beccdc9f0621d8b8a283ee2593e04b56f1cd32776165ec85e1568e8eb8"
+    },
+    {
+      "file": "T_Trim_03_Normal.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_03_Normal.png",
+      "sha256": "b2c3238cbe2586e44df0b00179adf85e5b7ac7fed1713ec0b807482245a30738"
+    },
+    {
+      "file": "T_Trim_03_ORM.png",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/Textures/T_Trim_03_ORM.png",
+      "sha256": "c57134b5d496b39b955a87765ea32b93567b1ab494fe6b890de24c75dcfd6fe4"
+    },
+    {
+      "file": "TopAstra_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopAstra_Straight.bin",
+      "sha256": "ed63a505c76b57d2ebeb4c4cd9ceb65ca58ef77c03c0abf73e8ec709520e16bd"
+    },
+    {
+      "file": "TopAstra_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopAstra_Straight.gltf",
+      "sha256": "de57511ae39287eef12071597cb30c487034dab827d517aca40c894a666aefe8"
+    },
+    {
+      "file": "TopCables_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight.bin",
+      "sha256": "5f0ded32e7b2e14cce63557af52851064cda1e33d045a6e5bf223abf823af972"
+    },
+    {
+      "file": "TopCables_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight.gltf",
+      "sha256": "a768e6ed289c2db2852b248fe16c640186101110380f6dd96c177ab6df0461cf"
+    },
+    {
+      "file": "TopCables_Straight_Hanging.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight_Hanging.bin",
+      "sha256": "4e1fdef2b940b1748ef3fc6ad2764d57b6e533109d23dc318b31934172004bd8"
+    },
+    {
+      "file": "TopCables_Straight_Hanging.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight_Hanging.gltf",
+      "sha256": "62e2c892a1519ba979e194a970257b58b1b03589bd826debfa6c382054150484"
+    },
+    {
+      "file": "TopSimple_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopSimple_Straight.bin",
+      "sha256": "5819f09b3c4c576d38d73eebc1fa33d1026ee3c8fac59cc9bd9c7064728ff550"
+    },
+    {
+      "file": "TopSimple_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopSimple_Straight.gltf",
+      "sha256": "c114644c2f3133e179406eb2a788459fadad956fe1794a216d5ac85cc9e23053"
+    },
+    {
+      "file": "TopWindow_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopWindow_Straight.bin",
+      "sha256": "3fbcad9e2865b485513941329f9cbcbcb5d499ca8991b4e7120d4dc503e6e36d"
+    },
+    {
+      "file": "TopWindow_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/TopWindow_Straight.gltf",
+      "sha256": "dedca17ecd1b3cdf6c87fde4a4973642d63f8d2d1b65e20a077df04ba6b76268"
+    },
+    {
+      "file": "WallAstra_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight.bin",
+      "sha256": "7b7b278650105dcf5e41d8bc4d1d3e0ed3f1a001c92d6835162753f87a3dd268"
+    },
+    {
+      "file": "WallAstra_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight.gltf",
+      "sha256": "76ca46a4cac44e9c7a0971bdb2d1912f9d5d7e00fe2e8f7ffa488e98856a1368"
+    },
+    {
+      "file": "WallAstra_Straight_Flat.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight_Flat.bin",
+      "sha256": "4979819c780de114f8daa39b53441808ce058de019663355b54876697ac171fe"
+    },
+    {
+      "file": "WallAstra_Straight_Flat.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight_Flat.gltf",
+      "sha256": "cbb4cb905dcfd6a806217f3b72d57eab42e637d52fcb1faf0edfbaf8b4d89506"
+    },
+    {
+      "file": "WallAstra_Straight_Window.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight_Window.bin",
+      "sha256": "3ccd060adc3c638a23835875a7ae4f45c7a8be0357db93ef16d9b1273cb93049"
+    },
+    {
+      "file": "WallAstra_Straight_Window.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight_Window.gltf",
+      "sha256": "e6801442d6961b72087d216b9024e2c056cb2d6b975450aeddda23662a40475f"
+    },
+    {
+      "file": "WallBand_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Straight.bin",
+      "sha256": "24b8d9b158440df24afabc7cf6791054179db184128f32cca0eab7f16cc9fcf2"
+    },
+    {
+      "file": "WallBand_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Straight.gltf",
+      "sha256": "3537dee681643c10332127a1cb50115f7d62b944ade50a611dd58ddf7afb70be"
+    },
+    {
+      "file": "WallWindow_Straight.bin",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallWindow_Straight.bin",
+      "sha256": "ba9316187d6161d38a6585be4498b160676f85215179d39c03fab882683520da"
+    },
+    {
+      "file": "WallWindow_Straight.gltf",
+      "archive": "scifi.zip",
+      "archive_path": "Modular SciFi MegaKit[Standard]/glTF/Walls/WallWindow_Straight.gltf",
+      "sha256": "8963fbfb1431216caf8ed5c41e2bd2463a5583770b276072ae87d66fa7ebaa7a"
+    }
+  ],
+  "modifications": "Original source bytes unchanged. Shader and material adaptation lives in scene builders."
+}
