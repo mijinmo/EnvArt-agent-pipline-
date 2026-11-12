@@ -1,0 +1,5 @@
+Poly Haven assets — CC0 1.0 Universal
+License declaration: https://polyhaven.com/license
+Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Original authors and download hashes: manifest.json
+Commercial use and redistribution permitted; attribution appreciated.
