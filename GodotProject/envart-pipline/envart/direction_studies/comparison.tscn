@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://envart/direction_studies/comparison.gd" id="1"]
+[node name="DirectionComparison" type="Node3D"]
+script = ExtResource("1")
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 3
+[node name="Hint" type="Label" parent="HUD"]
+offset_left = 22.0
+offset_top = 110.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EnvArt · 三方向真实素材对比</title>
+<style>
+:root{color-scheme:dark;--bg:#12191e;--card:#1d2931;--text:#e7ecec;--dim:#aebec6;--accent:#8fd4d7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.85 system-ui,-apple-system,"PingFang SC",sans-serif}main{max-width:1240px;margin:auto;padding:54px 28px 90px}h1{font-size:clamp(30px,5vw,52px);line-height:1.25;margin:15px 0 24px}h2{margin-top:52px;font-size:28px}h3{font-size:20px}a{color:var(--accent)}p{max-width:960px}small,figcaption,.lead{color:var(--dim)}.lead{font-size:20px}.eyebrow{letter-spacing:.12em;font-size:13px;color:var(--accent)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card,.note{background:var(--card);padding:20px 24px;border-radius:9px}.card h3{margin-top:0}.note{border-left:3px solid var(--accent);margin:26px 0}figure{margin:24px 0}img{display:block;width:100%;height:auto;border-radius:8px}figcaption{font-size:14px;margin-top:8px}button,select{font:inherit;color:var(--text);background:#23353e;border:1px solid #4b6672;border-radius:6px;padding:7px 14px;cursor:pointer}button[aria-pressed=true]{background:#a3d9d8;color:#142326;border-color:#a3d9d8}button:focus-visible,select:focus-visible{outline:3px solid #ffd27e;outline-offset:3px}.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.toolbar label{margin-left:auto}table{border-collapse:collapse;width:100%}td,th{padding:12px;text-align:left;border-bottom:1px solid #354852}th{color:var(--accent)}code,kbd{font-size:.9em;background:#293a43;border-radius:4px;padding:2px 6px}pre{background:#0a1014;padding:20px;overflow:auto;font-size:14px}pre code{background:none;padding:0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}nav{display:flex;gap:22px;flex-wrap:wrap;margin:24px 0}@media(max-width:760px){main{padding:26px 18px}.cards,.pair{grid-template-columns:1fr}.toolbar label{margin-left:0}table{font-size:14px}}
+</style>
+<main>
+<div class="eyebrow">ENVIRONMENT ART / REAL ASSET STUDIES · 2026.11.12</div>
+<h1>同一测试场，三种环境美术方向</h1>
+<p class="lead">以晴日庭院的局部样板为基准，新增灰烬庭院和 Facility 07。比较建筑构件、完整地面、成组道具、材质与远景如何改变同一空间的气质。</p>
+<nav><a href="#compare">同机位对比</a><a href="#play">试玩方法</a><a href="#details">近景细节</a><a href="#edit">编辑与重建</a><a href="#sources">素材来源</a></nav>
+<div class="note">以下均为 Godot 4.7.2 Forward+ 实机截图。当前用于美术方向审阅，主要制作范围是门洞、坡道、墙边道具与庭院地面；跳台、台阶仍保留测试块的形状。远景没有玩法碰撞，尚不是完整正式关卡。</div>
+<div class="cards">
+<article class="card"><h3>01 · 晴日货运庭院</h3><p>暖石材、木构件、红瓦与自然植被。用货箱、农产品、工具和生活杂物讲述日常作业。外围是聚落、林地与山丘。</p><p><a href="local-asset-sample.html">原样板的详细说明 →</a></p></article>
+<article class="card"><h3>02 · 灰烬庭院</h3><p>冷灰石砌、拱券与厚重石栏。用破盾、旧箱、烛台、碎陶和断桌组成废弃守卫区；少量暖光标记门洞。远处是高低错落的堡垒和荒山。</p></article>
+<article class="card"><h3>03 · Facility 07</h3><p>白色面板、深色设备、青色导向线。门禁终端连接货运坡道，墙边安排维修桌、储物柜、补给架和管线；外围是设备楼、天线与货柜。</p></article>
+</div>
+<h2 id="compare">同机位切换</h2>
+<p>先选观察位置，再切换方向。灰烬与设施使用各自的真实建筑和道具素材，不同包的细节密度与低多边形风格会有差异；本轮不是参考游戏画面的等精度复刻。</p>
+<div class="toolbar" role="group" aria-label="美术方向">
+<button data-direction="sunlit" aria-pressed="true">01 晴日</button><button data-direction="ashen" aria-pressed="false">02 灰烬</button><button data-direction="facility" aria-pressed="false">03 科幻</button>
+<label for="view">观察位置 <select id="view"><option value="door">门洞</option><option value="ramp">坡道</option><option value="props">墙边道具</option><option value="workbench_detail">桌面近景</option><option value="shipment_detail">墙外道具</option><option value="overview">全场总览</option><option value="backdrop_vista">远景</option><option value="player_first">第一人称</option><option value="player_third">第三人称</option></select></label>
+</div>
+<figure><a id="full-image" href="images/local-sample/door.png"><img id="comparison-image" src="images/local-sample/door.png" alt="晴日庭院 · 门洞实机画面" width="1600" height="1000"></a><figcaption id="caption" aria-live="polite">晴日庭院 · 门洞；点击图片查看原图。</figcaption></figure>
+<h2 id="play">从 Unity 习惯到 Godot 试玩</h2>
+<ol><li>导入 <code>GodotProject/envart-pipline/project.godot</code>，等待资源导入，按 <kbd>F5</kbd> 运行项目。入口现在是 <code>envart/direction_studies/comparison.tscn</code>。</li><li>按 <kbd>Z</kbd> / <kbd>X</kbd> / <kbd>C</kbd> 切换晴日、灰烬、科幻。切换时保留玩家位置、相机朝向和轨迹时间；轨迹会暂停，方便同帧比较。</li><li>用 <kbd>5</kbd> / <kbd>6</kbd> / <kbd>7</kbd> 查看门洞、坡道与墙边道具，<kbd>8</kbd> 查看远景。按 <kbd>1</kbd> 或 <kbd>2</kbd> 回到玩家视角。</li><li>按 <kbd>0</kbd> 对照原白盒，<kbd>B</kbd> 开关远景，<kbd>H</kbd> 隐藏提示。点击画面捕获鼠标，<kbd>Esc</kbd> 释放；WASD 移动，Shift 加速，Space 跳跃。</li></ol>
+<table><thead><tr><th>操作</th><th>快捷键 / 对应关系</th></tr></thead><tbody><tr><td>第一 / 第三 / 自由 / 轨迹视角</td><td>1 / 2 / 3 / 4</td></tr><tr><td>自由观察升降</td><td>E / Q；滚轮调整飞行速度</td></tr><tr><td>轨迹播放暂停 / 起点 / 前后定位</td><td>P / Home / [ 与 ]</td></tr><tr><td>运行完整对比入口</td><td>F5，类似 Unity 的 Play 项目入口</td></tr><tr><td>单独运行某个方向</td><td>打开 ashen.tscn 或 facility.tscn 后按 F6</td></tr><tr><td>可独立装配的美术资源</td><td>*_art.tscn 和 *_backdrop.tscn，类似只含模型的 Prefab；它们自身没有玩家相机</td></tr></tbody></table>
+<p>建议在固定观察机位或暂停的轨迹中切换。道具位置随方向不同，在某个道具将出现的位置切换可能让角色被碰撞挤开。详细相机操作见 <a href="rail-camera-guide.html">轨迹相机 HTML 教程</a>。</p>
+<h2 id="details">局部细节与装配检查</h2>
+<div class="pair"><figure><img src="images/directions/ashen/props.png" alt="灰烬庭院墙边旧家具、蜡烛和破损道具" loading="lazy"><figcaption>灰烬：墙面的拱券、裂缝与栅窗，配合烛台、武器、断桌和遗留物件。</figcaption></figure><figure><img src="images/directions/facility/props.png" alt="设施维修桌、终端、储物柜和补给架" loading="lazy"><figcaption>设施：维修操作区与补给架；小道具按桌面和货架层板的真实高度落位。</figcaption></figure></div>
+<div class="pair"><figure><img src="images/directions/ashen/ramp.png" alt="灰烬庭院的石栏坡道" loading="lazy"><figcaption>石铺面与石栏沿原坡度排列；落脚平台没有改成台阶。</figcaption></figure><figure><img src="images/directions/facility/ramp.png" alt="设施金属坡道和货物组合" loading="lazy"><figcaption>金属铺面、护栏与货物使用下载模型；栏杆变换和碰撞随坡面检查。</figcaption></figure></div>
+<h2 id="edit">场景结构、编辑与重建</h2>
+<p><code>comparison.gd</code> 一次只加载一个可玩方向，切换时卸载旧场景，避免隐藏方向遗留光源或碰撞。每个方向都使用原始 <code>BaseLab</code>，<code>Art</code> 负责近景，<code>Backdrop</code> 负责无碰撞远景。</p>
+<table><thead><tr><th>文件 / 节点</th><th>修改什么</th></tr></thead><tbody><tr><td>ashen_art.tscn / facility_art.tscn</td><td>直接调整模型实例的位置、旋转、缩放；分组按门洞、坡道和道具功能命名。原模型路径保存在 asset_source 元数据。</td></tr><tr><td>模型名 + _Footprint</td><td>新增道具的简化碰撞代理。移动道具时要一起移动对应代理。</td></tr><tr><td>ashen_backdrop.tscn / facility_backdrop.tscn</td><td>调整外围堡垒、岩石、设备楼和天线。不要将它们视为已经可探索的玩法区域。</td></tr><tr><td>variant.gd</td><td>白盒与美术表面的切换。美术模式隐藏原地面外观，避免与真实地板重叠闪烁，原碰撞不变。</td></tr><tr><td>build_direction_base.gd</td><td>源模型实例化、底部定位、材质适配、简化碰撞和烘焙地形高度采样。</td></tr></tbody></table>
+<p>Godot 的资源路径 <code>res://</code> 指向项目目录。生成脚本是离线制作工具，不会每帧执行。下面的命令在仓库根目录运行，会覆盖对应生成场景；手工编辑前请另存或提交。</p>
+<pre><code>GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
+"$GODOT_BIN" --headless --path GodotProject/envart-pipline \
+  --script res://envart/tools/build_ashen_sample.gd
+"$GODOT_BIN" --headless --path GodotProject/envart-pipline \
+  --script res://envart/tools/build_facility_sample.gd
+"$GODOT_BIN" --headless --path GodotProject/envart-pipline \
+  --script res://envart/tools/build_direction_scenes.gd</code></pre>
+<p>灰烬版读取已烘焙的晴日地形网格进行着色，并采样实际三角形高度放置岩石。若修改晴日地形，应先按照 <a href="local-asset-sample.html">晴日教程</a> 用图形后端生成它，再重建灰烬版。设施版是模块化外围装配，不依赖 MultiMesh 烘焙。</p>
+<h2 id="sources">真实下载素材与许可</h2>
+<table><thead><tr><th>作者与包</th><th>本项目导入</th><th>实际免费范围</th></tr></thead><tbody><tr><td><a href="https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0">Kay Lousberg · Dungeon Remastered</a></td><td>56 个模型；作者 GitHub 的 1.0 版</td><td>CC0；仅选取模型和许可，没有导入其示例工程或执行代码</td></tr><tr><td><a href="https://opengameart.org/content/modular-sci-fi-megakit">Quaternius · Modular Sci-Fi MegaKit</a></td><td>56 个建筑、地板、护栏、管线与设备模型</td><td>Standard 免费包，作者该版本说明为 190 个模型；没有使用付费引擎工程和自定义 Shader</td></tr><tr><td><a href="https://opengameart.org/content/sci-fi-essentials-kit">Quaternius · Sci-Fi Essentials Kit</a></td><td>23 个家具、货物和补给模型</td><td>Standard 免费包，作者该版本说明为 37 个模型；模型与贴图分 ZIP 发布</td></tr></tbody></table>
+<p>灰烬版还复用已入库的 Quaternius 幻想道具与自然素材。每套目录都保留包内许可和 <code>manifest.json</code>，记录下载页、源 ZIP 的 SHA-256、模型列表和逐文件哈希。恢复素材可运行 <code>python3 tools/install_direction_assets.py /包含四个ZIP的目录</code>；脚本中记录所需文件名，不会自动下载或执行包内程序。</p>
+<p>参考方向延续先前的《黑暗之魂》衰败堡垒和《传送门 2》设施空间语言；这里使用独立的免费商用素材，没有提取参考游戏资产。当前角色仍是本机安装的 Mixamo 人形比例与运动模特，未重新分发原始角色文件。</p>
+<h2>验证与当前边界</h2>
+<p>两版均检查了原始 17 个静态碰撞体不变、门洞双向穿行、坡道登顶、四种相机、观察书签朝向、白盒和远景开关。对比入口另检查 Z / X / C 切换、相机位置、轨迹时间保持，以及旧场景卸载和新增碰撞隔离。</p>
+<pre><code># 真实渲染与截图；将 ashen 换成 facility 检查另一方向
+"$GODOT_BIN" --path GodotProject/envart-pipline \
+  --script res://tests/direction_sample_visual.gd -- ashen
+# 对比入口回归
+"$GODOT_BIN" --headless --path GodotProject/envart-pipline \
+  --script res://tests/direction_comparison_smoke.gd</code></pre>
+<p>截图输出在 <code>/tmp/envart-ashen</code> 和 <code>/tmp/envart-facility</code>。这些检查保证场景可运行及保护输入未变，不代替美术判断、手感试玩或目标硬件性能验收。</p>
+<p><a href="../README.md">README</a> · <a href="local-asset-sample.html">晴日样板</a> · <a href="envart-case-study.html">首轮失败案例记录</a></p>
+</main>
+<script>
+const names={sunlit:'晴日庭院',ashen:'灰烬庭院',facility:'Facility 07'};
+let direction='sunlit';const select=document.getElementById('view');
+function update(){const base=direction==='sunlit'?'images/local-sample/':`images/directions/${direction}/`;const url=base+select.value+'.png';const description=names[direction]+' · '+select.options[select.selectedIndex].text;document.getElementById('comparison-image').src=url;document.getElementById('comparison-image').alt=description+'实机画面';document.getElementById('full-image').href=url;document.getElementById('caption').textContent=description+'；点击图片查看原图。';document.querySelectorAll('[data-direction]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.direction===direction)));}
+document.querySelectorAll('[data-direction]').forEach(b=>b.addEventListener('click',()=>{direction=b.dataset.direction;update();}));select.addEventListener('change',update);
+</script>
+</html>

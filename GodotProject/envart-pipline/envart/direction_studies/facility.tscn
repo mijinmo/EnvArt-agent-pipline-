@@ -1,0 +1,523 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://envart/direction_studies/variant.gd" id="1_6td1j"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="2_qnxhm"]
+[ext_resource type="Script" path="res://demo/controller_lab.gd" id="3_jyork"]
+[ext_resource type="Shader" path="res://demo/grid.gdshader" id="4_1k0h3"]
+[ext_resource type="Script" path="res://controllers/rail_camera.gd" id="5_jymuk"]
+[ext_resource type="Script" path="res://controllers/player_motor.gd" id="6_qhqmf"]
+[ext_resource type="Resource" path="res://controllers/default_player_profile.tres" id="7_ak5ab"]
+[ext_resource type="Script" path="res://controllers/camera_rig.gd" id="8_hupid"]
+[ext_resource type="Script" path="res://controllers/player_input.gd" id="9_t1uyq"]
+[ext_resource type="Script" path="res://demo/rail_controls.gd" id="10_rgng4"]
+[ext_resource type="PackedScene" path="res://envart/direction_studies/facility_art.tscn" id="11_lcje6"]
+[ext_resource type="PackedScene" path="res://envart/direction_studies/facility_backdrop.tscn" id="12_0g2ok"]
+
+[sub_resource type="ShaderMaterial" id="Grid"]
+render_priority = 0
+shader = ExtResource("4_1k0h3")
+shader_parameter/base_color = null
+shader_parameter/line_color = null
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="StandardMaterial3D" id="Stone"]
+albedo_color = Color(0.48, 0.56, 0.62, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.12, 0.58, 0.59, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="Orange"]
+albedo_color = Color(0.88, 0.44, 0.15, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8rj4e"]
+sky_top_color = Color(0.40784314, 0.53333336, 0.60784316, 1)
+sky_horizon_color = Color(0.7607843, 0.83137256, 0.8627451, 1)
+ground_bottom_color = Color(0.1882353, 0.22352941, 0.25882354, 1)
+ground_horizon_color = Color(0.7607843, 0.83137256, 0.8627451, 1)
+
+[sub_resource type="Sky" id="Sky_y34ef"]
+sky_material = SubResource("ProceduralSkyMaterial_8rj4e")
+
+[sub_resource type="Environment" id="Environment_o52eu"]
+background_mode = 2
+sky = SubResource("Sky_y34ef")
+ambient_light_source = 2
+ambient_light_color = Color(0.7058824, 0.7647059, 0.83137256, 1)
+ambient_light_energy = 0.7
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 1.1
+ssao_intensity = 1.4
+ssil_enabled = true
+ssil_intensity = 0.5
+fog_enabled = true
+fog_light_color = Color(0.7607843, 0.83137256, 0.8627451, 1)
+fog_density = 0.0025
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.025, 0.045, 0.07, 0.95)
+border_width_left = 3
+border_color = Color(1, 0.66, 0.28, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="HUDStyle"]
+bg_color = Color(0.025, 0.045, 0.07, 0.9)
+border_width_left = 3
+border_color = Color(0.15, 0.75, 0.78, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="LocalAssetSample" type="Node3D" unique_id=773514744]
+script = ExtResource("1_6td1j")
+art_direction = 1
+
+[node name="BaseLab" parent="." unique_id=1635215926 instance=ExtResource("2_qnxhm")]
+script = ExtResource("3_jyork")
+
+[node name="Floor" parent="BaseLab/World" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Floor" index="0"]
+material_override = SubResource("Grid")
+mesh = SubResource("FloorMesh")
+
+[node name="Collision" parent="BaseLab/World/Floor" index="1"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" parent="BaseLab/World" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -12)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/BackWall" index="0"]
+material_override = SubResource("Stone")
+mesh = SubResource("BackWallMesh")
+
+[node name="Collision" parent="BaseLab/World/BackWall" index="1"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" parent="BaseLab/World" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, -6)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall" index="0"]
+material_override = SubResource("Stone")
+mesh = SubResource("OcclusionWallMesh")
+
+[node name="Collision" parent="BaseLab/World/OcclusionWall" index="1"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" parent="BaseLab/World" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, -1)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn" index="0"]
+material_override = SubResource("Stone")
+mesh = SubResource("OcclusionReturnMesh")
+
+[node name="Collision" parent="BaseLab/World/OcclusionReturn" index="1"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" parent="BaseLab/World" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 1.3, -4)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("DoorLeftMesh")
+
+[node name="Collision" parent="BaseLab/World/DoorLeft" index="1"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" parent="BaseLab/World" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 1.3, -4)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/DoorRight" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("DoorRightMesh")
+
+[node name="Collision" parent="BaseLab/World/DoorRight" index="1"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" parent="BaseLab/World" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45, -4)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("DoorLintelMesh")
+
+[node name="Collision" parent="BaseLab/World/DoorLintel" index="1"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" parent="BaseLab/World" index="7"]
+transform = Transform3D(1, 0, 0, 0, 0.94868326, -0.3162278, 0, 0.3162278, 0.94868326, -6, 0.85, -3)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Ramp" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("RampMesh")
+
+[node name="Collision" parent="BaseLab/World/Ramp" index="1"]
+shape = SubResource("RampShape")
+
+[node name="Landing" parent="BaseLab/World" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -7)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Landing" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("LandingMesh")
+
+[node name="Collision" parent="BaseLab/World/Landing" index="1"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" parent="BaseLab/World" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.1, 2)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Step1" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("Step1Mesh")
+
+[node name="Collision" parent="BaseLab/World/Step1" index="1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" parent="BaseLab/World" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 1.4)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Step2" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("Step2Mesh")
+
+[node name="Collision" parent="BaseLab/World/Step2" index="1"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" parent="BaseLab/World" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.3, 0.8)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Step3" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("Step3Mesh")
+
+[node name="Collision" parent="BaseLab/World/Step3" index="1"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" parent="BaseLab/World" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.4, 0.2)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/Step4" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("Step4Mesh")
+
+[node name="Collision" parent="BaseLab/World/Step4" index="1"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" parent="BaseLab/World" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 1)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/JumpLow" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("JumpLowMesh")
+
+[node name="Collision" parent="BaseLab/World/JumpLow" index="1"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" parent="BaseLab/World" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.45, -1)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/JumpMid" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("JumpMidMesh")
+
+[node name="Collision" parent="BaseLab/World/JumpMid" index="1"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" parent="BaseLab/World" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.7, -3)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh" index="0"]
+material_override = SubResource("Orange")
+mesh = SubResource("JumpHighMesh")
+
+[node name="Collision" parent="BaseLab/World/JumpHigh" index="1"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" parent="BaseLab/World" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 8)
+collision_mask = 2
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad" index="0"]
+material_override = SubResource("Teal")
+mesh = SubResource("SpawnPadMesh")
+
+[node name="Collision" parent="BaseLab/World/SpawnPad" index="1"]
+shape = SubResource("SpawnPadShape")
+
+[node name="DoorLabel" parent="BaseLab/World" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15, -4)
+pixel_size = 0.007
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "1.2 m CLEAR / 2.3 m HIGH"
+font_size = 48
+
+[node name="RampLabel" parent="BaseLab/World" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -4)
+pixel_size = 0.007
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "RAMP / 18.4 deg"
+font_size = 48
+
+[node name="StepLabel" parent="BaseLab/World" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.9, 2)
+pixel_size = 0.007
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "RAW STEPS / JUMP TO CLIMB"
+font_size = 48
+
+[node name="WallLabel" parent="BaseLab/World" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3.5, -4)
+pixel_size = 0.007
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "CAMERA OCCLUSION"
+font_size = 48
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("Environment_o52eu")
+
+[node name="Sun" parent="BaseLab" index="2"]
+transform = Transform3D(0.8660254, 0.3715724, -0.33456528, 0, 0.6691305, 0.74314487, 0.5, -0.6435823, 0.57948405, 0, 0, 0)
+light_color = Color(0.8784314, 0.92941177, 0.98039216, 1)
+light_energy = 1.15
+shadow_enabled = true
+
+[node name="Spawn" parent="BaseLab" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 8)
+
+[node name="RailCamera" parent="BaseLab" index="4" node_paths=PackedStringArray("aim_target")]
+script = ExtResource("5_jymuk")
+aim_target = NodePath("FocusTarget")
+
+[node name="Player" parent="BaseLab" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 8)
+collision_layer = 2
+script = ExtResource("6_qhqmf")
+profile = ExtResource("7_ak5ab")
+
+[node name="CameraRig" parent="BaseLab" index="6" node_paths=PackedStringArray("target", "rail_camera")]
+script = ExtResource("8_hupid")
+target = NodePath("../Player")
+rail_camera = NodePath("../RailCamera")
+
+[node name="PlayerInput" parent="BaseLab" index="7" node_paths=PackedStringArray("player", "cameras")]
+script = ExtResource("9_t1uyq")
+player = NodePath("../Player")
+cameras = NodePath("../CameraRig")
+
+[node name="RailControls" parent="BaseLab/HUD" index="0" node_paths=PackedStringArray("director")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -136.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("PanelStyle")
+script = ExtResource("10_rgng4")
+director = NodePath("../../CameraRig")
+
+[node name="Panel" parent="BaseLab/HUD" index="1"]
+offset_left = 20.0
+offset_top = 20.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("HUDStyle")
+
+[node name="Margin" parent="BaseLab/HUD/Panel" index="0"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="Readout" parent="BaseLab/HUD/Panel/Margin" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.85, 0.94, 1, 1)
+text = "ENVART / CONTROLLER LAB"
+
+[node name="Crosshair" parent="BaseLab/HUD" index="2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -14.0
+offset_right = 8.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "+"
+horizontal_alignment = 1
+
+[node name="ReviewViews" type="Node3D" parent="." unique_id=722117213]
+
+[node name="Door" type="Marker3D" parent="ReviewViews" unique_id=1855245943]
+transform = Transform3D(0.8333562, 0.074517705, -0.54769015, 0, 0.9908706, 0.13481602, 0.5527363, -0.11234976, 0.8257482, -3.4, 2.55, 0.9)
+
+[node name="Ramp" type="Marker3D" parent="ReviewViews" unique_id=2040136984]
+transform = Transform3D(0.76822126, -0.19121763, 0.6109598, 0, 0.95434976, 0.29869148, -0.6401844, -0.22946115, 0.7331518, -1.5, 3.5, 1.6)
+
+[node name="Props" type="Marker3D" parent="ReviewViews" unique_id=1374189362]
+transform = Transform3D(-0.6718149, 0.17950013, -0.7186406, 0, 0.97019327, 0.2423323, 0.740719, 0.16280246, -0.6517903, 4.5, 2.7, -8.3)
+
+[node name="Backdrop" type="Marker3D" parent="ReviewViews" unique_id=1954970351]
+transform = Transform3D(0.94174194, -0.033765204, 0.33463722, 0, 0.994948, 0.10039117, -0.3363364, -0.09454258, 0.93698424, 20, 14, 24)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=797309582]
+layer = 2
+
+[node name="Hint" type="Label" parent="HUD" unique_id=1672315700]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 22.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="Art" type="Node3D" parent="." unique_id=2129274865 instance=ExtResource("11_lcje6")]
+
+[node name="Backdrop" type="Node3D" parent="." unique_id=1386648125 instance=ExtResource("12_0g2ok")]
+
+[editable path="BaseLab"]

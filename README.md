@@ -2,19 +2,21 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-当前主场景是 **真实素材局部样板：门洞、坡道、墙边道具区**，使用 Quaternius 三套 CC0 Standard 免费包。主地面采用连续石铺庭院，外围经泥土过渡到草地；墙脚补充灌木、草簇和小花，远景为程序化装配的聚落、林地和山丘。跳台与台阶测试块仍保留白盒；本版等待用户美术审阅。通用自动检索和 Blender 适配管线尚未实现。
+当前入口为 **三方向真实素材对比样板**：晴日货运庭院、灰烬庭院、Facility 07。三者沿用同一测试场与观察机位，分别装配门洞、坡道、墙边道具、完整地面和外围远景。原始玩法碰撞不变，新增道具使用简化碰撞。跳台和台阶仍是测试几何，尚未完成全场正式关卡美术。
 
 ![真实素材墙边道具样板](docs/images/local-sample/props.png)
 
-[局部样板 HTML 图文说明与实机截图](docs/local-asset-sample.html)。首轮三风格案例于 2026-11-12 未通过用户美术验收，仍保存在 `envart/envart_lab.tscn`，仅作历史技术试验。
+晴日版使用 Quaternius 的村庄、幻想道具与自然包；灰烬版加入 KayKit Dungeon Remastered 1.0 的石砌构件与道具；设施版使用 Quaternius Modular Sci-Fi MegaKit 与 Sci-Fi Essentials Kit 的 Standard 免费素材。新素材的许可、来源及文件哈希保存在各自 `manifest.json`。本轮供方向审阅，通用自动检索和 Blender 适配管线尚未实现。
+
+[三方向 HTML 同机位对比与教程](docs/direction-comparison.html) · [晴日局部样板说明](docs/local-asset-sample.html)。首轮三风格案例于 2026-11-12 未通过美术验收，仍保存在 `envart/envart_lab.tscn`，仅作历史技术试验。
 
 ## 快速开始
 
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
-2. 等待首次资源导入完成，按 **F5** 运行主场景 `envart/local_sample/local_sample.tscn`。
+2. 等待首次资源导入完成，按 **F5** 运行对比入口 `envart/direction_studies/comparison.tscn`。
 3. 点击画面捕获鼠标，按 **Esc** 释放。也可以直接按 **4** 进入轨迹视角，再按 **P** 播放。
 
-启动后停在门洞观察机位。按 **5 / 6 / 7** 查看门洞、坡道、墙边道具，**8** 查看远景，**B** 开关远景，**0** 切换白盒对照，**H** 隐藏操作提示。按 **1 / 2** 回到玩家视角试玩。原始 `demo/controller_lab.tscn` 与历史 `envart/envart_lab.tscn` 保留，可单独 F6 运行。
+启动后停在晴日庭院的门洞观察机位。按 **Z / X / C** 切换晴日 / 灰烬 / 科幻；切换保留玩家位置、观察朝向和轨迹时间，轨迹会暂停以便同帧比较。按 **5 / 6 / 7** 查看门洞、坡道、墙边道具，**8** 查看远景，**B** 开关远景，**0** 切换白盒对照，**H** 隐藏操作提示。按 **1 / 2** 回到玩家视角试玩。原始 `demo/controller_lab.tscn` 与历史 `envart/envart_lab.tscn` 保留，可单独 F6 运行。
 
 当前使用 Forward+ 渲染与 Jolt Physics。其他引擎版本、渲染后端和目标平台尚未完成兼容性验证。
 
@@ -38,6 +40,7 @@
 | 轨迹前后定位 1 秒 | [ / ] |
 | 轨迹循环开关 | L |
 | 释放鼠标，操作巡检面板 | Esc |
+| 晴日 / 灰烬 / 科幻方向 | Z / X / C |
 | 门洞 / 坡道 / 墙边道具观察机位 | 5 / 6 / 7 |
 | 远景观察机位 / 开关远景 | 8 / B |
 | 切换白盒对照 / 隐藏提示 | 0 / H |
@@ -86,7 +89,23 @@ docs/
 
 Godot 中的 `res://` 指向 `project.godot` 所在目录，不是仓库根目录。
 
-## 远景与植物
+## 新方向场景与重建
+
+`envart/direction_studies/ashen.tscn` 和 `facility.tscn` 可以单独 F6 试玩；`comparison.tscn` 提供三方向切换，晴日原场景仍可独立运行。比较时建议使用 5 / 6 / 7 机位，或暂停轨迹后再切方向。新增道具布局各不相同，若站在某个道具将出现的位置切换，可能被碰撞挤开。
+
+两个新方向分别拆为 `*_art.tscn`（近景）、`*_backdrop.tscn`（无玩法碰撞的远景）。原生网格只用于填充、测试块和地形；可见构件、地板、护栏与大部分道具保留下载模型实例。灰烬远景取用晴日版烘焙地形的网格并重新着色，附加石砌堡垒与贴地岩石；科幻远景使用模块设备楼、天线与货柜。
+
+离线生成器会覆盖对应产物，手工修改前先另存或提交：
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path GodotProject/envart-pipline --script res://envart/tools/build_ashen_sample.gd
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path GodotProject/envart-pipline --script res://envart/tools/build_facility_sample.gd
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path GodotProject/envart-pipline --script res://envart/tools/build_direction_scenes.gd
+```
+
+科幻版门框按净空缩放，货架补给按模型层板表面高度落位；两版覆盖地面时隐藏原地面外观，以避免重叠闪烁，原碰撞仍保留。切回 0 白盒会恢复原外观并关闭新增碰撞。
+
+## 晴日远景与植物
 
 庭院地面使用 Quaternius 石材的颜色、法线和粗糙度贴图，按世界坐标统一铺设，边缘与外围地形共用草地色和噪声变化。材质位于 `envart/local_sample/courtyard_ground.tres`，草地颜色跟随 `backdrop_config.tres` 的 `near_grass`；修改远景配置后按下方命令重新生成。原地面碰撞不变，按 0 可恢复白盒对照。
 
@@ -109,6 +128,13 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
   --script res://tests/local_sample_visual.gd
 # PNG 输出在 /tmp/envart-local-sample/。
 
+# 新方向实机截图与通行回归，分别输出 /tmp/envart-ashen 和 /tmp/envart-facility。
+"$GODOT_BIN" --path GodotProject/envart-pipline --script res://tests/direction_sample_visual.gd -- ashen
+"$GODOT_BIN" --path GodotProject/envart-pipline --script res://tests/direction_sample_visual.gd -- facility
+
+# Z/X/C 输入、同机位切换、轨迹时间保持、白盒与碰撞隔离。
+"$GODOT_BIN" --headless --path GodotProject/envart-pipline --script res://tests/direction_comparison_smoke.gd
+
 # 玩家运动、碰撞及原有三种视角。
 "$GODOT_BIN" --headless --path GodotProject/envart-pipline \
   --script res://tests/controller_smoke.gd
@@ -128,6 +154,7 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 
 | 文档 | 内容 |
 | --- | --- |
+| [三方向 HTML 对比](docs/direction-comparison.html) | 真实素材重做、同机位图片切换、试玩和编辑方法 |
 | [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |
 | [玩家控制器说明](docs/player-controller.md) | 操作、运动参数、组件接入与当前限制 |
@@ -143,7 +170,7 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 - 根目录 `.artifacts/` 与 `tmp/` 用于临时验证产物；正式文档图片存入 `docs/images/`。
 - 原始 `.blend` 与正式美术素材应保留在版本管理中；仅忽略 Blender 自动备份。大型资产的存储方式将在资产管线阶段确定。
 
-## 重建与验证环境案例
+## 重建与验证历史环境案例
 
 `envart/styles/` 中的三个场景由离线脚本生成，可直接在编辑器修改。玩法继续使用原测试场的碰撞，美术层不包含碰撞对象。重建会覆盖这三个文件，手工改版前请先另存场景。
 
