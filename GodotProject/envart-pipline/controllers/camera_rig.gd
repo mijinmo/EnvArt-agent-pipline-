@@ -96,6 +96,15 @@ func toggle_rail_view() -> void:
 		set_mode(Mode.RAIL)
 
 
+func set_free_pose(pose: Transform3D, fov: float = 75.0) -> void:
+	## Review bookmarks must synchronize mouse angles with the new camera pose.
+	set_mode(Mode.FREE_LOOK)
+	free_camera.global_transform = pose
+	free_camera.fov = fov
+	_free_yaw = free_camera.global_rotation.y
+	_free_pitch = free_camera.global_rotation.x
+
+
 func toggle_person_view() -> void:
 	var previous := _return_mode if mode in [Mode.FREE_LOOK, Mode.RAIL] else mode
 	if mode == Mode.RAIL and _rail_return_mode != Mode.FREE_LOOK:

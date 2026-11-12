@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="envart-pipline"
-run/main_scene="res://envart/envart_lab.tscn"
+run/main_scene="res://envart/local_sample/local_sample.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
