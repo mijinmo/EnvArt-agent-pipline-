@@ -6,24 +6,34 @@
 </style></head><body><main>
 <div class="eyebrow">ENVART / LOCAL ASSET STUDY / 2026.11.12</div>
 <h1>先把三个局部做完整。</h1>
-<p class="lead">同一测试场，使用真实建筑与道具素材重新装配门洞、卸货坡道和墙边作业区。以下图片全部来自 Godot Forward+ 实际运行，没有使用宣传图代替场景成果。</p>
+<p class="lead">同一测试场，使用真实建筑、道具和植物素材装配门洞、卸货坡道与墙边作业区，并加入外围聚落、林地和山丘远景。以下图片全部来自 Godot Forward+ 实际运行，没有使用宣传图代替场景成果。</p>
 <nav><a href="#play">开始试玩</a><a href="#shots">近景检查</a><a href="#edit">如何编辑</a><a href="#sources">素材来源</a><a href="rail-camera-guide.html">轨迹相机教程</a></nav>
-<div class="note">本版待用户美术审阅。灰色部分是保留的白盒测试区域，尚未扩展全场。首轮三风格案例被否决后，本轮只验证这三个局部的素材、道具组合与可玩性。</div>
+<div class="note">本版待用户美术审阅。灰色部分是保留的白盒测试区域；新增远景不属于可游玩关卡。首轮三风格案例被否决后，本轮继续补充三个局部的细节、地面植被，并延伸外围景观。</div>
 <figure><a href="images/local-sample/props.png"><img src="images/local-sample/props.png" alt="墙边维修台、工具、蔬果摊和货物的 Godot 实机画面"></a><figcaption>墙边道具区：维修台和蔬果摊具有不同用途，共享木材、金属与布料的美术语言。</figcaption></figure>
 <h2 id="play">从 Unity 到 Godot：打开与试玩</h2>
 <ol><li>用 Godot 4.7.2 打开 <code>GodotProject/envart-pipline/project.godot</code>，等待导入完成。</li><li>按 <kbd>F5</kbd> 运行当前主场景 <code>envart/local_sample/local_sample.tscn</code>。启动时展示门洞机位。</li><li>按 <kbd>1</kbd> 或 <kbd>2</kbd> 回到角色，点击画面捕获鼠标，用 WASD / Shift / Space 移动、奔跑、跳跃。</li><li>按 <kbd>Esc</kbd> 释放鼠标。按 <kbd>5</kbd>、<kbd>6</kbd>、<kbd>7</kbd> 可反复回到固定观察角度，继续移动鼠标不会跳回旧朝向。</li></ol>
-<table><thead><tr><th>输入</th><th>当前样板中的行为</th></tr></thead><tbody><tr><td>5 / 6 / 7</td><td>门洞 / 坡道 / 墙边道具的自由观察机位</td></tr><tr><td>0</td><td>白盒与美术层对照；白盒状态关闭新增道具碰撞</td></tr><tr><td>1 / 2 / 3</td><td>第一人称 / 第三人称 / 自由观察</td></tr><tr><td>4 / P / Home</td><td>原有轨迹相机 / 播放暂停 / 回到轨迹起点</td></tr><tr><td>H / R</td><td>隐藏局部样板提示 / 回到门洞前出生点</td></tr></tbody></table>
-<p><small>原有轨迹仍巡检整个测试场。本轮没有改成只看局部的轨迹；近景使用三个观察书签。历史三风格场景仍可打开后按 F6 单独运行，其 5 / 6 / 7 含义保持原样。</small></p>
+<table><thead><tr><th>输入</th><th>当前样板中的行为</th></tr></thead><tbody><tr><td>5 / 6 / 7</td><td>门洞 / 坡道 / 墙边道具的自由观察机位</td></tr><tr><td>8 / B</td><td>远景观察机位 / 独立开关远景和远景雾</td></tr><tr><td>0</td><td>白盒与美术层对照；白盒状态关闭新增道具碰撞</td></tr><tr><td>1 / 2 / 3</td><td>第一人称 / 第三人称 / 自由观察</td></tr><tr><td>4 / P / Home</td><td>原有轨迹相机 / 播放暂停 / 回到轨迹起点</td></tr><tr><td>H / R</td><td>隐藏局部样板提示 / 回到门洞前出生点</td></tr></tbody></table>
+<p><small>原有轨迹仍巡检整个测试场。本轮没有改成只看局部的轨迹；近景使用四个观察书签。历史三风格场景仍可打开后按 F6 单独运行，其 5 / 6 / 7 含义保持原样。</small></p>
 <h2 id="shots">近景检查</h2>
 <figure><a href="images/local-sample/door.png"><img src="images/local-sample/door.png" alt="门洞的石框、瓦顶、灯笼、旗帜及货物"></a><figcaption>门洞：原有净宽 1.2 m、净高 2.3 m 保留；门框、压顶、瓦檐、灯具与旗帜建立入口层次，两侧货物避让通道。</figcaption></figure>
 <figure><a href="images/local-sample/ramp.png"><img src="images/local-sample/ramp.png" alt="木坡道、栏杆、卸货平台和货车"></a><figcaption>坡道：保留原坡度与落脚平台，装配木铺面、交叉栏杆、石基、货车与卸货物件；没有用台阶替换原坡面。</figcaption></figure>
 <div class="grid"><figure><a href="images/local-sample/workbench_detail.png"><img src="images/local-sample/workbench_detail.png" alt="工作台近景"></a><figcaption>维修角：挂架、斧镐、绳圈、账本、卷轴和水杯，台面物件都有支撑。</figcaption></figure><figure><a href="images/local-sample/shipment_detail.png"><img src="images/local-sample/shipment_detail.png" alt="墙边货物叠放近景"></a><figcaption>待运货物：大小货箱、麻袋、木桶与绳圈按用途分组，避免平均散点堆放。</figcaption></figure></div>
 <div class="grid"><figure><a href="images/local-sample/player_first.png"><img src="images/local-sample/player_first.png" alt="第一人称门洞实机"></a><figcaption>第一人称：检查玩家眼高下的尺寸与近距离细节。</figcaption></figure><figure><a href="images/local-sample/player_third.png"><img src="images/local-sample/player_third.png" alt="第三人称角色实机"></a><figcaption>第三人称：保留本机 Mixamo 人形角色与相机避障。</figcaption></figure></div>
 <details><summary>查看范围总览与原白盒对照</summary><figure><img src="images/local-sample/overview.png" alt="三个局部与保留白盒的整体关系"><figcaption>范围总览：远墙、跳台、台阶等继续作为白盒背景。</figcaption></figure><figure><img src="images/local-sample/door_whitebox.png" alt="相同门洞机位白盒对照"></figure></details>
+<h2 id="vegetation">墙脚植被与外围远景</h2>
+<figure><a href="images/local-sample/vegetation_detail.png"><img src="images/local-sample/vegetation_detail.png" alt="货物边缘的真实灌木、草簇、小花与三叶草"></a><figcaption>灌木、矮草、细叶草、三叶草、蕨类和花朵均来自真实免费素材。固定种子控制局部草簇分布，避免整齐排布和铺满通行空间。</figcaption></figure>
+<figure><a href="images/local-sample/backdrop_vista.png"><img src="images/local-sample/backdrop_vista.png" alt="程序化聚落、树林与山丘远景"></a><figcaption>11 栋真实模块组合的房屋、460 棵树与连续地形。树木按空间分区使用 MultiMesh，避让建筑地基和陡坡；房屋与树林都位于测试场外围。</figcaption></figure>
+<div class="note">程序化负责地形与装配分布，房屋、树木和近景植物仍使用下载模型。远景没有玩法碰撞，也没有完成可探索区域的道路、交互或关卡设计。</div>
+<p>在文件系统面板选中 <code>envart/local_sample/backdrop_config.tres</code>，检查器中可调整种子、树木数量、地形范围、网格步长、山丘高度和地表颜色。房屋的锚点经过构图安排，位于生成脚本的 <code>house_specs</code>；种子控制建筑尺度与树林分布。</p>
+<pre><code># 在仓库根目录运行；MultiMesh 烘焙需要图形后端，不加 --headless。
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path GodotProject/envart-pipline \
+  --script res://envart/tools/build_backdrop.gd</code></pre>
+<p>输出为 <code>envart/local_sample/backdrop.tscn</code>，F5 运行时直接加载。按 B 开关远景，按 8 查看整体构图，按 0 对照白盒。无图形模式会被生成器拒绝，防止树木实例缓冲丢失。重新生成会覆盖该文件，手工调整前请另存或提交。</p>
 <h2 id="edit">在编辑器里改哪里</h2>
-<div class="grid"><div class="card"><h3>场景与 Prefab 的对应</h3><p>Godot 的 <code>.tscn</code> 可以像 Unity Prefab 一样实例化。打开 <code>local_sample.tscn</code>：<code>BaseLab</code> 管玩法，<code>Art</code> 是素材装配，<code>ReviewViews</code> 是三个观察机位。</p><p>双击 <code>art.tscn</code> 可直接修改各组节点的位置、旋转和缩放。场景中保留 glTF 实例及素材路径元数据。</p></div><div class="card"><h3>素材和碰撞分开检查</h3><p><code>Doorway_StoneAndTimber</code>、<code>Ramp_LoadingDock</code>、<code>Wall_ServiceAndMarket</code> 对应三个局部。大型道具的 <code>Footprint</code> 节点使用独立碰撞，需要和道具一起移动。</p><p>原始 17 个白盒静态碰撞体保持不变。新道具、货车和护栏的碰撞是简化代理，未做逐三角形精确碰撞。</p></div></div>
+<div class="grid"><div class="card"><h3>场景与 Prefab 的对应</h3><p>Godot 的 <code>.tscn</code> 可以像 Unity Prefab 一样实例化。打开 <code>local_sample.tscn</code>：<code>BaseLab</code> 管玩法，<code>Art</code> 是素材装配，<code>ReviewViews</code> 是四个观察机位。</p><p>双击 <code>art.tscn</code> 可直接修改各组节点的位置、旋转和缩放。场景中保留 glTF 实例及素材路径元数据。</p></div><div class="card"><h3>素材和碰撞分开检查</h3><p><code>Doorway_StoneAndTimber</code>、<code>Ramp_LoadingDock</code>、<code>Wall_ServiceAndMarket</code> 对应三个局部。大型道具的 <code>Footprint</code> 节点使用独立碰撞，需要和道具一起移动。</p><p>原始 17 个白盒静态碰撞体保持不变。新道具、货车和护栏的碰撞是简化代理，未做逐三角形精确碰撞。</p></div></div>
 <p>材质保留作者的贴图与 UV。适配包含：启用 mipmaps 与各向异性过滤、校正部分道具的顶点色、减弱法线强度、调整木色和灯光。门柱等需要与白盒严密对齐的位置仍保留原始填充面，使用作者石材纹理；主要可见门框、屋檐、栏杆和 props 使用下载的真实网格。</p>
-<p>运行时的白盒对照与局部填充材质由 <code>sample.gd</code> 切换。新增美术层可以独立移动或替换，控制器不依赖这两套素材。</p>
+<p>运行时的白盒对照与局部填充材质由 <code>sample.gd</code> 切换。新增美术层可以独立移动或替换，控制器不依赖这些素材。</p>
 <details><summary>重新生成与验证命令（会覆盖已生成的样板场景）</summary><p>日常摆放直接在编辑器中修改即可。以下命令只用于重建初始样板；手动修改前先另存场景或提交 Git。</p><pre><code>GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 "$GODOT_BIN" --headless --path GodotProject/envart-pipline \
   --script res://envart/tools/build_local_sample.gd
@@ -32,7 +42,7 @@
 "$GODOT_BIN" --path GodotProject/envart-pipline \
   --script res://tests/local_sample_visual.gd</code></pre><p>截图输出：<code>/tmp/envart-local-sample/</code>。测试覆盖原白盒碰撞保持、门洞双向穿行、坡道登顶、四种相机与书签后的鼠标朝向连续性。技术验证通过不等于美术验收通过。</p></details>
 <h2 id="sources">实际使用的免费素材</h2>
-<table><thead><tr><th>作者 / 素材</th><th>使用范围</th><th>授权记录</th></tr></thead><tbody><tr><td><a href="https://quaternius.com/packs/medievalvillagemegakit.html">Quaternius · Medieval Village MegaKit</a><br><a href="https://opengameart.org/content/medieval-village-megakit">作者公开下载页</a></td><td>Standard 免费包；精选 30 个建筑、铺面、栏杆、藤蔓和货车模型导入。</td><td>包内 License_Standard.txt：CC0 1.0</td></tr><tr><td><a href="https://quaternius.com/packs/fantasypropsmegakit.html">Quaternius · Fantasy Props MegaKit</a><br><a href="https://opengameart.org/content/fantasy-props-megakit">作者公开下载页</a></td><td>Standard 免费包；精选 40 个工具、容器、家具、食品与杂物模型导入。</td><td>包内 License_Standard.txt：CC0 1.0</td></tr></tbody></table>
-<p>本场景实际实例化其中 48 种模型。未购买或使用 Pro / Source 专属示例场景、磨损版本或自定义着色器。两个素材目录包含原始许可、下载页面和文件 SHA-256 清单；源 ZIP 不放进仓库。</p>
+<table><thead><tr><th>作者 / 素材</th><th>使用范围</th><th>授权记录</th></tr></thead><tbody><tr><td><a href="https://quaternius.com/packs/medievalvillagemegakit.html">Quaternius · Medieval Village MegaKit</a><br><a href="https://opengameart.org/content/medieval-village-megakit">作者公开下载页</a></td><td>Standard 免费包；精选 37 个建筑、铺面、栏杆、藤蔓和货车模型导入。</td><td>包内 License_Standard.txt：CC0 1.0</td></tr><tr><td><a href="https://quaternius.com/packs/fantasypropsmegakit.html">Quaternius · Fantasy Props MegaKit</a><br><a href="https://opengameart.org/content/fantasy-props-megakit">作者公开下载页</a></td><td>Standard 免费包；精选 40 个工具、容器、家具、食品与杂物模型导入。</td><td>包内 License_Standard.txt：CC0 1.0</td></tr><tr><td><a href="https://quaternius.com/packs/stylizednaturemegakit.html">Quaternius · Stylized Nature MegaKit</a><br><a href="https://opengameart.org/content/stylized-nature-megakit">作者公开下载页</a></td><td>Standard 免费包；精选 17 个植物、树木与石块模型导入。</td><td>包内 License_Standard.txt：CC0 1.0</td></tr></tbody></table>
+<p>近景当前实例化 64 种模型，远景另使用建筑构件与三种树木。未购买或使用 Pro / Source 专属示例场景、磨损版本或自定义着色器。三个素材目录包含原始许可、下载页面和文件 SHA-256 清单；源 ZIP 不放进仓库。</p>
 <p><small>Mixamo 人形角色仍沿用本机安装。它与以上 CC0 环境素材采用不同的分发规则，原始角色文件没有加入 Git。详细说明见 README 与上一版角色教程。</small></p>
 </main></body></html>
