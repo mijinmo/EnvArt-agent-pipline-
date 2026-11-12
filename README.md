@@ -2,17 +2,19 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-当前已完成试玩与巡检基础。首轮三风格案例可以运行，但 **2026-11-12 用户美术验收未通过**：主要画面仍依赖程序基础网格，素材复用不足，精细度和装饰性 props 明显欠缺。下方截图仅记录技术试验结果，不作为环境美术的质量基线；通用资产检索和 Blender 适配管线尚未实现。
+当前主场景是 **真实素材局部样板：门洞、坡道、墙边道具区**，使用 Quaternius 两套 CC0 Standard 免费包。其余区域保留白盒，尚未扩展全场；本版等待用户美术审阅。通用自动检索和 Blender 适配管线尚未实现。
 
-![环境美术案例与人形角色](docs/images/envart/character_third.png)
+![真实素材墙边道具样板](docs/images/local-sample/props.png)
+
+[局部样板 HTML 图文说明与实机截图](docs/local-asset-sample.html)。首轮三风格案例于 2026-11-12 未通过用户美术验收，仍保存在 `envart/envart_lab.tscn`，仅作历史技术试验。
 
 ## 快速开始
 
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
-2. 等待首次资源导入完成，按 **F5** 运行主场景 `envart/envart_lab.tscn`。
+2. 等待首次资源导入完成，按 **F5** 运行主场景 `envart/local_sample/local_sample.tscn`。
 3. 点击画面捕获鼠标，按 **Esc** 释放。也可以直接按 **4** 进入轨迹视角，再按 **P** 播放。
 
-按 **5 / 6 / 7** 切换美术方向，**0** 回到白盒，**H** 隐藏操作提示；也可释放鼠标后点击左上角按钮。原始 `demo/controller_lab.tscn` 保留，可单独 F6 运行。
+启动后停在门洞观察机位。按 **5 / 6 / 7** 查看门洞、坡道、墙边道具，**0** 切换白盒对照，**H** 隐藏操作提示。按 **1 / 2** 回到玩家视角试玩。原始 `demo/controller_lab.tscn` 与历史 `envart/envart_lab.tscn` 保留，可单独 F6 运行。
 
 当前使用 Forward+ 渲染与 Jolt Physics。其他引擎版本、渲染后端和目标平台尚未完成兼容性验证。
 
@@ -36,8 +38,8 @@
 | 轨迹前后定位 1 秒 | [ / ] |
 | 轨迹循环开关 | L |
 | 释放鼠标，操作巡检面板 | Esc |
-| 晴日遗迹 / 灰烬庭院 / 测试设施 | 5 / 6 / 7 |
-| 显示原始白盒 / 隐藏提示 | 0 / H |
+| 门洞 / 坡道 / 墙边道具观察机位 | 5 / 6 / 7 |
+| 切换白盒对照 / 隐藏提示 | 0 / H |
 
 玩家和自由观察操作需要鼠标捕获；轨迹快捷键在鼠标释放时也有效。切出轨迹视角会暂停并保留进度。样例巡检长 24 秒，在 8–10 秒停留，路径和关键帧可在编辑器调整。
 
@@ -70,7 +72,7 @@ GodotProject/envart-pipline/
 ├── project.godot       # 引擎项目与输入动作
 ├── controllers/        # 角色配置、运动、输入和相机组件
 ├── demo/               # 测试场、网格材质、巡检面板
-├── envart/             # 独立美术层、三种可编辑场景、CC0 素材
+├── envart/             # 局部真实素材样板、历史三风格场景、CC0 素材
 ├── characters/         # 人形动画适配器与本地 Mixamo 构建工具
 └── tests/              # 物理、轨迹与图形输入验证
 docs/
@@ -92,6 +94,11 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 
 # 首次克隆后导入资源并注册脚本类型；也可以在编辑器打开项目完成。
 "$GODOT_BIN" --headless --path GodotProject/envart-pipline --editor --import --quit
+
+# 局部样板实机截图、门洞双向通行、坡道登顶与镜头书签连续性（需要图形环境）。
+"$GODOT_BIN" --path GodotProject/envart-pipline \
+  --script res://tests/local_sample_visual.gd
+# PNG 输出在 /tmp/envart-local-sample/。
 
 # 玩家运动、碰撞及原有三种视角。
 "$GODOT_BIN" --headless --path GodotProject/envart-pipline \

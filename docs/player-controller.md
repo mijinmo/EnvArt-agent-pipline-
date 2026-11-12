@@ -115,3 +115,8 @@ Mixamo 素材保存在 Git 忽略的 `characters/mixamo_local/`。缺失时继�
 - [CharacterBody3D](https://docs.godotengine.org/en/stable/classes/class_characterbody3d.html)
 - [第三人称弹簧臂相机](https://docs.godotengine.org/en/stable/tutorials/3d/spring_arm.html)
 - [鼠标输入与坐标](https://docs.godotengine.org/en/stable/tutorials/inputs/mouse_and_input_coordinates.html)
+
+
+## 局部样板观察机位
+
+`EACameraRig.set_free_pose(pose, fov)` 将相机切换到自由观察，并同步内部鼠标朝向，避免从预设机位开始转动时跳回旧角度。局部样板按 5 / 6 / 7 使用该接口；1 / 2 / 3 / 4 视角操作不变。
