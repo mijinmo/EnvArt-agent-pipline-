@@ -200,13 +200,7 @@ func build() -> void:
 	source("props","Banner_1",Vector3(9.63,2.85,-8.42),Vector3.ONE*0.65,-90,false)
 	v("Prop_Vine2",Vector3(9.45,2.95,-5.05),Vector3(0.6,1,0.7),-90,false)
 	section("LocalGroundAndSettling")
-	# Three bounded pads; untouched level beyond these remains a whitebox.
-	for x in [-2.0,0.0,2.0]:
-		for z in [-6.0,-4.0,-2.0]: v("Floor_UnevenBrick",Vector3(x,-0.007,z))
-	for x in [-8.0,-6.0,-4.0]:
-		for z in [-8.0,-6.0,-4.0,-2.0,0.0]: v("Floor_UnevenBrick",Vector3(x,-0.007,z))
-	for x in [7.0,9.0]:
-		for z in [-10.0,-8.0,-6.0,-4.0,-2.0,0.0]: v("Floor_UnevenBrick",Vector3(x,-0.007,z))
+	# Main courtyard is one continuous textured surface on the original floor.
 	# A few displaced stones at storage edges, never uniform noise on routes.
 	for pair in [[-3.05,-4.7],[-3.2,-4.5],[2.8,-4.75],[-8.2,-7.8],[-8.7,-0.4],[6.3,0.1],[6.4,0.4],[9.0,-9.7]]:
 		v("Prop_Brick%d" % (serial%4+1),Vector3(pair[0],0,pair[1]),Vector3.ONE*0.5,float(serial*31%360))

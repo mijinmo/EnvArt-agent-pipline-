@@ -11,7 +11,10 @@ func check(ok: bool, message: String) -> void:
 	if not ok: failures += 1; push_error(message)
 	else: print("PASS: ",message)
 func capture(label: String) -> void:
-	await frames(25); await RenderingServer.frame_post_draw
+	await frames(25)
+	# macOS may suspend presentation when another app covers the test window.
+	# Explicit drawing keeps artifact capture independent of desktop focus.
+	RenderingServer.force_draw()
 	check(root.get_texture().get_image().save_png(OUTPUT.path_join(label+".png"))==OK,"capture "+label)
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(OUTPUT)

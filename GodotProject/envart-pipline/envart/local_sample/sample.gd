@@ -25,12 +25,17 @@ func _ready() -> void:
 		original_materials[mesh] = mesh.material_override
 		dressed_materials[mesh] = timber if body_name == "Ramp" else masonry
 		mesh.material_override = dressed_materials[mesh]
-	# Neutral unfinished context makes the scope boundary explicit.
+	# Only unconverted test obstacles retain the neutral review material.
 	var context := StandardMaterial3D.new(); context.albedo_color = Color("8b9189"); context.roughness = 1
+	var ground: ShaderMaterial = load("res://envart/local_sample/courtyard_ground.tres").duplicate()
+	var backdrop_config: EABackdropConfig = load("res://envart/local_sample/backdrop_config.tres")
+	ground.set_shader_parameter("grass_color",backdrop_config.near_grass)
 	for body in lab.get_node("World").get_children():
 		if body is StaticBody3D and not body.name in DRESSED:
 			var mesh: MeshInstance3D = body.get_node("Mesh")
-			original_materials[mesh] = mesh.material_override; dressed_materials[mesh] = context; mesh.material_override = context
+			original_materials[mesh] = mesh.material_override
+			var surface: Material = ground if body.name in ["Floor","SpawnPad"] else context
+			dressed_materials[mesh] = surface; mesh.material_override = surface
 	lab.get_node("Spawn").position = Vector3(-0.2,0.08,-2.1)
 	lab.reset_player()
 	# Review markers are ordinary editable nodes in the scene.

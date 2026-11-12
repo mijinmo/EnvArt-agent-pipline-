@@ -9,12 +9,12 @@ var tree_locations: Array[Transform3D] = []
 var house_specs := [Vector3(-28,15,-33),Vector3(-16,-12,-37),Vector3(-2,8,-39),Vector3(13,-18,-35),Vector3(27,25,-32),Vector3(35,-60,-17),Vector3(32,-75,0),Vector3(-34,65,-17),Vector3(-36,70,1),Vector3(19,160,36),Vector3(-24,190,37)]
 func raw_height(x: float, z: float) -> float:
 	var r := Vector2(x,z).length()
-	var rise := smoothstep(17.0,38.0,maxf(absf(x),absf(z)))
+	var rise := smoothstep(16.0,38.0,maxf(absf(x),absf(z)))
 	var low := 2.5 + 5.0*(noise.get_noise_2d(x,z)+0.5)
 	var mountains := 0.0
 	for peak in [Vector4(-80,-100,46,48),Vector4(85,-133,61,58),Vector4(150,35,40,60),Vector4(-155,50,36,55),Vector4(10,160,36,60)]:
 		mountains += peak.z*exp(-Vector2(x-peak.x,z-peak.y).length_squared()/(peak.w*peak.w))
-	return -0.5 + rise*(low+mountains*smoothstep(38,100,r)*(0.8+noise.get_noise_2d(x*1.8,z*1.8)*0.35))*config.hill_height_scale
+	return -0.02 + rise*(low+mountains*smoothstep(38,100,r)*(0.8+noise.get_noise_2d(x*1.8,z*1.8)*0.35))*config.hill_height_scale
 func height_at(x: float,z: float) -> float:
 	var h := raw_height(x,z)
 	for pad in pads:
@@ -61,11 +61,12 @@ func terrain() -> void:
 		for ix in count:
 			var x: float=-config.terrain_extent+(ix+0.5)*config.terrain_grid_step
 			var z: float=-config.terrain_extent+(iz+0.5)*config.terrain_grid_step
-			if absf(x)<18 and absf(z)<18: continue
+			if absf(x)<16 and absf(z)<16: continue
 			var a:=iz*(count+1)+ix; var b:=a+1; var c:=a+count+1; var d:=c+1
 			for index in [a,b,c,b,d,c]: surface.add_index(index)
 	var mesh:=MeshInstance3D.new(); mesh.name="ContinuousRollingHills"; mesh.mesh=surface.commit()
 	var mat:=ShaderMaterial.new(); mat.shader=load("res://envart/local_sample/hills.gdshader")
+	mat.set_shader_parameter("near_grass",config.near_grass)
 	mesh.material_override=mat; add_owned(mesh)
 func house(index: int) -> void:
 	var spec: Vector3=house_specs[index]

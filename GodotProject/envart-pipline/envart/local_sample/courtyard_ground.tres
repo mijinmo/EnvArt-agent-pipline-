@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3]
+[ext_resource type="Shader" path="res://envart/local_sample/courtyard_ground.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://envart/assets/quaternius_village/T_UnevenBrick_BaseColor.png" id="2"]
+[ext_resource type="Texture2D" path="res://envart/assets/quaternius_village/T_UnevenBrick_Normal.png" id="3"]
+[ext_resource type="Texture2D" path="res://envart/assets/quaternius_village/T_UnevenBrick_Roughness.png" id="4"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/stone_color = ExtResource("2")
+shader_parameter/stone_normal = ExtResource("3")
+shader_parameter/stone_roughness = ExtResource("4")
