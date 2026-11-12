@@ -19,3 +19,7 @@ Desktop.ini
 # Blender backup files. Keep original .blend files and authored assets tracked.
 *.blend[0-9]
 *.blend[0-9][0-9]
+
+# Mixamo permits use in games; raw source redistribution is not assumed.
+# Recreate these local assets with tools/install_mixamo.py using your own downloads.
+/GodotProject/envart-pipline/characters/mixamo_local/

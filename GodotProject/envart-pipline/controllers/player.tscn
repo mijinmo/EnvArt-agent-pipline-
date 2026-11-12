@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://controllers/player_motor.gd" id="1_motor"]
 [ext_resource type="Resource" path="res://controllers/default_player_profile.tres" id="2_profile"]
+
+[ext_resource type="Script" path="res://characters/humanoid_visual.gd" id="3_humanoid"]
 
 [sub_resource type="StandardMaterial3D" id="BodyMaterial"]
 albedo_color = Color(0.1, 0.72, 0.8, 1)
@@ -45,3 +47,6 @@ material_override = SubResource("FacingMaterial")
 
 [node name="Eye" type="Marker3D" parent="."]
 position = Vector3(0, 1.65, 0)
+
+[node name="Humanoid" type="Node3D" parent="Visual"]
+script = ExtResource("3_humanoid")

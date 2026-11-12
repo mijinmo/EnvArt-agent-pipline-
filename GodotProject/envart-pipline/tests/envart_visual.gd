@@ -74,6 +74,20 @@ func run() -> void:
 	lab.select_style(1)
 	rig.set_mode(EACameraRig.Mode.THIRD_PERSON)
 	await snapshot("character_third")
+	rig.set_mode(EACameraRig.Mode.FREE_LOOK)
+	rig.free_camera.global_position = Vector3(2.8,2.1,4.6)
+	rig.free_camera.look_at(Vector3(0,1,8))
+	await snapshot("character_front")
+	# A fixed animation sample makes deformation inspectable without camera chase.
+	var human = player.get_node("Visual/Humanoid")
+	if human.available:
+		human.set_physics_process(false)
+		for clip in ["walking","running","jump"]:
+			human.animation.play(clip)
+			human.animation.seek(0.22 if clip != "jump" else 0.95,true)
+			human.animation.pause()
+			await snapshot("character_"+clip)
+		human.set_physics_process(true)
 	print("ENVART VISUAL RESULT: ","PASS" if failures==0 else "FAIL")
 	lab.queue_free()
 	await frames(5)

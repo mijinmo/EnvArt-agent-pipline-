@@ -2,15 +2,17 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-当前已完成**试玩与场景巡检基础**：玩家移动、第一人称、第三人称、自由观察，以及原生轨迹相机。资产检索、Blender 自动处理和环境美术生成尚未实现。
+当前已完成试玩与巡检基础，以及**首轮环境美术试做**：同一白盒可以切换晴日遗迹、灰烬庭院、测试设施三种方向。复用已核实 CC0 许可的 Kenney GLB，尺寸受约束的构件由原生 Godot 网格补足。此版本是可运行的试验案例，尚不是通用的自动检索或 Blender 处理系统。
 
-![控制器与巡检测试场](docs/images/controller-lab.png)
+![环境美术案例与人形角色](docs/images/envart/character_third.png)
 
 ## 快速开始
 
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
-2. 等待首次资源导入完成，按 **F5** 运行主场景 `demo/controller_lab.tscn`。
+2. 等待首次资源导入完成，按 **F5** 运行主场景 `envart/envart_lab.tscn`。
 3. 点击画面捕获鼠标，按 **Esc** 释放。也可以直接按 **4** 进入轨迹视角，再按 **P** 播放。
+
+按 **5 / 6 / 7** 切换美术方向，**0** 回到白盒，**H** 隐藏操作提示；也可释放鼠标后点击左上角按钮。原始 `demo/controller_lab.tscn` 保留，可单独 F6 运行。
 
 当前使用 Forward+ 渲染与 Jolt Physics。其他引擎版本、渲染后端和目标平台尚未完成兼容性验证。
 
@@ -34,6 +36,8 @@
 | 轨迹前后定位 1 秒 | [ / ] |
 | 轨迹循环开关 | L |
 | 释放鼠标，操作巡检面板 | Esc |
+| 晴日遗迹 / 灰烬庭院 / 测试设施 | 5 / 6 / 7 |
+| 显示原始白盒 / 隐藏提示 | 0 / H |
 
 玩家和自由观察操作需要鼠标捕获；轨迹快捷键在鼠标释放时也有效。切出轨迹视角会暂停并保留进度。样例巡检长 24 秒，在 8–10 秒停留，路径和关键帧可在编辑器调整。
 
@@ -44,7 +48,20 @@
 - **轨迹相机**：原生 Path3D、PathFollow3D 与 AnimationPlayer；支持路径方向或注视目标、FOV 动画、播放暂停、时间定位和循环。
 - **试玩环境**：测试坡道、门洞、跳台与相机遮挡，提供出生复位和运行时巡检面板。
 
-当前没有自动跨台阶、蹲伏、攀爬、角色动画或手柄映射。视角采用直接切换；自由观察和轨迹相机没有自动避障。开放轨迹开启循环时会从终点切回起点。
+当前没有自动跨台阶、蹲伏、攀爬或手柄映射。视角采用直接切换；自由观察和轨迹相机没有自动避障。开放轨迹开启循环时会从终点切回起点。
+
+玩家已接入 Mixamo Mannequin 人形骨架和 idle / walking / running / jump。动画只读取实际速度与落地状态，不驱动物理位移；第一人称自动隐藏模型。默认行走速度为 4.5 m/s，视觉上已进入跑步步态；低于 2.6 m/s 使用行走步态。
+
+**本机角色素材已安装。** Mixamo 允许在游戏中使用，但不能因此视为 CC0 素材；本项目不把原始 FBX 或派生角色资源提交为可公开再分发的素材。重新克隆后会使用胶囊占位，需要按 HTML 案例中的步骤下载并安装自己的 Mixamo 文件：
+
+```sh
+python3 tools/install_mixamo.py \
+  --character ~/Downloads/Ch36_nonPBR.fbx \
+  --locomotion "$HOME/Downloads/Basic Locomotion Pack.zip" \
+  --running ~/Downloads/Running.fbx
+```
+
+安装器只读取这三个指定文件，核对二进制 FBX 格式，复制所需五个文件到已忽略的 `characters/mixamo_local/`，写入 SHA-256 清单，再调用 Godot 导入与构建。可用 `--godot` 指定其他 Godot 安装位置。
 
 ## 目录结构
 
@@ -53,6 +70,8 @@ GodotProject/envart-pipline/
 ├── project.godot       # 引擎项目与输入动作
 ├── controllers/        # 角色配置、运动、输入和相机组件
 ├── demo/               # 测试场、网格材质、巡检面板
+├── envart/             # 独立美术层、三种可编辑场景、CC0 素材
+├── characters/         # 人形动画适配器与本地 Mixamo 构建工具
 └── tests/              # 物理、轨迹与图形输入验证
 docs/
 ├── pipeline-foundation.md
@@ -93,6 +112,7 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 
 | 文档 | 内容 |
 | --- | --- |
+| [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |
 | [玩家控制器说明](docs/player-controller.md) | 操作、运动参数、组件接入与当前限制 |
 | [轨迹相机 HTML 教程](docs/rail-camera-guide.html) | Unity 概念对照、图文操作、路径编辑、动画和巡检练习 |
@@ -106,3 +126,20 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 - 忽略 `.godot/`、生成的 Android 目录、项目 `build/`、`builds/`、`exports/`、日志、系统临时文件和本地环境配置。
 - 根目录 `.artifacts/` 与 `tmp/` 用于临时验证产物；正式文档图片存入 `docs/images/`。
 - 原始 `.blend` 与正式美术素材应保留在版本管理中；仅忽略 Blender 自动备份。大型资产的存储方式将在资产管线阶段确定。
+
+## 重建与验证环境案例
+
+`envart/styles/` 中的三个场景由离线脚本生成，可直接在编辑器修改。玩法继续使用原测试场的碰撞，美术层不包含碰撞对象。重建会覆盖这三个文件，手工改版前请先另存场景。
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot --headless \
+  --path GodotProject/envart-pipline --script res://envart/tools/build_studies.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot \
+  --path GodotProject/envart-pipline --script res://tests/envart_visual.gd
+
+/Applications/Godot.app/Contents/MacOS/Godot --headless \
+  --path GodotProject/envart-pipline --script res://tests/humanoid_smoke.gd
+```
+
+比较截图输出到 `/tmp/envart-studies`。人形测试需要本地 Mixamo 素材，缺失时会明确失败。外围塔楼、树木和设备是背景，没有可攀爬碰撞；可玩范围仍为原测试场。
