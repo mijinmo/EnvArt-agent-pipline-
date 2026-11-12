@@ -1,0 +1,11 @@
+# Generated Godot cache, imported binaries, and local editor state.
+.godot/
+
+# Generated Android build template and local export destinations.
+/android/
+/build/
+/builds/
+/exports/
+
+# Keep .gd.uid, .gdshader.uid, and source-side *.import files tracked:
+# they preserve resource identities and import settings.

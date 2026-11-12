@@ -1,0 +1,21 @@
+# Operating-system metadata and editor temporary files.
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Local configuration and temporary verification output.
+.env
+.env.*
+!.env.example
+!.env.sample
+/.artifacts/
+/tmp/
+*.log
+
+# Blender backup files. Keep original .blend files and authored assets tracked.
+*.blend[0-9]
+*.blend[0-9][0-9]
