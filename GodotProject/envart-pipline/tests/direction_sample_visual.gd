@@ -19,11 +19,12 @@ func capture(label: String) -> void:
 	check(root.get_texture().get_image().save_png(output.path_join(label+".png"))==OK,"capture "+label)
 func run() -> void:
 	direction=OS.get_cmdline_user_args()[0] if OS.get_cmdline_user_args().size()>0 else "ashen"
-	assert(direction in ["ashen","facility","realism"])
+	assert(direction in ["ashen","facility","realism","refined"])
 	output="/tmp/envart-"+direction
 	DirAccess.make_dir_recursive_absolute(output)
 	root.size = Vector2i(1600,1000)
 	var scene_path: String="res://envart/realism_trial/trial.tscn" if direction=="realism" else "res://envart/direction_studies/"+direction+".tscn"
+	if direction=="refined": scene_path="res://envart/realism_refined/trial.tscn"
 	sample=load(scene_path).instantiate(); root.add_child(sample); await frames(20)
 	sample.get_node("BaseLab/PlayerInput").set_physics_process(false)
 	sample.get_node("HUD").hide(); sample.get_node("BaseLab/HUD").hide()

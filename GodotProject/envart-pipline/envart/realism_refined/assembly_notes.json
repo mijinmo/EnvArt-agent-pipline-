@@ -1,0 +1,29 @@
+{
+  "status": "Visual iteration for review; not art-approved",
+  "baseline": "res://envart/realism_trial/trial.tscn",
+  "scene": "res://envart/realism_refined/trial.tscn",
+  "sources": [
+    "../assets/polyhaven/manifest.json",
+    "../assets/quaternius_props/manifest.json",
+    "../assets/quaternius_village/manifest.json",
+    "../assets/quaternius_nature/manifest.json"
+  ],
+  "near_source_placements": 281,
+  "background_source_placements": 7,
+  "procedural_wear_overlays": 6,
+  "adaptations": [
+    "Fort walls use repeated shorter modules, preserving facade proportions more closely. Thickness remains fitted to the whitebox.",
+    "Gate and return-wall upper vertices compressed above source y=5.8; originals remain intact.",
+    "42 source crates fill the three original jump envelopes; gameplay collision is unchanged.",
+    "Original Quaternius leaf alpha retained, smaller overlapping vine clusters and muted shader color.",
+    "PBR material tint/normal strength, ground stain overlays and warmer directional lighting tuned together.",
+    "Existing non-playable terrain mesh reused; background models have no added collision."
+  ],
+  "limits": [
+    "Close-up ivy and grass remain stylized.",
+    "Stone texture density still varies between source surfaces.",
+    "Cargo repetition remains visible.",
+    "No production performance budget or target-platform optimization."
+  ],
+  "validation": "Godot 4.7.2 Metal Forward+, tests/direction_sample_visual.gd -- refined; 11 captures, original 17 collision shapes unchanged, door both ways, ramp, four camera modes, whitebox and backdrop toggles."
+}
