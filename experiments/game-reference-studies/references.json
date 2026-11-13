@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-13",
+  "purpose": "Game screenshots are visual research references, not source assets or textures. Copyright remains with original owners.",
+  "cases": [
+    {
+      "id": "botw",
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "references": [
+        {
+          "id": "botw-temple",
+          "image_url": "https://images.squarespace-cdn.com/content/v1/5aa6c5df31d4df46703dca47/1553124929178-SAM6ZVZ3MFF899N04VEI/Temple1.jpg",
+          "source_page": "https://elaine-delrosario.com/blog/botw-analysispt1"
+        },
+        {
+          "id": "botw-storm",
+          "image_url": "https://cdn.wikimg.net/en/zeldawiki/images/thumb/6/68/BotW_Temple_of_Time_Storm.png/1200px-BotW_Temple_of_Time_Storm.png",
+          "source_page": "https://zeldawiki.wiki/wiki/File:BotW_Temple_of_Time_Storm.png"
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "CONTROL Ultimate Edition",
+      "source_page": "https://store.steampowered.com/app/870780/",
+      "references": [
+        {
+          "id": "control-0",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_8376498631b089e52fb5c75ffe119e0de5e6aed1.1920x1080.jpg?t=1781607969"
+        },
+        {
+          "id": "control-1",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_5a16ce565951479e142c56a23f19d88333d84945.1920x1080.jpg?t=1781607969"
+        },
+        {
+          "id": "control-2",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_c038bb7b20d72ba5d33cc95f7235aefa0b84a706.1920x1080.jpg?t=1781607969"
+        },
+        {
+          "id": "control-3",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_949cf39deee737fec3aadff903ec5311dd22bdab.1920x1080.jpg?t=1781607969"
+        },
+        {
+          "id": "control-4",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.1920x1080.jpg?t=1781607969"
+        },
+        {
+          "id": "control-5",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_165fb4ca28f4db79b878e8c56ba6502e782c0bb2.1920x1080.jpg?t=1781607969"
+        }
+      ]
+    },
+    {
+      "id": "dishonored",
+      "title": "Dishonored",
+      "source_page": "https://store.steampowered.com/app/205100/",
+      "references": [
+        {
+          "id": "dishonored-0",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_409bb8591d4c8278815510d9be737b57dfc57e06.1920x1080.jpg?t=1789050056"
+        },
+        {
+          "id": "dishonored-1",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_32d76a6ff4b216410b90ff2cdb7107a28a1baed2.1920x1080.jpg?t=1789050056"
+        },
+        {
+          "id": "dishonored-2",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_fd7613fa1b8f19674cc0b4cd53db39c9618641fd.1920x1080.jpg?t=1789050056"
+        },
+        {
+          "id": "dishonored-3",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_8d26f4f83fb598eed36bdb0c6ecb41962a64ccf7.1920x1080.jpg?t=1789050056"
+        },
+        {
+          "id": "dishonored-4",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_e6f960fda9132baa23aca305359064dbc1b6f507.1920x1080.jpg?t=1789050056"
+        },
+        {
+          "id": "dishonored-5",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_30e0328295a5d208283e69eb382fac2fa94809a8.1920x1080.jpg?t=1789050056"
+        }
+      ]
+    },
+    {
+      "id": "firewatch",
+      "title": "Firewatch",
+      "source_page": "https://store.steampowered.com/app/383870/",
+      "references": [
+        {
+          "id": "firewatch-0",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_80432f2d4f4192017115c23e7dff090df95b204a.1920x1080.jpg?t=1755789801"
+        },
+        {
+          "id": "firewatch-1",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_c7e16bc8d5a6d40ab1f7c339395d26d8f6eb57ff.1920x1080.jpg?t=1755789801"
+        },
+        {
+          "id": "firewatch-2",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_570bc87288b5ab4e235ba270e1d2ae30312d5b82.1920x1080.jpg?t=1755789801"
+        },
+        {
+          "id": "firewatch-3",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_eb64648f294463df89e55f9363cdf159aebcf11e.1920x1080.jpg?t=1755789801"
+        },
+        {
+          "id": "firewatch-4",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_4b9d67ae2af0da570d03731d93b095d0203b973d.1920x1080.jpg?t=1755789801"
+        },
+        {
+          "id": "firewatch-5",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_634d9b9352169125aec4cbf8b7834a18f9992eeb.1920x1080.jpg?t=1755789801"
+        }
+      ]
+    }
+  ]
+}
