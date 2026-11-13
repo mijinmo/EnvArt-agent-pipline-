@@ -12,7 +12,7 @@
 
 另有独立的 **Poly Haven 写实素材替换实验**：用石堡构件、PBR 木箱/酒桶/桌面道具和石铺地面观察近景差异，不改变三方向默认入口。打开 `envart/realism_trial/trial.tscn` 后按 **F6** 运行。仅完成局部尝试，墙体缩放与贴图密度仍需调整，尚未选定为正式方向。见 [写实素材实验 HTML 对比](docs/realism-trial.html)。
 
-写实实验另有一轮 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。上一轮 `realism_trial` 场景保留。
+写实实验另有一轮 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
 
 ## 快速开始
 
