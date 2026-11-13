@@ -1,0 +1,12 @@
+config_version=5
+[application]
+config/name="Firewatch — Pine Relay"
+run/main_scene="res://scene.tscn"
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=1000
+window/size/window_width_override=1280
+window/size/window_height_override=800
+[rendering]
+renderer/rendering_method="forward_plus"
+textures/default_filters/use_nearest_mipmap_filter=false

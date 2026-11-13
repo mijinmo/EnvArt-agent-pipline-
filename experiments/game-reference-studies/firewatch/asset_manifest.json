@@ -1,0 +1,417 @@
+{
+  "title": "Pine Relay",
+  "date": "2026-11-13",
+  "reference_page": "https://store.steampowered.com/app/383870/Firewatch/",
+  "reference_screenshots": [
+    "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_c7e16bc8d5a6d40ab1f7c339395d26d8f6eb57ff.1920x1080.jpg?t=1755789801",
+    "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_570bc87288b5ab4e235ba270e1d2ae30312d5b82.1920x1080.jpg?t=1755789801"
+  ],
+  "reference_use": "Research only, never scene textures",
+  "packs": [
+    {
+      "author": "Quaternius",
+      "name": "Stylized Nature MegaKit Standard",
+      "source": "https://quaternius.com/packs/stylizednaturemegakit.html",
+      "retrieval": "authorized existing raw ZIP cache",
+      "free_scope": "68/116 models; supplied Standard license",
+      "license": "CC0-1.0",
+      "files": [
+        "Pine_3.gltf",
+        "Plant_1.gltf",
+        "Pine_2.gltf",
+        "Grass_Wispy_Tall.gltf",
+        "DeadTree_1.gltf",
+        "Pine_5.gltf",
+        "Rock_Medium_2.gltf",
+        "Rock_Medium_3.gltf",
+        "Pine_4.gltf",
+        "Mushroom_Common.gltf",
+        "Fern_1.gltf",
+        "DeadTree_2.gltf",
+        "Rock_Medium_1.gltf",
+        "Mushroom_Laetiporus.gltf",
+        "Pine_1.gltf",
+        "Grass_Common_Short.gltf",
+        "Pebble_Round_1.gltf"
+      ],
+      "modification": "Saved palette/roughness material overrides; original geometry and UV retained"
+    },
+    {
+      "author": "Kenney",
+      "name": "Survival Kit 2.0",
+      "source": "https://kenney.nl/assets/survival-kit",
+      "download": "https://opengameart.org/sites/default/files/kenney_survival-kit.zip",
+      "retrieval": "new download; official source 403, creator OGA upload fallback",
+      "free_scope": "80 models",
+      "license": "CC0-1.0",
+      "archive_sha256": "c3586341b5932c87eb43d75d915434f47daed168b17ed36a03e8ca9977c7443e",
+      "files": [
+        "structure.glb",
+        "bottle-large.glb",
+        "workbench-grind.glb",
+        "workbench.glb",
+        "tool-axe.glb",
+        "bucket.glb",
+        "structure-roof.glb",
+        "structure-floor.glb",
+        "barrel.glb",
+        "structure-canvas.glb",
+        "box.glb",
+        "fence.glb",
+        "tent-canvas-half.glb",
+        "floor-old.glb",
+        "box-large.glb",
+        "barrel-open.glb",
+        "tool-hammer.glb",
+        "resource-wood.glb",
+        "bedroll-packed.glb",
+        "tool-shovel.glb",
+        "box-open.glb",
+        "tree-log.glb",
+        "resource-planks.glb",
+        "signpost.glb",
+        "bottle.glb"
+      ],
+      "modification": "Uniform scaled to meter proportions; saved material tint overrides"
+    },
+    {
+      "author": "Poly Haven",
+      "name": "Pine Tree 01 twig maps only",
+      "source": "https://polyhaven.com/a/pine_tree_01",
+      "license": "CC0-1.0",
+      "retrieval": "new two-map download in round 02, total 862860 bytes",
+      "api": "https://api.polyhaven.com/files/pine_tree_01",
+      "files": [
+        "assets/pine_twigs/twig_diff.jpg",
+        "assets/pine_twigs/twig_alpha.png"
+      ],
+      "modification": "Shader remaps original leaf UV to upper-left twig island, explicitly samples alpha red, and compresses diffuse palette. Files unmodified.",
+      "downloads": [
+        "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_diff_1k.jpg",
+        "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_tree_01/pine_tree_01_twig_alpha_1k.png"
+      ]
+    },
+    {
+      "author": "Quaternius",
+      "name": "Medieval Village Standard wood trim only",
+      "source": "https://quaternius.com/packs/medievalvillage.html",
+      "license": "CC0-1.0",
+      "retrieval": "authorized raw repository asset cache",
+      "files": [
+        "assets/wood/T_WoodTrim_BaseColor.png"
+      ],
+      "modification": "Wood strip sampled by shader; source file unmodified."
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/licenses/Kenney_Survival_CC0.txt",
+      "sha256": "62c8356876481204fa4d40dc59183dfed777adf987d7f2a1390fffe8a699f3ff"
+    },
+    {
+      "path": "assets/licenses/PolyHaven_PineTwigs_CC0.txt",
+      "sha256": "5e241a702d1fec3a00937218382f0deaa2b094ccd528da880f0444c0c172ca57"
+    },
+    {
+      "path": "assets/licenses/Quaternius_Nature_CC0.txt",
+      "sha256": "120710e542c3ebaf83856c4eb55b4a1e680593b39302eba7fdc5d942dfe78c58"
+    },
+    {
+      "path": "assets/licenses/Quaternius_Village_CC0.txt",
+      "sha256": "ec6fd5004514cb0515a7dc1065f474644d31698861597b32e1745945ffec71de"
+    },
+    {
+      "path": "assets/nature/Bark_DeadTree.png",
+      "sha256": "8f055724c35f8e8c5685a505775b3b9ebfc6b4745308ef35ce1cfe6fd976153f"
+    },
+    {
+      "path": "assets/nature/Bark_DeadTree_Normal.png",
+      "sha256": "692da2f58909263f074cb17b36defd09f56bf89ab7efda567a9a3e59261747b3"
+    },
+    {
+      "path": "assets/nature/Bark_NormalTree.png",
+      "sha256": "f36e94fdd73255347325b998e02a0b2575fdf714b0315bfe5e8ff34bc8e13603"
+    },
+    {
+      "path": "assets/nature/Bark_NormalTree_Normal.png",
+      "sha256": "852f6155404b8c39e100e41e26970e02a6a5c81b482d3726618dab28e3ad03a2"
+    },
+    {
+      "path": "assets/nature/DeadTree_1.bin",
+      "sha256": "d623cfc5199a732cc988175fad149e8afcb84516df01a8dc1e378844019f408c"
+    },
+    {
+      "path": "assets/nature/DeadTree_1.gltf",
+      "sha256": "b7ca9e90cbd8e8e3b3b17fd9c8fd57184ebf4986ff433ee3f2212f37f3114469"
+    },
+    {
+      "path": "assets/nature/DeadTree_2.bin",
+      "sha256": "de7861981fa7ff6faafc30a705e49b45c315a718747e0ae08dc5acb34eedea10"
+    },
+    {
+      "path": "assets/nature/DeadTree_2.gltf",
+      "sha256": "5cbff9f1277e905eaf8e40d9028fa80b0d6b635aa0677076ffa81fcf377ffabf"
+    },
+    {
+      "path": "assets/nature/Fern_1.bin",
+      "sha256": "5e92b87a27f81a69fe15347a533df3c77d567b48298dceeef43168ccb7c22853"
+    },
+    {
+      "path": "assets/nature/Fern_1.gltf",
+      "sha256": "d41915cffe9dbbde1ae88be381eb9c60f7caa2274511436cc78fe4de627468ab"
+    },
+    {
+      "path": "assets/nature/Grass.png",
+      "sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd"
+    },
+    {
+      "path": "assets/nature/Grass_Common_Short.bin",
+      "sha256": "7a0f0f7a9ac39cfa4b303bac03a6594f43e48d873b73553fa06a79e4df1271e9"
+    },
+    {
+      "path": "assets/nature/Grass_Common_Short.gltf",
+      "sha256": "6957b50622c9e26e7296c1b47ea8653bc0d957e0a547de444e2ed96f0075a21a"
+    },
+    {
+      "path": "assets/nature/Grass_Wispy_Tall.bin",
+      "sha256": "a46e091f39958242a96722ea331efa8d7fb055c6e24d21aea6b0ac091a7b1b66"
+    },
+    {
+      "path": "assets/nature/Grass_Wispy_Tall.gltf",
+      "sha256": "a05e3ac05e43abbdb89c5b61134e367c7d33e285ff8d2a6e0a40180cb335af0b"
+    },
+    {
+      "path": "assets/nature/Leaf_Pine_C.png",
+      "sha256": "86f7ff7a214f5424de48d269568f36a15485e61c80677e426c7be9f45181eef9"
+    },
+    {
+      "path": "assets/nature/Leaves.png",
+      "sha256": "23248cebe28a24e78add32db3c2ee2f4d7b9219e9d2467279722f0197a7b6bd5"
+    },
+    {
+      "path": "assets/nature/Mushroom_Common.bin",
+      "sha256": "e4cee9f2570505a172990a2754d52ed5775a4d75857a832fffa1b573e38a4051"
+    },
+    {
+      "path": "assets/nature/Mushroom_Common.gltf",
+      "sha256": "2088b39d92f2f6331f45e59a048d02814dcd8b22767b024f4d220143bc8339f4"
+    },
+    {
+      "path": "assets/nature/Mushroom_Laetiporus.bin",
+      "sha256": "14f4835745947e7088bf706fbbbfde6b800f89bebf36122f40582fc8d45bb1ae"
+    },
+    {
+      "path": "assets/nature/Mushroom_Laetiporus.gltf",
+      "sha256": "88d264df9da6b0408ec276c36ae744ae79813046ba2938f03ed0837778f66fc9"
+    },
+    {
+      "path": "assets/nature/Mushrooms.png",
+      "sha256": "e29eed2db831e44a29634fe25c62e9e31edf201e978a52912b9e5221ffd4a1f3"
+    },
+    {
+      "path": "assets/nature/PathRocks_Diffuse.png",
+      "sha256": "85a04abb2c136fee53b376daf3b7d7f96fdf3966de0258dff6fe2b24da792b23"
+    },
+    {
+      "path": "assets/nature/Pebble_Round_1.bin",
+      "sha256": "f3dacef3243ccaaad7df2beb5c72574a38fb3eae45357e1b5e2b40200d51c375"
+    },
+    {
+      "path": "assets/nature/Pebble_Round_1.gltf",
+      "sha256": "9f6261c81134915e73cf35eb4e37076238fd1e79434515ac686d15cbd1f779ab"
+    },
+    {
+      "path": "assets/nature/Pine_1.bin",
+      "sha256": "0cc0900d156359cab7028d87cd5d8897fbcb0479ddf1ddf524d5462c11e17af2"
+    },
+    {
+      "path": "assets/nature/Pine_1.gltf",
+      "sha256": "adc85a72e6f46f71317ca5f7630876bfb207f687427bc9e37cd97ec4af5f2cbc"
+    },
+    {
+      "path": "assets/nature/Pine_2.bin",
+      "sha256": "5ba81ed2b131243bf02f5fb18e278083205ce16b0f30c364ccbe9355e7637c60"
+    },
+    {
+      "path": "assets/nature/Pine_2.gltf",
+      "sha256": "57bd4732170b6c7e51bcf78fe5adaabf142f95a50378d8d3051d1f20a04d3c2f"
+    },
+    {
+      "path": "assets/nature/Pine_3.bin",
+      "sha256": "73edd69d7e789b12bfa32ab202c62d74ae98f0bba67975205211bf51906d8c82"
+    },
+    {
+      "path": "assets/nature/Pine_3.gltf",
+      "sha256": "54c72a4d614f053dd4b3d4404076a361de6085ec6a34560e42a76d7e79d89830"
+    },
+    {
+      "path": "assets/nature/Pine_4.bin",
+      "sha256": "0a04c88f619924d9d4df10281e994da9d8e429c1a19fae2086ed6f1ebd1ba88a"
+    },
+    {
+      "path": "assets/nature/Pine_4.gltf",
+      "sha256": "d8978cfd5a29a22446b9277f1789f44c3f953fb6e29adb625a8f61c3dd032952"
+    },
+    {
+      "path": "assets/nature/Pine_5.bin",
+      "sha256": "18982d7f6c430d1a42568d4ef62017398dedb1ddc60dfbab047f8cddea9cf797"
+    },
+    {
+      "path": "assets/nature/Pine_5.gltf",
+      "sha256": "bb060ce1420af32dc996241078d36e4c991577397474aa64f4c691362c482cfa"
+    },
+    {
+      "path": "assets/nature/Plant_1.bin",
+      "sha256": "cc36c3e6e3473e13ce93ddb7f5efbfa57db43106f1036a8b8ea00edeedfde322"
+    },
+    {
+      "path": "assets/nature/Plant_1.gltf",
+      "sha256": "11749feb4c196bc69eaba0c0ad938fab09e3fe33c02e0d0f86b329eacf633b55"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_1.bin",
+      "sha256": "ea79527d4c2b3bdb7a28bf589bf0c1fd96d192a4d0738636753911dd58681e99"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_1.gltf",
+      "sha256": "5d1ab1fa03218f4a908728ed0eabe6486344a7e4f510b0d3d6f837fd1d011bd8"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_2.bin",
+      "sha256": "76b60bf8349f71abdb0ed462b3223d93c2dcabdfb5754bc132e18b021cc6c805"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_2.gltf",
+      "sha256": "fac2d05a05f2d0d2098de59c09b58f42cc875c9caca4fd4c4bd57f3d36e7b12e"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_3.bin",
+      "sha256": "63f94bce2d3fb3fe25b2d6c843a828b1bec76855dbaac93fcf5d43582309caad"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_3.gltf",
+      "sha256": "9a575b911372cf91693aa3a56aea8137ec2251c2b99fb34a31272ee64503047f"
+    },
+    {
+      "path": "assets/nature/Rocks_Diffuse.png",
+      "sha256": "b813696df6081f469a127092eb0ce45cc39d56f3ccc0699152bfcd3804810b48"
+    },
+    {
+      "path": "assets/pine_twigs/twig_alpha.png",
+      "sha256": "6f91aa99f2c27108d6f817f874954aa7df8bfbb4dea2673e9322555a6ae79d99"
+    },
+    {
+      "path": "assets/pine_twigs/twig_diff.jpg",
+      "sha256": "e649f0f9bc74d1af5f1a45eaf2fe7a29adaaddfab251f746b983da301e4b80e1"
+    },
+    {
+      "path": "assets/survival/Textures/colormap.png",
+      "sha256": "6ca023be9f12e8c2358fcf94320c8a894b4c05a3dd0bad1f5c268312053caca1"
+    },
+    {
+      "path": "assets/survival/barrel-open.glb",
+      "sha256": "f24ab1c5ab3685fc758f7e7298bf4f255f039fc6dfc7463711fbe90c4c011a41"
+    },
+    {
+      "path": "assets/survival/barrel.glb",
+      "sha256": "3a0d12f6bdd1badd361f64ce0fbbf878a4ccfc2de8ff1ac4ed4c1aea2a9ee04a"
+    },
+    {
+      "path": "assets/survival/bedroll-packed.glb",
+      "sha256": "980c222917e8564c68aa184af025d701612c7395e8ad8ef55b5b00785637a98f"
+    },
+    {
+      "path": "assets/survival/bottle-large.glb",
+      "sha256": "be7c0c52633c76bb7d00fd23878726d40651e5b38a87f2d4c4a03b0b2ead749a"
+    },
+    {
+      "path": "assets/survival/bottle.glb",
+      "sha256": "23f847b8812838830df686fb8b472fa225693a3b85c526f2796f7b0790831a9a"
+    },
+    {
+      "path": "assets/survival/box-large.glb",
+      "sha256": "69b4052f32b7b27e5d2ee27041b091a07d4a2dd4d877168a701607a97609f0f6"
+    },
+    {
+      "path": "assets/survival/box-open.glb",
+      "sha256": "2169e2291052ef9c378af4d6736df3fcff4ebca8fc39cbcdb4b7ad6accdff568"
+    },
+    {
+      "path": "assets/survival/box.glb",
+      "sha256": "346eebd23986793b992ca6e05e9f98d6f5db96a9bfa3aa7c8360ac8b7920def8"
+    },
+    {
+      "path": "assets/survival/bucket.glb",
+      "sha256": "ff173908480929067cd634d5edfedba038428f1503db487521492975fa5c8274"
+    },
+    {
+      "path": "assets/survival/fence.glb",
+      "sha256": "5d8050e39c8b83b5835ea38b9b17429b4a03e289b566a1db771b7e1d9c6e4050"
+    },
+    {
+      "path": "assets/survival/floor-old.glb",
+      "sha256": "a66581f16641c7da6c67de84f64c36c35c5b18367640e44aada5a9c6a62487aa"
+    },
+    {
+      "path": "assets/survival/resource-planks.glb",
+      "sha256": "d3804257474a3baab7ac067be91de5c3d6d18d5803775dc876cb6d9442c30873"
+    },
+    {
+      "path": "assets/survival/resource-wood.glb",
+      "sha256": "1d5f559da9432f89bd323731ef76b60372e0deb261a96d0da8d5af570c485d80"
+    },
+    {
+      "path": "assets/survival/signpost.glb",
+      "sha256": "6d33757888c4ec9249610266ca8d60532b1138ae28fd37e93fa843ec4856fd25"
+    },
+    {
+      "path": "assets/survival/structure-canvas.glb",
+      "sha256": "f450f215599f8962b63737825c7d55d7be498742551ba21e5633d6459b194134"
+    },
+    {
+      "path": "assets/survival/structure-floor.glb",
+      "sha256": "43271d5b1f55c0c832408293454e49c04d8d5d2ed41acdfb9de7fc9d26a5a275"
+    },
+    {
+      "path": "assets/survival/structure-roof.glb",
+      "sha256": "645e0454780d0b07084e3d5ffc6c5b164742f62b07b810e1cb838897c7ca83ac"
+    },
+    {
+      "path": "assets/survival/structure.glb",
+      "sha256": "2ff24b6e283bc687c04cd3e0341049e34ce10fe2394a9856af89226a72eebd9d"
+    },
+    {
+      "path": "assets/survival/tent-canvas-half.glb",
+      "sha256": "f6e12c0de280a9d5e93e27652a3e80ea620374865a6053dbe6fd5fb7eaca9d93"
+    },
+    {
+      "path": "assets/survival/tool-axe.glb",
+      "sha256": "de5c6cc51cdb5bcfad8bd7128b7ff0e37a34e6f4f8deddec82bb8634c25cc20d"
+    },
+    {
+      "path": "assets/survival/tool-hammer.glb",
+      "sha256": "9b27f03c26dabd49a7ea358615e63fe65e1c3d0157887d4ee1ecdfa1f0e688f3"
+    },
+    {
+      "path": "assets/survival/tool-shovel.glb",
+      "sha256": "20abb2420f0215c59694287207b7a6324114552b9f59846ab2a2673e3a7c1147"
+    },
+    {
+      "path": "assets/survival/tree-log.glb",
+      "sha256": "bd358e55e63a75bd54bea1e4b40ed362baa937ce8e503f2aa2370a5a1d9da11c"
+    },
+    {
+      "path": "assets/survival/workbench-grind.glb",
+      "sha256": "93aa1468ee12b16bd2a554e65eab2beebe7e14cf52ed5a35a9530c6123292773"
+    },
+    {
+      "path": "assets/survival/workbench.glb",
+      "sha256": "bf72d2d535fa29127e5078a6c4c2023a74fa5cd7d02d91ad550e897e088e1dc8"
+    },
+    {
+      "path": "assets/wood/T_WoodTrim_BaseColor.png",
+      "sha256": "a59f410b07a9bc5f0664df3ba7a2c1e37acffc7979795911f3fc8730ab60e33e"
+    }
+  ],
+  "round_01_correction": "Initial intended material overrides were not persisted on imported instances. Round 02 marks instances editable and verifies reopening."
+}

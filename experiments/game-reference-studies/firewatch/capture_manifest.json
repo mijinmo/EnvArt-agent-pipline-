@@ -1,0 +1,34 @@
+{
+  "engine": "Godot 4.7.2",
+  "backend": "Metal Forward+",
+  "rounds_frozen": [
+    "round-01",
+    "round-02"
+  ],
+  "images": [
+    {
+      "path": "captures/round-01/detail.png",
+      "sha256": "967eb54ed5350762eafef5a091ab04b985390e79836d77d64d76af1f7c7380ef"
+    },
+    {
+      "path": "captures/round-01/overall.png",
+      "sha256": "34281b6adc872022f3afd9e6f7b0c34442818dd4d9f83a7671f198e693255523"
+    },
+    {
+      "path": "captures/round-01/transition.png",
+      "sha256": "35d408f80cd9773942085e870040efd3cce158051f20df6a68bfb4a1bc4b7dc4"
+    },
+    {
+      "path": "captures/round-02/detail.png",
+      "sha256": "5bc3d8ea0ab2d9163f8e128a9af8545dabc3e0cf46bc86b5f56ab38e15521be3"
+    },
+    {
+      "path": "captures/round-02/overall.png",
+      "sha256": "beb7f31168ea4a1775d22b14dfcce4e6c5f6c59a828ed2d20f64d658b3b05e67"
+    },
+    {
+      "path": "captures/round-02/transition.png",
+      "sha256": "732c09534f47af0d4ad1aad3afaeae8eab7b832d48b9800a005c921851eef3d2"
+    }
+  ]
+}
