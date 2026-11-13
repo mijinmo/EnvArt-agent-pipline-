@@ -1,0 +1,111 @@
+{
+  "reference_images": [
+    {
+      "local_file": "dishonored-0.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_409bb8591d4c8278815510d9be737b57dfc57e06.1920x1080.jpg?t=1789050056",
+      "role": "primary: industrial waterfront, brick and narrow tall windows, warm yellow-green air"
+    },
+    {
+      "local_file": "dishonored-4.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_e6f960fda9132baa23aca305359064dbc1b6f507.1920x1080.jpg?t=1789050056",
+      "role": "secondary: tall urban canyon and industrial overhead infrastructure"
+    }
+  ],
+  "assets": [
+    {
+      "id": "warehouse02",
+      "author": "32kda",
+      "source": "https://opengameart.org/node/175915",
+      "download": "https://opengameart.org/sites/default/files/warehouse02.zip",
+      "license": "CC0",
+      "provenance": "new web search and download in this study",
+      "files": [
+        "assets/warehouse/warehouse02.glb",
+        "assets/warehouse/Set_01_DiffuseMap.png"
+      ],
+      "free_scope": "Full warehouse model, three diffuse skins, Blender and Godot source; not a paid teaser.",
+      "modifications": "Uniform scale 0.95 for principal buildings, original UVs retained; muted albedo tint. Imported mesh and transform extracted into editable native scene. Main source mesh includes pronounced buttresses and eaves. Round 02 shader reduces saturation to 0.38 and contrast to 0.47 while retaining original UV and texture sampling; darkened foot course."
+    },
+    {
+      "id": "industrial-modules",
+      "author": "Trey Ramm / minime453",
+      "source": "https://opengameart.org/content/modular-industrial-kit",
+      "download": "https://opengameart.org/sites/default/files/modular_industrial_pieces.zip",
+      "license": "CC0",
+      "provenance": "new web search and download in this study",
+      "files": [
+        "assets/industrial/IndWindowEFrame.fbx",
+        "assets/industrial/IndStairsNarrowHalf.fbx",
+        "assets/industrial/atlas.png",
+        "assets/industrial/IndWallFull.fbx",
+        "assets/industrial/IndWindowBFull.fbx",
+        "assets/industrial/IndRoofDarkGreyFull.fbx"
+      ],
+      "free_scope": "157 FBX meshes and gradient atlas, full archive.",
+      "modifications": "Selected window-frame and stair meshes, atlas assigned, colors muted. EFrame is tall multi-module frame, uniformly scaled 0.5 to fit existing facade. Round 02 adds an 8m by 6m rear pumping-office tower using four 3m storeys plus a local raised east service bay from measured 2m wall/window and roof modules, with a simple atlas-aware plaster/metal treatment."
+    },
+    {
+      "id": "3td-industrial",
+      "author": "Ron Kapaun / 3TD Studios, distributed by hreikin",
+      "source": "https://opengameart.org/content/3td-industrial-pack",
+      "download": "https://opengameart.org/sites/default/files/3TD_IndustrialPack.zip",
+      "license": "CC0",
+      "provenance": "new web search and download in this study",
+      "files": [
+        "assets/props/3td_Crate_01",
+        "assets/props/3td_Pallet_01",
+        "assets/props/3td_Barrel_01",
+        "assets/props/3td_WeldingTank_01",
+        "assets/props/3td_RoadBarrier_01/3td_concrete_01.jpg"
+      ],
+      "free_scope": "Two barrels, crate, pallet, road barrier, safety cone, gas container and supplied textures.",
+      "modifications": "Discarded embedded lower LOD and collision display meshes; manually assigned original diffuse maps because Collada materials did not import references. No archive scripts executed. Lowered saturation through final lighting; spec maps not incorrectly treated as metallic."
+    },
+    {
+      "id": "cobblestone-floor",
+      "author": "Rob Tuytel / Poly Haven",
+      "source": "https://polyhaven.com/a/cobblestone_floor_03",
+      "license": "CC0",
+      "provenance": "existing authorized raw asset cache in original repo; not a new download",
+      "files": [
+        "assets/ground/cobblestone_floor_03_diff_2k.jpg",
+        "assets/ground/cobblestone_floor_03_nor_gl_2k.jpg"
+      ],
+      "modifications": "World scale triplanar mapping about 2.94m per repeat, muted olive stone albedo, normal strength 0.65. Used only as ground surface; no previous scene or generator read."
+    },
+    {
+      "id": "wooden_bucket_02",
+      "author": "Poly Haven contributors",
+      "source": "https://polyhaven.com/a/wooden_bucket_02",
+      "license": "CC0",
+      "license_source": "https://polyhaven.com/license",
+      "provenance": "existing authorized raw asset cache from original repo; not a new search/download",
+      "files": [
+        "assets/cached_support/wooden_bucket_02"
+      ],
+      "modifications": "Original glTF mesh, materials, UVs and maps preserved; bucket uniform scale0.85/0.68, hammer scale1.2 and turned onto bench. Added only in round02 for specific open-container and tool functions."
+    },
+    {
+      "id": "wooden_hammer_01",
+      "author": "Poly Haven contributors",
+      "source": "https://polyhaven.com/a/wooden_hammer_01",
+      "license": "CC0",
+      "license_source": "https://polyhaven.com/license",
+      "provenance": "existing authorized raw asset cache from original repo; not a new search/download",
+      "files": [
+        "assets/cached_support/wooden_hammer_01"
+      ],
+      "modifications": "Original glTF mesh, materials, UVs and maps preserved; bucket uniform scale0.85/0.68, hammer scale1.2 and turned onto bench. Added only in round02 for specific open-container and tool functions."
+    }
+  ],
+  "authored_adapters": [
+    "ground slabs and curb modules",
+    "continuous masonry cornice bands",
+    "pipe lengths, collars, gate and catwalk",
+    "bench supports, gauge, valve, hose",
+    "original Morrow & Sons and Oil Store signs",
+    "lantern frames and three practical lights"
+  ],
+  "renderer": "Godot 4.7.2 Metal Forward+ on Apple M5",
+  "scope": "environment art sample, no gameplay/controller/UI"
+}

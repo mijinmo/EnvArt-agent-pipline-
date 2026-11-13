@@ -1,0 +1,4 @@
+wooden_bucket_02
+Source https://polyhaven.com/a/wooden_bucket_02
+License CC0; https://polyhaven.com/license
+Existing authorized raw source cache, not newly downloaded.

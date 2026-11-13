@@ -1,0 +1,8 @@
+industrial-modules
+Author: Trey Ramm / minime453
+Source: https://opengameart.org/content/modular-industrial-kit
+License: CC0
+CC0 license deed: https://creativecommons.org/publicdomain/zero/1.0/
+Verified source page on 2026-11-13.
+157 FBX meshes and gradient atlas, full archive.
+Provenance: new web search and download in this study

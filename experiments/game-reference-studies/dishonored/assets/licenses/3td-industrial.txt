@@ -1,0 +1,8 @@
+3td-industrial
+Author: Ron Kapaun / 3TD Studios, distributed by hreikin
+Source: https://opengameart.org/content/3td-industrial-pack
+License: CC0
+CC0 license deed: https://creativecommons.org/publicdomain/zero/1.0/
+Verified source page on 2026-11-13.
+Two barrels, crate, pallet, road barrier, safety cone, gas container and supplied textures.
+Provenance: new web search and download in this study

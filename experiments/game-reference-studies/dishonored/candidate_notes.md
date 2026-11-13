@@ -1,0 +1,13 @@
+# Candidate selection
+
+1. **32kda Warehouse building** — https://opengameart.org/node/175915 — CC0, actual 30.8 MiB archive downloaded and inspected. Selected for full textured building, buttresses, doors and roof. Three real free texture skins. Limitation: a single long low building with repeated broad windows; old FPS surface language is much weaker than Dishonored concept art.
+2. **Trey Ramm Modular Industrial Kit** — https://opengameart.org/content/modular-industrial-kit — CC0, 157 FBX pieces and a gradient atlas. Actual archive downloaded. Selected narrow window frame and steps for facade/threshold adaptation. Its flat palette walls were rejected as the main building.
+3. **Kenney City Kit Industrial** — https://kenney.nl/assets/city-kit-industrial — official source says CC0 and 40 files. Candidate rejected before download: intact miniatures and flat palette likely push the study toward toy city instead of painterly industrial old town.
+4. **Ron Kapaun/3TD Industrial Pack** — https://opengameart.org/content/3td-industrial-pack — CC0, actual 7 MiB archive downloaded. Selected cargo and fuel-service props; inspected actual Collada LODs, materials and dimensions. Source is modest 2014 game art, so commercial-use availability does not imply target-style fidelity.
+5. **a52 PBR Industrial Pack** — https://opengameart.org/content/pbr-industrial-asset-pack — CC0, 58MB/59.1MB source and baked archives. Not downloaded: Blender conversion and more modern industrial tanks would expand scope; current two downloaded prop/building families suffice to test the local slice.
+
+Bounded network handling: initial sandbox DNS failure was retried using approved network access; downloads used curl --max-time 60 --retry 1. No login, paid-only content or preview asset was substituted for deliverable models. Old authorized cache contributes only cobblestone texture maps; all visible building and shipping/fuel meshes came from fresh searches.
+
+Correct references: dishonored-0.jpg (waterfront industrial facade) and dishonored-4.jpg (mechanical guards in industrial canyon). Initial parallel image outputs arrived out of order; IDs were corrected after individually reopening file 0. Exact source URLs are in asset_manifest.json. Game imagery is used only for reference, never as scene texture.
+
+Round 02 support decision: used two explicitly authorized cached raw Poly Haven assets (wooden_bucket_02 and wooden_hammer_01) for an actual open container and mallet, rather than extending the search stage. This is not newly found content and is labeled separately. The earlier scene/generator was not read.
