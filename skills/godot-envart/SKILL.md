@@ -19,7 +19,7 @@ Prefer existing downloadable models for the main architecture and visible props.
 
 Verify the actual downloadable/free contents and commercial-use permission at the source. Record source URL, author, license, chosen files and modifications in a compact manifest; retain supplied licenses. Cache verified downloads. A failed download is not a reason to spend the whole task searching: use bounded timeouts and retries, then pick another suitable source or report the specific missing asset. Do not execute code bundled in asset archives.
 
-Before dressing the scene, inspect a few representative assets in Godot: dimensions and pivot, useful submeshes, UV/material response, transparency, and normals. Downloaded foliage may need a separate alpha map even if its glTF says MASK. Import success does not prove that its leaves look correct.
+Before dressing the scene, inspect a few representative assets in Godot: dimensions and pivot, useful submeshes, UV/material response, transparency, and normals. Downloaded foliage may need a separate alpha map even if its glTF says MASK. Import success does not prove that its leaves look correct. For an entrance, distinguish an actual aperture from a decorative arch or recess.
 
 ## Assemble a place, not an asset catalog
 
@@ -36,7 +36,7 @@ If Blender adaptation is materially needed, use the available Blender production
 
 ## Iterate on real images
 
-Get an in-engine main-view capture early. Keep a few stable views: overall/entrance, prop-group close-up, and ground/transition or background. Inspect the actual captures, identify the largest visible weakness, fix it, and compare the same view again. A console PASS cannot replace looking at the output.
+Get an in-engine main-view capture early. Keep a few stable views: overall/entrance, prop-group close-up, and ground/transition or background. Inspect the actual captures, identify the largest visible weakness, fix it, and compare the same view again. A console PASS cannot replace looking at the output. Fix unintended blown highlights and unsupported background geometry before adding finer decoration.
 
 Ask of the images: Is the focal point legible? Do the assets belong together? Are the ground and transitions finished? Do props tell a plausible story? Are scale, contact, repetition and material detail convincing at the intended distance? Is the background subordinate? Do not call a result art-approved without the user's judgment.
 

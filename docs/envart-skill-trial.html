@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EnvArt Skill · 独立空工程试跑</title><style>
+:root{color-scheme:dark}body{margin:0;background:#182126;color:#e4e8e5;font:16px/1.8 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:36px 24px 64px}h1{font-size:36px;line-height:1.3}h2{color:#d3bc8b;font-size:23px;margin-top:35px}a{color:#a4d4df}code{background:#293b40;padding:3px 6px;overflow-wrap:anywhere}img{display:block;width:100%;border-radius:7px}figure{margin:20px 0}figcaption{font-size:13px;color:#aebfc0;margin-top:7px}.note{padding:15px 20px;border-left:3px solid #d3bc8b;background:#253338}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.pair{grid-template-columns:1fr}h1{font-size:29px}}
+</style></head><body><main><p>GODOT ENVART / INDEPENDENT SKILL TRIAL</p><h1>Emberwatch：独立空工程复刻</h1>
+<p>将 <code>godot-envart</code> skill 与 <code>b81f512</code> 的六张原始参考图交给一个独立 subagent。它从空 Godot 工程起步，选择灰烬堡垒方向，搭建带入口、高台、补给区和远景废墟的小庭院。</p>
+<p class="note">这次验证的是流程能否产出可编辑、可审看的同类环境。没有复制旧场景、装配脚本、控制器或测试系统。主 agent 通过实机图反馈曝光、接地和渲染层次问题；这是一轮带视觉反馈的试跑，不是完全无人干预的基准测试，也尚未经过用户美术验收。</p>
+<figure><img src="../experiments/envart-skill-trial/captures/entrance.png" alt="独立试跑最终入口实机图"><figcaption>最终入口机位：石砌门洞、高台与补给区。图片来自 Godot 实际视口。</figcaption></figure>
+<h2>交付内容</h2><p>独立工程：<a href="../experiments/envart-skill-trial/project.godot">experiments/envart-skill-trial/project.godot</a>。用 Godot 4.7.2 导入并按 <strong>F5</strong> 运行；<strong>1 / 2 / 3 / 4</strong> 切换总览、入口、道具近景、高差机位。<code>courtyard.tscn</code> 是可直接编辑的成品场景，<code>build_scene.gd</code> 用于重建，重建不是打开场景的前置条件。</p>
+<p>该工程仅包含静态观察机位，没有玩家、碰撞玩法或回归测试。只检查能打开、素材正确显示和实际截图；验收依据是下面的画面。</p>
+<div class="pair"><figure><img src="../experiments/envart-skill-trial/captures/activity.png" alt="补给工作区近景"><figcaption>食品、瓶罐、盘叠、座椅和桶装补给构成活动区域。</figcaption></figure><figure><img src="../experiments/envart-skill-trial/captures/transition.png" alt="石砌高台和木楼梯"><figcaption>楼梯、高台、栏墙与不同高度的物件建立空间层次。</figcaption></figure></div>
+<h2>真实迭代中发现了什么</h2><ol><li>首轮曝光过强，石材和地面细节丢失；远景没有接地，入口还误用了封闭凹槽模型。看图后先修这些问题，没有继续堆 props。</li><li>后续调整了照明和材质，换用真正开口的门洞，补上连续地形，修正地形朝向、碎石尺度和孤立的地面拼块。</li><li>第一版为出图便利选择了 Compatibility，画面接触层次弱于基线。最终改用基线采用的 Forward+，保持机位和内容不变，重新审看阴影与材质。</li></ol>
+<figure><img src="../experiments/envart-skill-trial/captures/overall.png" alt="最终试跑总览"><figcaption>最终总览同时暴露仍然简单的远景、重复塔楼和较空的前景，不用裁图隐藏这些限制。</figcaption></figure>
+<h2>Skill 的小幅修订</h2><p>保留六步主流程，只补了实际暴露的三个判断：入口必须区分真开口与装饰凹槽；优先修过曝和悬空背景；渲染能力应服从美术参考，不能为省事默认降级。没有加入新的功能验证阶段。</p>
+<h2>结果边界</h2><p>产出了完整地面、真实套件建筑、活动道具组、前后景和四张可复查的实机图。局部风格比较统一，但远景简单、塔楼重复、前景较空、楼梯较陡和地面边缘偏硬仍然存在，不能直接称为“达到或超过基线”。</p>
+<p>本次使用 37 个 KayKit Dungeon Remastered 1.0 模型，与灰烬参考属于同一家族。它验证了独立装配与看图修正，<strong>没有验证不同素材家族之间的风格迁移</strong>。素材采用作者公开 CC0 资源，来源与哈希见 <a href="../experiments/envart-skill-trial/asset_manifest.json">素材清单</a>，完整决策记录见 <a href="../experiments/envart-skill-trial/run_notes.txt">run_notes.txt</a>。</p>
+<p><a href="envart-pipeline-skill.html">精简流程</a> · <a href="../skills/godot-envart/SKILL.md">Skill 源文件</a> · <a href="direction-comparison.html">原始三方向基线</a></p>
+</main></body></html>

@@ -14,7 +14,7 @@
 
 写实实验另有一轮 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。最新一轮已换用 Poly Haven 植物与独立叶片遮罩，跳台货箱从 42 个减至 10 个，补入开箱、箱盖和破损桶板；建筑仍未达到写实预期。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
 
-环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。见 [精简流程说明](docs/envart-pipeline-skill.html)。
+环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。见 [精简流程说明](docs/envart-pipeline-skill.html)。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
 
 ## 快速开始
 
