@@ -350,6 +350,256 @@
       ]
     },
     {
+      "id": "fern_02",
+      "source": "https://polyhaven.com/a/fern_02",
+      "authors": {
+        "Rob Tuytel": "scanning",
+        "Rico Cilliers": "modeling"
+      },
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "modifications": "No source file changes. Node extraction, placement and material sampling settings are stored in the trial scene.",
+      "files": [
+        {
+          "path": "fern_02/fern_02_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/fern_02/fern_02_2k.gltf",
+          "sha256": "50540d37531f93fd693d5340d5b3095c9d6d2834fa05c74bea797d54f290cb6a",
+          "bytes": 6899
+        },
+        {
+          "path": "fern_02/textures/fern_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/fern_02/fern_02_diff_2k.jpg",
+          "sha256": "9ee18172170728050871772e2cd6d8d37b52f9138e61b49b04486623f9caf84b",
+          "bytes": 993703
+        },
+        {
+          "path": "fern_02/textures/fern_02_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/fern_02/fern_02_arm_2k.jpg",
+          "sha256": "1eaf9bd29e2d83a77ca5d89bdddebcd9216b8b4ba244644580fe5b89bbe713f1",
+          "bytes": 850856
+        },
+        {
+          "path": "fern_02/fern_02.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/fern_02/fern_02.bin",
+          "sha256": "fe1abb762bcbbc7ad9e86925c8080437a62add257d9280e9142fdc85c226e64c",
+          "bytes": 176176
+        },
+        {
+          "path": "fern_02/textures/fern_02_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/fern_02/fern_02_nor_gl_2k.jpg",
+          "sha256": "dfe1ac4a428d21f7c134411500177d66b8dd800c8fec6f0040c50f44414a777b",
+          "bytes": 1365615
+        }
+      ]
+    },
+    {
+      "id": "weed_plant_02",
+      "source": "https://polyhaven.com/a/weed_plant_02",
+      "authors": {
+        "Rob Tuytel": "Photography",
+        "Rico Cilliers": "Modeling"
+      },
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "modifications": "No source file changes. Node extraction, placement and material sampling settings are stored in the trial scene.",
+      "files": [
+        {
+          "path": "weed_plant_02/weed_plant_02_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/weed_plant_02/weed_plant_02_2k.gltf",
+          "sha256": "9e36ab0b1c3b9e5f80a59d86010e7e17452b2d62952f196860e5631745700bdb",
+          "bytes": 9128
+        },
+        {
+          "path": "weed_plant_02/textures/weed_plant_02_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/weed_plant_02/weed_plant_02_nor_gl_2k.jpg",
+          "sha256": "ff3d8b27e6c5a342c7f6d78175f8a6b664493229ba3f92cdbcec8a6a51c176f9",
+          "bytes": 2569183
+        },
+        {
+          "path": "weed_plant_02/textures/weed_plant_02_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/weed_plant_02/weed_plant_02_arm_2k.jpg",
+          "sha256": "ad6ce396e06b38c646e7da988767786d73e0228ddf0e6292fcb7544b0e6e3947",
+          "bytes": 2042103
+        },
+        {
+          "path": "weed_plant_02/textures/weed_plant_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/weed_plant_02/weed_plant_02_diff_2k.jpg",
+          "sha256": "25e4190cddce367d0e161b24de44873425c2179862faf7878aea49cbdc72c0e7",
+          "bytes": 1566453
+        },
+        {
+          "path": "weed_plant_02/weed_plant_02.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/weed_plant_02/weed_plant_02.bin",
+          "sha256": "2b77b91a881055365a56156e8a131277187f72b82c1d55806bb5b0a5053e5e9d",
+          "bytes": 330884
+        }
+      ]
+    },
+    {
+      "id": "nettle_plant",
+      "source": "https://polyhaven.com/a/nettle_plant",
+      "authors": {
+        "Rob Tuytel": "Photography",
+        "Rico Cilliers": "modeling"
+      },
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "modifications": "No source file changes. Node extraction, placement and material sampling settings are stored in the trial scene.",
+      "files": [
+        {
+          "path": "nettle_plant/nettle_plant_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/nettle_plant/nettle_plant_2k.gltf",
+          "sha256": "75e1debf2fce510fb119847ec4a427d6dea4de33a1aac3e6484d880845e4047b",
+          "bytes": 10450
+        },
+        {
+          "path": "nettle_plant/textures/nettle_plant_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/nettle_plant/nettle_plant_nor_gl_2k.jpg",
+          "sha256": "90d75c7ac70df26d6abb938e14676b0ecc08e35a596034a47f54865a5ab283a2",
+          "bytes": 2356297
+        },
+        {
+          "path": "nettle_plant/nettle_plant.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/nettle_plant/nettle_plant.bin",
+          "sha256": "24810f9d80b5fafdd71e1599b0cc81afa3eb9b744cfa8bf388c5e9f30271ba46",
+          "bytes": 956560
+        },
+        {
+          "path": "nettle_plant/textures/nettle_plant_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/nettle_plant/nettle_plant_diff_2k.jpg",
+          "sha256": "7baf0c5bf0695ddbba590baba686e284803244703959092526eb2bc226724351",
+          "bytes": 1197929
+        },
+        {
+          "path": "nettle_plant/textures/nettle_plant_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/nettle_plant/nettle_plant_arm_2k.jpg",
+          "sha256": "94a5bcfdb6c00f3f44105e06eef9cc759e6826bf30bd3ef56c4991b18691d230",
+          "bytes": 1566589
+        }
+      ]
+    },
+    {
+      "id": "wooden_crate_02",
+      "source": "https://polyhaven.com/a/wooden_crate_02",
+      "authors": {
+        "James Ray Cock": "modeling",
+        "Jurita Burger": "graphic design"
+      },
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "modifications": "No source file changes. Node extraction, placement and material sampling settings are stored in the trial scene.",
+      "files": [
+        {
+          "path": "wooden_crate_02/wooden_crate_02_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/wooden_crate_02/wooden_crate_02_2k.gltf",
+          "sha256": "0cedea3c3942fa2cd6896235f2d704ebdabcf9b1490fd451cef79c94da9cb782",
+          "bytes": 4150
+        },
+        {
+          "path": "wooden_crate_02/textures/wooden_crate_02_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_crate_02/wooden_crate_02_nor_gl_2k.jpg",
+          "sha256": "04274163275dc16b9dbd829aa45145796bd129cf980c916280fcad352cf5542e",
+          "bytes": 2280942
+        },
+        {
+          "path": "wooden_crate_02/textures/wooden_crate_02_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_crate_02/wooden_crate_02_arm_2k.jpg",
+          "sha256": "c426597684b4e86bc2189bfaaf9d162118b54a01523ed4eec625cdbe2f1e52c8",
+          "bytes": 2983795
+        },
+        {
+          "path": "wooden_crate_02/textures/wooden_crate_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_crate_02/wooden_crate_02_diff_2k.jpg",
+          "sha256": "e39ab2f122698069f4ee7d56f22624349eaf587dc9af51109d450f632d25f7ae",
+          "bytes": 2739157
+        },
+        {
+          "path": "wooden_crate_02/wooden_crate_02.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_crate_02/wooden_crate_02.bin",
+          "sha256": "e68e272641f704e5241e4108894f0b97363d511944db8b991a48787d0160ea5e",
+          "bytes": 150064
+        }
+      ]
+    },
+    {
+      "id": "wooden_barrels_01",
+      "source": "https://polyhaven.com/a/wooden_barrels_01",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "modifications": "No source file changes. Node extraction, placement and material sampling settings are stored in the trial scene.",
+      "files": [
+        {
+          "path": "wooden_barrels_01/wooden_barrels_01_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/wooden_barrels_01/wooden_barrels_01_2k.gltf",
+          "sha256": "6df3e8e0c056ba12b0f560ab464119e8e9c04f0b6da8dfe4faa55fb6ab3eeffe",
+          "bytes": 31017
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel01_diff_2k.jpg",
+          "sha256": "9712db80b6ce8e8afc85fa67855abef7261339cb5efc6d366e1ffd96476f7089",
+          "bytes": 2233903
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel02_diff_2k.jpg",
+          "sha256": "82ef7f7c95f46205d08bf1b357d73ceee0d41857c7c8e4bf1f5c50ce40372357",
+          "bytes": 2266264
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_pieces_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_pieces_diff_2k.jpg",
+          "sha256": "de4a266727e4c1beda7f4a2d5d508fffebd66419cfb77a3eef16d7ff1f490431",
+          "bytes": 2423770
+        },
+        {
+          "path": "wooden_barrels_01/wooden_barrels_01.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_barrels_01/wooden_barrels_01.bin",
+          "sha256": "7de8294b07ecb6bd57ea3542760fa45bbefc296a47dd044723eb599ffc56084f",
+          "bytes": 1243556
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel02_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel02_nor_gl_2k.jpg",
+          "sha256": "6b38d0c9be7ac930e688cf3d34e455bcc54ed39efa045406c4d43a8980531a56",
+          "bytes": 2065462
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_pieces_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_pieces_nor_gl_2k.jpg",
+          "sha256": "9b0a16897b4f8cefb427dff47591c8cfd8dba894b5e3027f600dd523a1636c88",
+          "bytes": 2293610
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel01_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel01_nor_gl_2k.jpg",
+          "sha256": "1688fe3dd19beef088ed5880bc4c5ff82ad3dcee468a94ef89a43ba01fbcccb0",
+          "bytes": 2012613
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel01_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel01_arm_2k.jpg",
+          "sha256": "f6b51c989a84179c63f04f63382019087ead88b55d28569df2879101c76cd730",
+          "bytes": 3030842
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_barrel02_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_barrel02_arm_2k.jpg",
+          "sha256": "35b90d35093550357db30f66ff92373c5d9dd2d4dad8290c0b7e1ee554422af8",
+          "bytes": 2998260
+        },
+        {
+          "path": "wooden_barrels_01/textures/wooden_barrels_01_pieces_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_barrels_01/wooden_barrels_01_pieces_arm_2k.jpg",
+          "sha256": "90685b98ab179dd7bb410563ccd7ace601a2f9a9a3bf09ec7d15f63f9b1de169",
+          "bytes": 3200774
+        }
+      ]
+    },
+    {
       "id": "cobblestone_floor_03",
       "source": "https://polyhaven.com/a/cobblestone_floor_03",
       "authors": {

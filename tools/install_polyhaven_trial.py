@@ -8,7 +8,7 @@ import subprocess
 import urllib.parse
 
 ROOT = Path(__file__).resolve().parents[1] / 'GodotProject/envart-pipline/envart/assets/polyhaven'
-MODELS = ['modular_fort_01', 'wooden_crate_01', 'wine_barrel_01', 'wooden_bucket_02', 'wooden_lantern_01', 'small_wooden_table_01', 'wooden_hammer_01']
+MODELS = ['modular_fort_01', 'wooden_crate_01', 'wine_barrel_01', 'wooden_bucket_02', 'wooden_lantern_01', 'small_wooden_table_01', 'wooden_hammer_01', 'fern_02', 'weed_plant_02', 'nettle_plant', 'wooden_crate_02', 'wooden_barrels_01']
 TEXTURES = ['cobblestone_floor_03']
 
 
