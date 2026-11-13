@@ -1,0 +1,18 @@
+17/17 original bodies verified against source whitebox. Original/ArtContent/Whitebox/World and both A/B root/content ancestor transforms all identity. A/B share same art_content.tscn. Whitebox, baseline, lit-01, lit-02 all have identical four camera transforms/FOV.
+Floor: transform, mesh dimensions, collision transform/dimensions/layers identical
+BackWall: transform, mesh dimensions, collision transform/dimensions/layers identical
+OcclusionWall: transform, mesh dimensions, collision transform/dimensions/layers identical
+OcclusionReturn: transform, mesh dimensions, collision transform/dimensions/layers identical
+DoorLeft: transform, mesh dimensions, collision transform/dimensions/layers identical
+DoorRight: transform, mesh dimensions, collision transform/dimensions/layers identical
+DoorLintel: transform, mesh dimensions, collision transform/dimensions/layers identical
+Ramp: transform, mesh dimensions, collision transform/dimensions/layers identical
+Landing: transform, mesh dimensions, collision transform/dimensions/layers identical
+Step1: transform, mesh dimensions, collision transform/dimensions/layers identical
+Step2: transform, mesh dimensions, collision transform/dimensions/layers identical
+Step3: transform, mesh dimensions, collision transform/dimensions/layers identical
+Step4: transform, mesh dimensions, collision transform/dimensions/layers identical
+JumpLow: transform, mesh dimensions, collision transform/dimensions/layers identical
+JumpMid: transform, mesh dimensions, collision transform/dimensions/layers identical
+JumpHigh: transform, mesh dimensions, collision transform/dimensions/layers identical
+SpawnPad: transform, mesh dimensions, collision transform/dimensions/layers identical

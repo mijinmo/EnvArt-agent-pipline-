@@ -1,0 +1,28 @@
+{
+  "status": "Frozen after root review; final refined scene art_lit.tscn equals pass 02; no further edits.",
+  "sha256": {
+    "source/whitebox.tscn": "a309dc9fa677d83b490c0223b8cdb62bba718db7ef1b7b812c4a7ebe43373d26",
+    "art_content.tscn": "19ba5b1f67fdfeb9e6481b31e8070200ba2d804b14ec34ef596075d3200d5360",
+    "whitebox_review.tscn": "f471a77f80863ec3ffd5248aea211497936ea33795448396df8e11b8c867f6e5",
+    "art_base.tscn": "f21e8f82187a366b96b9573478a3213fc6432b5ae5dccd4f4485283792f12fd0",
+    "art_lit_01.tscn": "66d6d6b3e1d752c0019dfb729cd4661d054b53c8f0ba839f85f44f3bc2d3dafa",
+    "art_lit_02.tscn": "29ed8feba5746dbed71a35937b2ed6c634598ee9142807501f1d460f7cdc0eb5",
+    "art_lit.tscn": "3b8742804b0b61a7f667c35d821360cd0033019620d670508af58f09ec1ca2d8",
+    "captures/whitebox/overall.png": "58eb31fdda39e20fc744e3df71f1962802778ae0dc372241b01ecf2ba4a02a0c",
+    "captures/whitebox/ramp.png": "1fa012ff42065e6deb0f126316362d5ea15104866dce45f420ad0797d8f0be93",
+    "captures/whitebox/door.png": "2eb56d1de2a9c77895261f0c1eac700808544abd79179e898c022c270ab76590",
+    "captures/whitebox/props.png": "43876b16ffe7db6de32177efb8d92efd503002ff061f2b318d51ff81439a643d",
+    "captures/art-lit-01/overall.png": "95f3b664e0c93d36f87458f75dda3211f37ec9cfede2e3d048f756107b3688b1",
+    "captures/art-lit-01/ramp.png": "b5704e133bcad556380281d354a8212ce9830a212e4da9d9404fafb3c0af475c",
+    "captures/art-lit-01/door.png": "7bc0783e1d7c89f964741746cba58a6e7f69bab1c97af8228eabc4d1add51137",
+    "captures/art-lit-01/props.png": "d1af8d9e821fb61de4866ecbc12a816c81805bdb08e78e5007eb438e4515c09e",
+    "captures/art-base/overall.png": "dd2f304afb6a3df1c985abe22d00079be194c0d3b462ffe7e694080d4ba74e16",
+    "captures/art-base/ramp.png": "5ccbf4f2bbd0e73584b2aeaed0f3d1965c4c8df301f5185760a37f020429b3d4",
+    "captures/art-base/door.png": "966b4d3debe06a671ba55a33021dabfdfc008904ca95af12eb0b43ae28a6b085",
+    "captures/art-base/props.png": "cf49978da9703862fcc38fcfc7ab90ea1aa6a3d93866392c0579d1b9698390aa",
+    "captures/art-lit-02/overall.png": "b0f00581114ac8ad110a1fe69f8d754b0cbd5087ab310b09849f14cb09d7d85e",
+    "captures/art-lit-02/ramp.png": "79f73f39cef76263fc25f7295fb4cf980258e83fe81218e20286cafb38457e5e",
+    "captures/art-lit-02/door.png": "4e8e5b73456f7e13a0b001ccd4add6f7ef2b1507175642a3efe54b249e5b93b7",
+    "captures/art-lit-02/props.png": "425a4e5245cc775d75968852908e2e700bb4e9957fe8b4620a6b1251705f7533"
+  }
+}

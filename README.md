@@ -16,7 +16,9 @@
 
 环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。见 [精简流程说明](docs/envart-pipeline-skill.html)。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
 
-新增 **游戏截图参考试跑**：旷野之息、Control、Dishonored、Firewatch 四个独立项目，围绕找素材、细节填充和风格统一做逐图反馈修订。直接查看 [原作参考 / 实机前后 / 三项能力评价 HTML](docs/game-reference-studies.html)，工程与来源见 [试验目录](experiments/game-reference-studies/README.md)。四组均未达到参考游戏完成度；这是评估记录，不是原测试场的默认替换版本。
+新增 **游戏截图参考试跑**：旷野之息、Control、Dishonored、Firewatch 四个独立项目，围绕找素材、细节填充和风格统一做逐图反馈修订，另补光影回顾评价。直接查看 [原作参考 / 实机前后 / 四项能力评价 HTML](docs/game-reference-studies.html)，工程与来源见 [试验目录](experiments/game-reference-studies/README.md)。四组均未达到参考游戏完成度；它们是自由布局评估，不是原测试场的默认替换版本，也未验证白盒约束下的表现。
+
+补充 **固定白盒与照明对照**：回到原测试场的门洞、坡道、台阶与跳台，使用同一套 Control 方向装配比较基础照明和专门修订的照明。查看 [原白盒 / 装配 / 灯光修订 HTML](docs/whitebox-lighting-study.html)，或导入 [独立试验工程](experiments/whitebox-lighting-study/project.godot)。白盒约束保持作为前提，光影作为第四项美术评价；结果保留明显的装配与参考贴合不足，不代表美术验收。
 
 ## 快速开始
 

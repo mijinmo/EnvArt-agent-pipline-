@@ -1,0 +1,41 @@
+extends SceneTree
+func _initialize():call_deferred("run")
+func run():
+ var original=load("res://source/whitebox.tscn").instantiate()
+ var art=load("res://art_content.tscn").instantiate()
+ print("Ambient enum: background=",Environment.AMBIENT_SOURCE_BG," disabled=",Environment.AMBIENT_SOURCE_DISABLED," color=",Environment.AMBIENT_SOURCE_COLOR," sky=",Environment.AMBIENT_SOURCE_SKY)
+ var results=[]
+ assert(art.transform.is_equal_approx(Transform3D.IDENTITY))
+ assert(art.get_node("Whitebox").transform.is_equal_approx(Transform3D.IDENTITY))
+ assert(art.get_node("Whitebox/World").transform.is_equal_approx(Transform3D.IDENTITY))
+ assert(original.transform.is_equal_approx(Transform3D.IDENTITY))
+ assert(original.get_node("World").transform.is_equal_approx(Transform3D.IDENTITY))
+ var a=original.get_node("World");var b=art.get_node("Whitebox/World")
+ assert(a.get_child_count()==17 and b.get_child_count()==17)
+ for body in a.get_children():
+  var other=b.get_node(NodePath(body.name))
+  assert(body.transform.is_equal_approx(other.transform))
+  assert(body.get_node("Mesh").transform.is_equal_approx(other.get_node("Mesh").transform))
+  assert(body.get_node("Mesh").mesh.size.is_equal_approx(other.get_node("Mesh").mesh.size))
+  assert(body.get_node("Collision").transform.is_equal_approx(other.get_node("Collision").transform))
+  assert(body.get_node("Collision").shape.size.is_equal_approx(other.get_node("Collision").shape.size))
+  assert(body.collision_layer==other.collision_layer and body.collision_mask==other.collision_mask)
+  results.append(str(body.name)+": transform, mesh dimensions, collision transform/dimensions/layers identical")
+ var base=load("res://art_base.tscn").instantiate();var lit=load("res://art_lit.tscn").instantiate()
+ assert(base.get_child(0).scene_file_path=="res://art_content.tscn" and lit.get_child(0).scene_file_path=="res://art_content.tscn")
+ assert(base.transform.is_equal_approx(Transform3D.IDENTITY) and lit.transform.is_equal_approx(Transform3D.IDENTITY))
+ assert(base.get_child(0).transform.is_equal_approx(Transform3D.IDENTITY) and lit.get_child(0).transform.is_equal_approx(Transform3D.IDENTITY))
+ for c in base.get_node("Cameras").get_children():
+  var d=lit.get_node("Cameras").get_node(NodePath(c.name))
+  assert(c.transform.is_equal_approx(d.transform) and c.fov==d.fov)
+ for variant in ["whitebox_review","art_lit_01","art_lit_02"]:
+  var v=load("res://"+variant+".tscn").instantiate()
+  for c in base.get_node("Cameras").get_children():
+   var d=v.get_node("Cameras").get_node(NodePath(c.name))
+   assert(c.transform.is_equal_approx(d.transform) and c.fov==d.fov)
+  v.free()
+ var f=FileAccess.open("res://constraint_check.txt",FileAccess.WRITE)
+ f.store_string("17/17 original bodies verified against source whitebox. Original/ArtContent/Whitebox/World and both A/B root/content ancestor transforms all identity. A/B share same art_content.tscn. Whitebox, baseline, lit-01, lit-02 all have identical four camera transforms/FOV.\n"+"\n".join(results))
+ original.free();art.free();base.free();lit.free()
+ print("CONSTRAINT_CHECK_OK")
+ quit()

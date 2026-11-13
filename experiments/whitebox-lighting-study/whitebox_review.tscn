@@ -1,0 +1,60 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="1_1wuup"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6duik"]
+sky_top_color = Color(0.19, 0.32, 0.47, 1)
+sky_horizon_color = Color(0.65, 0.74, 0.8, 1)
+ground_bottom_color = Color(0.12, 0.16, 0.22, 1)
+ground_horizon_color = Color(0.65, 0.74, 0.8, 1)
+
+[sub_resource type="Sky" id="Sky_ltlpr"]
+sky_material = SubResource("ProceduralSkyMaterial_6duik")
+
+[sub_resource type="Environment" id="Environment_1nsku"]
+background_mode = 2
+sky = SubResource("Sky_ltlpr")
+ambient_light_source = 3
+ambient_light_color = Color(0.65, 0.77, 0.9, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 2
+tonemap_mode = 2
+
+[node name="whitebox_review" type="Node3D" unique_id=1408058439]
+
+[node name="Whitebox" type="Node3D" parent="." unique_id=298401674 instance=ExtResource("1_1wuup")]
+
+[node name="Cameras" type="Node3D" parent="." unique_id=235248075]
+
+[node name="overall" type="Camera3D" parent="Cameras" unique_id=1220600443]
+transform = Transform3D(0.8, 0.2683282, -0.5366563, 0, 0.8944272, 0.44721365, 0.6, -0.35777092, 0.7155418, -18, 15, 21)
+current = true
+fov = 58.0
+far = 120.0
+
+[node name="door" type="Camera3D" parent="Cameras" unique_id=602722332]
+transform = Transform3D(0.99816847, 0.006368802, -0.060158882, 0, 0.9944428, 0.105278045, 0.060495064, -0.105085224, 0.9926215, -0.2, 1.65, -0.7)
+fov = 60.0
+far = 120.0
+
+[node name="ramp" type="Camera3D" parent="Cameras" unique_id=1958827378]
+transform = Transform3D(0.8320503, 0.16760589, -0.52877265, 0, 0.9532585, 0.30215585, 0.55470014, -0.25140887, 0.79315907, -10.2, 3.4, 2.8)
+fov = 56.0
+far = 120.0
+
+[node name="props" type="Camera3D" parent="Cameras" unique_id=2004718913]
+transform = Transform3D(0.6954214, 0.17755355, -0.69632167, 0, 0.9689946, 0.24708185, 0.7186022, -0.171826, 0.6738596, 5.7, 2, -4.6)
+fov = 58.0
+far = 120.0
+
+[node name="Lighting" type="Node3D" parent="." unique_id=1131277252]
+
+[node name="LabSun" type="DirectionalLight3D" parent="Lighting" unique_id=611301196]
+transform = Transform3D(0.8480481, 0.3938068, -0.35458517, 0, 0.66913056, 0.74314487, 0.52991927, -0.63022256, 0.5674549, 0, 0, 0)
+light_color = Color(1, 0.92, 0.8, 1)
+light_energy = 1.4
+shadow_enabled = true
+directional_shadow_max_distance = 70.0
+
+[node name="Environment" type="WorldEnvironment" parent="Lighting" unique_id=1697383036]
+environment = SubResource("Environment_1nsku")
