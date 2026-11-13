@@ -15,6 +15,8 @@ Keep each viewed image tied to its exact file/source; parallel image-return orde
 
 Respect an existing whitebox's routes, scale and required interaction envelopes. If starting empty, create only enough spatial structure and cameras to produce the environment. Pick one coherent reviewable slice before attempting a whole level or several styles. Do not silently substitute photorealism, low-poly, or retro for the requested direction.
 
+An isolated project does not imply an unconstrained layout. When the task supplies a whitebox, carry its geometry/constraints into the isolated project; retain a source snapshot and a same-view whitebox comparison. Preserve door clearances, ramp profiles, steps, jump surfaces and routes instead of moving them to fit convenient assets. Visible dressing must respect these spaces even when it has no collision. Treat constraint preservation as a prerequisite, separate from art-quality scores.
+
 ## Choose a coherent asset family
 
 Prefer existing downloadable models for the main architecture and visible props. First choose a compatible architectural kit, then a small supporting family for furnishings, objects and vegetation. Judge candidates by silhouette, scale, surface detail, palette and how they look together—not resolution, polygon count, or the number of available models alone.
@@ -35,6 +37,8 @@ Work from large forms toward supporting details:
 - When resizing vegetation, reassess its screen coverage as well as blade size. Smaller instances at unchanged positions can turn dense growth into sparse repeated dots; tune local density and gaps together.
 - Use a clear key light, readable fill and justified local sources. Fog separates distance; it should not conceal weak construction. Inspect material response under the scene's actual lighting.
 
+Review lighting as its own art dimension: focal hierarchy, believable source direction, shadow-side readability, contact, material response and depth across views. Enabling AO or choosing a dramatic tint does not establish good lighting. For a lighting-focused pass or evaluation, use [references/lighting-review.md](references/lighting-review.md).
+
 If Blender adaptation is materially needed, use the available Blender production workflow for that subtask. Do not add a Blender stage simply to satisfy a pipeline diagram.
 
 ## Iterate on real images
@@ -53,4 +57,4 @@ For Godot-specific assembly/capture pitfalls, consult [references/godot-delivery
 
 Provide the editable Godot project/scene, asset provenance, a small set of actual in-engine screenshots and short opening instructions. State remaining visual weaknesses candidly. Keep previous reviewed imagery for comparison when iterating; don't overwrite the only evidence. Follow the project's commit cadence without including caches or unrelated changes.
 
-When explicitly evaluating this skill, give an independent agent only this skill, the visual brief/references, an isolated empty project location, and authorized raw asset sources/cache. Do not hand it the old scene generator or completed environment to copy. Review its actual images, record observed success/failure, and refine only the guidance supported by that trial.
+When explicitly evaluating this skill, give an independent agent this skill, the visual brief/references, an isolated project location, any required source whitebox/constraints, and authorized raw asset sources/cache. An empty-layout study tests a different capability from dressing a fixed whitebox; label that distinction and do not use one as proof of the other. Do not hand it the old completed environment to copy unless adaptation is the task. Review its actual images, record observed success/failure, and refine only the guidance supported by that trial.
