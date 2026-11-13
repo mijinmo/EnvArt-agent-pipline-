@@ -10,11 +10,13 @@
 
 [三方向 HTML 同机位对比与教程](docs/direction-comparison.html) · [晴日局部样板说明](docs/local-asset-sample.html)。首轮三风格案例于 2026-11-12 未通过美术验收，仍保存在 `envart/envart_lab.tscn`，仅作历史技术试验。
 
-另有独立的 **Poly Haven 写实素材替换实验**：用石堡构件、PBR 木箱/酒桶/桌面道具和石铺地面观察近景差异，不改变三方向默认入口。打开 `envart/realism_trial/trial.tscn` 后按 **F6** 运行。仅完成局部尝试，墙体缩放与贴图密度仍需调整，尚未选定为正式方向。见 [写实素材实验 HTML 对比](docs/realism-trial.html)。
+另保留已停止方向的 **Poly Haven 写实素材替换实验**（历史记录，不再作为当前美术目标）：用石堡构件、PBR 木箱/酒桶/桌面道具和石铺地面观察近景差异，不改变三方向默认入口。打开 `envart/realism_trial/trial.tscn` 后按 **F6** 运行。只完成过局部尝试；用户已停止这一写实方向的探索。见 [写实素材实验 HTML 对比](docs/realism-trial.html)。
 
-写实实验另有一轮 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。最新一轮已换用 Poly Haven 植物与独立叶片遮罩，跳台货箱从 42 个减至 10 个，补入开箱、箱盖和破损桶板；建筑仍未达到写实预期。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
+同一已停止方向还保留 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。最新一轮已换用 Poly Haven 植物与独立叶片遮罩，跳台货箱从 42 个减至 10 个，补入开箱、箱盖和破损桶板；建筑仍未达到写实预期。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
 
 环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。见 [精简流程说明](docs/envart-pipeline-skill.html)。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
+
+新增 **游戏截图参考试跑**：旷野之息、Control、Dishonored、Firewatch 四个独立项目，围绕找素材、细节填充和风格统一做逐图反馈修订。直接查看 [原作参考 / 实机前后 / 三项能力评价 HTML](docs/game-reference-studies.html)，工程与来源见 [试验目录](experiments/game-reference-studies/README.md)。四组均未达到参考游戏完成度；这是评估记录，不是原测试场的默认替换版本。
 
 ## 快速开始
 
