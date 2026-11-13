@@ -11,6 +11,8 @@ Deliver an editable scene that reads as a coherent place from both the main view
 
 Read the user's references and actually view the images. Describe the intended scene in a few lines: setting, dominant forms, palette, material treatment, focal point, and a small activity that explains its props. Separate the desired visual standard from features present in the reference project. A reference with a player controller does not require implementing a controller.
 
+Keep each viewed image tied to its exact file/source; parallel image-return order is not a reliable identifier. Identify the few shapes and material qualities that distinguish the reference. Internal consistency alone does not establish reference fidelity, and a color grade cannot repair mismatched proportions or surface detail.
+
 Respect an existing whitebox's routes, scale and required interaction envelopes. If starting empty, create only enough spatial structure and cameras to produce the environment. Pick one coherent reviewable slice before attempting a whole level or several styles. Do not silently substitute photorealism, low-poly, or retro for the requested direction.
 
 ## Choose a coherent asset family
@@ -30,6 +32,7 @@ Work from large forms toward supporting details:
 - Build a few activity-based prop groups: e.g. repair bench with tools and worn parts, supply shelf with staged containers, gate with waiting deliveries. Use supporting surfaces and believable contact, with deliberate gaps and clear routes.
 - Add variation through function, grouping, orientation and selective wear. Repeating the same closed crate in a rectangular grid does not create richness. Keep stacking physically supported; random offsets alone are not composition.
 - Concentrate plants/debris where they could accumulate. Match their rendering style and leaf/object scale to the architecture. Use procedural work for missing terrain, distribution or simple adapters, not as a substitute for the main visible assets.
+- When resizing vegetation, reassess its screen coverage as well as blade size. Smaller instances at unchanged positions can turn dense growth into sparse repeated dots; tune local density and gaps together.
 - Use a clear key light, readable fill and justified local sources. Fog separates distance; it should not conceal weak construction. Inspect material response under the scene's actual lighting.
 
 If Blender adaptation is materially needed, use the available Blender production workflow for that subtask. Do not add a Blender stage simply to satisfy a pipeline diagram.
@@ -37,6 +40,8 @@ If Blender adaptation is materially needed, use the available Blender production
 ## Iterate on real images
 
 Get an in-engine main-view capture early. Keep a few stable views: overall/entrance, prop-group close-up, and ground/transition or background. Inspect the actual captures, identify the largest visible weakness, fix it, and compare the same view again. A console PASS cannot replace looking at the output. Fix unintended blown highlights and unsupported background geometry before adding finer decoration.
+
+Freeze a submitted review pass before further edits; write subsequent captures to a new pass directory. Label any reconstructed intermediate render explicitly instead of presenting it as untouched evidence.
 
 Ask of the images: Is the focal point legible? Do the assets belong together? Are the ground and transitions finished? Do props tell a plausible story? Are scale, contact, repetition and material detail convincing at the intended distance? Is the background subordinate? Do not call a result art-approved without the user's judgment.
 
