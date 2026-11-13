@@ -517,8 +517,8 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 16
 
-[node name="Art" type="Node3D" parent="." unique_id=2025560078 instance=ExtResource("11_m47gh")]
+[node name="Art" type="Node3D" parent="." unique_id=748860187 instance=ExtResource("11_m47gh")]
 
-[node name="Backdrop" type="Node3D" parent="." unique_id=1635925073 instance=ExtResource("12_x8w80")]
+[node name="Backdrop" type="Node3D" parent="." unique_id=2116532489 instance=ExtResource("12_x8w80")]
 
 [editable path="BaseLab"]

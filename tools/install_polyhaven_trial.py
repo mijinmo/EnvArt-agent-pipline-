@@ -14,7 +14,7 @@ TEXTURES = ['cobblestone_floor_03']
 
 def fetch(url, target):
     target.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(['curl', '-fLsS', '--retry', '3', '--max-time', '180', url, '-o', str(target)], check=True)
+    subprocess.run(['curl', '-fLsS', '--connect-timeout', '10', '--retry', '1', '--max-time', '45', url, '-o', str(target)], check=True, timeout=110)
 
 
 def api(endpoint):
@@ -32,6 +32,11 @@ def install(asset, model):
         gltf = files['gltf']['2k']['gltf']
         jobs[asset + '_2k.gltf'] = gltf
         jobs.update(gltf['include'])
+        # The public glTF variant references JPEG albedo without alpha.
+        # Preserve the separately published leaf cutout for the Godot material.
+        if asset in ['fern_02', 'weed_plant_02', 'nettle_plant']:
+            opacity = files['Alpha']['2k']['jpg']
+            jobs['textures/' + asset + '_alpha_2k.jpg'] = opacity
     else:
         for channel in ['Diffuse', 'nor_gl', 'arm']:
             f = files[channel]['2k']['jpg']

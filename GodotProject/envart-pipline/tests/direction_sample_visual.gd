@@ -69,6 +69,21 @@ func run() -> void:
 	player.teleport_to(Transform3D(Basis.IDENTITY,Vector3(-6,0.08,0.6)))
 	for i in 110: player.set_motion(Vector3.FORWARD,false,false); await physics_frame
 	player.clear_motion(); check(player.position.y>1.85 and player.position.z < -6,"ramp reaches landing")
+	if direction=="refined":
+		check(sample.get_node("Art/PlayableCargoStacks").get_child_count()==10,"cargo repetition reduced to ten cases")
+		var plants:=0
+		for n in sample.get_node("Art").find_children("*","Node3D",true,false):
+			var source_path: String=n.get_meta("asset_source","")
+			if "fern_02" in source_path or "weed_plant_02" in source_path or "nettle_plant" in source_path:
+				plants+=1
+				var mesh: MeshInstance3D=n.get_node("SourceMesh")
+				check(mesh.material_override is ShaderMaterial and mesh.material_override.get_shader_parameter("leaf_alpha") is Texture2D,"plant has separate alpha "+str(n.name))
+			if not source_path.is_empty():check(not "quaternius_nature" in source_path and not "Prop_Vine" in source_path,"no stylized foliage "+str(n.name))
+		check(plants>30,"PBR plant groups installed")
+		for data in [[Vector3(1,1.2,1),0.4],[Vector3(1,1.7,-1),0.9],[Vector3(3,2.2,-3),1.4]]:
+			player.teleport_to(Transform3D(Basis.IDENTITY,data[0]));player.clear_motion()
+			for i in 70:await physics_frame
+			check(absf(player.position.y-data[1])<0.1,"cargo landing height "+str(data[1]))
 	# Four existing camera modes remain available.
 	for mode in 4:
 		rig.set_mode(mode); await frames(2); check(rig.active_camera()!=null and rig.active_camera().current,"camera mode "+str(mode))

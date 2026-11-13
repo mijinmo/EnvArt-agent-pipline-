@@ -389,6 +389,12 @@
           "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/fern_02/fern_02_nor_gl_2k.jpg",
           "sha256": "dfe1ac4a428d21f7c134411500177d66b8dd800c8fec6f0040c50f44414a777b",
           "bytes": 1365615
+        },
+        {
+          "path": "fern_02/textures/fern_02_alpha_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/fern_02/fern_02_alpha_2k.jpg",
+          "sha256": "9882f62a38def23a8707584e413a9ef210bb5819d9c60179a003a250b3d06279",
+          "bytes": 578755
         }
       ]
     },
@@ -432,6 +438,12 @@
           "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/weed_plant_02/weed_plant_02.bin",
           "sha256": "2b77b91a881055365a56156e8a131277187f72b82c1d55806bb5b0a5053e5e9d",
           "bytes": 330884
+        },
+        {
+          "path": "weed_plant_02/textures/weed_plant_02_alpha_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/weed_plant_02/weed_plant_02_alpha_2k.jpg",
+          "sha256": "59d552e6e985809a564ff73630b76d39c662621b09dd56f356979431d1dd8fd6",
+          "bytes": 406271
         }
       ]
     },
@@ -475,6 +487,12 @@
           "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/nettle_plant/nettle_plant_arm_2k.jpg",
           "sha256": "94a5bcfdb6c00f3f44105e06eef9cc759e6826bf30bd3ef56c4991b18691d230",
           "bytes": 1566589
+        },
+        {
+          "path": "nettle_plant/textures/nettle_plant_alpha_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/nettle_plant/nettle_plant_alpha_2k.jpg",
+          "sha256": "b606b6140f7291f7aaf62289d99b7ffc9f9aa4f50effa07d001e4594055555cc",
+          "bytes": 646589
         }
       ]
     },

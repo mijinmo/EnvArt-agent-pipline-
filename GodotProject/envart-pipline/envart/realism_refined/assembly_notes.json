@@ -8,22 +8,25 @@
     "../assets/quaternius_village/manifest.json",
     "../assets/quaternius_nature/manifest.json"
   ],
-  "near_source_placements": 281,
-  "background_source_placements": 7,
+  "near_source_placements": 154,
+  "background_source_placements": 3,
   "procedural_wear_overlays": 6,
   "adaptations": [
     "Fort walls use repeated shorter modules, preserving facade proportions more closely. Thickness remains fitted to the whitebox.",
     "Gate and return-wall upper vertices compressed above source y=5.8; originals remain intact.",
-    "42 source crates fill the three original jump envelopes; gameplay collision is unchanged.",
-    "Original Quaternius leaf alpha retained, smaller overlapping vine clusters and muted shader color.",
     "PBR material tint/normal strength, ground stain overlays and warmer directional lighting tuned together.",
-    "Existing non-playable terrain mesh reused; background models have no added collision."
+    "Existing non-playable terrain mesh reused; background models have no added collision.",
+    "Replaced all stylized foliage with Poly Haven fern_02, weed_plant_02 and nettle_plant submeshes. Separate alpha maps explicitly sampled because supplied glTF albedo is JPEG.",
+    "Ten large crossed wooden_crate_02 cases replace 42 repeated small crates; original jump collider heights and central landing support are preserved. Upper rows rotate -8 or +11 degrees, with small visual overhang outside simplified collision.",
+    "Added an open case, a removed lid, broken barrel sections and staves. Cargo outside jump obstacles uses irregular positions and orientations.",
+    "Removed four stylized background trees; architecture and lighting otherwise stay as in iteration 2."
   ],
   "limits": [
-    "Close-up ivy and grass remain stylized.",
-    "Stone texture density still varies between source surfaces.",
-    "Cargo repetition remains visible.",
-    "No production performance budget or target-platform optimization."
+    "The overall scene still has an early-3D appearance; this is not a retro art-direction approval or achieved realism.",
+    "Architecture silhouettes, repeated stone surfaces, simple terrain and several older props remain unresolved.",
+    "Simplified jump collisions do not match decorative crate overhangs exactly.",
+    "No target-platform performance budget or production optimization."
   ],
-  "validation": "Godot 4.7.2 Metal Forward+, tests/direction_sample_visual.gd -- refined; 11 captures, original 17 collision shapes unchanged, door both ways, ramp, four camera modes, whitebox and backdrop toggles."
+  "validation": "Godot 4.7.2 Metal Forward+: tests/direction_sample_visual.gd -- refined PASS. Original 17 bodies, door both ways, ramp, four cameras, alpha textures on every plant, no stylized near foliage, ten jump crates and 0.4/0.9/1.4 m landing heights.",
+  "iteration": 3
 }
