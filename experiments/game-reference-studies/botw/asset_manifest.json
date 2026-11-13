@@ -1,0 +1,342 @@
+{
+  "study": "Sunlit Wayside Ruins",
+  "date": "2026-11-13",
+  "references_for_visual_study_only": [
+    {
+      "source": "https://elaine-delrosario.com/blog/botw-analysispt1",
+      "role": "sunlight, pale stone, broad proportions"
+    },
+    {
+      "source": "https://zeldawiki.wiki/wiki/File:BotW_Temple_of_Time_Storm.png",
+      "role": "ground detail distribution only"
+    }
+  ],
+  "assets": [
+    {
+      "id": "quaternius_ruins",
+      "author": "Quaternius",
+      "source": "https://quaternius.com/packs/ultimatemodularruins.html",
+      "distribution": "https://poly.pizza/m/F2LAK03B0r",
+      "download_url": "https://static.poly.pizza/fa6cf69d-a091-4eb7-b62e-56290d8b9097.glb",
+      "license": "CC0-1.0",
+      "acquisition": "new download 2026-11-13",
+      "local": "assets/ruins/ModularRuins.glb",
+      "modifications": "Individual named source meshes extracted from catalog; original source bases preserved; world scale placement and stone texture material overrides."
+    },
+    {
+      "id": "quaternius_nature_standard",
+      "author": "Quaternius",
+      "source": "https://quaternius.com/packs/stylizednaturemegakit.html",
+      "distribution": "https://opengameart.org/content/stylized-nature-megakit",
+      "license": "CC0-1.0",
+      "edition": "Standard/free subset only; paid engine projects/shaders excluded",
+      "acquisition": "authorized RAW cache; freshly source-verified 2026-11-13",
+      "archive_sha256": "298f6732b872e4cf7b30e6e7abf9641c7f6dc6b326df37ac089533ed7e3d58c9",
+      "local": "assets/nature",
+      "modifications": "Scale, alpha scissor and subdued material tint in editable scene only."
+    },
+    {
+      "id": "quaternius_village_standard",
+      "author": "Quaternius",
+      "source": "https://quaternius.com/packs/medievalvillagemegakit.html",
+      "license": "CC0-1.0",
+      "edition": "Standard/free subset",
+      "acquisition": "authorized RAW cache; source-verified",
+      "local": "assets/village",
+      "selected": [
+        "Prop_Vine1",
+        "Prop_Vine2"
+      ],
+      "modifications": "Placement and scale only; texture cutout material retained."
+    },
+    {
+      "id": "Rock030",
+      "author": "Lennart Demes / ambientCG",
+      "source": "https://ambientcg.com/a/Rock030",
+      "license": "CC0-1.0",
+      "download_url": "https://ambientcg.com/get?file=Rock030_1K-JPG.zip",
+      "acquisition": "new download 2026-11-13",
+      "local": "assets/ambientcg",
+      "maps_used": [
+        "Color",
+        "Roughness"
+      ],
+      "modifications": "Low-contrast gray world triplanar projection for stone; broad color modulation for soil. No displacement; source JPG files unchanged."
+    },
+    {
+      "id": "Ground037",
+      "author": "Lennart Demes / ambientCG",
+      "source": "https://ambientcg.com/a/Ground037",
+      "license": "CC0-1.0",
+      "download_url": "https://ambientcg.com/get?file=Ground037_1K-JPG.zip",
+      "acquisition": "new download 2026-11-13",
+      "local": "assets/ambientcg",
+      "maps_used": [
+        "Color"
+      ],
+      "modifications": "Low-contrast gray world triplanar projection for stone; broad color modulation for soil. No displacement; source JPG files unchanged."
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_AmbientOcclusion.jpg",
+      "bytes": 612112,
+      "sha256": "8afe189ae915888551076cb279f6282c84255e4b2bdb2c4ce8c1c891074245ef"
+    },
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_Color.jpg",
+      "bytes": 2187764,
+      "sha256": "d92bec8a35b9cb16ec79b421ca0f572a7400286eae109beafa266629ef49a6cf"
+    },
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_Displacement.jpg",
+      "bytes": 500481,
+      "sha256": "bc102168f5d014ce208ed5c1d9140c39513d29303e1b3436cb06c92c7780e419"
+    },
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_NormalDX.jpg",
+      "bytes": 2474498,
+      "sha256": "0e2d613d117d9231aa0aa61f39b19755f891b4ed1d1599a004cb018a8224e039"
+    },
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_NormalGL.jpg",
+      "bytes": 2474236,
+      "sha256": "ea59dbdcfa5bf2f28bdd4aa896d4e5f96c4cce5939100dcc6db4bbbcdebfe38d"
+    },
+    {
+      "path": "assets/ambientcg/Ground037_1K-JPG_Roughness.jpg",
+      "bytes": 694944,
+      "sha256": "3786b088e981aae562f06b6477972d379cffd09a5cc542ab42f9ffd94f9bcb0e"
+    },
+    {
+      "path": "assets/ambientcg/LICENSE.txt",
+      "bytes": 318,
+      "sha256": "5414cacbb139dd75c941a3583debcba99c75d75fec156d4181ee90a8a696a3c7"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_AmbientOcclusion.jpg",
+      "bytes": 568556,
+      "sha256": "405ab1943485560bc01cd0c6c10065195adf7ef9c554f9b24914c3311751dde6"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_Color.jpg",
+      "bytes": 1483352,
+      "sha256": "1dca8a336518ce0adca4b5cbe2ab30819c8769388f1c15278082a99f022c615a"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_Displacement.jpg",
+      "bytes": 348477,
+      "sha256": "7739ae7883e6f7600e2a87319e7eada73fb654241909f3da24ef301a10c5665b"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_NormalDX.jpg",
+      "bytes": 2526607,
+      "sha256": "9a2fb25d9a3365d751ad6b5772cc2e6a3960ac58702978327eba95a003bfe7ee"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_NormalGL.jpg",
+      "bytes": 2528233,
+      "sha256": "8fd1d22eb6c7b6e4a374196c0de791f724538b8b86eb9c7a946fec1f5834cb94"
+    },
+    {
+      "path": "assets/ambientcg/Rock030_1K-JPG_Roughness.jpg",
+      "bytes": 669875,
+      "sha256": "f37850f72994458994716d084683d80611528d1685264bde3071569e8ca53489"
+    },
+    {
+      "path": "assets/nature/Bark_NormalTree.png",
+      "bytes": 3894788,
+      "sha256": "f36e94fdd73255347325b998e02a0b2575fdf714b0315bfe5e8ff34bc8e13603"
+    },
+    {
+      "path": "assets/nature/Bark_NormalTree_Normal.png",
+      "bytes": 4384496,
+      "sha256": "852f6155404b8c39e100e41e26970e02a6a5c81b482d3726618dab28e3ad03a2"
+    },
+    {
+      "path": "assets/nature/Clover_1.bin",
+      "bytes": 12956,
+      "sha256": "788fabaffc3f8f2825ad88399bd4725d8bc397225d93d00926c3223fdee9516b"
+    },
+    {
+      "path": "assets/nature/Clover_1.gltf",
+      "bytes": 2074,
+      "sha256": "05fe48cdf1f3db879371a6ba0d843fcd407667b7680def5716c9f286efe0306b"
+    },
+    {
+      "path": "assets/nature/CommonTree_1.bin",
+      "bytes": 491576,
+      "sha256": "9dd689e84e1aa2f5b08db8def591254d582783c73737af54ba0d89b3e549c3ae"
+    },
+    {
+      "path": "assets/nature/CommonTree_1.gltf",
+      "bytes": 3869,
+      "sha256": "b51cdea6545edb51d102dd6c27caafe62aa75e3c328ac8f9039f4e7bfd690bfa"
+    },
+    {
+      "path": "assets/nature/CommonTree_3.bin",
+      "bytes": 296984,
+      "sha256": "24541f46fd9553e2389aba15575f2697009226e82118ed76868284114fd12b49"
+    },
+    {
+      "path": "assets/nature/CommonTree_3.gltf",
+      "bytes": 3864,
+      "sha256": "17c6537aa8042bb7255fbb501bf7aeb2b6db87c16766f794f9c37be3ce70c976"
+    },
+    {
+      "path": "assets/nature/Fern_1.bin",
+      "bytes": 11448,
+      "sha256": "5e92b87a27f81a69fe15347a533df3c77d567b48298dceeef43168ccb7c22853"
+    },
+    {
+      "path": "assets/nature/Fern_1.gltf",
+      "bytes": 2058,
+      "sha256": "d41915cffe9dbbde1ae88be381eb9c60f7caa2274511436cc78fe4de627468ab"
+    },
+    {
+      "path": "assets/nature/Flower_3_Group.bin",
+      "bytes": 27772,
+      "sha256": "5ab387dd3d6fe181df3af4eeac4df85533e4c27e77545ae39a61e0c2aaaab248"
+    },
+    {
+      "path": "assets/nature/Flower_3_Group.gltf",
+      "bytes": 3629,
+      "sha256": "4df1612371982c543f930d6b213967372e0d459622d7eff7fc2ed1ddbfaa3b6c"
+    },
+    {
+      "path": "assets/nature/Flower_4_Group.bin",
+      "bytes": 62220,
+      "sha256": "3ac30b4c9eaa5078a17c061aa29e2e9618cc9eb58cb6d5d2ab0c07fa0b851ae1"
+    },
+    {
+      "path": "assets/nature/Flower_4_Group.gltf",
+      "bytes": 3645,
+      "sha256": "69ead56b36b50f06a0cf18380797fce7434302e9b2da7bf68a85014b993c6134"
+    },
+    {
+      "path": "assets/nature/Flowers.png",
+      "bytes": 444609,
+      "sha256": "5c531f2329c241c625aafd6cb769de29f33b480ef2a16491c2489f3c68e62a6a"
+    },
+    {
+      "path": "assets/nature/Grass.png",
+      "bytes": 33605,
+      "sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd"
+    },
+    {
+      "path": "assets/nature/Grass_Common_Short.bin",
+      "bytes": 7052,
+      "sha256": "7a0f0f7a9ac39cfa4b303bac03a6594f43e48d873b73553fa06a79e4df1271e9"
+    },
+    {
+      "path": "assets/nature/Grass_Common_Short.gltf",
+      "bytes": 2023,
+      "sha256": "6957b50622c9e26e7296c1b47ea8653bc0d957e0a547de444e2ed96f0075a21a"
+    },
+    {
+      "path": "assets/nature/Grass_Wispy_Short.bin",
+      "bytes": 25324,
+      "sha256": "c38f46e5a66ed3917fd45104effb914228d43d3724f4659416e1533dcd71776d"
+    },
+    {
+      "path": "assets/nature/Grass_Wispy_Short.gltf",
+      "bytes": 2025,
+      "sha256": "3c1d3bdd332420e070abde72d73611d1f13acfbe027e26b2fb943f9bcbd6b1c5"
+    },
+    {
+      "path": "assets/nature/Leaves.png",
+      "bytes": 2586432,
+      "sha256": "23248cebe28a24e78add32db3c2ee2f4d7b9219e9d2467279722f0197a7b6bd5"
+    },
+    {
+      "path": "assets/nature/Leaves_NormalTree_C.png",
+      "bytes": 158796,
+      "sha256": "998612bdf0b76a22f5f54d65cd7a457815d2842d89653fa4348a4ebb42933ad3"
+    },
+    {
+      "path": "assets/nature/License_Standard.txt",
+      "bytes": 852,
+      "sha256": "120710e542c3ebaf83856c4eb55b4a1e680593b39302eba7fdc5d942dfe78c58"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_1.bin",
+      "bytes": 13284,
+      "sha256": "ea79527d4c2b3bdb7a28bf589bf0c1fd96d192a4d0738636753911dd58681e99"
+    },
+    {
+      "path": "assets/nature/Rock_Medium_1.gltf",
+      "bytes": 1831,
+      "sha256": "5d1ab1fa03218f4a908728ed0eabe6486344a7e4f510b0d3d6f837fd1d011bd8"
+    },
+    {
+      "path": "assets/nature/Rocks_Diffuse.png",
+      "bytes": 2517398,
+      "sha256": "b813696df6081f469a127092eb0ce45cc39d56f3ccc0699152bfcd3804810b48"
+    },
+    {
+      "path": "assets/ruins/LICENSE.txt",
+      "bytes": 292,
+      "sha256": "5e86df73f124f53cbd4273cadd009c0234fb564f1b1d61aa1497e5fd4731f14d"
+    },
+    {
+      "path": "assets/ruins/ModularRuins.glb",
+      "bytes": 7965364,
+      "sha256": "0f942354dd20b00b91d2ce9d1641da481fab553361139877cd23dcdc62cfaa55"
+    },
+    {
+      "path": "assets/ruins/ModularRuins_Bark_Texture.jpg",
+      "bytes": 240999,
+      "sha256": "d6fdb3cbf6df624bfe8e5d45fe7b5b1a05ec6d7b1fdb0fa4cc4774b4119bf017"
+    },
+    {
+      "path": "assets/ruins/ModularRuins_Leaf_Texture.png",
+      "bytes": 118749,
+      "sha256": "34649aec779adde617568fc89e6ed24277d2bc5b254f592cdf26627f29fe63e0"
+    },
+    {
+      "path": "assets/village/License_Standard.txt",
+      "bytes": 840,
+      "sha256": "ec6fd5004514cb0515a7dc1065f474644d31698861597b32e1745945ffec71de"
+    },
+    {
+      "path": "assets/village/Prop_Vine1.bin",
+      "bytes": 5580,
+      "sha256": "43970bd08ae75708cfa440706e1b4b6ec2164280ec804da6d92bf9e8ac854ece"
+    },
+    {
+      "path": "assets/village/Prop_Vine1.gltf",
+      "bytes": 1979,
+      "sha256": "5326ab98fef8a68b3b4d980c066d882b21e1d0489ccbc1228fd4b156d5f21ac1"
+    },
+    {
+      "path": "assets/village/Prop_Vine2.bin",
+      "bytes": 3088,
+      "sha256": "5589815dd2f594054e947fab94a4f120d4769463a795c9de1592f34788b18f2e"
+    },
+    {
+      "path": "assets/village/Prop_Vine2.gltf",
+      "bytes": 1978,
+      "sha256": "773e4763b072359d9b563a63de6fd9b6e79271f145b4e1fabceb5d3481ce9e0f"
+    },
+    {
+      "path": "assets/village/T_VineLeaf_png.png",
+      "bytes": 162432,
+      "sha256": "8c80a9835d29cf7b1360ca46c2a96cedc0bfffee59f09db892f64db6825e3188"
+    }
+  ],
+  "custom_geometry": "Continuous supporting terrain only; primary visible models are downloaded assets.",
+  "renderer": "Godot 4.7.2 Metal Forward+",
+  "not_art_approved": true,
+  "archive_hashes": {
+    "rock": "2fd0bc2d214e2487c19062ed0798a85dd135b41cfc12bbaed42d5acae238f989",
+    "ground": "4e69db2b7251b1736fa70fe6fe4ab80d64bd220117dd5dd4c7caaead51c2574e"
+  },
+  "captures": {
+    "round-01": "untouched original",
+    "round-02": "rerendered intermediate from original parameter set",
+    "round-03": "frozen final; root second visual feedback"
+  },
+  "technical_limitations": [
+    "Graphical capture succeeds; Godot reports resource/RID cleanup warnings on shutdown."
+  ]
+}
