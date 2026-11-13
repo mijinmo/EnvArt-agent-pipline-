@@ -1,0 +1,154 @@
+{
+  "scene": "Records Annex — independent Control visual study",
+  "engine": "Godot 4.7.2 / Metal Forward+",
+  "reference_only": [
+    {
+      "file": "control-3.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_949cf39deee737fec3aadff903ec5311dd22bdab.1920x1080.jpg?t=1781607969",
+      "rights": "Remedy Entertainment / 505 Games; research reference only, not used as texture"
+    },
+    {
+      "file": "control-4.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.1920x1080.jpg?t=1781607969",
+      "rights": "Remedy Entertainment / 505 Games; research reference only, not used as texture"
+    }
+  ],
+  "assets": [
+    {
+      "id": "metal_office_desk",
+      "source": "https://polyhaven.com/a/metal_office_desk",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download 2026-11-13; no prior project assets",
+      "files": "assets/metal_office_desk/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Full public model, 1K selected; source offers higher resolutions free",
+      "changes": "Godot placement, uniform size calibration; original PBR and UV retained"
+    },
+    {
+      "id": "desk_lamp_arm_01",
+      "source": "https://polyhaven.com/a/desk_lamp_arm_01",
+      "authors": {
+        "Yann Kervran": "Rigging",
+        "Kuutti Siitonen": "Modeling & texturing"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download 2026-11-13; no prior project assets",
+      "files": "assets/desk_lamp_arm_01/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Full public model, 1K selected; source offers higher resolutions free",
+      "changes": "Godot placement, uniform size calibration; original PBR and UV retained"
+    },
+    {
+      "id": "mid_century_lounge_chair",
+      "source": "https://polyhaven.com/a/mid_century_lounge_chair",
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download 2026-11-13; no prior project assets",
+      "files": "assets/mid_century_lounge_chair/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Full public model, 1K selected; source offers higher resolutions free",
+      "changes": "Godot placement, uniform size calibration; original PBR and UV retained"
+    },
+    {
+      "id": "concrete_panels",
+      "source": "https://polyhaven.com/a/concrete_panels",
+      "author": "Amal Kumar",
+      "license": "CC0-1.0",
+      "acquisition": "New download",
+      "files": [
+        "assets/concrete/Diffuse.jpg",
+        "assets/concrete/nor_gl.jpg",
+        "assets/concrete/Rough.jpg"
+      ],
+      "changes": "Triplanar 0.34 repeats/m on structural shell; muted albedo, reduced normal strength; floor variant darkened and polished",
+      "status": "round-01 only, visually rejected; retained for before-scene reproducibility"
+    },
+    {
+      "id": "3TD Office Starter Pack",
+      "source": "https://opengameart.org/content/3td-office-starter-pack",
+      "download": "https://opengameart.org/sites/default/files/3TD_Office%20Starter.zip",
+      "author": "Ron Kapaun / 3TD Studios",
+      "license": "CC0-1.0",
+      "license_file": "licenses/3TD_CC0_License_EULA.pdf",
+      "acquisition": "New download",
+      "selected": [
+        "OfficeFileCabinet_01",
+        "OfficeDivider_02"
+      ],
+      "free_scope": "Complete 5.2MB starter zip: 10 office models and textures; not paid expansion",
+      "changes": "Repaired legacy absolute image paths; converted DAE to GLB with trimesh/pycollada; removed collision dummy mesh; Z-up to Y-up and divider long-axis correction; bottom-center anchor and uniform scaling"
+    },
+    {
+      "id": "binder_notebook",
+      "source": "https://polyhaven.com/a/binder_notebook",
+      "authors": {
+        "DaDrood": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download during round-02 after visual review",
+      "files": "assets/binder_notebook/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Complete public model; 1K textures chosen",
+      "changes": "Uniform scale and placement only"
+    },
+    {
+      "id": "cardboard_box_01",
+      "source": "https://polyhaven.com/a/cardboard_box_01",
+      "authors": {
+        "Rahul Chaudhary": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download during round-02 after visual review",
+      "files": "assets/cardboard_box_01/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Complete public model; 1K textures chosen",
+      "changes": "Uniform scale and placement only"
+    },
+    {
+      "id": "vintage_radio_transceiver",
+      "source": "https://polyhaven.com/a/vintage_radio_transceiver",
+      "authors": {
+        "Mateusz Sadek": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download during round-02 after visual review",
+      "files": "assets/vintage_radio_transceiver/*.gltf + .bin + textures/*1k.jpg",
+      "free_scope": "Complete public model; 1K textures chosen",
+      "changes": "Uniform scale and placement only"
+    },
+    {
+      "id": "concrete_wall_009",
+      "source": "https://polyhaven.com/a/concrete_wall_009",
+      "authors": "Charlotte Baglioni",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download during round-02 after visual review",
+      "files": "assets/concrete_wall_009/{Diffuse,nor_gl,Rough}.jpg",
+      "free_scope": "All resolutions free; actual 2K maps selected",
+      "changes": "Wall triplanar 0.27 repeats/m, reduced normal, roughness fixed to .94 after visual QA; floor separate map family, 0.33 repeats/m, reduced normal and .4 roughness"
+    },
+    {
+      "id": "concrete_floor_worn_001",
+      "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+      "authors": "Dimitrios Savva / Rico Cilliers",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "acquisition": "New download during round-02 after visual review",
+      "files": "assets/concrete_floor_worn_001/{Diffuse,nor_gl,Rough}.jpg",
+      "free_scope": "All resolutions free; actual 2K maps selected",
+      "changes": "Wall triplanar 0.27 repeats/m, reduced normal, roughness fixed to .94 after visual QA; floor separate map family, 0.33 repeats/m, reduced normal and .4 roughness"
+    }
+  ],
+  "authored_gap_fill": [
+    "Concrete shell and portal (no suitable verified brutalist architectural kit found in timebox)",
+    "Fluorescent housing, rods, service box, conduit",
+    "Queue posts and safety threshold",
+    "Typography, paperwork and simple office accessories"
+  ]
+}
