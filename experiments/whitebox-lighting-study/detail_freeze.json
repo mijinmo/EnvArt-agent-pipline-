@@ -1,0 +1,15 @@
+{
+  "scene": "interior_detailed.tscn",
+  "capture": "captures/detail-01",
+  "baseline": "interior_freeze.json",
+  "review": "Three fixed-camera images visually reviewed; pending user approval.",
+  "constraints": "17 original bodies retain transforms, mesh sizes and collision shapes; room/props/door camera transforms and FOV match interior.tscn.",
+  "sha256": {
+    "interior_detailed.tscn": "d373fefb24acb64a5f54435660fa7eb0f826040e0f89eab0e738941b1890e2f1",
+    "concrete_detail.gdshader": "8a498e604abfd6db1544e8b0dc0f2a813c79c70af29e632bf83cefc3ee9be807",
+    "refine_interior.gd": "ea6c6c5f5bb1abd9fac31170472e2d3759022a6587b86820523936751880a69e",
+    "captures/detail-01/room.png": "1243c4f1d6720c98ac806f7901204cc761bc13d1268d570f887e9f7617d03106",
+    "captures/detail-01/props.png": "b774dde48be93246c17b831a99f51b461ad43bc93640699619434a3c4d0ff383",
+    "captures/detail-01/door.png": "c554fd293e98dc4de6004b006b41aebbfaafc0cffde39d78b377196e1ca8421c"
+  }
+}

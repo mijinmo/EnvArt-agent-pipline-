@@ -22,7 +22,9 @@
 
 ## 快速开始
 
-2026-11-14 新增 [Control 室内局部实机对比](docs/control-interior.html)：连续混凝土墙面、顶棚与玻璃天窗、办公照明。导入 [独立试验工程](experiments/whitebox-lighting-study/project.godot) 按 F5 查看；此工程默认入口已切换到 `interior.tscn`，原主工程入口仍如下。
+2026-11-14 新增 [Control 室内局部实机对比](docs/control-interior.html)：连续混凝土墙面、顶棚与玻璃天窗、办公照明。导入 [独立试验工程](experiments/whitebox-lighting-study/project.godot) 按 F5 查看；初稿保存在 `interior.tscn`，原主工程入口仍如下。
+
+2026-11-15 新增 [Control 局部细节同机位对照](docs/control-interior-detail.html)：恢复混凝土表面细节，补充真实货架、交接车与档案道具，调整冷暖工作照明。独立试验工程 F5 默认打开 `interior_detailed.tscn`；保留上一版场景和截图，未扩展全场。
 
 提交新白盒给 agent 前，按 [白盒输入说明](skills/godot-envart/references/whitebox-input.md) 明确室内、室外或半开放区域，以及顶棚、围护、采光开口与允许补建的范围；缺少屋顶不等于室外。主要墙面须按参考检查整面墙的重复图案与分格尺度，不能仅因素材叫“混凝土”就判定合适。
 

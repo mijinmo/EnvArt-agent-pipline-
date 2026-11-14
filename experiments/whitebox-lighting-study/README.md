@@ -1,8 +1,24 @@
 # Whitebox records-transfer lighting study
 
-## 2026-11-14 室内局部修订（当前 F5 入口）
+## 2026-11-15 局部细节修订（当前 F5 入口）
 
-F5 现在打开 `interior.tscn`：净高 5.5 m 的室内围护、带玻璃的 3×5 m 顶部采光口、带吊杆的办公灯、桌面暖光、连续混凝土表面与档案告示。打开 `interior_before.tscn` 按 F6 可看同相机的旧开放场景。`Cameras` 下的 `room`、`props`、`door` 可在编辑器预览。
+F5 打开 `interior_detailed.tscn`：复用混凝土扫描贴图恢复细微色差、粗糙度和法线细节；新增真实货架、交接车与便笺，补齐待处理档案组合；调整冷色天光与暖色工作灯。仍只完成原室内局部。查看 [三个同机位实机对照](../../docs/control-interior-detail.html)。
+
+打开 `interior.tscn` 按 F6 查看上一版；三台相机 room、props、door 的变换与 FOV 一致。新截图冻结在 `captures/detail-01/`，旧 `captures/interior-glazed/` 未覆盖。素材来源见 `detail_manifest.json`，冻结与约束核对见 `detail_freeze.json`。
+
+新增 props 在 `ArtContent/Art_Added`，灯光在 `Lighting`，墙面材质使用 `concrete_detail.gdshader`。可直接编辑保存场景，无需运行构建脚本。`refine_interior.gd` 是可选重建工具，会从 `interior.tscn` 生成并覆盖 `interior_detailed.tscn`；重建前另存手工改动。
+
+复现本轮出图时使用新目录名，避免覆盖冻结图片：
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot --path /path/to/this/project --rendering-method forward_plus --rendering-driver metal --script res://capture.gd -- interior_detailed detail-next
+```
+
+柜体侧面与建筑细部仍较简化，未达到 Control 完成度。新增道具没有追加碰撞，反弹光为手工近似。本轮只检查导入、实际出图、固定机位和原白盒保留；没有增加功能验证套件。
+
+## 2026-11-14 室内初稿（保留对照）
+
+上一版 `interior.tscn` 包含：净高 5.5 m 的室内围护、带玻璃的 3×5 m 顶部采光口、带吊杆的办公灯、桌面暖光、连续混凝土表面与档案告示。打开 `interior_before.tscn` 按 F6 可看同相机的旧开放场景。`Cameras` 下的 `room`、`props`、`door` 可在编辑器预览。
 
 原 17 个白盒几何与碰撞保留，新增顶棚、墙体上部和外围围护；主要完成墙边办公区与门洞，其他测试场区域仍未完成美术。新增围护目前用于视觉样板，未新增玩法或碰撞系统。图文对照见 [室内修订报告](../../docs/control-interior.html)。
 
