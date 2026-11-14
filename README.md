@@ -22,6 +22,8 @@
 
 ## 快速开始
 
+提交新白盒给 agent 前，按 [白盒输入说明](skills/godot-envart/references/whitebox-input.md) 明确室内、室外或半开放区域，以及顶棚、围护、采光开口与允许补建的范围；缺少屋顶不等于室外。主要墙面须按参考检查整面墙的重复图案与分格尺度，不能仅因素材叫“混凝土”就判定合适。
+
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
 2. 等待首次资源导入完成，按 **F5** 运行对比入口 `envart/direction_studies/comparison.tscn`。
 3. 点击画面捕获鼠标，按 **Esc** 释放。也可以直接按 **4** 进入轨迹视角，再按 **P** 播放。

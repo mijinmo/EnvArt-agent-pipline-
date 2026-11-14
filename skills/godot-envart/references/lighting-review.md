@@ -2,6 +2,8 @@
 
 Use for a dedicated lighting iteration or capability evaluation. Judge the rendered image, not the number of lights or enabled effects.
 
+Start from the established indoor/outdoor/semi-open brief and actual enclosure. An interior reference needs the intended ceiling, boundaries and openings accounted for; open-sky lighting on a roofless test layout cannot validate matching that interior. If adding a missing enclosure is authorized, establish it before freezing the lighting comparison and include it in both A/B scenes.
+
 ## Look for visible evidence
 
 - **Hierarchy and navigation:** key activity, threshold and path are legible; brightest areas support the intended focus. A clear silhouette is useful, but crushing every shadow is not depth.

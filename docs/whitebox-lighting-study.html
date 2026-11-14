@@ -12,6 +12,7 @@
 <nav><a href="#comparison">同机位三状态</a><a href="#review">画面评价</a><a href="#constraints">白盒约束</a><a href="#use">打开工程</a><a href="game-reference-studies.html">前四组试跑</a></nav>
 <p class="note">这是一次受约束的适配与照明试验，不是新的找素材能力测试，也不是完成的 Control 场景。素材沿用之前已验证许可的 Control 小样；原主工程与原白盒没有被替换。</p>
 <h2>对照怎么做</h2>
+<p class="note"><strong>2026-11-14 用户反馈：</strong>墙面重复纹样与规则分格仍明显，不符合本次 Control 参考要求的连续大体块观感。另一个输入缺口是未先明确室内/室外意图：agent 将无顶棚白盒解释为开放设施。这组结果可观察同装配下的照明变化，不能验证室内参考的空间与采光还原。原图保留，墙面与围护尚未修复；后续先按 <a href="envart-pipeline-skill.html">输入说明</a> 确定空间类型。</p>
 <p>独立 agent 接收原 <code>controller_lab.tscn</code> 的 17 个静态几何体、参考截图和已有原始素材。基础版与照明版共用 <code>art_content.tscn</code>，固定几何、道具位置、材质（含自发光）、四个相机和截图参数。只改变灯光、天空、环境与反射。照明第二轮包含主 agent 看图后的反馈。</p>
 <table><tr><th>状态</th><th>用途</th></tr><tr><td>原白盒</td><td>保留原几何与基础照明，核对门洞、坡道、高差和布局。</td></tr><tr><td>A · 装配 + 基础照明</td><td>真实素材与表面处理已加入，使用原测试场的太阳与环境光参数。</td></tr><tr><td>B · 同装配 + 照明修订</td><td>在同一装配上做局部光、填充、阴影和反射调整。不是通过改变材质制造前后差异。</td></tr></table>
 <p>这组 A/B 能观察照明的独立影响。它与此前自由布局的 Control 场景不是严格对照：布局、装配范围和构图均不同，不能据此量化“有白盒损失多少质量”。</p>

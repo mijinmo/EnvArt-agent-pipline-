@@ -9,6 +9,8 @@ Deliver an editable scene that reads as a coherent place from both the main view
 
 ## Establish the visual target
 
+Establish whether each work area is indoor, outdoor or semi-open before choosing architecture or lighting. Record intended enclosure, ceiling height/open sky, daylight openings and permitted shell additions; an omitted whitebox roof does not establish an outdoor setting. Use explicit brief/reference evidence, and ask a focused clarification when enclosure remains ambiguous rather than silently converting an interior reference into an outdoor yard. Use [references/whitebox-input.md](references/whitebox-input.md) when preparing a whitebox handoff.
+
 Read the user's references and actually view the images. Describe the intended scene in a few lines: setting, dominant forms, palette, material treatment, focal point, and a small activity that explains its props. Separate the desired visual standard from features present in the reference project. A reference with a player controller does not require implementing a controller.
 
 Keep each viewed image tied to its exact file/source; parallel image-return order is not a reliable identifier. Identify the few shapes and material qualities that distinguish the reference. Internal consistency alone does not establish reference fidelity, and a color grade cannot repair mismatched proportions or surface detail.
@@ -26,6 +28,8 @@ Verify the actual downloadable/free contents and commercial-use permission at th
 Before dressing the scene, inspect a few representative assets in Godot: dimensions and pivot, useful submeshes, UV/material response, transparency, and normals. Downloaded foliage may need a separate alpha map even if its glTF says MASK. Import success does not prove that its leaves look correct. For an entrance, distinguish an actual aperture from a decorative arch or recess.
 
 ## Assemble a place, not an asset catalog
+
+Inspect dominant surface candidates over a representative full wall at the intended scale and viewing distances. Seamless tiling can still reveal periodic stains, holes, normal/roughness patterns or panel grids. Match the reference's surface continuity and joint scale, not merely its material category. Where continuous concrete masses are required, reject conspicuous repeating panels; use a quieter compatible source with restrained nonperiodic variation if needed. Preserve only reference-supported construction joints. Do not hide repetition with darkness, extra grime or oversized UV scaling that destroys detail scale.
 
 Work from large forms toward supporting details:
 
