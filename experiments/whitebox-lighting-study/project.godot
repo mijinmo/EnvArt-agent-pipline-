@@ -1,7 +1,7 @@
 config_version=5
 [application]
 config/name="Whitebox Records Transfer"
-run/main_scene="res://art_lit.tscn"
+run/main_scene="res://interior.tscn"
 [display]
 window/size/viewport_width=1600
 window/size/viewport_height=1000
@@ -11,3 +11,7 @@ window/size/window_height_override=750
 renderer/rendering_method="forward_plus"
 rendering_device/driver.macos="metal"
 textures/default_filters/use_nearest_mipmap_filter=false
+
+anti_aliasing/quality/use_taa=true
+lights_and_shadows/positional_shadow/atlas_size=8192
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3

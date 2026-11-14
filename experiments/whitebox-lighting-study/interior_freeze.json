@@ -1,0 +1,14 @@
+{
+  "final_capture": "captures/interior-glazed",
+  "sha256": {
+    "interior.tscn": "a487af641f6236dd5ca0548dd7232617e935294f0f1624019f58c5c80f268ef7",
+    "interior_before.tscn": "a4521511941332a46ac38e50d1e7b750e51fe489e8bd8c04caf50fa501ebee60",
+    "continuous_concrete.gdshader": "a8471cbc5bb6a6d040ce69a506381a76654708364a3f04c22b9990801602fe70",
+    "captures/interior-before/room.png": "099b20c69b780c2f09b848af43bfbd9434fdfea121e0d2044980ccb5dc49198f",
+    "captures/interior-before/door.png": "998ccb1390901aeb97aa7abd561e6f105c33efee91e8db45a8ed74e5663abace",
+    "captures/interior-before/props.png": "9377eea6f514af57a35deeb7d8c687deb58d20b9bc7ca896f722a14d3da17b9b",
+    "captures/interior-glazed/room.png": "75dba6beec0ab3a614db960a2bbfd34f973fdf1944bdd76d1dc75cd35fac9263",
+    "captures/interior-glazed/door.png": "9801cceae5830eda998216b4b9016ade722a456c1fcb8536f094f231054a0f34",
+    "captures/interior-glazed/props.png": "b5c385a864aefb48338c5c440576f7c6821f804f6cb34265854a262bd7a0f6b5"
+  }
+}
