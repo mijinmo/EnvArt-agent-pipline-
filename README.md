@@ -173,6 +173,7 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 | [三方向 HTML 对比](docs/direction-comparison.html) | 真实素材重做、同机位图片切换、试玩和编辑方法 |
 | [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |
+| [rea-video 借鉴分析](docs/rea-video-envart-research.md) | 两项目对照、参考拆解、证据与复核闭环、轻量交付包及分阶段建议（未实施） |
 | [玩家控制器说明](docs/player-controller.md) | 操作、运动参数、组件接入与当前限制 |
 | [轨迹相机 HTML 教程](docs/rail-camera-guide.html) | Unity 概念对照、图文操作、路径编辑、动画和巡检练习 |
 | [轨迹相机方案调研](docs/camera-path-research.md) | 原生方案与 Phantom Camera 的能力比较及兼容性调查 |
