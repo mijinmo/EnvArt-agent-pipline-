@@ -1,5 +1,7 @@
 # Whitebox records-transfer lighting study
 
+> **开始阅读：[ENVIRONMENT.md](ENVIRONMENT.md)** — 当前范围、区域、机位、证据和未解决问题。当前入口是封闭室内 `interior_detailed.tscn`；`lighting_notes.md` 前半部分记录的是早期开放设施照明试验，不用于验收当前室内。
+
 ## 2026-11-15 局部细节修订（当前 F5 入口）
 
 F5 打开 `interior_detailed.tscn`：复用混凝土扫描贴图恢复细微色差、粗糙度和法线细节；新增真实货架、交接车与便笺，补齐待处理档案组合；调整冷色天光与暖色工作灯。仍只完成原室内局部。查看 [三个同机位实机对照](../../docs/control-interior-detail.html)。

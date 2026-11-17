@@ -1,5 +1,7 @@
 # Lighting comparison: baseline, pass 01 and pass 02
 
+> **范围提示（2026-11-17）**：本文件记录的是早期“开放设施”照明 A/B（`art_lit*`，四机位）。当前 `interior_detailed.tscn` 是封闭室内、三机位；这里的照明结论不能直接当作当前室内的验收依据。当前范围见 [ENVIRONMENT.md](ENVIRONMENT.md)。
+
 The intended hierarchy is the records desktop and doorway, with a cooler ramp landing/path cue and restrained open-sky fill. This is an open facility, not an enclosed office. No geometry was added to manufacture interior shadows.
 
 ## Fixed A/B conditions
