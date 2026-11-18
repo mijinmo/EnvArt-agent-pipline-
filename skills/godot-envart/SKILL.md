@@ -1,64 +1,70 @@
 ---
 name: godot-envart
-description: Build and art-direct asset-based Godot environments from a whitebox or visual brief, including source selection, scene dressing, lighting, and in-engine image review. Use for environment-art production and visual replication, not controller or gameplay-system development.
+description: Art-direct and build asset-based Godot environments from whiteboxes or visual briefs, including reference discovery, asset selection, local production, and in-engine visual iteration. Use for environment-art production and visual replication, not controller or gameplay-system development.
 ---
 
 # Godot environment art
 
-Deliver an editable scene that reads as a coherent place from both the main view and nearby inspection views. The output is **environment art**; importing models, counting props, and passing runtime tests are means, not acceptance criteria.
+Deliver an editable environment, supported by actual engine images. Treat reference selection, art direction, asset decisions, production and review as one connected workflow. Downloads, prop counts and technical passes do not establish art quality.
 
-## Establish the visual target
+## Enter at the right stage
 
-Establish whether each work area is indoor, outdoor or semi-open before choosing architecture or lighting. Record intended enclosure, ceiling height/open sky, daylight openings and permitted shell additions; an omitted whitebox roof does not establish an outdoor setting. Use explicit brief/reference evidence, and ask a focused clarification when enclosure remains ambiguous rather than silently converting an interior reference into an outdoor yard. Use [references/whitebox-input.md](references/whitebox-input.md) when preparing a whitebox handoff.
+Read the existing task entry (such as `ENVIRONMENT.md`), current scene and relevant evidence before acting. Recover user constraints, current work, open issues and the last reviewed pass. Do not restart discovery for a narrow edit unless its premise has failed. For a new job or a pipeline handoff, use [production-loop.md](references/production-loop.md) for stage outputs, return paths and record ownership.
 
-Read the user's references and actually view the images. Describe the intended scene in a few lines: setting, dominant forms, palette, material treatment, focal point, and a small activity that explains its props. Separate the desired visual standard from features present in the reference project. A reference with a player controller does not require implementing a controller.
+The working loop is:
 
-Keep each viewed image tied to its exact file/source; parallel image-return order is not a reliable identifier. Identify the few shapes and material qualities that distinguish the reference. Internal consistency alone does not establish reference fidelity, and a color grade cannot repair mismatched proportions or surface detail.
+**Scope → reference selection → art direction → asset auditions → local production → engine review → delivery and scoped reuse.**
 
-Respect an existing whitebox's routes, scale and required interaction envelopes. If starting empty, create only enough spatial structure and cameras to produce the environment. Pick one coherent reviewable slice before attempting a whole level or several styles. Do not silently substitute photorealism, low-poly, or retro for the requested direction.
+These are decisions and artifacts, not seven approval requests. Advance autonomously within the user's authorized scope. When evidence fails, return to the responsible stage instead of endlessly decorating an unsuitable scene. One agent can perform every role; no orchestration platform or multiple agents is required.
 
-An isolated project does not imply an unconstrained layout. When the task supplies a whitebox, carry its geometry/constraints into the isolated project; retain a source snapshot and a same-view whitebox comparison. Preserve door clearances, ramp profiles, steps, jump surfaces and routes instead of moving them to fit convenient assets. Visible dressing must respect these spaces even when it has no collision. Treat constraint preservation as a prerequisite, separate from art-quality scores.
+## 1. Establish the job
 
-## Choose a coherent asset family
+Identify the input scene, one reviewable slice, spatial type, expected player/viewing distances and permitted changes. Preserve the supplied whitebox's routes, clearances, ramps, steps, jump surfaces, collisions and required sightlines; visual-only dressing can still obstruct these. An empty project does not imply an unconstrained layout.
 
-Prefer existing downloadable models for the main architecture and visible props. First choose a compatible architectural kit, then a small supporting family for furnishings, objects and vegetation. Judge candidates by silhouette, scale, surface detail, palette and how they look together—not resolution, polygon count, or the number of available models alone.
+Resolve indoor/outdoor/semi-open intent, intended enclosure, openings and allowed shell additions before architecture or light-rig decisions. A missing whitebox roof does not imply outdoors. Read [whitebox-input.md](references/whitebox-input.md) when preparing that handoff. Reuse established answers; ask only for consequential missing decisions while continuing independent work.
 
-Verify the actual downloadable/free contents and commercial-use permission at the source. Record source URL, author, license, chosen files and modifications in a compact manifest; retain supplied licenses. Cache verified downloads. A failed download is not a reason to spend the whole task searching: use bounded timeouts and retries, then pick another suitable source or report the specific missing asset. Do not execute code bundled in asset archives.
+## 2. Find and qualify references
 
-Before dressing the scene, inspect a few representative assets in Godot: dimensions and pivot, useful submeshes, UV/material response, transparency, and normals. Downloaded foliage may need a separate alpha map even if its glTF says MASK. Import success does not prove that its leaves look correct. For an entrance, distinguish an actual aperture from a decorative arch or recess.
+Use [reference-selection.md](references/reference-selection.md) when finding or replacing references. Even user-provided imagery needs a statement of what it can establish; keep the user's intended direction while supplementing missing evidence.
 
-## Assemble a place, not an asset catalog
+Prefer legible in-game environments or relevant environment-artist breakdowns. A character key visual, battle explosion or dramatic promotional crop rarely supports architecture, material and dressing decisions. Select by visible environment evidence, not game fame, search rank or image resolution. Promotional origin alone neither qualifies nor disqualifies an image.
 
-Inspect dominant surface candidates over a representative full wall at the intended scale and viewing distances. Seamless tiling can still reveal periodic stains, holes, normal/roughness patterns or panel grids. Match the reference's surface continuity and joint scale, not merely its material category. Where continuous concrete masses are required, reject conspicuous repeating panels; use a quieter compatible source with restrained nonperiodic variation if needed. Preserve only reference-supported construction joints. Do not hide repetition with darkness, extra grime or oversized UV scaling that destroys detail scale.
+Keep exact image/source identifiers. Actually inspect each selected image, checking its identity when viewing batches. Label primary environment evidence, supplemental mood evidence and rejected candidates. If the current reference set cannot establish the work area's environment, repair it before deriving a style brief or replacing major assets.
 
-Work from large forms toward supporting details:
+## 3. Establish art direction
 
-- Establish complete visible ground, entrance/threshold, boundaries, changes of level, and a readable distant layer. Do not leave a gray floor beneath otherwise dressed architecture.
-- Preserve module proportions and texture density. Repeat appropriate-length pieces or adapt a specific asset instead of stretching a large building to fit a small opening.
-- Build a few activity-based prop groups: e.g. repair bench with tools and worn parts, supply shelf with staged containers, gate with waiting deliveries. Use supporting surfaces and believable contact, with deliberate gaps and clear routes.
-- Add variation through function, grouping, orientation and selective wear. Repeating the same closed crate in a rectangular grid does not create richness. Keep stacking physically supported; random offsets alone are not composition.
-- Concentrate plants/debris where they could accumulate. Match their rendering style and leaf/object scale to the architecture. Use procedural work for missing terrain, distribution or simple adapters, not as a substitute for the main visible assets.
-- When resizing vegetation, reassess its screen coverage as well as blade size. Smaller instances at unchanged positions can turn dense growth into sparse repeated dots; tune local density and gaps together.
-- Use a clear key light, readable fill and justified local sources. Fog separates distance; it should not conceal weak construction. Inspect material response under the scene's actual lighting.
+Read [art-direction.md](references/art-direction.md) for reference interpretation, asset compatibility and dressing decisions. Record a compact visual brief: dominant forms, surface/detail scale, material family, palette, density rhythm, activity, light sources and focal hierarchy. Tie important choices to particular reference regions.
 
-Review lighting as its own art dimension: focal hierarchy, believable source direction, shadow-side readability, contact, material response and depth across views. Enabling AO or choosing a dramatic tint does not establish good lighting. For a lighting-focused pass or evaluation, use [references/lighting-review.md](references/lighting-review.md).
+Keep user requirements, image observations and implementation hypotheses distinct. Separate permanent environment from characters, UI, combat effects and post-processing. Internal consistency and reference fidelity are separate judgments. Do not silently substitute retro, low-poly or generic realism for the chosen target.
 
-If Blender adaptation is materially needed, use the available Blender production workflow for that subtask. Do not add a Blender stage simply to satisfy a pipeline diagram.
+## 4. Audition an asset family
 
-## Iterate on real images
+Search suitable local/catalogue assets and external sources for the visible architecture and representative props. Cached convenience does not establish suitability. Verify actual downloadable/free contents, commercial-use and redistribution conditions; record sources, authors, chosen files and adaptations, and retain licenses. Use bounded download retries and move to a viable alternative rather than spending the task on one file.
 
-Get an in-engine main-view capture early. Keep a few stable views: overall/entrance, prop-group close-up, and ground/transition or background. Inspect the actual captures, identify the largest visible weakness, fix it, and compare the same view again. A console PASS cannot replace looking at the output. Fix unintended blown highlights and unsupported background geometry before adding finer decoration.
+Inspect representative imports for dimensions/pivot, useful variants, UV/PBR channels, alpha and normals. Compare a small number of plausible families in Godot at target scale and distance: main architectural/surface element plus adjacent props under readable light and the intended light direction. A full-wall sample must expose repeated stains, holes and normal/roughness patterns, not merely test texture seams.
 
-Freeze a submitted review pass before further edits; write subsequent captures to a new pass directory. Label any reconstructed intermediate render explicitly instead of presenting it as untouched evidence.
+Record which candidate fits the brief, what adaptation it needs and why alternatives fail. Wrong silhouette/proportion or surface language returns to selection; an import problem returns to adaptation. Lack of a suitable main asset is an explicit production gap, not permission to replace the scene with procedural boxes. Use Blender when a specific adaptation or missing asset warrants it, following the available Blender workflow.
 
-Ask of the images: Is the focal point legible? Do the assets belong together? Are the ground and transitions finished? Do props tell a plausible story? Are scale, contact, repetition and material detail convincing at the intended distance? Is the background subordinate? Do not call a result art-approved without the user's judgment.
+## 5. Produce one complete local slice
 
-Technical checking should be proportional: scene loads, required assets render, cameras can show the work. Check a collision or interaction only if this art change could break a user-required one. **Do not build controller suites, benchmark systems, exhaustive collision regressions, or complex review UI for a visual-only task.** Use a static inspection camera or a tiny fly camera when that is sufficient.
+Plan region/node ownership and dependencies before editing. Reuse the current saved scene; use an alternate scene or bounded changes for risky candidates. Do not run a builder that overwrites hand edits merely because it exists.
 
-For Godot-specific assembly/capture pitfalls, consult [references/godot-delivery.md](references/godot-delivery.md) only as needed.
+Establish architecture, ground, thresholds, boundaries and a working light rig early. Build activity-based prop groups with believable supports, scale and access; finish surface transitions and selective wear, then refine light and depth. Evaluate materials under actual lighting throughout production. Procedural work fills suitable gaps such as distribution or background terrain; it does not bypass main-asset selection.
 
-## Deliver and stop
+Work by region/shared resource, not independently per screenshot. Preserve module proportions and texture density. Vary function, state and grouping rather than grid-repeating boxes. When resizing vegetation, reassess coverage as well as blade scale. For a lighting-focused iteration read [lighting-review.md](references/lighting-review.md).
 
-Provide the editable Godot project/scene, asset provenance, a small set of actual in-engine screenshots and short opening instructions. State remaining visual weaknesses candidly. Keep previous reviewed imagery for comparison when iterating; don't overwrite the only evidence. Follow the project's commit cadence without including caches or unrelated changes.
+## 6. Review, diagnose, revise
 
-When explicitly evaluating this skill, give an independent agent this skill, the visual brief/references, an isolated project location, any required source whitebox/constraints, and authorized raw asset sources/cache. An empty-layout study tests a different capability from dressing a fixed whitebox; label that distinction and do not use one as proof of the other. Do not hand it the old completed environment to copy unless adaptation is the task. Review its actual images, record observed success/failure, and refine only the guidance supported by that trial.
+Save and reopen the scene before capture. Use stable overall, transition and close views as relevant, plus a nearby angle when contact, geometry or traversal visibility is uncertain. Freeze submitted passes and write new images to a new directory. Generated illustrations and retouched screenshots cannot prove an editable 3D result.
+
+Look at the images before inheriting prior agent conclusions. Review reference fidelity, asset-family consistency, detail/activity, and lighting; keep technical validity and user acceptance separate. Identify the few largest visual failures, record evidence and affected regions/cameras, and choose a return path using [production-loop.md](references/production-loop.md). Mark edits as awaiting visual review until new images have actually been inspected. If a revision adds complexity without improving the target, retain the better pass and change approach.
+
+Only validate importing, loading, actual rendering and constraints directly affected by the change. Do not create controllers, general regression suites, review UI or benchmarks for an art task. Consult [godot-delivery.md](references/godot-delivery.md) for concrete assembly/capture traps.
+
+## 7. Deliver and preserve useful decisions
+
+Provide the editable scene, actual same-view comparisons, asset provenance, opening instructions and unresolved weaknesses. Update the task entry and issue status together; do not claim user approval from agent review. Commit independent reviewable stages according to repository conventions, preserving unrelated changes.
+
+Carry forward asset-specific adaptations, accepted reference/asset choices and scoped user decisions. Recheck them when their source, reference or intended distance changes. Expand only within the requested scope; a successful hero view does not establish completion of the whole level.
+
+For an explicitly requested skill/model trial, keep reference inputs, whitebox constraints, raw asset access and work allowance comparable; record actual model and skill version when known. Separate first-pass results from feedback-assisted revisions. Do not supply the intended answer or old completed scene to an independent replication trial. Model availability is not evidence of better art; evaluate its selections and saved-engine images.
