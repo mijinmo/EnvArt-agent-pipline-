@@ -3,36 +3,83 @@
   "reviewer": "agent visual review",
   "scope": "Control records-transfer interior slice: current detail-01 pass, three fixed cameras.",
   "user_accepted": false,
-  "note": "Observations are tied to the listed images. They are not user art approval. Fix W-01/W-02 before adding more props.",
+  "note": "Historical visual issues remain open. Workflow migration adds reference qualification first; no new scene/capture or user acceptance. Observations, user constraints and proposed remedies are separate.",
   "references": [
     "../../docs/images/game-studies/references/control-3.jpg",
     "../../docs/images/game-studies/references/control-4.jpg"
   ],
   "issues": [
     {
+      "id": "REF-01",
+      "title": "Reference set needs readable environment-led views",
+      "priority": "P0",
+      "status": "open",
+      "regions": [
+        "R1",
+        "R2"
+      ],
+      "cameras": [
+        "room",
+        "props",
+        "door"
+      ],
+      "observed_in": [
+        "../../docs/images/game-studies/references/control-3.jpg",
+        "../../docs/images/game-studies/references/control-4.jpg"
+      ],
+      "observation": "Both current reference images feature large foreground characters and substantial combat effects. Some architecture and furniture are visible, but full room surfaces, transitions and stable lighting are poorly supported.",
+      "why_it_matters": "An inadequate input can produce confident but unsupported surface, prop-density and lighting requirements.",
+      "return_stage": "references",
+      "next_check": "Select complementary, source-identified Control interior environment views that expose the work area, dominant wall/floor and relevant transition. State what each view supports and what remains unknown; update the brief before committing new surface treatments.",
+      "avoid": "Do not turn promotional color effects into permanent lighting, or replace the requested direction merely to fit convenient references."
+    },
+    {
       "id": "W-01",
       "title": "Main wall lacks construction scale and readable surface variation",
       "priority": "P0",
       "status": "open",
-      "regions": ["R1"],
-      "cameras": ["room", "props"],
+      "regions": [
+        "R1"
+      ],
+      "cameras": [
+        "room",
+        "props",
+        "door"
+      ],
       "observed_in": [
         "captures/detail-01/props.png",
         "captures/detail-01/room.png"
       ],
-      "observation": "At props distance the main wall reads as a nearly uniform grey panel: no legible large-scale construction joints, edge treatment or low-frequency tonal variation. Against the detailed desk and chair it looks like flat painted board rather than a large concrete mass.",
-      "reference_note": "The Control references show large concrete masses with visible panel/construction breaks and surface variation. Their explosion light, debris and characters are not part of the architecture and must not be copied as permanent lighting or dressing.",
+      "observation": "Current props view contains fine mottling and tonal variation; the large wall still reads flatter and less materially specific than intended beside the detailed desk/chair. Adequacy needs clearer environment references, not an assumption that no texture exists.",
+      "reference_note": "Visible construction boundaries in the old combat references are partial evidence. User requires continuity and no conspicuous tiling; added joints remain an optional hypothesis, never a mandatory goal.",
       "why_it_matters": "This is the dominant visible architecture in the working view; no amount of extra props fixes a flat main surface.",
-      "next_check": "Compare 2-3 bounded wall treatments under the existing room/props light and cameras. The wall should read as large concrete masses with restrained, reference-supported joints and non-periodic variation at props distance.",
-      "avoid": "Do not hide repetition with darkness, extra grime or oversized UVs; do not restore a conspicuous repeating formwork/tie-hole grid (the earlier concrete_wall_009 failure)."
+      "next_check": "After REF-01, compare a few restrained full-wall treatments with a continuous-surface option at existing camera scale. Separate material/mapping/light causes and retain texture character without recurring motifs.",
+      "avoid": "Do not hide repetition with darkness, extra grime or oversized UVs; do not restore a conspicuous repeating formwork/tie-hole grid (the earlier concrete_wall_009 failure).",
+      "previous_assessment": {
+        "date": "2026-11-17",
+        "observation": "At props distance the main wall reads as a nearly uniform grey panel: no legible large-scale construction joints, edge treatment or low-frequency tonal variation. Against the detailed desk and chair it looks like flat painted board rather than a large concrete mass.",
+        "reference_note": "The Control references show large concrete masses with visible panel/construction breaks and surface variation. Their explosion light, debris and characters are not part of the architecture and must not be copied as permanent lighting or dressing.",
+        "next_check": "Compare 2-3 bounded wall treatments under the existing room/props light and cameras. The wall should read as large concrete masses with restrained, reference-supported joints and non-periodic variation at props distance."
+      },
+      "depends_on": [
+        "REF-01"
+      ],
+      "return_stage": "auditions_or_production"
     },
     {
       "id": "W-02",
       "title": "Floor reads as a uniform dark expanse",
       "priority": "P0",
       "status": "open",
-      "regions": ["R1", "R2"],
-      "cameras": ["room", "props", "door"],
+      "regions": [
+        "R1",
+        "R2"
+      ],
+      "cameras": [
+        "room",
+        "props",
+        "door"
+      ],
       "observed_in": [
         "captures/detail-01/room.png",
         "captures/detail-01/props.png",
@@ -41,60 +88,91 @@
       "observation": "Across all three cameras the floor is an even dark grey with almost no material scale, joints, subtle tonal variation or contact information beyond object shadows. In room.png the lower half becomes a large empty dark field.",
       "why_it_matters": "The floor occupies a large share of every view; without a finish it makes the dressed pocket look placed on a blank test surface.",
       "next_check": "Compare 1-2 floor treatments at room and props distance together with the wall sample. Check furniture and trolley contacts; keep original collision unchanged.",
-      "avoid": "Do not rely only on a darker colour or a strong specular sheen to suggest completion."
+      "avoid": "Do not rely only on a darker colour or a strong specular sheen to suggest completion.",
+      "depends_on": [
+        "REF-01"
+      ],
+      "return_stage": "auditions_or_production"
     },
     {
       "id": "W-03",
       "title": "Cabinet sides fall far below the furniture detail level",
       "priority": "P1",
       "status": "open",
-      "regions": ["R1"],
-      "cameras": ["props", "room"],
+      "regions": [
+        "R1"
+      ],
+      "cameras": [
+        "props",
+        "room"
+      ],
       "observed_in": [
         "captures/detail-01/props.png"
       ],
       "observation": "The filing cabinets left of the desk read as flat dark boxes: drawer fronts are shallow outlines and the large side faces have almost no construction, recess or material response. The desk and chair are visibly higher-detail imported assets, creating an obvious precision gap.",
       "why_it_matters": "The cabinets sit in the middle of the main activity group, so the mismatch is more visible than its screen area suggests.",
       "next_check": "Inspect the cabinet asset's submeshes and material response in Godot. Prefer a more suitable authorised asset; if adapting, add restrained side construction and drawer depth without changing the footprint or adding gameplay collision.",
-      "avoid": "Do not try to rescue a low-detail box with noise textures alone."
+      "avoid": "Do not try to rescue a low-detail box with noise textures alone.",
+      "depends_on": [
+        "REF-01"
+      ],
+      "return_stage": "auditions"
     },
     {
       "id": "W-04",
       "title": "Space beyond the doorway is an undressed dark rectangle",
       "priority": "P1",
       "status": "open",
-      "regions": ["R2"],
-      "cameras": ["door"],
+      "regions": [
+        "R2"
+      ],
+      "cameras": [
+        "door"
+      ],
       "observed_in": [
         "captures/detail-01/door.png"
       ],
       "observation": "The 1.2 x 2.3 m opening is legible, but beyond it the corridor is an even dark field with no floor transition, wall continuation or destination cue. The threshold band and jamb faces are flat, and the sign/room-number assembly reads as thin applied panels.",
       "why_it_matters": "An entrance should read as a transition between spaces; the current dark rectangle weakens the sense of a working records facility.",
       "next_check": "Dress only the visible slice beyond the opening: floor transition, wall continuation and one restrained destination or directional cue. Keep the aperture, clearance and routes unchanged; review with the door camera.",
-      "avoid": "Do not use a black plane to stand in for the next space, and do not narrow the protected opening."
+      "avoid": "Do not use a black plane to stand in for the next space, and do not narrow the protected opening.",
+      "return_stage": "production"
     },
     {
       "id": "W-05",
       "title": "Prop groups remain sparse and catalogue-like",
       "priority": "P2",
       "status": "open",
-      "regions": ["R1"],
-      "cameras": ["props", "room"],
+      "regions": [
+        "R1"
+      ],
+      "cameras": [
+        "props",
+        "room"
+      ],
       "observed_in": [
         "captures/detail-01/props.png"
       ],
       "observation": "The desk group is readable, but the shelf is sparse and evenly staged (single cartons, evenly spaced binders), and there is a large empty floor gap between the shelf/trolley and the desk. The room still reads as a few separate display groups rather than one working intake area.",
       "why_it_matters": "Density and grouping should come from the records-transfer activity, not from filling empty area.",
       "next_check": "Only after W-01/W-02: add function-specific states such as an intake queue, outgoing cartons and in-use paperwork with believable supports. Vary closure, orientation and grouping; keep routes clear.",
-      "avoid": "Do not grid-repeat the same closed carton or stuff every shelf to fake richness."
+      "avoid": "Do not grid-repeat the same closed carton or stuff every shelf to fake richness.",
+      "return_stage": "production"
     },
     {
       "id": "W-06",
       "title": "Lighting hierarchy and fixture attachments need another pass",
       "priority": "P2",
       "status": "open",
-      "regions": ["R1", "R2"],
-      "cameras": ["room", "props", "door"],
+      "regions": [
+        "R1",
+        "R2"
+      ],
+      "cameras": [
+        "room",
+        "props",
+        "door"
+      ],
       "observed_in": [
         "captures/detail-01/room.png",
         "captures/detail-01/props.png",
@@ -103,14 +181,21 @@
       "observation": "The warm desk pocket and cool room light are readable, but the main wall is broadly and evenly lit, the ceiling is very dark, the shelf casts a large graphic shadow, and the door header has a small bright hotspot. The suspended strip luminaire is held by very thin lines and its ceiling attachment is visually underdeveloped.",
       "why_it_matters": "Lighting should establish focus and believable sources; broad even fill flattens the wall sample that W-01 is trying to fix.",
       "next_check": "Revisit only after the wall/floor samples: adjust key, fill and practicals across all three cameras; give the luminaire and signs a credible attachment. Judge contact, shadow softness and material response in the images.",
-      "avoid": "Do not substitute a darker environment or stronger colour cast for source logic; do not apply conclusions from the earlier open-facility lighting trial to this enclosed room."
+      "avoid": "Do not substitute a darker environment or stronger colour cast for source logic; do not apply conclusions from the earlier open-facility lighting trial to this enclosed room.",
+      "depends_on": [
+        "REF-01"
+      ],
+      "return_stage": "production_lighting"
     },
     {
       "id": "W-07",
       "title": "Ramp, steps, jumps and the rest of the test field remain whitebox",
       "priority": "P3",
       "status": "deferred",
-      "regions": ["R3", "R4"],
+      "regions": [
+        "R3",
+        "R4"
+      ],
       "cameras": [],
       "observed_in": [
         "README.md",
@@ -119,7 +204,46 @@
       "observation": "Only the records office and doorway slice is dressed. The ramp, steps, jump platforms and the wider test floor retain test geometry or plain finishes.",
       "why_it_matters": "This is a deliberate slice, not a finished level; scope must stay explicit in any delivery or comparison image.",
       "next_check": "Out of scope for the next surface pass. Revisit only after the local slice is accepted and the user asks to extend.",
-      "avoid": "Do not present a cropped or close hero view as completion of the full test field."
+      "avoid": "Do not present a cropped or close hero view as completion of the full test field.",
+      "return_stage": "outside_active_scope"
+    }
+  ],
+  "updated": "2026-11-18",
+  "workflow": {
+    "protocol": "../../skills/godot-envart/references/production-loop.md",
+    "skill_revision": "ce9bf03",
+    "current_stage": "references",
+    "working_scene": "interior_detailed.tscn",
+    "selected_pass": "captures/detail-01",
+    "next_action": "Resolve REF-01 with environment-led references, refresh direction, then audition main surfaces with neighboring props.",
+    "user_constraints": [
+      "Indoor local slice; preserve existing whitebox and fixed views.",
+      "Continuous concrete without conspicuous tile motifs; improve concrete character, purposeful detail and lighting.",
+      "Reference discovery must prioritize readable environments, not character-centric or effect-obscured publicity."
+    ],
+    "production_changed": false,
+    "model_trial": "not run"
+  },
+  "reference_assessment": [
+    {
+      "id": "control-3",
+      "image": "../../docs/images/game-studies/references/control-3.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_949cf39deee737fec3aadff903ec5311dd22bdab.1920x1080.jpg?t=1781607969",
+      "source_verification": "Existing source record; not reverified online in this migration.",
+      "context": "Steam store screenshot depicting indoor combat; exact gameplay capture conditions not established.",
+      "role": "supplemental_partial_evidence",
+      "supports": "Visible large concrete masses, doorway and some furnishings.",
+      "limits": "Character, combat illumination and debris obscure environment; insufficient as the sole basis for construction, stable lighting or everyday dressing."
+    },
+    {
+      "id": "control-4",
+      "image": "../../docs/images/game-studies/references/control-4.jpg",
+      "source_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.1920x1080.jpg?t=1781607969",
+      "source_verification": "Existing source record; not reverified online in this migration.",
+      "context": "Steam store screenshot depicting indoor combat; exact gameplay capture conditions not established.",
+      "role": "supplemental_partial_evidence",
+      "supports": "Visible archive drawers, strip fixtures and partial concrete/floor surfaces.",
+      "limits": "Character, combat illumination and debris obscure environment; insufficient as the sole basis for construction, stable lighting or everyday dressing."
     }
   ]
 }

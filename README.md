@@ -14,7 +14,7 @@
 
 同一已停止方向还保留 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。最新一轮已换用 Poly Haven 植物与独立叶片遮罩，跳台货箱从 42 个减至 10 个，补入开箱、箱盖和破损桶板；建筑仍未达到写实预期。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
 
-环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。见 [精简流程说明](docs/envart-pipeline-skill.html)。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
+环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。2026-11-18 已改为覆盖任务接收、参考筛选、方向、选材小样、制作、评审返工和交付复用的完整流程，见 [管线图文说明](docs/envart-pipeline-skill.html)。下述独立试跑针对旧版 skill，新流程尚待制作验证。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
 
 新增 **游戏截图参考试跑**：旷野之息、Control、Dishonored、Firewatch 四个独立项目，围绕找素材、细节填充和风格统一做逐图反馈修订，另补光影回顾评价。直接查看 [原作参考 / 实机前后 / 四项能力评价 HTML](docs/game-reference-studies.html)，工程与来源见 [试验目录](experiments/game-reference-studies/README.md)。四组均未达到参考游戏完成度；它们是自由布局评估，不是原测试场的默认替换版本，也未验证白盒约束下的表现。
 
@@ -173,7 +173,7 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 | [三方向 HTML 对比](docs/direction-comparison.html) | 真实素材重做、同机位图片切换、试玩和编辑方法 |
 | [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |
-| [rea-video 借鉴分析](docs/rea-video-envart-research.md) | 两项目对照与 11-18 代码复核；交接入口已部分落地，候选小样、风格判断及复核流程修订仍为建议 |
+| [rea-video 借鉴分析](docs/rea-video-envart-research.md) | 两项目对照与 11-18 代码复核；后续整体改造已写入 skill 与管线说明，质量收益待实机制作验证 |
 | [玩家控制器说明](docs/player-controller.md) | 操作、运动参数、组件接入与当前限制 |
 | [轨迹相机 HTML 教程](docs/rail-camera-guide.html) | Unity 概念对照、图文操作、路径编辑、动画和巡检练习 |
 | [轨迹相机方案调研](docs/camera-path-research.md) | 原生方案与 Phantom Camera 的能力比较及兼容性调查 |
