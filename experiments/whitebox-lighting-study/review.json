@@ -3,7 +3,7 @@
   "reviewer": "agent visual review",
   "scope": "Control records-transfer interior slice: current detail-01 pass, three fixed cameras.",
   "user_accepted": false,
-  "note": "Historical visual issues remain open. Workflow migration adds reference qualification first; no new scene/capture or user acceptance. Observations, user constraints and proposed remedies are separate.",
+  "note": "astra-v2-03 is a reviewed candidate, not user acceptance. Historical observations remain with new pass outcomes; see astra-v2/evaluation.json.",
   "references": [
     "../../docs/images/game-studies/references/control-3.jpg",
     "../../docs/images/game-studies/references/control-4.jpg"
@@ -13,7 +13,7 @@
       "id": "REF-01",
       "title": "Reference set needs readable environment-led views",
       "priority": "P0",
-      "status": "open",
+      "status": "visually-verified",
       "regions": [
         "R1",
         "R2"
@@ -31,7 +31,11 @@
       "why_it_matters": "An inadequate input can produce confident but unsupported surface, prop-density and lighting requirements.",
       "return_stage": "references",
       "next_check": "Select complementary, source-identified Control interior environment views that expose the work area, dominant wall/floor and relevant transition. State what each view supports and what remains unknown; update the brief before committing new surface treatments.",
-      "avoid": "Do not turn promotional color effects into permanent lighting, or replace the requested direction merely to fit convenient references."
+      "avoid": "Do not turn promotional color effects into permanent lighting, or replace the requested direction merely to fit convenient references.",
+      "verified_in": [
+        "astra-v2/selection.md"
+      ],
+      "outcome": "Replaced sole reliance on combat imagery with a readable storage-room primary and corridor supplement, both viewed by parent and subagent; source pages and limits recorded."
     },
     {
       "id": "W-01",
@@ -64,7 +68,14 @@
       "depends_on": [
         "REF-01"
       ],
-      "return_stage": "auditions_or_production"
+      "return_stage": "auditions_or_production",
+      "verified_in": [
+        "captures/astra-v2-03/room.png",
+        "captures/astra-v2-03/props.png",
+        "captures/astra-v2-03/door.png"
+      ],
+      "outcome": "Improved surface readability; continuous wall retained. Large concrete masses still relatively uniform and lack reference construction richness. Do not mandate a repeating seam grid.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-02",
@@ -92,7 +103,14 @@
       "depends_on": [
         "REF-01"
       ],
-      "return_stage": "auditions_or_production"
+      "return_stage": "auditions_or_production",
+      "verified_in": [
+        "captures/astra-v2-03/room.png",
+        "captures/astra-v2-03/props.png",
+        "captures/astra-v2-03/door.png"
+      ],
+      "outcome": "New local scanned aggregate finish is visible; glare reduced, but broad floor reads matte and local boundary is abrupt.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-03",
@@ -116,7 +134,13 @@
       "depends_on": [
         "REF-01"
       ],
-      "return_stage": "auditions"
+      "return_stage": "auditions",
+      "verified_in": [
+        "captures/astra-v2-03/props.png",
+        "captures/astra-v2-03/room.png"
+      ],
+      "outcome": "Cabinets face the activity and share gray-green paint, retaining original hardware; side/front geometry still simplified.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-04",
@@ -136,7 +160,12 @@
       "why_it_matters": "An entrance should read as a transition between spaces; the current dark rectangle weakens the sense of a working records facility.",
       "next_check": "Dress only the visible slice beyond the opening: floor transition, wall continuation and one restrained destination or directional cue. Keep the aperture, clearance and routes unchanged; review with the door camera.",
       "avoid": "Do not use a black plane to stand in for the next space, and do not narrow the protected opening.",
-      "return_stage": "production"
+      "return_stage": "production",
+      "verified_in": [
+        "captures/astra-v2-03/door.png"
+      ],
+      "outcome": "Directory and light provide a doorway destination; surrounding whitebox and floor boundary still visible.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-05",
@@ -157,7 +186,13 @@
       "why_it_matters": "Density and grouping should come from the records-transfer activity, not from filling empty area.",
       "next_check": "Only after W-01/W-02: add function-specific states such as an intake queue, outgoing cartons and in-use paperwork with believable supports. Vary closure, orientation and grouping; keep routes clear.",
       "avoid": "Do not grid-repeat the same closed carton or stuff every shelf to fake richness.",
-      "return_stage": "production"
+      "return_stage": "production",
+      "verified_in": [
+        "captures/astra-v2-03/props.png",
+        "captures/astra-v2-03/room.png"
+      ],
+      "outcome": "Labels and storage cartons reinforce activity; repeating boxes and catalogue-like spacing remain.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-06",
@@ -185,7 +220,14 @@
       "depends_on": [
         "REF-01"
       ],
-      "return_stage": "production_lighting"
+      "return_stage": "production_lighting",
+      "verified_in": [
+        "captures/astra-v2-03/room.png",
+        "captures/astra-v2-03/props.png",
+        "captures/astra-v2-03/door.png"
+      ],
+      "outcome": "Task and portal readability improved and reflection hotspots reduced; broad wall illumination and luminaire shadow remain.",
+      "changes": "See astra-v2/pass-01.md, pass-02.md and pass-03.md; original detail-01 retained."
     },
     {
       "id": "W-07",
@@ -212,17 +254,17 @@
   "workflow": {
     "protocol": "../../skills/godot-envart/references/production-loop.md",
     "skill_revision": "ce9bf03",
-    "current_stage": "references",
-    "working_scene": "interior_detailed.tscn",
-    "selected_pass": "captures/detail-01",
-    "next_action": "Resolve REF-01 with environment-led references, refresh direction, then audition main surfaces with neighboring props.",
+    "current_stage": "delivery",
+    "working_scene": "interior_astra_v2_03.tscn",
+    "selected_pass": "captures/astra-v2-03",
+    "next_action": "User art review of the fixed-camera comparison; do not expand the field. Remaining local weaknesses are recorded.",
     "user_constraints": [
       "Indoor local slice; preserve existing whitebox and fixed views.",
       "Continuous concrete without conspicuous tile motifs; improve concrete character, purposeful detail and lighting.",
       "Reference discovery must prioritize readable environments, not character-centric or effect-obscured publicity."
     ],
-    "production_changed": false,
-    "model_trial": "not run"
+    "production_changed": true,
+    "model_trial": "gpt-6.2-astra; independent sample/01/02, parent-feedback 03; not controlled model A/B"
   },
   "reference_assessment": [
     {
@@ -245,5 +287,7 @@
       "supports": "Visible archive drawers, strip fixtures and partial concrete/floor surfaces.",
       "limits": "Character, combat illumination and debris obscure environment; insufficient as the sole basis for construction, stable lighting or everyday dressing."
     }
-  ]
+  ],
+  "latest_reference_record": "astra-v2/selection.md",
+  "latest_evaluation": "astra-v2/evaluation.json"
 }

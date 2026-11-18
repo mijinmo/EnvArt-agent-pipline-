@@ -14,7 +14,7 @@
 
 同一已停止方向还保留 **装配与氛围优化版**：打开 `envart/realism_refined/trial.tscn` 后按 **F6**。调整墙段比例、门楼高度、墙边道具、植被、坡道木栏与照明；三个跳台改为货箱堆外观，原有碰撞尺寸保持不变。最新一轮已换用 Poly Haven 植物与独立叶片遮罩，跳台货箱从 42 个减至 10 个，补入开箱、箱盖和破损桶板；建筑仍未达到写实预期。上一轮 `realism_trial` 场景保留。见 [优化前后 HTML 同机位对比](docs/realism-refined.html)。
 
-环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。2026-11-18 已改为覆盖任务接收、参考筛选、方向、选材小样、制作、评审返工和交付复用的完整流程，见 [管线图文说明](docs/envart-pipeline-skill.html)。下述独立试跑针对旧版 skill，新流程尚待制作验证。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
+环境美术流程已提炼为 [godot-envart skill](skills/godot-envart/SKILL.md)：以 `7119a84`、`b81f512` 为基线，优先素材统一性与实机画面，避免冗余功能验证。2026-11-18 已改为覆盖任务接收、参考筛选、方向、选材小样、制作、评审返工和交付复用的完整流程，见 [管线图文说明](docs/envart-pipeline-skill.html)。下述独立试跑针对旧版 skill，后续 Control 续作已按新流程完成一次局部试跑，见下方对照；并非统计验证。独立 subagent 已在 [另一个空工程](experiments/envart-skill-trial/project.godot) 完成灰烬方向试跑，只保留四个观察机位；[实机结果与不足](docs/envart-skill-trial.html)。
 
 新增 **游戏截图参考试跑**：旷野之息、Control、Dishonored、Firewatch 四个独立项目，围绕找素材、细节填充和风格统一做逐图反馈修订，另补光影回顾评价。直接查看 [原作参考 / 实机前后 / 四项能力评价 HTML](docs/game-reference-studies.html)，工程与来源见 [试验目录](experiments/game-reference-studies/README.md)。四组均未达到参考游戏完成度；它们是自由布局评估，不是原测试场的默认替换版本，也未验证白盒约束下的表现。
 
@@ -25,6 +25,8 @@
 2026-11-14 新增 [Control 室内局部实机对比](docs/control-interior.html)：连续混凝土墙面、顶棚与玻璃天窗、办公照明。导入 [独立试验工程](experiments/whitebox-lighting-study/project.godot) 按 F5 查看；初稿保存在 `interior.tscn`，原主工程入口仍如下。
 
 2026-11-15 新增 [Control 局部细节同机位对照](docs/control-interior-detail.html)：恢复混凝土表面细节，补充真实货架、交接车与档案道具，调整冷暖工作照明。独立试验工程 F5 默认打开 `interior_detailed.tscn`；保留上一版场景和截图，未扩展全场。
+
+2026-11-18 完成 [GPT-6.2 astra 新管线 Control 局部试跑](docs/control-astra-v2-trial.html)：重选环境清楚的参考，比较材质小样并迭代三轮。候选场景 `interior_astra_v2_03.tscn` 用 F6 打开，F5 保留旧版；同机位结果有局部改善，资产构造与细节组织仍有不足。
 
 提交新白盒给 agent 前，按 [白盒输入说明](skills/godot-envart/references/whitebox-input.md) 明确室内、室外或半开放区域，以及顶棚、围护、采光开口与允许补建的范围；缺少屋顶不等于室外。主要墙面须按参考检查整面墙的重复图案与分格尺度，不能仅因素材叫“混凝土”就判定合适。
 
