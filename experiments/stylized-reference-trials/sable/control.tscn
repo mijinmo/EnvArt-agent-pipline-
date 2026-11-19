@@ -3,7 +3,7 @@
 [ext_resource type="Shader" path="res://source/grid.gdshader" id="5_grid"]
 
 [ext_resource type="PackedScene" path="res://assets/fitted/Gate.gltf" id="r0"]
-[ext_resource type="PackedScene" path="res://assets/fitted/CanopyBows.gltf" id="r1"]
+[ext_resource type="PackedScene" path="res://assets/round03/RakedBow.gltf" id="r1"]
 [ext_resource type="PackedScene" path="res://assets/fitted/Fabric.gltf" id="r2"]
 [ext_resource type="PackedScene" path="res://assets/fitted/Rig.gltf" id="r3"]
 [ext_resource type="PackedScene" path="res://assets/fitted/DistantBluffs.gltf" id="r4"]
@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" path="res://assets/quaternius/WallBand_Straight.gltf" id="r6"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Column_Pipes.gltf" id="r7"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_SatelliteDish.gltf" id="r8"]
-[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Desk_Medium.gltf" id="r9"]
-[ext_resource type="PackedScene" path="res://assets/kenney/workbench-grind.glb" id="r10"]
+[ext_resource type="PackedScene" path="res://assets/round03/EnamelBench.gltf" id="r9"]
+[ext_resource type="PackedScene" path="res://assets/round03/Grindstone.gltf" id="r10"]
 [ext_resource type="PackedScene" path="res://assets/kenney/box-open.glb" id="r11"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Barrel2_Closed.gltf" id="r12"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Crate_Tarp.gltf" id="r13"]
@@ -22,17 +22,19 @@
 [ext_resource type="PackedScene" path="res://assets/kenney/bottle.glb" id="r17"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Mug.gltf" id="r18"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Vent_Wide.gltf" id="r19"]
-[ext_resource type="Shader" path="res://shaders/final/ink.gdshader" id="r20"]
+[ext_resource type="Shader" path="res://shaders/round03/ink.gdshader" id="r20"]
 
 [ext_resource type="PackedScene" path="res://assets/fitted/ThresholdPaint.gltf" id="ThresholdPaint"]
 [ext_resource type="PackedScene" path="res://assets/fitted/SandMarks.gltf" id="SandMarks"]
-[ext_resource type="PackedScene" path="res://assets/fitted/WorkshopRacks.gltf" id="WorkshopRacks"]
+[ext_resource type="PackedScene" path="res://assets/round03/TealRack.gltf" id="WorkshopRacks"]
 [ext_resource type="PackedScene" path="res://assets/fitted/GateBadges.gltf" id="GateBadges"]
 [ext_resource type="PackedScene" path="res://assets/fitted/CanvasSeams.gltf" id="CanvasSeams"]
 [ext_resource type="Texture2D" path="res://assets/signs/depot.png" id="TexBenchDiagram"]
 [ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexIncomingRoute"]
 [ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexGatePlate"]
 [ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexEastMarker"]
+
+[ext_resource type="PackedScene" path="res://assets/fitted/BowTies.gltf" id="BowTies"]
 
 [sub_resource type="StandardMaterial3D" id="Grid"]
 albedo_color = Color(0.920000, 0.740000, 0.520000, 1.000000)
@@ -531,7 +533,7 @@ rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
 scale = Vector3(1.000000, 1.000000, 1.000000)
 
 [node name="WallVent" instance=ExtResource("r19") parent="."]
-position = Vector3(6.120000, 2.920000, -11.393000)
+position = Vector3(7.050000, 2.930000, -11.390000)
 rotation_degrees = Vector3(90, 0, 0)
 scale = Vector3(0.680000, 0.680000, 0.680000)
 
@@ -560,7 +562,6 @@ light_energy = 1.0
 shadow_enabled = true
 directional_shadow_max_distance = 55.0
 
-
 [node name="ThresholdPaint" parent="." instance=ExtResource("ThresholdPaint")]
 
 [node name="SandMarks" parent="." instance=ExtResource("SandMarks")]
@@ -572,7 +573,7 @@ directional_shadow_max_distance = 55.0
 [node name="CanvasSeams" parent="." instance=ExtResource("CanvasSeams")]
 
 [node name="BenchDiagram" type="MeshInstance3D" parent="."]
-position = Vector3(5.460000, 2.660000, -11.390000)
+position = Vector3(5.460000, 2.890000, -11.390000)
 mesh = SubResource("PanelBenchDiagram")
 
 [node name="IncomingRoute" type="MeshInstance3D" parent="."]
@@ -586,3 +587,5 @@ mesh = SubResource("PanelGatePlate")
 [node name="EastMarker" type="MeshInstance3D" parent="."]
 position = Vector3(8.180000, 1.650000, -0.732000)
 mesh = SubResource("PanelEastMarker")
+
+[node name="BowTies" parent="." instance=ExtResource("BowTies")]

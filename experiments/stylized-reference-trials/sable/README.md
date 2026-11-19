@@ -1,6 +1,6 @@
 # 盐路修理棚
 
-Godot 4.7.2 Metal Forward+。试作模型 gpt-6.2-astra，采用 2026-11-19 当前工作树 godot-envart 技能。选取原白盒门洞与东北角，露天商棚服务于旅人载具的修理与物资补给。保留 17 个原始碰撞体。审图素材属于原游戏权利方，工程不分发游戏截图。
+Godot 4.7.2 Metal Forward+。试作模型 gpt-6.2-astra，启动时未显式指定 reasoning_effort，沿用父任务设置，具体档位未核实。采用 2026-11-19 当前工作树 godot-envart 技能。选取原白盒门洞与东北角，露天商棚服务于旅人载具的修理与物资补给。保留 17 个原始碰撞体。审图素材属于原游戏权利方，工程不分发游戏截图。
 
 ## 已审看参考
 
@@ -30,8 +30,14 @@ captures/whitebox 保存原表面的基线，captures/round01 保存首次审图
 godot --path . --rendering-driver metal --script res://capture.gd -- final
 ```
 
-shaders/final/ink.gdshader 从深度差和预通道法线突变提取轮廓与折线，保留底色和物体投影。ink_opacity 控制混合强度，stroke_px 控制采样距离，ink_color 指定墨色，默认分别为 0.70、1.15 和暗紫棕。control.tscn 仅省略全屏 Ink 节点。材质简化、色图重映射和环境美术均是两组共有条件。该方法使用 Forward+ 法线缓冲，适用于当前三个固定视点。草图式细线在缩略预览中较弱，整体效果主要来自实体框架、遮阳布和索具。[Godot 屏幕读取 shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/screen-reading_shaders.html)
+shaders/round03/ink.gdshader 从深度差和预通道法线突变提取轮廓与折线，保留底色和物体投影。ink_opacity 控制混合强度，stroke_px 控制采样距离，ink_color 指定墨色，默认分别为 0.70、1.15 和暗紫棕。control.tscn 仅省略全屏 Ink 节点。材质简化、色图重映射和环境美术均是两组共有条件。该方法使用 Forward+ 法线缓冲，适用于当前三个固定视点。草图式细线在缩略预览中较弱，整体效果主要来自实体框架、遮阳布和索具。[Godot 屏幕读取 shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/screen-reading_shaders.html)
 
 首轮截图显示墙板窄边朝向镜头、后墙缺少工作信息、地面与跳台过饱和。第二轮独立修订已保存在 round02.tscn 与 captures/round02，转正墙板，修正箱盒与杯瓶支撑，区分砂岩和地面，加入工作架、软管、工位图示与导向牌。17 个 StaticBody3D、碰撞子节点、BoxMesh 与 BoxShape3D 尺寸及三个机位已经逐项与原白盒或首轮比较。
 
-局限：全景仍可辨出原跳台的整块箱形，门洞近景中的路牌重复，近景左侧棚架占画幅较大。远景岩柱的规则截面和真实参考中的细腻层理有差距。小棚与原商车的悬浮底盘、活动吊装结构存在造型区别。此局部尚待用户美术验收。
+局限：全景仍可辨出原跳台的整块箱形，门洞近景中的路牌重复，第二轮近景左侧棚架遮住工作图与磨轮，第三轮已调整。远景岩柱的规则截面和真实参考中的细腻层理有差距。小棚与原商车的悬浮底盘、活动吊装结构存在造型区别。此局部尚待用户美术验收。
+
+## 主审反馈后的第三轮
+
+主审在看过第二轮全景、过渡、工位及关闭墨线的细节图后指出，棚前红环遮住工位，褐色工作台与墙板重叠。round03 将棚前红环向外移并减窄，在原支柱间补三根回拉构件。保留门洞的另一道红环，调整 Quaternius 工作台为灰绿搪瓷、Kenney 磨轮支架为浅青绿，工具架保留更深的蓝绿。抬高工位图示，并把原本横跨图示的通风口移到右侧。固定相机与灯光沿用第二轮。近景现在能读到整台磨轮、工作图和挂工具的架子，左缘仍留有红环，标明棚入口。全景里的跳台箱形、远岩轮廓仍较规则。
+
+第三轮有线与无线的场景及实际截图分别保存在 round03.tscn、control03.tscn 和两个同名 captures 子目录。final.tscn 和 control.tscn 分别对应这两个版本，shaders/round03 保存本轮的墨线源文件。round01 与 round02 保留各轮原始资源和照片。
