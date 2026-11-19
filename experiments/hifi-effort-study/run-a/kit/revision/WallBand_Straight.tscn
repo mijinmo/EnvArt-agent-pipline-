@@ -1,0 +1,34 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/WallBand_Straight_service_quiet.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/enamel_revised.gdshader" id="surface"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_02_BaseColor_Red_ink_quiet.png" id="tex1"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_BaseColor_Red_jade_quiet.png" id="tex2"]
+
+[ext_resource type="Texture2D" path="res://art/T_Trim_02_Normal.png" id="relief1"]
+
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_Normal.png" id="relief2"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.160784,0.211765,0.321569,1)
+shader_parameter/paint_pattern = 3
+shader_parameter/original_trim = ExtResource("tex1")
+shader_parameter/relief = ExtResource("relief1")
+shader_parameter/relief_strength = 0.80
+shader_parameter/trim_strength = 0.70
+
+[sub_resource type="ShaderMaterial" id="pigment2"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.211765,0.600000,0.623529,1)
+shader_parameter/paint_pattern = 3
+shader_parameter/original_trim = ExtResource("tex2")
+shader_parameter/relief = ExtResource("relief2")
+shader_parameter/relief_strength = 0.80
+shader_parameter/trim_strength = 0.70
+
+[node name="WallBand_Straight" instance=ExtResource("source")]
+
+[node name="WallBand_Straight" parent="." index="0"]
+surface_material_override/0 = SubResource("pigment1")
+surface_material_override/1 = SubResource("pigment2")

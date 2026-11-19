@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Door_Frame_Square_service.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/enamel_revised.gdshader" id="surface"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_BaseColor_Red_ochre.png" id="tex1"]
+
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_Normal.png" id="relief1"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.921569,0.713725,0.258824,1)
+shader_parameter/paint_pattern = 0
+shader_parameter/original_trim = ExtResource("tex1")
+shader_parameter/relief = ExtResource("relief1")
+shader_parameter/relief_strength = 0.80
+shader_parameter/trim_strength = 0.70
+
+[node name="Door_Frame_Square" instance=ExtResource("source")]
+
+[node name="Door_Frame_Square" parent="." index="0"]
+surface_material_override/0 = SubResource("pigment1")

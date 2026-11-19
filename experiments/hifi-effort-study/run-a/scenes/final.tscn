@@ -1,0 +1,1166 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/painted_whitebox.tscn" id="e0"]
+[ext_resource type="PackedScene" path="res://art/Prop_Light_Wide.gltf" id="e1"]
+[ext_resource type="PackedScene" path="res://kit/revision/WallAstra_Straight_Flat_quiet.tscn" id="e2"]
+[ext_resource type="PackedScene" path="res://art/TopCables_Straight.gltf" id="e3"]
+[ext_resource type="PackedScene" path="res://kit/revision/WallBand_Straight.tscn" id="e4"]
+[ext_resource type="PackedScene" path="res://kit/revision/Platform_3Plates.tscn" id="e5"]
+[ext_resource type="PackedScene" path="res://kit/revision/Column_Pipes.tscn" id="e6"]
+[ext_resource type="PackedScene" path="res://kit/revision/Door_Frame_Square.tscn" id="e7"]
+[ext_resource type="Texture2D" path="res://graphics/entry.png" id="e8"]
+[ext_resource type="Texture2D" path="res://graphics/warning.png" id="e9"]
+[ext_resource type="Texture2D" path="res://graphics/lane.png" id="e10"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Fan_Small.tscn" id="e11"]
+[ext_resource type="Texture2D" path="res://kit/fascia.png" id="e12"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Desk_Medium.tscn" id="e13"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Chair.tscn" id="e14"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Clamp.tscn" id="e15"]
+[ext_resource type="PackedScene" path="res://art/Prop_Ammo_Small_service.gltf" id="e16"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Mug.tscn" id="e17"]
+[ext_resource type="PackedScene" path="res://art/Prop_HealthPack_Tube_service.gltf" id="e18"]
+[ext_resource type="Texture2D" path="res://graphics/monitor.png" id="e19"]
+[ext_resource type="Texture2D" path="res://kit/hands_off.png" id="e20"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Shelves_ThinShort.tscn" id="e21"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Locker.tscn" id="e22"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Computer.tscn" id="e23"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Barrel_Large.tscn" id="e24"]
+[ext_resource type="PackedScene" path="res://kit/revision/Prop_Crate4.tscn" id="e25"]
+[ext_resource type="Texture2D" path="res://graphics/fan_id.png" id="e26"]
+[ext_resource type="PackedScene" path="res://art/Prop_Vent_Wide.gltf" id="e27"]
+[ext_resource type="Texture2D" path="res://graphics/return_air.png" id="e28"]
+[ext_resource type="Texture2D" path="res://graphics/threshold.png" id="e29"]
+[ext_resource type="PackedScene" path="res://art/Prop_Light_Small.gltf" id="e30"]
+[ext_resource type="Texture2D" path="res://kit/revision/service_limits.png" id="e31"]
+[ext_resource type="Texture2D" path="res://kit/switchplate.png" id="e32"]
+[ext_resource type="Texture2D" path="res://graphics/motor_plate.png" id="e33"]
+[ext_resource type="Texture2D" path="res://graphics/floor_mark.png" id="e34"]
+[ext_resource type="Shader" path="res://shaders/print_quiet.gdshader" id="e35"]
+
+[ext_resource type="ArrayMesh" path="res://kit/cast_volute.obj" id="cast"]
+[ext_resource type="ArrayMesh" path="res://kit/revision/isolator_run.obj" id="switch"]
+[ext_resource type="Shader" path="res://shaders/enamel_revised.gdshader" id="enamel"]
+[ext_resource type="Texture2D" path="res://kit/revision/casting_A.png" id="atlasA"]
+[ext_resource type="Texture2D" path="res://kit/revision/casting_B.png" id="atlasB"]
+
+[ext_resource type="ArrayMesh" path="res://kit/revision/isolator_hold.obj" id="isolated"]
+[ext_resource type="ArrayMesh" path="res://kit/revision/service_jib.obj" id="jib"]
+[ext_resource type="ArrayMesh" path="res://kit/revision/truss_fishplate.obj" id="fishplate"]
+[ext_resource type="ArrayMesh" path="res://kit/revision/bench_drawers.obj" id="drawers"]
+
+[ext_resource type="PackedScene" path="res://kit/revision/pipe_cartridge.gltf" id="pipe_rack"]
+[ext_resource type="Shader" path="res://shaders/roof_sheet.gdshader" id="pressed"]
+
+[sub_resource type="Environment" id="room"]
+background_mode = 1
+background_color = Color(0.1451,0.2,0.28627,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.65098,0.71765,0.82745,1)
+ambient_light_energy = 0.68
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 0.66
+
+[sub_resource type="StandardMaterial3D" id="m283447"]
+albedo_color = Color(0.15686,0.20392,0.27843,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(15, 0.3, 12.5)
+material = SubResource("m283447")
+
+[sub_resource type="StandardMaterial3D" id="m304052"]
+albedo_color = Color(0.18824,0.25098,0.32157,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(14.8, 0.33, 0.22)
+material = SubResource("m304052")
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(14.8, 0.33, 0.22)
+material = SubResource("m304052")
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(14.8, 0.33, 0.22)
+material = SubResource("m304052")
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(14.8, 0.33, 0.22)
+material = SubResource("m304052")
+
+[sub_resource type="StandardMaterial3D" id="decalentry"]
+albedo_texture = ExtResource("e8")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q9"]
+size = Vector2(2.7,0.45)
+material = SubResource("decalentry")
+
+[sub_resource type="StandardMaterial3D" id="decalwarning"]
+albedo_texture = ExtResource("e9")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q11"]
+size = Vector2(0.62,0.18)
+material = SubResource("decalwarning")
+
+[sub_resource type="QuadMesh" id="q12"]
+size = Vector2(0.62,0.18)
+material = SubResource("decalwarning")
+
+[sub_resource type="StandardMaterial3D" id="decallane"]
+albedo_texture = ExtResource("e10")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q14"]
+size = Vector2(0.86,0.31)
+material = SubResource("decallane")
+
+[sub_resource type="QuadMesh" id="q15"]
+size = Vector2(0.86,0.31)
+material = SubResource("decallane")
+
+[sub_resource type="QuadMesh" id="q16"]
+size = Vector2(0.86,0.31)
+material = SubResource("decallane")
+
+[sub_resource type="StandardMaterial3D" id="m973e51"]
+albedo_color = Color(0.160784,0.211765,0.321569,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b17"]
+size = Vector3(2.12, 2.22, 0.37)
+material = SubResource("m973e51")
+
+[sub_resource type="StandardMaterial3D" id="m34415a"]
+albedo_color = Color(0.20392,0.2549,0.35294,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b19"]
+size = Vector3(1.9, 1.83, 0.14)
+material = SubResource("m34415a")
+
+[sub_resource type="QuadMesh" id="q21"]
+size = Vector2(1.62,0.1)
+material = SubResource("decalwarning")
+
+[sub_resource type="BoxMesh" id="b22"]
+size = Vector3(2.12, 2.22, 0.37)
+material = SubResource("m973e51")
+
+[sub_resource type="BoxMesh" id="b23"]
+size = Vector3(1.9, 1.83, 0.14)
+material = SubResource("m34415a")
+
+[sub_resource type="QuadMesh" id="q24"]
+size = Vector2(1.62,0.1)
+material = SubResource("decalwarning")
+
+[sub_resource type="StandardMaterial3D" id="decalbay_fascia"]
+albedo_texture = ExtResource("e12")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q26"]
+size = Vector2(8.3,1.0)
+material = SubResource("decalbay_fascia")
+
+[sub_resource type="StandardMaterial3D" id="m202b3f"]
+albedo_color = Color(0.12549,0.16863,0.24706,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b27"]
+size = Vector3(1.9, 0.99, 0.16)
+material = SubResource("m202b3f")
+
+[sub_resource type="StandardMaterial3D" id="decalmonitor"]
+albedo_texture = ExtResource("e19")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q30"]
+size = Vector2(1.78,0.89)
+material = SubResource("decalmonitor")
+
+[sub_resource type="StandardMaterial3D" id="decallockout"]
+albedo_texture = ExtResource("e20")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q32"]
+size = Vector2(1.05,1.41)
+material = SubResource("decallockout")
+
+[sub_resource type="StandardMaterial3D" id="decalfan_id"]
+albedo_texture = ExtResource("e26")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q34"]
+size = Vector2(2.7,0.49)
+material = SubResource("decalfan_id")
+
+[sub_resource type="QuadMesh" id="q35"]
+size = Vector2(1.4,0.5)
+material = SubResource("decallane")
+
+[sub_resource type="StandardMaterial3D" id="decalreturn_air"]
+albedo_texture = ExtResource("e28")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q37"]
+size = Vector2(3.58,1.8)
+material = SubResource("decalreturn_air")
+
+[sub_resource type="StandardMaterial3D" id="decalthreshold"]
+albedo_texture = ExtResource("e29")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q39"]
+size = Vector2(2.72,0.38)
+material = SubResource("decalthreshold")
+
+[sub_resource type="StandardMaterial3D" id="decalapron"]
+transparency = 2
+alpha_scissor_threshold = 0.47
+albedo_texture = ExtResource("e31")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q41"]
+size = Vector2(4.25,1.75)
+material = SubResource("decalapron")
+
+[sub_resource type="StandardMaterial3D" id="mc7953d"]
+albedo_color = Color(0.78039,0.58431,0.23922,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b42"]
+size = Vector3(0.55, 2.56, 0.085)
+material = SubResource("mc7953d")
+
+[sub_resource type="StandardMaterial3D" id="decaljamb"]
+albedo_texture = ExtResource("e32")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q45"]
+size = Vector2(0.53,2.37)
+material = SubResource("decaljamb")
+
+[sub_resource type="QuadMesh" id="q46"]
+size = Vector2(0.55,0.12)
+material = SubResource("decalwarning")
+
+[sub_resource type="StandardMaterial3D" id="m3a4453"]
+albedo_color = Color(0.22745,0.26667,0.32549,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b47"]
+size = Vector3(0.27, 0.55, 0.04)
+material = SubResource("m3a4453")
+
+[sub_resource type="BoxMesh" id="b49"]
+size = Vector3(0.55, 2.56, 0.085)
+material = SubResource("mc7953d")
+
+[sub_resource type="QuadMesh" id="q50"]
+size = Vector2(0.53,2.37)
+material = SubResource("decaljamb")
+
+[sub_resource type="QuadMesh" id="q51"]
+size = Vector2(0.55,0.12)
+material = SubResource("decalwarning")
+
+[sub_resource type="BoxMesh" id="b52"]
+size = Vector3(0.27, 0.55, 0.04)
+material = SubResource("m3a4453")
+
+[sub_resource type="StandardMaterial3D" id="m34465a"]
+albedo_color = Color(0.20392,0.27451,0.35294,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b53"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b55"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="StandardMaterial3D" id="m43546b"]
+albedo_color = Color(0.26275,0.32941,0.41961,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b56"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b58"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b59"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b60"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b61"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b62"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b63"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b64"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b65"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b66"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b67"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b68"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b69"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b70"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b71"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b72"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b73"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b74"]
+size = Vector3(4, 0.12, 0.13)
+material = SubResource("m34465a")
+
+[sub_resource type="BoxMesh" id="b75"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b76"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b77"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="BoxMesh" id="b78"]
+size = Vector3(1.16, 0.095, 0.095)
+material = SubResource("m43546b")
+
+[sub_resource type="StandardMaterial3D" id="m293c4c"]
+albedo_color = Color(0.16078,0.23529,0.29804,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b79"]
+size = Vector3(0.64, 0.14, 0.25)
+material = SubResource("m293c4c")
+
+[sub_resource type="StandardMaterial3D" id="RedDiode"]
+albedo_color = Color(1.0,0.3098,0.33333,1)
+emission_enabled = true
+emission = Color(1.0,0.2549,0.33333,1)
+emission_energy_multiplier = 1.6
+
+[sub_resource type="BoxMesh" id="PilotLens"]
+size = Vector3(0.48,0.055,0.12)
+material = SubResource("RedDiode")
+
+[sub_resource type="BoxMesh" id="b83"]
+size = Vector3(0.64, 0.14, 0.25)
+material = SubResource("m293c4c")
+
+[sub_resource type="StandardMaterial3D" id="decalmotor_plate"]
+albedo_texture = ExtResource("e33")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q85"]
+size = Vector2(3.12,0.48)
+material = SubResource("decalmotor_plate")
+
+[sub_resource type="StandardMaterial3D" id="decalfloor_mark"]
+albedo_texture = ExtResource("e34")
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="q87"]
+size = Vector2(2.55,0.6)
+material = SubResource("decalfloor_mark")
+
+[sub_resource type="StandardMaterial3D" id="m357678"]
+albedo_color = Color(0.20784,0.46275,0.47059,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b88"]
+size = Vector3(0.55, 0.026, 0.31)
+material = SubResource("m357678")
+
+[sub_resource type="StandardMaterial3D" id="mcea039"]
+albedo_color = Color(0.80784,0.62745,0.22353,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="b90"]
+size = Vector3(0.15, 2.34, 0.19)
+material = SubResource("mcea039")
+
+[sub_resource type="BoxMesh" id="b92"]
+size = Vector3(0.15, 2.34, 0.19)
+material = SubResource("mcea039")
+
+[sub_resource type="ShaderMaterial" id="ComicPrint"]
+render_priority = 100
+shader = ExtResource("e35")
+shader_parameter/line_pixels = 1.1
+shader_parameter/ink_strength = 0.66
+shader_parameter/shadow_hatching = 0.015
+shader_parameter/band_strength = 0.24
+
+[sub_resource type="QuadMesh" id="Post"]
+size = Vector2(2,2)
+material = SubResource("ComicPrint")
+
+
+[sub_resource type="ShaderMaterial" id="FinishA"]
+shader = ExtResource("enamel")
+shader_parameter/coat = Color(1.000000,1.000000,1.000000,1)
+shader_parameter/original_trim = ExtResource("atlasA")
+shader_parameter/printed_atlas = true
+shader_parameter/trim_strength = 0.0
+
+[sub_resource type="ShaderMaterial" id="FinishB"]
+shader = ExtResource("enamel")
+shader_parameter/coat = Color(1.000000,1.000000,1.000000,1)
+shader_parameter/original_trim = ExtResource("atlasB")
+shader_parameter/printed_atlas = true
+shader_parameter/trim_strength = 0.0
+
+
+[sub_resource type="StandardMaterial3D" id="RunGreen"]
+albedo_color = Color(0.40,1.0,0.69,1)
+emission_enabled = true
+emission = Color(0.22,0.80,0.44,1)
+emission_energy_multiplier = 0.76
+
+[sub_resource type="ShaderMaterial" id="RoofSheet"]
+shader = ExtResource("pressed")
+
+[node name="ImpellerService" type="Node3D"]
+
+
+[node name="ProtectedWhitebox" instance=ExtResource("e0") parent="."]
+
+
+[node name="Views" type="Node3D" parent="."]
+
+
+[node name="Lighting" type="Node3D" parent="."]
+
+
+[node name="Shell" type="Node3D" parent="."]
+
+
+[node name="MachineRoom" type="Node3D" parent="."]
+
+
+[node name="Bench" type="Node3D" parent="."]
+
+
+[node name="Print" type="Node3D" parent="."]
+
+
+[node name="RoomAtmosphere" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("room")
+
+[node name="overall" type="Camera3D" parent="Views"]
+transform = Transform3D(0.700048,-0.002507851,-0.7140914,-0,0.9999938,-0.003511925,0.7140958,0.002458516,0.7000437,-2.45,2.05,-4.42)
+fov = 64
+current = true
+
+[node name="detail" type="Camera3D" parent="Views"]
+transform = Transform3D(0.8357055,0.01048839,-0.5490777,-0,0.9998176,0.01909836,0.5491779,-0.0159606,0.8355531,3.15,1.7,-6.85)
+fov = 59
+current = false
+
+[node name="transition" type="Camera3D" parent="Views"]
+transform = Transform3D(0.9764075,0.004053935,-0.2158982,-0,0.9998238,0.01877376,0.2159363,-0.01833084,0.9762354,-0.65,1.6,-1.1)
+fov = 66
+current = false
+
+[node name="DoorWash" type="OmniLight3D" parent="Lighting"]
+position = Vector3(0, 3.3, -4.7)
+light_color = Color(1.0,0.85882,0.67843,1)
+light_energy = 3.2
+omni_range = 7
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="BenchTask" type="OmniLight3D" parent="Lighting"]
+position = Vector3(5.35, 3.15, -9.35)
+light_color = Color(1.0,0.94902,0.81569,1)
+light_energy = 3.7119999999999997
+omni_range = 7.5
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="MotorWash" type="OmniLight3D" parent="Lighting"]
+position = Vector3(0.65, 3.25, -8.9)
+light_color = Color(0.65098,0.89412,0.98824,1)
+light_energy = 2.92
+omni_range = 8.3
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="AisleFixture" type="OmniLight3D" parent="Lighting"]
+position = Vector3(7.4, 3.85, -5)
+light_color = Color(0.71765,0.91373,1.0,1)
+light_energy = 2.688
+omni_range = 8
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="InspectionRed" type="OmniLight3D" parent="Lighting"]
+position = Vector3(2.35, 3.05, -10.8)
+light_color = Color(1.0,0.31373,0.3451,1)
+light_energy = 1.55
+omni_range = 3.1
+omni_attenuation = 0.85
+shadow_enabled = false
+
+[node name="RoofSlab" type="MeshInstance3D" parent="Shell"]
+material_override = SubResource("RoofSheet")
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.5,5.15,-7)
+mesh = SubResource("b1")
+
+[node name="OverheadIBeam" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.55,4.82,-2.3)
+mesh = SubResource("b3")
+
+[node name="Prop_Light_Wide" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,1.155214,4.716752,-2.3)
+
+[node name="Prop_Light_Wide2" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,6.755214,4.716752,-2.3)
+
+[node name="OverheadIBeam2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.55,4.82,-5.3)
+mesh = SubResource("b5")
+
+[node name="Prop_Light_Wide3" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,1.155214,4.716752,-5.3)
+
+[node name="Prop_Light_Wide4" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,6.755214,4.716752,-5.3)
+
+[node name="OverheadIBeam3" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.55,4.82,-8.3)
+mesh = SubResource("b6")
+
+[node name="Prop_Light_Wide5" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,1.155214,4.716752,-8.3)
+
+[node name="Prop_Light_Wide6" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,6.755214,4.716752,-8.3)
+
+[node name="OverheadIBeam4" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.55,4.82,-11.3)
+mesh = SubResource("b7")
+
+[node name="Prop_Light_Wide7" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,1.155214,4.716752,-11.3)
+
+[node name="Prop_Light_Wide8" instance=ExtResource("e1") parent="Shell"]
+transform = Transform3D(1.75,0,0,0,1.4,0,0,0,1.12,6.755214,4.716752,-11.3)
+
+[node name="WallAstra_Straight_Flat" instance=ExtResource("e2") parent="Shell"]
+transform = Transform3D(6.429396e-17,0,-1,0,1.04,0,1.05,0,6.123234e-17,-4,2.667465e-07,-9.5275)
+
+[node name="TopCables_Straight" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,-3.999999,0.08,-9.503363)
+
+[node name="WallAstra_Straight_Flat2" instance=ExtResource("e2") parent="Shell"]
+transform = Transform3D(6.429396e-17,0,-1,0,1.04,0,1.05,0,6.123234e-17,0,2.667465e-07,-9.5275)
+
+[node name="TopCables_Straight2" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,6.556511e-07,0.08,-9.503363)
+
+[node name="WallAstra_Straight_Flat3" instance=ExtResource("e2") parent="Shell"]
+transform = Transform3D(6.429396e-17,0,-1,0,1.04,0,1.05,0,6.123234e-17,4,2.667465e-07,-9.5275)
+
+[node name="TopCables_Straight3" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,4.000001,0.08,-9.503363)
+
+[node name="WallAstra_Straight_Flat4" instance=ExtResource("e2") parent="Shell"]
+transform = Transform3D(6.429396e-17,0,-1,0,1.04,0,1.05,0,6.123234e-17,8,2.667465e-07,-9.5275)
+
+[node name="TopCables_Straight4" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,8.000001,0.08,-9.503363)
+
+[node name="WallBand_Straight_service" instance=ExtResource("e4") parent="Shell"]
+transform = Transform3D(-1,0,1.224647e-16,0,1,0,-1.224647e-16,0,-1,7.52375,0,-9.64)
+
+[node name="TopCables_Straight5" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(-1,0,1.224647e-16,0,1,0,-1.224647e-16,0,-1,7.583363,0,-9.639999)
+
+[node name="WallBand_Straight_service2" instance=ExtResource("e4") parent="Shell"]
+transform = Transform3D(-1,0,1.224647e-16,0,1,0,-1.224647e-16,0,-1,7.52375,0,-5.64)
+
+[node name="TopCables_Straight6" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(-1,0,1.224647e-16,0,1,0,-1.224647e-16,0,-1,7.583363,0,-5.639999)
+
+[node name="WallBand_Straight_service3" instance=ExtResource("e4") parent="Shell"]
+transform = Transform3D(-1,0,6.735557e-17,0,1,0,-1.224647e-16,0,-0.55,7.52375,0,-2.58)
+
+[node name="TopCables_Straight7" instance=ExtResource("e3") parent="Shell"]
+transform = Transform3D(-1,0,6.735557e-17,0,1,0,-1.224647e-16,0,-0.55,7.583363,0,-2.58)
+
+[node name="Platform_3Plates_service" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-3.95,0.014,-9.7)
+
+[node name="Platform_3Plates_service2" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-3.95,0.014,-5.7)
+
+[node name="Platform_3Plates_service3" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0.05,0.014,-9.7)
+
+[node name="Platform_3Plates_service4" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0.05,0.014,-5.7)
+
+[node name="Platform_3Plates_service5" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,4.05,0.014,-9.7)
+
+[node name="Platform_3Plates_service6" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,4.05,0.014,-5.7)
+
+[node name="Platform_3Plates_service7" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,8.05,0.014,-9.7)
+
+[node name="Platform_3Plates_service8" instance=ExtResource("e5") parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,8.05,0.014,-5.7)
+
+[node name="Column_Pipes" instance=ExtResource("e6") parent="Shell"]
+transform = Transform3D(0.8,0,0,0,1,0,0,0,0.8,-2,0.01500024,-11.05)
+
+[node name="Column_Pipes2" instance=ExtResource("e6") parent="Shell"]
+transform = Transform3D(0.8,0,0,0,1,0,0,0,0.8,8.95,0.01500024,-11.05)
+
+[node name="Column_Pipes3" instance=ExtResource("e6") parent="Shell"]
+transform = Transform3D(0.75,0,0,0,1,0,0,0,0.75,9.25,0.02000024,-7.8)
+
+[node name="Column_Pipes4" instance=ExtResource("e6") parent="Shell"]
+transform = Transform3D(0.75,0,0,0,1,0,0,0,0.75,9.25,0.02000024,-4)
+
+[node name="Door_Frame_Square_service" instance=ExtResource("e7") parent="Shell"]
+transform = Transform3D(0.59,0,0,0,0.56,0,0,0,1.35,0,0.007518119,-4)
+
+[node name="entry" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0,2.54,-3.665)
+mesh = SubResource("q9")
+
+[node name="warning" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1,0.66,-3.685)
+mesh = SubResource("q11")
+
+[node name="warning2" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1,0.66,-3.685)
+mesh = SubResource("q12")
+
+[node name="lane" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,6.123234e-17,1,0,-1,6.123234e-17,0,0.035,-6.1)
+mesh = SubResource("q14")
+
+[node name="lane2" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,6.123234e-17,1,0,-1,6.123234e-17,0,0.035,-7.1)
+mesh = SubResource("q15")
+
+[node name="lane3" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,6.123234e-17,1,0,-1,6.123234e-17,0,0.035,-8.1)
+mesh = SubResource("q16")
+
+[node name="MotorCassette" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.25,1.95,-11.3)
+mesh = SubResource("b17")
+
+[node name="MountingPlate" type="MeshInstance3D" parent="Shell"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.25,1.98,-11.06)
+mesh = SubResource("b19")
+
+[node name="Prop_Fan_Small_service" instance=ExtResource("e11") parent="MachineRoom"]
+transform = Transform3D(1,0,0,0,6.123234e-17,-1,0,1,6.123234e-17,1.25,1.978417,-11.08621)
+
+[node name="warning3" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.25,0.915,-11.08)
+mesh = SubResource("q21")
+
+[node name="MotorCassette2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,3.4,1.95,-11.3)
+mesh = SubResource("b22")
+
+[node name="MountingPlate2" type="MeshInstance3D" parent="Shell"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,3.4,1.98,-11.06)
+mesh = SubResource("b23")
+
+[node name="Prop_Fan_Small_service2" instance=ExtResource("e11") parent="MachineRoom"]
+transform = Transform3D(1,0,0,0,6.123234e-17,-1,0,1,6.123234e-17,3.4,1.978417,-11.08621)
+
+[node name="warning4" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,3.4,0.915,-11.08)
+mesh = SubResource("q24")
+
+[node name="bay_fascia" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,3.4,3.63,-11.02)
+mesh = SubResource("q26")
+
+[node name="Prop_Desk_Medium" instance=ExtResource("e13") parent="Bench"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,5.85,0.02300008,-10.33556)
+
+[node name="Prop_Chair" instance=ExtResource("e14") parent="Bench"]
+transform = Transform3D(0.7188569,0,-0.2759433,0,0.77,0,0.2759433,0,0.7188569,6.609844,0.03327128,-9.231694)
+
+[node name="Prop_Clamp" instance=ExtResource("e15") parent="Bench"]
+transform = Transform3D(0.9659258,0,-0.258819,0,1,0,0.258819,0,0.9659258,4.939113,0.9654009,-10.17124)
+
+[node name="Prop_Ammo_Small_service" instance=ExtResource("e16") parent="Bench"]
+transform = Transform3D(0.9876883,0,0.1564345,0,1,0,-0.1564345,0,0.9876883,6.61,0.9534889,-10.4)
+
+[node name="Prop_Mug" instance=ExtResource("e17") parent="Bench"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,6.08497,0.9655142,-10.1)
+
+[node name="Prop_HealthPack_Tube_service" instance=ExtResource("e18") parent="Bench"]
+transform = Transform3D(0.258819,-0.9659258,0,0.9659258,0.258819,0,0,0,1,5.437808,1.071159,-10.22)
+
+[node name="DisplayChassis" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,5.73,1.96,-11.22)
+mesh = SubResource("b27")
+
+[node name="monitor" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,5.73,1.96,-11.13)
+mesh = SubResource("q30")
+
+[node name="lockout" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,7.55,1.98,-11.54)
+mesh = SubResource("q32")
+
+[node name="Prop_Shelves_ThinShort" instance=ExtResource("e21") parent="Bench"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,7.9,0.02156156,-10.83)
+
+[node name="Prop_Ammo_Small_service2" instance=ExtResource("e16") parent="Bench"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,7.66,1.231489,-10.82)
+
+[node name="Prop_Locker" instance=ExtResource("e22") parent="MachineRoom"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,9.278035,0.02,-7.15)
+
+[node name="Prop_Computer" instance=ExtResource("e23") parent="MachineRoom"]
+transform = Transform3D(0.9612617,0,-0.2756374,0,1,0,0.2756374,0,0.9612617,4.137916,0.02119172,-10.00248)
+
+[node name="Prop_Barrel_Large" instance=ExtResource("e24") parent="MachineRoom"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.15,0.01182027,-10.4)
+
+[node name="Prop_Barrel_Large2" instance=ExtResource("e24") parent="MachineRoom"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.65,0.01182027,-10.83)
+
+[node name="Prop_Barrel_Large3" instance=ExtResource("e24") parent="MachineRoom"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,8.97,0.01182027,-9.66)
+
+[node name="Prop_Crate4" instance=ExtResource("e25") parent="MachineRoom"]
+transform = Transform3D(0.7625064,0,-0.1071633,0,0.77,0,0.1071633,0,0.7625064,-0.91,0.4545348,-9.55)
+
+[node name="fan_id" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.34,0.64,-11.03)
+mesh = SubResource("q34")
+
+[node name="lane4" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(6.123234e-17,1,-6.123234e-17,0,6.123234e-17,1,1,-6.123234e-17,3.749399e-33,8.95,0.035,-6.2)
+mesh = SubResource("q35")
+
+[node name="Prop_Vent_Wide" instance=ExtResource("e27") parent="MachineRoom"]
+transform = Transform3D(6.123234e-17,-1,0,1,6.123234e-17,0,0,0,1,9.52671,2.31915,-5.481102)
+
+[node name="return_air" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(6.123234e-17,0,-1,0,1,0,1,0,6.123234e-17,9.38,2.23,-5.63)
+mesh = SubResource("q37")
+
+[node name="threshold" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0,2.67,-3.525)
+mesh = SubResource("q39")
+
+[node name="AccessHeaderWash" type="OmniLight3D" parent="Lighting"]
+position = Vector3(0, 3.33, -2.75)
+light_color = Color(0.96471,0.81176,0.61961,1)
+light_energy = 2.8
+omni_range = 4
+omni_attenuation = 0.85
+shadow_enabled = false
+
+[node name="Prop_Light_Small" instance=ExtResource("e30") parent="Shell"]
+transform = Transform3D(1.4,0,0,0,1,0,0,0,1,0.602597,3.92768,-2.65)
+
+[node name="apron" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,6.123234e-17,1,0,-1,6.123234e-17,5.16,0.039,-7.55)
+mesh = SubResource("q41")
+
+[node name="HazardJamb" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.02,1.31,-3.615)
+mesh = SubResource("b42")
+
+[node name="jamb" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.02,1.22,-3.541)
+mesh = SubResource("q45")
+
+[node name="warning5" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.02,1.72,-3.555)
+mesh = SubResource("q46")
+
+[node name="DoorProtection" type="MeshInstance3D" parent="Shell"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-1.02,1.1,-3.557)
+mesh = SubResource("b47")
+
+[node name="HazardJamb2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.02,1.31,-3.615)
+mesh = SubResource("b49")
+
+[node name="jamb2" type="MeshInstance3D" parent="Print"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.02,1.22,-3.541)
+mesh = SubResource("q50")
+
+[node name="warning6" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.02,1.72,-3.555)
+mesh = SubResource("q51")
+
+[node name="DoorProtection2" type="MeshInstance3D" parent="Shell"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.02,1.1,-3.557)
+mesh = SubResource("b52")
+
+[node name="TrussLowerChord" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-4,4.17,-10.63)
+mesh = SubResource("b53")
+
+[node name="TrussUpperChord" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,-4,4.8,-10.63)
+mesh = SubResource("b55")
+
+[node name="TrussWeb" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,-5.5,4.49,-10.63)
+mesh = SubResource("b56")
+
+[node name="TrussWeb2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,-4.5,4.49,-10.63)
+mesh = SubResource("b58")
+
+[node name="TrussWeb3" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,-3.5,4.49,-10.63)
+mesh = SubResource("b59")
+
+[node name="TrussWeb4" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,-2.5,4.49,-10.63)
+mesh = SubResource("b60")
+
+[node name="TrussLowerChord2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0,4.17,-10.63)
+mesh = SubResource("b61")
+
+[node name="TrussUpperChord2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0,4.8,-10.63)
+mesh = SubResource("b62")
+
+[node name="TrussWeb5" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,-1.5,4.49,-10.63)
+mesh = SubResource("b63")
+
+[node name="TrussWeb6" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,-0.5,4.49,-10.63)
+mesh = SubResource("b64")
+
+[node name="TrussWeb7" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,0.5,4.49,-10.63)
+mesh = SubResource("b65")
+
+[node name="TrussWeb8" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,1.5,4.49,-10.63)
+mesh = SubResource("b66")
+
+[node name="TrussLowerChord3" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,4,4.17,-10.63)
+mesh = SubResource("b67")
+
+[node name="TrussUpperChord3" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,4,4.8,-10.63)
+mesh = SubResource("b68")
+
+[node name="TrussWeb9" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,2.5,4.49,-10.63)
+mesh = SubResource("b69")
+
+[node name="TrussWeb10" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,3.5,4.49,-10.63)
+mesh = SubResource("b70")
+
+[node name="TrussWeb11" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,4.5,4.49,-10.63)
+mesh = SubResource("b71")
+
+[node name="TrussWeb12" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,5.5,4.49,-10.63)
+mesh = SubResource("b72")
+
+[node name="TrussLowerChord4" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,8,4.17,-10.63)
+mesh = SubResource("b73")
+
+[node name="TrussUpperChord4" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,8,4.8,-10.63)
+mesh = SubResource("b74")
+
+[node name="TrussWeb13" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,6.5,4.49,-10.63)
+mesh = SubResource("b75")
+
+[node name="TrussWeb14" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,7.5,4.49,-10.63)
+mesh = SubResource("b76")
+
+[node name="TrussWeb15" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,-0.5299193,0,0.5299193,0.8480481,0,0,0,1,8.5,4.49,-10.63)
+mesh = SubResource("b77")
+
+[node name="TrussWeb16" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(0.8480481,0.5299193,0,-0.5299193,0.8480481,0,0,0,1,9.5,4.49,-10.63)
+mesh = SubResource("b78")
+
+[node name="Column_Pipes" instance=ExtResource("e6") parent="MachineRoom"]
+transform = Transform3D(0.58,0,0,0,6.062002e-17,-0.58,0,0.99,3.551476e-17,9.21,3.463642,-11.175)
+
+[node name="Column_Pipes2" instance=ExtResource("e6") parent="MachineRoom"]
+transform = Transform3D(0.58,0,0,0,6.062002e-17,-0.58,0,0.99,3.551476e-17,9.21,3.463642,-6.235)
+
+[node name="LampHood" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,1.27,3.12,-10.87)
+mesh = SubResource("b79")
+
+[node name="ServiceLamp" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(1.27, 3.08, -10.72)
+material_override = SubResource("RunGreen")
+mesh = SubResource("PilotLens")
+
+[node name="PilotSpill" type="OmniLight3D" parent="Lighting"]
+position = Vector3(1.27, 3, -10.56)
+light_color = Color(0.38,0.94,0.66,1)
+light_energy = 1.15
+omni_range = 2.05
+omni_attenuation = 0.85
+shadow_enabled = false
+
+[node name="LampHood2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,3.41,3.12,-10.87)
+mesh = SubResource("b83")
+
+[node name="ServiceLamp2" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(3.41, 3.08, -10.72)
+mesh = SubResource("PilotLens")
+
+[node name="PilotSpill2" type="OmniLight3D" parent="Lighting"]
+position = Vector3(3.41, 3, -10.56)
+light_color = Color(1.0,0.33725,0.38039,1)
+light_energy = 1.15
+omni_range = 2.05
+omni_attenuation = 0.85
+shadow_enabled = false
+
+[node name="motor_plate" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,1,0,0,0,1,2.34,0.36,-11.025)
+mesh = SubResource("q85")
+
+[node name="floor_mark" type="MeshInstance3D" parent="Print"]
+visible = false
+transform = Transform3D(1,0,0,0,6.123234e-17,1,0,-1,6.123234e-17,2.46,0.037,-9.35)
+mesh = SubResource("q87")
+
+[node name="Prop_Fan_Small_service" instance=ExtResource("e11") parent="Bench"]
+transform = Transform3D(0.3782074,-0.1053874,-0.09046346,0,0.3125963,-0.2877359,0.1302273,0.3060671,0.262725,5.527516,1.233435,-10.34087)
+
+[node name="PartsTray" type="MeshInstance3D" parent="Bench"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,6.25,0.969,-10.27)
+mesh = SubResource("b88")
+
+[node name="Prop_HealthPack_Tube_service2" instance=ExtResource("e18") parent="Bench"]
+transform = Transform3D(0.1871179,-0.6502872,0,0.612035,0.1988128,0,0,0,0.64,6.121989,1.067367,-10.26)
+
+[node name="Prop_HealthPack_Tube_service3" instance=ExtResource("e18") parent="Bench"]
+transform = Transform3D(0.1871179,-0.6502872,0,0.612035,0.1988128,0,0,0,0.64,6.261989,1.067367,-10.26)
+
+[node name="Prop_HealthPack_Tube_service4" instance=ExtResource("e18") parent="Bench"]
+transform = Transform3D(0.1871179,-0.6502872,0,0.612035,0.1988128,0,0,0,0.64,6.401989,1.067367,-10.26)
+
+[node name="Prop_Light_Small" instance=ExtResource("e30") parent="Bench"]
+transform = Transform3D(1.48,0,0,0,1,0,0,0,1.2,6.327031,2.71768,-10.98)
+
+[node name="MotorServiceSpine" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,0.1,1.93,-11.02)
+mesh = SubResource("b90")
+
+[node name="MotorServiceSpine2" type="MeshInstance3D" parent="Shell"]
+transform = Transform3D(1,0,0,0,1,0,0,0,1,4.54,1.93,-11.02)
+mesh = SubResource("b92")
+
+[node name="Prop_Vent_Wide2" instance=ExtResource("e27") parent="MachineRoom"]
+transform = Transform3D(1.02,0,0,0,6.123234e-17,-0.7,0,1,4.286264e-17,7.620004,3.714748,-11.36671)
+
+[node name="PrintPass" type="MeshInstance3D" parent="."]
+mesh = SubResource("Post")
+extra_cull_margin = 16384.0
+cast_shadow = 0
+
+[node name="CastIntakeA" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(1.25,1.9784,-11.086)
+mesh = ExtResource("cast")
+material_override = SubResource("FinishA")
+
+[node name="CastIntakeB" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(3.4,1.9784,-11.086)
+mesh = ExtResource("cast")
+material_override = SubResource("FinishB")
+
+[node name="LocalIsolatorA" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(-1.02,1.16,-3.525)
+mesh = ExtResource("switch")
+material_override = SubResource("FinishA")
+rotation = Vector3(0,0,0)
+
+[node name="LocalIsolatorB" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(1.02,1.16,-3.525)
+mesh = ExtResource("isolated")
+material_override = SubResource("FinishA")
+
+[node name="BenchSwingHoist" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(5.45,2.82,-10.54)
+mesh = ExtResource("jib")
+material_override = SubResource("FinishA")
+rotation = Vector3(0,0.115,0)
+
+[node name="ToolDrawers" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(5.99,0.05,-9.815)
+mesh = ExtResource("drawers")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate00" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(-2,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate01" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(-2,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate10" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(0,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate11" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(0,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate20" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(2,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate21" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(2,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate30" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(4,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate31" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(4,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate40" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(6,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate41" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(6,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate50" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(8,4.17,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="TrussFishplate51" type="MeshInstance3D" parent="MachineRoom"]
+position = Vector3(8,4.8,-10.55)
+mesh = ExtResource("fishplate")
+material_override = SubResource("FinishA")
+
+[node name="CaseLight" instance=ExtResource("e30") parent="Shell"]
+position = Vector3(-0.69,2.91,-11.3)
+rotation = Vector3(-0.45,0,0)
+scale = Vector3(1.22,0.9,0.95)
+
+[node name="ZoneLight" instance=ExtResource("e30") parent="Shell"]
+position = Vector3(9.3,2.91,-9.54)
+rotation = Vector3(-0.45,-1.5707963267948966,0)
+scale = Vector3(1.22,0.9,0.95)
+
+[node name="SpareCartridgeRack" instance=ExtResource("pipe_rack") parent="MachineRoom"]
+position = Vector3(-0.88,1.29,-11.23)
+scale = Vector3(0.407,0.51,0.45)
