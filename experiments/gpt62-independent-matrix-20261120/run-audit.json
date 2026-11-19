@@ -4660,6 +4660,392 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "stage_status": "collected and audited; visual comparison pending",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-low"
+    },
+    "xhigh": {
+      "game": "dredge",
+      "effort": "xhigh",
+      "session_ids": [
+        "01a1f51e-c21a-78d3-83fe-0dcc2ff741af"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "xhigh",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 4825730,
+        "cached_input": 4667648,
+        "uncached_input": 158082,
+        "output": 46262,
+        "reasoning_output": 11751,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "41abf764c154ff92f8dc4036f34dc42dbda64727",
+      "source_commits": [
+        "793ba862f9cac5923addf718bcc261b0820b640c Freeze neutral whitebox, references and production instructions",
+        "7fda8723ad9515479f712da0304b3751a089076c Establish visual direction from the three frozen DREDGE references",
+        "bddb661ad935894706ce3f167ad1692490b63104 Compare sourced plaster and painted boarding at full quay-wall scale",
+        "2340a5d9efbbbf2ece75379668ff08ef25828ed4 Freeze the first playable fish landing and its three camera reviews",
+        "41abf764c154ff92f8dc4036f34dc42dbda64727 Deliver the revised Brinewick landing with seated catch and final camera evidence"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "82baa9fc4ff04eec2cb803e43a409509aa8877b918c8e857f05fa221fcfcfba2",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1092261
+        },
+        "captures/first/props.png": {
+          "sha256": "279b69ea87dd2f06003305d6a56b98b21fb9057f9ef17dde1b2c2d727ec6ada0",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1151354
+        },
+        "captures/first/close.png": {
+          "sha256": "4c75fa9120e9702369e4bede7f0461d732445fda23f85495695472492c4c7a87",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1111036
+        },
+        "captures/final/door.png": {
+          "sha256": "b80ff4750c2ccd48ad0ea24e71d213eba27091ccc79fc4b993ce7005ddf1ae91",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1001571
+        },
+        "captures/final/props.png": {
+          "sha256": "ba44072a81fd1effd60197b75541e5420943ff856b18920e80df0c82ffbcc7f6",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1037447
+        },
+        "captures/final/close.png": {
+          "sha256": "fc28bd5cc809bd2afefa051228e2d1061ed1b3efd7a3c4028688283a45936f9c",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1056447
+        }
+      },
+      "protected_input_changes": [],
+      "base_lab_scene_override_check": {
+        "nonvisual_property_overrides": [],
+        "scope": "Static final.tscn inherited-node inspection only; unchanged base source separately hashed. Does not prove added-prop clearance or replace manual traversal."
+      },
+      "first_commit": "2340a5d9efbbbf2ece75379668ff08ef25828ed4",
+      "first_dependency_changes": [],
+      "preexisting_resource_changes_after_first": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 54,
+      "view_image_blocks_with_literal_tool_name": 10,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed direct original-image calls and own-file diagnostic crop, plus flagged file-access inputs; available records show own files/public sources only, no peer/host art or solution reads found. Untested tool surfaces remain outside absolute isolation claims.",
+      "technical_summary": "小样存色、鱼片支承与门槛已修；补存九张修前原图；首轮资源未变，未见跨读",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 7,
+      "coordinator_preflight_capture_log_count": 0,
+      "capture_logs_with_error_strings": [],
+      "collected_files": 194,
+      "collected_bytes": 16815698,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "745fd0410bc5a721c897e2757f29a93ff8d7f86dc7227c928c245c45cce775cc",
+        "ENVIRONMENT.md": "9afb8019a342645b5c74911687514a9e3d7998c02002d3f6f5be5c7ef912ffb7",
+        "README.md": "6b83f03653cd4c83af0d4feb4f91ffba894da1f42f19be773925ab2c1854ad1f",
+        "REFERENCES.md": "1b5060590edd917eba2e0a82a4ecbf484f2db5f558c2eba1c87630807e80de18",
+        "RESEARCH.md": "6624b6ff7759c8e15352f05b51e97d60db76c06cce6495f2912009303cadd2df",
+        "REVIEW.md": "28a0419eba804f113ea986892c644b2c23eb1175e0d325a04e4529dbb835cdcd",
+        "art/final/graphics/trade_dial.png": "66022cac396cfec76613a2c46d56340541e04c51de7dffefe8ae4f7cad2170f3",
+        "art/final/graphics/trade_dial.png.import": "d6ca2283e47c6eba5ce7e50030a835cd915c7eb1d86bb97e84964baca4cd6b1f",
+        "art/final/models/barrel.glb": "31ff70a42bab49985d1b21c17a8dbc271c3f3d602a879f5fc53171611f26c4e2",
+        "art/final/models/barrel.glb.import": "cac3e10a1f89b22fee14cfdbb5d62a56a79166d65b684766b1146aa648e9fc89",
+        "art/final/models/crate-bottles.glb": "5f304719fde32d4f1a12d275ceea491ce9072898fec4487da71c7ef1fb133668",
+        "art/final/models/crate-bottles.glb.import": "831fb51abdd974d0868ff476312d7414c1172a8098e06fd2fe9114e779bc235f",
+        "art/final/models/crate.glb": "8a7f6d2d74181843c594f45a048ac04516e40c87a2e63c4c708d6296d285aad8",
+        "art/final/models/crate.glb.import": "6878ee98eb7ebe7409b8be8c87f63b76b115ab805a4ccc69629a9932d0d71127",
+        "art/final/models/cutting-board-japanese.glb": "6d319cfcb1801b1f3c112d2b9462e20bdca2653617732d3bfd3d8a2e793ebe27",
+        "art/final/models/cutting-board-japanese.glb.import": "0f8d9ade4e30cabd5a4814acedfa8e49563a7f19d07a4a9d9c93fa071c5fddcc",
+        "art/final/models/dressed_trout.glb": "34951249bbb8efb97703c5dfe9d7cafb71479d395483563c2f25c4d09ba29269",
+        "art/final/models/dressed_trout.glb.import": "fecc0842fb6498b72adaf70e4d92d8091ade8b6c0403470fe52dfa9a90ddb779",
+        "art/final/models/fishers_cloth.glb": "b311417f1643d918094ffd241d72be718509d97b107a68cfb0fa58e49ca4abce",
+        "art/final/models/fishers_cloth.glb.import": "3a25af2841dabb79a32e27ddb0dfeb8ff7b15aa67716c5587d08f9682cf0cdd8",
+        "art/final/models/planks.glb": "19ea59032ba8394e4b18f73247a10fa8fef15d9f98b854c0a2b923f125acc41b",
+        "art/final/models/planks.glb.import": "1040864cb5e7a3a25029656842285797e1cbe19fb403ddcb27c06e55a3005c96",
+        "art/final/models/roof-gable.glb": "9fe446338fea1b7b571710d11dee7f799f11e703f170e4ab95d8579c50ed0bfb",
+        "art/final/models/roof-gable.glb.import": "f103659e168b3fefa6949f45d5e83a56ca88b383085f9f26b9b21e179fa46105",
+        "art/final/models/roof.glb": "bc3a31c9c33173503ef196d6f9ca3f49798ef1d26d3dcec987d18c0a8c704ea2",
+        "art/final/models/roof.glb.import": "a73db081e0793a2ad27b486f47c1c0177f9301ce722cbb8c0d64ab4d642b46bd",
+        "art/final/models/salmon_steak.glb": "569e649c31d0f64ca854c81b31d1763f88c1cb5c70f3f9952da969a79f8c0216",
+        "art/final/models/salmon_steak.glb.import": "c83d85a9c36c5c428b17ba3a38d2afaf7e8236ce5b205d9bd195cb96c200d78a",
+        "art/final/models/sound_trout.glb": "ff74741d1087aa7d1e3ea031e656f7c9a380c8f1295788d0a6781b508d5d0305",
+        "art/final/models/sound_trout.glb.import": "ab088de5cdaa5cd32b79061dddff2471e7432193b417f25d3e521e07f8e51d49",
+        "art/final/models/stall.glb": "c1be775381acf9232e7555db37341271513b73a25a5918bef24c45e95d035a38",
+        "art/final/models/stall.glb.import": "bac22f341f833ab921de835b0e3ab9e6bae81efca2297daf0415f74d42336768",
+        "art/final/models/wall-detail-diagonal.glb": "ecc751902241d73f523919585c72dce3c8f1792f42fec16c4d3ed64e8f0925cc",
+        "art/final/models/wall-detail-diagonal.glb.import": "71db1b329d6d3f0acb6e3c2a704ba8abedd3cb2e800921387b24649ab84af3b6",
+        "art/final/models/wall-window-shutters.glb": "745f5495d36edbbb3d9db24f2653512df2faec9f1b936a7bd4e81db279f4635b",
+        "art/final/models/wall-window-shutters.glb.import": "e4dcef9768537efa50f8306507c6a5252313dd387c9f386dbd9c595a37d09aca",
+        "art/final/models/wall-wood.glb": "53db1bf36ae60f9cd91c09e88658b6f5410a2acf80e184486d5cd1ca4654e072",
+        "art/final/models/wall-wood.glb.import": "b11c2c246d4401bc929606aa584a1ee63f7a8dbf11c55c8edb374ccbfdc8862f",
+        "art/final/models/wall.glb": "5c2002e21a310df2eae6f95aa2cbb44937a48f49f03d605d02973b057b567e74",
+        "art/final/models/wall.glb.import": "7fe4ac48ab30b57c065be5c00a9e2cda2b56c29e81891f906306e798a4124c22",
+        "art/final/surfaces/cut.png": "6dad7fbaf58a682e2ddf3218a313b9463ad52a7e5782bacd5d079fdc2807ab31",
+        "art/final/surfaces/cut.png.import": "9e48c8bcca8a53fd114b374fb13508af856b9cf60653567e3f0be74b1434a05e",
+        "art/final/surfaces/outer_sound.jpg": "f04902c2aa2ff55eaf0f03904cfcf0cfa853aec22912992a5d779af02935ccd7",
+        "art/final/surfaces/outer_sound.jpg.import": "4efdfc45ad09baec289887b0f3d4392edad065557ac9a8dd57aa79b7ecb1c068",
+        "art/final/surfaces/plaster.png": "3549bfd609bf4ce8bffc9845bad00fd5dee705ed76d5ab2db504e18cff9bf68b",
+        "art/final/surfaces/plaster.png.import": "2196826a254daedde5e5b5321457e97e48860a30164d3af769f832fe7f934801",
+        "art/final/surfaces/quay_stone.jpg": "405ae0d97aad9bde25d76501ec167f8f48de1181a29203192c9adb2e0751d64f",
+        "art/final/surfaces/quay_stone.jpg.import": "543b1e2621a028ecae2b7b21b53786111c6f38385fbcfb408d71d0132e92c100",
+        "art/final/surfaces/siding.png": "6b1c10a155cd2f722c7e6e36b93fc845a8405414855163f4cb6dd252d46214a1",
+        "art/final/surfaces/siding.png.import": "8201128dbda3cab20ea4d44180c0b628f951434f670474764a6c84fe262f1ec2",
+        "art/final/surfaces/timber.png": "e66354f5b22cc7c71dd1cda3c302195bc0f7e5509bb5ac2c80734d63409581b1",
+        "art/final/surfaces/timber.png.import": "40143124353e1a3941e7855f8df0e1a5cc78c30c21b493f317d6b440d6526568",
+        "art/final/surfaces/trout.png": "d7a3c486b6c1e8cb9dccd8fe379bea6708ae1324394d4b3f2aed43c4d3390e99",
+        "art/final/surfaces/trout.png.import": "ee7e8e8e51c810930e6d37f8f48c193cbc0a8437791de05644d2b90c97f80298",
+        "art/graphics/landing_name.png": "5f35113c06d31cd2ae51a7df7c1760a17f0cd6a87499703634bf5a3f2c16b246",
+        "art/graphics/landing_name.png.import": "9ad9f17ef7ec7abd5747f761c94dc0156b717f777a9f5b217c7a528e9c4257f8",
+        "art/graphics/shipping_mark.png": "8c9b76ce261847bb0f667cb418a96d43fd55183baa5acb64837b09aa1cfda61a",
+        "art/graphics/shipping_mark.png.import": "4be5f9238b5723c0fb591c37eb7228f53f45b67bffcbc2dab866b2b131d4777f",
+        "art/graphics/tally.png": "707a56c5a84f830ba3a4eb3c7cf7bf16d963c5dbc3837ac23c5eefffb598bf15",
+        "art/graphics/tally.png.import": "e7576a8322d462007155de8f71d0d79621f2f885e95ddf37d0e9bd4bb830954b",
+        "art/graphics/trade_dial.png": "0d38efe625aa17a8662fb08661adade3cb2b07e6fbe0190a3f0539f943db45a4",
+        "art/graphics/trade_dial.png.import": "3d61db570d8e4d02cb7adc9abfa5c46ae764990aea3d18b643f945c76748eac0",
+        "art/graphics/weigh_house.png": "15474b1854893f729f49635d7bd5b93e30ab9a2612472dfbe7aa13f670dd24e6",
+        "art/graphics/weigh_house.png.import": "e47869ea8e1cd6e6a4d1724e447eb77c58618e7c4ef10f5ad36c228f8c6e2903",
+        "art/licenses/BarlowCondensed-OFL.txt": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "art/licenses/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+        "art/licenses/Kenney-galley.txt": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f",
+        "art/licenses/Kenney-pier.txt": "5e99246a5a65fa3420a1a1c7a8616f096202c78866f73d7aacfe73c0aab0ca36",
+        "art/licenses/Kenney-town.txt": "fb8e4817197ef9f62215e95b4451a0f09c769c8e03e416e3a2ce108dfa6117e4",
+        "art/models/barrel.glb": "1aa159c08ed8c3fc6f5d2f3038814a0ed2683b9ce0ce91ad049aa16ff3fc4dd9",
+        "art/models/barrel.glb.import": "c60796c95e527e379ed836d10ea3392ebb550ffbb7e8d4a1b7dc15162a852959",
+        "art/models/bowl.glb": "ccad1027d310c23ea3cf76046d8554bc9b1f06c925d2dfa36b5ee393615f449d",
+        "art/models/bowl.glb.import": "ecefa265108138614890f14cb481fcd7ae764fb005030354585a0daaa27f8a36",
+        "art/models/cage_lamp.glb": "46d0c1020088ad61d512ef7e44b4f6185f8220a99b8adfa2f59217f43b70e092",
+        "art/models/cage_lamp.glb.import": "d316ed705259c5123a6047581c32bf35ae012609797d6d271b6063c15107631c",
+        "art/models/cod_vane.glb": "592b05fcf2dfe860fc72adf333a39d32a4e0a5f6160362efa9880fd568ef5089",
+        "art/models/cod_vane.glb.import": "2f7664c207ed10b8f5f1cc5c93202c495fcb47fe1f41a586b8b536e7fcafa4ab",
+        "art/models/cooking-knife-chopping.glb": "9f98a41d7710194d4172209766ff92607473da9f2fa86de4f73caaba467491d5",
+        "art/models/cooking-knife-chopping.glb.import": "1ddcf5cb34a3026a460b5f329c7fa3ad871b872ad2be43b693578540f0b44dcb",
+        "art/models/cork_float.glb": "321487f5634ffa1f0579eba33ee4ab948d331fd418ca9f6c691d3c5b8b7d4760",
+        "art/models/cork_float.glb.import": "76fb5d5ba4843f821c2dba9b209a93a3a1cd929d50e239d7b6ed33004b5798ee",
+        "art/models/crate-bottles.glb": "8e34b0f902b8583c5baa54a24ef2bbbdb48fd31ec6cdb7da6426a74fe54f89d1",
+        "art/models/crate-bottles.glb.import": "ab043d5524a01d03df0f0a2a2d92b1747139d4dfe3c44efc82514e1e3e02967a",
+        "art/models/crate.glb": "8a7f6d2d74181843c594f45a048ac04516e40c87a2e63c4c708d6296d285aad8",
+        "art/models/crate.glb.import": "d8b74ce793d217ba905da055e4b2adc5df03b3023a2c32196240d032e458d501",
+        "art/models/cutting-board-japanese.glb": "6d319cfcb1801b1f3c112d2b9462e20bdca2653617732d3bfd3d8a2e793ebe27",
+        "art/models/cutting-board-japanese.glb.import": "91150b6d1175e3b1351bf3e572fac8189875b9124e6c0898b8c9757418cb42a3",
+        "art/models/fish.glb": "df9df63b713002e5f9fdeac240f476697934c28e43cd87e1cd849a3e903f1464",
+        "art/models/fish.glb.import": "65279c6dd673d95f3ef3e0e807afac5c0934d86da2213e2551199544be48d7a7",
+        "art/models/hanging_seine.glb": "2f768a092d2a85b01143ea76f92f2bf58701d64b05a0b969981d13a0186b4d97",
+        "art/models/hanging_seine.glb.import": "ca793bef814a8075e9e8bf7c967449d3eb2db70246ea1a478a0af42a25219b73",
+        "art/models/laid_line.glb": "04554b5e8c1de71245cb82c96fd04d784dcf2373e9d7a2761a4c983afa0ed0bf",
+        "art/models/laid_line.glb.import": "1e1626123f6e21afe6a18ad7d6df69cdee656521d0ea5a3b95c4094fb88ab010",
+        "art/models/life_ring.glb": "8f82a60749aa4ef0ae7015033edf89693903664cf025884226223d985a9ae7c5",
+        "art/models/life_ring.glb.import": "590ec9f35d1a55964d58814a545a35920948f4047d031ff64dc837f99bf7932a",
+        "art/models/mussel-open.glb": "cfd97cc6aec2b53c5ef75ab8772c930d4202f5e900aa5a71e387e334eca9e2b3",
+        "art/models/mussel-open.glb.import": "ba131956b97a5ae2f00bf2be0e5891e70848453e2d0711631a8a98324dabade5",
+        "art/models/pillar-wood.glb": "1dcba41ef8a355a4c9147448892452c91a70b588c27de908a42ee77f078ebf80",
+        "art/models/pillar-wood.glb.import": "c9a9a9fd5f9f1e27a0123708ecaadfde8915df1490b6bf82ed26048ee43cc018",
+        "art/models/planks.glb": "e300cd7f3ade416e5fcd046ad82abce41e84d5344eaef95f930659fcd549dbba",
+        "art/models/planks.glb.import": "ad2cc4828e72dd130343038a9de6843042cacc3211f33071aebf4250bda0a1d1",
+        "art/models/roof-gable.glb": "644424a0b9b5163f92fb99d2ab648b563aaec61c433efc64ff0caf1c041c3793",
+        "art/models/roof-gable.glb.import": "b4496b49b595095e1a0245cdac0cd1feb5864ce746491b7322bd6c99a90c6572",
+        "art/models/roof.glb": "2c60981ee05fca8c171ab8c9ddb079f1f2c007c8e0ea963395fff2d4138bd3ab",
+        "art/models/roof.glb.import": "cdae5c7a1f06351f36e6e6aee1366263a511aa6ee056a5de720a06dd010a4e73",
+        "art/models/scale_pan.glb": "27033a17916041982e2aff03e921b284a0fa4aa4fa73040d80c7555bb27222de",
+        "art/models/scale_pan.glb.import": "009ac9ffb6aa2a30bbcf9f6e46172ca933e0944d9ee8e17e4f091991747f96be",
+        "art/models/stall.glb": "5946937b3c7a35e29768475b0a308d2e7a01f1669e9f3e7c5e9c9da424da84a1",
+        "art/models/stall.glb.import": "8c6b5a3e6492065e61776ba7c2b514c09e482590ef57952cb43328caad185685",
+        "art/models/tool-paddle.glb": "9c070f394e9381fad938a6561c628f7bc63289a5602305529478dc441eec1223",
+        "art/models/tool-paddle.glb.import": "34628d4d706d147c266e9cd11fc6568f8f5e00b3ab626bbb68251110b7c07a4f",
+        "art/models/wall-detail-diagonal.glb": "ecc751902241d73f523919585c72dce3c8f1792f42fec16c4d3ed64e8f0925cc",
+        "art/models/wall-detail-diagonal.glb.import": "e67afb3b4816991ada7aa7c9b47c5e62da0049e87ef6bcbc10314e04edfddf89",
+        "art/models/wall-window-shutters.glb": "745f5495d36edbbb3d9db24f2653512df2faec9f1b936a7bd4e81db279f4635b",
+        "art/models/wall-window-shutters.glb.import": "16c327495f51361a41262a2ffec36d6702a99836c5810790ea8b2f5286999d23",
+        "art/models/wall-wood.glb": "2f8c823b0f769e193ce8f9ab55c8d57cb4166e9d1fc8d528b64732f081fb5577",
+        "art/models/wall-wood.glb.import": "67b892293416fdd3ff37871089681f277757d9bde8a36664baab27ac1e7ff14e",
+        "art/models/wall.glb": "5c2002e21a310df2eae6f95aa2cbb44937a48f49f03d605d02973b057b567e74",
+        "art/models/wall.glb.import": "afa020e1876d190585128c054fcb274ea4d75e86f9378f63ccdd308883e98138",
+        "art/surfaces/outer_sound.jpg": "f1e8762670569694e3605f3bed7499c2935e924d751e0dec16d6e2fa4f63420a",
+        "art/surfaces/outer_sound.jpg.import": "8a9165f48d0f74c0a3883ce10c0850c7cf13d83696452aa8a53f04ba9c46c4c8",
+        "art/surfaces/plaster.png": "844d6bf9cd3803903b38862db233cea8d7d60afef39213286dfeffe1121b4263",
+        "art/surfaces/plaster.png.import": "ccacf8ef0eb9f9d2f35fca4072a2739574733a87d6110f21e564fd02b9538475",
+        "art/surfaces/quay_stone.jpg": "67c3383532e7ec5909b2ebd0671ca4baa7aa7623e2830682661ffc2bb87a7137",
+        "art/surfaces/quay_stone.jpg.import": "e65cf8c550d0f69d12311e3f0d4726f35ec0f76b497f7aed8536626ff9e8aae4",
+        "art/surfaces/siding.png": "cbacfce9bef104cf46ae3ce9c0239aa24c5f2faffacfe8ee941a59720d9d2d4c",
+        "art/surfaces/siding.png.import": "4e7ffb3f7bbb3d021620d6d97cc3ee6098378394b62462c7a81ccac4b2ec447e",
+        "art/surfaces/timber.png": "68cfec0020b81d1cbf5d452d97e1c7f6f26e1a9d5407da0cb0052e230b1adea9",
+        "art/surfaces/timber.png.import": "14cd39c17a18b2e87e944f1450e89733ea4fc70a05482753e423ba62b9e844e6",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/final/close.png": "fc28bd5cc809bd2afefa051228e2d1061ed1b3efd7a3c4028688283a45936f9c",
+        "captures/final/door.png": "b80ff4750c2ccd48ad0ea24e71d213eba27091ccc79fc4b993ce7005ddf1ae91",
+        "captures/final/props.png": "ba44072a81fd1effd60197b75541e5420943ff856b18920e80df0c82ffbcc7f6",
+        "captures/first/close.png": "4c75fa9120e9702369e4bede7f0461d732445fda23f85495695472492c4c7a87",
+        "captures/first/door.png": "82baa9fc4ff04eec2cb803e43a409509aa8877b918c8e857f05fa221fcfcfba2",
+        "captures/first/props.png": "279b69ea87dd2f06003305d6a56b98b21fb9057f9ef17dde1b2c2d727ec6ada0",
+        "captures/sample-boards/close.png": "23a097ae359694d24db3cfc2e38a753d6b9e96c861a3737c92cc227708455c62",
+        "captures/sample-boards/door.png": "b3624ef61a0030bd8176bd90c7ef0a64af21add090e56ab36c3e1ff879690ffb",
+        "captures/sample-boards/props.png": "cde106218d4a8f6988ac7fa0c930562c680902255efdc2cdddb7bc64bf8ccf24",
+        "captures/sample-cream/close.png": "4ea706225c13f3a51e59f3c3b0a85d539f7cfa3a0d7aebcef77d3361bef44feb",
+        "captures/sample-cream/door.png": "57f97e5e6be815b0111dfe41e1f474532a77ea6c65b3782e1994e856c974252e",
+        "captures/sample-cream/props.png": "18aa915caace1e6b360c78ac800e9ba3c0804c44d3495dbd3a2a19d0e26589b8",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "863ed8530ce9385b8efa2e006e7fa2857cdd113e8a234c8a8948706ad4dda269",
+        "first.tscn": "24165f07c146aacbae7a87f25eb8d22498ff846456323c229d17bfd01476ff43",
+        "project.godot": "1fd1871871e0d4144073f40cc72ed13976180ed4c281316ed4982d4e32976ebc",
+        "references.json": "f23521c43af7572ca3dff655de1fa031f7ed90605993dc015f84fa33d693d6ec",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "cbd043bb4da8f8d85f23c9f53ff42c5426dd3f2f2aef9fb029f1c0cba75bed98",
+        "sample_b.tscn": "235b84fa0f7cf1d7f277ca27e89396f76d8a5ba130099fa57ad24d5f9188b60f",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "archived_scene_dependencies": [
+        {
+          "entry": "first.tscn",
+          "files_checked": 54,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        },
+        {
+          "entry": "final.tscn",
+          "files_checked": 57,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        }
+      ],
+      "coordinator_supplemental_evidence": [
+        {
+          "source_private_relative_path": ".work/technical-evidence/final-before-seating/door.png",
+          "archived_path": "captures/technical/final-before-seating/door.png",
+          "sha256": "14339591164def977a26371a4db086351e3448c848fdc435bf18e3ca8a3c3ae8"
+        },
+        {
+          "source_private_relative_path": ".work/technical-evidence/final-before-seating/props.png",
+          "archived_path": "captures/technical/final-before-seating/props.png",
+          "sha256": "a51b346bfccf27428d3f3b28d28ebd37e8067310dac3bfa557d0266f92dd3a15"
+        },
+        {
+          "source_private_relative_path": ".work/technical-evidence/final-before-seating/close.png",
+          "archived_path": "captures/technical/final-before-seating/close.png",
+          "sha256": "7625608ff4dfcc0ba6663d222f838dd4a3d5298058b74fc0e3ccd7dd13ef23dc"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-a/door.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/door.png",
+          "sha256": "d74a260437fe50b43aae45d2c2ecefbac1cdc095829ce0915970a8df0058b3aa"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-a/props.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/props.png",
+          "sha256": "02388c3fb1f06ea30bb5c063f5fc86beb5f0954eb390af7d01836cbcde145724"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-a/close.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/close.png",
+          "sha256": "d21d5539c1b367da6cc9e6dd3ff755450a807014fe52f37e89d5d84162e6a295"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-b/door.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/door.png",
+          "sha256": "6a481b9dc7119db4037425b768cc43a4c4a8e955e95d02689e30c794ebcb4db9"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-b/props.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/props.png",
+          "sha256": "8899f48275c0b07a151d9842c5ad7ce2e299d0ca4fdf1dd7c310f446d80b7046"
+        },
+        {
+          "source_private_relative_path": ".work/import-proofs/sample-b/close.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/close.png",
+          "sha256": "7e977f77db06ff0094995f2e5b55a74fb647add1fff595ab2fe66f8835acd878"
+        }
+      ],
+      "view_review_evidence": {
+        "references_and_whitebox": "All three frozen references and all three whitebox images",
+        "samples": "Initial A/B props and close, then all three corrected cream/boards views",
+        "first_all_three": "2026-11-19T18:54:53.603Z",
+        "final_all_three_before_repair": "2026-11-19T18:59:57.113Z",
+        "final_all_three_after_repair": "2026-11-19T19:02:06.149Z"
+      },
+      "technical_repairs": [
+        "Initial material color persistence failed for audition assets; repaired glTF base colors, rerendered both samples and compared corrected versions.",
+        "After final images, repaired fish cross-section closure/support, seated catch and lowered a 22mm threshold overlay to the original floor level; final resources only, all three recaptured.",
+        "Producer kept before-fix images privately; coordinator archived nine original technical evidence PNGs after completion without changing any source scene."
+      ],
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "stage_status": "collected and audited; visual comparison pending",
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-xhigh"
     }
   }
 }

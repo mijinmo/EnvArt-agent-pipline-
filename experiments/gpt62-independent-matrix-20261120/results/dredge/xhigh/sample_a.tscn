@@ -1,0 +1,292 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://whitebox.tscn" id="whitebox"]
+[ext_resource type="Texture2D" path="res://art/surfaces/timber.png" id="timber"]
+[ext_resource type="Texture2D" path="res://art/surfaces/quay_stone.jpg" id="quay_stone"]
+[ext_resource type="Texture2D" path="res://art/surfaces/siding.png" id="siding"]
+[ext_resource type="Texture2D" path="res://art/surfaces/outer_sound.jpg" id="outer_sound"]
+[ext_resource type="PackedScene" path="res://art/models/wall.glb" id="wall"]
+[ext_resource type="PackedScene" path="res://art/models/wall-window-shutters.glb" id="wall_window_shutters"]
+[ext_resource type="PackedScene" path="res://art/models/stall.glb" id="stall"]
+[ext_resource type="PackedScene" path="res://art/models/cutting-board-japanese.glb" id="cutting_board_japanese"]
+[ext_resource type="PackedScene" path="res://art/models/fish.glb" id="fish"]
+[ext_resource type="PackedScene" path="res://art/models/cooking-knife-chopping.glb" id="cooking_knife_chopping"]
+[ext_resource type="PackedScene" path="res://art/models/bowl.glb" id="bowl"]
+[ext_resource type="PackedScene" path="res://art/models/barrel.glb" id="barrel"]
+[ext_resource type="PackedScene" path="res://art/models/crate.glb" id="crate"]
+
+[sub_resource type="StandardMaterial3D" id="Post"]
+albedo_color = Color(0.407843, 0.329412, 0.278431, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Tar"]
+albedo_color = Color(0.25098, 0.243137, 0.235294, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Clay"]
+albedo_color = Color(0.552941, 0.270588, 0.266667, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Cream"]
+albedo_color = Color(0.858824, 0.792157, 0.67451, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Paint"]
+albedo_color = Color(0.215686, 0.368627, 0.376471, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Trim"]
+albedo_color = Color(0.603922, 0.470588, 0.337255, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("timber")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.8, 0.45, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Iron"]
+albedo_color = Color(0.282353, 0.32549, 0.32549, 1)
+roughness = 0.58
+metallic = 0.4
+
+[sub_resource type="StandardMaterial3D" id="Brass"]
+albedo_color = Color(0.701961, 0.584314, 0.341176, 1)
+roughness = 0.49
+metallic = 0.48
+
+[sub_resource type="StandardMaterial3D" id="Rope"]
+albedo_color = Color(0.639216, 0.54902, 0.407843, 1)
+roughness = 0.95
+metallic = 0
+
+[sub_resource type="StandardMaterial3D" id="Cord"]
+albedo_color = Color(0.364706, 0.34902, 0.313725, 1)
+roughness = 0.95
+metallic = 0
+
+[sub_resource type="StandardMaterial3D" id="Enamel"]
+albedo_color = Color(0.745098, 0.788235, 0.768627, 1)
+roughness = 0.48
+metallic = 0.13
+
+[sub_resource type="StandardMaterial3D" id="Deep"]
+albedo_color = Color(0.160784, 0.243137, 0.254902, 1)
+roughness = 0.73
+metallic = 0.08
+
+[sub_resource type="StandardMaterial3D" id="Rust"]
+albedo_color = Color(0.733333, 0.407843, 0.286275, 1)
+roughness = 0.85
+metallic = 0.08
+
+[sub_resource type="StandardMaterial3D" id="Cobbles"]
+albedo_color = Color(0.909804, 0.886275, 0.854902, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("quay_stone")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.45, 0.45, 0.45)
+
+[sub_resource type="StandardMaterial3D" id="WallBase"]
+albedo_color = Color(0.356863, 0.341176, 0.317647, 1)
+roughness = 0.86
+metallic = 0
+albedo_texture = ExtResource("siding")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.35, 0.52, 0.35)
+
+[sub_resource type="PanoramaSkyMaterial" id="PaintedSky"]
+panorama = ExtResource("outer_sound")
+
+[sub_resource type="Sky" id="OuterSound"]
+sky_material = SubResource("PaintedSky")
+
+[sub_resource type="Environment" id="HarbourAir"]
+background_mode = 2
+sky = SubResource("OuterSound")
+ambient_light_source = 2
+ambient_light_color = Color(0.701961, 0.752941, 0.807843, 1)
+ambient_light_energy = 0.95
+ambient_light_sky_contribution = 0.1
+reflected_light_source = 2
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.48
+ssao_intensity = 1.85
+ssao_power = 1.45
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.745098, 0.662745, 0.611765, 1)
+fog_light_energy = 0.85
+fog_depth_begin = 14.0
+fog_depth_end = 64.0
+fog_depth_curve = 1.3
+fog_sky_affect = 0.0
+
+[node name="Brinewick" instance=ExtResource("whitebox")]
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("HarbourAir")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-38, -57, -5)
+light_color = Color(1, 0.866667, 0.662745, 1)
+light_energy = 1.55
+light_angular_distance = 0.8
+shadow_enabled = true
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("Cobbles")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("WallBase")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("WallBase")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("WallBase")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("Post")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("Post")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("Post")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("Tar")
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("Tar")
+
+[node name="WallAudition" type="Node3D" parent="Art"]
+
+
+[node name="Bay1" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(9.72, 0, -10)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="Bay2" parent="Art/WallAudition" instance=ExtResource("wall_window_shutters")]
+position = Vector3(9.72, 0, -8)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.428571, 3.18, 2)
+
+[node name="Bay3" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(9.72, 0, -6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="Bay4" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(9.72, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="Bay5" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(9.72, 0, -2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="Return1" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(7, 0, -1.29)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="Return2" parent="Art/WallAudition" instance=ExtResource("wall")]
+position = Vector3(9, 0, -1.29)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.5, 3.18, 2)
+
+[node name="FilletingBench" type="Node3D" parent="Art/WallAudition"]
+position = Vector3(8.83, 0.025, -4.63)
+
+[node name="Bench" parent="Art/WallAudition/FilletingBench" instance=ExtResource("stall")]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.784615, 2.735971, 2.53)
+
+[node name="ChoppingBlock" parent="Art/WallAudition/FilletingBench" instance=ExtResource("cutting_board_japanese")]
+position = Vector3(-0.06, 1, -0.25)
+rotation_degrees = Vector3(0, 5, 0)
+scale = Vector3(1.285714, 0.8125, 1.22619)
+
+[node name="LandedCod" parent="Art/WallAudition/FilletingBench" instance=ExtResource("fish")]
+position = Vector3(-0.1, 1.065, -0.29)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.837986, 0.798657, 1.272586)
+
+[node name="Cleaver" parent="Art/WallAudition/FilletingBench" instance=ExtResource("cooking_knife_chopping")]
+position = Vector3(-0.26, 1.065, 0.17)
+rotation_degrees = Vector3(0, -22, 0)
+scale = Vector3(0.666667, 0.75, 0.673643)
+
+[node name="EnamelBasin" parent="Art/WallAudition/FilletingBench" instance=ExtResource("bowl")]
+position = Vector3(0.04, 1, 0.88)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.876227, 0.84181, 0.741589)
+
+[node name="BrineCask" parent="Art/WallAudition" instance=ExtResource("barrel")]
+position = Vector3(9, 0.02, -6.55)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.561336, 0.756625, 0.561336)
+
+[node name="LandingBox" parent="Art/WallAudition" instance=ExtResource("crate")]
+position = Vector3(8.9, 0.022, -2.73)
+rotation_degrees = Vector3(0, 6, 0)
+scale = Vector3(0.769944, 0.701299, 0.771581)
+
+[editable path="BaseLab"]
