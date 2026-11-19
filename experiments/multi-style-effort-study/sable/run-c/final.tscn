@@ -1,0 +1,1472 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" path="res://baseline/source/grid.gdshader" id="5_grid"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Gate.gltf" id="r0"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/RakedBow.gltf" id="r1"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Fabric.gltf" id="r2"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Rig.gltf" id="r3"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/DistantBluffs.gltf" id="r4"]
+[ext_resource type="PackedScene" path="res://art/Door_Frame_Square.gltf" id="r5"]
+[ext_resource type="PackedScene" path="res://art/WallBand_Straight.gltf" id="r6"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Column_Pipes.gltf" id="r7"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_SatelliteDish.gltf" id="r8"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/EnamelBench.gltf" id="r9"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/Grindstone.gltf" id="r10"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/box-open.glb" id="r11"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Barrel2_Closed.gltf" id="r12"]
+[ext_resource type="PackedScene" path="res://art/Prop_Crate_Tarp.gltf" id="r13"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Crate4.gltf" id="r14"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bedroll-packed.glb" id="r15"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bucket.glb" id="r16"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bottle.glb" id="r17"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Mug.gltf" id="r18"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Vent_Wide.gltf" id="r19"]
+[ext_resource type="Shader" path="res://baseline/shaders/round03/ink.gdshader" id="r20"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/ThresholdPaint.gltf" id="ThresholdPaint"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/SandMarks.gltf" id="SandMarks"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/TealRack.gltf" id="WorkshopRacks"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/GateBadges.gltf" id="GateBadges"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/CanvasSeams.gltf" id="CanvasSeams"]
+[ext_resource type="Texture2D" path="res://baseline/assets/signs/depot.png" id="TexBenchDiagram"]
+[ext_resource type="Texture2D" path="res://baseline/assets/signs/route.png" id="TexIncomingRoute"]
+[ext_resource type="Texture2D" path="res://art/depot_mark.svg" id="TexGatePlate"]
+[ext_resource type="Texture2D" path="res://baseline/assets/signs/route.png" id="TexEastMarker"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/BowTies.gltf" id="BowTies"]
+
+[ext_resource type="Shader" path="res://art/sand.gdshader" id="sand"]
+
+[ext_resource type="Shader" path="res://art/beds.gdshader" id="beds"]
+
+[ext_resource type="Shader" path="res://art/load_deck.gdshader" id="load_deck"]
+
+[ext_resource type="Shader" path="res://art/desert_sky.gdshader" id="skyShader"]
+
+[ext_resource type="Shader" path="res://art/deck_final.gdshader" id="FreightFinish"]
+
+[ext_resource type="Texture2D" path="res://art/portal_plate.svg" id="ServiceStamp"]
+
+[sub_resource type="ShaderMaterial" id="Grid"]
+shader = ExtResource("sand")
+
+[sub_resource type="ShaderMaterial" id="Stone"]
+shader = ExtResource("beds")
+
+[sub_resource type="ShaderMaterial" id="Orange"]
+shader = ExtResource("load_deck")
+
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.650000, 0.610000, 0.530000, 1.000000)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="ShaderMaterial" id="skyMat"]
+shader = ExtResource("skyShader")
+
+[sub_resource type="Sky" id="desertSky"]
+sky_material = SubResource("skyMat")
+
+[sub_resource type="Environment" id="sky"]
+background_mode = 2
+sky = SubResource("desertSky")
+background_color = Color(0.62, 0.94, 0.94, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.84, 0.90, 0.99, 1)
+ambient_light_energy = 0.78
+reflected_light_source = 1
+
+[sub_resource type="ShaderMaterial" id="ink"]
+render_priority = 120
+shader = ExtResource("r20")
+
+[sub_resource type="QuadMesh" id="quad"]
+size = Vector2(2,2)
+material = SubResource("ink")
+
+[sub_resource type="StandardMaterial3D" id="PaintBenchDiagram"]
+albedo_texture = ExtResource("TexBenchDiagram")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelBenchDiagram"]
+size = Vector2(1.8,1.2)
+material = SubResource("PaintBenchDiagram")
+
+[sub_resource type="StandardMaterial3D" id="PaintIncomingRoute"]
+albedo_texture = ExtResource("TexIncomingRoute")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelIncomingRoute"]
+size = Vector2(1.7,1.13)
+material = SubResource("PaintIncomingRoute")
+
+[sub_resource type="StandardMaterial3D" id="PaintGatePlate"]
+albedo_texture = ExtResource("TexGatePlate")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelGatePlate"]
+size = Vector2(0.84,0.49)
+material = SubResource("PaintGatePlate")
+
+[sub_resource type="StandardMaterial3D" id="PaintEastMarker"]
+albedo_texture = ExtResource("TexEastMarker")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelEastMarker"]
+size = Vector2(1.47,0.98)
+material = SubResource("PaintEastMarker")
+
+[sub_resource type="StandardMaterial3D" id="matIron"]
+albedo_color = Color(0.18,0.24,0.25,1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="tubeIron"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1.0
+radial_segments = 10
+rings = 0
+material = SubResource("matIron")
+
+[sub_resource type="BoxMesh" id="boxIron"]
+material = SubResource("matIron")
+
+[sub_resource type="StandardMaterial3D" id="matBone"]
+albedo_color = Color(0.94,0.79,0.54,1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="tubeBone"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1.0
+radial_segments = 10
+rings = 0
+material = SubResource("matBone")
+
+[sub_resource type="BoxMesh" id="boxBone"]
+material = SubResource("matBone")
+
+[sub_resource type="StandardMaterial3D" id="matRed"]
+albedo_color = Color(0.78,0.22,0.19,1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="tubeRed"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1.0
+radial_segments = 10
+rings = 0
+material = SubResource("matRed")
+
+[sub_resource type="BoxMesh" id="boxRed"]
+material = SubResource("matRed")
+
+[sub_resource type="StandardMaterial3D" id="matBlue"]
+albedo_color = Color(0.22,0.49,0.48,1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="tubeBlue"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1.0
+radial_segments = 10
+rings = 0
+material = SubResource("matBlue")
+
+[sub_resource type="BoxMesh" id="boxBlue"]
+material = SubResource("matBlue")
+
+[sub_resource type="StandardMaterial3D" id="matOchre"]
+albedo_color = Color(0.85,0.55,0.22,1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="tubeOchre"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1.0
+radial_segments = 10
+rings = 0
+material = SubResource("matOchre")
+
+[sub_resource type="BoxMesh" id="boxOchre"]
+material = SubResource("matOchre")
+
+[sub_resource type="ShaderMaterial" id="JumpLowFinish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(0.750000,0.200000,0.750000)
+
+[sub_resource type="ShaderMaterial" id="JumpMidFinish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(0.750000,0.450000,0.750000)
+
+[sub_resource type="ShaderMaterial" id="JumpHighFinish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(0.750000,0.700000,0.750000)
+
+[sub_resource type="ShaderMaterial" id="Step1Finish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.000000,0.100000,0.300000)
+
+[sub_resource type="ShaderMaterial" id="Step2Finish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.000000,0.200000,0.300000)
+
+[sub_resource type="ShaderMaterial" id="Step3Finish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.000000,0.300000,0.300000)
+
+[sub_resource type="ShaderMaterial" id="Step4Finish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.000000,0.400000,0.300000)
+
+[sub_resource type="ShaderMaterial" id="LandingFinish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.500000,1.000000,1.000000)
+
+[sub_resource type="ShaderMaterial" id="RampFinish"]
+shader = ExtResource("FreightFinish")
+shader_parameter/half_size = Vector3(1.500000,0.150000,3.162450)
+
+[sub_resource type="StandardMaterial3D" id="ServiceEnamel"]
+albedo_texture = ExtResource("ServiceStamp")
+roughness = 0.91
+
+[sub_resource type="QuadMesh" id="ServicePlate"]
+size = Vector2(0.21, 0.4)
+material = SubResource("ServiceEnamel")
+
+[sub_resource type="TorusMesh" id="HubRim"]
+inner_radius = 0.304
+outer_radius = 0.38599999999999995
+rings = 28
+ring_segments = 8
+material = SubResource("matBlue")
+
+[sub_resource type="TorusMesh" id="BrakeRing"]
+inner_radius = 0.216
+outer_radius = 0.26
+rings = 28
+ring_segments = 8
+material = SubResource("matBone")
+
+[sub_resource type="TorusMesh" id="HoistSheave"]
+inner_radius = 0.10600000000000001
+outer_radius = 0.164
+rings = 28
+ring_segments = 8
+material = SubResource("matRed")
+
+[node name="Whitebox" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+position = Vector3(0, -0.25, 0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("FloorMesh")
+material_override = SubResource("Grid")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2, -12)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/BackWall"]
+mesh = SubResource("BackWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" type="StaticBody3D" parent="World"]
+position = Vector3(10, 1.5, -6)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionWall"]
+mesh = SubResource("OcclusionWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionWall"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" type="StaticBody3D" parent="World"]
+position = Vector3(8, 1.5, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionReturn"]
+mesh = SubResource("OcclusionReturnMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionReturn"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" type="StaticBody3D" parent="World"]
+position = Vector3(-0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLeft"]
+mesh = SubResource("DoorLeftMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLeft"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" type="StaticBody3D" parent="World"]
+position = Vector3(0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorRight"]
+mesh = SubResource("DoorRightMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorRight"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLintel"]
+mesh = SubResource("DoorLintelMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLintel"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Ramp"]
+mesh = SubResource("RampMesh")
+material_override = SubResource("RampFinish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Ramp"]
+shape = SubResource("RampShape")
+
+[node name="Landing" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 1, -7)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Landing"]
+mesh = SubResource("LandingMesh")
+material_override = SubResource("LandingFinish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Landing"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.1, 2.0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step1"]
+mesh = SubResource("Step1Mesh")
+material_override = SubResource("Step1Finish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.2, 1.4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step2"]
+mesh = SubResource("Step2Mesh")
+material_override = SubResource("Step2Finish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step2"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.30000000000000004, 0.8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step3"]
+mesh = SubResource("Step3Mesh")
+material_override = SubResource("Step3Finish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step3"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.4, 0.20000000000000018)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step4"]
+mesh = SubResource("Step4Mesh")
+material_override = SubResource("Step4Finish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step4"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.2, 1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpLow"]
+mesh = SubResource("JumpLowMesh")
+material_override = SubResource("JumpLowFinish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpLow"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.45, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpMid"]
+mesh = SubResource("JumpMidMesh")
+material_override = SubResource("JumpMidFinish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpMid"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" type="StaticBody3D" parent="World"]
+position = Vector3(3, 0.7, -3)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpHigh"]
+mesh = SubResource("JumpHighMesh")
+material_override = SubResource("JumpHighFinish")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpHigh"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" type="StaticBody3D" parent="World"]
+position = Vector3(0, 0.01, 8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/SpawnPad"]
+mesh = SubResource("SpawnPadMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/SpawnPad"]
+shape = SubResource("SpawnPadShape")
+
+[node name="Gate" instance=ExtResource("r0") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="CanopyBows" instance=ExtResource("r1") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Fabric" instance=ExtResource("r2") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Rig" instance=ExtResource("r3") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="DistantBluffs" instance=ExtResource("r4") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="GateFrame" instance=ExtResource("r5") parent="."]
+position = Vector3(0.000000, 0.000000, -3.970000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.535000, 0.520000, 1.540000)
+
+[node name="ServiceWall0" instance=ExtResource("r6") parent="."]
+position = Vector3(2.650000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall1" instance=ExtResource("r6") parent="."]
+position = Vector3(5.680000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall2" instance=ExtResource("r6") parent="."]
+position = Vector3(8.710000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="Riser" instance=ExtResource("r7") parent="."]
+position = Vector3(9.450000, 0.000000, -9.900000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="RelayDish" instance=ExtResource("r8") parent="."]
+position = Vector3(8.100000, 3.650000, -12.050000)
+rotation_degrees = Vector3(0.000000, -23.000000, 0.000000)
+scale = Vector3(0.570000, 0.570000, 0.570000)
+
+[node name="Desk" instance=ExtResource("r9") parent="."]
+position = Vector3(5.720000, 0.000000, -10.310000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.860000, 0.860000, 0.860000)
+
+[node name="Grinder" instance=ExtResource("r10") parent="."]
+position = Vector3(4.450000, 0.000000, -9.330000)
+rotation_degrees = Vector3(0.000000, 36.000000, 0.000000)
+scale = Vector3(3.400000, 3.400000, 3.400000)
+
+[node name="UnderBench" instance=ExtResource("r11") parent="."]
+position = Vector3(5.850000, 0.000000, -10.020000)
+rotation_degrees = Vector3(0.000000, 16.000000, 0.000000)
+scale = Vector3(1.650000, 1.650000, 1.650000)
+
+[node name="Barrel" instance=ExtResource("r12") parent="."]
+position = Vector3(7.780000, 0.000000, -9.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 0.750000, 0.750000)
+
+[node name="Crate" instance=ExtResource("r13") parent="."]
+position = Vector3(7.980000, 0.000000, -8.480000)
+rotation_degrees = Vector3(0.000000, 15.000000, 0.000000)
+scale = Vector3(0.750000, 0.750000, 0.750000)
+
+[node name="PartsBox" instance=ExtResource("r14") parent="."]
+position = Vector3(3.530000, 0.308000, -10.930000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+
+[node name="SupplyRoll" instance=ExtResource("r15") parent="."]
+position = Vector3(3.940000, 0.000000, -8.640000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(2.700000, 2.700000, 2.700000)
+
+[node name="Pail" instance=ExtResource("r16") parent="."]
+position = Vector3(4.890000, 0.000000, -9.700000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.800000, 1.800000, 1.800000)
+
+[node name="Vessel" instance=ExtResource("r17") parent="."]
+position = Vector3(5.600000, 0.809000, -10.360000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.300000, 2.300000, 2.300000)
+
+[node name="Mug" instance=ExtResource("r18") parent="."]
+position = Vector3(6.090000, 0.809000, -10.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="WallVent" instance=ExtResource("r19") parent="."]
+position = Vector3(7.050000, 2.930000, -11.390000)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="overall" type="Camera3D" parent="."]
+transform = Transform3D(0.8308917, 0.0271638, -0.5557708, -0.0000000, 0.9988077, 0.0488177, 0.5564342, -0.0405622, 0.8299010, -4.1000000, 2.6500000, 3.2500000)
+fov = 63
+current = true
+
+[node name="detail" type="Camera3D" parent="."]
+transform = Transform3D(0.8530935, 0.0415961, -0.5200974, -0.0000000, 0.9968171, 0.0797230, 0.5217581, -0.0680111, 0.8503781, 3.3600000, 1.8700000, -5.6000000)
+fov = 60
+current = false
+
+[node name="transition" type="Camera3D" parent="."]
+transform = Transform3D(0.9293326, 0.0035743, -0.3692264, -0.0000000, 0.9999531, 0.0096801, 0.3692438, -0.0089960, 0.9292890, -0.3200000, 1.7100000, -2.0800000)
+fov = 71
+current = false
+
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("sky")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-46, -34, 0)
+light_color = Color(1, 0.93, 0.82, 1)
+light_energy = 1.0
+shadow_enabled = true
+directional_shadow_max_distance = 55.0
+
+[node name="Ink" type="MeshInstance3D" parent="."]
+mesh = SubResource("quad")
+extra_cull_margin = 16384.0
+cast_shadow = 0
+
+[node name="ThresholdPaint" parent="." instance=ExtResource("ThresholdPaint")]
+
+[node name="SandMarks" parent="." instance=ExtResource("SandMarks")]
+
+[node name="WorkshopRacks" parent="." instance=ExtResource("WorkshopRacks")]
+
+[node name="GateBadges" parent="." instance=ExtResource("GateBadges")]
+
+[node name="CanvasSeams" parent="." instance=ExtResource("CanvasSeams")]
+
+[node name="BenchDiagram" type="MeshInstance3D" parent="."]
+position = Vector3(5.460000, 2.890000, -11.390000)
+mesh = SubResource("PanelBenchDiagram")
+
+[node name="IncomingRoute" type="MeshInstance3D" parent="."]
+position = Vector3(0.340000, 1.800000, -11.710000)
+mesh = SubResource("PanelIncomingRoute")
+
+[node name="GatePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 2.460000, -3.558000)
+mesh = SubResource("PanelGatePlate")
+
+[node name="EastMarker" type="MeshInstance3D" parent="."]
+position = Vector3(8.180000, 1.650000, -0.732000)
+mesh = SubResource("PanelEastMarker")
+
+[node name="BowTies" parent="." instance=ExtResource("BowTies")]
+
+[node name="YardFittings" type="Node3D" parent="."]
+
+[node name="GeneratorTower" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.700000,4.175000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.092000,8.350000,0.092000)
+
+[node name="TowerFerrule0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,0.460000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="TowerFerrule1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,2.460000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="TowerFerrule2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,4.510000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="TowerFerrule3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,5.660000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="TowerFerrule4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,6.760000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="TowerFerrule5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBone")
+position = Vector3(6.700000,7.930000,-11.380000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.122000,0.120000,0.122000)
+
+[node name="UpwindAxle" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeRed")
+position = Vector3(6.700000,7.660000,-11.225000)
+rotation = Vector3(1.570796,0.000000,-0.000000)
+scale = Vector3(0.170000,0.950000,0.170000)
+
+[node name="RotorSpoke0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(7.440420,7.779489,-10.780000)
+rotation = Vector3(0.000000,0.000000,-1.410796)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxBone")
+position = Vector3(7.659223,7.904930,-10.780000)
+rotation = Vector3(0.000000,0.210000,0.160000)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(7.068225,8.313384,-10.780000)
+rotation = Vector3(0.000000,0.000000,-0.513198)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(7.106572,8.562662,-10.780000)
+rotation = Vector3(0.000000,0.210000,1.057598)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.418748,8.355268,-10.780000)
+rotation = Vector3(0.000000,0.000000,0.384399)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(6.247764,8.540672,-10.780000)
+rotation = Vector3(0.000000,0.210000,1.955196)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.981060,7.873601,-10.780000)
+rotation = Vector3(0.000000,0.000000,1.281997)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxBone")
+position = Vector3(5.729499,7.855517,-10.780000)
+rotation = Vector3(0.000000,0.210000,2.852794)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.084748,7.231088,-10.780000)
+rotation = Vector3(3.141593,0.000000,0.961997)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(5.942041,7.023134,-10.780000)
+rotation = Vector3(0.000000,0.210000,3.750392)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.651734,6.911555,-10.780000)
+rotation = Vector3(3.141593,0.000000,0.064399)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(6.725342,6.670324,-10.780000)
+rotation = Vector3(0.000000,0.210000,4.647990)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="RotorSpoke6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(7.255065,7.155616,-10.780000)
+rotation = Vector3(3.141593,0.000000,-0.833198)
+scale = Vector3(0.032000,1.260000,0.032000)
+
+[node name="SailBlade6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxBone")
+position = Vector3(7.489560,7.062760,-10.780000)
+rotation = Vector3(0.000000,0.210000,5.545587)
+scale = Vector3(0.850000,0.235000,0.042000)
+
+[node name="StabilizerBoom" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(7.600000,7.750000,-12.225000)
+rotation = Vector3(-1.423718,0.000000,-0.922077)
+scale = Vector3(0.050000,2.258871,0.050000)
+
+[node name="TailVane" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(8.260000,7.970000,-12.700000)
+rotation = Vector3(0.000000,0.630000,0.070000)
+scale = Vector3(0.860000,0.450000,0.035000)
+
+[node name="CableFoot0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.300000,4.437500,-11.395000)
+rotation = Vector3(0.009302,0.000000,-0.979177)
+scale = Vector3(0.016000,1.927622,0.016000)
+
+[node name="CableHead0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.900000,5.812500,-11.385000)
+rotation = Vector3(0.005970,0.000000,-0.762493)
+scale = Vector3(0.016000,2.316403,0.016000)
+
+[node name="CableFoot1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(8.425000,4.257500,-8.170000)
+rotation = Vector3(-1.061518,0.000000,0.438695)
+scale = Vector3(0.016000,2.707420,0.016000)
+
+[node name="CableHead1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(7.275000,5.752500,-10.310000)
+rotation = Vector3(-0.872849,0.000000,0.390572)
+scale = Vector3(0.016000,3.020617,0.016000)
+
+[node name="CargoApron0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(7.480000,0.730000,-7.704000)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.660000,0.025000)
+
+[node name="CargoApron1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxOchre")
+position = Vector3(7.627000,0.730000,-7.743396)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.685244,0.025000)
+
+[node name="CargoApron2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxOchre")
+position = Vector3(7.774000,0.730000,-7.782792)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.687279,0.025000)
+
+[node name="CargoApron3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxOchre")
+position = Vector3(7.921000,0.730000,-7.822188)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.664234,0.025000)
+
+[node name="CargoApron4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(8.068000,0.730000,-7.861584)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.637296,0.025000)
+
+[node name="CargoApron5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxOchre")
+position = Vector3(8.215000,0.730000,-7.900980)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.631232,0.025000)
+
+[node name="CargoApron6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxRed")
+position = Vector3(8.362000,0.730000,-7.940376)
+rotation = Vector3(0.000000,0.262000,0.000000)
+scale = Vector3(0.150000,0.651618,0.025000)
+
+[node name="InspectionPlate" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("ServicePlate")
+position = Vector3(-0.999000,1.520000,-3.558000)
+
+[node name="BentImpeller" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("HubRim")
+position = Vector3(6.650000,1.380000,-10.110000)
+rotation = Vector3(1.570796,0.000000,0.000000)
+scale = Vector3(1.000000,1.000000,1.000000)
+
+[node name="BrakeFlange" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("BrakeRing")
+position = Vector3(6.650000,1.380000,-10.095000)
+rotation = Vector3(1.570796,0.000000,0.000000)
+scale = Vector3(1.000000,1.000000,1.000000)
+
+[node name="AxleStub" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeOchre")
+position = Vector3(6.650000,1.380000,-10.115000)
+rotation = Vector3(1.570796,0.000000,-0.000000)
+scale = Vector3(0.086000,0.270000,0.086000)
+
+[node name="SweptBlade0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.852609,1.418893,-10.110000)
+rotation = Vector3(3.141593,0.000000,-1.534338)
+scale = Vector3(0.034000,0.271565,0.034000)
+
+[node name="SweptBlade1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.675621,1.584711,-10.110000)
+rotation = Vector3(0.000000,0.000000,-0.350617)
+scale = Vector3(0.034000,0.271565,0.034000)
+
+[node name="SweptBlade2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.463225,1.467626,-10.110000)
+rotation = Vector3(0.000000,0.000000,0.906020)
+scale = Vector3(0.034000,0.271565,0.034000)
+
+[node name="SweptBlade3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.508946,1.229444,-10.110000)
+rotation = Vector3(3.141593,0.000000,0.978936)
+scale = Vector3(0.034000,0.271565,0.034000)
+
+[node name="SweptBlade4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.749599,1.199326,-10.110000)
+rotation = Vector3(3.141593,0.000000,-0.277701)
+scale = Vector3(0.034000,0.271565,0.034000)
+
+[node name="HubSling0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.540000,1.830000,-10.110000)
+rotation = Vector3(0.000000,0.000000,-0.524796)
+scale = Vector3(0.011000,0.439090,0.011000)
+
+[node name="HubSling1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.760000,1.830000,-10.110000)
+rotation = Vector3(0.000000,0.000000,0.524796)
+scale = Vector3(0.011000,0.439090,0.011000)
+
+[node name="ChainfallHook" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.650000,2.420000,-10.110000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.014000,0.820000,0.014000)
+
+[node name="ChainfallSheave" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("HoistSheave")
+position = Vector3(6.650000,2.880000,-10.110000)
+rotation = Vector3(1.570796,0.000000,0.000000)
+scale = Vector3(1.000000,1.000000,1.000000)
+
+[node name="WallJib" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.650000,3.080000,-10.745000)
+rotation = Vector3(1.570796,0.000000,-0.000000)
+scale = Vector3(0.047000,1.270000,0.047000)
+
+[node name="JibGusset" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeBlue")
+position = Vector3(6.650000,2.840000,-10.780000)
+rotation = Vector3(1.204740,0.000000,-0.000000)
+scale = Vector3(0.035000,1.285146,0.035000)
+
+[node name="BlockClevis" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(6.650000,3.005000,-10.110000)
+rotation = Vector3(3.141593,0.000000,-0.000000)
+scale = Vector3(0.025000,0.210000,0.025000)
+
+[node name="NetWarp0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.625000,3.410000,-7.590000)
+rotation = Vector3(-2.191046,0.000000,-0.398816)
+scale = Vector3(0.006000,0.746793,0.006000)
+
+[node name="NetWarp1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.751250,3.377413,-7.590000)
+rotation = Vector3(-2.250606,0.000000,-0.382861)
+scale = Vector3(0.006000,0.776282,0.006000)
+
+[node name="NetWarp2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.877500,3.345838,-7.590000)
+rotation = Vector3(-2.302945,0.000000,-0.367640)
+scale = Vector3(0.006000,0.806868,0.006000)
+
+[node name="NetWarp3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.003750,3.316248,-7.590000)
+rotation = Vector3(-2.347189,0.000000,-0.353907)
+scale = Vector3(0.006000,0.836782,0.006000)
+
+[node name="NetWarp4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.130000,3.289541,-7.590000)
+rotation = Vector3(-2.383053,0.000000,-0.342200)
+scale = Vector3(0.006000,0.864225,0.006000)
+
+[node name="NetWarp5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.256250,3.266502,-7.590000)
+rotation = Vector3(-2.410592,0.000000,-0.332865)
+scale = Vector3(0.006000,0.887523,0.006000)
+
+[node name="NetWarp6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.382500,3.247776,-7.590000)
+rotation = Vector3(-2.430017,0.000000,-0.326102)
+scale = Vector3(0.006000,0.905252,0.006000)
+
+[node name="NetWarp7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.508750,3.233844,-7.590000)
+rotation = Vector3(-2.441560,0.000000,-0.322013)
+scale = Vector3(0.006000,0.916338,0.006000)
+
+[node name="NetWarp8" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.635000,3.225000,-7.590000)
+rotation = Vector3(-2.445388,0.000000,-0.320646)
+scale = Vector3(0.006000,0.920109,0.006000)
+
+[node name="NetWarp9" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.761250,3.221344,-7.590000)
+rotation = Vector3(-2.441560,0.000000,-0.322013)
+scale = Vector3(0.006000,0.916338,0.006000)
+
+[node name="NetWarp10" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.887500,3.222776,-7.590000)
+rotation = Vector3(-2.430017,0.000000,-0.326102)
+scale = Vector3(0.006000,0.905252,0.006000)
+
+[node name="NetWarp11" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.013750,3.229002,-7.590000)
+rotation = Vector3(-2.410592,0.000000,-0.332865)
+scale = Vector3(0.006000,0.887523,0.006000)
+
+[node name="NetWarp12" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.140000,3.239541,-7.590000)
+rotation = Vector3(-2.383053,0.000000,-0.342200)
+scale = Vector3(0.006000,0.864225,0.006000)
+
+[node name="NetWarp13" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.266250,3.253748,-7.590000)
+rotation = Vector3(-2.347189,0.000000,-0.353907)
+scale = Vector3(0.006000,0.836782,0.006000)
+
+[node name="NetWarp14" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.392500,3.270838,-7.590000)
+rotation = Vector3(-2.302945,0.000000,-0.367640)
+scale = Vector3(0.006000,0.806868,0.006000)
+
+[node name="NetWarp15" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.518750,3.289913,-7.590000)
+rotation = Vector3(-2.250606,0.000000,-0.382861)
+scale = Vector3(0.006000,0.776282,0.006000)
+
+[node name="NetWarp16" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.645000,3.310000,-7.590000)
+rotation = Vector3(-2.191046,0.000000,-0.398816)
+scale = Vector3(0.006000,0.746793,0.006000)
+
+[node name="NetWeft0_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.606250,3.603750,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.858750,3.591250,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.111250,3.578750,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.363750,3.566250,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.616250,3.553750,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.868750,3.541250,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.121250,3.528750,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft0_7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.373750,3.516250,-7.310000)
+rotation = Vector3(3.141593,0.000000,-1.521332)
+scale = Vector3(0.011000,0.252809,0.011000)
+
+[node name="NetWeft1_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.678750,3.490834,-7.450000)
+rotation = Vector3(3.141593,0.000000,-1.420140)
+scale = Vector3(0.005000,0.255393,0.005000)
+
+[node name="NetWeft1_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.931250,3.454470,-7.450000)
+rotation = Vector3(3.141593,0.000000,-1.435398)
+scale = Vector3(0.005000,0.254832,0.005000)
+
+[node name="NetWeft1_2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.183750,3.423704,-7.450000)
+rotation = Vector3(3.141593,0.000000,-1.463753)
+scale = Vector3(0.005000,0.253954,0.005000)
+
+[node name="NetWeft1_3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.436250,3.401319,-7.450000)
+rotation = Vector3(3.141593,0.000000,-1.501056)
+scale = Vector3(0.005000,0.253115,0.005000)
+
+[node name="NetWeft1_4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.688750,3.388819,-7.450000)
+rotation = Vector3(3.141593,0.000000,-1.541649)
+scale = Vector3(0.005000,0.252607,0.005000)
+
+[node name="NetWeft1_5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.941250,3.386204,-7.450000)
+rotation = Vector3(0.000000,0.000000,-1.562352)
+scale = Vector3(0.005000,0.252509,0.005000)
+
+[node name="NetWeft1_6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.193750,3.391970,-7.450000)
+rotation = Vector3(0.000000,0.000000,-1.533591)
+scale = Vector3(0.005000,0.252675,0.005000)
+
+[node name="NetWeft1_7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.446250,3.403334,-7.450000)
+rotation = Vector3(0.000000,0.000000,-1.518049)
+scale = Vector3(0.005000,0.252852,0.005000)
+
+[node name="NetWeft2_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.751250,3.377919,-7.590000)
+rotation = Vector3(3.141593,0.000000,-1.321955)
+scale = Vector3(0.005000,0.260525,0.005000)
+
+[node name="NetWeft2_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.003750,3.317689,-7.590000)
+rotation = Vector3(3.141593,0.000000,-1.351425)
+scale = Vector3(0.005000,0.258700,0.005000)
+
+[node name="NetWeft2_2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.256250,3.268658,-7.590000)
+rotation = Vector3(3.141593,0.000000,-1.406877)
+scale = Vector3(0.005000,0.255931,0.005000)
+
+[node name="NetWeft2_3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.508750,3.236388,-7.590000)
+rotation = Vector3(3.141593,0.000000,-1.480837)
+scale = Vector3(0.005000,0.253525,0.005000)
+
+[node name="NetWeft2_4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.761250,3.223888,-7.590000)
+rotation = Vector3(3.141593,0.000000,-1.561990)
+scale = Vector3(0.005000,0.252510,0.005000)
+
+[node name="NetWeft2_5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.013750,3.231158,-7.590000)
+rotation = Vector3(0.000000,0.000000,-1.504500)
+scale = Vector3(0.005000,0.253056,0.005000)
+
+[node name="NetWeft2_6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.266250,3.255189,-7.590000)
+rotation = Vector3(0.000000,0.000000,-1.447476)
+scale = Vector3(0.005000,0.254432,0.005000)
+
+[node name="NetWeft2_7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.518750,3.290419,-7.590000)
+rotation = Vector3(0.000000,0.000000,-1.416924)
+scale = Vector3(0.005000,0.255519,0.005000)
+
+[node name="NetWeft3_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.823750,3.265003,-7.730000)
+rotation = Vector3(3.141593,0.000000,-1.228423)
+scale = Vector3(0.005000,0.268058,0.005000)
+
+[node name="NetWeft3_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.076250,3.180909,-7.730000)
+rotation = Vector3(3.141593,0.000000,-1.270477)
+scale = Vector3(0.005000,0.264331,0.005000)
+
+[node name="NetWeft3_2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.328750,3.113613,-7.730000)
+rotation = Vector3(3.141593,0.000000,-1.351051)
+scale = Vector3(0.005000,0.258721,0.005000)
+
+[node name="NetWeft3_3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.581250,3.071457,-7.730000)
+rotation = Vector3(3.141593,0.000000,-1.460691)
+scale = Vector3(0.005000,0.254038,0.005000)
+
+[node name="NetWeft3_4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.833750,3.058957,-7.730000)
+rotation = Vector3(0.000000,0.000000,-1.559255)
+scale = Vector3(0.005000,0.252517,0.005000)
+
+[node name="NetWeft3_5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.086250,3.076113,-7.730000)
+rotation = Vector3(0.000000,0.000000,-1.447089)
+scale = Vector3(0.005000,0.254444,0.005000)
+
+[node name="NetWeft3_6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.338750,3.118409,-7.730000)
+rotation = Vector3(0.000000,0.000000,-1.363157)
+scale = Vector3(0.005000,0.258043,0.005000)
+
+[node name="NetWeft3_7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.591250,3.177503,-7.730000)
+rotation = Vector3(0.000000,0.000000,-1.318866)
+scale = Vector3(0.005000,0.260730,0.005000)
+
+[node name="NetWeft4_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(3.896250,3.152088,-7.870000)
+rotation = Vector3(3.141593,0.000000,-1.140722)
+scale = Vector3(0.011000,0.277798,0.011000)
+
+[node name="NetWeft4_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.148750,3.044128,-7.870000)
+rotation = Vector3(3.141593,0.000000,-1.193386)
+scale = Vector3(0.011000,0.271616,0.011000)
+
+[node name="NetWeft4_2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.401250,2.958567,-7.870000)
+rotation = Vector3(3.141593,0.000000,-1.296581)
+scale = Vector3(0.011000,0.262300,0.011000)
+
+[node name="NetWeft4_3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.653750,2.906526,-7.870000)
+rotation = Vector3(3.141593,0.000000,-1.440635)
+scale = Vector3(0.011000,0.254654,0.011000)
+
+[node name="NetWeft4_4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(4.906250,2.894026,-7.870000)
+rotation = Vector3(0.000000,0.000000,-1.538916)
+scale = Vector3(0.011000,0.252628,0.011000)
+
+[node name="NetWeft4_5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.158750,2.921067,-7.870000)
+rotation = Vector3(0.000000,0.000000,-1.390485)
+scale = Vector3(0.011000,0.256661,0.011000)
+
+[node name="NetWeft4_6" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.411250,2.981628,-7.870000)
+rotation = Vector3(0.000000,0.000000,-1.281724)
+scale = Vector3(0.011000,0.263430,0.011000)
+
+[node name="NetWeft4_7" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(5.663750,3.064588,-7.870000)
+rotation = Vector3(0.000000,0.000000,-1.225505)
+scale = Vector3(0.011000,0.268338,0.011000)
+
+[node name="LatchRail-1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(-1.104000,0.775000,-3.536000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.026000,0.650000,0.026000)
+
+[node name="LatchStandoff-1_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeRed")
+position = Vector3(-1.104000,0.450000,-3.612500)
+rotation = Vector3(-1.570796,0.000000,-0.000000)
+scale = Vector3(0.036000,0.155000,0.036000)
+
+[node name="LatchStandoff-1_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeRed")
+position = Vector3(-1.104000,1.100000,-3.612500)
+rotation = Vector3(-1.570796,0.000000,-0.000000)
+scale = Vector3(0.036000,0.155000,0.036000)
+
+[node name="LatchRail1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeIron")
+position = Vector3(1.104000,0.775000,-3.536000)
+rotation = Vector3(0.000000,0.000000,-0.000000)
+scale = Vector3(0.026000,0.650000,0.026000)
+
+[node name="LatchStandoff1_0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeRed")
+position = Vector3(1.104000,0.450000,-3.612500)
+rotation = Vector3(-1.570796,0.000000,-0.000000)
+scale = Vector3(0.036000,0.155000,0.036000)
+
+[node name="LatchStandoff1_1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("tubeRed")
+position = Vector3(1.104000,1.100000,-3.612500)
+rotation = Vector3(-1.570796,0.000000,-0.000000)
+scale = Vector3(0.036000,0.155000,0.036000)
+
+[node name="HeaderLouvre0" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(-0.890000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)
+
+[node name="HeaderLouvre1" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(-0.780000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)
+
+[node name="HeaderLouvre2" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(-0.670000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)
+
+[node name="HeaderLouvre3" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(0.670000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)
+
+[node name="HeaderLouvre4" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(0.780000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)
+
+[node name="HeaderLouvre5" type="MeshInstance3D" parent="YardFittings"]
+mesh = SubResource("boxIron")
+position = Vector3(0.890000,2.410000,-3.555000)
+rotation = Vector3(0.000000,0.000000,-0.240000)
+scale = Vector3(0.034000,0.170000,0.018000)

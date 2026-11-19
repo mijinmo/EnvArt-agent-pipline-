@@ -1,3 +1,25 @@
-# sable effort trial
+# Sable · 盐路风力修理棚 C
 
-起点为同批 baseline，制作任务见 ../../BRIEF.md 与 ../INPUT.md。先读图与素材来源，保留 baseline 和 start。
+在 Godot 4.7.2 打开本目录的 project.godot，F5 加载 [final.tscn](final.tscn)。场景树里可单独编辑风机、吊具、叶轮、门牌、货网和原有实例。[第一轮场景](pass01.tscn) 与 [冻结起点](start.tscn) 可分别重开。使用仓库 2026-11-19 的 godot-envart 技能。
+
+| 同一固定机位 | 起点 | 第一轮 ad61e06 | 最终 |
+| --- | --- | --- | --- |
+| 总览 | [实机图](evidence/start_overall.png) | [实机图](evidence/pass01_overall.png) | [实机图](evidence/final_overall.png) |
+| 工位 | [实机图](evidence/start_detail.png) | [实机图](evidence/pass01_detail.png) | [实机图](evidence/final_detail.png) |
+| 门洞 | [实机图](evidence/start_transition.png) | [实机图](evidence/pass01_transition.png) | [实机图](evidence/final_transition.png) |
+
+## 依据与材料
+
+实际查看共同输入中的 09、00、15 三张原图。09 的沙橙大地、低对比远山和孤立的棚顶桅杆构成主要层次。棚身以黄布、朱红圈和小面积暗色机构聚集视线。00 的山体有横向沉积层，15 的上缘有承重杆索、网与吊挂。风力修理站是对固定局部的设计推演。起点已经有好读的骨架和工具架，总览近处的大台面、没变化的地面以及三个相同路牌削弱了空间层次。
+
+沿用 Quaternius Modular Sci-Fi Megakit、Sci-Fi Essentials Kit 的实际免费 CC0 门框、墙段、货箱、立柱、天线与工作桌，Kenney Survival Kit 免费 CC0 磨轮、容器与卷包。原始许可在 baseline/assets 下，实际使用清单与来源见[素材来历](provenance/README.md)。未新增外部素材。三个新 glTF 分别调整了门框、墙段、苫布箱的基础色调，引用冻结的原始网格与贴图，保留原有 UV、法线和折边。
+
+## 两轮读图
+
+第一轮以天空渐变和小块云带建立天际，沿墙绘出砂岩层。沙地用世界坐标生成不规则细颗粒与局部风纹。新增七叶风机、尾舵、轴套、双牵索、箱上织物和滑翔车图章。采用场景节点拼装结构件，沿用冻结墨线。实机图显示风机进入天际轮廓，门牌可以从入口读出维修功能。蓝绿货台占据过多前景，UV 拉伸使条孔和铆钉大小不一。近景台面右半空置。
+
+第二轮按各台真实半尺寸生成包角、侧孔和防滑顶面。deck_final 的 half_size 以米计，enamel、rail、stripe 分别调主漆、包角与铆头颜色。转成沙灰之后，入口红环在总览重新成为最强色块。门侧独立搪瓷铭牌和闩杆给过渡镜头提供尺度。墙面三角吊臂、滑轮、两点吊带和五叶待修叶轮组成完整悬吊关系。织网填入高处棚边。工位截图能读到滑轮到工件的整条载荷路径，最上沿的网线则有一部分融入布面，显得截断。前景货台仍受原箱体轮廓限制，远山切面仍比参考粗硬。三幅固定视角没有验证移动时细网与墨线的稳定性。
+
+## 复验
+
+两轮均先保存并重开场景，再经统一 GPU 包装器输出三个 1600 × 1000 机位，已实际查看六张图。两个 constraints.json 与起点逐字节相同，覆盖 17 个静态体及三个相机。风机与材料图案都固定相位。图形出图每轮一次，技术重拍 0 次，包装器两轮均报告排队 0.00 秒。首次出图前 headless 发现一次 TSCN 小数格式错误，修正后重开通过。首次制作缩略图的 Python 缺少 PIL，改用系统 sips；没有修改实机图。此交付待用户美术验收。
