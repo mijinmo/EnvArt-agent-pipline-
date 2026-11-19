@@ -1,0 +1,1417 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_wall_006/Diffuse.jpg" id="Castd"]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_wall_006/nor_gl.jpg" id="Castn"]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_wall_006/Rough.jpg" id="Castr"]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_floor_02/Diffuse.jpg" id="Terrazzod"]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_floor_02/nor_gl.jpg" id="Terrazzon"]
+
+[ext_resource type="Texture2D" path="res://assets/concrete_floor_02/Rough.jpg" id="Terrazzor"]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="base"]
+
+[ext_resource type="Script" path="res://review.gd" id="review"]
+
+[ext_resource type="PackedScene" path="res://assets/metal_office_desk/metal_office_desk.gltf" id="metal_office_desk"]
+
+[ext_resource type="PackedScene" path="res://assets/binder_notebook/binder_notebook.gltf" id="binder_notebook"]
+
+[ext_resource type="PackedScene" path="res://assets/portable_cassette_player/portable_cassette_player.gltf" id="portable_cassette_player"]
+
+[ext_resource type="PackedScene" path="res://assets/desk_lamp_arm_01/desk_lamp_arm_01.gltf" id="desk_lamp_arm_01"]
+
+[ext_resource type="PackedScene" path="res://assets/drawer_cabinet/drawer_cabinet.gltf" id="drawer_cabinet"]
+
+[ext_resource type="PackedScene" path="res://assets/cardboard_box_01/cardboard_box_01.gltf" id="cardboard_box_01"]
+
+[ext_resource type="PackedScene" path="res://assets/metal_stool_01/metal_stool_01.gltf" id="metal_stool_01"]
+
+[ext_resource type="PackedScene" path="res://assets/industrial_storage_cart/industrial_storage_cart.gltf" id="industrial_storage_cart"]
+
+[ext_resource type="PackedScene" path="res://assets/industrial_caged_sconce/industrial_caged_sconce.gltf" id="industrial_caged_sconce"]
+
+[ext_resource type="PackedScene" path="res://assets/office_notepads/office_notepads.gltf" id="office_notepads"]
+
+[sub_resource type="StandardMaterial3D" id="Cast"]
+albedo_color = Color(0.62, 0.69, 0.65, 1)
+roughness = 0.72
+albedo_texture = ExtResource("Castd")
+normal_enabled = true
+normal_scale = 0.24
+normal_texture = ExtResource("Castn")
+roughness_texture_channel = 4
+roughness_texture = ExtResource("Castr")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.54, 0.54, 0.54)
+
+[sub_resource type="StandardMaterial3D" id="Terrazzo"]
+albedo_color = Color(0.29, 0.37, 0.36, 1)
+roughness = 0.72
+albedo_texture = ExtResource("Terrazzod")
+normal_enabled = true
+normal_scale = 0.24
+normal_texture = ExtResource("Terrazzon")
+roughness_texture_channel = 4
+roughness_texture = ExtResource("Terrazzor")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.53, 0.53, 0.53)
+
+[sub_resource type="StandardMaterial3D" id="Enamel"]
+albedo_color = Color(0.046, 0.125, 0.122, 1)
+roughness = 0.72
+
+
+[sub_resource type="StandardMaterial3D" id="Graphite"]
+albedo_color = Color(0.035, 0.046, 0.045, 1)
+roughness = 0.72
+
+
+[sub_resource type="StandardMaterial3D" id="Oxide"]
+albedo_color = Color(0.42, 0.134, 0.045, 1)
+roughness = 0.72
+
+
+[sub_resource type="StandardMaterial3D" id="Ivory"]
+albedo_color = Color(0.77, 0.72, 0.56, 1)
+roughness = 0.72
+
+
+[sub_resource type="StandardMaterial3D" id="Diffuser"]
+albedo_color = Color(0.89, 0.88, 0.7, 1)
+roughness = 0.72
+emission_enabled = true
+emission = Color(1,0.92,0.72,1)
+emission_energy_multiplier = 2.1
+
+[sub_resource type="Environment" id="Interior"]
+background_mode = 1
+background_color = Color(0.065,0.089,0.093,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.62,0.73,0.75,1)
+ambient_light_energy = 0.47
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+
+[sub_resource type="BoxMesh" id="Shape1"]
+size = Vector3(16, 0.3, 14)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape2"]
+size = Vector3(2.6, 1.9, 0.6)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape3"]
+size = Vector3(0.84, 2.3, 0.035)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape4"]
+size = Vector3(0.84, 2.3, 0.035)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape5"]
+size = Vector3(2.61, 0.5, 0.08)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape6"]
+size = Vector3(2.58, 0.035, 0.035)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape7"]
+size = Vector3(0.5, 1.5, 10)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape8"]
+size = Vector3(4, 1.5, 0.5)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape9"]
+size = Vector3(16, 0.22, 0.2)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape10"]
+size = Vector3(16, 0.22, 0.2)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape11"]
+size = Vector3(16, 0.22, 0.2)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape12"]
+size = Vector3(16, 0.22, 0.2)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape13"]
+size = Vector3(16, 0.22, 0.2)
+material = SubResource("Cast")
+
+[sub_resource type="BoxMesh" id="Shape14"]
+size = Vector3(1.62, 0.14, 0.22)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape15"]
+size = Vector3(1.49, 0.036, 0.15)
+material = SubResource("Diffuser")
+
+[sub_resource type="BoxMesh" id="Shape16"]
+size = Vector3(1.62, 0.14, 0.22)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape17"]
+size = Vector3(1.49, 0.036, 0.15)
+material = SubResource("Diffuser")
+
+[sub_resource type="BoxMesh" id="Shape18"]
+size = Vector3(1.62, 0.14, 0.22)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape19"]
+size = Vector3(1.49, 0.036, 0.15)
+material = SubResource("Diffuser")
+
+[sub_resource type="BoxMesh" id="Shape20"]
+size = Vector3(1.62, 0.14, 0.22)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape21"]
+size = Vector3(1.49, 0.036, 0.15)
+material = SubResource("Diffuser")
+
+[sub_resource type="BoxMesh" id="Shape22"]
+size = Vector3(0.055, 1.42, 9.95)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape23"]
+size = Vector3(0.1, 0.045, 9.95)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape24"]
+size = Vector3(4, 1.42, 0.045)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape25"]
+size = Vector3(0.09, 0.17, 9.96)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape26"]
+size = Vector3(0.07, 1.12, 2.38)
+material = SubResource("Graphite")
+
+[sub_resource type="BoxMesh" id="Shape27"]
+size = Vector3(0.024, 1.065, 2.32)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape28"]
+size = Vector3(0.017, 0.5, 0.36)
+material = SubResource("Ivory")
+
+[sub_resource type="BoxMesh" id="Shape29"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape30"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape31"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape32"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape33"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape34"]
+size = Vector3(0.017, 0.5, 0.36)
+material = SubResource("Ivory")
+
+[sub_resource type="BoxMesh" id="Shape35"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape36"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape37"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape38"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape39"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape40"]
+size = Vector3(0.017, 0.5, 0.36)
+material = SubResource("Ivory")
+
+[sub_resource type="BoxMesh" id="Shape41"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape42"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape43"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape44"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape45"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape46"]
+size = Vector3(0.017, 0.5, 0.36)
+material = SubResource("Ivory")
+
+[sub_resource type="BoxMesh" id="Shape47"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape48"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape49"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape50"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape51"]
+size = Vector3(0.004, 0.006, 0.275)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape52"]
+size = Vector3(10, 0.56, 0.035)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape53"]
+size = Vector3(1.5, 0.09, 0.16)
+material = SubResource("Diffuser")
+
+[sub_resource type="BoxMesh" id="Shape54"]
+size = Vector3(0.69, 0.042, 0.014)
+material = SubResource("Oxide")
+
+[sub_resource type="BoxMesh" id="Shape55"]
+size = Vector3(1.43, 0.028, 0.009)
+material = SubResource("Oxide")
+
+[sub_resource type="BoxMesh" id="Shape56"]
+size = Vector3(1.43, 0.028, 0.009)
+material = SubResource("Oxide")
+
+[sub_resource type="BoxMesh" id="Shape57"]
+size = Vector3(1.43, 0.028, 0.009)
+material = SubResource("Oxide")
+
+[sub_resource type="StandardMaterial3D" id="Kraft"]
+albedo_color = Color(0.48, 0.322, 0.165, 1)
+roughness = 0.72
+
+
+[sub_resource type="StandardMaterial3D" id="Paper"]
+albedo_color = Color(0.68, 0.65, 0.51, 1)
+roughness = 0.72
+
+
+[sub_resource type="BoxMesh" id="Shape58"]
+size = Vector3(0.3, 0.215, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape59"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape60"]
+size = Vector3(0.3, 0.229, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape61"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape62"]
+size = Vector3(0.3, 0.243, 0.104)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape63"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape64"]
+size = Vector3(0.3, 0.215, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape65"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape66"]
+size = Vector3(0.3, 0.229, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape67"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape68"]
+size = Vector3(0.3, 0.243, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape69"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape70"]
+size = Vector3(0.3, 0.215, 0.104)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape71"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape72"]
+size = Vector3(0.3, 0.229, 0.104)
+material = SubResource("Kraft")
+
+[sub_resource type="BoxMesh" id="Shape73"]
+size = Vector3(0.006, 0.089, 0.078)
+material = SubResource("Paper")
+
+[sub_resource type="BoxMesh" id="Shape74"]
+size = Vector3(0.008, 0.032, 0.112)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape75"]
+size = Vector3(0.008, 0.032, 0.112)
+material = SubResource("Oxide")
+
+[sub_resource type="BoxMesh" id="Shape76"]
+size = Vector3(0.008, 0.032, 0.112)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape77"]
+size = Vector3(0.008, 0.032, 0.112)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape78"]
+size = Vector3(1.47, 0.51, 0.042)
+material = SubResource("Enamel")
+
+[sub_resource type="BoxMesh" id="Shape79"]
+size = Vector3(0.036, 0.69, 0.53)
+material = SubResource("Oxide")
+
+[node name="Records" type="Node3D"]
+script = ExtResource("review")
+
+[node name="BaseLab" parent="." instance=ExtResource("base")]
+
+[node name="Sun" parent="BaseLab" index="2"]
+visible = false
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("Interior")
+
+[node name="Mesh" parent="BaseLab/World/Floor" index="0"]
+material_override = SubResource("Terrazzo")
+
+[node name="Mesh" parent="BaseLab/World/BackWall" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Step1" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Step2" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Step3" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Step4" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Ramp" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Mesh" parent="BaseLab/World/Landing" index="0"]
+material_override = SubResource("Cast")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Ceiling" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.65, -5)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape1")
+
+[node name="DoorCrown" type="MeshInstance3D" parent="Art"]
+position = Vector3(0, 3.55, -4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape2")
+
+[node name="JambL" type="MeshInstance3D" parent="Art"]
+position = Vector3(-1.02, 1.15, -3.681)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape3")
+
+[node name="JambR" type="MeshInstance3D" parent="Art"]
+position = Vector3(1.02, 1.15, -3.681)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape4")
+
+[node name="LintelFascia" type="MeshInstance3D" parent="Art"]
+position = Vector3(0, 2.55, -3.67)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape5")
+
+[node name="EntryType" type="Label3D" parent="Art"]
+position = Vector3(0, 2.54, -3.62)
+rotation_degrees = Vector3(0, 0, 0)
+text = "RECORDS   /   INTAKE"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00225
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="CrownBand" type="MeshInstance3D" parent="Art"]
+position = Vector3(0, 3.42, -3.69)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape6")
+
+[node name="PortalIndex" type="Label3D" parent="Art"]
+position = Vector3(0.89, 3.1, -3.686)
+rotation_degrees = Vector3(0, 0, 0)
+text = "04"
+font_size = 80
+outline_size = 0
+pixel_size = 0.005
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="UpperWall" type="MeshInstance3D" parent="Art"]
+position = Vector3(10, 3.75, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape7")
+
+[node name="UpperReturn" type="MeshInstance3D" parent="Art"]
+position = Vector3(8, 3.75, -1)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape8")
+
+[node name="Rib0" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.39, -10)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape9")
+
+[node name="Rib1" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.39, -7.75)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape10")
+
+[node name="Rib2" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.39, -5.5)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape11")
+
+[node name="Rib3" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.39, -3.25)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape12")
+
+[node name="Rib4" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 4.39, -1)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape13")
+
+[node name="Ballast0" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.2, 4.28, -2.1)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape14")
+
+[node name="Lamp0" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.2, 4.19, -2.1)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape15")
+
+[node name="Pool0" type="OmniLight3D" parent="Art"]
+position = Vector3(0.2, 3.67, -2.1)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(0.85, 0.95, 0.93, 1)
+light_energy = 2.75
+omni_range = 7
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="Ballast1" type="MeshInstance3D" parent="Art"]
+position = Vector3(6.4, 4.28, -6.2)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape16")
+
+[node name="Lamp1" type="MeshInstance3D" parent="Art"]
+position = Vector3(6.4, 4.19, -6.2)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape17")
+
+[node name="Pool1" type="OmniLight3D" parent="Art"]
+position = Vector3(6.4, 3.67, -6.2)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(0.85, 0.95, 0.93, 1)
+light_energy = 2.75
+omni_range = 7
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="Ballast2" type="MeshInstance3D" parent="Art"]
+position = Vector3(2.1, 4.28, -8.7)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape18")
+
+[node name="Lamp2" type="MeshInstance3D" parent="Art"]
+position = Vector3(2.1, 4.19, -8.7)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape19")
+
+[node name="Pool2" type="OmniLight3D" parent="Art"]
+position = Vector3(2.1, 3.67, -8.7)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(0.85, 0.95, 0.93, 1)
+light_energy = 2.75
+omni_range = 7
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="Ballast3" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.6, 4.28, -2.6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape20")
+
+[node name="Lamp3" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.6, 4.19, -2.6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape21")
+
+[node name="Pool3" type="OmniLight3D" parent="Art"]
+position = Vector3(8.6, 3.67, -2.6)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(0.85, 0.95, 0.93, 1)
+light_energy = 2.75
+omni_range = 7
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="Dado" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.73, 0.71, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape22")
+
+[node name="Capping" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.69, 1.43, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape23")
+
+[node name="ReturnDado" type="MeshInstance3D" parent="Art"]
+position = Vector3(8, 0.71, -1.265)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape24")
+
+[node name="Kick" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.68, 0.085, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape25")
+
+[node name="RegistryDesk"  parent="Art" instance=ExtResource("metal_office_desk")]
+position = Vector3(9.11, 0, -4.65)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Ledger"  parent="Art" instance=ExtResource("binder_notebook")]
+position = Vector3(8.99, 0.8, -4.63)
+rotation_degrees = Vector3(0, -85, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Dictation"  parent="Art" instance=ExtResource("portable_cassette_player")]
+position = Vector3(8.96, 0.86, -5.23)
+rotation_degrees = Vector3(0, -86, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="TaskLamp"  parent="Art" instance=ExtResource("desk_lamp_arm_01")]
+position = Vector3(9.41, 0.8, -4.08)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.84, 0.84, 0.84)
+
+[node name="TaskPool" type="OmniLight3D" parent="Art"]
+position = Vector3(9.13, 1.51, -4.13)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(1, 0.79, 0.52, 1)
+light_energy = 0.85
+omni_range = 2.55
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="SortingCabinet"  parent="Art" instance=ExtResource("drawer_cabinet")]
+position = Vector3(9.39, 0, -6.44)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Incoming"  parent="Art" instance=ExtResource("cardboard_box_01")]
+position = Vector3(9.16, 0, -3.18)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Overflow"  parent="Art" instance=ExtResource("cardboard_box_01")]
+position = Vector3(9.1, 0, -2.64)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ScheduleBoard" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.65, 2.13, -4.6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape26")
+
+[node name="ScheduleFace" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.605, 2.13, -4.6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape27")
+
+[node name="BoardTitle" type="Label3D" parent="Art"]
+position = Vector3(9.582, 2.49, -4.6)
+rotation_degrees = Vector3(0, -90, 0)
+text = "ACCESSION REGISTER"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00165
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="Manifest0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.58, 2.06, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape28")
+
+[node name="ManifestTitle0" type="Label3D" parent="Art"]
+position = Vector3(9.566, 2.2, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "A / 17"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00081
+modulate = Color(0.07, 0.095, 0.09, 1)
+horizontal_alignment = 1
+
+[node name="Ruling0_0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.1, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape29")
+
+[node name="Ruling0_1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.056, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape30")
+
+[node name="Ruling0_2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.012, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape31")
+
+[node name="Ruling0_3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.968, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape32")
+
+[node name="Ruling0_4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.9240000000000002, -5.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape33")
+
+[node name="Manifest1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.58, 2.06, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape34")
+
+[node name="ManifestTitle1" type="Label3D" parent="Art"]
+position = Vector3(9.566, 2.2, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "B / 23"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00081
+modulate = Color(0.07, 0.095, 0.09, 1)
+horizontal_alignment = 1
+
+[node name="Ruling1_0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.1, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape35")
+
+[node name="Ruling1_1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.056, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape36")
+
+[node name="Ruling1_2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.012, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape37")
+
+[node name="Ruling1_3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.968, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape38")
+
+[node name="Ruling1_4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.9240000000000002, -4.87)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape39")
+
+[node name="Manifest2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.58, 2.06, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape40")
+
+[node name="ManifestTitle2" type="Label3D" parent="Art"]
+position = Vector3(9.566, 2.2, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "C / 08"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00081
+modulate = Color(0.07, 0.095, 0.09, 1)
+horizontal_alignment = 1
+
+[node name="Ruling2_0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.1, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape41")
+
+[node name="Ruling2_1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.056, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape42")
+
+[node name="Ruling2_2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.012, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape43")
+
+[node name="Ruling2_3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.968, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape44")
+
+[node name="Ruling2_4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.9240000000000002, -4.34)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape45")
+
+[node name="Manifest3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.58, 2.06, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape46")
+
+[node name="ManifestTitle3" type="Label3D" parent="Art"]
+position = Vector3(9.566, 2.2, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "D / 19"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00081
+modulate = Color(0.07, 0.095, 0.09, 1)
+horizontal_alignment = 1
+
+[node name="Ruling3_0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.1, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape47")
+
+[node name="Ruling3_1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.056, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape48")
+
+[node name="Ruling3_2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 2.012, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape49")
+
+[node name="Ruling3_3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.968, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape50")
+
+[node name="Ruling3_4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.565, 1.9240000000000002, -3.8100000000000005)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape51")
+
+[node name="OperatorStool"  parent="Art" instance=ExtResource("metal_stool_01")]
+position = Vector3(8.23, 0, -4.53)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.83, 0.83, 0.83)
+
+[node name="TransferTrolley"  parent="Art" instance=ExtResource("industrial_storage_cart")]
+position = Vector3(8.73, 0, -2.17)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="TransferBeacon"  parent="Art" instance=ExtResource("industrial_caged_sconce")]
+position = Vector3(-0.95, 1.92, -3.645)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ThresholdGlow" type="OmniLight3D" parent="Art"]
+position = Vector3(-0.95, 2.03, -3.31)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(1, 0.7, 0.37, 1)
+light_energy = 0.56
+omni_range = 3.2
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="ArchiveStrip" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.2, 2.05, -11.738)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape52")
+
+[node name="ArchiveDestination" type="Label3D" parent="Art"]
+position = Vector3(2, 2.04, -11.71)
+rotation_degrees = Vector3(0, 0, 0)
+text = "STACKS     /     B — F"
+font_size = 80
+outline_size = 0
+pixel_size = 0.0038
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="StacksPool" type="OmniLight3D" parent="Art"]
+position = Vector3(1.7, 3.45, -10.6)
+rotation_degrees = Vector3(0, 0, 0)
+light_color = Color(0.66, 0.85, 0.81, 1)
+light_energy = 2.5
+omni_range = 6
+shadow_enabled = true
+omni_attenuation = 1.22
+
+[node name="StacksFixture" type="MeshInstance3D" parent="Art"]
+position = Vector3(1.7, 4.35, -10.6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape53")
+
+[node name="RouteStripe" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.95, 0.56, -3.65)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape54")
+
+[node name="GateId" type="Label3D" parent="Art"]
+position = Vector3(0.95, 1.53, -3.65)
+rotation_degrees = Vector3(0, 0, 0)
+text = "ACCESS   04"
+font_size = 80
+outline_size = 0
+pixel_size = 0.0009
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="Edge0.4" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 0.34500000000000003, 1.751)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape55")
+
+[node name="Edge0.9" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 0.845, -0.249)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape56")
+
+[node name="Edge1.4" type="MeshInstance3D" parent="Art"]
+position = Vector3(3, 1.345, -2.249)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape57")
+
+[node name="Slipcase0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5574999999999999, -6.88)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape58")
+
+[node name="SpineTicket0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.88)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape59")
+
+[node name="Volume0" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.88)
+rotation_degrees = Vector3(0, -90, 0)
+text = "01"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5645, -6.7669999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape60")
+
+[node name="SpineTicket1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.7669999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape61")
+
+[node name="Volume1" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.7669999999999995)
+rotation_degrees = Vector3(0, -90, 0)
+text = "02"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5715, -6.654)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape62")
+
+[node name="SpineTicket2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.654)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape63")
+
+[node name="Volume2" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.654)
+rotation_degrees = Vector3(0, -90, 0)
+text = "03"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5574999999999999, -6.5409999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape64")
+
+[node name="SpineTicket3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.5409999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape65")
+
+[node name="Volume3" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.5409999999999995)
+rotation_degrees = Vector3(0, -90, 0)
+text = "04"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5645, -6.428)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape66")
+
+[node name="SpineTicket4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.428)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape67")
+
+[node name="Volume4" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.428)
+rotation_degrees = Vector3(0, -90, 0)
+text = "05"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase5" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5715, -6.3149999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape68")
+
+[node name="SpineTicket5" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.3149999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape69")
+
+[node name="Volume5" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.3149999999999995)
+rotation_degrees = Vector3(0, -90, 0)
+text = "06"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase6" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5574999999999999, -6.202)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape70")
+
+[node name="SpineTicket6" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.202)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape71")
+
+[node name="Volume6" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.202)
+rotation_degrees = Vector3(0, -90, 0)
+text = "07"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="Slipcase7" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.37, 1.5645, -6.0889999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape72")
+
+[node name="SpineTicket7" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.214, 1.58, -6.0889999999999995)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape73")
+
+[node name="Volume7" type="Label3D" parent="Art"]
+position = Vector3(9.208, 1.58, -6.0889999999999995)
+rotation_degrees = Vector3(0, -90, 0)
+text = "08"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00053
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="PaperStack0"  parent="Art" instance=ExtResource("office_notepads")]
+position = Vector3(9.36, 1.76, -6.76)
+rotation_degrees = Vector3(0, -80, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="PaperStack1"  parent="Art" instance=ExtResource("office_notepads")]
+position = Vector3(9.38, 1.76, -6.39)
+rotation_degrees = Vector3(0, -72, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="PaperStack2"  parent="Art" instance=ExtResource("office_notepads")]
+position = Vector3(8.96, 0.8, -3.99)
+rotation_degrees = Vector3(0, -64, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="PaperStack3"  parent="Art" instance=ExtResource("office_notepads")]
+position = Vector3(9.39, 0.8, -5.26)
+rotation_degrees = Vector3(0, -56, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="FileTab0" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.558, 2.285, -5.486000000000001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape74")
+
+[node name="FormSmall0" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.878, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "RECEIVED"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00038
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry0r0" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.117, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "18.06   /  FOLIO"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry0r1" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.073, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "COPIES     02"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry0r2" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.029, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "SERIES    IV"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry0r3" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.9849999999999999, -5.4)
+rotation_degrees = Vector3(0, -90, 0)
+text = "REF.   6–172"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FileTab1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.558, 2.285, -4.956)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape75")
+
+[node name="FormSmall1" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.878, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "CHECKED"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00038
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry1r0" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.117, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "18.06   /  FOLIO"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry1r1" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.073, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "COPIES     02"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry1r2" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.029, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "SERIES    IV"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry1r3" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.9849999999999999, -4.87)
+rotation_degrees = Vector3(0, -90, 0)
+text = "REF.   6–172"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FileTab2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.558, 2.285, -4.426)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape76")
+
+[node name="FormSmall2" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.878, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "ON HOLD"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00038
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry2r0" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.117, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "18.06   /  FOLIO"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry2r1" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.073, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "COPIES     02"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry2r2" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.029, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "SERIES    IV"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry2r3" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.9849999999999999, -4.34)
+rotation_degrees = Vector3(0, -90, 0)
+text = "REF.   6–172"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FileTab3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.558, 2.285, -3.8960000000000004)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape77")
+
+[node name="FormSmall3" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.878, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "RELEASED"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00038
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry3r0" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.117, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "18.06   /  FOLIO"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry3r1" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.073, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "COPIES     02"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry3r2" type="Label3D" parent="Art"]
+position = Vector3(9.555, 2.029, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "SERIES    IV"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="FormEntry3r3" type="Label3D" parent="Art"]
+position = Vector3(9.555, 1.9849999999999999, -3.8100000000000005)
+rotation_degrees = Vector3(0, -90, 0)
+text = "REF.   6–172"
+font_size = 80
+outline_size = 0
+pixel_size = 0.000255
+modulate = Color(0.055, 0.088, 0.082, 1)
+horizontal_alignment = 1
+
+[node name="RoutingPanel" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.27, 2.1, -1.285)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape78")
+
+[node name="RoutingSign" type="Label3D" parent="Art"]
+position = Vector3(8.27, 2.1, -1.319)
+rotation_degrees = Vector3(0, 180, 0)
+text = "DISPATCH   →"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00195
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="TransitPlate" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.715, 2.02, -7.86)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Shape79")
+
+[node name="TransitIndex" type="Label3D" parent="Art"]
+position = Vector3(9.686, 2.08, -7.86)
+rotation_degrees = Vector3(0, -90, 0)
+text = "B4"
+font_size = 80
+outline_size = 0
+pixel_size = 0.0035
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[node name="TransitCaption" type="Label3D" parent="Art"]
+position = Vector3(9.686, 1.83, -7.86)
+rotation_degrees = Vector3(0, -90, 0)
+text = "DEPOSIT"
+font_size = 80
+outline_size = 0
+pixel_size = 0.00084
+modulate = Color(0.84, 0.81, 0.68, 1)
+horizontal_alignment = 1
+
+[editable path="BaseLab"]

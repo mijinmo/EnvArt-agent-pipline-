@@ -27,7 +27,7 @@
       "effort": "low",
       "input_commit": "c5565862ffbe538426dcaf5ffb276c190b44922a",
       "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "hifi",
@@ -48,7 +48,7 @@
       "effort": "xhigh",
       "input_commit": "f52ca531d9437dc2ab8e75254cb641d1bbf99baa",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "hifi",
