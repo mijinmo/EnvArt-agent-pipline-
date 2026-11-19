@@ -4410,6 +4410,256 @@
           ]
         }
       ]
+    },
+    "low": {
+      "game": "dredge",
+      "effort": "low",
+      "session_ids": [
+        "01a1f521-ea79-70b3-8bd7-d6f39e97db67"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 1365944,
+        "cached_input": 1299072,
+        "uncached_input": 66872,
+        "output": 12102,
+        "reasoning_output": 467,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "c0fdb9778c99f02b3c0ad2adeb54a548e550e96a",
+      "source_commits": [
+        "8e878d48e99450c13461ceda1ee39a483f4a545a Freeze neutral whitebox, references and production instructions",
+        "231f2c2c1c45b1fe9f6bc372d35cdd66059c2306 明确岸上收鱼所的参考依据与空间方向",
+        "e7a01479fb6f3f2045c72e7dc00ee39381d18bc5 保存两组整墙与渔获工作台实物小样",
+        "6ebf6d5f7079d4ad50ddf98915e17ee6e2e5404d 冻结收鱼所首轮场景、三机位图与修订依据",
+        "c0fdb9778c99f02b3c0ad2adeb54a548e550e96a 交付修订后的岸上收鱼所与三机位终图"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "11c68005ab275fa62e5c991a864faa8ed3c94a8b6cf42085cbc4e48e0b39a389",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 422785
+        },
+        "captures/first/props.png": {
+          "sha256": "63d91ad7127f48a9025f72fa02782a9e33269e5e4d636bb56bc77efcc1563146",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 454491
+        },
+        "captures/first/close.png": {
+          "sha256": "d48448da3d170ff7753c1642c35abb28b9ffdccb2f177fa5802ea4865df5c8f2",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 429597
+        },
+        "captures/final/door.png": {
+          "sha256": "993bcea147a9b92c1b30ed7a3dacdf272aaacbd23e5caa53896c0524b4968275",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 463002
+        },
+        "captures/final/props.png": {
+          "sha256": "06c84502f47a0b0a2cc6d225a70de0ed877706f18036c4eb89e8094c3f1de92b",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 488912
+        },
+        "captures/final/close.png": {
+          "sha256": "350b272501fd1e06e88567261bc05fe5cad2aa66c609df986107697110f145b7",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 451190
+        }
+      },
+      "protected_input_changes": [],
+      "base_lab_scene_override_check": {
+        "nonvisual_property_overrides": [],
+        "scope": "Static final.tscn inherited-node inspection only; unchanged base source separately hashed. Does not prove added-prop clearance or replace manual traversal."
+      },
+      "first_commit": "6ebf6d5f7079d4ad50ddf98915e17ee6e2e5404d",
+      "first_dependency_changes": [],
+      "preexisting_resource_changes_after_first": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 32,
+      "view_image_blocks_with_literal_tool_name": 4,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed own-file contact-sheet generation, stored image helper calls and flagged file-access inputs; available records show own files/public sources only, no peer/host art or solution reads found. Untested tool surfaces remain outside absolute isolation claims.",
+      "technical_summary": "两轮以 640px 联系图复看；第三方镜像来源已注明；首轮资源未变，未见跨读",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 4,
+      "coordinator_preflight_capture_log_count": 0,
+      "capture_logs_with_error_strings": [],
+      "collected_files": 103,
+      "collected_bytes": 6230301,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "b56040ae77e7cb180d64cfdca945dd6ed432269e439ca4e3575772f5291405d2",
+        "ENVIRONMENT.md": "dcc6ddfa0884eca5e16daf85633869fef78369694d60c21ddf52a33e216b1edd",
+        "README.md": "64bbf49f8362f9905641dcd6e926d64fad3020382c3783466a6c982148ddf97a",
+        "REFERENCES.md": "1b5060590edd917eba2e0a82a4ecbf484f2db5f558c2eba1c87630807e80de18",
+        "RESEARCH.md": "dd6ab9cfab14180874ca7e71dd951821ccc7a287fcea6392907fa96bfb80d3da",
+        "REVIEW.md": "edd6542b1e867506b0011e664f53dea708c256cbfd80aaa74158dfe351b476cd",
+        "assets/Barrel.mtl": "22cb5a6a6394fdde0a9282e2c2d845bc5aabbafa5e8e3b2f93a3ff029128afc5",
+        "assets/Barrel.obj": "b580e45397f9bfb17bc627016337c3b4cb08ac468d2a56ec356198ebc0a45a4a",
+        "assets/Barrel.obj.import": "0f1c56121f0d8c0895da0ca8501620cf35869e024c5745841338b98df412178c",
+        "assets/Bucket.mtl": "41f45dda0e863cc3397827f2eb305813d81479a3be97d79612041bbfdee4d315",
+        "assets/Bucket.obj": "3969f2d89a02c402c19aafc1b0fa8d4fdb6f0acbaeba9014ec9e5f522264601f",
+        "assets/Bucket.obj.import": "62ea1bb0c5c4aba2875e8364f3af26605ef69e9a96232025766b665887849ff1",
+        "assets/Crate.mtl": "60960e6134d09af23a0383932d582ad3c2715365a55540e57ddd743b7bf8066d",
+        "assets/Crate.obj": "52edf38bea3a9fa4de5f25e30e4279ccfe348ba56202e76c1337689dc2e8deb2",
+        "assets/Crate.obj.import": "1ba5da77d0762eef2a0521e20a6ba98adf93dd1c5f3c651f8bdda4383d030a8f",
+        "assets/Fish.mtl": "5d39e49db749005fd61756e8e015ed0bfd4ce9c38c4f48254b8a3f2f92fa9854",
+        "assets/Fish.obj": "1e84860ea0b7b970dab35a343f2c02269927b5ecdd2f6131865bb1436bd71cee",
+        "assets/Fish.obj.import": "e2783e5901a52d0ee8a6ab0d257c0045f8872d8c6af4a9456c2895b5e8bb8493",
+        "assets/Table_Big.mtl": "420c208b7042b5f470c80e8a409c2018caefea35d8be8ca6b83b329770095467",
+        "assets/Table_Big.obj": "401db093d9ece20972d9b6fb5efa2b4d3b9157bcd7bcf523bdedea04b1937541",
+        "assets/Table_Big.obj.import": "dae389b4c5ea09191bec93c42cbfbe96d260ac9eb9b36a644320a3f0f28d82a0",
+        "assets/Updated-License.txt": "20b983ae0e2e555817495a65c37519bfcb2231825269db6a57d72c51ed6006e3",
+        "assets/Wall.mtl": "882f13c1b1a79e651ca437c9a65b37a6e9ba1137ed3aae7626d1fd11b4783484",
+        "assets/Wall.obj": "8780bd7d080259da98b4421cd446ac42a39d44312dfb79606a40a4698e2ec3cc",
+        "assets/Wall.obj.import": "63406a368f3f42ea4a65bb1247b8d7a370e49ec0e8214e535ac8827cd46f7844",
+        "assets/WallBricks.mtl": "7158de7307d073c929d872bc8816ee034d5eff2560a90496401e4897b3cd16f0",
+        "assets/WallBricks.obj": "bc97a05e4f9272ca9e463a74cdf4521aabeca12e92817b716e002d0514ff2e71",
+        "assets/WallBricks.obj.import": "031769a7c29127622e9223c89a1f86748cc5582e19dea344fa45c1b67ec9ecc9",
+        "assets/Wall_Modular.mtl": "74023fb4206e2082b18b61098f1c4b396eb99b371f9585a6b27c7903f11b9123",
+        "assets/Wall_Modular.obj": "bac1651358abb3cde87122083ac1690eab6ce5870290dd5268571a326b726106",
+        "assets/Wall_Modular.obj.import": "6184b04e82fd3f0401fab5b985a622d54a0362d452bb89697a178d6332a6a255",
+        "assets/WindowSquare.mtl": "10fde0d801362308058327c7cea2859db03811c5ff92e6eefa7c64c8fcf26732",
+        "assets/WindowSquare.obj": "21087d09d8ba0a1126957d83bfcc043f3380040c051d89c71c983f850d0e63a6",
+        "assets/WindowSquare.obj.import": "57a5ede4fa4c0fa55e9f336edc7c590ff8f50acac2ef04c50db7b9b3654ccc61",
+        "assets/landing_emblem.svg": "f45c129c0e11bd1092427ce2248919c8a12c2fcb00ca04e4a473c25d9e77c609",
+        "assets/landing_emblem.svg.import": "13ead548c957fa33207088d3f774e44f92425dff7372500b638ab53e2727521a",
+        "assets/quay_boards.gdshader": "6f376d6d163b216fac462e44df0bd80341ef42e41c807943660072596ba1c58b",
+        "assets/quay_boards.gdshader.uid": "2600f724b50e822e30e0e8dfb004afe4d48ab2a6d87d39bbe16a6a54f35c5b19",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/final/close.png": "350b272501fd1e06e88567261bc05fe5cad2aa66c609df986107697110f145b7",
+        "captures/final/door.png": "993bcea147a9b92c1b30ed7a3dacdf272aaacbd23e5caa53896c0524b4968275",
+        "captures/final/props.png": "06c84502f47a0b0a2cc6d225a70de0ed877706f18036c4eb89e8094c3f1de92b",
+        "captures/first/close.png": "d48448da3d170ff7753c1642c35abb28b9ffdccb2f177fa5802ea4865df5c8f2",
+        "captures/first/door.png": "11c68005ab275fa62e5c991a864faa8ed3c94a8b6cf42085cbc4e48e0b39a389",
+        "captures/first/props.png": "63d91ad7127f48a9025f72fa02782a9e33269e5e4d636bb56bc77efcc1563146",
+        "captures/sample-a/close.png": "59810cc429459bded255af7acba5055586822ca94101349da357459ad3b2279d",
+        "captures/sample-a/door.png": "67494bb99fa5ce64b97a087761820a525efbe1cf5ee6a0b506b845c61b230474",
+        "captures/sample-a/props.png": "90a046d5858690f144b142cd307e85ea625119fdf758b607ee3df2fca1122982",
+        "captures/sample-b/close.png": "d77525af86b7b1f6333430b7a935fdcb4c98ae6541f5d22adfd0509a1e99beb0",
+        "captures/sample-b/door.png": "2ec6b73666fdcb4a91bedb4773346f43cf787887355a53ca48dd1d276d356391",
+        "captures/sample-b/props.png": "0020e6d47cefc3fc7bc502795cb1d07cadcc4e30feb5a3f0ada33fd9843e3768",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "3322df5dce6021957432e87cde8f74d18560cfbca1664a127c2b191bb3b233e9",
+        "first.tscn": "095312dc4666a8f7919dbbb84c851a86411728b9565b62be93371d3d6ee52d71",
+        "project.godot": "995031b7ec8fba230e1b813be50afc45d24d5ba517480d6ec5e1ddf252e1fa9e",
+        "references.json": "f23521c43af7572ca3dff655de1fa031f7ed90605993dc015f84fa33d693d6ec",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "7dfc614883e8e94b23368232d7a6609cd8af73a455bd65acbe999c8dcf6dfe0e",
+        "sample_b.tscn": "aa03f2405a4415b32dffbbedb5d02913fcb155c40fb6692f003868d57ef1f6b9",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "archived_scene_dependencies": [
+        {
+          "entry": "first.tscn",
+          "files_checked": 34,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        },
+        {
+          "entry": "final.tscn",
+          "files_checked": 35,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        }
+      ],
+      "view_review_evidence": {
+        "references": "all three frozen references; pier wallpaper retried via own resized preview",
+        "samples": "sample-a props, sample-b props, sample-a close",
+        "first_all_three": "2026-11-19T18:51:18.095Z",
+        "final_all_three": "2026-11-19T18:52:26.767Z",
+        "method": "Production images reviewed as JPEG contact sheets with each image resized to 640x400; original PNG evidence remains 1280x800."
+      },
+      "process_limitations": [
+        "No explicit image-view call for supplied whitebox views appears in the recorded session.",
+        "Both passes were self-reviewed at 640x400 per image; final anonymous comparison uses original-resolution evidence."
+      ],
+      "source_provenance_limits": [
+        "Quaternius historic packs came from a disclosed third-party mirror with a retained Quaternius CC0 statement; byte equivalence against the original historical author downloads was not independently established."
+      ],
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "stage_status": "collected and audited; visual comparison pending",
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-low"
     }
   }
 }

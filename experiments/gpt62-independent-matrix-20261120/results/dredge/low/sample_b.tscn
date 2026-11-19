@@ -1,0 +1,134 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="1"]
+[ext_resource type="Script" path="res://review.gd" id="2"]
+[ext_resource type="ArrayMesh" path="res://assets/Barrel.obj" id="Barrel"]
+[ext_resource type="ArrayMesh" path="res://assets/Bucket.obj" id="Bucket"]
+[ext_resource type="ArrayMesh" path="res://assets/Fish.obj" id="Fish"]
+[ext_resource type="ArrayMesh" path="res://assets/Table_Big.obj" id="Table_Big"]
+[ext_resource type="ArrayMesh" path="res://assets/Wall_Modular.obj" id="Wall_Modular"]
+
+[sub_resource type="StandardMaterial3D" id="oak"]
+albedo_color = Color(0.13563332965520566, 0.06662593864377289, 0.03954623527673284, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="end"]
+albedo_color = Color(0.06662593864377289, 0.04518620438567554, 0.03688945040110004, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="red"]
+albedo_color = Color(0.23455058216100522, 0.06124605423161761, 0.05126945837404324, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="tile"]
+albedo_color = Color(0.3613067797835095, 0.08865558628577294, 0.06662593864377289, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="paint"]
+albedo_color = Color(0.6795424696330938, 0.5394794890121072, 0.33245153634617935, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="iron"]
+albedo_color = Color(0.05126945837404324, 0.07618538148130785, 0.08021982031446832, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="teal"]
+albedo_color = Color(0.05780543019106723, 0.13286832155381798, 0.13843161503245183, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="glass"]
+albedo_color = Color(1.0, 0.5711248294648731, 0.19806931955994886, 1)
+roughness = 0.86
+emission_enabled = true
+emission = Color(1.0, 0.5711248294648731, 0.19806931955994886, 1)
+emission_energy_multiplier = 2
+
+[sub_resource type="StandardMaterial3D" id="chalk"]
+albedo_color = Color(0.846873231509858, 0.7230551289219693, 0.4969329950608704, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="ground"]
+albedo_color = Color(0.17788841598362912, 0.1559264637078274, 0.12213877222960187, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="stone"]
+albedo_color = Color(0.25415209433082675, 0.22696587351009836, 0.184474994500441, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="blue"]
+albedo_color = Color(0.13563332965520566, 0.19806931955994886, 0.19120168274079138, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="board"]
+albedo_color = Color(0.4072402119017367, 0.238397573812271, 0.11953842798834562, 1)
+roughness = 0.86
+
+[sub_resource type="StandardMaterial3D" id="dark"]
+albedo_color = Color(0.03954623527673284, 0.04518620438567554, 0.046665086336880095, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="cube"]
+
+[sub_resource type="CylinderMesh" id="round"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 12
+[node name="LocalStudy" type="Node3D"]
+script = ExtResource("2")
+[node name="BaseLab" parent="." instance=ExtResource("1")]
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Wall_Modular_1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.96000, 0.00000, -10.00000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.02000, 3.16000, 0.56000)
+mesh = ExtResource("Wall_Modular")
+
+[node name="Wall_Modular_2" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.96000, 0.00000, -8.00000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.02000, 3.16000, 0.56000)
+mesh = ExtResource("Wall_Modular")
+
+[node name="Wall_Modular_3" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.96000, 0.00000, -6.00000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.02000, 3.16000, 0.56000)
+mesh = ExtResource("Wall_Modular")
+
+[node name="Wall_Modular_4" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.96000, 0.00000, -4.00000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.02000, 3.16000, 0.56000)
+mesh = ExtResource("Wall_Modular")
+
+[node name="Wall_Modular_5" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.96000, 0.00000, -2.00000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.02000, 3.16000, 0.56000)
+mesh = ExtResource("Wall_Modular")
+
+[node name="Table_Big_6" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.90000, 0.00000, -4.65000)
+rotation_degrees = Vector3(0.00000, 90.00000, 0.00000)
+scale = Vector3(2.42000, 0.91000, 1.04000)
+mesh = ExtResource("Table_Big")
+
+[node name="Barrel_7" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.02000, 0.00000, -6.46000)
+rotation_degrees = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.68000, 0.86000, 0.66000)
+mesh = ExtResource("Barrel")
+
+[node name="Bucket_8" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.68000, 0.91000, -3.92000)
+rotation_degrees = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.34000, 0.42000, 0.34000)
+mesh = ExtResource("Bucket")
+
+[node name="Fish_9" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.75000, 0.91600, -4.70000)
+rotation_degrees = Vector3(0.00000, 68.00000, 0.00000)
+scale = Vector3(0.74000, 0.21000, 0.24000)
+mesh = ExtResource("Fish")
+[editable path="BaseLab"]
