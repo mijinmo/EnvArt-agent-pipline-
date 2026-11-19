@@ -1,0 +1,4851 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://art/final/surface.gd" id="E0"]
+
+[ext_resource type="PackedScene" path="res://baseline/source/whitebox.tscn" id="E1"]
+
+[ext_resource type="Shader" path="res://art/final/dusk.gdshader" id="E2"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Wall_Plaster_WoodGrid.gltf" id="E3"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Roof_Wooden_2x1.gltf" id="E4"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Wall_Plaster_Window_Wide_Flat.gltf" id="E5"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Wall_Plaster_Straight.gltf" id="E6"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Prop_Chimney2.gltf" id="E7"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Corner_Exterior_Wood.gltf" id="E8"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/survival/workbench-grind.glb" id="E9"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/FarmCrate_Empty.gltf" id="E10"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Barrel.gltf" id="E11"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Bucket_Wooden_1.gltf" id="E12"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Rope_1.gltf" id="E13"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Chain_Coil.gltf" id="E14"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/survival/resource-planks.glb" id="E15"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/survival/tool-shovel.glb" id="E16"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Crate_Wooden.gltf" id="E17"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Bag.gltf" id="E18"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Rope_2.gltf" id="E19"]
+
+[ext_resource type="PackedScene" path="res://art/pass01/haul_cart.gltf" id="E20"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Lantern_Wall.gltf" id="E21"]
+
+[ext_resource type="Shader" path="res://art/final/sound.gdshader" id="E22"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/Roof_Front_Brick4.gltf" id="E23"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/village/WindowShutters_Wide_Flat_Open.gltf" id="E24"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Workbench.gltf" id="E25"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Workbench_Drawers.gltf" id="E26"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Stool.gltf" id="E27"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/survival/tool-hammer.glb" id="E28"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Bottle_1.gltf" id="E29"]
+
+[ext_resource type="Texture2D" path="res://art/pass01/chart.png" id="E30"]
+
+[ext_resource type="Texture2D" path="res://baseline/materials/herring.svg" id="E31"]
+
+[ext_resource type="PackedScene" path="res://art/final/cedar_course_0.glb" id="Roof0"]
+[ext_resource type="PackedScene" path="res://art/final/cedar_course_1.glb" id="Roof1"]
+[ext_resource type="PackedScene" path="res://art/final/cedar_course_2.glb" id="Roof2"]
+[ext_resource type="Texture2D" path="res://art/final/plaster.png" id="Paintplaster"]
+[ext_resource type="Texture2D" path="res://art/pass01/wood.png" id="Paintwood"]
+[ext_resource type="Texture2D" path="res://art/pass01/boards.png" id="Paintboards"]
+[ext_resource type="Texture2D" path="res://art/pass01/cast.png" id="Paintcast"]
+[ext_resource type="Texture2D" path="res://art/pass01/yard_board.png" id="YardPlateTx"]
+[ext_resource type="Texture2D" path="res://art/pass01/station_board.png" id="StationPlateTx"]
+[ext_resource type="PackedScene" path="res://art/pass01/repair_dory.glb" id="Dory"]
+[ext_resource type="PackedScene" path="res://art/pass01/sounding_drum.glb" id="Drum"]
+[ext_resource type="PackedScene" path="res://art/final/outer_shore.glb" id="Coast"]
+
+[ext_resource type="PackedScene" path="res://art/final/loft_gable.glb" id="Louvered_loftRes"]
+[ext_resource type="PackedScene" path="res://art/final/oars.glb" id="Boatshop_oarsRes"]
+[ext_resource type="PackedScene" path="res://art/final/wetstone_hardware.glb" id="Wetstone_hardwareRes"]
+[ext_resource type="PackedScene" path="res://art/final/lead_line.glb" id="Leaded_sounding_lineRes"]
+[ext_resource type="PackedScene" path="res://art/final/field_log.glb" id="Soundings_field_bookRes"]
+[ext_resource type="Shader" path="res://art/final/panes.gdshader" id="PaneShader"]
+[ext_resource type="Texture2D" path="res://art/final/cargo.png" id="ShippingMarkTx"]
+
+[sub_resource type="ShaderMaterial" id="R0"]
+shader = ExtResource("E2")
+
+[sub_resource type="Sky" id="R1"]
+sky_material = SubResource("R0")
+
+[sub_resource type="Environment" id="R2"]
+background_mode = 2
+sky = SubResource("R1")
+ambient_light_source = 2
+ambient_light_color = Color(0.42,0.56,0.62,1)
+ambient_light_energy = 0.80
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.7
+ssao_intensity = 2.0
+glow_enabled = true
+glow_intensity = 0.24
+
+[sub_resource type="StandardMaterial3D" id="R3"]
+albedo_color = Color(0.177888,0.116971,0.07036,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R4"]
+top_radius = 0.088
+bottom_radius = 0.088
+height = 0.9265527507918802
+radial_segments = 6
+rings = 1
+material = SubResource("R3")
+
+[sub_resource type="StandardMaterial3D" id="R5"]
+albedo_color = Color(0.099899,0.052861,0.036889,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R6"]
+top_radius = 0.14
+bottom_radius = 0.14
+height = 6.09
+radial_segments = 6
+rings = 1
+material = SubResource("R5")
+
+[sub_resource type="StandardMaterial3D" id="R7"]
+albedo_color = Color(0.035601,0.06301,0.068478,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R8"]
+size = Vector3(2.570000, 0.420000, 0.090000)
+material = SubResource("R7")
+
+[sub_resource type="StandardMaterial3D" id="R9"]
+albedo_color = Color(0.068478,0.049707,0.038204,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R10"]
+size = Vector3(3.650000, 0.530000, 0.095000)
+material = SubResource("R9")
+
+[sub_resource type="StandardMaterial3D" id="R11"]
+albedo_color = Color(0.039546,0.095307,0.104616,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R12"]
+size = Vector3(3.510000, 0.400000, 0.025000)
+material = SubResource("R11")
+
+[sub_resource type="StandardMaterial3D" id="R13"]
+albedo_color = Color(0.318547,0.242281,0.147027,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R14"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.17547814144502466
+radial_segments = 6
+rings = 1
+material = SubResource("R13")
+
+[sub_resource type="CylinderMesh" id="R15"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.17221557166818582
+radial_segments = 6
+rings = 1
+material = SubResource("R13")
+
+[sub_resource type="CylinderMesh" id="R16"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.17000574438824134
+radial_segments = 6
+rings = 1
+material = SubResource("R13")
+
+[sub_resource type="CylinderMesh" id="R17"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.1688899882319851
+radial_segments = 6
+rings = 1
+material = SubResource("R13")
+
+[sub_resource type="StandardMaterial3D" id="R18"]
+albedo_color = Color(0.672443,0.3564,0.114435,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R19"]
+top_radius = 0.044
+bottom_radius = 0.044
+height = 0.14
+radial_segments = 7
+rings = 1
+material = SubResource("R18")
+
+[sub_resource type="StandardMaterial3D" id="R20"]
+albedo_color = Color(0.412543,0.351533,0.238398,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R21"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.09541488353501235
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="StandardMaterial3D" id="R22"]
+albedo_color = Color(0.274677,0.223228,0.135633,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R23"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.2033937068839638
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R24"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.11527792503337334
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R25"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.11553935968240342
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="CylinderMesh" id="R26"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.21357514751445122
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R27"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.1324173086715625
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R28"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.13453926092717342
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="CylinderMesh" id="R29"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.22442328918993648
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R30"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.14928433518232995
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R31"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.1499793793465585
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="CylinderMesh" id="R32"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.23400601323294815
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R33"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.16333650611292921
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R34"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.16001418215964885
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="CylinderMesh" id="R35"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.2405608831298661
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R36"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.17259646141280385
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R37"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.1634900608599798
+radial_segments = 6
+rings = 1
+material = SubResource("R20")
+
+[sub_resource type="CylinderMesh" id="R38"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.24288680491125844
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="CylinderMesh" id="R39"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.17582377541163227
+radial_segments = 6
+rings = 1
+material = SubResource("R22")
+
+[sub_resource type="StandardMaterial3D" id="R40"]
+albedo_color = Color(0.127438,0.08022,0.06301,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R41"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 4.253398641086913
+radial_segments = 6
+rings = 1
+material = SubResource("R40")
+
+[sub_resource type="StandardMaterial3D" id="R42"]
+albedo_color = Color(0.215861,0.127438,0.0865,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R43"]
+top_radius = 0.14
+bottom_radius = 0.14
+height = 2.74135003237456
+radial_segments = 6
+rings = 1
+material = SubResource("R42")
+
+[sub_resource type="StandardMaterial3D" id="R44"]
+albedo_color = Color(0.090842,0.06301,0.038204,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R45"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.2714026068408333
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R46"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.26722532626979795
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R47"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.2635751790286788
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R48"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.2604743269498934
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R49"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.2579425808198405
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R50"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.25599682615220076
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R51"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.25465049577803683
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R52"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.2539131249069256
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R53"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.2646874999999995
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R54"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.26156250000000014
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R55"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.25843750000000076
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R56"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.25531249999999917
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R57"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.25218750000000023
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R58"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.24906249999999996
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R59"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.24593750000000014
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R60"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.24281249999999988
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="StandardMaterial3D" id="R61"]
+albedo_color = Color(0.036889,0.048172,0.051269,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R62"]
+top_radius = 0.16
+bottom_radius = 0.16
+height = 0.135
+radial_segments = 10
+rings = 1
+material = SubResource("R61")
+
+[sub_resource type="StandardMaterial3D" id="R63"]
+albedo_color = Color(0.099899,0.135633,0.144128,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R64"]
+top_radius = 0.09
+bottom_radius = 0.15
+height = 0.22
+radial_segments = 10
+rings = 1
+material = SubResource("R63")
+
+[sub_resource type="StandardMaterial3D" id="R65"]
+albedo_color = Color(1.0,0.496933,0.122139,1)
+roughness = 0.92
+emission_enabled = true
+emission = Color(1.0,0.496933,0.122139,1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CylinderMesh" id="R66"]
+top_radius = 0.087
+bottom_radius = 0.087
+height = 0.25
+radial_segments = 10
+rings = 1
+material = SubResource("R65")
+
+[sub_resource type="CylinderMesh" id="R67"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.5001577876030722
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R68"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.48281239886730387
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R69"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.4712831553323328
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R70"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.4660019447384319
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R71"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.4671807064723454
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R72"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.47477132653520665
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R73"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.48847498656533134
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="CylinderMesh" id="R74"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.5077970189947945
+radial_segments = 6
+rings = 1
+material = SubResource("R44")
+
+[sub_resource type="ShaderMaterial" id="R75"]
+shader = ExtResource("E22")
+
+[sub_resource type="PlaneMesh" id="R76"]
+size = Vector2(350,350)
+material = SubResource("R75")
+
+[sub_resource type="StandardMaterial3D" id="R77"]
+albedo_color = Color(0.107023,0.116971,0.119538,1)
+roughness = 0.92
+
+[sub_resource type="SphereMesh" id="R78"]
+radial_segments = 7
+rings = 3
+radius = 1
+height = 2
+material = SubResource("R77")
+
+[sub_resource type="StandardMaterial3D" id="R79"]
+albedo_color = Color(0.068478,0.088656,0.084376,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R80"]
+top_radius = 0
+bottom_radius = 1.025100523633954
+height = 3.796668606051681
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R81"]
+top_radius = 0
+bottom_radius = 0.5658371686564883
+height = 2.095693217246253
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R82"]
+top_radius = 0
+bottom_radius = 1.1152620034488108
+height = 4.130600012773373
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R83"]
+top_radius = 0
+bottom_radius = 1.119946889061652
+height = 4.147951440969081
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R84"]
+top_radius = 0
+bottom_radius = 0.8485339553399881
+height = 3.142718353111067
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R85"]
+top_radius = 0
+bottom_radius = 1.151166338861688
+height = 4.263579032821066
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R86"]
+top_radius = 0
+bottom_radius = 0.7503791813832019
+height = 2.779182153271118
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R87"]
+top_radius = 0
+bottom_radius = 1.1428002326674733
+height = 4.232593454323975
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R88"]
+top_radius = 0
+bottom_radius = 0.957775148409927
+height = 3.5473153644812108
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R89"]
+top_radius = 0
+bottom_radius = 0.6954547419271505
+height = 2.5757583034338905
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R90"]
+top_radius = 0
+bottom_radius = 0.9118830554228476
+height = 3.3773446497142503
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R91"]
+top_radius = 0
+bottom_radius = 0.7039228840851612
+height = 2.6071217929080044
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R92"]
+top_radius = 0
+bottom_radius = 1.1384302119863352
+height = 4.216408192541982
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R93"]
+top_radius = 0
+bottom_radius = 1.2268442407019127
+height = 4.543867558155232
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R94"]
+top_radius = 0
+bottom_radius = 0.7056632719806426
+height = 2.61356767400238
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R95"]
+top_radius = 0
+bottom_radius = 0.7461671137566129
+height = 2.76358190280227
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R96"]
+top_radius = 0
+bottom_radius = 0.6953007094800241
+height = 2.575187812888978
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R97"]
+top_radius = 0
+bottom_radius = 0.8673695423418536
+height = 3.2124797864513095
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R98"]
+top_radius = 0
+bottom_radius = 1.0128075429821994
+height = 3.7511390480822198
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R99"]
+top_radius = 0
+bottom_radius = 0.7886836385476275
+height = 2.921050513139361
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R100"]
+top_radius = 0
+bottom_radius = 0.9611636120299625
+height = 3.5598652297406015
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R101"]
+top_radius = 0
+bottom_radius = 1.1360351749038868
+height = 4.2075376848292105
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R102"]
+top_radius = 0
+bottom_radius = 0.6710816685431014
+height = 2.4854876612707457
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R103"]
+top_radius = 0
+bottom_radius = 0.6216151404479465
+height = 2.3022782979553575
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="CylinderMesh" id="R104"]
+top_radius = 0
+bottom_radius = 0.9341033537588932
+height = 3.4596420509588635
+radial_segments = 5
+rings = 1
+material = SubResource("R79")
+
+[sub_resource type="StandardMaterial3D" id="R105"]
+albedo_color = Color(0.401978,0.138432,0.107023,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R106"]
+top_radius = 0.99
+bottom_radius = 1.07
+height = 0.85
+radial_segments = 10
+rings = 1
+material = SubResource("R105")
+
+[sub_resource type="StandardMaterial3D" id="R107"]
+albedo_color = Color(0.775822,0.658375,0.42869,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R108"]
+top_radius = 0.91
+bottom_radius = 0.9900000000000001
+height = 0.85
+radial_segments = 10
+rings = 1
+material = SubResource("R107")
+
+[sub_resource type="CylinderMesh" id="R109"]
+top_radius = 0.83
+bottom_radius = 0.91
+height = 0.85
+radial_segments = 10
+rings = 1
+material = SubResource("R105")
+
+[sub_resource type="CylinderMesh" id="R110"]
+top_radius = 0.75
+bottom_radius = 0.8300000000000001
+height = 0.85
+radial_segments = 10
+rings = 1
+material = SubResource("R107")
+
+[sub_resource type="CylinderMesh" id="R111"]
+top_radius = 0.6699999999999999
+bottom_radius = 0.75
+height = 0.85
+radial_segments = 10
+rings = 1
+material = SubResource("R105")
+
+[sub_resource type="StandardMaterial3D" id="R112"]
+albedo_color = Color(0.06301,0.049707,0.045186,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R113"]
+top_radius = 1.1
+bottom_radius = 1.0
+height = 0.26
+radial_segments = 10
+rings = 1
+material = SubResource("R112")
+
+[sub_resource type="StandardMaterial3D" id="R114"]
+albedo_color = Color(1.0,0.708376,0.291771,1)
+roughness = 0.92
+emission_enabled = true
+emission = Color(1.0,0.708376,0.291771,1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CylinderMesh" id="R115"]
+top_radius = 0.72
+bottom_radius = 0.72
+height = 0.7
+radial_segments = 10
+rings = 1
+material = SubResource("R114")
+
+[sub_resource type="StandardMaterial3D" id="R116"]
+albedo_color = Color(0.144128,0.07036,0.056128,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R117"]
+top_radius = 0.08
+bottom_radius = 1.02
+height = 0.54
+radial_segments = 10
+rings = 1
+material = SubResource("R116")
+
+[sub_resource type="ShaderMaterial" id="R118"]
+shader = ExtResource("PaneShader")
+
+[sub_resource type="BoxMesh" id="R119"]
+size = Vector3(1.540000, 1.580000, 0.075000)
+material = SubResource("R118")
+
+[sub_resource type="StandardMaterial3D" id="R120"]
+albedo_color = Color(0.082283,0.074214,0.059511,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R121"]
+size = Vector3(0.046000, 1.590000, 0.055000)
+material = SubResource("R120")
+
+[sub_resource type="BoxMesh" id="R122"]
+size = Vector3(1.540000, 0.054000, 0.055000)
+material = SubResource("R120")
+
+[sub_resource type="StandardMaterial3D" id="R123"]
+albedo_color = Color(0.686685,0.571125,0.351533,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R124"]
+size = Vector3(0.170000, 0.018000, 0.025000)
+material = SubResource("R123")
+
+[sub_resource type="BoxMesh" id="R125"]
+size = Vector3(0.090000, 0.018000, 0.025000)
+material = SubResource("R123")
+
+[sub_resource type="StandardMaterial3D" id="R126"]
+albedo_color = Color(0.135633,0.109462,0.076185,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R127"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.4759616088772286
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R128"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.4551532193943045
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R129"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.43679809766641636
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R130"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.42121707957417864
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R131"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.408727541431942
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R132"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.3996194478813562
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R133"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.39412729939069185
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="CylinderMesh" id="R134"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.3924029537669154
+radial_segments = 6
+rings = 1
+material = SubResource("R126")
+
+[sub_resource type="StandardMaterial3D" id="R135"]
+albedo_color = Color(0.3564,0.104616,0.066626,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R136"]
+size = Vector3(0.230000, 0.300000, 0.026000)
+material = SubResource("R135")
+
+[sub_resource type="StandardMaterial3D" id="R137"]
+albedo_color = Color(0.665387,0.508881,0.250158,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R138"]
+size = Vector3(0.230000, 0.300000, 0.026000)
+material = SubResource("R137")
+
+[sub_resource type="StandardMaterial3D" id="R139"]
+albedo_color = Color(0.072272,0.116971,0.124772,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R140"]
+top_radius = 0.15
+bottom_radius = 0.13
+height = 0.15
+radial_segments = 10
+rings = 1
+material = SubResource("R139")
+
+[sub_resource type="StandardMaterial3D" id="R141"]
+albedo_color = Color(0.309469,0.116971,0.076185,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R142"]
+top_radius = 0.225
+bottom_radius = 0.15
+height = 0.2
+radial_segments = 10
+rings = 1
+material = SubResource("R141")
+
+[sub_resource type="StandardMaterial3D" id="R143"]
+albedo_color = Color(0.617207,0.564712,0.386429,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R144"]
+top_radius = 0.208
+bottom_radius = 0.225
+height = 0.1
+radial_segments = 10
+rings = 1
+material = SubResource("R143")
+
+[sub_resource type="StandardMaterial3D" id="R145"]
+albedo_color = Color(0.381326,0.111932,0.072272,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R146"]
+top_radius = 0.065
+bottom_radius = 0.208
+height = 0.18
+radial_segments = 10
+rings = 1
+material = SubResource("R145")
+
+[sub_resource type="StandardMaterial3D" id="R147"]
+albedo_color = Color(0.064803,0.088656,0.0865,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R148"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 0.07
+radial_segments = 10
+rings = 1
+material = SubResource("R147")
+
+[sub_resource type="CylinderMesh" id="R149"]
+top_radius = 0.1875
+bottom_radius = 0.1625
+height = 0.1875
+radial_segments = 10
+rings = 1
+material = SubResource("R139")
+
+[sub_resource type="CylinderMesh" id="R150"]
+top_radius = 0.28125
+bottom_radius = 0.1875
+height = 0.25
+radial_segments = 10
+rings = 1
+material = SubResource("R141")
+
+[sub_resource type="CylinderMesh" id="R151"]
+top_radius = 0.26
+bottom_radius = 0.28125
+height = 0.125
+radial_segments = 10
+rings = 1
+material = SubResource("R143")
+
+[sub_resource type="CylinderMesh" id="R152"]
+top_radius = 0.08125
+bottom_radius = 0.26
+height = 0.22499999999999998
+radial_segments = 10
+rings = 1
+material = SubResource("R145")
+
+[sub_resource type="CylinderMesh" id="R153"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.08750000000000001
+radial_segments = 10
+rings = 1
+material = SubResource("R147")
+
+[sub_resource type="CylinderMesh" id="R154"]
+top_radius = 0.1575
+bottom_radius = 0.1365
+height = 0.1575
+radial_segments = 10
+rings = 1
+material = SubResource("R139")
+
+[sub_resource type="CylinderMesh" id="R155"]
+top_radius = 0.23625000000000002
+bottom_radius = 0.1575
+height = 0.21000000000000002
+radial_segments = 10
+rings = 1
+material = SubResource("R141")
+
+[sub_resource type="CylinderMesh" id="R156"]
+top_radius = 0.2184
+bottom_radius = 0.23625000000000002
+height = 0.10500000000000001
+radial_segments = 10
+rings = 1
+material = SubResource("R143")
+
+[sub_resource type="CylinderMesh" id="R157"]
+top_radius = 0.06825
+bottom_radius = 0.2184
+height = 0.189
+radial_segments = 10
+rings = 1
+material = SubResource("R145")
+
+[sub_resource type="CylinderMesh" id="R158"]
+top_radius = 0.042
+bottom_radius = 0.042
+height = 0.07350000000000001
+radial_segments = 10
+rings = 1
+material = SubResource("R147")
+
+[sub_resource type="StandardMaterial3D" id="R159"]
+albedo_color = Color(0.48515,0.445201,0.296138,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R160"]
+size = Vector3(0.480000, 0.290000, 0.025000)
+material = SubResource("R159")
+
+[sub_resource type="StandardMaterial3D" id="R161"]
+albedo_color = Color(0.552011,0.491021,0.3564,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R162"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 0.07821723252011543
+radial_segments = 6
+rings = 1
+material = SubResource("R161")
+
+[sub_resource type="StandardMaterial3D" id="R163"]
+albedo_color = Color(0.376262,0.0865,0.056128,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R164"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 0.07821723252011537
+radial_segments = 6
+rings = 1
+material = SubResource("R163")
+
+[sub_resource type="StandardMaterial3D" id="R165"]
+albedo_color = Color(0.672443,0.564712,0.371238,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R166"]
+top_radius = 0.01375
+bottom_radius = 0.01375
+height = 0.1781556991089536
+radial_segments = 6
+rings = 1
+material = SubResource("R165")
+
+[sub_resource type="CylinderMesh" id="R167"]
+top_radius = 0.01375
+bottom_radius = 0.01375
+height = 0.13221224650160057
+radial_segments = 6
+rings = 1
+material = SubResource("R165")
+
+[sub_resource type="CylinderMesh" id="R168"]
+top_radius = 0.01375
+bottom_radius = 0.01375
+height = 0.08929629401604518
+radial_segments = 6
+rings = 1
+material = SubResource("R165")
+
+[sub_resource type="CylinderMesh" id="R169"]
+top_radius = 0.01375
+bottom_radius = 0.01375
+height = 0.05675123897325946
+radial_segments = 6
+rings = 1
+material = SubResource("R165")
+
+[sub_resource type="StandardMaterial3D" id="R170"]
+albedo_texture = ExtResource("E30")
+roughness = 0.96
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="R171"]
+size = Vector2(1.82,1.24)
+material = SubResource("R170")
+
+[sub_resource type="StandardMaterial3D" id="R172"]
+albedo_color = Color(0.104616,0.08022,0.051269,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R173"]
+size = Vector3(1.960000, 1.380000, 0.080000)
+material = SubResource("R172")
+
+[sub_resource type="StandardMaterial3D" id="R174"]
+albedo_color = Color(0.665387,0.514918,0.246201,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R175"]
+top_radius = 0.064
+bottom_radius = 0.064
+height = 0.125
+radial_segments = 8
+rings = 1
+material = SubResource("R174")
+
+[sub_resource type="StandardMaterial3D" id="R176"]
+albedo_color = Color(0.371238,0.116971,0.072272,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R177"]
+top_radius = 0.064
+bottom_radius = 0.064
+height = 0.125
+radial_segments = 8
+rings = 1
+material = SubResource("R176")
+
+[sub_resource type="StandardMaterial3D" id="R178"]
+albedo_color = Color(0.708376,0.571125,0.401978,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R179"]
+top_radius = 0.91
+bottom_radius = 1.0
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R178")
+
+[sub_resource type="StandardMaterial3D" id="R180"]
+albedo_color = Color(0.341914,0.114435,0.097587,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R181"]
+top_radius = 0.8480000000000001
+bottom_radius = 0.938
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R180")
+
+[sub_resource type="CylinderMesh" id="R182"]
+top_radius = 0.786
+bottom_radius = 0.876
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R178")
+
+[sub_resource type="CylinderMesh" id="R183"]
+top_radius = 0.724
+bottom_radius = 0.8140000000000001
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R180")
+
+[sub_resource type="CylinderMesh" id="R184"]
+top_radius = 0.662
+bottom_radius = 0.752
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R178")
+
+[sub_resource type="CylinderMesh" id="R185"]
+top_radius = 0.6000000000000001
+bottom_radius = 0.69
+height = 0.89
+radial_segments = 9
+rings = 1
+material = SubResource("R180")
+
+[sub_resource type="StandardMaterial3D" id="R186"]
+albedo_color = Color(0.090842,0.082283,0.076185,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R187"]
+top_radius = 0.98
+bottom_radius = 0.93
+height = 0.25
+radial_segments = 10
+rings = 1
+material = SubResource("R186")
+
+[sub_resource type="StandardMaterial3D" id="R188"]
+albedo_color = Color(0.913099,0.617207,0.238398,1)
+roughness = 0.92
+emission_enabled = true
+emission = Color(0.913099,0.617207,0.238398,1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CylinderMesh" id="R189"]
+top_radius = 0.65
+bottom_radius = 0.65
+height = 0.68
+radial_segments = 10
+rings = 1
+material = SubResource("R188")
+
+[sub_resource type="StandardMaterial3D" id="R190"]
+albedo_color = Color(0.127438,0.099899,0.090842,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R191"]
+top_radius = 0.05
+bottom_radius = 0.92
+height = 0.46
+radial_segments = 10
+rings = 1
+material = SubResource("R190")
+
+[sub_resource type="StandardMaterial3D" id="R192"]
+albedo_color = Color(0.076185,0.127438,0.130136,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R193"]
+size = Vector3(0.702000, 0.083000, 0.068000)
+material = SubResource("R192")
+
+[sub_resource type="StandardMaterial3D" id="R194"]
+albedo_color = Color(0.242281,0.262251,0.191202,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R195"]
+top_radius = 0.026
+bottom_radius = 0.026
+height = 0.018
+radial_segments = 8
+rings = 1
+material = SubResource("R194")
+
+[sub_resource type="StandardMaterial3D" id="R196"]
+albedo_color = Color(0.114435,0.132868,0.144128,1)
+roughness = 0.92
+
+[sub_resource type="SphereMesh" id="R197"]
+radial_segments = 7
+rings = 3
+radius = 1
+height = 2
+material = SubResource("R196")
+
+[sub_resource type="StandardMaterial3D" id="R198"]
+albedo_color = Color(0.0865,0.114435,0.109462,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R199"]
+top_radius = 0
+bottom_radius = 0.7588202942026582
+height = 3.2992186704463395
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R200"]
+top_radius = 0
+bottom_radius = 0.6663536092104638
+height = 2.897189605262886
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R201"]
+top_radius = 0
+bottom_radius = 0.8101527257174146
+height = 3.522403155293107
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R202"]
+top_radius = 0
+bottom_radius = 0.7244953563340967
+height = 3.1499798101482464
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R203"]
+top_radius = 0
+bottom_radius = 0.9356861496710669
+height = 4.068200650743769
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R204"]
+top_radius = 0
+bottom_radius = 0.934315454138663
+height = 4.062241104950709
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R205"]
+top_radius = 0
+bottom_radius = 0.8716898669139662
+height = 3.789955943104201
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R206"]
+top_radius = 0
+bottom_radius = 0.6609287682939254
+height = 2.8736033404083714
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R207"]
+top_radius = 0
+bottom_radius = 0.9088381208173111
+height = 3.951470090510048
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R208"]
+top_radius = 0
+bottom_radius = 0.8839523900097428
+height = 3.843271260911925
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R209"]
+top_radius = 0
+bottom_radius = 0.751773919366181
+height = 3.26858225811383
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R210"]
+top_radius = 0
+bottom_radius = 0.7349810824078085
+height = 3.1955699235122106
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R211"]
+top_radius = 0
+bottom_radius = 1.0040526987868188
+height = 4.365446516464429
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R212"]
+top_radius = 0
+bottom_radius = 1.0302853897286814
+height = 4.479501694472527
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R213"]
+top_radius = 0
+bottom_radius = 0.8454918158687379
+height = 3.6760513733423386
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R214"]
+top_radius = 0
+bottom_radius = 0.8290927294177991
+height = 3.6047509974686918
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R215"]
+top_radius = 0
+bottom_radius = 0.7613968187368858
+height = 3.310420951029938
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R216"]
+top_radius = 0
+bottom_radius = 0.8473309674367806
+height = 3.6840476845077417
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R217"]
+top_radius = 0
+bottom_radius = 0.9479491541338505
+height = 4.121518061451524
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="CylinderMesh" id="R218"]
+top_radius = 0
+bottom_radius = 0.8327166849227624
+height = 3.6205073257511406
+radial_segments = 5
+rings = 1
+material = SubResource("R198")
+
+[sub_resource type="StandardMaterial3D" id="R219"]
+albedo_color = Color(0.135633,0.198069,0.191202,1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="R220"]
+size = Vector3(0.071000, 0.230000, 0.017000)
+material = SubResource("R219")
+
+[sub_resource type="StandardMaterial3D" id="R221"]
+albedo_texture = ExtResource("E31")
+transparency = 1
+cull_mode = 2
+roughness = 0.88
+
+[sub_resource type="QuadMesh" id="R222"]
+size = Vector2(1.02,0.44)
+material = SubResource("R221")
+
+[sub_resource type="StandardMaterial3D" id="R223"]
+albedo_color = Color(0.0865,0.111932,0.104616,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R224"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.33999999999999986
+radial_segments = 6
+rings = 1
+material = SubResource("R223")
+
+[sub_resource type="StandardMaterial3D" id="R225"]
+albedo_color = Color(0.088656,0.124772,0.127438,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R226"]
+top_radius = 0.166
+bottom_radius = 0.166
+height = 0.11
+radial_segments = 10
+rings = 1
+material = SubResource("R225")
+
+[sub_resource type="StandardMaterial3D" id="R227"]
+albedo_color = Color(0.396755,0.341914,0.219526,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R228"]
+top_radius = 0.061
+bottom_radius = 0.061
+height = 0.032
+radial_segments = 10
+rings = 1
+material = SubResource("R227")
+
+[sub_resource type="StandardMaterial3D" id="R229"]
+albedo_color = Color(0.072272,0.095307,0.088656,1)
+roughness = 0.92
+
+[sub_resource type="CylinderMesh" id="R230"]
+top_radius = 0.028
+bottom_radius = 0.028
+height = 0.05435199947152935
+radial_segments = 6
+rings = 1
+material = SubResource("R229")
+
+[sub_resource type="StandardMaterial3D" id="YardPlateMat"]
+albedo_texture = ExtResource("YardPlateTx")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="YardPlate"]
+size = Vector2(2.48,0.5)
+material = SubResource("YardPlateMat")
+
+[sub_resource type="StandardMaterial3D" id="StationPlateMat"]
+albedo_texture = ExtResource("StationPlateTx")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="StationPlate"]
+size = Vector2(3.58,0.478)
+material = SubResource("StationPlateMat")
+
+[sub_resource type="StandardMaterial3D" id="Sash"]
+albedo_color = Color(0.502,0.3255,0.2667,1)
+roughness = 0.94
+
+[sub_resource type="ShaderMaterial" id="Windowlight"]
+shader = ExtResource("PaneShader")
+
+[sub_resource type="BoxMesh" id="SashUpright"]
+size = Vector3(0.07, 1.27, 0.08)
+material = SubResource("Sash")
+
+[sub_resource type="BoxMesh" id="SashLintel"]
+size = Vector3(1.52, 0.072, 0.085)
+material = SubResource("Sash")
+
+[sub_resource type="BoxMesh" id="HoneyGlass"]
+size = Vector3(1.49, 1.24, 0.06)
+material = SubResource("Windowlight")
+
+[sub_resource type="StandardMaterial3D" id="Iron_band"]
+albedo_color = Color(0.2157,0.2353,0.251,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="CargoBandLow"]
+size = Vector3(1.51, 0.055, 1.51)
+material = SubResource("Iron_band")
+
+[sub_resource type="BoxMesh" id="CargoBandMid"]
+size = Vector3(1.51, 0.055, 1.51)
+material = SubResource("Iron_band")
+
+[sub_resource type="BoxMesh" id="CargoBandHigh"]
+size = Vector3(1.51, 0.055, 1.51)
+material = SubResource("Iron_band")
+
+[sub_resource type="StandardMaterial3D" id="ShippingMarkMat"]
+albedo_texture = ExtResource("ShippingMarkTx")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="ShippingMark"]
+size = Vector2(0.68,0.3)
+material = SubResource("ShippingMarkMat")
+
+[sub_resource type="StandardMaterial3D" id="LandingWood0"]
+albedo_color = Color(0.3294,0.2745,0.2784,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="PilotDeck0"]
+size = Vector3(4.9, 0.22, 3.45)
+material = SubResource("LandingWood0")
+
+[sub_resource type="BoxMesh" id="PilotPile0"]
+size = Vector3(0.16, 3.0, 0.18)
+material = SubResource("LandingWood0")
+
+[sub_resource type="StandardMaterial3D" id="LandingWood1"]
+albedo_color = Color(0.3294,0.2745,0.2784,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="PilotDeck1"]
+size = Vector3(4.9, 0.22, 3.45)
+material = SubResource("LandingWood1")
+
+[sub_resource type="BoxMesh" id="PilotPile1"]
+size = Vector3(0.16, 3.0, 0.18)
+material = SubResource("LandingWood1")
+
+[node name="SoundingHouse" type="Node3D"]
+architectural_pigments = Dictionary[String, Texture2D]({"wood": ExtResource("Paintwood"), "boards": ExtResource("Paintboards"), "plaster": ExtResource("Paintplaster"), "cast": ExtResource("Paintcast")})
+script = ExtResource("E0")
+
+[node name="Whitebox" instance=ExtResource("E1") parent="."]
+
+
+[node name="MaritimeAir" type="WorldEnvironment" parent="."]
+environment = SubResource("R2")
+
+[node name="LowSun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-23, -51, 0)
+light_color = Color(1.0,0.81,0.66,1)
+light_energy = 1.08
+shadow_enabled = true
+directional_shadow_max_distance = 65
+
+[node name="Harbor" type="Node3D" parent="."]
+
+
+[node name="Wall_Plaster_WoodGrid5" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(-9.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x16" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x17" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Window_Wide_Flat8" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(-7.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x19" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x110" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Straight11" instance=ExtResource("E6") parent="Harbor"]
+position = Vector3(-5.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x112" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x113" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Straight14" instance=ExtResource("E6") parent="Harbor"]
+position = Vector3(-3.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x115" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x116" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Window_Wide_Flat17" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(-1.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Wall_Plaster_Straight18" instance=ExtResource("E6") parent="Harbor"]
+position = Vector3(1.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Wall_Plaster_Straight19" instance=ExtResource("E6") parent="Harbor"]
+position = Vector3(3.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x120" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x121" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Window_Wide_Flat22" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(5.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x123" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x124" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Straight25" instance=ExtResource("E6") parent="Harbor"]
+position = Vector3(7.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x126" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x127" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_WoodGrid28" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(9.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Roof_Wooden_2x129" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Roof_Wooden_2x130" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+metadata/wash = "#944b4b"
+
+[node name="Wall_Plaster_Window_Wide_Flat31" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(11.000000, 0.000000, -11.580000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.320000, 1.000000)
+metadata/wash = "#8c7468"
+
+[node name="Prop_Chimney232" instance=ExtResource("E7") parent="Harbor"]
+position = Vector3(4.650000, 4.850000, -12.450000)
+rotation_degrees = Vector3(0.000000, 16.000000, 0.000000)
+scale = Vector3(0.580000, 0.580000, 0.580000)
+metadata/wash = "#bfb4a4"
+
+[node name="Roof_Wooden_2x133" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(1.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+metadata/wash = "#8f5c50"
+
+[node name="Roof_Wooden_2x134" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(3.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+metadata/wash = "#8f5c50"
+
+[node name="Roof_Wooden_2x135" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(5.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+metadata/wash = "#8f5c50"
+
+[node name="Corner_Exterior_Wood36" instance=ExtResource("E8") parent="Harbor"]
+position = Vector3(0.480000, 0.000000, -7.440000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.940000, 1.500000)
+metadata/wash = "#b7997b"
+
+[node name="KneeBrace37" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7231104752831213,0.6907323943002952,-0.0,-0.6907323943002952,0.7231104752831213,0.0,0.0,0.0,1.0000000000000002,0.8,2.395,-7.45)
+mesh = SubResource("R4")
+
+[node name="Corner_Exterior_Wood38" instance=ExtResource("E8") parent="Harbor"]
+position = Vector3(6.520000, 0.000000, -7.440000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.940000, 1.500000)
+metadata/wash = "#b7997b"
+
+[node name="KneeBrace39" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7231104752831216,-0.6907323943002949,0.0,0.6907323943002949,0.7231104752831216,-0.0,0.0,0.0,1.0,6.199999999999999,2.395,-7.45)
+mesh = SubResource("R4")
+
+[node name="Lintel40" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.0,1.0,-0.0,-1.0,0.0,0.0,0.0,0.0,1.0,3.495,2.81,-7.45)
+mesh = SubResource("R6")
+
+[node name="Wall_Plaster_WoodGrid41" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(9.520000, 0.000000, -10.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 0.990000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x142" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.980000, 2.940000, -10.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_Window_Wide_Flat43" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(9.520000, 0.000000, -8.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 0.990000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x144" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.980000, 2.940000, -8.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_WoodGrid45" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(9.520000, 0.000000, -6.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 0.990000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x146" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.980000, 2.940000, -6.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_Window_Wide_Flat47" instance=ExtResource("E5") parent="Harbor"]
+position = Vector3(9.520000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 0.990000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x148" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.980000, 2.940000, -4.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_WoodGrid49" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(9.520000, 0.000000, -2.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 0.990000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x150" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.980000, 2.940000, -2.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_WoodGrid51" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(7.000000, 0.000000, -0.530000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 0.980000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x152" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(7.000000, 2.950000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Wall_Plaster_WoodGrid53" instance=ExtResource("E3") parent="Harbor"]
+position = Vector3(9.000000, 0.000000, -0.530000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 0.980000, 1.000000)
+metadata/wash = "#aa917d"
+
+[node name="Roof_Wooden_2x154" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(9.000000, 2.950000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+metadata/wash = "#945953"
+
+[node name="Corner_Exterior_Wood55" instance=ExtResource("E8") parent="Harbor"]
+position = Vector3(-1.120000, 0.000000, -3.620000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.130000, 0.860000, 1.050000)
+metadata/wash = "#9e8d79"
+
+[node name="Corner_Exterior_Wood56" instance=ExtResource("E8") parent="Harbor"]
+position = Vector3(1.120000, 0.000000, -3.620000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.130000, 0.860000, 1.050000)
+metadata/wash = "#9e8d79"
+
+[node name="PortAuthorityEnamel57" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.000000, 2.540000, -3.650000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R8")
+
+[node name="GateLetter58" type="Label3D" parent="Harbor"]
+visible = false
+position = Vector3(0.000000, 2.540000, -3.590000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+text = "T I D E   Y A R D"
+font_size = 44
+pixel_size = 0.005
+outline_size = 0
+modulate = Color(0.83077,0.745404,0.48515,1)
+double_sided = false
+
+[node name="PaintedTimber59" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.550000, 2.540000, -7.350000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R10")
+
+[node name="EnamelFace60" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.550000, 2.550000, -7.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R12")
+
+[node name="ShopLetter61" type="Label3D" parent="Harbor"]
+visible = false
+position = Vector3(3.550000, 2.560000, -7.260000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+text = "S O U N D I N G   H O U S E"
+font_size = 37
+pixel_size = 0.005
+outline_size = 0
+modulate = Color(1.0,0.775822,0.423268,1)
+double_sided = false
+
+[node name="workbench_grind62" instance=ExtResource("E9") parent="Harbor"]
+position = Vector3(1.800000, 0.000000, -8.500000)
+rotation_degrees = Vector3(0.000000, 18.000000, 0.000000)
+scale = Vector3(4.500000, 4.500000, 4.500000)
+metadata/wash = "#b9b9ae"
+
+[node name="FarmCrate_Empty63" instance=ExtResource("E10") parent="Harbor"]
+position = Vector3(5.620000, 0.020000, -8.600000)
+rotation_degrees = Vector3(0.000000, -12.000000, 0.000000)
+scale = Vector3(1.350000, 1.350000, 1.350000)
+metadata/wash = "#eed9bc"
+
+[node name="Barrel64" instance=ExtResource("E11") parent="Harbor"]
+position = Vector3(5.640000, 0.000000, -9.650000)
+rotation_degrees = Vector3(0.000000, -16.000000, 0.000000)
+scale = Vector3(1.200000, 1.200000, 1.200000)
+metadata/wash = "#eed9bc"
+
+[node name="Bucket_Wooden_165" instance=ExtResource("E12") parent="Harbor"]
+position = Vector3(2.470000, 0.015000, -7.860000)
+rotation_degrees = Vector3(0.000000, 13.000000, 0.000000)
+scale = Vector3(1.100000, 1.100000, 1.100000)
+metadata/wash = "#eed9bc"
+
+[node name="Rope_166" instance=ExtResource("E13") parent="Harbor"]
+position = Vector3(2.800000, 0.025000, -7.550000)
+rotation_degrees = Vector3(0.000000, -27.000000, 0.000000)
+scale = Vector3(1.260000, 1.260000, 1.260000)
+metadata/wash = "#eed9bc"
+
+[node name="Chain_Coil67" instance=ExtResource("E14") parent="Harbor"]
+position = Vector3(1.150000, 0.015000, -8.270000)
+rotation_degrees = Vector3(0.000000, 17.000000, 0.000000)
+scale = Vector3(0.880000, 0.880000, 0.880000)
+metadata/wash = "#a0b0aa"
+
+[node name="resource_planks68" instance=ExtResource("E15") parent="Harbor"]
+position = Vector3(3.980000, 0.018000, -10.480000)
+rotation_degrees = Vector3(0.000000, 85.000000, 0.000000)
+scale = Vector3(3.900000, 3.900000, 3.900000)
+metadata/wash = "#eed9bc"
+
+[node name="tool_shovel69" instance=ExtResource("E16") parent="Harbor"]
+position = Vector3(4.640000, 0.180000, -9.750000)
+rotation_degrees = Vector3(-15.000000, 17.000000, 10.000000)
+scale = Vector3(4.400000, 4.400000, 4.400000)
+metadata/wash = "#cabca4"
+
+[node name="Crate_Wooden70" instance=ExtResource("E17") parent="Harbor"]
+position = Vector3(7.800000, 0.010000, -8.650000)
+rotation_degrees = Vector3(0.000000, 18.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+metadata/wash = "#c9b297"
+
+[node name="Crate_Wooden71" instance=ExtResource("E17") parent="Harbor"]
+position = Vector3(8.850000, 0.010000, -8.900000)
+rotation_degrees = Vector3(0.000000, 2.000000, 0.000000)
+scale = Vector3(0.900000, 0.900000, 0.900000)
+metadata/wash = "#c9b297"
+
+[node name="Crate_Wooden72" instance=ExtResource("E17") parent="Harbor"]
+position = Vector3(8.240000, 0.010000, -7.500000)
+rotation_degrees = Vector3(0.000000, -15.000000, 0.000000)
+scale = Vector3(0.830000, 0.830000, 0.830000)
+metadata/wash = "#c9b297"
+
+[node name="FarmCrate_Empty73" instance=ExtResource("E10") parent="Harbor"]
+position = Vector3(7.800000, 1.190000, -8.650000)
+rotation_degrees = Vector3(0.000000, 14.000000, 0.000000)
+scale = Vector3(1.300000, 1.300000, 1.300000)
+metadata/wash = "#eed9bc"
+
+[node name="Bag74" instance=ExtResource("E18") parent="Harbor"]
+position = Vector3(8.670000, 0.000000, -6.900000)
+rotation_degrees = Vector3(0.000000, 33.000000, 0.000000)
+scale = Vector3(0.950000, 0.950000, 0.950000)
+metadata/wash = "#eed9bc"
+
+[node name="Barrel75" instance=ExtResource("E11") parent="Harbor"]
+position = Vector3(7.480000, 0.000000, -6.850000)
+rotation_degrees = Vector3(0.000000, -21.000000, 0.000000)
+scale = Vector3(1.150000, 1.150000, 1.150000)
+metadata/wash = "#eed9bc"
+
+[node name="Rope_276" instance=ExtResource("E19") parent="Harbor"]
+position = Vector3(7.480000, 1.040000, -6.850000)
+rotation_degrees = Vector3(0.000000, 20.000000, 0.000000)
+scale = Vector3(0.850000, 0.850000, 0.850000)
+metadata/wash = "#eed9bc"
+
+[node name="Stall_Cart_Empty77" instance=ExtResource("E20") parent="Harbor"]
+position = Vector3(-1.670000, 0.000000, -9.550000)
+rotation_degrees = Vector3(0.000000, -17.000000, 0.000000)
+scale = Vector3(0.860000, 0.860000, 0.860000)
+metadata/wash = "#ad9a86"
+
+[node name="Barrel78" instance=ExtResource("E11") parent="Harbor"]
+position = Vector3(-0.680000, 0.000000, -8.700000)
+rotation_degrees = Vector3(0.000000, -8.000000, 0.000000)
+scale = Vector3(1.050000, 1.050000, 1.050000)
+metadata/wash = "#eed9bc"
+
+[node name="Rope_179" instance=ExtResource("E13") parent="Harbor"]
+position = Vector3(-1.170000, 0.017000, -8.120000)
+rotation_degrees = Vector3(0.000000, 89.000000, 0.000000)
+scale = Vector3(1.150000, 1.150000, 1.150000)
+metadata/wash = "#eed9bc"
+
+[node name="SplicedLine80" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.27425068218583354,0.9616582362360366,0.0,-0.9616582362360367,-0.2742506821858335,0.0,0.0,0.0,1.0,5.184374999999999,2.3959374999999996,-7.53)
+mesh = SubResource("R14")
+
+[node name="SplicedLine81" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.19960448214422458,0.9798765487080175,0.0,-0.9798765487080177,-0.19960448214422455,0.0,0.0,0.0,1.0,5.353125,2.3546875,-7.53)
+mesh = SubResource("R15")
+
+[node name="SplicedLine82" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.12131942996525268,0.992613517897528,-5.1858124492891355e-15,-0.992613517897528,-0.12131942996525268,6.338215215797793e-16,0.0,5.224402404143452e-15,1.0,5.521875,2.3271875,-7.529999999999999)
+mesh = SubResource("R16")
+
+[node name="SplicedLine83" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.04070697186950214,0.9991711277059678,5.254557967029398e-15,-0.9991711277059678,-0.04070697186950214,-2.140745838419371e-16,0.0,-5.2589169375755705e-15,0.9999999999999999,5.690625000000001,2.3134375,-7.529999999999999)
+mesh = SubResource("R17")
+
+[node name="SplicedLine84" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.040706971869502354,0.9991711277059678,-5.254557967029426e-15,-0.9991711277059678,0.040706971869502354,-2.1407458384193938e-16,0.0,5.258916937575599e-15,0.9999999999999999,5.859375,2.3134375,-7.529999999999999)
+mesh = SubResource("R17")
+
+[node name="SplicedLine85" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.12131942996525204,0.992613517897528,5.185812449289108e-15,-0.992613517897528,0.12131942996525204,6.338215215797726e-16,0.0,-5.224402404143425e-15,0.9999999999999999,6.028125,2.3271875,-7.529999999999999)
+mesh = SubResource("R16")
+
+[node name="SplicedLine86" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.19960448214422558,0.9798765487080173,-0.0,-0.9798765487080174,0.19960448214422555,0.0,0.0,0.0,1.0,6.196875,2.3546875,-7.53)
+mesh = SubResource("R15")
+
+[node name="SplicedLine87" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.27425068218583354,0.9616582362360366,-0.0,-0.9616582362360367,0.2742506821858335,0.0,0.0,0.0,1.0,6.365625,2.3959374999999996,-7.53)
+mesh = SubResource("R14")
+
+[node name="CorkFloat88" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.100000, 2.420000, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp89" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,5.1259999999999994,2.38,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot90" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.3933258369967174,0.9193991439798233,0.0,-0.9193991439798233,-0.3933258369967174,0.0,0.0,0.0,1.0,5.193499999999999,2.38,-7.53)
+mesh = SubResource("R23")
+
+[node name="NetWarp91" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,-0.5449883505954108,0.0,0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,5.1259999999999994,2.3,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot92" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6939750171322031,0.7199990802746615,0.0,-0.7199990802746616,-0.693975017132203,0.0,0.0,0.0,1.0,5.193499999999999,2.3,-7.53)
+mesh = SubResource("R24")
+
+[node name="NetWarp93" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,5.1259999999999994,2.2199999999999998,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot94" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.3933258369967174,0.9193991439798233,0.0,-0.9193991439798233,-0.3933258369967174,0.0,0.0,0.0,1.0,5.193499999999999,2.2199999999999998,-7.53)
+mesh = SubResource("R23")
+
+[node name="NetWarp95" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006379,-0.544988350595413,0.0,0.544988350595413,-0.8384436163006379,0.0,0.0,0.0,1.0,5.1259999999999994,2.1399999999999997,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot96" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.693975017132201,0.7199990802746634,0.0,-0.7199990802746634,-0.693975017132201,0.0,0.0,0.0,0.9999999999999999,5.193499999999999,2.1399999999999997,-7.53)
+mesh = SubResource("R24")
+
+[node name="NetWarp97" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,5.1259999999999994,2.06,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot98" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.3933258369967174,0.9193991439798233,0.0,-0.9193991439798233,-0.3933258369967174,0.0,0.0,0.0,1.0,5.193499999999999,2.06,-7.53)
+mesh = SubResource("R23")
+
+[node name="NetWarp99" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,-0.5449883505954108,0.0,0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,5.1259999999999994,1.98,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetKnot100" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6939750171322031,0.7199990802746615,0.0,-0.7199990802746616,-0.693975017132203,0.0,0.0,0.0,1.0,5.193499999999999,1.98,-7.53)
+mesh = SubResource("R24")
+
+[node name="NetWarp101" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,2.328811862710939,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot102" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,5.328499999999999,2.328811862710939,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp103" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,2.2256355881328185,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot104" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,5.328499999999999,2.2256355881328185,-7.53)
+mesh = SubResource("R27")
+
+[node name="NetWarp105" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,2.122459313554697,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot106" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,5.328499999999999,2.122459313554697,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp107" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,2.0192830389765763,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot108" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,5.328499999999999,2.0192830389765763,-7.53)
+mesh = SubResource("R27")
+
+[node name="NetWarp109" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,1.916106764398455,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot110" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,5.328499999999999,1.916106764398455,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp111" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,5.260999999999999,1.812930489820334,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot112" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,5.328499999999999,1.812930489820334,-7.53)
+mesh = SubResource("R27")
+
+[node name="CorkFloat113" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.370000, 2.349600, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp114" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925446,0.38650427868893517,0.0,-0.38650427868893517,-0.9222876137925446,0.0,0.0,0.0,1.0,5.395999999999999,2.2875580530390325,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot115" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226182,0.8332468554176452,0.0,-0.8332468554176453,-0.5529011466226181,0.0,0.0,0.0,1.0000000000000002,5.463499999999999,2.2875580530390325,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp116" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925451,-0.386504278688934,0.0,0.386504278688934,-0.9222876137925451,0.0,0.0,0.0,1.0,5.395999999999999,2.163474159117097,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot117" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838665,0.5559859974499487,0.0,-0.5559859974499487,-0.8311916569838665,0.0,0.0,0.0,1.0,5.463499999999999,2.163474159117097,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp118" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925449,0.38650427868893455,0.0,-0.3865042786889346,-0.9222876137925448,0.0,0.0,0.0,0.9999999999999999,5.395999999999999,2.0393902651951614,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot119" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226188,0.8332468554176448,0.0,-0.8332468554176448,-0.5529011466226188,0.0,0.0,0.0,1.0,5.463499999999999,2.0393902651951614,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp120" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925446,-0.38650427868893517,0.0,0.38650427868893517,-0.9222876137925446,0.0,0.0,0.0,1.0,5.395999999999999,1.915306371273226,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot121" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838657,0.55598599744995,0.0,-0.5559859974499501,-0.8311916569838655,0.0,0.0,0.0,1.0,5.463499999999999,1.915306371273226,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp122" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925449,0.38650427868893455,0.0,-0.3865042786889346,-0.9222876137925448,0.0,0.0,0.0,0.9999999999999999,5.395999999999999,1.7912224773512904,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot123" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226188,0.8332468554176448,0.0,-0.8332468554176448,-0.5529011466226188,0.0,0.0,0.0,1.0,5.463499999999999,1.7912224773512904,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp124" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925451,-0.386504278688934,0.0,0.386504278688934,-0.9222876137925451,0.0,0.0,0.0,1.0,5.395999999999999,1.6671385834293548,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot125" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838665,0.5559859974499487,0.0,-0.5559859974499487,-0.8311916569838665,0.0,0.0,0.0,1.0,5.463499999999999,1.6671385834293548,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp126" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,0.34671432984025624,0.0,-0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,5.531,2.2572618627109393,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot127" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011131,0.7991247635753905,0.0,-0.7991247635753905,-0.6011652121011131,0.0,0.0,0.0,1.0,5.5985,2.2572618627109393,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp128" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,-0.34671432984025624,0.0,0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,5.531,2.116585588132818,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot129" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841536,0.5081533943343616,0.0,-0.5081533943343615,-0.8612665834841539,0.0,0.0,0.0,0.9999999999999998,5.5985,2.116585588132818,-7.53)
+mesh = SubResource("R33")
+
+[node name="NetWarp130" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226446,0.3467143298402568,0.0,-0.3467143298402568,-0.9379707743226446,0.0,0.0,0.0,1.0,5.531,1.975909313554697,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot131" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011124,0.799124763575391,0.0,-0.7991247635753908,-0.6011652121011125,0.0,0.0,0.0,0.9999999999999998,5.5985,1.975909313554697,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp132" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226446,-0.3467143298402568,0.0,0.3467143298402568,-0.9379707743226446,0.0,0.0,0.0,1.0,5.531,1.8352330389765763,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot133" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841534,0.5081533943343621,0.0,-0.5081533943343622,-0.8612665834841533,0.0,0.0,0.0,0.9999999999999999,5.5985,1.8352330389765763,-7.53)
+mesh = SubResource("R33")
+
+[node name="NetWarp134" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,0.34671432984025624,0.0,-0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,5.531,1.6945567643984552,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot135" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011131,0.7991247635753905,0.0,-0.7991247635753905,-0.6011652121011131,0.0,0.0,0.0,1.0,5.5985,1.6945567643984552,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp136" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,-0.34671432984025624,0.0,0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,5.531,1.553880489820334,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot137" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841536,0.5081533943343616,0.0,-0.5081533943343615,-0.8612665834841539,0.0,0.0,0.0,0.9999999999999998,5.5985,1.553880489820334,-7.53)
+mesh = SubResource("R33")
+
+[node name="CorkFloat138" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.640000, 2.314400, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp139" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662353,0.324971195041439,0.0,-0.32497119504143906,-0.9457239144662352,0.0,0.0,0.0,1.0,5.6659999999999995,2.238735380638932,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot140" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291542,0.7773499896034551,0.0,-0.7773499896034551,-0.6290683537291542,0.0,0.0,0.0,1.0,5.733499999999999,2.238735380638932,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp141" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.3249711950414382,0.0,0.3249711950414382,-0.9457239144662355,0.0,0.0,0.0,0.9999999999999999,5.6659999999999995,2.0874061419167953,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot142" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.876780656355395,0.4808905079547763,0.0,-0.4808905079547763,-0.876780656355395,0.0,0.0,0.0,1.0,5.733499999999999,2.0874061419167953,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp143" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,0.32497119504143857,0.0,-0.3249711950414386,-0.9457239144662353,0.0,0.0,0.0,1.0,5.6659999999999995,1.9360769031946585,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot144" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291548,0.7773499896034547,0.0,-0.7773499896034547,-0.6290683537291548,0.0,0.0,0.0,1.0000000000000002,5.733499999999999,1.9360769031946585,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp145" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.32497119504143857,0.0,0.3249711950414386,-0.9457239144662353,0.0,0.0,0.0,1.0,5.6659999999999995,1.7847476644725222,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot146" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8767806563553948,0.4808905079547768,0.0,-0.48089050795477684,-0.8767806563553947,0.0,0.0,0.0,1.0,5.733499999999999,1.7847476644725222,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp147" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662353,0.324971195041439,0.0,-0.32497119504143906,-0.9457239144662352,0.0,0.0,0.0,1.0,5.6659999999999995,1.6334184257503856,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot148" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291542,0.7773499896034551,0.0,-0.7773499896034551,-0.6290683537291542,0.0,0.0,0.0,1.0,5.733499999999999,1.6334184257503856,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp149" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.3249711950414382,0.0,0.3249711950414382,-0.9457239144662355,0.0,0.0,0.0,0.9999999999999999,5.6659999999999995,1.482089187028249,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot150" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.876780656355395,0.4808905079547763,0.0,-0.4808905079547763,-0.876780656355395,0.0,0.0,0.0,1.0,5.733499999999999,1.482089187028249,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp151" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381734,0.31806214840506253,0.0,-0.3180621484050626,-0.9480698654381733,0.0,0.0,0.0,1.0,5.800999999999999,2.2325,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot152" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6381573509381495,0.7699059653253788,0.0,-0.7699059653253788,-0.6381573509381495,0.0,0.0,0.0,1.0,5.868499999999999,2.2325,-7.53)
+mesh = SubResource("R38")
+
+[node name="NetWarp153" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381736,-0.31806214840506175,0.0,0.3180621484050618,-0.9480698654381735,0.0,0.0,0.0,1.0,5.800999999999999,2.0775,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot154" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8815645076277077,0.47206357505225666,0.0,-0.47206357505225666,-0.8815645076277077,0.0,0.0,0.0,1.0000000000000002,5.868499999999999,2.0775,-7.53)
+mesh = SubResource("R39")
+
+[node name="NetWarp155" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381734,0.3180621484050621,0.0,-0.31806214840506214,-0.9480698654381733,0.0,0.0,0.0,0.9999999999999998,5.800999999999999,1.9224999999999999,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot156" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6381573509381502,0.7699059653253784,0.0,-0.7699059653253785,-0.6381573509381501,0.0,0.0,0.0,1.0,5.868499999999999,1.9224999999999999,-7.53)
+mesh = SubResource("R38")
+
+[node name="NetWarp157" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381734,-0.3180621484050621,0.0,0.31806214840506214,-0.9480698654381733,0.0,0.0,0.0,0.9999999999999998,5.800999999999999,1.7675,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot158" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8815645076277073,0.47206357505225716,0.0,-0.47206357505225716,-0.8815645076277073,0.0,0.0,0.0,1.0,5.868499999999999,1.7675,-7.53)
+mesh = SubResource("R39")
+
+[node name="NetWarp159" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381734,0.31806214840506253,0.0,-0.3180621484050626,-0.9480698654381733,0.0,0.0,0.0,1.0,5.800999999999999,1.6125,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot160" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6381573509381495,0.7699059653253788,0.0,-0.7699059653253788,-0.6381573509381495,0.0,0.0,0.0,1.0,5.868499999999999,1.6125,-7.53)
+mesh = SubResource("R38")
+
+[node name="NetWarp161" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9480698654381736,-0.31806214840506175,0.0,0.3180621484050618,-0.9480698654381735,0.0,0.0,0.0,1.0,5.800999999999999,1.4575,-7.53)
+mesh = SubResource("R37")
+
+[node name="NetKnot162" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8815645076277077,0.47206357505225666,0.0,-0.47206357505225666,-0.8815645076277077,0.0,0.0,0.0,1.0000000000000002,5.868499999999999,1.4575,-7.53)
+mesh = SubResource("R39")
+
+[node name="CorkFloat163" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.910000, 2.314400, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp164" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662353,0.324971195041439,0.0,-0.32497119504143906,-0.9457239144662352,0.0,0.0,0.0,1.0,5.936,2.238735380638932,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot165" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291542,0.7773499896034551,0.0,-0.7773499896034551,-0.6290683537291542,0.0,0.0,0.0,1.0,6.0035,2.238735380638932,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp166" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.3249711950414382,0.0,0.3249711950414382,-0.9457239144662355,0.0,0.0,0.0,0.9999999999999999,5.936,2.0874061419167953,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot167" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.876780656355395,0.4808905079547763,0.0,-0.4808905079547763,-0.876780656355395,0.0,0.0,0.0,1.0,6.0035,2.0874061419167953,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp168" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,0.32497119504143857,0.0,-0.3249711950414386,-0.9457239144662353,0.0,0.0,0.0,1.0,5.936,1.9360769031946585,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot169" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291548,0.7773499896034547,0.0,-0.7773499896034547,-0.6290683537291548,0.0,0.0,0.0,1.0000000000000002,6.0035,1.9360769031946585,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp170" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.32497119504143857,0.0,0.3249711950414386,-0.9457239144662353,0.0,0.0,0.0,1.0,5.936,1.7847476644725222,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot171" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8767806563553948,0.4808905079547768,0.0,-0.48089050795477684,-0.8767806563553947,0.0,0.0,0.0,1.0,6.0035,1.7847476644725222,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp172" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662353,0.324971195041439,0.0,-0.32497119504143906,-0.9457239144662352,0.0,0.0,0.0,1.0,5.936,1.6334184257503856,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot173" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6290683537291542,0.7773499896034551,0.0,-0.7773499896034551,-0.6290683537291542,0.0,0.0,0.0,1.0,6.0035,1.6334184257503856,-7.53)
+mesh = SubResource("R35")
+
+[node name="NetWarp174" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9457239144662355,-0.3249711950414382,0.0,0.3249711950414382,-0.9457239144662355,0.0,0.0,0.0,0.9999999999999999,5.936,1.482089187028249,-7.53)
+mesh = SubResource("R34")
+
+[node name="NetKnot175" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.876780656355395,0.4808905079547763,0.0,-0.4808905079547763,-0.876780656355395,0.0,0.0,0.0,1.0,6.0035,1.482089187028249,-7.53)
+mesh = SubResource("R36")
+
+[node name="NetWarp176" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,0.34671432984025624,0.0,-0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,6.071,2.2572618627109393,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot177" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011131,0.7991247635753905,0.0,-0.7991247635753905,-0.6011652121011131,0.0,0.0,0.0,1.0,6.1385,2.2572618627109393,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp178" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,-0.34671432984025624,0.0,0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,6.071,2.116585588132818,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot179" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841536,0.5081533943343616,0.0,-0.5081533943343615,-0.8612665834841539,0.0,0.0,0.0,0.9999999999999998,6.1385,2.116585588132818,-7.53)
+mesh = SubResource("R33")
+
+[node name="NetWarp180" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226446,0.3467143298402568,0.0,-0.3467143298402568,-0.9379707743226446,0.0,0.0,0.0,1.0,6.071,1.975909313554697,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot181" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011124,0.799124763575391,0.0,-0.7991247635753908,-0.6011652121011125,0.0,0.0,0.0,0.9999999999999998,6.1385,1.975909313554697,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp182" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226446,-0.3467143298402568,0.0,0.3467143298402568,-0.9379707743226446,0.0,0.0,0.0,1.0,6.071,1.8352330389765763,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot183" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841534,0.5081533943343621,0.0,-0.5081533943343622,-0.8612665834841533,0.0,0.0,0.0,0.9999999999999999,6.1385,1.8352330389765763,-7.53)
+mesh = SubResource("R33")
+
+[node name="NetWarp184" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,0.34671432984025624,0.0,-0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,6.071,1.6945567643984552,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot185" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.6011652121011131,0.7991247635753905,0.0,-0.7991247635753905,-0.6011652121011131,0.0,0.0,0.0,1.0,6.1385,1.6945567643984552,-7.53)
+mesh = SubResource("R32")
+
+[node name="NetWarp186" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9379707743226449,-0.34671432984025624,0.0,0.3467143298402563,-0.9379707743226448,0.0,0.0,0.0,0.9999999999999999,6.071,1.553880489820334,-7.53)
+mesh = SubResource("R31")
+
+[node name="NetKnot187" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8612665834841536,0.5081533943343616,0.0,-0.5081533943343615,-0.8612665834841539,0.0,0.0,0.0,0.9999999999999998,6.1385,1.553880489820334,-7.53)
+mesh = SubResource("R33")
+
+[node name="CorkFloat188" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(6.180000, 2.349600, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp189" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925446,0.38650427868893517,0.0,-0.38650427868893517,-0.9222876137925446,0.0,0.0,0.0,1.0,6.2059999999999995,2.2875580530390325,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot190" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226182,0.8332468554176452,0.0,-0.8332468554176453,-0.5529011466226181,0.0,0.0,0.0,1.0000000000000002,6.273499999999999,2.2875580530390325,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp191" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925451,-0.386504278688934,0.0,0.386504278688934,-0.9222876137925451,0.0,0.0,0.0,1.0,6.2059999999999995,2.163474159117097,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot192" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838665,0.5559859974499487,0.0,-0.5559859974499487,-0.8311916569838665,0.0,0.0,0.0,1.0,6.273499999999999,2.163474159117097,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp193" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925449,0.38650427868893455,0.0,-0.3865042786889346,-0.9222876137925448,0.0,0.0,0.0,0.9999999999999999,6.2059999999999995,2.0393902651951614,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot194" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226188,0.8332468554176448,0.0,-0.8332468554176448,-0.5529011466226188,0.0,0.0,0.0,1.0,6.273499999999999,2.0393902651951614,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp195" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925446,-0.38650427868893517,0.0,0.38650427868893517,-0.9222876137925446,0.0,0.0,0.0,1.0,6.2059999999999995,1.915306371273226,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot196" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838657,0.55598599744995,0.0,-0.5559859974499501,-0.8311916569838655,0.0,0.0,0.0,1.0,6.273499999999999,1.915306371273226,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp197" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925449,0.38650427868893455,0.0,-0.3865042786889346,-0.9222876137925448,0.0,0.0,0.0,0.9999999999999999,6.2059999999999995,1.7912224773512904,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot198" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5529011466226188,0.8332468554176448,0.0,-0.8332468554176448,-0.5529011466226188,0.0,0.0,0.0,1.0,6.273499999999999,1.7912224773512904,-7.53)
+mesh = SubResource("R29")
+
+[node name="NetWarp199" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9222876137925451,-0.386504278688934,0.0,0.386504278688934,-0.9222876137925451,0.0,0.0,0.0,1.0,6.2059999999999995,1.6671385834293548,-7.53)
+mesh = SubResource("R28")
+
+[node name="NetKnot200" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8311916569838665,0.5559859974499487,0.0,-0.5559859974499487,-0.8311916569838665,0.0,0.0,0.0,1.0,6.273499999999999,1.6671385834293548,-7.53)
+mesh = SubResource("R30")
+
+[node name="NetWarp201" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,2.328811862710939,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot202" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,6.408499999999999,2.328811862710939,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp203" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,2.2256355881328185,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot204" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,6.408499999999999,2.2256355881328185,-7.53)
+mesh = SubResource("R27")
+
+[node name="NetWarp205" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,2.122459313554697,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot206" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,6.408499999999999,2.122459313554697,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp207" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,2.0192830389765763,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot208" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,6.408499999999999,2.0192830389765763,-7.53)
+mesh = SubResource("R27")
+
+[node name="NetWarp209" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,0.4500630793085412,0.0,-0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,1.916106764398455,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot210" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4830912012884823,0.8755700378825506,0.0,-0.8755700378825506,-0.4830912012884823,0.0,0.0,0.0,1.0,6.408499999999999,1.916106764398455,-7.53)
+mesh = SubResource("R26")
+
+[node name="NetWarp211" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8929967663117901,-0.4500630793085412,0.0,0.4500630793085413,-0.89299676631179,0.0,0.0,0.0,1.0000000000000002,6.340999999999999,1.812930489820334,-7.53)
+mesh = SubResource("R25")
+
+[node name="NetKnot212" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7791751366434384,0.6268062750457107,0.0,-0.6268062750457108,-0.7791751366434383,0.0,0.0,0.0,1.0,6.408499999999999,1.812930489820334,-7.53)
+mesh = SubResource("R27")
+
+[node name="CorkFloat213" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(6.450000, 2.420000, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 82.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R19")
+
+[node name="NetWarp214" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,6.475999999999999,2.38,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetWarp215" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,-0.5449883505954108,0.0,0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,6.475999999999999,2.3,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetWarp216" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,6.475999999999999,2.2199999999999998,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetWarp217" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006379,-0.544988350595413,0.0,0.544988350595413,-0.8384436163006379,0.0,0.0,0.0,1.0,6.475999999999999,2.1399999999999997,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetWarp218" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,0.5449883505954108,0.0,-0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,6.475999999999999,2.06,-7.53)
+mesh = SubResource("R21")
+
+[node name="NetWarp219" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8384436163006392,-0.5449883505954108,0.0,0.5449883505954108,-0.8384436163006392,0.0,0.0,0.0,1.0,6.475999999999999,1.98,-7.53)
+mesh = SubResource("R21")
+
+[node name="DerrickHeel220" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9992009587217893,0.03996803834887156,-0.0,-0.039968038348871554,0.9992009587217895,0.0,0.0,0.0,0.9999999999999999,-2.715,2.125,-7.2)
+mesh = SubResource("R41")
+
+[node name="CargoBoom221" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.6383885876343344,0.7696937549315132,-0.005615585247105228,-0.7697142399476832,0.6383715976920132,-0.004657475915845568,0.0,0.007295675402194605,0.9999733862060658,-1.665,2.895,-7.1899999999999995)
+mesh = SubResource("R43")
+
+[node name="SplicedLine222" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.35465423412054015,0.9349578581933587,-0.008612643198249266,-0.9349975263177828,-0.3546391875905862,0.0032668646614049113,0.0,0.00921140746988676,0.9999575740862326,-2.503125,4.151875,-7.19875)
+mesh = SubResource("R45")
+
+[node name="SplicedLine223" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.31341963898856584,0.9495731693627244,-0.008884026266711538,-0.9496147270847674,-0.31340592289311325,0.0029321663047766895,0.0,0.009355400683374728,0.999956237281439,-2.249375,4.061875000000001,-7.19625)
+mesh = SubResource("R46")
+
+[node name="SplicedLine224" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.27033351722601207,0.9627234284165673,-0.00913180387788688,-0.9627667367873766,-0.270321356747509,0.0025641025666973006,0.0,0.009484959885878988,0.9999550167562357,-1.995625,3.9843750000000004,-7.19375)
+mesh = SubResource("R47")
+
+[node name="SplicedLine225" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.22556044918714296,0.9741843005080995,-0.009350529719732034,-0.9742291741487186,-0.22555005972355135,0.0021649009695931427,0.0,0.0095978748818547,0.999953939338084,-1.7418749999999998,3.9193750000000005,-7.19125)
+mesh = SubResource("R48")
+
+[node name="SplicedLine226" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.179311892923665,0.9837460693518885,-0.009534992964954952,-0.983792277391997,-0.17930347076857134,0.0017379051216913017,0.0,0.009692079501001902,0.9999530306944154,-1.4881250000000001,3.8668750000000003,-7.18875)
+mesh = SubResource("R49")
+
+[node name="SplicedLine227" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.131843859112419,0.9912232265299071,-0.009680495957598918,-0.9912704962896579,-0.1318375720015162,0.001287553649532875,0.0,0.009765746074187799,0.9999523139648283,-1.234375,3.826875,-7.186249999999999)
+mesh = SubResource("R50")
+
+[node name="SplicedLine228" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.08345172883380983,0.9964637972712929,-0.009783132541479413,-0.9965118207801894,-0.083447707160651,0.000819277109384984,0.0,0.009817377313015714,0.9999518083901314,-0.980625,3.7993749999999995,-7.18375)
+mesh = SubResource("R51")
+
+[node name="SplicedLine229" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.034462275839777276,0.9993575562232738,-0.009840038790039765,-0.9994059993535878,-0.03446060538700783,0.0003393116824151485,0.0,0.009845887253432807,0.999951528077333,-0.7268749999999999,3.784375,-7.18125)
+mesh = SubResource("R52")
+
+[node name="SplicedLine230" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,3.6276562500000002,-7.18)
+mesh = SubResource("R53")
+
+[node name="SplicedLine231" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,3.36453125,-7.18)
+mesh = SubResource("R54")
+
+[node name="SplicedLine232" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,3.10453125,-7.18)
+mesh = SubResource("R55")
+
+[node name="SplicedLine233" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,2.84765625,-7.18)
+mesh = SubResource("R56")
+
+[node name="SplicedLine234" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,2.59390625,-7.18)
+mesh = SubResource("R57")
+
+[node name="SplicedLine235" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,2.34328125,-7.18)
+mesh = SubResource("R58")
+
+[node name="SplicedLine236" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,2.09578125,-7.18)
+mesh = SubResource("R59")
+
+[node name="SplicedLine237" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,-0.61,1.85140625,-7.18)
+mesh = SubResource("R60")
+
+[node name="Sheave238" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.670000, 4.110000, -7.180000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R62")
+
+[node name="Sheave239" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.610000, 3.750000, -7.180000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R62")
+
+[node name="FishingWeight240" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.610000, 1.620000, -7.180000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R64")
+
+[node name="Lantern_Wall241" instance=ExtResource("E21") parent="Harbor"]
+position = Vector3(0.490000, 1.550000, -7.410000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.520000, 0.520000, 0.520000)
+metadata/wash = "#91948a"
+
+[node name="LanternFlame242" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.49, 1.67, -6.97)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.6, 0.44, 0.6)
+mesh = SubResource("R66")
+
+[node name="WarmPool243" type="OmniLight3D" parent="Harbor"]
+position = Vector3(0.490000, 2.040000, -6.940000)
+light_color = Color(1.0,0.423268,0.122139,1)
+light_energy = 1.55
+omni_range = 4.0
+shadow_enabled = true
+
+[node name="Lantern_Wall244" instance=ExtResource("E21") parent="Harbor"]
+position = Vector3(6.530000, 1.550000, -7.410000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.520000, 0.520000, 0.520000)
+metadata/wash = "#91948a"
+
+[node name="LanternFlame245" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(6.53, 1.67, -6.97)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.6, 0.44, 0.6)
+mesh = SubResource("R66")
+
+[node name="WarmPool246" type="OmniLight3D" parent="Harbor"]
+position = Vector3(6.530000, 2.040000, -6.940000)
+light_color = Color(1.0,0.423268,0.122139,1)
+light_energy = 1.55
+omni_range = 4.0
+shadow_enabled = true
+
+[node name="SplicedLine247" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7144084996482669,0.35738721745517815,0.6015769879491377,-0.699728872943165,-0.3648848513878046,-0.6141974841998195,0.0,-0.8597286909411275,0.510750994098548,-0.860625,2.82875,-4.215)
+mesh = SubResource("R67")
+
+[node name="SplicedLine248" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5806995268570572,0.37022661476663465,0.725065730279971,-0.8141179641231299,-0.26407772521815875,-0.5171797516682306,0.0,-0.8906150732847724,0.45475794796568364,-0.681875,2.67375,-4.645)
+mesh = SubResource("R68")
+
+[node name="SplicedLine249" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.375855524055793,0.37928365989221813,0.8455037139927356,-0.9266782748272161,-0.15383533058565452,-0.342931576304745,0.0,-0.912402650370091,0.4092937864146406,-0.5031249999999999,2.57375,-5.075)
+mesh = SubResource("R69")
+
+[node name="SplicedLine250" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.09743625696064791,0.3835820901999301,0.9183523048957581,-0.995241767526614,-0.03755349134824505,-0.08990861726252213,0.0,-0.9227429302711617,0.3854159890749086,-0.32437499999999997,2.52875,-5.505000000000001)
+mesh = SubResource("R70")
+
+[node name="SplicedLine251" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.20532058174958837,0.3826142593724192,0.9008050772697197,-0.9786947730063805,0.08026872574246481,0.18898008614049883,0.0,-0.9204147218469378,0.3909433971912353,-0.14562499999999998,2.53875,-5.9350000000000005)
+mesh = SubResource("R71")
+
+[node name="SplicedLine252" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.45959186959295834,0.37649704185904487,0.8043788229904102,-0.8881302344836872,0.19483063704593986,0.416251978330703,0.0,-0.9056991776189607,0.4239209828026187,0.033125000000000016,2.60375,-6.365)
+mesh = SubResource("R72")
+
+[node name="SplicedLine253" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.6364631857272983,0.3659348071369321,0.6789744694312996,-0.7713070810085036,0.3019601905046021,0.5602726391111438,0.0,-0.8802907248608728,0.47443465274357777,0.211875,2.72375,-6.795)
+mesh = SubResource("R73")
+
+[node name="SplicedLine254" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7497027873608083,0.3520107312836202,0.560387522777413,-0.6617746826703441,0.398781387887737,0.634844606223362,0.0,-0.8467950458850719,0.5319193080388216,0.390625,2.89875,-7.2250000000000005)
+mesh = SubResource("R74")
+
+[node name="Sea" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.000000, -1.350000, 0.000000)
+mesh = SubResource("R76")
+
+[node name="Basalt256" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-19.000000, 0.300000, -38.000000)
+rotation_degrees = Vector3(8.000000, 174.000000, 12.000000)
+scale = Vector3(9.100000, 3.850000, 5.040000)
+mesh = SubResource("R78")
+
+[node name="FirSilhouette257" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-17.883640, 4.362568, -37.129373)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R80")
+
+[node name="FirSilhouette258" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-16.443088, 3.631148, -37.731146)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R81")
+
+[node name="FirSilhouette259" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-13.988572, 4.506158, -38.124516)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R82")
+
+[node name="FirSilhouette260" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-14.001215, 4.513619, -38.086289)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R83")
+
+[node name="FirSilhouette261" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-14.594195, 4.081369, -37.053867)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R84")
+
+[node name="Basalt262" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 0.300000, -41.000000)
+rotation_degrees = Vector3(8.000000, 36.000000, 12.000000)
+scale = Vector3(9.100000, 3.850000, 5.040000)
+mesh = SubResource("R78")
+
+[node name="FirSilhouette263" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-6.238378, 4.563339, -40.057488)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R85")
+
+[node name="FirSilhouette264" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-15.236955, 3.925048, -41.849695)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R86")
+
+[node name="FirSilhouette265" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-12.438931, 4.550015, -40.590094)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R87")
+
+[node name="FirSilhouette266" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-10.351212, 4.255346, -40.721618)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R88")
+
+[node name="FirSilhouette267" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-15.827174, 3.837576, -40.946673)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R89")
+
+[node name="Basalt268" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-5.000000, 0.300000, -42.000000)
+rotation_degrees = Vector3(8.000000, 106.000000, 12.000000)
+scale = Vector3(6.500000, 2.750000, 3.600000)
+mesh = SubResource("R78")
+
+[node name="FirSilhouette269" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-8.233638, 3.402258, -42.984843)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R90")
+
+[node name="FirSilhouette270" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-6.029357, 3.071062, -41.585685)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R91")
+
+[node name="FirSilhouette271" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-6.303117, 3.763056, -41.944997)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R92")
+
+[node name="FirSilhouette272" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-8.539414, 3.903863, -42.972990)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R93")
+
+[node name="FirSilhouette273" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-3.254737, 3.073834, -42.376871)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R94")
+
+[node name="Basalt274" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(23.000000, 0.300000, -42.000000)
+rotation_degrees = Vector3(8.000000, 166.000000, 12.000000)
+scale = Vector3(9.100000, 3.850000, 5.040000)
+mesh = SubResource("R78")
+
+[node name="FirSilhouette275" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(27.311768, 3.918340, -41.750148)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R95")
+
+[node name="FirSilhouette276" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(25.249082, 3.837331, -42.037526)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R96")
+
+[node name="FirSilhouette277" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(24.220460, 4.111366, -42.903427)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R97")
+
+[node name="FirSilhouette278" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(23.588099, 4.342990, -42.994924)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R98")
+
+[node name="FirSilhouette279" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(18.733718, 3.986052, -41.700511)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R99")
+
+[node name="Basalt280" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(32.000000, 0.300000, -45.000000)
+rotation_degrees = Vector3(8.000000, 7.000000, 12.000000)
+scale = Vector3(10.400000, 4.400000, 5.760000)
+mesh = SubResource("R78")
+
+[node name="FirSilhouette281" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(27.238833, 4.650742, -45.701351)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R100")
+
+[node name="FirSilhouette282" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(33.516846, 4.929241, -44.684514)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R101")
+
+[node name="FirSilhouette283" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(29.496271, 4.188760, -45.947951)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R102")
+
+[node name="FirSilhouette284" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(36.476947, 4.109980, -45.727507)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R103")
+
+[node name="FirSilhouette285" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(28.043972, 4.607646, -44.840568)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R104")
+
+[node name="NavigationTower286" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 4.100000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R106")
+
+[node name="NavigationTower287" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 4.950000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R108")
+
+[node name="NavigationTower288" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 5.800000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R109")
+
+[node name="NavigationTower289" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 6.650000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R110")
+
+[node name="NavigationTower290" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 7.500000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R111")
+
+[node name="Gallery291" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 8.180000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R113")
+
+[node name="Lightroom292" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 8.630000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R115")
+
+[node name="BeaconRoof293" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-11.000000, 9.170000, -40.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R117")
+
+[node name="Roof_Front_Brick4294" instance=ExtResource("E23") parent="Harbor"]
+position = Vector3(6.650000, 3.650000, -10.850000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(0.940000, 0.880000, 0.680000)
+metadata/wash = "#c4b5ad"
+
+[node name="Roof_Wooden_2x1295" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(6.650000, 4.000000, -11.350000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+metadata/wash = "#926260"
+
+[node name="Roof_Wooden_2x1296" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(6.650000, 4.000000, -11.350000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+metadata/wash = "#926260"
+
+[node name="Roof_Wooden_2x1297" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(6.650000, 4.000000, -13.140000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+metadata/wash = "#926260"
+
+[node name="Roof_Wooden_2x1298" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(6.650000, 4.000000, -13.140000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+metadata/wash = "#926260"
+
+[node name="WindowGlass299" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-7.000000, 2.040000, -11.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R119")
+
+[node name="Mullion300" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-7.490000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion301" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-7.000000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion302" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-6.510000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Crossbar303" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-7.000000, 2.060000, -11.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R122")
+
+[node name="WindowShutters_Wide_Flat_Open304" instance=ExtResource("E24") parent="Harbor"]
+position = Vector3(-7.000000, 0.000000, -11.330000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.820000, 1.120000, 0.500000)
+metadata/wash = "#a69881"
+
+[node name="WindowGlass305" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.000000, 2.040000, -11.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R119")
+
+[node name="Mullion306" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.490000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion307" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.000000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion308" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.510000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Crossbar309" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.000000, 2.060000, -11.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R122")
+
+[node name="WindowShutters_Wide_Flat_Open310" instance=ExtResource("E24") parent="Harbor"]
+position = Vector3(-1.000000, 0.000000, -11.330000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.820000, 1.120000, 0.500000)
+metadata/wash = "#a69881"
+
+[node name="WindowGlass311" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.000000, 2.040000, -11.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R119")
+
+[node name="Mullion312" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(4.510000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion313" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.000000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion314" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.490000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Crossbar315" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.000000, 2.060000, -11.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R122")
+
+[node name="WindowShutters_Wide_Flat_Open316" instance=ExtResource("E24") parent="Harbor"]
+position = Vector3(5.000000, 0.000000, -11.330000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.820000, 1.120000, 0.500000)
+metadata/wash = "#a69881"
+
+[node name="WindowGlass317" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(11.000000, 2.040000, -11.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R119")
+
+[node name="Mullion318" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(10.510000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion319" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(11.000000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Mullion320" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(11.490000, 2.040000, -11.285000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R121")
+
+[node name="Crossbar321" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(11.000000, 2.060000, -11.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R122")
+
+[node name="WindowShutters_Wide_Flat_Open322" instance=ExtResource("E24") parent="Harbor"]
+position = Vector3(11.000000, 0.000000, -11.330000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.820000, 1.120000, 0.500000)
+metadata/wash = "#a69881"
+
+[node name="DerrickScale323" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.790000, 0.310000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R124")
+
+[node name="DerrickScale324" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.784000, 0.480000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale325" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.778000, 0.650000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale326" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.772000, 0.820000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R124")
+
+[node name="DerrickScale327" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.766000, 0.990000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale328" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.760000, 1.160000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale329" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.754000, 1.330000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R124")
+
+[node name="DerrickScale330" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.748000, 1.500000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale331" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.742000, 1.670000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale332" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.736000, 1.840000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R124")
+
+[node name="DerrickScale333" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.730000, 2.010000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="DerrickScale334" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.724000, 2.180000, -7.035000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R125")
+
+[node name="SplicedLine335" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5670871001673339,0.8220200804072003,0.051915394933913055,-0.823657829941417,-0.565959512229239,-0.03574366648005838,0.0,-0.0630302937053431,0.9980116141986617,-2.434375,4.0853125,-7.215)
+mesh = SubResource("R127")
+
+[node name="SplicedLine336" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.5078017446802456,0.8596006428794601,0.05678136015381702,-0.8614739625198772,-0.5066975035503513,-0.03347016277437447,0.0,-0.06591187038053617,0.9978254483339957,-2.043125,3.8353124999999997,-7.245)
+mesh = SubResource("R128")
+
+[node name="SplicedLine337" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4403159294961568,0.8957227654841998,0.061665303252904355,-0.8978429050963959,-0.4392761805170127,-0.03024161038121674,0.0,-0.06868161780070393,0.9976386296531816,-1.651875,3.6240625,-7.275)
+mesh = SubResource("R129")
+
+[node name="SplicedLine338" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.3644554367455501,0.9288559723065517,0.06632358055066762,-0.9312208302151592,-0.363529893314865,-0.025957311876858773,0.0,-0.0712221831800557,0.9974604757197485,-1.2606249999999999,3.4515624999999996,-7.305)
+mesh = SubResource("R130")
+
+[node name="SplicedLine339" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.2805887236775463,0.9572391393770262,0.07044996940904817,-0.9598280930171849,-0.2798318889872124,-0.020594799363986824,0.0,-0.07339852825894191,0.997302690284861,-0.869375,3.3178124999999996,-7.335000000000001)
+mesh = SubResource("R131")
+
+[node name="SplicedLine340" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.18977806506543798,0.9790564550205748,0.07370714960276094,-0.9818270143054826,-0.18924254162538393,-0.014246909108520977,0.0,-0.07507142147122459,0.9971781594470919,-0.47812499999999997,3.2228125,-7.365)
+mesh = SubResource("R132")
+
+[node name="SplicedLine341" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.09383336593009249,0.9926995684005141,0.07578170185250802,-0.9955879164786148,-0.0935611414307188,-0.007142364871082979,0.0,-0.07611753879109662,0.9970988518137937,-0.08687499999999998,3.1665624999999995,-7.3950000000000005)
+mesh = SubResource("R133")
+
+[node name="SplicedLine342" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.004792277237892391,0.9970618117018551,0.07645114599984426,-0.9999885169735077,0.00477825149377904,0.00036637929392898,0.0,-0.0764520239004601,0.9970732611205274,0.304375,3.1490625,-7.425000000000001)
+mesh = SubResource("R134")
+
+[node name="SignalFlag343" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.150000, 3.740000, -7.260000)
+rotation_degrees = Vector3(0.000000, 0.000000, -13.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R136")
+
+[node name="SignalFlag344" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.720000, 3.520000, -7.260000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R138")
+
+[node name="SignalFlag345" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.290000, 3.360000, -7.260000)
+rotation_degrees = Vector3(0.000000, 0.000000, -8.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R136")
+
+[node name="Workbench346" instance=ExtResource("E25") parent="Harbor"]
+position = Vector3(3.850000, 0.000000, -8.810000)
+rotation_degrees = Vector3(0.000000, -5.000000, 0.000000)
+scale = Vector3(1.020000, 1.020000, 1.020000)
+metadata/wash = "#baa791"
+
+[node name="Workbench_Drawers347" instance=ExtResource("E26") parent="Harbor"]
+position = Vector3(3.850000, 0.000000, -8.810000)
+rotation_degrees = Vector3(0.000000, -5.000000, 0.000000)
+scale = Vector3(1.020000, 1.020000, 1.020000)
+metadata/wash = "#baa791"
+
+[node name="Stool348" instance=ExtResource("E27") parent="Harbor"]
+position = Vector3(4.730000, 0.000000, -8.000000)
+rotation_degrees = Vector3(0.000000, 24.000000, 0.000000)
+scale = Vector3(0.950000, 0.950000, 0.950000)
+metadata/wash = "#eed9bc"
+
+[node name="tool_hammer349" instance=ExtResource("E28") parent="Harbor"]
+position = Vector3(3.410000, 0.937000, -8.560000)
+rotation_degrees = Vector3(0.000000, 24.000000, 83.000000)
+scale = Vector3(2.500000, 2.500000, 2.500000)
+metadata/wash = "#c5c0ae"
+
+[node name="Bottle_1350" instance=ExtResource("E29") parent="Harbor"]
+position = Vector3(4.520000, 0.920000, -8.620000)
+rotation_degrees = Vector3(0.000000, -16.000000, 0.000000)
+scale = Vector3(0.650000, 0.650000, 0.650000)
+metadata/wash = "#eed9bc"
+
+[node name="Rope_1351" instance=ExtResource("E13") parent="Harbor"]
+position = Vector3(4.240000, 0.940000, -8.570000)
+rotation_degrees = Vector3(0.000000, -22.000000, 0.000000)
+scale = Vector3(0.600000, 0.600000, 0.600000)
+metadata/wash = "#eed9bc"
+
+[node name="MooringFloatFoot352" type="MeshInstance3D" parent="Harbor"]
+visible = false
+position = Vector3(3.810000, 1.005000, -8.820000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R140")
+
+[node name="MooringFloatBelly353" type="MeshInstance3D" parent="Harbor"]
+visible = false
+position = Vector3(3.810000, 1.180000, -8.820000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R142")
+
+[node name="MooringFloatStripe354" type="MeshInstance3D" parent="Harbor"]
+visible = false
+position = Vector3(3.810000, 1.320000, -8.820000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R144")
+
+[node name="MooringFloatNose355" type="MeshInstance3D" parent="Harbor"]
+visible = false
+position = Vector3(3.810000, 1.460000, -8.820000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R146")
+
+[node name="MooringFloatEye356" type="MeshInstance3D" parent="Harbor"]
+visible = false
+position = Vector3(3.810000, 1.580000, -8.820000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R148")
+
+[node name="MooringFloatFoot357" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.480000, 0.113750, -8.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R149")
+
+[node name="MooringFloatBelly358" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.480000, 0.332500, -8.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R150")
+
+[node name="MooringFloatStripe359" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.480000, 0.507500, -8.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R151")
+
+[node name="MooringFloatNose360" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.480000, 0.682500, -8.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R152")
+
+[node name="MooringFloatEye361" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.480000, 0.832500, -8.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R153")
+
+[node name="MooringFloatFoot362" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.750000, 0.098750, -8.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R154")
+
+[node name="MooringFloatBelly363" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.750000, 0.282500, -8.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R155")
+
+[node name="MooringFloatStripe364" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.750000, 0.429500, -8.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R156")
+
+[node name="MooringFloatNose365" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.750000, 0.576500, -8.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R157")
+
+[node name="MooringFloatEye366" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.750000, 0.702500, -8.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R158")
+
+[node name="RepairTicket367" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.570000, 0.680000, -8.230000)
+rotation_degrees = Vector3(0.000000, -5.000000, -4.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R160")
+
+[node name="JobNumber368" type="Label3D" parent="Harbor"]
+position = Vector3(3.570000, 0.690000, -8.203000)
+rotation_degrees = Vector3(0.000000, -5.000000, 0.000000)
+text = "B • 714"
+font_size = 24
+pixel_size = 0.005
+outline_size = 0
+modulate = Color(0.064803,0.078187,0.07036,1)
+double_sided = false
+
+[node name="CanvasLifeRing369" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9876883405951378,-0.15643446504023065,0.0,0.15643446504023065,0.9876883405951378,-0.0,0.0,0.0,1.0,-0.7061179354631058,1.6386271242968684,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing370" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.8910065241883679,-0.4539904997395466,0.0,0.4539904997395466,0.8910065241883679,-0.0,0.0,0.0,0.9999999999999999,-0.7299908111662373,1.7121002808334276,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing371" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7071067811865475,-0.7071067811865475,0.0,0.7071067811865475,0.7071067811865475,-0.0,0.0,0.0,0.9999999999999998,-0.7753997191665724,1.7746002808334276,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing372" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.4539904997395466,-0.8910065241883679,0.0,0.8910065241883679,0.4539904997395466,-0.0,0.0,0.0,0.9999999999999999,-0.8378997191665724,1.8200091888337626,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing373" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.15643446504023065,-0.9876883405951378,0.0,0.9876883405951378,0.15643446504023065,-0.0,0.0,0.0,1.0,-0.9113728757031315,1.8438820645368943,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing374" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.15643446504023065,-0.9876883405951378,0.0,0.9876883405951378,-0.15643446504023065,0.0,0.0,0.0,1.0,-0.9886271242968684,1.8438820645368943,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing375" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4539904997395466,-0.8910065241883679,0.0,0.8910065241883679,-0.4539904997395466,0.0,0.0,0.0,0.9999999999999999,-1.0621002808334277,1.8200091888337626,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing376" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7071067811865475,-0.7071067811865475,0.0,0.7071067811865475,-0.7071067811865475,0.0,0.0,0.0,0.9999999999999998,-1.1246002808334277,1.7746002808334276,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing377" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8910065241883679,-0.4539904997395466,0.0,0.4539904997395466,-0.8910065241883679,0.0,0.0,0.0,0.9999999999999999,-1.1700091888337627,1.7121002808334276,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing378" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9876883405951378,-0.15643446504023065,0.0,0.15643446504023065,-0.9876883405951378,0.0,0.0,0.0,1.0,-1.1938820645368942,1.6386271242968684,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing379" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9876883405951375,0.15643446504023106,0.0,-0.15643446504023106,-0.9876883405951375,0.0,0.0,0.0,0.9999999999999998,-1.1938820645368942,1.5613728757031318,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing380" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8910065241883685,0.45399049973954547,0.0,-0.45399049973954547,-0.8910065241883685,0.0,0.0,0.0,0.9999999999999998,-1.1700091888337627,1.4878997191665726,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing381" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7071067811865475,0.7071067811865475,0.0,-0.7071067811865475,-0.7071067811865475,0.0,0.0,0.0,0.9999999999999998,-1.1246002808334277,1.4253997191665726,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing382" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.4539904997395466,0.8910065241883679,0.0,-0.8910065241883679,-0.4539904997395466,0.0,0.0,0.0,0.9999999999999999,-1.0621002808334277,1.3799908111662376,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing383" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.15643446504023065,0.9876883405951378,0.0,-0.9876883405951378,-0.15643446504023065,0.0,0.0,0.0,1.0,-0.9886271242968684,1.3561179354631059,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing384" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.15643446504023065,0.9876883405951378,-0.0,-0.9876883405951378,0.15643446504023065,0.0,0.0,0.0,1.0,-0.9113728757031315,1.3561179354631059,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing385" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.45399049973954725,0.8910065241883676,-0.0,-0.8910065241883677,0.4539904997395472,0.0,0.0,0.0,1.0,-0.8378997191665725,1.3799908111662376,-3.48)
+mesh = SubResource("R162")
+
+[node name="CanvasLifeRing386" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7071067811865468,0.7071067811865483,-0.0,-0.7071067811865482,0.7071067811865469,0.0,0.0,0.0,1.0000000000000002,-0.7753997191665725,1.4253997191665726,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing387" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.8910065241883679,0.4539904997395466,-0.0,-0.4539904997395466,0.8910065241883679,0.0,0.0,0.0,0.9999999999999999,-0.7299908111662373,1.4878997191665726,-3.48)
+mesh = SubResource("R164")
+
+[node name="CanvasLifeRing388" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9876883405951378,0.15643446504023065,-0.0,-0.15643446504023065,0.9876883405951378,0.0,0.0,0.0,1.0,-0.7061179354631058,1.5613728757031318,-3.48)
+mesh = SubResource("R164")
+
+[node name="SplicedLine389" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9577296760832329,0.28766971955613596,0.0,-0.28766971955613596,-0.9577296760832329,0.0,0.0,0.0,1.0000000000000002,-1.129375,1.6471875000000002,-3.48)
+mesh = SubResource("R166")
+
+[node name="SplicedLine390" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9218132451786494,0.38763428771615027,0.0,-0.38763428771615027,-0.9218132451786494,0.0,0.0,0.0,0.9999999999999999,-1.078125,1.5009375,-3.48)
+mesh = SubResource("R167")
+
+[node name="SplicedLine391" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.8189029657474973,0.5739319930879906,-2.8542842469175697e-15,-0.5739319930879907,-0.8189029657474972,4.0725763035287195e-15,0.0,4.973209859865703e-15,1.0,-1.026875,1.4034375000000003,-3.4799999999999995)
+mesh = SubResource("R168")
+
+[node name="SplicedLine392" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.42950604147136345,0.9030639846320965,7.0666469778445325e-15,-0.9030639846320965,-0.42950604147136345,-3.3609662455602085e-15,0.0,-7.825189685450082e-15,1.0,-0.975625,1.3546875000000003,-3.4799999999999995)
+mesh = SubResource("R169")
+
+[node name="SplicedLine393" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.42950604147136345,0.9030639846320965,-7.0666469778445325e-15,-0.9030639846320965,0.42950604147136345,-3.3609662455602085e-15,0.0,7.825189685450082e-15,1.0,-0.924375,1.3546875000000003,-3.4799999999999995)
+mesh = SubResource("R169")
+
+[node name="SplicedLine394" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.8189029657474973,0.5739319930879906,2.8542842469175697e-15,-0.5739319930879907,0.8189029657474972,4.0725763035287195e-15,0.0,-4.973209859865703e-15,1.0,-0.8731249999999999,1.4034375000000003,-3.4799999999999995)
+mesh = SubResource("R168")
+
+[node name="SplicedLine395" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9218132451786495,0.3876342877161496,-0.0,-0.3876342877161495,0.9218132451786497,0.0,0.0,0.0,0.9999999999999998,-0.8218749999999999,1.5009375,-3.48)
+mesh = SubResource("R167")
+
+[node name="SplicedLine396" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9577296760832329,0.28766971955613596,-0.0,-0.28766971955613596,0.9577296760832329,0.0,0.0,0.0,1.0000000000000002,-0.770625,1.6471875000000002,-3.48)
+mesh = SubResource("R166")
+
+[node name="ChartBacking397" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.000000, 1.760000, -10.880000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R173")
+
+[node name="SoundingChart" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.000000, 1.760000, -10.825000)
+mesh = SubResource("R171")
+
+[node name="PaintedCork399" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.200000, 2.410000, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 80.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R175")
+
+[node name="PaintedCork400" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.450000, 2.331861, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 80.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R177")
+
+[node name="PaintedCork401" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.700000, 2.300005, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 80.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R175")
+
+[node name="PaintedCork402" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.950000, 2.333299, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 80.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R177")
+
+[node name="PaintedCork403" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(6.200000, 2.412025, -7.530000)
+rotation_degrees = Vector3(0.000000, 0.000000, 80.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R175")
+
+[node name="OuterHarborBeacon404" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 6.000000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R179")
+
+[node name="OuterHarborBeacon405" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 6.890000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R181")
+
+[node name="OuterHarborBeacon406" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 7.780000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R182")
+
+[node name="OuterHarborBeacon407" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 8.670000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R183")
+
+[node name="OuterHarborBeacon408" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 9.560000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R184")
+
+[node name="OuterHarborBeacon409" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 10.450000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R185")
+
+[node name="BeaconBalcony410" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 11.040000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R187")
+
+[node name="BeaconLantern411" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 11.500000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R189")
+
+[node name="BeaconHood412" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(26.000000, 12.010000, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R191")
+
+[node name="JambStrap413" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.950000, 0.290000, -3.647000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R193")
+
+[node name="Rivet414" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.180000, 0.290000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="Rivet415" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.720000, 0.290000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="JambStrap416" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.950000, 2.220000, -3.647000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R193")
+
+[node name="Rivet417" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-1.180000, 2.220000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="Rivet418" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.720000, 2.220000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="JambStrap419" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.950000, 0.290000, -3.647000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R193")
+
+[node name="Rivet420" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.720000, 0.290000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="Rivet421" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1.180000, 0.290000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="JambStrap422" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.950000, 2.220000, -3.647000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R193")
+
+[node name="Rivet423" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.720000, 2.220000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="Rivet424" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1.180000, 2.220000, -3.606000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R195")
+
+[node name="WornHeadland425" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(20.000000, -0.300000, -34.000000)
+rotation_degrees = Vector3(9.000000, 2.000000, 3.000000)
+scale = Vector3(9.000000, 4.800000, 4.860000)
+mesh = SubResource("R197")
+
+[node name="DistantFir426" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(20.317005, 4.789207, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R199")
+
+[node name="DistantFir427" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(21.269875, 4.638446, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R200")
+
+[node name="DistantFir428" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(19.081853, 4.872901, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R201")
+
+[node name="DistantFir429" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(22.334022, 4.733242, -34.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R202")
+
+[node name="WornHeadland430" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(28.000000, -0.300000, -37.000000)
+rotation_degrees = Vector3(-11.000000, 55.000000, -1.000000)
+scale = Vector3(9.000000, 6.500000, 4.860000)
+mesh = SubResource("R197")
+
+[node name="DistantFir431" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(29.987431, 6.335575, -37.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R203")
+
+[node name="DistantFir432" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(27.234705, 6.333340, -37.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R204")
+
+[node name="DistantFir433" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(30.108100, 6.231233, -37.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R205")
+
+[node name="DistantFir434" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(29.749748, 5.887601, -37.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R206")
+
+[node name="WornHeadland435" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(35.000000, -0.300000, -42.000000)
+rotation_degrees = Vector3(9.000000, 50.000000, 1.000000)
+scale = Vector3(11.000000, 4.400000, 5.940000)
+mesh = SubResource("R197")
+
+[node name="DistantFir436" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(37.256663, 4.737801, -42.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R207")
+
+[node name="DistantFir437" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(36.866990, 4.697227, -42.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R208")
+
+[node name="DistantFir438" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(37.326676, 4.481718, -42.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R209")
+
+[node name="DistantFir439" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(37.455674, 4.454339, -42.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R210")
+
+[node name="WornHeadland440" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(43.000000, -0.300000, -49.000000)
+rotation_degrees = Vector3(7.000000, 91.000000, -2.000000)
+scale = Vector3(8.000000, 3.900000, 4.320000)
+mesh = SubResource("R197")
+
+[node name="DistantFir441" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(44.800734, 4.523042, -49.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R211")
+
+[node name="DistantFir442" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(44.749713, 4.565813, -49.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R212")
+
+[node name="DistantFir443" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(40.842158, 4.264519, -49.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R213")
+
+[node name="DistantFir444" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(43.597930, 4.237782, -49.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R214")
+
+[node name="WornHeadland445" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(57.000000, -0.300000, -54.000000)
+rotation_degrees = Vector3(-7.000000, 167.000000, -6.000000)
+scale = Vector3(12.000000, 4.400000, 6.480000)
+mesh = SubResource("R197")
+
+[node name="DistantFir446" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(56.092077, 4.497408, -54.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R215")
+
+[node name="DistantFir447" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(58.879018, 4.637518, -54.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R216")
+
+[node name="DistantFir448" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(56.070528, 4.801569, -54.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R217")
+
+[node name="DistantFir449" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(57.378108, 4.613690, -54.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R218")
+
+[node name="IronNosing450" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.370000, 0.274000, 1.750450)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing451" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1.630000, 0.274000, 1.750450)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing452" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.370000, 0.774000, -0.249550)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing453" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1.630000, 0.774000, -0.249550)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing454" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(2.370000, 1.274000, -2.249550)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing455" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.630000, 1.274000, -2.249550)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing456" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(4.160000, 0.674000, 0.500180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing457" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.840000, 0.674000, 0.500180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing458" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(4.160000, 0.474000, 1.100180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing459" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.840000, 0.474000, 1.100180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing460" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(4.160000, 0.274000, 1.700180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing461" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.840000, 0.274000, 1.700180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing462" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(4.160000, 0.074000, 2.300180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="IronNosing463" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(5.840000, 0.074000, 2.300180)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R220")
+
+[node name="CutSteelHerring" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1.85, 2.2, -7.28)
+mesh = SubResource("R222")
+
+[node name="SmallIronHanger465" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,1.57,2.56,-7.29)
+mesh = SubResource("R224")
+
+[node name="SmallIronHanger466" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-1.0,0.0,0.0,-0.0,-1.0,0.0,0.0,0.0,1.0,2.12,2.56,-7.29)
+mesh = SubResource("R224")
+
+[node name="IronStrapping467" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.776000, 0.350000, -7.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R226")
+
+[node name="IronStrapping468" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.720000, 1.750000, -7.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R226")
+
+[node name="IronStrapping469" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.634000, 3.900000, -7.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R226")
+
+[node name="AxleCap470" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-2.670000, 4.110000, -7.092000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R228")
+
+[node name="AxleCap471" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(-0.610000, 3.750000, -7.092000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R228")
+
+[node name="CargoHook472" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.9659258262890684,-0.25881904510252063,0.0,0.2588190451025207,-0.9659258262890683,0.0,0.0,0.0,1.0000000000000002,-0.512033666301317,1.4537499999999999,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook473" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.7071067811865475,-0.7071067811865476,0.0,0.7071067811865475,-0.7071067811865476,0.0,0.0,0.0,1.0,-0.538283666301317,1.408283666301317,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook474" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(-0.2588190451025207,-0.9659258262890683,0.0,0.9659258262890684,-0.25881904510252063,0.0,0.0,0.0,1.0000000000000002,-0.58375,1.382033666301317,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook475" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.2588190451025207,-0.9659258262890683,0.0,0.9659258262890684,0.25881904510252063,-0.0,0.0,0.0,1.0000000000000002,-0.63625,1.382033666301317,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook476" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.7071067811865475,-0.7071067811865476,0.0,0.7071067811865475,0.7071067811865476,-0.0,0.0,0.0,1.0,-0.681716333698683,1.408283666301317,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook477" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9659258262890684,-0.25881904510252063,0.0,0.2588190451025207,0.9659258262890683,-0.0,0.0,0.0,1.0000000000000002,-0.707966333698683,1.4537499999999999,-7.18)
+mesh = SubResource("R230")
+
+[node name="CargoHook478" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(0.9659258262890684,0.25881904510252063,-0.0,-0.2588190451025207,0.9659258262890683,0.0,0.0,0.0,1.0000000000000002,-0.707966333698683,1.50625,-7.18)
+mesh = SubResource("R230")
+
+[node name="Overall" type="Camera3D" parent="."]
+position = Vector3(-4.300000, 5.450000, -0.050000)
+rotation_degrees = Vector3(-19.077464, -40.940654, 0.000000)
+fov = 56
+current = true
+
+[node name="Detail" type="Camera3D" parent="."]
+position = Vector3(1.030000, 1.820000, -5.600000)
+rotation_degrees = Vector3(-7.428800, -45.000000, 0.000000)
+fov = 55
+current = false
+
+[node name="Transition" type="Camera3D" parent="."]
+position = Vector3(-1.700000, 1.800000, 0.830000)
+rotation_degrees = Vector3(0.000000, -18.482815, 0.000000)
+fov = 61
+current = false
+
+[node name="SplitCedar_Roof_Wooden_2x16" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(-9.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x17" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(-9.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x19" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(-7.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x110" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(-7.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x112" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(-5.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x113" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(-5.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x115" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(-3.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x116" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(-3.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x120" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(3.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x121" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(3.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x123" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(5.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x124" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(5.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x126" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(7.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x127" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(7.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x129" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(9.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x130" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(9.0, 3.93, -12.13)
+rotation_degrees = Vector3(0.0, 180.0, 0.0)
+scale = Vector3(1.0, 1.55, 1.45)
+
+[node name="SplitCedar_Roof_Wooden_2x133" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(1.5, 2.78, -9.55)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1, 1.07, 1.4)
+
+[node name="SplitCedar_Roof_Wooden_2x134" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(3.5, 2.78, -9.55)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1, 1.07, 1.4)
+
+[node name="SplitCedar_Roof_Wooden_2x135" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(5.5, 2.78, -9.55)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1, 1.07, 1.4)
+
+[node name="SplitCedar_Roof_Wooden_2x142" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(9.98, 2.94, -10.0)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x144" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(9.98, 2.94, -8.0)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x146" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(9.98, 2.94, -6.0)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x148" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(9.98, 2.94, -4.0)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x150" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(9.98, 2.94, -2.0)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x152" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(7.0, 2.95, -1.0)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x154" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(9.0, 2.95, -1.0)
+rotation_degrees = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(1.0, 0.8, 0.85)
+
+[node name="SplitCedar_Roof_Wooden_2x1295" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(6.65, 4.0, -11.35)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 1.94, 1.31)
+
+[node name="SplitCedar_Roof_Wooden_2x1296" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(6.65, 4.0, -11.35)
+rotation_degrees = Vector3(0.0, 90.0, 0.0)
+scale = Vector3(1.0, 1.94, 1.31)
+
+[node name="SplitCedar_Roof_Wooden_2x1297" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(6.65, 4.0, -13.14)
+rotation_degrees = Vector3(0.0, -90.0, 0.0)
+scale = Vector3(1.0, 1.94, 1.31)
+
+[node name="SplitCedar_Roof_Wooden_2x1298" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(6.65, 4.0, -13.14)
+rotation_degrees = Vector3(0.0, 90.0, 0.0)
+scale = Vector3(1.0, 1.94, 1.31)
+
+[node name="LowerRoof_0_0" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.82, 1.19)
+metadata/wash = "#71544b"
+
+[node name="CedarCap_0_0" instance=ExtResource("Roof0") parent="Harbor"]
+position = Vector3(-1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.82, 1.19)
+
+[node name="LowerRoof_0_1" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(-1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.82, 1.19)
+metadata/wash = "#71544b"
+
+[node name="CedarCap_0_1" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(-1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.82, 1.19)
+
+[node name="LowerRoof_1_0" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.82, 1.19)
+metadata/wash = "#71544b"
+
+[node name="CedarCap_1_0" instance=ExtResource("Roof1") parent="Harbor"]
+position = Vector3(1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.82, 1.19)
+
+[node name="LowerRoof_1_1" instance=ExtResource("E4") parent="Harbor"]
+position = Vector3(1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.82, 1.19)
+metadata/wash = "#71544b"
+
+[node name="CedarCap_1_1" instance=ExtResource("Roof2") parent="Harbor"]
+position = Vector3(1, 3.92, -12.13)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.82, 1.19)
+
+[node name="HarbourBoard" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0, 2.54, -3.587)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("YardPlate")
+
+[node name="SurveyBoard" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3.55, 2.55, -7.254)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("StationPlate")
+
+[node name="Dory_on_haul_cart" instance=ExtResource("Dory") parent="Harbor"]
+position = Vector3(-1.68, 0.91, -9.55)
+rotation_degrees = Vector3(0, -17, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+
+[node name="Service_drum" instance=ExtResource("Drum") parent="Harbor"]
+position = Vector3(3.81, 0.907, -8.79)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="EastSash0" type="Node3D" parent="Harbor"]
+position = Vector3(9.26, 1.59, -8)
+rotation_degrees = Vector3(0,-90,0)
+
+[node name="Glass" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("HoneyGlass")
+
+[node name="Stile0" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(-0.71, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile1" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(-0.24, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile2" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0.24, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile3" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0.71, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Rail0" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0, -0.58, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="Rail1" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0, 0, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="Rail2" type="MeshInstance3D" parent="Harbor/EastSash0"]
+position = Vector3(0, 0.58, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="EastSash1" type="Node3D" parent="Harbor"]
+position = Vector3(9.26, 1.59, -4)
+rotation_degrees = Vector3(0,-90,0)
+
+[node name="Glass" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("HoneyGlass")
+
+[node name="Stile0" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(-0.71, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile1" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(-0.24, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile2" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0.24, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Stile3" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0.71, 0, 0.055)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashUpright")
+
+[node name="Rail0" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0, -0.58, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="Rail1" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0, 0, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="Rail2" type="MeshInstance3D" parent="Harbor/EastSash1"]
+position = Vector3(0, 0.58, 0.06)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("SashLintel")
+
+[node name="WestSound_skerries" instance=ExtResource("Coast") parent="Harbor"]
+position = Vector3(7, -1.35, -69)
+rotation_degrees = Vector3(0, -13, 0)
+scale = Vector3(1.12, 1.16, 1)
+
+[node name="OuterRoads_skerries" instance=ExtResource("Coast") parent="Harbor"]
+position = Vector3(78, -1.35, -44)
+rotation_degrees = Vector3(0, -47, 0)
+scale = Vector3(0.66, 1.35, 0.7)
+
+[node name="BandLow9" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1, 0.09, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandLow")
+
+[node name="BandLow28" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1, 0.28, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandLow")
+
+[node name="BandMid9" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1, 0.09, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandMid")
+
+[node name="BandMid78" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1, 0.78, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandMid")
+
+[node name="BandHigh9" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3, 0.09, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandHigh")
+
+[node name="BandHigh127" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3, 1.28, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("CargoBandHigh")
+
+[node name="Louvered_loft" instance=ExtResource("Louvered_loftRes") parent="Harbor"]
+position = Vector3(6.65, 4.04, -10.31)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.02, 1.065, 1)
+
+[node name="Boatshop_oars" instance=ExtResource("Boatshop_oarsRes") parent="Harbor"]
+position = Vector3(-2.98, 2.02, -11.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Wetstone_hardware" instance=ExtResource("Wetstone_hardwareRes") parent="Harbor"]
+position = Vector3(1.8, 0, -8.5)
+rotation_degrees = Vector3(0, 18, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Leaded_sounding_line" instance=ExtResource("Leaded_sounding_lineRes") parent="Harbor"]
+position = Vector3(3.81, 0.907, -8.79)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Soundings_field_book" instance=ExtResource("Soundings_field_bookRes") parent="Harbor"]
+position = Vector3(3.35, 0.907, -8.63)
+rotation_degrees = Vector3(0, -14, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="PilotageMarkMid" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(0.245, 0.495, -1)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("ShippingMark")
+
+[node name="DepotMarkMid" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(1, 0.495, -0.245)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("ShippingMark")
+
+[node name="PilotageMarkHigh" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(2.245, 0.77, -3)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("ShippingMark")
+
+[node name="DepotMarkHigh" type="MeshInstance3D" parent="Harbor"]
+position = Vector3(3, 0.77, -2.245)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("ShippingMark")
+
+[node name="Pilot_hut_0" type="Node3D" parent="Harbor"]
+position = Vector3(33, 0.16, -21)
+rotation_degrees = Vector3(0, -19, 0)
+scale = Vector3(0.73, 0.73, 0.73)
+
+[node name="StiltDeck" type="MeshInstance3D" parent="Harbor/Pilot_hut_0"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotDeck0")
+
+[node name="Pile0" type="MeshInstance3D" parent="Harbor/Pilot_hut_0"]
+position = Vector3(-2.15, -1.45, -1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile0")
+
+[node name="Pile1" type="MeshInstance3D" parent="Harbor/Pilot_hut_0"]
+position = Vector3(2.15, -1.45, -1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile0")
+
+[node name="Pile2" type="MeshInstance3D" parent="Harbor/Pilot_hut_0"]
+position = Vector3(-2.15, -1.45, 1.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile0")
+
+[node name="Pile3" type="MeshInstance3D" parent="Harbor/Pilot_hut_0"]
+position = Vector3(2.15, -1.45, 1.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile0")
+
+[node name="Front0" instance=ExtResource("E5") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 0.11, 1.1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Rear0" instance=ExtResource("E6") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 0.11, -1.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="CoveredRoof00" instance=ExtResource("E4") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes00" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="CoveredRoof01" instance=ExtResource("E4") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes01" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="Front1" instance=ExtResource("E5") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 0.11, 1.1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Rear1" instance=ExtResource("E6") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 0.11, -1.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="CoveredRoof10" instance=ExtResource("E4") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes10" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="CoveredRoof11" instance=ExtResource("E4") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes11" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_0"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="Endwall0" instance=ExtResource("E6") parent="Harbor/Pilot_hut_0"]
+position = Vector3(-2, 0.11, 0)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1.15, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Endwall1" instance=ExtResource("E6") parent="Harbor/Pilot_hut_0"]
+position = Vector3(2, 0.11, 0)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.15, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Pilot_hut_1" type="Node3D" parent="Harbor"]
+position = Vector3(39, 0.02, -23.5)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(0.6, 0.6, 0.6)
+
+[node name="StiltDeck" type="MeshInstance3D" parent="Harbor/Pilot_hut_1"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotDeck1")
+
+[node name="Pile0" type="MeshInstance3D" parent="Harbor/Pilot_hut_1"]
+position = Vector3(-2.15, -1.45, -1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile1")
+
+[node name="Pile1" type="MeshInstance3D" parent="Harbor/Pilot_hut_1"]
+position = Vector3(2.15, -1.45, -1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile1")
+
+[node name="Pile2" type="MeshInstance3D" parent="Harbor/Pilot_hut_1"]
+position = Vector3(-2.15, -1.45, 1.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile1")
+
+[node name="Pile3" type="MeshInstance3D" parent="Harbor/Pilot_hut_1"]
+position = Vector3(2.15, -1.45, 1.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("PilotPile1")
+
+[node name="Front0" instance=ExtResource("E5") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 0.11, 1.1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Rear0" instance=ExtResource("E6") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 0.11, -1.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="CoveredRoof00" instance=ExtResource("E4") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes00" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="CoveredRoof01" instance=ExtResource("E4") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes01" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="Front1" instance=ExtResource("E5") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 0.11, 1.1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Rear1" instance=ExtResource("E6") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 0.11, -1.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="CoveredRoof10" instance=ExtResource("E4") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes10" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="CoveredRoof11" instance=ExtResource("E4") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+metadata/wash = "#59454b"
+
+[node name="CutShakes11" instance=ExtResource("Roof1") parent="Harbor/Pilot_hut_1"]
+position = Vector3(1, 2.18, 0)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1.14, 1.2)
+
+[node name="Endwall0" instance=ExtResource("E6") parent="Harbor/Pilot_hut_1"]
+position = Vector3(-2, 0.11, 0)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1.15, 0.7, 1)
+metadata/wash = "#bd9e81"
+
+[node name="Endwall1" instance=ExtResource("E6") parent="Harbor/Pilot_hut_1"]
+position = Vector3(2, 0.11, 0)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.15, 0.7, 1)
+metadata/wash = "#bd9e81"
