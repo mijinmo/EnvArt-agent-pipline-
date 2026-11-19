@@ -1,0 +1,235 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://final_art/bent_handle.obj" id="handle"]
+[ext_resource type="Shader" path="res://final_art/finish_enamel.gdshader" id="truckPaint"]
+[ext_resource type="Texture2D" path="res://baseline/assets/3td/OfficeDivider_02/3TD_DividerPaint_Gray_01.jpg" id="oldPaint"]
+[ext_resource type="Texture2D" path="res://baseline/assets/smooth_concrete_floor/Rough.jpg" id="scan"]
+[ext_resource type="PackedScene" path="res://baseline/assets/cardboard_box_01/cardboard_box_01.gltf" id="load"]
+[ext_resource type="Texture2D" path="res://final_art/equipment.jpg" id="PlateTex"]
+
+[sub_resource type="ShaderMaterial" id="Steel"]
+shader = ExtResource("truckPaint")
+shader_parameter/surface = ExtResource("scan")
+shader_parameter/paint = ExtResource("oldPaint")
+shader_parameter/body = Vector3(0.053,0.145,0.170)
+
+[sub_resource type="StandardMaterial3D" id="Zinc"]
+albedo_color = Color(0.47,0.48,0.46,1)
+metallic = 0.55
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="Rubber"]
+albedo_color = Color(0.072,0.073,0.080,1)
+roughness = 0.81
+
+[sub_resource type="BoxMesh" id="Toe"]
+size = Vector3(0.51100, 0.01200, 0.48100)
+material = SubResource("Steel")
+
+[sub_resource type="BoxMesh" id="Upright"]
+size = Vector3(0.02800, 0.86000, 0.04400)
+material = SubResource("Steel")
+
+[sub_resource type="BoxMesh" id="FrameWeb"]
+size = Vector3(0.42800, 0.06200, 0.01900)
+material = SubResource("Steel")
+
+[sub_resource type="BoxMesh" id="BadgePlate"]
+size = Vector3(0.42600, 0.22200, 0.01800)
+material = SubResource("Steel")
+
+[sub_resource type="CylinderMesh" id="Axle"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.558
+radial_segments = 24
+rings = 1
+material = SubResource("Zinc")
+
+[sub_resource type="CylinderMesh" id="Tyre"]
+top_radius = 0.102
+bottom_radius = 0.102
+height = 0.055
+radial_segments = 24
+rings = 1
+material = SubResource("Rubber")
+
+[sub_resource type="CylinderMesh" id="Rim"]
+top_radius = 0.069
+bottom_radius = 0.069
+height = 0.058
+radial_segments = 24
+rings = 1
+material = SubResource("Steel")
+
+[sub_resource type="CylinderMesh" id="Hub"]
+top_radius = 0.026
+bottom_radius = 0.026
+height = 0.063
+radial_segments = 24
+rings = 1
+material = SubResource("Zinc")
+
+[sub_resource type="CylinderMesh" id="Bolt"]
+top_radius = 0.006
+bottom_radius = 0.006
+height = 0.006
+radial_segments = 24
+rings = 1
+material = SubResource("Zinc")
+
+[sub_resource type="StandardMaterial3D" id="Plate"]
+albedo_texture = ExtResource("PlateTex")
+roughness = 0.8
+
+[sub_resource type="QuadMesh" id="PlateGraphic"]
+size = Vector2(0.315, 0.171)
+material = SubResource("Plate")
+
+[sub_resource type="CylinderMesh" id="Grip"]
+top_radius = 0.022
+bottom_radius = 0.022
+height = 0.212
+radial_segments = 24
+rings = 1
+material = SubResource("Rubber")
+
+[node name="DispatchHandTruck" type="Node3D"]
+
+[node name="BentHandle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("handle")
+material_override = SubResource("Steel")
+
+[node name="FoldedToePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.00900, 0.20100)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("Toe")
+
+[node name="BadgePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.83800, -0.01700)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("BadgePlate")
+
+[node name="PressedChannel0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.18200, 0.45500, -0.05100)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("Upright")
+
+[node name="PressedChannel1" type="MeshInstance3D" parent="."]
+position = Vector3(0.18200, 0.45500, -0.05100)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("Upright")
+
+[node name="CrossBrace0" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.15000, -0.02200)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("FrameWeb")
+
+[node name="CrossBrace1" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.46000, -0.02200)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("FrameWeb")
+
+[node name="CrossBrace2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.66200, -0.02200)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("FrameWeb")
+
+[node name="Axle" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Axle")
+
+[node name="Tyre0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Tyre")
+
+[node name="Rim0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Rim")
+
+[node name="Hub0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Hub")
+
+[node name="WheelBolt00" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27400, 0.15400, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt01" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27400, 0.11807, -0.02755)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt02" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27400, 0.05993, -0.04644)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt03" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27400, 0.05993, -0.10756)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt04" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27400, 0.11807, -0.12645)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="Tyre1" type="MeshInstance3D" parent="."]
+position = Vector3(0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Tyre")
+
+[node name="Rim1" type="MeshInstance3D" parent="."]
+position = Vector3(0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Rim")
+
+[node name="Hub1" type="MeshInstance3D" parent="."]
+position = Vector3(0.24600, 0.10200, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Hub")
+
+[node name="WheelBolt10" type="MeshInstance3D" parent="."]
+position = Vector3(0.27400, 0.15400, -0.07700)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt11" type="MeshInstance3D" parent="."]
+position = Vector3(0.27400, 0.11807, -0.02755)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt12" type="MeshInstance3D" parent="."]
+position = Vector3(0.27400, 0.05993, -0.04644)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt13" type="MeshInstance3D" parent="."]
+position = Vector3(0.27400, 0.05993, -0.10756)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="WheelBolt14" type="MeshInstance3D" parent="."]
+position = Vector3(0.27400, 0.11807, -0.12645)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Bolt")
+
+[node name="EquipmentMark" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.83600, -0.00600)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("PlateGraphic")
+
+[node name="IncomingCarton" parent="." instance=ExtResource("load")]
+position = Vector3(0,0.021,0.19)
+scale = Vector3(1.02,1.02,0.92)
+
+[node name="RubberGrip" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.12000, -0.02500)
+rotation = Vector3(0.00000, 0.00000, 1.57080)
+mesh = SubResource("Grip")

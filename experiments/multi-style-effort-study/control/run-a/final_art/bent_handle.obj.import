@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dc5puvioahk7s"
+path="res://.godot/imported/bent_handle.obj-a107d9b1b26501c65b15de2b27e0778e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bent_handle.obj-a107d9b1b26501c65b15de2b27e0778e.mesh"]
+
+source_file="res://final_art/bent_handle.obj"
+dest_files=["res://.godot/imported/bent_handle.obj-a107d9b1b26501c65b15de2b27e0778e.mesh", "res://.godot/imported/bent_handle.obj-a107d9b1b26501c65b15de2b27e0778e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
