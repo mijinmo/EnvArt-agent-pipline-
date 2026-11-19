@@ -22,7 +22,7 @@
     "access_review": "All 19 recorded calls reviewed; own package text/images and own report writes only, no access flags, network calls, producer source/effort/usage reads or further delegation found. All frozen review input hashes unchanged.",
     "coordinator_crosscheck": "Coordinator subsequently viewed A first props and final all three, C final door/props, F final props/close and D final props; observed the recorded sail/map and pole/banner occlusion tradeoffs, detailed cart/scale parts and different lighting. This supplementary check is not blind.",
     "original_markdown_sha256": "047de7ce8eaf81fcc654b449d0c0edd052e4fabd19b8bd1b45ff23c465b21515",
-    "linked_markdown_sha256": "aaf19273c3c27685d2478326aabd6a80f5d8e9f70ac6ce34cb1df6d68ffb2623",
+    "linked_markdown_sha256": "9ee3b0d348e45950bdedebc94ede2b7c3ebab869ae109a1b92d8e512b46b6f9e",
     "review_input_manifest_sha256": "8ce5184fbc57e00f04e8d17f0cbf445c8b48ccdb2b007e4191a89ed1da0eb8b9",
     "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
   },
@@ -54,6 +54,33 @@
     "original_markdown_sha256": "777027652eb4b4c27a9fc70ebec62955df8ac6da9bb7bb211babbf81ddafac20",
     "linked_markdown_sha256": "f606ace15026555a23e94e5457c5ca2db52ae83e7e002eb6508a7bff465f777c",
     "review_input_manifest_sha256": "4cdecca11b09ecd7d55d6aba68346bcbc59b501001b3b3dacb967dd40f1ab002",
+    "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
+  },
+  "control": {
+    "sessions": [
+      "01a1f577-1806-7e42-898e-7f6475326c6f"
+    ],
+    "actual_contexts": [
+      {
+        "model": "gpt-6.2-astra",
+        "effort": "xhigh",
+        "approval_policy": "never"
+      }
+    ],
+    "issues": [],
+    "required_image_count": 42,
+    "missing_declared_views": [],
+    "changed_input_files": [],
+    "tool_call_count": 19,
+    "access_flag_count": 0,
+    "review_sha256": "7c8cc60a31a8afa15cfa4dc0d974d9910ac8df312bf038a062e8a8ff29906b47",
+    "manual_view_and_access_review": "completed",
+    "actual_image_coverage": "Inspected the stored view and three helpers plus every invocation. All three reference originals, three whitebox originals and 36 candidate first/final original PNGs were displayed, from 2026-11-19T20:20:01.619Z through 20:21:23.022Z. No downscaled contact-sheet substitution.",
+    "access_review": "All 19 recorded calls reviewed: own package instructions, images and report writes only. Zero access flags; no producer source, effort, usage, peer game, network or further delegation calls found. All frozen inputs unchanged.",
+    "coordinator_crosscheck": "Viewed B/ultra final all three, F/max final all three, C/xhigh final props and close. Confirmed B's open receiving-window workflow and darker cabinet sides, F's small-prop construction and window-front obstruction, C's sound-archive consistency and competing bright window. Coordinator check is not blind.",
+    "original_markdown_sha256": "9168c1e226d3cf8dc03c42f8fd3d50ac4ad86f49f4d6163f4acb93b52aa108fa",
+    "linked_markdown_sha256": "5c7ef3b01f1b816d3b20f7020f3366a6eb2f9f81cb0b63a6c3e5a6e02d677b36",
+    "review_input_manifest_sha256": "411a6e4ddfc12ba0160d6aaae2ddbefcb7d80a44c575924f8d8166fc2a189ee6",
     "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
   }
 }

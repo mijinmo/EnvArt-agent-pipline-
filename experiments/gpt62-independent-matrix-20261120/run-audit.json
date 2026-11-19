@@ -280,7 +280,7 @@
         "reference_views": "all 3 frozen source images plus whitebox contact sheet"
       },
       "first_dependency_unresolved_explanation": "characters/mixamo_local/humanoid.scn is the unchanged optional character path guarded by ResourceLoader.exists in supplied infrastructure; absent in the neutral input too.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "view_image_blocks_with_literal_tool_name": 3,
       "preserved_history_ref": "refs/envart-trials/20261120/control-low",
       "actual_render_backends": [
@@ -641,7 +641,7 @@
         "final": "all 3 original images"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional Mixamo character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/control-medium",
       "actual_render_backends": [
         "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
@@ -1125,7 +1125,7 @@
       "technical_limitations": [
         "Successful Metal captures exited 0, but final process shutdown warned that 7 Texture RIDs were leaked. No sustained-run resource measurement or manual traversal was performed."
       ],
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/control-high",
       "base_lab_scene_override_check": {
         "nonvisual_property_overrides": [],
@@ -1652,7 +1652,7 @@
         "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/control-xhigh",
       "view_review_evidence": {
         "references_and_whitebox": "all three frozen references and all three whitebox views",
@@ -2179,7 +2179,7 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "Poly Haven 办公/放映模型与 PBR 表面；分拆卷闸、灯具和纸品，原创片罐与分层案卷。",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/control-ultra",
       "project_settings_check": {
         "only_main_scene_change": true,
@@ -2783,7 +2783,7 @@
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "preserved_history_ref": "refs/envart-trials/20261120/control-max",
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison complete"
     }
   },
   "sable": {

@@ -1,4 +1,4 @@
-> 协调端归档说明：以下判断正文保持原样，仅将图片链接转向已归档截图或参考原图 URL。[原始 Markdown](REVIEW.original.md) 和 [原始 JSON](review.json) 逐字节保留；原稿中的相对路径对应当时的私有评审包。
+> 协调端归档说明：以下判断正文保持原样，仅补充本说明，并在存在图片链接时将其转向归档截图或参考原图 URL。[原始 Markdown](REVIEW.original.md) 和 [原始 JSON](review.json) 逐字节保留；原稿中的相对路径对应当时的私有评审包。[返回 HTML 同机位对比](../../../../docs/gpt62-independent-matrix.html)。
 
 # Sable 门洞与货运墙角 · 匿名视觉评审
 
@@ -98,7 +98,7 @@ door 的浅石外框、青灰内框与门脚铺面把入口厚度交代得清楚
 
 | 组别与阶段 | 门洞 door | 墙角 props | 近景 close |
 | --- | --- | --- | --- |
-| whitebox | [whitebox/door.png](../../../independent-control-20261120/input/captures/whitebox/door.png) | [whitebox/props.png](../../../independent-control-20261120/input/captures/whitebox/props.png) | [whitebox/close.png](../../../independent-control-20261120/input/captures/whitebox/close.png) |
+| whitebox | [whitebox/door.png](../../results/sable/low/captures/whitebox/door.png) | [whitebox/props.png](../../results/sable/low/captures/whitebox/props.png) | [whitebox/close.png](../../results/sable/low/captures/whitebox/close.png) |
 | A / first | [A/first/door.png](../../results/sable/max/captures/first/door.png) | [A/first/props.png](../../results/sable/max/captures/first/props.png) | [A/first/close.png](../../results/sable/max/captures/first/close.png) |
 | A / final | [A/final/door.png](../../results/sable/max/captures/final/door.png) | [A/final/props.png](../../results/sable/max/captures/final/props.png) | [A/final/close.png](../../results/sable/max/captures/final/close.png) |
 | B / first | [B/first/door.png](../../results/sable/low/captures/first/door.png) | [B/first/props.png](../../results/sable/low/captures/first/props.png) | [B/first/close.png](../../results/sable/low/captures/first/close.png) |
