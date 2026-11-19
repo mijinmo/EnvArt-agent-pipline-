@@ -6733,6 +6733,479 @@
         ],
         "observation": "开启印刷处理后，椅背、桶箍、桌角与箱体轮廓更清楚，暗面出现规则点阵；高亮桌面依旧偏白，悬浮箱体位置没有改善。此对照只能说明该后处理的局部影响，不能证明整轮最优。"
       }
+    },
+    "max": {
+      "game": "hifi",
+      "effort": "max",
+      "session_ids": [
+        "01a1f564-67bb-7101-a4cf-2bf780d5fea7"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "max",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 12518259,
+        "cached_input": 12286976,
+        "uncached_input": 231283,
+        "output": 77041,
+        "reasoning_output": 26175,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "b537cc3d1398dd65784a92a585cf2b689be0ad76",
+      "source_commits": [
+        "9e961bdc4d084a017cfa9af92c77ffa8ea6cf857 Freeze neutral whitebox, references and production instructions",
+        "ae43ba4e04b04c286243bc3e9ca1e44df73ae0b9 Record the visual direction for coolant exchange bay 07",
+        "35785349fd279ebbed338a074569dd295c9d9efe Compare full-wall material assemblies beside the fitted service bench",
+        "e820b60d2dd54b297af040cda2e4d66e83383744 Freeze the first playable exchange bay and its three reviewed views",
+        "b537cc3d1398dd65784a92a585cf2b689be0ad76 Connect the return loop and deliver the reviewed coolant exchange bay"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "11ebce37ea8c6d3453ce3a9043a6b1cec21d5a4fcd3aeb286b89754f6c41d83c",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 624397
+        },
+        "captures/first/props.png": {
+          "sha256": "2f06e4b0113a8ad3d45c1558269350f85cea6c75010faa3739c18c6d3a602344",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 846941
+        },
+        "captures/first/close.png": {
+          "sha256": "a5556257cc7486b1933d5f1aebc305059295ad1dbc19e515e05f139b9202e41a",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1116853
+        },
+        "captures/final/door.png": {
+          "sha256": "4a5500d11da5e458f8005066a47e833091a3987d84154a6a058c828f5fe2e7d1",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 680586
+        },
+        "captures/final/props.png": {
+          "sha256": "28e7680d9eedd13d78725ba978d56de854a90075b5cbc9293756e2cb8e8a6778",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 907887
+        },
+        "captures/final/close.png": {
+          "sha256": "d007c046c77d20a2c775a2d95ca008bb930469904873b59f5dfcd992722ffbed",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1199865
+        }
+      },
+      "protected_input_changes": [],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      },
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      },
+      "base_lab_scene_override_check": {
+        "nonvisual_property_overrides": [],
+        "scope": "Static final.tscn inherited-node inspection only; unchanged base source separately hashed. Does not prove added-prop clearance or replace manual traversal."
+      },
+      "first_commit": "e820b60d2dd54b297af040cda2e4d66e83383744",
+      "first_dependency_changes": [],
+      "preexisting_resource_changes_after_first": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 88,
+      "view_image_blocks_with_literal_tool_name": 8,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed all recorded call surfaces, extracted paths, public-source searches and original image invocations. Own files and public sources only; no peer/host art, solution reads, access flags or further delegation observed. Default Git global/system lookup was denied and replaced with own Git config. Untested tool surfaces remain outside absolute isolation claims.",
+      "technical_summary": "小样覆板穿墙/背面已修正；终轮桌垫缩放仅技术修复并重拍三机位；首轮资源未变，未见跨读",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 9,
+      "coordinator_preflight_capture_log_count": 0,
+      "capture_logs_with_error_strings": [],
+      "collected_files": 223,
+      "collected_bytes": 23042438,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "2e07bbc5bdb48ebe07f1b38b239048751da1d1d0ee04abf10ff681da612f3990",
+        "ENVIRONMENT.md": "9bcffded628b93fbea0ff7121256d08c0ac9edccad85d3db6cc7ae3f031e1bc9",
+        "README.md": "fe91436d24b9998719a92c4a36d7c99e344341c14bd9817d3755f0ff132dafe8",
+        "REFERENCES.md": "3160af3b64a76591c26becf6ae42d74e630a6033fcbcd2e914d2ec5acd3e2139",
+        "RESEARCH.md": "a2393fe0b92a524cb368e209021a2a2fb0ada90ca165ef00f0ba046cc2aef659",
+        "REVIEW.md": "09142fd37122f8d4d5727bf3a349e9574afc4f714fe6d0bc65285cdab4763f0d",
+        "art/fabrication/clipped_plate.obj": "5944a0b52d0d0ff2579b1421475a31fbc05a52879af88838124ca25849f0c850",
+        "art/fabrication/clipped_plate.obj.import": "2bdd48a52bad9f3ee1fae1e832a50e3f7f9634a5e167cca3398090bebc1e8ef6",
+        "art/fabrication/hanging_lead.obj": "1d6ba78da34f8b73423d263f20b49d46c33182412771f9a16ec2e6342c7e80d6",
+        "art/fabrication/hanging_lead.obj.import": "e6a09259a88910fa3ba419235986f037ecb1552a9a00892a7495bed4476cd5fc",
+        "art/fabrication/impeller_blade.obj": "41a02ab33e95a22a69f0c5cd8ed29eb34b9208b5fad89ca2593788919157b2e8",
+        "art/fabrication/impeller_blade.obj.import": "baed85afe75b0ff436b634d7ef1ccfd5834aa3b171aac34cc289719d2d75c959",
+        "art/fabrication/pilot_line.obj": "09ca03f48b656a9c01f56280daf2025e54c2882be06db5c038d86bdc6f05aca6",
+        "art/fabrication/pilot_line.obj.import": "4c8dfc85197379af894c8a15361eee1987d162ad61b5d3bf3dd15b6a450e1b50",
+        "art/fabrication/rolled_beam.obj": "25f68cee0e6522a2e470e44a8df54c7f6e0272ac0ee20718192e0ee4006113aa",
+        "art/fabrication/rolled_beam.obj.import": "66ca83bda543ee94aa33fac785666e724a22c181a895988cca77537ce89e869c",
+        "art/fabrication/test_hose.obj": "e9868233fc0ba89aa2094f1682fb394e36787108f471d4a99e285d7598f33dc3",
+        "art/fabrication/test_hose.obj.import": "733f833b2697cba3da747c4ba33d90d8bf943f7545d02b1c5f4f38665b9a6e8b",
+        "art/final/caster_marks.png": "80e9f993c403e763145865386cab706dd0e7edc1860d6f6bef14d3216a7d37c4",
+        "art/final/caster_marks.png.import": "f58def067daab31358483e0955fadc4c0e795ab1f2861efff83c91d75e86f79e",
+        "art/final/enamel.gdshader": "1c405ad12a710af3f26b1c4c9eb737c3610bb11d259f0beaadab234dfadffec9",
+        "art/final/enamel.gdshader.uid": "c9f5583b225f3a38504521eb8c00e8101045cfaa1aa37778e7ac4ce55c9464ae",
+        "art/final/inspection_glass.png": "3850954802a25a31edb58072e28e32b823b624185cb254657867fd5b3f247682",
+        "art/final/inspection_glass.png.import": "e95c134ef7947cc9b43c7dc5222638c8db5d59d1d8059b8f8dace8e003f47e88",
+        "art/final/lashing.png": "0b40a08b903ce4988205cff2115e5b6dd030d38e6601759dca436204d2e005f2",
+        "art/final/lashing.png.import": "15894a7fdd59e00a95e6ad757d7f99950651a49c15e53b1ecd3f9db67b474e3c",
+        "art/final/pipe_band.png": "e7497877542b96bd4913db23d5de7b8c68bb73ec992870def6f2d6a1fc5ab70c",
+        "art/final/pipe_band.png.import": "d9d2174899a0c234dbd213e6a0dab282edd7c1276981bdbb78b4440c9988bb5c",
+        "art/final/skid_lid_1.png": "4300a7b617f5817281ccc49e4f3db8abf555676cb16e455d87d4b66a8a4bff7a",
+        "art/final/skid_lid_1.png.import": "3767ebfe8dc3997343affc8ecba72c65e4919680f0a1baeb0dcb81beab3b58a1",
+        "art/final/skid_lid_2.png": "246d9969d4f71e59e3f60c1fbe94808cd1b84822f2b98d5f97178d6b46ae841d",
+        "art/final/skid_lid_2.png.import": "83b7b7a6c1916a1d3efaca15fe04c277f3353ab6bf79a26b6e99112acb300d90",
+        "art/final/skid_lid_3.png": "4c9aedf91eb502164daaa0c76aa0a066ad056038067b755536713759680c4c1c",
+        "art/final/skid_lid_3.png.import": "09c032d7089808af94bed7772fee52e9334471ce7a6bce54fd4be2d5398e74a1",
+        "art/final/skid_ribs.png": "81bd620854fcc11271f409f269e4cbd95131820e237bf5412fb683453b151e91",
+        "art/final/skid_ribs.png.import": "19bf38bfafb489e3c6ba2622bb612bdf9da80ea5f1eeac0fd2f521cf1ffd2b7f",
+        "art/final/test_card.png": "5d62e18663d0762649f92247a792b57053d5c021abc116ea086416fe47cba2e1",
+        "art/final/test_card.png.import": "4be27d7d9c9c33434c997f32012387874e43581849d28d3f06dd318142e56351",
+        "art/licenses/Barlow-OFL.txt": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "art/licenses/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+        "art/licenses/Kenney-Factory.txt": "61e86565dd297e143ad631594980eda0a17fc81a4cd7c6d71acf2f5e0cad30b6",
+        "art/licenses/Kenney-Space-Station.txt": "e8de83b5cb2f01810e32f07691cb1dcf9494dc4a7f8cce0ec8175dfb8c5d98d9",
+        "art/materials/continuous_steel.tres": "b9b08d95150b12b80fea4cc720c91ee1005c05d5c2a5b0ae54358ed2801ed0e2",
+        "art/materials/deck.gdshader": "f2ed2bda94c910494f150befbb4d389b620e5f08ff4240a3d57b23ec8fc1b9ef",
+        "art/materials/deck.gdshader.uid": "988bd9b253bffb3f166848a64abd91805258b79b83398611ecfb72d569aef7f7",
+        "art/materials/deck.tres": "490aaf0193a29c3b9d5fa80810b809d399b664d3748fc22b5ddf9ada9da1758f",
+        "art/materials/inked_metal.gdshader": "679d1b00b70c013eabf676387727d3d572e72c1a99fed92cb3800269d4df495d",
+        "art/materials/inked_metal.gdshader.uid": "ca8072b27d2517c55599a6f17aac05a36def6e62dc7d0977c425ecdd99b492c2",
+        "art/materials/printed_steel.tres": "3ffbc3088f3d04240ccc56219381558d65741430602ebe886ec5c8d87a342157",
+        "art/modules/factory/cog-e.obj": "d82339d70a7599927b4083140ece54e5fb4e83101c2ff91915ca482a48777f3c",
+        "art/modules/factory/cog-e.obj.import": "fc423022ae151320b61d50a6cdb3f44cd1a4d433e42d1f7b889c46f654dad72d",
+        "art/modules/factory/pipe-large-bend.obj": "1b36444ca31e64e885ad7042251760b360508eead1df8d7564c1254f776ffbe1",
+        "art/modules/factory/pipe-large-bend.obj.import": "12d71ed7a66fa2994dc7fe0175ccf8a8e8be368d9e522c505fe0e8a92803ea3d",
+        "art/modules/factory/pipe-large-long.obj": "6dd23cf8262e50f8e509f2cc39ab256945c62c418418e9994887fac7a827d5f8",
+        "art/modules/factory/pipe-large-long.obj.import": "7c4dad1ab5a56a91dca8c6ed5e4c020d217a9234f2684c939170cdea6bc760f4",
+        "art/modules/factory/pipe-large-side.obj": "f948a77c9b33960d34671535009c23b908c56bb479846fff0b26e822713c615a",
+        "art/modules/factory/pipe-large-side.obj.import": "563399fea69810efc328b1299329cc4bade34f0623c9798bc34404bb1df5c11f",
+        "art/modules/factory/pipe-large-valve.obj": "1bf559382a6a489544b17155bf380fecb467caa1df1c26281d0e0024a355bb08",
+        "art/modules/factory/pipe-large-valve.obj.import": "d88e8e748def0cb6d4ec744f9273e08bf61171e5c3b053b34c2803c1275613b0",
+        "art/modules/factory/pipe-large.obj": "2d88371bdcd73368b18c95b09964adaf9dc72bc0170407b7546e91b8a0ea7abf",
+        "art/modules/factory/pipe-large.obj.import": "f1d797ea4228ff071be36bd1fe8c444e4b024bda102f4de6d29b71d5f277455f",
+        "art/modules/factory/structure-wall.obj": "8111a4567d69e94eabb3c2c9181f534aaaabf34b67be9ca70a6ee6d87d1684b0",
+        "art/modules/factory/structure-wall.obj.import": "e397b1c5c13364bd99fb3bd30fb1444b541f71b1d6b6d09ca6419bd9600e4f39",
+        "art/modules/station/container-flat-open-inspected.obj": "003da163f1d92f1a6a0e1ace09c81db805ad71fdc6e63a70e1d5feb73b69d7e8",
+        "art/modules/station/container-flat-open-inspected.obj.import": "0c4d30ee5d37fe3b757b2fe7983c24e0ee83780a95e41de2cc17d3158222e822",
+        "art/modules/station/container-flat-open.obj": "67bc90ba6c629b94f1d003511ffc27005067968b86f340f54aa9962315d4bfa7",
+        "art/modules/station/container-flat-open.obj.import": "774379334852d60dacaeda3bf7432eec05759eb47fbcfaedf72c9a1df98b8ddf",
+        "art/modules/station/container-flat.obj": "a11f7524b6b3372c464b744e2136f615ca23a0e6c6e7663ba56f6b6029679dc3",
+        "art/modules/station/container-flat.obj.import": "885f529a62c763c33e8f7ec148fb41a0bbf3084bad23903e48ae1440d18883e7",
+        "art/modules/station/container-tall.obj": "48f48af00e24f0da1f7846e5504f6261bc5cf41324a5ab9768f46ffb22e7332e",
+        "art/modules/station/container-tall.obj.import": "579aa9e89d8939ba9689e417915b6e3a91554a9bfa8302af9316e98b75354ffb",
+        "art/modules/station/floor-panel.obj": "476c6e6a83c0c650a9b5efd5539b7b75cb3b23954956a6ed58025c9e255007a3",
+        "art/modules/station/floor-panel.obj.import": "7e0fa1622a9eed7877afdaf0e66779359f2d736cd80f140ed5b951c61d6b4316",
+        "art/modules/station/wall-door-wide.obj": "c187039e084bf7230cfdab583af8c4c8e1ea79de14a684223c3ef02ed7fb93c7",
+        "art/modules/station/wall-door-wide.obj.import": "1fc9afe23c1d77a4c94e430a0b1b31ab229f754eea1394e62f3bc4cf58b9539c",
+        "art/modules/station/wall-pillar.obj": "3cb31c59c652744c0ce1a724b2a36c437abf0e09e96e7b7346a2a9ad2eaf4ff6",
+        "art/modules/station/wall-pillar.obj.import": "585a3c59261f46d85e33ecaac8da56fdee2f6bdc886209371a955ab374175723",
+        "art/modules/station/wall-window-frame.obj": "dc2e4710e17d383438b13182b081598fe6e6f0c470d3f420e6bd5f2ff4dd2dce",
+        "art/modules/station/wall-window-frame.obj.import": "52a4d716e8d4c3fe5c80aa8502f603149bd508b9cb5126d5d208b11e64885d6c",
+        "art/modules/station/wall.obj": "3f4b83c0bcb4d29ffc97eb500906ea4b623a1b6bd0526e2a726fd76d29d3b2ac",
+        "art/modules/station/wall.obj.import": "c1f2dd52f2e8e1e2ae147f3b8459afe51f6aedd45e2f90747760a1864bc7ce68",
+        "art/print/access_stencil.png": "26878680ceb6c0570f0d4757a963b176f0cdb64385f03fc0a64ffd08e88668d6",
+        "art/print/access_stencil.png.import": "e865e05c84fb65f3062306148496d992b15fc40b41c25befab6456e0984fd51d",
+        "art/print/core_tag.png": "399af0b82895fb9a6f6553d644ca488b999fc0aa0a4a02702581989d88525cfe",
+        "art/print/core_tag.png.import": "8e6aa0cd267cfeac0053f4f958fb6a202a5792b70f327582799414b7210a9ada",
+        "art/print/deck_panels.png": "7b9b2e51879382f76b95e91f4669b76c57ff3a8d9189ed9d1b2e9eb563ba6f43",
+        "art/print/deck_panels.png.import": "a768272a17d16814137370553592222b2ab5876bdd08ec0669e1f95fafa8bf0b",
+        "art/print/exchange_header.png": "d5f356c7e0dc030a60291217a8dad2bd5c71917b9453db8e47970093e3cbe527",
+        "art/print/exchange_header.png.import": "fc40e3651b558103ba7a72e6b804e80c6a4564cf9ba77fb457d6c6ef2e5f5003",
+        "art/print/flow_display.png": "5401266a692228798d7dbc1ef3ab641e75ac4ebc2e367d583c1261a21dbed836",
+        "art/print/flow_display.png.import": "bee881620eeea1ae627ba727cd5662c97b46ee5dfcdc02bca018cb8c65d863df",
+        "art/print/jamb_hazard.png": "052f2e1c6e201d8a9fec35717c16a6323c6c8a1f7e10b47d463f619c53568b43",
+        "art/print/jamb_hazard.png.import": "0bda42aee0ea27b1c7a5536e921b9a8a5bddc862745312ab3d58850e28304921",
+        "art/print/lab_header.png": "9d66700c9b419880025d430e8884762ba98059e0c730bd7aff092076920ab04e",
+        "art/print/lab_header.png.import": "0b8f0bc149dddd39bf6635e4481757d776089be358d363606cabd77ccc0010ea",
+        "art/print/lane_arrows.png": "71fa785b8d829a81503fd8bc4339c4c77cf71f0a0ed48e50a460377db3c00540",
+        "art/print/lane_arrows.png.import": "6d26ff62a4c6086f058930d395db4145db206da046ad1551627ab7326681dda5",
+        "art/print/lane_stamp.png": "82ba14c76d632e595ff9c51d7cca6b878e21c9fc30688a545c6560ba196bda0f",
+        "art/print/lane_stamp.png.import": "cb05722ea318e2e3f2d5844d07b99cad65ec94e22d70992c527059858d3e7ed9",
+        "art/print/pressure_dial.png": "48953245b3bba68a78ba8eff145444c3008c5a21923d0d4b62fca6e983071cf0",
+        "art/print/pressure_dial.png.import": "f42b761349006884c537058c86b32780809e89abb47654ff924e7eb9e814db42",
+        "art/print/stores.png": "82a06bda2aa71de74bb81f5adc667963fa4abae0d3d550ad55217fdb542b2d67",
+        "art/print/stores.png.import": "1389ee210da32e6a256bec2af173f03fb3d983037941ec7b3335304768411410",
+        "art/print/transit_pressing.png": "1b2dbdf6c01e380e28421a07d6cb98b4399ab774a8246bda7a165820b54873da",
+        "art/print/transit_pressing.png.import": "ad760824b77486f471dc3fb40ccdb72a986a449876c658d4d20347aeda600ab1",
+        "art/print/tread_ink.png": "1f94527660894d321ce83bb0d36bd0e0f8346b78c6fbcabcbfae5d89d88dd233",
+        "art/print/tread_ink.png.import": "8e86ffcd87e5301502643d8e9eed3699aa479690bbfe850f9e079863699c25ab",
+        "art/print/tread_normal.jpg": "994f851a84d52b51e97906021a1b7070ee6eac9a789fef041132268de47d8e6b",
+        "art/print/tread_normal.jpg.import": "7454f43a5d31dad86f9e78553b94c4fad98cafbead9500ec2fc087b092d26552",
+        "art/print/tread_rough.jpg": "756308485ce742a52831453c296452f48cf0adead7d85adfffd34c08dce23ec1",
+        "art/print/tread_rough.jpg.import": "f9fc331bff0f05eebe0b39336307e6946fc061b9cb98e0628b703a7620349bf0",
+        "art/print/vent_first.png": "427c20f73a99444e7100a6cbb7e73b734155f277833f2d632943198c0a88ad18",
+        "art/print/vent_first.png.import": "3e9de2b01a474057d9d30a73628d18ac2dae5f0a4943899e965623e56af4cc35",
+        "art/workshop/bench.glb": "d0ad05b143fc3da56695c87bb86b261550539a8a4582458165ae7a7c815867d1",
+        "art/workshop/bench.glb.import": "ba51b4291f8c47a5bb7cda00e194a0b32a65d937f479bcf0bed5f50d3f86e8e4",
+        "art/workshop/bench_inspection.glb": "8a112af9531a16f7e4bbb6ccbee028be4b612008927faf01f0253db7848f08b0",
+        "art/workshop/bench_inspection.glb.import": "fef2f619be033c9583aef887f7a1570f9ce8afdc999bea935f27557b05cf6bb7",
+        "art/workshop/button.glb": "0dc4663890333968ddac6aaf0624467939cd7dc57912c39d0807d98bdb8b2c31",
+        "art/workshop/button.glb.import": "97faa913fffa2dc69b198192e4f705beb88194daa2b24aa42720668365fd3fc3",
+        "art/workshop/maps/bench_body_color.png": "8c462aeaaa015c95ffeee1024d19c6c1030ad0f2b4d4ac4f6d5169d7589d965f",
+        "art/workshop/maps/bench_body_color.png.import": "0e819ca4bd5be24719c7b4dc46407d75bdef73574d9617f4909444369eb89740",
+        "art/workshop/maps/bench_body_painted.png": "8d1a36be9ab44797ba9ce040a6d98c4723251df8a921ec9eb655b52eed7cf0fa",
+        "art/workshop/maps/bench_body_painted.png.import": "6c21e589d8ba52c48ed2bd3d6bcda668f6d72d2cc8ec070b5a97d18070e32329",
+        "art/workshop/maps/bench_nrm0.png": "691b301c98afdaf3633b13704f760c80e1c4151b8a65a75b0ab8202d309d0dd2",
+        "art/workshop/maps/bench_nrm0.png.import": "005f1fb986c98ec842bd129e5833eabb906a38b4aa2f5bc8282085e08908da17",
+        "art/workshop/maps/bench_rough0.png": "efbde7c558664d938ae0ea145e96de7b6d48985ba270c1f0d167d59550aa5a1c",
+        "art/workshop/maps/bench_rough0.png.import": "6ae1e799f59bf1ca9358ecece83150db9ceeae7dbf1d012f83e88ba1e6e0a73d",
+        "art/workshop/maps/button_button_panel_color1.png": "4f07b6d2b563d1a9bf5c0cd1bb8fb0703527a80e568ae43e74d7a3cf380b80b7",
+        "art/workshop/maps/button_button_panel_color1.png.import": "da2b5d5ee220b9e83bc19b81133f1deb2c48d5e3159988afe7f767f2f854ac12",
+        "art/workshop/maps/button_button_panel_emit1.png": "d252d3ff03bd398e07ee611a752bcd8b50d67f6c5ec4f28ea6d64b71eca239c8",
+        "art/workshop/maps/button_button_panel_emit1.png.import": "db5f3505cb5b2061ca5eff55d47e2df1da66efb49f3b7a70cc7ee2b98a15e37f",
+        "art/workshop/maps/button_button_panel_normal1.png": "2a08da1f67a478a1be12f3ab2f0cd7313b75772ec0a6b30198761f0adf92fac0",
+        "art/workshop/maps/button_button_panel_normal1.png.import": "a7a3e41178426c5aa189e66efe948eb270348a3b630c57c000c8b5cfe606665b",
+        "art/workshop/maps/button_button_panel_orm1.png": "239c99d7f78b65b078068905c7493c41fb35101157fe88c8e1bfb786b664b6ca",
+        "art/workshop/maps/button_button_panel_orm1.png.import": "1b0798201bfb9ff1941ac325f76f2185161d989fb46874cd649a0437cb509c89",
+        "art/workshop/maps/pallet_pallet1_color.png": "59490404960a7ca319a3abd2fecbf3a16d4ebb28c1c57804ff70e3c7f9dd884e",
+        "art/workshop/maps/pallet_pallet1_color.png.import": "0aab555c6cfab4f6da2d7707f6996fa7c302c441005be9864196876f7eb6e006",
+        "art/workshop/maps/pallet_pallet1_normal.png": "447ff9414e3914f7000bc6044a8cc7f1538c2342ffbb0e3190161bf0c070f0c8",
+        "art/workshop/maps/pallet_pallet1_normal.png.import": "6023db91c1c5282d2aaec099ec1d31bb033ddb5a03a963f52b40750684a6c39f",
+        "art/workshop/maps/pallet_pallet1_orm.png": "8a96f0eabffc9d578a49fae2c89c94e1a16a788a7dc27fb2a0da289f623a7f28",
+        "art/workshop/maps/pallet_pallet1_orm.png.import": "aecba7ae4ee02e9ff3d319a590879d0c6e8857622ca8380dd4fedf436f3b81c1",
+        "art/workshop/maps/truck_drink_crates_color_lod1.png": "a147e9a1b8df9bacec65a4c35f1cfe65f9c4fe5fbeeea6b9505924e399468917",
+        "art/workshop/maps/truck_drink_crates_color_lod1.png.import": "e8976366d3e0f62ab815b8ad275063e984f5f9fefdd96f8f9a54ca9099ea99eb",
+        "art/workshop/maps/truck_drink_crates_normal_lod1.png": "6d1ef17c49c7571b85376948d1ab830a558243062e102d60dad0496abdb89aca",
+        "art/workshop/maps/truck_drink_crates_normal_lod1.png.import": "30c38d5fdf559c17fa47a7d4c510b4c1ef74d6a5c3c3540507f3e035644e84ac",
+        "art/workshop/maps/truck_drink_crates_orm_lod1.png": "fa09ab102aa750587483d4698a10b1d96a2aad7effc15a97eee12bf3af8815b3",
+        "art/workshop/maps/truck_drink_crates_orm_lod1.png.import": "02636c46e90dcac818426eb4f5e398e0d026a5238307b6ae433c7735c346921c",
+        "art/workshop/pallet.glb": "37e32c52ca784f0cddf68d1baae1d1d0d5fb2cadd823e0f9d85224878362a48f",
+        "art/workshop/pallet.glb.import": "6add3e919761635847360ddfbf83ae1a3adfa87dcbf5df1c11db0f39578a3ac7",
+        "art/workshop/truck.glb": "80ae054436f760306c86827db16abc9f289cebfc8c1d3d0b5b9d59641699cdea",
+        "art/workshop/truck.glb.import": "8ec230a8d3f96bf69d11d82c2767632b96885c6ffeb193dbfb9e620dee06d05a",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/audition-a/close.png": "e9276f12e5e49561958f914c488abb1d9a03fe850172da6561ef63ec2961ed50",
+        "captures/audition-a/door.png": "61563a4e744b790ca9b26b9f7f483deaea6f1ee7b2ecfc6c673699fd58c492bd",
+        "captures/audition-a/props.png": "7fb8a69d27c1bfa1d77fdb1a8225decb60adf69234aacba98183fabc47b783a7",
+        "captures/audition-b/close.png": "1d9e14816c9f28e0514d5d152fbcb452e571f6e03082c5bf675ea53f533cee43",
+        "captures/audition-b/door.png": "d9df7a0628940bd0d77df9da328acca68e232fc8e15bb1c8d02a5822694a8bbf",
+        "captures/audition-b/props.png": "e98f3d935d045f930b14d6f9e384afd12ba35b71cc5af5933912c6afadbb6dc8",
+        "captures/audition-control/close.png": "70e8b0a5ce277a852a4632edd5de926f942c4096091e8e0edeed2d339359591e",
+        "captures/audition-control/door.png": "53efc1bde4c11df8dec5cef7bfa6494b4825a0e1eb44c5875d81bdc8233ce3dd",
+        "captures/audition-control/props.png": "5128d756011b0ee59be9eec76165ad1a612b1e89b3205949438ad7f71efa7365",
+        "captures/final/close.png": "d007c046c77d20a2c775a2d95ca008bb930469904873b59f5dfcd992722ffbed",
+        "captures/final/door.png": "4a5500d11da5e458f8005066a47e833091a3987d84154a6a058c828f5fe2e7d1",
+        "captures/final/props.png": "28e7680d9eedd13d78725ba978d56de854a90075b5cbc9293756e2cb8e8a6778",
+        "captures/first/close.png": "a5556257cc7486b1933d5f1aebc305059295ad1dbc19e515e05f139b9202e41a",
+        "captures/first/door.png": "11ebce37ea8c6d3453ce3a9043a6b1cec21d5a4fcd3aeb286b89754f6c41d83c",
+        "captures/first/props.png": "2f06e4b0113a8ad3d45c1558269350f85cea6c75010faa3739c18c6d3a602344",
+        "captures/technical/mat-scale/close.png": "b752b1003bd9bc9f55f2870c796e926d6478c6877cc43bb09e863bbd4d4fc46a",
+        "captures/technical/mat-scale/door.png": "acee3ca130e9afbe2c7048df446248ed2f1e4d2213b0c264a03551799abadb4c",
+        "captures/technical/mat-scale/props.png": "da64921faca0055b26fd905f283b73ffa17473b6383a63b53cf02aa64c1b7451",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "f0f76978ac38d8e4fb61ff3b85933726dfcce268fc0e3e2f3c6e49d0dbc630f1",
+        "first.tscn": "a8bd330f807f647a9819d19b24d1e6e6f62fc2b72fb7a51bdc96e0aac6a7569f",
+        "project.godot": "ea1161ab2ffe425a099bf5047fa385f48539b9f88c216dd2772fa89c9469d076",
+        "references.json": "83372305ab864594db497cba33517a3d528db8ac448ca538de554f7988d67570",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "226a072129cae8ff51405a1c1275636c08ed8349a7a75ad7f33c72b6dce4ec51",
+        "sample_b.tscn": "6af4a2f2d88bcc31f221c51db4fb542045094376e430a1bee970e0ec5306361c",
+        "sample_control.tscn": "09d80f8355281e753039d4aec1b4493eac336e1a6612b7b2640c18949991e2c9",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "archived_scene_dependencies": [
+        {
+          "entry": "first.tscn",
+          "files_checked": 63,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        },
+        {
+          "entry": "final.tscn",
+          "files_checked": 72,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        }
+      ],
+      "source_route": "Kenney Space Station / Factory 原 OBJ 改顶点配色与折边线；tevy CC0 工具台、手推车、按钮盒和托盘解压保留图集；Poly Haven 钢板重配色。",
+      "provenance_review": {
+        "date": "2026-11-20",
+        "finding": "Checked tevy's four individual primary-source pages: free CC0-1.0, explicit versioned GLB downloads. Actual original downloaded files match each selected LOD's SHA256 in the producer's saved publisher catalog. Converted project GLBs preserve separate collected hashes; this verifies the published source declaration and downloaded bytes, not a separate chain-of-title investigation.",
+        "urls": [
+          "https://tevy.dev/models/tool-chest-bench",
+          "https://tevy.dev/models/blue-hand-trolley",
+          "https://tevy.dev/models/button-panel",
+          "https://tevy.dev/models/wooden-pallet",
+          "https://tevy.dev/models.json"
+        ],
+        "download_sha256": {
+          "tool-chest-bench/v1/lod0.glb": "dd5a718abf4a1726b69b6d3055f9874310fa107115cf24d7e67e96a0fd5736a8",
+          "blue-hand-trolley/v1/lod1.glb": "3cf1209ca0149417648b2798ba820751fcb0060bb262ab57459dfeaae4d5ee88",
+          "button-panel/v1/lod1.glb": "8f840c50ad288ee7981525291d117404950baee15e767b0217f1cfe28ff366e2",
+          "wooden-pallet/v1/lod1.glb": "0aff6570f08f773100ffd9d24ec7f14bb051552235d4de2df562e1f866540e57"
+        }
+      },
+      "controlled_shader_comparison": {
+        "scope": "Material audition only, not an extra complete art pass.",
+        "scenes": [
+          "sample_a.tscn",
+          "sample_control.tscn"
+        ],
+        "comparison": "Scene text differs only in the material reference printed_steel.tres versus continuous_steel.tres. Geometry, lights and camera are identical. Both specify roughness 0.67 and specular 0.25; base paint comes from the same vertex colors. The custom material adds crease ink and hatching together, with a polynomial sRGB conversion instead of StandardMaterial's color conversion, so this is a combined-material comparison, not an isolated outline-only ablation.",
+        "coordinator_views": [
+          "captures/audition-a/close.png",
+          "captures/audition-control/close.png"
+        ],
+        "visible_observation": "Ink separates valve rim, bands and cylinder cap; hatching also spreads across large wall faces. The unchanged detailed workbench remains visually denser than the broad folded wall panels. No claim that this material alone explains the final scene's ranking.",
+        "resource_immutability": "Since sample commit 35785349fd279ebbed338a074569dd295c9d9efe only ASSETS.md, ENVIRONMENT.md and project.godot among pre-existing files changed; sample scenes/materials/meshes/images unchanged."
+      },
+      "view_review_evidence": {
+        "references_and_whitebox": "Both original references and all three original whitebox views at 2026-11-19T19:59:46.752Z",
+        "samples": "Before repair A props/close and B props at 20:08:44.176Z. After repair A/B props/close and control close originals at 20:10:30.385Z. Sample door views were saved but not explicitly viewed in the recorded image calls.",
+        "first_all_three": "2026-11-19T20:20:06.570Z",
+        "final_all_three_before_repair": "2026-11-19T20:29:17.869Z",
+        "final_all_three_after_repair": "2026-11-19T20:30:10.350Z"
+      },
+      "technical_repairs": [
+        "Corrected sample covering-panel penetration and Factory back-face orientation before choosing materials; original nine failed-sample images supplemented by coordinator after production stopped.",
+        "After the final art pass, changed only RubberMat node scale from Vector3(1.22, 1.15, 1) to Vector3(0.7076, 0.391, 0.021). All three original before-fix images tracked under captures/technical/mat-scale; all three repaired images recaptured and reviewed."
+      ],
+      "technical_limitations": [
+        "Sample door images were captured but not explicitly viewed; formal first/final and repaired final all-three originals were viewed.",
+        "Separate six-frame headless default-entry check exited zero with macOS system-CA permission diagnostic. Graphical capture logs contain no warning/error strings; no manual traversal or cross-platform check."
+      ],
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "preserved_history_ref": "refs/envart-trials/20261120/hifi-max",
+      "stage_status": "collected and audited; visual comparison pending",
+      "coordinator_supplemental_evidence": [
+        {
+          "source_relative_path": ".work/fit-check/sample-a/door.png",
+          "archived_path": "captures/technical/sample-a-before-fit/door.png",
+          "sha256": "357584eb77ea64c017d4bc6ce08008fc8cc87b5898f228000231b97889af1fbc",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-a/props.png",
+          "archived_path": "captures/technical/sample-a-before-fit/props.png",
+          "sha256": "5cd38fa5b0025b3b80b46de32b1314d0ae7639492f1a6d589fde7ae5589244b9",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-a/close.png",
+          "archived_path": "captures/technical/sample-a-before-fit/close.png",
+          "sha256": "c3e24588873c862e86aec3adcf3650058c280829cd153c3adf2a89753ef1fbc3",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-b/door.png",
+          "archived_path": "captures/technical/sample-b-before-fit/door.png",
+          "sha256": "11f35bb96168e355471e23496e311732160fd17b616160b72e32d02afb018dd9",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-b/props.png",
+          "archived_path": "captures/technical/sample-b-before-fit/props.png",
+          "sha256": "1ef3d138b04e9ba8ec3768e07de09a93ab80094a7ba40680f58cd63b64fe793b",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-b/close.png",
+          "archived_path": "captures/technical/sample-b-before-fit/close.png",
+          "sha256": "3a165d9268af9606a65388c712419458be9f5b7988bef05cb4d02149c87a97a2",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-control/door.png",
+          "archived_path": "captures/technical/sample-control-before-fit/door.png",
+          "sha256": "9f581048b0b9a86f5a5bdd6ffb325c8d2e886d5530fd2bc0414a01f3ace85462",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-control/props.png",
+          "archived_path": "captures/technical/sample-control-before-fit/props.png",
+          "sha256": "95785e2a6b5c4f5ea3b6f9f9776db3577a1ab28e18a094ca7d20eda9d8826848",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        },
+        {
+          "source_relative_path": ".work/fit-check/sample-control/close.png",
+          "archived_path": "captures/technical/sample-control-before-fit/close.png",
+          "sha256": "03d7dabf3c216a451574028476a95e000c4684937379eb8c4e0f9c52c6f2cbf1",
+          "purpose": "Original sample before panel fit/orientation repair; not a ranked art pass."
+        }
+      ]
     }
   },
   "dredge": {

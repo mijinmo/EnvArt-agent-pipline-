@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hifi_01",
+    "file": "references/01_production_work_area.jpg",
+    "image_url": "https://img.xboxachievements.com/images/monthly_2023_01/guide/hi-fi-rush-vlog-battery-pack-production_45c2a3f9-7607-4d7f-a184-92e3bdf1b553_l.jpg",
+    "source_url": "https://www.xboxachievements.com/game/hi-fi-rush/guide/vandelay-vlog-locations-guide",
+    "author_source": "XboxAchievements 原作实机攻略截图，Battery Pack Production 条目；游戏 Tango Gameworks。媒体网站非 Xbox 官方；来源页本次访问403，但公开图片可下载并已实际查看",
+    "role": "室内生产/装卸工作区的建筑与功能分组",
+    "supports": [
+      "上方梁、顶板、绿色管道、弯头、法兰、阀门和吊灯组成可辨识设施层",
+      "台式控制器与椅子、箱子与托盘、导向栏杆与路锥各自成组",
+      "发光指示灯、顶灯投光和较暗蓝色周边具有光源层级",
+      "地面拼缝、磨痕、金属斜线和半色调点阵提供表面细节"
+    ],
+    "limits": [
+      "角色与HUD占部分前景，非本次环境制作要求",
+      "图中生产/搬运设备比本次小局部更多，不等于必须逐项复制",
+      "没有清楚的手工维修工具近景；不能凭此宣称完整维修工序"
+    ],
+    "game": "Hi-Fi RUSH",
+    "sha256": "ae5cdcbf45bfd1a9951bd9cb9c4e71b754a57748af9b95d288ad0306976bfa2d"
+  },
+  {
+    "id": "hifi_02",
+    "file": "references/02_production_threshold.jpg",
+    "image_url": "https://images.gamersyde.com/image_stream-44794-5107_0002.jpg",
+    "source_url": "https://www.gamersyde.com/video_hi_fi_rush_gameplay_deep_dive_trailer-46681_en.html",
+    "author_source": "Gamersyde 所刊 Hi-Fi RUSH Gameplay Deep Dive Trailer 截帧；原作官方预告素材的媒体分发副本，不是环境作者单独作品",
+    "role": "门洞、墙边设施与走道表面",
+    "supports": [
+      "双扇门与有厚度的门框、警示包边、门边控制器和出口标牌的关系",
+      "右侧玻璃设备围护与护栏靠边，主通行面连续",
+      "钢板分缝、花纹板、排水口、脚边影和少量擦伤区分表面",
+      "绿色小灯与蓝暗底色形成局部焦点，地面光斑边界清楚"
+    ],
+    "limits": [
+      "门明显比本次1.2m净宽更宽，不能照搬其尺寸",
+      "图顶棚裁掉，顶棚关系由01补足",
+      "原图角色和HUD不属于本次环境要求"
+    ],
+    "game": "Hi-Fi RUSH",
+    "sha256": "eba4f403d6aafc03c9dd280675215dc3ecf114913735298091b4728a3575e1af"
+  }
+]

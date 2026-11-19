@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "production processes complete; review pending",
   "model": "gpt-6.2-astra",
   "engine": "4.7.2.stable.official.ed1daf0bf",
   "backend": "Metal Forward+",
@@ -190,12 +190,12 @@
       "effort": "max",
       "input_commit": "9e961bdc4d084a017cfa9af92c77ffa8ea6cf857",
       "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
-      "status": "running"
+      "status": "completed"
     }
   ],
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 24,
-  "completed_run_count": 23,
-  "collected_run_count": 23
+  "completed_run_count": 24,
+  "collected_run_count": 24
 }

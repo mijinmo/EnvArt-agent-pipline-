@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx5xopt6rwjfk"
+path="res://.godot/imported/container-tall.obj-bf0a7dcfeb4c37d4e8c2d6f77ec9bb88.mesh"
+
+[deps]
+
+files=["res://.godot/imported/container-tall.obj-bf0a7dcfeb4c37d4e8c2d6f77ec9bb88.mesh"]
+
+source_file="res://art/modules/station/container-tall.obj"
+dest_files=["res://.godot/imported/container-tall.obj-bf0a7dcfeb4c37d4e8c2d6f77ec9bb88.mesh", "res://.godot/imported/container-tall.obj-bf0a7dcfeb4c37d4e8c2d6f77ec9bb88.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

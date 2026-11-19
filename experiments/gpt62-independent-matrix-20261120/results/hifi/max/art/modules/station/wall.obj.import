@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btkxgtcix2i5p"
+path="res://.godot/imported/wall.obj-7ecc9eb0f2a4510b3f6c80de8f225758.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall.obj-7ecc9eb0f2a4510b3f6c80de8f225758.mesh"]
+
+source_file="res://art/modules/station/wall.obj"
+dest_files=["res://.godot/imported/wall.obj-7ecc9eb0f2a4510b3f6c80de8f225758.mesh", "res://.godot/imported/wall.obj-7ecc9eb0f2a4510b3f6c80de8f225758.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
