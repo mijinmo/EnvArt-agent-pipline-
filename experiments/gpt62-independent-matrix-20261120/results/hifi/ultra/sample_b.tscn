@@ -1,0 +1,313 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="E0"]
+[ext_resource type="Script" path="res://review.gd" id="E1"]
+[ext_resource type="Shader" path="res://art/press_ink.gdshader" id="E2"]
+[ext_resource type="PackedScene" path="res://art/modules/WallBand_Straight.gltf" id="E3"]
+[ext_resource type="PackedScene" path="res://art/modules/TopCables_Straight.gltf" id="E4"]
+[ext_resource type="PackedScene" path="res://art/modules/WallAstra_Straight_Flat.gltf" id="E5"]
+[ext_resource type="PackedScene" path="res://art/modules/Platform_Squares.gltf" id="E6"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Light_Wide.gltf" id="E7"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Desk_Medium.gltf" id="E8"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Chair.gltf" id="E9"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Computer.gltf" id="E10"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Mug.gltf" id="E11"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Chest.gltf" id="E12"]
+[ext_resource type="PackedScene" path="res://art/modules/Prop_Barrel_Large.gltf" id="E13"]
+
+[sub_resource type="Environment" id="BayLight"]
+background_mode = 1
+background_color = Color(0.203922, 0.235294, 0.321569, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.666667, 0.729412, 0.854902, 1)
+ambient_light_energy = 0.66
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.78
+ssao_intensity = 2.1
+glow_enabled = true
+glow_intensity = 0.25
+glow_bloom = 0.04
+
+[sub_resource type="ShaderMaterial" id="PrintedEdges"]
+render_priority = 100
+shader = ExtResource("E2")
+
+[sub_resource type="QuadMesh" id="InkPage"]
+size = Vector2(2, 2)
+
+[sub_resource type="BoxMesh" id="Block"]
+
+[sub_resource type="StandardMaterial3D" id="C39465ae0"]
+albedo_color = Color(0.223529, 0.27451, 0.352941, 1)
+roughness = 0.77
+metallic_specular = 0.28
+
+[sub_resource type="StandardMaterial3D" id="C46566fe0"]
+albedo_color = Color(0.27451, 0.337255, 0.435294, 1)
+roughness = 0.77
+metallic_specular = 0.28
+
+[node name="CoolantHandoff" type="Node3D"]
+script = ExtResource("E1")
+
+[node name="BaseLab" parent="." instance=ExtResource("E0")]
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("BayLight")
+
+[node name="Sun" parent="BaseLab" index="2"]
+visible = false
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Structure" type="Node3D" parent="Art"]
+
+[node name="ScreenInk" type="MeshInstance3D" parent="Art/Structure"]
+mesh = SubResource("InkPage")
+material_override = SubResource("PrintedEdges")
+extra_cull_margin = 16384
+cast_shadow = 0
+
+[node name="WallPanels" type="Node3D" parent="Art"]
+
+[node name="WallBand_Straight" parent="Art/WallPanels" instance=ExtResource("E3")]
+position = Vector3(9.71, 0, -10.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1, 0.75)
+
+[node name="TopCables_Straight" parent="Art/WallPanels" instance=ExtResource("E4")]
+position = Vector3(9.71, 0.75, -10.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.75, 0.75)
+
+[node name="WallBand_Straight2" parent="Art/WallPanels" instance=ExtResource("E3")]
+position = Vector3(9.71, 0, -7.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1, 0.75)
+
+[node name="TopCables_Straight2" parent="Art/WallPanels" instance=ExtResource("E4")]
+position = Vector3(9.71, 0.75, -7.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.75, 0.75)
+
+[node name="WallBand_Straight3" parent="Art/WallPanels" instance=ExtResource("E3")]
+position = Vector3(9.71, 0, -4.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1, 0.75)
+
+[node name="TopCables_Straight3" parent="Art/WallPanels" instance=ExtResource("E4")]
+position = Vector3(9.71, 0.75, -4.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.75, 0.75)
+
+[node name="WallBand_Straight4" parent="Art/WallPanels" instance=ExtResource("E3")]
+position = Vector3(9.71, 0, -1.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1, 0.75)
+
+[node name="TopCables_Straight4" parent="Art/WallPanels" instance=ExtResource("E4")]
+position = Vector3(9.71, 0.75, -1.5)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 0.75, 0.75)
+
+[node name="WallCore" type="MeshInstance3D" parent="Art/WallPanels"]
+position = Vector3(10.04, 2.26, -6)
+scale = Vector3(0.54, 4.52, 12)
+mesh = SubResource("Block")
+material_override = SubResource("C39465ae0")
+
+[node name="WallAstra_Straight_Flat" parent="Art/WallPanels" instance=ExtResource("E5")]
+position = Vector3(7, 0, -1.28)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="WallAstra_Straight_Flat2" parent="Art/WallPanels" instance=ExtResource("E5")]
+position = Vector3(9, 0, -1.28)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="ReturnCore" type="MeshInstance3D" parent="Art/WallPanels"]
+position = Vector3(8, 2.28, -0.99)
+scale = Vector3(4, 4.56, 0.5)
+mesh = SubResource("Block")
+material_override = SubResource("C39465ae0")
+
+[node name="Soffit" type="MeshInstance3D" parent="Art/WallPanels"]
+position = Vector3(3.5, 4.67, -5.5)
+scale = Vector3(17, 0.34, 16)
+mesh = SubResource("Block")
+material_override = SubResource("C46566fe0")
+
+[node name="Deck" type="Node3D" parent="Art"]
+
+[node name="Platform_Squares" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-7.5, 0.008, -10)
+
+[node name="Platform_Squares2" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-7.5, 0.008, -6)
+
+[node name="Platform_Squares3" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-7.5, 0.008, -2)
+
+[node name="Platform_Squares4" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-7.5, 0.008, 2)
+
+[node name="Platform_Squares5" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-3.5, 0.008, -10)
+
+[node name="Platform_Squares6" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-3.5, 0.008, -6)
+
+[node name="Platform_Squares7" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-3.5, 0.008, -2)
+
+[node name="Platform_Squares8" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(-3.5, 0.008, 2)
+
+[node name="Platform_Squares9" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(0.5, 0.008, -10)
+
+[node name="Platform_Squares10" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(0.5, 0.008, -6)
+
+[node name="Platform_Squares11" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(0.5, 0.008, -2)
+
+[node name="Platform_Squares12" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(0.5, 0.008, 2)
+
+[node name="Platform_Squares13" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(4.5, 0.008, -10)
+
+[node name="Platform_Squares14" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(4.5, 0.008, -6)
+
+[node name="Platform_Squares15" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(4.5, 0.008, -2)
+
+[node name="Platform_Squares16" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(4.5, 0.008, 2)
+
+[node name="Platform_Squares17" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(8.5, 0.008, -10)
+
+[node name="Platform_Squares18" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(8.5, 0.008, -6)
+
+[node name="Platform_Squares19" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(8.5, 0.008, -2)
+
+[node name="Platform_Squares20" parent="Art/Deck" instance=ExtResource("E6")]
+position = Vector3(8.5, 0.008, 2)
+
+[node name="Luminaires" type="Node3D" parent="Art"]
+
+[node name="Prop_Light_Wide" parent="Art/Luminaires" instance=ExtResource("E7")]
+position = Vector3(7.8, 4.18, -5.55)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="TaskLight" type="SpotLight3D" parent="Art/Luminaires"]
+position = Vector3(7.8, 4.02, -5.55)
+rotation_degrees = Vector3(-64.867305, -132.510447, 0)
+light_color = Color(1, 0.929412, 0.772549, 1)
+light_energy = 5.8
+spot_range = 10
+spot_attenuation = 0.55
+spot_angle = 59
+spot_angle_attenuation = 0.74
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Prop_Light_Wide2" parent="Art/Luminaires" instance=ExtResource("E7")]
+position = Vector3(8, 4.18, -2.55)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="TaskLight2" type="SpotLight3D" parent="Art/Luminaires"]
+position = Vector3(8, 4.02, -2.55)
+rotation_degrees = Vector3(-68.01531, -145.175511, 0)
+light_color = Color(0.698039, 0.909804, 1, 1)
+light_energy = 3.6
+spot_range = 10
+spot_attenuation = 0.55
+spot_angle = 59
+spot_angle_attenuation = 0.74
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Prop_Light_Wide3" parent="Art/Luminaires" instance=ExtResource("E7")]
+position = Vector3(7, 4.18, -9.2)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="TaskLight3" type="SpotLight3D" parent="Art/Luminaires"]
+position = Vector3(7, 4.02, -9.2)
+rotation_degrees = Vector3(-60.418264, -113.962489, 0)
+light_color = Color(0.756863, 0.933333, 1, 1)
+light_energy = 3.8
+spot_range = 10
+spot_attenuation = 0.55
+spot_angle = 59
+spot_angle_attenuation = 0.74
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Prop_Light_Wide4" parent="Art/Luminaires" instance=ExtResource("E7")]
+position = Vector3(-0.5, 4.18, -2.5)
+
+[node name="TaskLight4" type="SpotLight3D" parent="Art/Luminaires"]
+position = Vector3(-0.5, 4.02, -2.5)
+rotation_degrees = Vector3(-63.782069, -20.556045, 0)
+light_color = Color(1, 0.898039, 0.756863, 1)
+light_energy = 5.8
+spot_range = 10
+spot_attenuation = 0.55
+spot_angle = 59
+spot_angle_attenuation = 0.74
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Prop_Light_Wide5" parent="Art/Luminaires" instance=ExtResource("E7")]
+position = Vector3(2.9, 4.18, -8.8)
+
+[node name="TaskLight5" type="SpotLight3D" parent="Art/Luminaires"]
+position = Vector3(2.9, 4.02, -8.8)
+rotation_degrees = Vector3(-51.793074, -23.749494, 0)
+light_color = Color(0.733333, 0.87451, 1, 1)
+light_energy = 4.2
+spot_range = 10
+spot_attenuation = 0.55
+spot_angle = 59
+spot_angle_attenuation = 0.74
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Operations" type="Node3D" parent="Art"]
+
+[node name="Prop_Desk_Medium" parent="Art/Operations" instance=ExtResource("E8")]
+position = Vector3(9.02, 0, -4.55)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Prop_Chair" parent="Art/Operations" instance=ExtResource("E9")]
+position = Vector3(7.97, 0, -4.76)
+rotation_degrees = Vector3(0, -105, 0)
+scale = Vector3(0.72, 0.72, 0.72)
+
+[node name="Prop_Computer" parent="Art/Operations" instance=ExtResource("E10")]
+position = Vector3(8.82, 0, -6.53)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Prop_Mug" parent="Art/Operations" instance=ExtResource("E11")]
+position = Vector3(8.91, 0.947, -3.62)
+rotation_degrees = Vector3(0, 26, 0)
+scale = Vector3(0.83, 0.83, 0.83)
+
+[node name="Prop_Chest" parent="Art/Operations" instance=ExtResource("E12")]
+position = Vector3(8.92, 0.94, -5.34)
+rotation_degrees = Vector3(0, -78, 0)
+scale = Vector3(0.42, 0.42, 0.42)
+
+[node name="Prop_Barrel_Large" parent="Art/Operations" instance=ExtResource("E13")]
+position = Vector3(9, 0, -2.1)
+
+[editable path="BaseLab"]
