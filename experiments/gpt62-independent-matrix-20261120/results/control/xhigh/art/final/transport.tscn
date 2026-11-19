@@ -1,0 +1,279 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/Gasket.tres" id="e1"]
+[ext_resource type="Material" path="res://art/materials/Petrol.tres" id="e2"]
+[ext_resource type="Material" path="res://art/materials/Walnut.tres" id="e3"]
+[ext_resource type="Material" path="res://art/final/materials/Print_deck_plate.tres" id="e4"]
+[ext_resource type="Material" path="res://art/materials/Tape.tres" id="e5"]
+[ext_resource type="PackedScene" path="res://art/models/reel_flange/reel_flange.gltf" id="e6"]
+[ext_resource type="Material" path="res://art/materials/Rubber.tres" id="e7"]
+[ext_resource type="Material" path="res://art/materials/Nickel.tres" id="e8"]
+[ext_resource type="Material" path="res://art/materials/Pewter.tres" id="e9"]
+[ext_resource type="Material" path="res://art/final/materials/Print_meter.tres" id="e10"]
+[ext_resource type="Material" path="res://art/materials/Oat.tres" id="e11"]
+[ext_resource type="Material" path="res://art/materials/Seal.tres" id="e12"]
+[ext_resource type="Material" path="res://art/materials/OffWhite.tres" id="e13"]
+[ext_resource type="Material" path="res://art/materials/Rail.tres" id="e14"]
+
+[ext_resource type="PackedScene" path="res://art/final/tape_path.tscn" id="v2"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(0.820000, 0.570000, 0.290000)
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(0.805000, 0.580000, 0.240000)
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(0.023000, 0.603000, 0.305000)
+
+[sub_resource type="QuadMesh" id="s4"]
+size = Vector2(0.802000, 0.560000)
+
+[sub_resource type="CylinderMesh" id="s5"]
+top_radius = 0.138
+bottom_radius = 0.138
+height = 0.041
+radial_segments = 64
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s6"]
+top_radius = 0.033
+bottom_radius = 0.041
+height = 0.021
+radial_segments = 24
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s7"]
+top_radius = 0.016
+bottom_radius = 0.02
+height = 0.012
+radial_segments = 24
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s8"]
+top_radius = 0.085
+bottom_radius = 0.085
+height = 0.041
+radial_segments = 64
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s9"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.034
+radial_segments = 24
+rings = 1
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(0.180000, 0.068000, 0.055000)
+
+[sub_resource type="BoxMesh" id="s11"]
+size = Vector3(0.148000, 0.065000, 0.018000)
+
+[sub_resource type="QuadMesh" id="s12"]
+size = Vector2(0.132000, 0.053000)
+
+[sub_resource type="CylinderMesh" id="s13"]
+top_radius = 0.024
+bottom_radius = 0.026
+height = 0.034
+radial_segments = 24
+rings = 1
+
+[sub_resource type="BoxMesh" id="s14"]
+size = Vector3(0.003000, 0.014000, 0.002000)
+
+[sub_resource type="BoxMesh" id="s15"]
+size = Vector3(0.048000, 0.033000, 0.035000)
+
+[sub_resource type="CylinderMesh" id="s16"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.006
+radial_segments = 8
+rings = 1
+
+[node name="ReferenceTransport" type="Node3D"]
+
+[node name="DeckBody" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.290000, 0.000000)
+mesh = SubResource("s1")
+material_override = ExtResource("e1")
+
+[node name="RearShell" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.306000, -0.030000)
+mesh = SubResource("s2")
+material_override = ExtResource("e2")
+
+[node name="WalnutCheek0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.413000, 0.305000, 0.007000)
+mesh = SubResource("s3")
+material_override = ExtResource("e3")
+
+[node name="WalnutCheek1" type="MeshInstance3D" parent="."]
+position = Vector3(0.413000, 0.305000, 0.007000)
+mesh = SubResource("s3")
+material_override = ExtResource("e3")
+
+[node name="ScreenprintedPanel" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.303000, 0.146000)
+mesh = SubResource("s4")
+material_override = ExtResource("e4")
+
+[node name="MagneticStock0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.209000, 0.421000, 0.173000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="TakeupFlange0" parent="." instance=ExtResource("e6")]
+position = Vector3(-0.209000, 0.421000, 0.199000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="LockingHub0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.209000, 0.421000, 0.209000)
+mesh = SubResource("s6")
+material_override = ExtResource("e7")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="HubNut0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.209000, 0.421000, 0.223000)
+mesh = SubResource("s7")
+material_override = ExtResource("e8")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="MagneticStock1" type="MeshInstance3D" parent="."]
+position = Vector3(0.209000, 0.421000, 0.173000)
+mesh = SubResource("s8")
+material_override = ExtResource("e5")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="TakeupFlange1" parent="." instance=ExtResource("e6")]
+position = Vector3(0.209000, 0.421000, 0.199000)
+rotation_degrees = Vector3(0.000000, 0.000000, -43.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="LockingHub1" type="MeshInstance3D" parent="."]
+position = Vector3(0.209000, 0.421000, 0.209000)
+mesh = SubResource("s6")
+material_override = ExtResource("e7")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="HubNut1" type="MeshInstance3D" parent="."]
+position = Vector3(0.209000, 0.421000, 0.223000)
+mesh = SubResource("s7")
+material_override = ExtResource("e8")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Guide0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.165000, 0.213000, 0.167000)
+mesh = SubResource("s9")
+material_override = ExtResource("e8")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Guide1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.093000, 0.213000, 0.167000)
+mesh = SubResource("s9")
+material_override = ExtResource("e8")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Guide2" type="MeshInstance3D" parent="."]
+position = Vector3(0.130000, 0.213000, 0.167000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Guide3" type="MeshInstance3D" parent="."]
+position = Vector3(0.177000, 0.213000, 0.167000)
+mesh = SubResource("s9")
+material_override = ExtResource("e8")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="HeadCover" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.225000, 0.179000)
+mesh = SubResource("s10")
+material_override = ExtResource("e9")
+
+[node name="MeterBezel" type="MeshInstance3D" parent="."]
+position = Vector3(-0.288000, 0.088000, 0.150000)
+mesh = SubResource("s11")
+material_override = ExtResource("e7")
+
+[node name="VuMeter" type="MeshInstance3D" parent="."]
+position = Vector3(-0.288000, 0.088000, 0.161000)
+mesh = SubResource("s12")
+material_override = ExtResource("e10")
+
+[node name="GainDial0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.150000, 0.082000, 0.159000)
+mesh = SubResource("s13")
+material_override = ExtResource("e7")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Pointer0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.150000, 0.093000, 0.177000)
+mesh = SubResource("s14")
+material_override = ExtResource("e11")
+
+[node name="GainDial1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.066000, 0.082000, 0.159000)
+mesh = SubResource("s13")
+material_override = ExtResource("e7")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="Pointer1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.066000, 0.093000, 0.177000)
+mesh = SubResource("s14")
+material_override = ExtResource("e11")
+
+[node name="TransportKey0" type="MeshInstance3D" parent="."]
+position = Vector3(0.066000, 0.081000, 0.164000)
+mesh = SubResource("s15")
+material_override = ExtResource("e12")
+
+[node name="TransportKey1" type="MeshInstance3D" parent="."]
+position = Vector3(0.122000, 0.081000, 0.164000)
+mesh = SubResource("s15")
+material_override = ExtResource("e13")
+
+[node name="TransportKey2" type="MeshInstance3D" parent="."]
+position = Vector3(0.178000, 0.081000, 0.164000)
+mesh = SubResource("s15")
+material_override = ExtResource("e13")
+
+[node name="TransportKey3" type="MeshInstance3D" parent="."]
+position = Vector3(0.234000, 0.081000, 0.164000)
+mesh = SubResource("s15")
+material_override = ExtResource("e13")
+
+[node name="TransportKey4" type="MeshInstance3D" parent="."]
+position = Vector3(0.290000, 0.081000, 0.164000)
+mesh = SubResource("s15")
+material_override = ExtResource("e13")
+
+[node name="FaceScrew0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.380000, 0.044000, 0.149000)
+mesh = SubResource("s16")
+material_override = ExtResource("e14")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="FaceScrew1" type="MeshInstance3D" parent="."]
+position = Vector3(0.380000, 0.044000, 0.149000)
+mesh = SubResource("s16")
+material_override = ExtResource("e14")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="FaceScrew2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.380000, 0.560000, 0.149000)
+mesh = SubResource("s16")
+material_override = ExtResource("e14")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="FaceScrew3" type="MeshInstance3D" parent="."]
+position = Vector3(0.380000, 0.560000, 0.149000)
+mesh = SubResource("s16")
+material_override = ExtResource("e14")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="ThreadedTape" parent="." instance=ExtResource("v2")]

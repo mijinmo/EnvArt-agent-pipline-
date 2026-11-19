@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://art/final/textures/cast.jpg" id="1"]
+[ext_resource type="Texture2D" path="res://art/final/textures/cast_normal.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://art/final/textures/cast_arm.jpg" id="3"]
+
+[resource]
+albedo_color = Color(0.82353, 0.87843, 0.87451, 1)
+albedo_texture = ExtResource("1")
+normal_enabled = true
+normal_texture = ExtResource("2")
+normal_scale = 0.24
+roughness_texture = ExtResource("3")
+roughness_texture_channel = 1
+roughness = 1
+ao_enabled = true
+ao_texture = ExtResource("3")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.555556, 0.555556, 0.555556)
+texture_filter = 5

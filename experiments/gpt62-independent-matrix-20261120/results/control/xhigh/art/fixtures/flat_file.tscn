@@ -1,0 +1,503 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/Edge.tres" id="e1"]
+[ext_resource type="Material" path="res://art/materials/Petrol.tres" id="e2"]
+[ext_resource type="Material" path="res://art/materials/Rail.tres" id="e3"]
+[ext_resource type="Material" path="res://art/materials/Walnut.tres" id="e4"]
+[ext_resource type="Material" path="res://art/materials/Spruce.tres" id="e5"]
+[ext_resource type="Material" path="res://art/materials/Nickel.tres" id="e6"]
+[ext_resource type="Material" path="res://art/materials/Brass.tres" id="e7"]
+[ext_resource type="Material" path="res://art/materials/Print_box_card.tres" id="e8"]
+[ext_resource type="Material" path="res://art/materials/DarkAggregate.tres" id="e9"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(2.100000, 0.130000, 0.720000)
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(2.220000, 0.900000, 0.800000)
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(2.240000, 0.029000, 0.817000)
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(2.220000, 0.020000, 0.809000)
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(1.062000, 0.193000, 0.037000)
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(1.036000, 0.012000, 0.012000)
+
+[sub_resource type="BoxMesh" id="s7"]
+size = Vector3(0.018000, 0.024000, 0.034000)
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(0.131000, 0.018000, 0.020000)
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(0.151000, 0.051000, 0.008000)
+
+[sub_resource type="QuadMesh" id="s10"]
+size = Vector2(0.138000, 0.042000)
+
+[sub_resource type="BoxMesh" id="s11"]
+size = Vector3(1.048000, 0.144000, 0.150000)
+
+[node name="FlatFileChest" type="Node3D"]
+
+[node name="RecessedPlinth" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.065000, -0.017000)
+mesh = SubResource("s1")
+material_override = ExtResource("e1")
+
+[node name="Carcass" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.540000, 0.000000)
+mesh = SubResource("s2")
+material_override = ExtResource("e2")
+
+[node name="RaisedLip" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 0.998000, 0.000000)
+mesh = SubResource("s3")
+material_override = ExtResource("e3")
+
+[node name="WritingTop" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 1.018000, 0.000000)
+mesh = SubResource("s4")
+material_override = ExtResource("e4")
+
+[node name="Drawer_1_1" type="Node3D" parent="."]
+position = Vector3(-0.551000, 0.237000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_1_1"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_1_2" type="Node3D" parent="."]
+position = Vector3(-0.551000, 0.447000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_1_2"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_1_3" type="Node3D" parent="."]
+position = Vector3(-0.551000, 0.657000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_1_3"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_1_4" type="Node3D" parent="."]
+position = Vector3(-0.551000, 0.867000, 0.480000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="OpenTray" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.000000, 0.000000, -0.030000)
+mesh = SubResource("s11")
+material_override = ExtResource("e9")
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_1_4"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_2_1" type="Node3D" parent="."]
+position = Vector3(0.551000, 0.237000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_2_1"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_2_2" type="Node3D" parent="."]
+position = Vector3(0.551000, 0.447000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_2_2"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_2_3" type="Node3D" parent="."]
+position = Vector3(0.551000, 0.657000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_2_3"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")
+
+[node name="Drawer_2_4" type="Node3D" parent="."]
+position = Vector3(0.551000, 0.867000, 0.397000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="FoldedFront" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.000000, 0.000000, 0.018000)
+mesh = SubResource("s5")
+material_override = ExtResource("e5")
+
+[node name="TopHem" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.000000, 0.085000, 0.041000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+
+[node name="PullFootL0" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(-0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR0" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(-0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull0" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(-0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="PullFootL1" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.242000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="PullFootR1" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.358000, 0.012000, 0.052000)
+mesh = SubResource("s7")
+material_override = ExtResource("e6")
+
+[node name="Pull1" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.300000, 0.008000, 0.073000)
+mesh = SubResource("s8")
+material_override = ExtResource("e6")
+
+[node name="CardHolder" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.000000, 0.005000, 0.041000)
+mesh = SubResource("s9")
+material_override = ExtResource("e7")
+
+[node name="InventorySlip" type="MeshInstance3D" parent="Drawer_2_4"]
+position = Vector3(0.000000, 0.006000, 0.046000)
+mesh = SubResource("s10")
+material_override = ExtResource("e8")

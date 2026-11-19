@@ -1,0 +1,145 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/Brass.tres" id="e2"]
+[ext_resource type="Material" path="res://art/materials/Nickel.tres" id="e3"]
+[ext_resource type="Material" path="res://art/materials/Gasket.tres" id="e4"]
+[ext_resource type="Material" path="res://art/final/materials/Oxide.tres" id="e1"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(0.230625, 0.003500, 0.019000)
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(0.079228, 0.003500, 0.019000)
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(0.237000, 0.003500, 0.019000)
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(0.053339, 0.003500, 0.019000)
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(0.191859, 0.003500, 0.019000)
+
+[sub_resource type="CylinderMesh" id="s6"]
+top_radius = 0.042
+bottom_radius = 0.036
+height = 0.012
+radial_segments = 32
+rings = 1
+
+[sub_resource type="BoxMesh" id="s7"]
+size = Vector3(0.047000, 0.014000, 0.014000)
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(0.024000, 0.003000, 0.098000)
+
+[node name="TapeThreading" type="Node3D"]
+
+[node name="OxideRibbon0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.258000, 0.283000, 0.178000)
+mesh = SubResource("s1")
+material_override = ExtResource("e1")
+rotation_degrees = Vector3(0.000000, 0.000000, -46.756988)
+
+[node name="OxideRibbon1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.139500, 0.196000, 0.178000)
+mesh = SubResource("s2")
+material_override = ExtResource("e1")
+rotation_degrees = Vector3(0.000000, 0.000000, -4.343240)
+
+[node name="OxideRibbon2" type="MeshInstance3D" parent="."]
+position = Vector3(0.018500, 0.193000, 0.178000)
+mesh = SubResource("s3")
+material_override = ExtResource("e1")
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+
+[node name="OxideRibbon3" type="MeshInstance3D" parent="."]
+position = Vector3(0.163500, 0.196000, 0.178000)
+mesh = SubResource("s4")
+material_override = ExtResource("e1")
+rotation_degrees = Vector3(0.000000, 0.000000, 6.458816)
+
+[node name="OxideRibbon4" type="MeshInstance3D" parent="."]
+position = Vector3(0.233500, 0.284500, 0.178000)
+mesh = SubResource("s5")
+material_override = ExtResource("e1")
+rotation_degrees = Vector3(0.000000, 0.000000, 63.034286)
+
+[node name="CarrierCollar0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.209000, 0.421000, 0.216000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="ToggleLock0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.209000, 0.421000, 0.227000)
+mesh = SubResource("s7")
+material_override = ExtResource("e3")
+rotation_degrees = Vector3(0.000000, 0.000000, 25.000000)
+
+[node name="CarrierCollar1" type="MeshInstance3D" parent="."]
+position = Vector3(0.209000, 0.421000, 0.216000)
+mesh = SubResource("s6")
+material_override = ExtResource("e2")
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+
+[node name="ToggleLock1" type="MeshInstance3D" parent="."]
+position = Vector3(0.209000, 0.421000, 0.227000)
+mesh = SubResource("s7")
+material_override = ExtResource("e3")
+rotation_degrees = Vector3(0.000000, 0.000000, -17.000000)
+
+[node name="AmplifierVent0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.270000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.218000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.166000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent3" type="MeshInstance3D" parent="."]
+position = Vector3(-0.114000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent4" type="MeshInstance3D" parent="."]
+position = Vector3(-0.062000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent5" type="MeshInstance3D" parent="."]
+position = Vector3(-0.010000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent6" type="MeshInstance3D" parent="."]
+position = Vector3(0.042000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent7" type="MeshInstance3D" parent="."]
+position = Vector3(0.094000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent8" type="MeshInstance3D" parent="."]
+position = Vector3(0.146000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent9" type="MeshInstance3D" parent="."]
+position = Vector3(0.198000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
+
+[node name="AmplifierVent10" type="MeshInstance3D" parent="."]
+position = Vector3(0.250000, 0.594000, -0.048000)
+mesh = SubResource("s8")
+material_override = ExtResource("e4")
