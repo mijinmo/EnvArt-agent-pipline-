@@ -1,6 +1,6 @@
 # D1 · Impeller Service
 
-Hi-Fi Rush 室内工业设备检修局部。GPT‑6.2 astra，本轮使用仓库内 2026-11-19 版 godot-envart，含 stylized-shading 指引。
+Hi-Fi Rush 室内工业设备检修局部。GPT‑6.2 astra，本轮使用仓库内 2026-11-19 版 godot-envart，含 stylized-shading 指引。reasoning_effort 未显式指定，沿用父任务；未独立核实运行时的具体推理档位。
 
 ## 参考取舍
 
@@ -42,9 +42,24 @@ Hi-Fi Rush 室内工业设备检修局部。GPT‑6.2 astra，本轮使用仓库
 
 检查了 glTF 的层级、顶点包围盒、局部朝向与材质槽，先用固定工作距离观察真实墙片、地面和相邻设备的小样，再完成围护、印刷标识和工作区。门框保留作者轮廓，在最终版把进入原 1.20 m × 2.30 m 门洞净空的三角形裁去，消除原素材的凸起下槛。原 17 个静态物体的变换、网格尺寸、碰撞和子节点已逐段比对。新增美术对象无碰撞。
 
+## 自主修订与父 agent 审图
+
+首轮由三个冻结机位暴露出白色风机和亮地板争抢视线、门口标识被遮及装饰门槛侵占净空的问题。自主修订 round02 为风机分色并加装任务灯、提高入口可读性、裁切门框、补回风标识，还将同款叶轮作为桌上的拆卸件。保留该轮完整工程快照和连续着色对照。
+
+主 agent 看过这三张图与 CGWORLD 主参考后，指出墙面污渍、地面细法线和暗部排线削弱了大色块。第三轮只改墙地的表面响应与印刷排线。背墙污渍颜色偏差保留 22%，其他板面细噪声用保边中值过滤降低，较强切口保留更多原图。墙板法线强度从 0.48 降至 0.12，地面到 0.18。粗糙度图保留四分之一左右的局部变化，削弱地面的集中反光。排线强度从 0.17 降至 0.065，同时拉大间距。设备、灯光、布置和相机沿用 round02。
+
+| 冻结轮次 | 整体 | 工作台 | 入口 |
+| --- | --- | --- | --- |
+| round02 自主修订 | [图](evidence/round02_overall.png) | [图](evidence/round02_detail.png) | [图](evidence/round02_transition.png) |
+| control02 同场对照 | [图](evidence/control02_overall.png) | [图](evidence/control02_detail.png) | [图](evidence/control02_transition.png) |
+| round03 父 agent 反馈后 | [图](evidence/round03_overall.png) | [图](evidence/round03_detail.png) | [图](evidence/round03_transition.png) |
+| control03 同场对照 | [图](evidence/control03_overall.png) | [图](evidence/control03_detail.png) | [图](evidence/control03_transition.png) |
+
+实机对看后选用 round03 作为 final。左侧设备背后的墙漆更连贯，工作台右边的强反光收窄，入口地板上的高亮不再盖过门内的小箭头。近景仍可看见地板拼缝、外框、锁边和局部浅色擦痕。清洁后的地板漆面更均匀，长期使用痕迹较轻。round02/control02 和 round03/control03 均有可独立打开的同名场景，final/control 指向第三轮内容。
+
 ## 印刷着色
 
-`shaders/print_final.gdshader` 在 Forward+ 读取场景颜色、深度与法线。它把相邻像素间的深度断层和强法线转折画成深蓝墨线，适度收拢明暗过渡，只在偏暗区域叠很淡的斜排线。漫反射色、烤漆、贴图 UV、法线、显示器和灯具都来自同一套装配。对照只移除 PrintPass，几何、灯、背景、曝光、镜头、基础漆色与贴图不变。该方法是当前固定观察距离下的近似。实现参考 [Godot spatial shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)。
+最终选用的 `shaders/print_quiet.gdshader` 在 Forward+ 读取场景颜色、深度与法线。它把相邻像素间的深度断层和强法线转折画成深蓝墨线，适度收拢明暗过渡，只在偏暗区域叠很淡的斜排线。漫反射色、烤漆、贴图 UV、法线、显示器和灯具都来自同一套装配。对照只移除 PrintPass，几何、灯、背景、曝光、镜头、基础漆色与贴图不变。该方法是当前固定观察距离下的近似。实现参考 [Godot spatial shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)。
 
 | 参数 | 最终值 | 调整效果 |
 | --- | --- | --- |
@@ -52,6 +67,6 @@ Hi-Fi Rush 室内工业设备检修局部。GPT‑6.2 astra，本轮使用仓库
 | crease_threshold | 0.25 | 较高值让弱折线退出轮廓 |
 | ink_strength | 0.84 | 墨线混合量 |
 | band_strength | 0.59 | 七级近似亮度阶梯向连续结果的混合比例，较高时分层更明显 |
-| shadow_hatching | 0.17 | 限制在暗部的斜排线强度 |
+| shadow_hatching | 0.065 | 限制在暗部的斜排线强度 |
 
 实机近景中，叶轮的外缘、壳体、工作台底脚和椅子边缘得到更深的分界。整体最大的风格转变来自机壳主色、层次化图形、钢桁架和警戒标记；shader 主要帮助实体压住其后方细节。地板和高处节点仍显整齐重复，两台风机的状态差异主要由工作台解释，缺少参考中更大型生产设备的层叠剪影。视线在入口边缘仍能看到原测试场的未制作区域。本轮交付仅限该局部，用户美术验收待定。

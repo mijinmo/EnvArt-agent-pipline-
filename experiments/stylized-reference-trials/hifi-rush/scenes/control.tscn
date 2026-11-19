@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" path="res://scenes/painted_whitebox.tscn" id="e0"]
 [ext_resource type="PackedScene" path="res://art/Prop_Light_Wide.gltf" id="e1"]
-[ext_resource type="PackedScene" path="res://art/WallAstra_Straight_Flat.gltf" id="e2"]
+[ext_resource type="PackedScene" path="res://art/WallAstra_Straight_Flat_quiet.gltf" id="e2"]
 [ext_resource type="PackedScene" path="res://art/TopCables_Straight.gltf" id="e3"]
-[ext_resource type="PackedScene" path="res://art/WallBand_Straight_service.gltf" id="e4"]
-[ext_resource type="PackedScene" path="res://art/Platform_3Plates_service.gltf" id="e5"]
+[ext_resource type="PackedScene" path="res://art/WallBand_Straight_service_quiet.gltf" id="e4"]
+[ext_resource type="PackedScene" path="res://art/Platform_3Plates_service_quiet.gltf" id="e5"]
 [ext_resource type="PackedScene" path="res://art/Column_Pipes.gltf" id="e6"]
 [ext_resource type="PackedScene" path="res://art/Door_Frame_Square_service.gltf" id="e7"]
 [ext_resource type="Texture2D" path="res://graphics/entry.png" id="e8"]
