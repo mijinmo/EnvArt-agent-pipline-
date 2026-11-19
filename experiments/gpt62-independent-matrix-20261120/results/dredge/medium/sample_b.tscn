@@ -1,0 +1,130 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="lab"]
+[ext_resource type="Script" path="res://review.gd" id="review"]
+[ext_resource type="ArrayMesh" path="res://assets/town/wall-wood.obj" id="wall-wood"]
+[ext_resource type="ArrayMesh" path="res://assets/town/wall-wood-window-shutters.obj" id="wall-wood-window-shutters"]
+[ext_resource type="ArrayMesh" path="res://assets/town/stall-bench.obj" id="stall-bench"]
+[ext_resource type="ArrayMesh" path="res://assets/food/cutting-board.obj" id="cutting-board"]
+[ext_resource type="ArrayMesh" path="res://assets/food/fish.obj" id="fish"]
+[ext_resource type="ArrayMesh" path="res://assets/food/cooking-knife-chopping.obj" id="cooking-knife-chopping"]
+[ext_resource type="ArrayMesh" path="res://assets/port/barrel.obj" id="barrel"]
+[ext_resource type="ArrayMesh" path="res://assets/port/crate.obj" id="crate"]
+
+[sub_resource type="StandardMaterial3D" id="tar"]
+albedo_color = Color(0.078, 0.065, 0.058, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="wood"]
+albedo_color = Color(0.22, 0.135, 0.088, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="red"]
+albedo_color = Color(0.3, 0.072, 0.068, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="cream"]
+albedo_color = Color(0.84, 0.72, 0.51, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="iron"]
+albedo_color = Color(0.06, 0.09, 0.094, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="light"]
+albedo_color = Color(0.98, 0.64, 0.29, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.98, 0.64, 0.29, 1)
+emission_energy_multiplier = 2
+
+[node name="Quayside" type="Node3D"]
+script = ExtResource("review")
+
+[node name="BaseLab" parent="." instance=ExtResource("lab")]
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="SortingShed" type="Node3D" parent="Art"]
+
+[node name="LandingCounter" type="Node3D" parent="Art"]
+
+[node name="Bay0" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.750000, 0.000000, -10.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(3.200000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood")
+
+[node name="Bay1" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.750000, 0.000000, -8.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(3.200000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood-window-shutters")
+
+[node name="Bay2" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.750000, 0.000000, -6.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(3.200000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood")
+
+[node name="Bay3" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.750000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(3.200000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood-window-shutters")
+
+[node name="Bay4" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.750000, 0.000000, -2.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(3.200000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood")
+
+[node name="Return0" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(7.000000, 0.000000, -1.240000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(2.500000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood")
+
+[node name="Return1" type="MeshInstance3D" parent="Art/SortingShed"]
+position = Vector3(9.000000, 0.000000, -1.240000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(2.500000, 3.120000, 2.000000)
+mesh = ExtResource("wall-wood")
+
+[node name="SortingTable" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.910000, 0.000000, -4.700000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(4.038462, 3.991131, 3.297872)
+mesh = ExtResource("stall-bench")
+
+[node name="Board" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.820000, 0.901000, -4.700000)
+rotation_degrees = Vector3(0.000000, -8.000000, 0.000000)
+scale = Vector3(1.137931, 0.833333, 1.268293)
+mesh = ExtResource("cutting-board")
+
+[node name="Catch" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.770000, 0.960000, -4.780000)
+rotation_degrees = Vector3(0.000000, -12.000000, 0.000000)
+scale = Vector3(1.213163, 0.465549, 1.192049)
+mesh = ExtResource("fish")
+
+[node name="Cleaver" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.650000, 0.957000, -4.330000)
+rotation_degrees = Vector3(0.000000, -18.000000, 0.000000)
+scale = Vector3(0.616667, 0.750000, 0.696097)
+mesh = ExtResource("cooking-knife-chopping")
+
+[node name="BrineTub" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.890000, 0.000000, -2.620000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.576304, 0.715948, 0.576304)
+mesh = ExtResource("barrel")
+
+[node name="Delivery" type="MeshInstance3D" parent="Art/LandingCounter"]
+position = Vector3(8.890000, 0.000000, -6.820000)
+rotation_degrees = Vector3(0.000000, 6.000000, 0.000000)
+scale = Vector3(0.742115, 0.584416, 0.725745)
+mesh = ExtResource("crate")
+
+[editable path="BaseLab"]

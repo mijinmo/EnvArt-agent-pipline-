@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be3hsbn0phfot"
+path="res://.godot/imported/wall-window-glass.obj-1c9d430bdabb0dc0119a9852d204c358.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-window-glass.obj-1c9d430bdabb0dc0119a9852d204c358.mesh"]
+
+source_file="res://assets/town/wall-window-glass.obj"
+dest_files=["res://.godot/imported/wall-window-glass.obj-1c9d430bdabb0dc0119a9852d204c358.mesh", "res://.godot/imported/wall-window-glass.obj-1c9d430bdabb0dc0119a9852d204c358.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
