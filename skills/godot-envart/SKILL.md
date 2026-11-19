@@ -53,6 +53,8 @@ Establish architecture, ground, thresholds, boundaries and a working light rig e
 
 Work by region/shared resource, not independently per screenshot. Preserve module proportions and texture density. Vary function, state and grouping rather than grid-repeating boxes. When resizing vegetation, reassess coverage as well as blade scale. For a lighting-focused iteration read [lighting-review.md](references/lighting-review.md).
 
+When a distinctive reference calls for stylized rendering, a dedicated shader is an allowed production tool. Use [stylized-shading.md](references/stylized-shading.md) to identify the visual mechanism, audition it on real assets, preserve material roles and compare against a fair same-scene control. Shader work supplements suitable geometry and dressing; it does not replace their selection.
+
 ## 6. Review, diagnose, revise
 
 Save and reopen the scene before capture. Use stable overall, transition and close views as relevant, plus a nearby angle when contact, geometry or traversal visibility is uncertain. Freeze submitted passes and write new images to a new directory. Generated illustrations and retouched screenshots cannot prove an editable 3D result.
