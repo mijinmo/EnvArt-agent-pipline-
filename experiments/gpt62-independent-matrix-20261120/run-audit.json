@@ -3719,7 +3719,23 @@
       "preserved_history_ref": "refs/envart-trials/20261120/sable-ultra",
       "technical_limitations": [
         "A separate direct headless main-load log contains a macOS get_system_ca_certificates access error under the restricted profile. The brokered graphical captures completed without scene/script error strings; no online game features were tested."
-      ]
+      ],
+      "controlled_shader_comparison": {
+        "scope": "Material audition only; not an additional full-art pass.",
+        "enabled_scene": "sample_b.tscn",
+        "disabled_scene": "sample_ashlar_control.tscn",
+        "only_override": "Art/InkContours.visible = false in a scene inheriting sample_b.tscn",
+        "enabled_images": "captures/ashlar/{door,props,close}.png",
+        "disabled_images": "captures/ashlar-control/{door,props,close}.png",
+        "resource_continuity": "Git diff from audition commit 628880dd508435d8e10ed63a3b71f7acfdcf8dbf to delivered HEAD changes no pre-existing scene/model/texture/shader resources; only ASSETS.md, ENVIRONMENT.md and project.godot modified.",
+        "coordinator_viewed": [
+          "captures/ashlar/props.png",
+          "captures/ashlar-control/props.png",
+          "captures/ashlar/close.png",
+          "captures/ashlar-control/close.png"
+        ],
+        "coordinator_observation": "在 props/close 中，描边加强瓶肩、桶箍、桌腿与暗墙凸缘的分离，也强化了叠加砖纹和细碎接缝。此小样支持局部描边取舍，不证明所有最终场景均受益。"
+      }
     }
   },
   "hifi": {
