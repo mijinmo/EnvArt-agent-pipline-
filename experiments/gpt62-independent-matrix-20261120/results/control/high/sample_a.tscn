@@ -1,0 +1,423 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://art/wood_textured_concrete/finish.jpg" id="r0"]
+[ext_resource type="Texture2D" path="res://art/wood_textured_concrete/rough.jpg" id="r1"]
+[ext_resource type="Texture2D" path="res://art/wood_textured_concrete/nor_gl.jpg" id="r2"]
+[ext_resource type="Texture2D" path="res://art/terrazzo_tiles/finish.jpg" id="r3"]
+[ext_resource type="Texture2D" path="res://art/terrazzo_tiles/rough.jpg" id="r4"]
+[ext_resource type="Texture2D" path="res://art/terrazzo_tiles/nor_gl.jpg" id="r5"]
+[ext_resource type="Script" path="res://review.gd" id="r6"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="r7"]
+[ext_resource type="PackedScene" path="res://art/metal_office_desk/metal_office_desk.gltf" id="r8"]
+[ext_resource type="PackedScene" path="res://art/cassette_player/cassette_player.gltf" id="r9"]
+[ext_resource type="PackedScene" path="res://art/vintage_radio_transceiver/vintage_radio_transceiver.gltf" id="r10"]
+[ext_resource type="PackedScene" path="res://art/drawer_cabinet/drawer_cabinet.gltf" id="r11"]
+[ext_resource type="PackedScene" path="res://art/metal_stool_02/metal_stool_02.gltf" id="r12"]
+[ext_resource type="PackedScene" path="res://art/desk_lamp_arm_01/desk_lamp_arm_01.gltf" id="r13"]
+
+[sub_resource type="StandardMaterial3D" id="Formwork"]
+albedo_texture = ExtResource("r0")
+roughness_texture = ExtResource("r1")
+normal_enabled = true
+normal_texture = ExtResource("r2")
+normal_scale = 0.52
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.3125, 0.3125, 0.3125)
+texture_filter = 5
+
+[sub_resource type="StandardMaterial3D" id="HonedAggregate"]
+albedo_texture = ExtResource("r3")
+roughness_texture = ExtResource("r4")
+normal_enabled = true
+normal_texture = ExtResource("r5")
+normal_scale = 0.16
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.3125, 0.3125, 0.3125)
+texture_filter = 5
+
+[sub_resource type="StandardMaterial3D" id="BakedEnamel"]
+albedo_color = Color(0.048, 0.126, 0.125, 1)
+roughness = 0.38
+metallic = 0.24
+
+[sub_resource type="StandardMaterial3D" id="BlackenedSteel"]
+albedo_color = Color(0.025, 0.037, 0.038, 1)
+roughness = 0.38
+metallic = 0.48
+
+[sub_resource type="StandardMaterial3D" id="EdgeMetal"]
+albedo_color = Color(0.23, 0.26, 0.245, 1)
+roughness = 0.35
+metallic = 0.7
+
+[sub_resource type="StandardMaterial3D" id="DarkSoffit"]
+albedo_color = Color(0.155, 0.172, 0.166, 1)
+roughness = 0.88
+metallic = 0
+
+[sub_resource type="StandardMaterial3D" id="LampBacking"]
+albedo_color = Color(0.57, 0.58, 0.49, 1)
+roughness = 0.52
+metallic = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Fluorescent"]
+albedo_color = Color(0.91, 0.98, 0.81, 1)
+roughness = 0.3
+metallic = 0
+emission_enabled = true
+emission = Color(0.91, 0.98, 0.81, 1)
+emission_energy_multiplier = 3
+
+[sub_resource type="StandardMaterial3D" id="Oxide"]
+albedo_color = Color(0.35, 0.063, 0.027, 1)
+roughness = 0.65
+metallic = 0
+
+[sub_resource type="Environment" id="Indoor"]
+background_mode = 1
+background_color = Color(0.055, 0.081, 0.082, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.62, 0.76, 0.77, 1)
+ambient_light_energy = 0.54
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.62
+ssao_intensity = 2.2
+
+[sub_resource type="BoxMesh" id="Box10"]
+size = Vector3(20.5, 0.22, 16)
+material = SubResource("DarkSoffit")
+
+[sub_resource type="BoxMesh" id="Box11"]
+size = Vector3(0.5, 1.5, 10)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box12"]
+size = Vector3(4, 1.5, 0.5)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box13"]
+size = Vector3(21, 0.5, 0.5)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box14"]
+size = Vector3(0.048, 0.148, 10)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box15"]
+size = Vector3(3.75, 0.148, 0.036)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box16"]
+size = Vector3(2.6, 1.9, 0.6)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box17"]
+size = Vector3(17.1, 0.28, 0.36)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box18"]
+size = Vector3(17.1, 0.28, 0.36)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box19"]
+size = Vector3(17.1, 0.28, 0.36)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box20"]
+size = Vector3(17.1, 0.28, 0.36)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box21"]
+size = Vector3(17.1, 0.28, 0.36)
+material = SubResource("Formwork")
+
+[sub_resource type="BoxMesh" id="Box22"]
+size = Vector3(2.49, 0.072, 0.22)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box23"]
+size = Vector3(2.4, 0.019, 0.147)
+material = SubResource("Fluorescent")
+
+[sub_resource type="BoxMesh" id="Box24"]
+size = Vector3(2.49, 0.072, 0.22)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box25"]
+size = Vector3(2.4, 0.019, 0.147)
+material = SubResource("Fluorescent")
+
+[sub_resource type="BoxMesh" id="Box26"]
+size = Vector3(2.44, 0.072, 0.22)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box27"]
+size = Vector3(2.35, 0.019, 0.147)
+material = SubResource("Fluorescent")
+
+[sub_resource type="BoxMesh" id="Box28"]
+size = Vector3(1.89, 0.072, 0.22)
+material = SubResource("BlackenedSteel")
+
+[sub_resource type="BoxMesh" id="Box29"]
+size = Vector3(1.8, 0.019, 0.147)
+material = SubResource("Fluorescent")
+
+[node name="RecordsIntake" type="Node3D"]
+script = ExtResource("r6")
+
+[node name="BaseLab" parent="." instance=ExtResource("r7")]
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Indoor")
+
+[node name="Sun" parent="BaseLab"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("HonedAggregate")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("BakedEnamel")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("BakedEnamel")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("BakedEnamel")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("Formwork")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("Formwork")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Shell" type="Node3D" parent="Art"]
+
+[node name="Lighting" type="Node3D" parent="Art"]
+
+[node name="Furniture" type="Node3D" parent="Art"]
+
+[node name="Registration" type="Node3D" parent="Art"]
+
+[node name="CeilingRaft" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(2.3, 4.61, -4.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box10")
+
+[node name="EastUpperWall" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(10, 3.75, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box11")
+
+[node name="SouthUpperWall" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(8, 3.75, -1)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box12")
+
+[node name="BackWallHead" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.5, 4.25, -12)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box13")
+
+[node name="EastBaseCove" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(9.725, 0.074, -6)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box14")
+
+[node name="ReturnBaseCove" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(7.86, 0.074, -1.275)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box15")
+
+[node name="LintelExtension" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(0, 3.55, -4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box16")
+
+[node name="Crossbeam0" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.2, 4.36, -10.7)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box17")
+
+[node name="Crossbeam1" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.2, 4.36, -7.4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box18")
+
+[node name="Crossbeam2" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.2, 4.36, -4)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box19")
+
+[node name="Crossbeam3" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.2, 4.36, -0.45)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box20")
+
+[node name="Crossbeam4" type="MeshInstance3D" parent="Art/Shell"]
+position = Vector3(1.2, 4.36, 2.98)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box21")
+
+[node name="Overhead0Housing" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(-1, 4.45, -1.5)
+rotation_degrees = Vector3(0, 90, 0)
+mesh = SubResource("Box22")
+
+[node name="Overhead0Diffuser" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(-1, 4.406, -1.5)
+rotation_degrees = Vector3(0, 90, 0)
+mesh = SubResource("Box23")
+
+[node name="OverheadPool0" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(-1, 4.1, -1.5)
+light_color = Color(0.76, 0.92, 0.89, 1)
+light_energy = 7.0
+omni_range = 8
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[node name="Overhead1Housing" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(2, 4.45, -7.2)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box24")
+
+[node name="Overhead1Diffuser" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(2, 4.406, -7.2)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box25")
+
+[node name="OverheadPool1" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(2, 4.1, -7.2)
+light_color = Color(0.76, 0.92, 0.89, 1)
+light_energy = 7.0
+omni_range = 8
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[node name="Overhead2Housing" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(7.7, 4.45, -5.3)
+rotation_degrees = Vector3(0, 90, 0)
+mesh = SubResource("Box26")
+
+[node name="Overhead2Diffuser" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(7.7, 4.406, -5.3)
+rotation_degrees = Vector3(0, 90, 0)
+mesh = SubResource("Box27")
+
+[node name="OverheadPool2" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(7.7, 4.1, -5.3)
+light_color = Color(0.76, 0.92, 0.89, 1)
+light_energy = 7.0
+omni_range = 8
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[node name="Overhead3Housing" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(7.6, 4.45, -2.5)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box28")
+
+[node name="Overhead3Diffuser" type="MeshInstance3D" parent="Art/Lighting"]
+position = Vector3(7.6, 4.406, -2.5)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Box29")
+
+[node name="OverheadPool3" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(7.6, 4.1, -2.5)
+light_color = Color(0.76, 0.92, 0.89, 1)
+light_energy = 7.0
+omni_range = 8
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[node name="NorthFill" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(1, 2.9, -10)
+light_color = Color(0.67, 0.84, 0.84, 1)
+light_energy = 4
+omni_range = 7
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[node name="ReceivingDesk" parent="Art/Furniture" instance=ExtResource("r8")]
+position = Vector3(9.17, 0, -4.57)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="DictationUnit" parent="Art/Furniture" instance=ExtResource("r9")]
+position = Vector3(8.97, 0.844, -4.65)
+rotation_degrees = Vector3(0, -79, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="TransferReceiver" parent="Art/Furniture" instance=ExtResource("r10")]
+position = Vector3(9.15, 0.789, -5.18)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="RegisterCabinet" parent="Art/Furniture" instance=ExtResource("r11")]
+position = Vector3(9.39, 0, -2.49)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="OperatorStool" parent="Art/Furniture" instance=ExtResource("r12")]
+position = Vector3(8.23, 0, -4.76)
+rotation_degrees = Vector3(0, 11, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="TaskLamp" parent="Art/Furniture" instance=ExtResource("r13")]
+position = Vector3(9.38, 0.788, -3.91)
+rotation_degrees = Vector3(0, -73, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="TaskPool" type="OmniLight3D" parent="Art/Lighting"]
+position = Vector3(9.08, 1.48, -4.12)
+light_color = Color(1, 0.86, 0.63, 1)
+light_energy = 1.3
+omni_range = 2.65
+omni_attenuation = 1.25
+shadow_enabled = true
+light_size = 0.16
+
+[editable path="BaseLab"]
