@@ -322,7 +322,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Poly Haven 办公模型与 1K 扫描表面；原 UV / PBR 通道、局部染色。"
+      "source_route": "Poly Haven 办公模型与 1K 扫描表面；原 UV / PBR 通道、局部染色。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "medium": {
       "game": "control",
@@ -675,7 +682,14 @@
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Poly Haven 办公模型与扫描表面；原 UV、三向映射与印刷细节。"
+      "source_route": "Poly Haven 办公模型与扫描表面；原 UV、三向映射与印刷细节。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "high": {
       "game": "control",
@@ -1144,7 +1158,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Poly Haven 办公及放映道具、PBR 表面；原创构件与印刷图。"
+      "source_route": "Poly Haven 办公及放映道具、PBR 表面；原创构件与印刷图。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "xhigh": {
       "game": "control",
@@ -1673,7 +1694,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Poly Haven 办公模型与 PBR 表面；原创盘带机、盘盒及移交窗。"
+      "source_route": "Poly Haven 办公模型与 PBR 表面；原创盘带机、盘盒及移交窗。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "ultra": {
       "game": "control",
@@ -2152,7 +2180,14 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "Poly Haven 办公/放映模型与 PBR 表面；分拆卷闸、灯具和纸品，原创片罐与分层案卷。",
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/control-ultra"
+      "preserved_history_ref": "refs/envart-trials/20261120/control-ultra",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     }
   },
   "sable": {
@@ -2449,7 +2484,14 @@
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "KayKit Dungeon Remastered；源色板与原创称量、路标组件。"
+      "source_route": "KayKit Dungeon Remastered；源色板与原创称量、路标组件。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "xhigh": {
       "game": "sable",
@@ -2785,7 +2827,14 @@
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Town / Pirate + Poly Haven Sandstone Blocks 08；砂岩改色提缝与原创棚旗道具。"
+      "source_route": "Kenney Town / Pirate + Poly Haven Sandstone Blocks 08；砂岩改色提缝与原创棚旗道具。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "low": {
       "game": "sable",
@@ -3053,7 +3102,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "KayKit Dungeon Remastered 九个 GLB；砂岩改色与源色板。"
+      "source_route": "KayKit Dungeon Remastered 九个 GLB；砂岩改色与源色板。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "high": {
       "game": "sable",
@@ -3364,7 +3420,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "KayKit Dungeon Remastered；墙件去凸砖、米制错缝及深度/法线细线。"
+      "source_route": "KayKit Dungeon Remastered；墙件去凸砖、米制错缝及深度/法线细线。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "ultra": {
       "game": "sable",
@@ -3735,6 +3798,13 @@
           "captures/ashlar-control/close.png"
         ],
         "coordinator_observation": "在 props/close 中，描边加强瓶肩、桶箍、桌腿与暗墙凸缘的分离，也强化了叠加砖纹和细碎接缝。此小样支持局部描边取舍，不证明所有最终场景均受益。"
+      },
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
       }
     },
     "max": {
@@ -4265,7 +4335,14 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "KayKit Dungeon 构件与货具 + Poly Haven 砂岩/沙地 + Quaternius 货袋/管道；重配图集、米制材质与分段明暗，补称量台、遮阳帆和配水叙事。",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-max",
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison pending",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     }
   },
   "hifi": {
@@ -4676,7 +4753,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Quaternius Modular Sci-Fi MegaKit 免费 Standard + Kenney Factory；静态部件与屏面 UV 适配。"
+      "source_route": "Quaternius Modular Sci-Fi MegaKit 免费 Standard + Kenney Factory；静态部件与屏面 UV 适配。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "high": {
       "game": "hifi",
@@ -5028,7 +5112,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Space Station / Factory；保留模型，重写面色 UV 并绘制选择性棱线。"
+      "source_route": "Kenney Space Station / Factory；保留模型，重写面色 UV 并绘制选择性棱线。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "low": {
       "game": "hifi",
@@ -5299,7 +5390,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "KayKit Space Base Bits；色板网格转换、世界坐标排线与外壳描边。"
+      "source_route": "KayKit Space Base Bits；色板网格转换、世界坐标排线与外壳描边。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "medium": {
       "game": "hifi",
@@ -5589,7 +5687,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Space Station；分区漆色、排线、测试线与说明图。"
+      "source_route": "Kenney Space Station；分区漆色、排线、测试线与说明图。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     }
   },
   "dredge": {
@@ -5893,7 +5998,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Town / Pirate / Food；原色板重映射、世界坐标表面细节与原创渔具。"
+      "source_route": "Kenney Town / Pirate / Food；原色板重映射、世界坐标表面细节与原创渔具。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "low": {
       "game": "dredge",
@@ -6151,7 +6263,14 @@
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Quaternius 历史包第三方镜像；FBX 转 OBJ、统一枢轴与分面色。"
+      "source_route": "Quaternius 历史包第三方镜像；FBX 转 OBJ、统一枢轴与分面色。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "xhigh": {
       "game": "dredge",
@@ -6545,7 +6664,14 @@
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Town / Pirate / Food + Poly Haven 石面漫反射；鱼体网格/贴图改造与原创渔具。"
+      "source_route": "Kenney Town / Pirate / Food + Poly Haven 石面漫反射；鱼体网格/贴图改造与原创渔具。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     },
     "high": {
       "game": "dredge",
@@ -6922,7 +7048,14 @@
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
       },
-      "source_route": "Kenney Town / Pirate / Food；重新投影的表面图、鱼体适配与原创称量/绳网。"
+      "source_route": "Kenney Town / Pirate / Food；重新投影的表面图、鱼体适配与原创称量/绳网。",
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      }
     }
   }
 }
