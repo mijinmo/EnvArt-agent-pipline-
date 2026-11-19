@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Shelves_ThinShort.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/enamel.gdshader" id="surface"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_BaseColor_Red_steel.png" id="tex1"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.549020,0.639216,0.705882,1)
+shader_parameter/paint_pattern = 0
+shader_parameter/original_trim = ExtResource("tex1")
+shader_parameter/trim_strength = 0.49
+
+[node name="Prop_Shelves_ThinShort" instance=ExtResource("source")]
+
+[node name="Prop_Shelves_ThinShort" parent="." index="0"]
+surface_material_override/0 = SubResource("pigment1")

@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Platform_3Plates_service_quiet.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/tread.gdshader" id="surface"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+
+[node name="Platform_3Plates" instance=ExtResource("source")]
+
+[node name="Platform_3Plates" parent="." index="0"]
+surface_material_override/0 = SubResource("pigment1")

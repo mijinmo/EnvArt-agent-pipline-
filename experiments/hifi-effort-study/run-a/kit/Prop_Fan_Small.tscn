@@ -1,0 +1,40 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://kit/swept_rotor.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/enamel.gdshader" id="surface"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.125490,0.474510,0.498039,1)
+shader_parameter/paint_pattern = 0
+
+[sub_resource type="ShaderMaterial" id="pigment2"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.901961,0.274510,0.258824,1)
+shader_parameter/paint_pattern = 0
+
+[sub_resource type="ShaderMaterial" id="pigment3"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.160784,0.211765,0.321569,1)
+shader_parameter/paint_pattern = 0
+
+[sub_resource type="ShaderMaterial" id="pigment4"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.913725,0.886275,0.709804,1)
+shader_parameter/paint_pattern = 1
+
+[sub_resource type="ShaderMaterial" id="pigment5"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.921569,0.713725,0.258824,1)
+shader_parameter/paint_pattern = 0
+
+[node name="Prop_Fan_Small" instance=ExtResource("source")]
+
+[node name="Prop_Fan_Small" parent="Fan_Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("pigment1")
+surface_material_override/1 = SubResource("pigment2")
+surface_material_override/2 = SubResource("pigment3")
+
+[node name="Prop_Fan_Small_Propeller" parent="Fan_Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("pigment4")
+surface_material_override/1 = SubResource("pigment5")

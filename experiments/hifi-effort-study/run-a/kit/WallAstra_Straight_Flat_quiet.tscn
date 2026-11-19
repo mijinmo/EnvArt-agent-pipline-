@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/WallAstra_Straight_Flat_quiet.gltf" id="source"]
+[ext_resource type="Shader" path="res://shaders/enamel.gdshader" id="surface"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_03_BaseColor_jade_quiet.png" id="tex1"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_03_Cables_ink_quiet.png" id="tex2"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_02_BaseColor_Red_ink_quiet.png" id="tex3"]
+
+[sub_resource type="ShaderMaterial" id="pigment1"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.125490,0.474510,0.498039,1)
+shader_parameter/paint_pattern = 3
+shader_parameter/original_trim = ExtResource("tex1")
+shader_parameter/trim_strength = 0.49
+
+[sub_resource type="ShaderMaterial" id="pigment2"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.160784,0.211765,0.321569,1)
+shader_parameter/paint_pattern = 3
+shader_parameter/original_trim = ExtResource("tex2")
+shader_parameter/trim_strength = 0.49
+
+[sub_resource type="ShaderMaterial" id="pigment3"]
+shader = ExtResource("surface")
+shader_parameter/coat = Color(0.384314,0.490196,0.600000,1)
+shader_parameter/paint_pattern = 0
+shader_parameter/original_trim = ExtResource("tex3")
+shader_parameter/trim_strength = 0.49
+
+[node name="WallAstra_Straight_Flat_quiet" instance=ExtResource("source")]
+
+[node name="WallAstra_Straight_Flat" parent="." index="0"]
+surface_material_override/0 = SubResource("pigment1")
+surface_material_override/1 = SubResource("pigment2")
+surface_material_override/2 = SubResource("pigment3")
