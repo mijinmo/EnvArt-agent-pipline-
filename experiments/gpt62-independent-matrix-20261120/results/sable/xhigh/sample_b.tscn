@@ -1,0 +1,170 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Shader" path="res://art/shaders/masonry.gdshader" id="e1"]
+
+[ext_resource type="Texture2D" path="res://art/textures/etched.jpg" id="e2"]
+
+[ext_resource type="Texture2D" path="res://art/textures/windblown.png" id="e3"]
+
+[ext_resource type="Script" path="res://review.gd" id="e4"]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e5"]
+
+[ext_resource type="Shader" path="res://art/shaders/contours.gdshader" id="e6"]
+
+[ext_resource type="PackedScene" path="res://assets/town/stall-bench.glb" id="e7"]
+
+[ext_resource type="PackedScene" path="res://assets/port/crate-bottles.glb" id="e8"]
+
+[ext_resource type="PackedScene" path="res://assets/port/barrel.glb" id="e9"]
+
+[ext_resource type="PackedScene" path="res://assets/town/cart-high.glb" id="e10"]
+
+[sub_resource type="ShaderMaterial" id="Chalk"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e2")
+shader_parameter/meters_per_tile = 3.2
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="BlownSand"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e3")
+shader_parameter/meters_per_tile = 3.7
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="Daylight"]
+sky_top_color = Color(0.552941, 0.780392, 0.8, 1)
+sky_horizon_color = Color(0.913725, 0.901961, 0.784314, 1)
+ground_horizon_color = Color(0.913725, 0.901961, 0.784314, 1)
+ground_bottom_color = Color(0.819608, 0.639216, 0.529412, 1)
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="DesertSky"]
+sky_material = SubResource("Daylight")
+
+[sub_resource type="Environment" id="Air"]
+background_mode = 2
+sky = SubResource("DesertSky")
+ambient_light_source = 2
+ambient_light_color = Color(0.839216, 0.819608, 0.92549, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.75
+reflected_light_source = 1
+tonemap_mode = 0
+ssao_enabled = true
+ssao_radius = 0.42
+ssao_intensity = 0.85
+
+[sub_resource type="ShaderMaterial" id="PrintedEdge"]
+render_priority = 15
+shader = ExtResource("e6")
+
+[sub_resource type="QuadMesh" id="ImagePlane"]
+size = Vector2(2,2)
+
+[node name="SaltRoad" type="Node3D"]
+script = ExtResource("e4")
+
+[node name="BaseLab" parent="." instance=ExtResource("e5")]
+
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("BlownSand")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("BlownSand")
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Air")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-48,-67,0)
+light_color = Color(1, 0.941176, 0.839216, 1)
+light_energy = 0.92
+shadow_bias = 0.024
+directional_shadow_max_distance = 65.0
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="Ink" type="MeshInstance3D" parent="Art"]
+extra_cull_margin = 16384.0
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("ImagePlane")
+material_override = SubResource("PrintedEdge")
+
+[node name="WallAudition" type="Node3D" parent="Art"]
+
+
+[node name="StockBench" parent="Art/WallAudition" instance=ExtResource("e7")]
+position = Vector3(9.13, 0, -4.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.65, 3.1, 2.35)
+
+
+[node name="SampleCrate" parent="Art/WallAudition" instance=ExtResource("e8")]
+position = Vector3(9.12, 0.699, -4.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.43, 0.43, 0.43)
+
+
+[node name="BrineCask" parent="Art/WallAudition" instance=ExtResource("e9")]
+position = Vector3(8.94, 0, -6.13)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.69, 0.69, 0.69)
+
+
+[node name="Sled" parent="Art/WallAudition" instance=ExtResource("e10")]
+position = Vector3(8.24, 0, -2.76)
+rotation_degrees = Vector3(0, 70, 0)
+scale = Vector3(1.35, 1.35, 1.35)
+
+
+[editable path="BaseLab"]
+

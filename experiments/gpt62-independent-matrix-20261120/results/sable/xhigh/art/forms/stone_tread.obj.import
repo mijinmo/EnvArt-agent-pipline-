@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2f1l06jgnugv"
+path="res://.godot/imported/stone_tread.obj-7aab7f15dc1511fcd2f0065ef6511b4d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone_tread.obj-7aab7f15dc1511fcd2f0065ef6511b4d.mesh"]
+
+source_file="res://art/forms/stone_tread.obj"
+dest_files=["res://.godot/imported/stone_tread.obj-7aab7f15dc1511fcd2f0065ef6511b4d.mesh", "res://.godot/imported/stone_tread.obj-7aab7f15dc1511fcd2f0065ef6511b4d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

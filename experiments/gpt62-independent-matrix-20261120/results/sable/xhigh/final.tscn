@@ -1,0 +1,2644 @@
+[gd_scene load_steps=200 format=3]
+
+[ext_resource type="Shader" path="res://art/shaders/masonry.gdshader" id="e1"]
+
+[ext_resource type="Texture2D" path="res://art/textures/etched.jpg" id="e2"]
+
+[ext_resource type="Texture2D" path="res://art/textures/windblown.png" id="e3"]
+
+[ext_resource type="Script" path="res://review.gd" id="e4"]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e5"]
+
+[ext_resource type="Shader" path="res://art/shaders/contours.gdshader" id="e6"]
+
+[ext_resource type="Texture2D" path="res://art/textures/washed.jpg" id="e7"]
+
+[ext_resource type="Texture2D" path="res://art/textures/salt_mesas.jpg" id="e8"]
+
+[ext_resource type="PackedScene" path="res://assets/town/pillar-stone.glb" id="e9"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/portal_crown.obj" id="e10"]
+
+[ext_resource type="Texture2D" path="res://art/textures/gate_enamel.jpg" id="e11"]
+
+[ext_resource type="Texture2D" path="res://art/textures/streamer.jpg" id="e12"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/hoist_flag.obj" id="e13"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/stone_tread.obj" id="e14"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/scree.obj" id="e15"]
+
+[ext_resource type="PackedScene" path="res://assets/town/planks.glb" id="e16"]
+
+[ext_resource type="Texture2D" path="res://art/textures/awning.jpg" id="e17"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/dye_sail.obj" id="e18"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/valance.obj" id="e19"]
+
+[ext_resource type="Texture2D" path="res://art/textures/indigo_runner.png" id="e20"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/wall_tapestry.obj" id="e21"]
+
+[ext_resource type="PackedScene" path="res://assets/town/stall-bench.glb" id="e22"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/bench_cloth.obj" id="e23"]
+
+[ext_resource type="Texture2D" path="res://art/textures/scale_dial.jpg" id="e24"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/dial_face.obj" id="e25"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/weighing_pan.obj" id="e26"]
+
+[ext_resource type="PackedScene" path="res://assets/port/crate-bottles.glb" id="e27"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/brass_weight.obj" id="e28"]
+
+[ext_resource type="PackedScene" path="res://assets/town/stall-stool.glb" id="e29"]
+
+[ext_resource type="PackedScene" path="res://assets/town/cart-high.glb" id="e30"]
+
+[ext_resource type="PackedScene" path="res://assets/port/barrel.glb" id="e31"]
+
+[ext_resource type="PackedScene" path="res://assets/port/crate.glb" id="e32"]
+
+[ext_resource type="PackedScene" path="res://assets/port/bottle-large.glb" id="e33"]
+
+[ext_resource type="PackedScene" path="res://assets/port/tool-shovel.glb" id="e34"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/salt_sack.obj" id="e35"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/sealed_jar.obj" id="e36"]
+
+[ext_resource type="PackedScene" path="res://assets/port/rocks-sand-b.glb" id="e37"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/basin_sky.jpg" id="e38"]
+
+[ext_resource type="Shader" path="res://art/shaders/freight_yard.gdshader" id="e39"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/yard_tracks.png" id="e40"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/final/pinned_sail.obj" id="e41"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/selvedge.jpg" id="e42"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/freight_stencil.png" id="e43"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/final/draped_runner.obj" id="e44"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/counter_runner.jpg" id="e45"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/final/rock_salt.obj" id="e46"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/manifest.jpg" id="e47"]
+
+[ext_resource type="ArrayMesh" path="res://art/forms/final/ledger_leaves.obj" id="e48"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/sacking.jpg" id="e49"]
+
+[ext_resource type="Shader" path="res://art/shaders/basin_mural.gdshader" id="e50"]
+
+[ext_resource type="Texture2D" path="res://art/textures/final/basin_mark.png" id="e51"]
+
+[sub_resource type="ShaderMaterial" id="Chalk"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e2")
+shader_parameter/meters_per_tile = 3.2
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="BlownSand"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e3")
+shader_parameter/meters_per_tile = 3.7
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="PanoramaSkyMaterial" id="Daylight"]
+panorama = ExtResource("e38")
+
+[sub_resource type="Sky" id="DesertSky"]
+sky_material = SubResource("Daylight")
+
+[sub_resource type="Environment" id="Air"]
+background_mode = 2
+sky = SubResource("DesertSky")
+ambient_light_source = 2
+ambient_light_color = Color(0.784314, 0.823529, 0.933333, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.78
+reflected_light_source = 1
+tonemap_mode = 0
+ssao_enabled = true
+ssao_radius = 0.42
+ssao_intensity = 0.85
+
+[sub_resource type="ShaderMaterial" id="PrintedEdge"]
+render_priority = 15
+shader = ExtResource("e6")
+
+[sub_resource type="QuadMesh" id="ImagePlane"]
+size = Vector2(2,2)
+
+[sub_resource type="StandardMaterial3D" id="PetrolEnamel"]
+albedo_color = Color(0.207843, 0.313725, 0.345098, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="DeepIndigo"]
+albedo_color = Color(0.254902, 0.282353, 0.368627, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="WeatheredBrass"]
+albedo_color = Color(0.788235, 0.603922, 0.384314, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="BoneInlay"]
+albedo_color = Color(0.929412, 0.843137, 0.611765, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="WaxedTimber"]
+albedo_color = Color(0.533333, 0.337255, 0.27451, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="TarredLine"]
+albedo_color = Color(0.282353, 0.254902, 0.294118, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="Jute"]
+albedo_color = Color(0.752941, 0.607843, 0.447059, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="OxideSlip"]
+albedo_color = Color(0.67451, 0.352941, 0.301961, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="Celadon"]
+albedo_color = Color(0.376471, 0.6, 0.592157, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="ShaderMaterial" id="WeatheredPlaster"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e7")
+shader_parameter/meters_per_tile = 3.12
+shader_parameter/tint = Color(0.905882, 0.839216, 0.752941, 1)
+
+[sub_resource type="ShaderMaterial" id="Foundation"]
+shader = ExtResource("e1")
+shader_parameter/stone = ExtResource("e2")
+shader_parameter/meters_per_tile = 2.95
+shader_parameter/tint = Color(0.807843, 0.682353, 0.572549, 1)
+
+[sub_resource type="StandardMaterial3D" id="RussetLeather"]
+albedo_color = Color(0.654902, 0.356863, 0.266667, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="StandardMaterial3D" id="Salt"]
+albedo_color = Color(0.94902, 0.87451, 0.737255, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="BoxMesh" id="Box_24p028_0p42_0p598"]
+size = Vector3(24.028, 0.42, 0.598)
+
+[sub_resource type="BoxMesh" id="Box_24p045_0p052_0p615"]
+size = Vector3(24.045, 0.052, 0.615)
+
+[sub_resource type="BoxMesh" id="Box_24p075_0p07_0p645"]
+size = Vector3(24.075, 0.07, 0.645)
+
+[sub_resource type="BoxMesh" id="Box_24p13_0p105_0p7"]
+size = Vector3(24.13, 0.105, 0.7)
+
+[sub_resource type="BoxMesh" id="Box_0p588_0p42_10p068"]
+size = Vector3(0.588, 0.42, 10.068)
+
+[sub_resource type="BoxMesh" id="Box_0p605_0p052_10p085"]
+size = Vector3(0.605, 0.052, 10.085)
+
+[sub_resource type="BoxMesh" id="Box_0p635_0p07_10p115"]
+size = Vector3(0.635, 0.07, 10.115)
+
+[sub_resource type="BoxMesh" id="Box_0p69_0p105_10p17"]
+size = Vector3(0.69, 0.105, 10.17)
+
+[sub_resource type="BoxMesh" id="Box_4p098_0p42_0p588"]
+size = Vector3(4.098, 0.42, 0.588)
+
+[sub_resource type="BoxMesh" id="Box_4p115_0p052_0p605"]
+size = Vector3(4.115, 0.052, 0.605)
+
+[sub_resource type="BoxMesh" id="Box_4p145_0p07_0p635"]
+size = Vector3(4.145, 0.07, 0.635)
+
+[sub_resource type="BoxMesh" id="Box_4p2_0p105_0p69"]
+size = Vector3(4.2, 0.105, 0.69)
+
+[sub_resource type="BoxMesh" id="Box_0p37_4p06_0p25"]
+size = Vector3(0.37, 4.06, 0.25)
+
+[sub_resource type="BoxMesh" id="Box_0p49_0p16_0p32"]
+size = Vector3(0.49, 0.16, 0.32)
+
+[sub_resource type="BoxMesh" id="Box_0p18_3p04_0p3"]
+size = Vector3(0.18, 3.04, 0.3)
+
+[sub_resource type="BoxMesh" id="Box_0p81_0p32_0p82"]
+size = Vector3(0.81, 0.32, 0.82)
+
+[sub_resource type="BoxMesh" id="Box_0p806_0p05_0p84"]
+size = Vector3(0.806, 0.05, 0.84)
+
+[sub_resource type="BoxMesh" id="Box_0p84_0p27_0p73"]
+size = Vector3(0.84, 0.27, 0.73)
+
+[sub_resource type="BoxMesh" id="Box_0p82_0p27_0p83"]
+size = Vector3(0.82, 0.27, 0.83)
+
+[sub_resource type="BoxMesh" id="Box_0p811_0p045_0p8"]
+size = Vector3(0.811, 0.045, 0.8)
+
+[sub_resource type="BoxMesh" id="Box_2p94_0p17_0p78"]
+size = Vector3(2.94, 0.17, 0.78)
+
+[sub_resource type="BoxMesh" id="Box_3p1_0p06_0p045"]
+size = Vector3(3.1, 0.06, 0.045)
+
+[sub_resource type="StandardMaterial3D" id="SaltRoadEnamel"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e11")
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadRoutePlate"]
+size = Vector2(1.85, 0.445)
+
+[sub_resource type="StandardMaterial3D" id="SignalLinen"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e12")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p039_0p039_1p3_8"]
+top_radius = 0.039
+bottom_radius = 0.039
+height = 1.3
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p075_0p075_0p095_12"]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.095
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p03_0p03_0p52_12"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.52
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p029_0p029_0p27_12"]
+top_radius = 0.029
+bottom_radius = 0.029
+height = 0.27
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p019_0p019_0p12839_12"]
+top_radius = 0.019
+bottom_radius = 0.019
+height = 0.12839
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p039_0p039_1p08_8"]
+top_radius = 0.039
+bottom_radius = 0.039
+height = 1.08
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p055_0p055_0p0989949_8"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.0989949
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p055_0p055_1p67_8"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 1.67
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p055_0p055_0p114018_8"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.114018
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p055_0p055_0p148661_8"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.148661
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p055_0p055_0p1_8"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.1
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p069_0p069_0p042_12"]
+top_radius = 0.069
+bottom_radius = 0.069
+height = 0.042
+radial_segments = 12
+rings = 0
+
+[sub_resource type="BoxMesh" id="Box_1p508_0p052_1p508"]
+size = Vector3(1.508, 0.052, 1.508)
+
+[sub_resource type="BoxMesh" id="Box_0p075_0p316_0p012"]
+size = Vector3(0.075, 0.316, 0.012)
+
+[sub_resource type="BoxMesh" id="Box_0p075_0p711_0p012"]
+size = Vector3(0.075, 0.711, 0.012)
+
+[sub_resource type="BoxMesh" id="Box_0p075_1p106_0p012"]
+size = Vector3(0.075, 1.106, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="RedOchreCanvas"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e17")
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="WovenEdgeDye"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e12")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p06_0p049_3p11_12"]
+top_radius = 0.049
+bottom_radius = 0.06
+height = 3.11
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p13_0p13_0p14_12"]
+top_radius = 0.13
+bottom_radius = 0.13
+height = 0.14
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p086_0p086_0p1_12"]
+top_radius = 0.086
+bottom_radius = 0.086
+height = 0.1
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p075_0p075_0p017_12"]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.017
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p0775244_0p0775244_0p017_12"]
+top_radius = 0.0775244
+bottom_radius = 0.0775244
+height = 0.017
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p0777279_0p0777279_0p017_12"]
+top_radius = 0.0777279
+bottom_radius = 0.0777279
+height = 0.017
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p0754234_0p0754234_0p017_12"]
+top_radius = 0.0754234
+bottom_radius = 0.0754234
+height = 0.017
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p072_0p072_3p27_8"]
+top_radius = 0.072
+bottom_radius = 0.072
+height = 3.27
+radial_segments = 8
+rings = 0
+
+[sub_resource type="BoxMesh" id="Box_0p18_0p26_0p21"]
+size = Vector3(0.18, 0.26, 0.21)
+
+[sub_resource type="CylinderMesh" id="Tube0p037_0p037_2p4891_12"]
+top_radius = 0.037
+bottom_radius = 0.037
+height = 2.4891
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p044_0p044_1p04317_12"]
+top_radius = 0.044
+bottom_radius = 0.044
+height = 1.04317
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p269595_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.269595
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p27053_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.27053
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p271591_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.271591
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p272776_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.272776
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p274084_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.274084
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p275514_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.275514
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p277063_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.277063
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p278729_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.278729
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p280511_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.280511
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p02_0p02_0p546962_8"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.546962
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p02_0p02_0p543445_8"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.543445
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p02_0p02_0p540919_8"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.540919
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p02_0p02_0p539397_8"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.539397
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p02_0p02_0p538889_8"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.538889
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p048_0p048_5_12"]
+top_radius = 0.048
+bottom_radius = 0.048
+height = 5
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="IndigoTapestry"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e20")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p035_0p035_1p44_12"]
+top_radius = 0.035
+bottom_radius = 0.035
+height = 1.44
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p05_0p05_0p93_12"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.93
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p037_0p037_0p634114_12"]
+top_radius = 0.037
+bottom_radius = 0.037
+height = 0.634114
+radial_segments = 12
+rings = 0
+
+[sub_resource type="BoxMesh" id="Box_0p25_0p27_0p19"]
+size = Vector3(0.25, 0.27, 0.19)
+
+[sub_resource type="CylinderMesh" id="Tube0p026_0p026_0p27_12"]
+top_radius = 0.026
+bottom_radius = 0.026
+height = 0.27
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p268_0p268_0p16_40"]
+top_radius = 0.268
+bottom_radius = 0.268
+height = 0.16
+radial_segments = 40
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p253_0p253_0p021_40"]
+top_radius = 0.253
+bottom_radius = 0.253
+height = 0.021
+radial_segments = 40
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="DialPrinting"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e24")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p022_0p022_0p18_12"]
+top_radius = 0.022
+bottom_radius = 0.022
+height = 0.18
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p009_0p009_0p560407_12"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.560407
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="UnbleachedSacking"]
+albedo_color = Color(0.788235, 0.658824, 0.470588, 1)
+roughness = 0.94
+metallic_specular = 0.16
+
+
+[sub_resource type="CylinderMesh" id="Tube0p09588_0p09588_0p03666_12"]
+top_radius = 0.09588
+bottom_radius = 0.09588
+height = 0.03666
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p07956_0p07956_0p03042_12"]
+top_radius = 0.07956
+bottom_radius = 0.07956
+height = 0.03042
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p07038_0p07038_0p02691_12"]
+top_radius = 0.07038
+bottom_radius = 0.07038
+height = 0.02691
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p08585_0p08585_0p02975_12"]
+top_radius = 0.08585
+bottom_radius = 0.08585
+height = 0.02975
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p11918_0p11918_0p0413_12"]
+top_radius = 0.11918
+bottom_radius = 0.11918
+height = 0.0413
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p740376_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.740376
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p727783_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.727783
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p717977_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.717977
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p711071_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.711071
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p707152_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.707152
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p706268_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.706268
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p708431_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.708431
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p713613_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.713613
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p012_0p012_0p72175_8"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.72175
+radial_segments = 8
+rings = 0
+
+[sub_resource type="ShaderMaterial" id="TravelledSand"]
+shader = ExtResource("e39")
+shader_parameter/sand = ExtResource("e3")
+shader_parameter/wheel_ruts = ExtResource("e40")
+
+[sub_resource type="StandardMaterial3D" id="SewnSelvedge"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e42")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p014_0p014_0p101872_12"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.101872
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="ShippingStencil"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e43")
+cull_mode = 2
+transparency = 2
+alpha_scissor_threshold = 0.25
+
+[sub_resource type="BoxMesh" id="Box_1p477_0p3896_1p477"]
+size = Vector3(1.477, 0.3896, 1.477)
+
+[sub_resource type="BoxMesh" id="Box_1p48_0p079_1p48"]
+size = Vector3(1.48, 0.079, 1.48)
+
+[sub_resource type="QuadMesh" id="QuadBatch0"]
+size = Vector2(0.82, 0.188)
+
+[sub_resource type="BoxMesh" id="Box_0p014_0p19_0p114"]
+size = Vector3(0.014, 0.19, 0.114)
+
+[sub_resource type="BoxMesh" id="Box_0p016_0p112_0p053"]
+size = Vector3(0.016, 0.112, 0.053)
+
+[sub_resource type="BoxMesh" id="Box_1p477_0p8766_1p477"]
+size = Vector3(1.477, 0.8766, 1.477)
+
+[sub_resource type="QuadMesh" id="QuadBatch1"]
+size = Vector2(0.82, 0.37)
+
+[sub_resource type="QuadMesh" id="QuadSmallBatch1"]
+size = Vector2(0.63, 0.225)
+
+[sub_resource type="BoxMesh" id="Box_1p477_1p3636_1p477"]
+size = Vector3(1.477, 1.3636, 1.477)
+
+[sub_resource type="QuadMesh" id="QuadBatch2"]
+size = Vector2(0.82, 0.37)
+
+[sub_resource type="QuadMesh" id="QuadSmallBatch2"]
+size = Vector2(0.63, 0.225)
+
+[sub_resource type="StandardMaterial3D" id="CounterWeave"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e45")
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="ReceiptPage"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e47")
+cull_mode = 2
+
+[sub_resource type="BoxMesh" id="Box_0p492_0p026_0p325"]
+size = Vector3(0.492, 0.026, 0.325)
+
+[sub_resource type="CylinderMesh" id="Tube0p009_0p009_0p231948_6"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.231948
+radial_segments = 6
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p009_0p001_0p0172627_6"]
+top_radius = 0.001
+bottom_radius = 0.009
+height = 0.0172627
+radial_segments = 6
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p01_0p01_0p0196732_8"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.0196732
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p01_0p01_0p0233167_8"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.0233167
+radial_segments = 8
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p01_0p01_0p0264632_8"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.0264632
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="TradeSacking"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.94
+metallic_specular = 0.16
+albedo_texture = ExtResource("e49")
+cull_mode = 2
+
+[sub_resource type="CylinderMesh" id="Tube0p111_0p111_0p965194_20"]
+top_radius = 0.111
+bottom_radius = 0.111
+height = 0.965194
+radial_segments = 20
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p117_0p117_0p018_20"]
+top_radius = 0.117
+bottom_radius = 0.117
+height = 0.018
+radial_segments = 20
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p079_0p079_0p002_20"]
+top_radius = 0.079
+bottom_radius = 0.079
+height = 0.002
+radial_segments = 20
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p054_0p054_0p002_20"]
+top_radius = 0.054
+bottom_radius = 0.054
+height = 0.002
+radial_segments = 20
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Tube0p029_0p029_0p002_20"]
+top_radius = 0.029
+bottom_radius = 0.029
+height = 0.002
+radial_segments = 20
+rings = 0
+
+[sub_resource type="ShaderMaterial" id="BasinWallPaint"]
+shader = ExtResource("e50")
+shader_parameter/stone = ExtResource("e2")
+shader_parameter/print_layer = ExtResource("e51")
+
+[sub_resource type="StandardMaterial3D" id="SignalClothOxideSlip"]
+albedo_color = Color(0.67451, 0.352941, 0.301961, 1)
+roughness = 0.94
+metallic_specular = 0.16
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="SignalClothCeladon"]
+albedo_color = Color(0.376471, 0.6, 0.592157, 1)
+roughness = 0.94
+metallic_specular = 0.16
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="SignalClothBoneInlay"]
+albedo_color = Color(0.929412, 0.843137, 0.611765, 1)
+roughness = 0.94
+metallic_specular = 0.16
+cull_mode = 2
+
+[node name="SaltRoad" type="Node3D"]
+script = ExtResource("e4")
+
+[node name="BaseLab" parent="." instance=ExtResource("e5")]
+
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("TravelledSand")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("BasinWallPaint")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("Foundation")
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("Foundation")
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("Foundation")
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("BlownSand")
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Air")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-48,-67,0)
+light_color = Color(1, 0.941176, 0.839216, 1)
+light_energy = 0.92
+shadow_bias = 0.024
+directional_shadow_max_distance = 65.0
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="Ink" type="MeshInstance3D" parent="Art"]
+extra_cull_margin = 16384.0
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("ImagePlane")
+material_override = SubResource("PrintedEdge")
+
+[node name="CompoundWalls" type="Node3D" parent="Art"]
+
+
+[node name="ApronRear" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(0, 0.21, -12)
+
+mesh = SubResource("Box_24p028_0p42_0p598")
+material_override = SubResource("Foundation")
+
+[node name="DripRear" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(0, 0.43, -12)
+
+mesh = SubResource("Box_24p045_0p052_0p615")
+material_override = SubResource("OxideSlip")
+
+[node name="EaveRear" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(0, 4.035, -12)
+
+mesh = SubResource("Box_24p075_0p07_0p645")
+material_override = SubResource("PetrolEnamel")
+
+[node name="CopingRear" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(0, 4.115, -12)
+
+mesh = SubResource("Box_24p13_0p105_0p7")
+material_override = SubResource("Chalk")
+
+[node name="ApronLong" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(10, 0.21, -6)
+
+mesh = SubResource("Box_0p588_0p42_10p068")
+material_override = SubResource("Foundation")
+
+[node name="DripLong" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(10, 0.43, -6)
+
+mesh = SubResource("Box_0p605_0p052_10p085")
+material_override = SubResource("OxideSlip")
+
+[node name="EaveLong" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(10, 3.035, -6)
+
+mesh = SubResource("Box_0p635_0p07_10p115")
+material_override = SubResource("PetrolEnamel")
+
+[node name="CopingLong" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(10, 3.115, -6)
+
+mesh = SubResource("Box_0p69_0p105_10p17")
+material_override = SubResource("Chalk")
+
+[node name="ApronReturn" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(8, 0.21, -1)
+
+mesh = SubResource("Box_4p098_0p42_0p588")
+material_override = SubResource("Foundation")
+
+[node name="DripReturn" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(8, 0.43, -1)
+
+mesh = SubResource("Box_4p115_0p052_0p605")
+material_override = SubResource("OxideSlip")
+
+[node name="EaveReturn" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(8, 3.035, -1)
+
+mesh = SubResource("Box_4p145_0p07_0p635")
+material_override = SubResource("PetrolEnamel")
+
+[node name="CopingReturn" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(8, 3.115, -1)
+
+mesh = SubResource("Box_4p2_0p105_0p69")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress0" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-10, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital0" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-10, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress1" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-5.8, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital1" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-5.8, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress2" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-1.8, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital2" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(-1.8, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress3" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(2.8, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital3" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(2.8, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress4" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(7.2, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital4" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(7.2, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="RearButtress5" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(11.5, 2, -11.73)
+
+mesh = SubResource("Box_0p37_4p06_0p25")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="Capital5" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(11.5, 3.8, -11.67)
+
+mesh = SubResource("Box_0p49_0p16_0p32")
+material_override = SubResource("Chalk")
+
+[node name="WallPier0" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(9.73, 1.5, -10.65)
+
+mesh = SubResource("Box_0p18_3p04_0p3")
+material_override = SubResource("Chalk")
+
+[node name="WallPier1" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(9.73, 1.5, -7.25)
+
+mesh = SubResource("Box_0p18_3p04_0p3")
+material_override = SubResource("Chalk")
+
+[node name="WallPier2" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(9.73, 1.5, -3.9)
+
+mesh = SubResource("Box_0p18_3p04_0p3")
+material_override = SubResource("Chalk")
+
+[node name="WallPier3" type="MeshInstance3D" parent="Art/CompoundWalls"]
+position = Vector3(9.73, 1.5, -1.4)
+
+mesh = SubResource("Box_0p18_3p04_0p3")
+material_override = SubResource("Chalk")
+
+[node name="SaltGate" type="Node3D" parent="Art"]
+
+
+[node name="SoleWest" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.02, 0.16, -4)
+
+mesh = SubResource("Box_0p81_0p32_0p82")
+material_override = SubResource("Foundation")
+
+[node name="BaseFilletWest" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.02, 0.345, -4)
+
+mesh = SubResource("Box_0p806_0p05_0p84")
+material_override = SubResource("WeatheredBrass")
+
+[node name="HeelWest" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.05, 0.51, -4)
+
+mesh = SubResource("Box_0p84_0p27_0p73")
+material_override = SubResource("Chalk")
+
+[node name="DressedPilasterWest" parent="Art/SaltGate" instance=ExtResource("e9")]
+position = Vector3(-1.205, 0.34, -3.68)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 2.26, 1.28)
+
+
+[node name="CapitalWest" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.015, 2.47, -4)
+
+mesh = SubResource("Box_0p82_0p27_0p83")
+material_override = SubResource("Chalk")
+
+[node name="IndigoNeckWest" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.017, 2.305, -4)
+
+mesh = SubResource("Box_0p811_0p045_0p8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="SoleEast" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.02, 0.16, -4)
+
+mesh = SubResource("Box_0p81_0p32_0p82")
+material_override = SubResource("Foundation")
+
+[node name="BaseFilletEast" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.02, 0.345, -4)
+
+mesh = SubResource("Box_0p806_0p05_0p84")
+material_override = SubResource("WeatheredBrass")
+
+[node name="HeelEast" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.05, 0.51, -4)
+
+mesh = SubResource("Box_0p84_0p27_0p73")
+material_override = SubResource("Chalk")
+
+[node name="DressedPilasterEast" parent="Art/SaltGate" instance=ExtResource("e9")]
+position = Vector3(1.205, 0.34, -3.68)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 2.26, 1.28)
+
+
+[node name="CapitalEast" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.015, 2.47, -4)
+
+mesh = SubResource("Box_0p82_0p27_0p83")
+material_override = SubResource("Chalk")
+
+[node name="IndigoNeckEast" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.017, 2.305, -4)
+
+mesh = SubResource("Box_0p811_0p045_0p8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="ThroatBeam" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(0, 2.603, -4)
+
+mesh = SubResource("Box_2p94_0p17_0p78")
+material_override = SubResource("PetrolEnamel")
+
+[node name="SteppedPediment" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(0, 2.68, -4)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e10")
+material_override = SubResource("Chalk")
+
+[node name="LintelInlay" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(0, 2.7, -3.591)
+
+mesh = SubResource("Box_3p1_0p06_0p045")
+material_override = SubResource("WeatheredBrass")
+
+[node name="RoutePlate" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(0, 2.985, -3.595)
+rotation_degrees = Vector3(0, 0, 0)
+
+mesh = SubResource("QuadRoutePlate")
+material_override = SubResource("SaltRoadEnamel")
+
+[node name="Staff0" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 3.15, -3.82)
+mesh = SubResource("Tube0p039_0p039_1p3_8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="StaffFinial0" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 3.8375, -3.82)
+mesh = SubResource("Tube0p075_0p075_0p095_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Crossarm0" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0, 1, 0, 0, 0, 1, 1, 0, 0, -1.15, 3.45, -3.55)
+mesh = SubResource("Tube0p03_0p03_0p52_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CrossarmBrace0" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, -0, 1, 0, -1.15, 3.45, -3.685)
+mesh = SubResource("Tube0p029_0p029_0p27_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="GuildStream0" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(-1.15, 3.385, -3.54)
+scale = Vector3(0.49, 1.2, 0.6)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalLinen")
+
+[node name="FlagTie00" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, -0.95023, -0.311551, 0, 0.311551, -0.95023, -1.34, 3.411, -3.53)
+mesh = SubResource("Tube0p019_0p019_0p12839_12")
+material_override = SubResource("TarredLine")
+
+[node name="FlagTie01" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, -0.95023, -0.311551, 0, 0.311551, -0.95023, -0.96, 3.411, -3.53)
+mesh = SubResource("Tube0p019_0p019_0p12839_12")
+material_override = SubResource("TarredLine")
+
+[node name="Staff1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17, 3.04, -3.82)
+mesh = SubResource("Tube0p039_0p039_1p08_8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="StaffFinial1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17, 3.6175, -3.82)
+mesh = SubResource("Tube0p075_0p075_0p095_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Crossarm1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0, 1, 0, 0, 0, 1, 1, 0, 0, 1.17, 3.23, -3.55)
+mesh = SubResource("Tube0p03_0p03_0p52_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CrossarmBrace1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, -0, 1, 0, 1.17, 3.23, -3.685)
+mesh = SubResource("Tube0p029_0p029_0p27_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="GuildStream1" type="MeshInstance3D" parent="Art/SaltGate"]
+position = Vector3(1.17, 3.165, -3.54)
+scale = Vector3(0.49, 0.63, 0.6)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalLinen")
+
+[node name="FlagTie10" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, -0.95023, -0.311551, 0, 0.311551, -0.95023, 0.98, 3.191, -3.53)
+mesh = SubResource("Tube0p019_0p019_0p12839_12")
+material_override = SubResource("TarredLine")
+
+[node name="FlagTie11" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, -0.95023, -0.311551, 0, 0.311551, -0.95023, 1.36, 3.191, -3.53)
+mesh = SubResource("Tube0p019_0p019_0p12839_12")
+material_override = SubResource("TarredLine")
+
+[node name="Drain1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, -0, 0, 0, 1, -1.445, 0.205, -3.77)
+mesh = SubResource("Tube0p055_0p055_0p0989949_8")
+material_override = SubResource("OxideSlip")
+
+[node name="Drain2" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 1.075, -3.77)
+mesh = SubResource("Tube0p055_0p055_1p67_8")
+material_override = SubResource("OxideSlip")
+
+[node name="Drain3" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0.964764, 0.263117, 0, -0.263117, 0.964764, 0, 0, 0, 1, -1.465, 1.965, -3.77)
+mesh = SubResource("Tube0p055_0p055_0p114018_8")
+material_override = SubResource("OxideSlip")
+
+[node name="Drain4" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0.672673, 0.73994, 0, -0.73994, 0.672673, 0, 0, 0, 1, -1.395, 2.07, -3.77)
+mesh = SubResource("Tube0p055_0p055_0p148661_8")
+material_override = SubResource("OxideSlip")
+
+[node name="Drain5" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(0, 1, 0, 0, 0, 1, 1, 0, 0, -1.29, 2.12, -3.77)
+mesh = SubResource("Tube0p055_0p055_0p1_8")
+material_override = SubResource("OxideSlip")
+
+[node name="DrainCollar0" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 0.461, -3.77)
+mesh = SubResource("Tube0p069_0p069_0p042_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="DrainCollar1" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 0.611, -3.77)
+mesh = SubResource("Tube0p069_0p069_0p042_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="DrainCollar2" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 1.531, -3.77)
+mesh = SubResource("Tube0p069_0p069_0p042_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="DrainCollar3" type="MeshInstance3D" parent="Art/SaltGate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 1.911, -3.77)
+mesh = SubResource("Tube0p069_0p069_0p042_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Threshold" type="Node3D" parent="Art"]
+
+
+[node name="SandSet0" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(-0.37, 0.004, -3.37)
+rotation_degrees = Vector3(-90, -2.11401, 0)
+scale = Vector3(0.76, 0.66, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet1" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(0.38, 0.004, -3.4)
+rotation_degrees = Vector3(-90, -4.18981, 0)
+scale = Vector3(0.68, 0.64, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet2" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(-0.16, 0.004, -2.79)
+rotation_degrees = Vector3(-90, 1.81121, 0)
+scale = Vector3(0.86, 0.48, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet3" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(0.52, 0.004, -2.82)
+rotation_degrees = Vector3(-90, -5.13076, 0)
+scale = Vector3(0.39, 0.53, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet4" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(-0.36, 0.004, -4.65)
+rotation_degrees = Vector3(-90, 0.430584, 0)
+scale = Vector3(0.72, 0.65, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet5" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(0.4, 0.004, -4.67)
+rotation_degrees = Vector3(-90, -1.61173, 0)
+scale = Vector3(0.73, 0.61, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet6" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(0.04, 0.004, -5.2)
+rotation_degrees = Vector3(-90, -5.30401, 0)
+scale = Vector3(0.9, 0.42, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="SandSet7" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(-0.46, 0.004, -2.24)
+rotation_degrees = Vector3(-90, 0.0892288, 0)
+scale = Vector3(0.59, 0.48, 0.4)
+
+mesh = ExtResource("e14")
+material_override = SubResource("WeatheredPlaster")
+
+[node name="StoneChips0" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(-1.47, 0.005, -4.4)
+rotation_degrees = Vector3(0, -32.3753, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="StoneChips1" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(1.34, 0.005, -4.4)
+rotation_degrees = Vector3(0, -4.6448, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="StoneChips2" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(9.42, 0.005, -8.1)
+rotation_degrees = Vector3(0, -30.1101, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="StoneChips3" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(6.76, 0.005, -1.47)
+rotation_degrees = Vector3(0, -28.6501, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="StoneChips4" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(9.43, 0.005, -6.4)
+rotation_degrees = Vector3(0, -5.28366, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="StoneChips5" type="MeshInstance3D" parent="Art/Threshold"]
+position = Vector3(2.17, 0.005, -3.2)
+rotation_degrees = Vector3(0, 22.8796, 0)
+scale = Vector3(0.9, 0.7, 0.83)
+
+mesh = ExtResource("e15")
+material_override = SubResource("Foundation")
+
+[node name="LoadingStages" type="Node3D" parent="Art"]
+
+
+[node name="WearDeck0" parent="Art/LoadingStages" instance=ExtResource("e16")]
+position = Vector3(1, 0.316, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.497, 1.42, 1.496)
+
+
+[node name="Binding00" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.09, 1)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Binding01" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.305, 1)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Buckle00" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.43, 0.2, 1.753)
+
+mesh = SubResource("Box_0p075_0p316_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Buckle01" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1.57, 0.2, 1.753)
+
+mesh = SubResource("Box_0p075_0p316_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="WearDeck1" parent="Art/LoadingStages" instance=ExtResource("e16")]
+position = Vector3(1, 0.816, -1)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1.497, 1.42, 1.496)
+
+
+[node name="Binding10" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.09, -1)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Binding11" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.805, -1)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Buckle10" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.43, 0.45, -0.247)
+
+mesh = SubResource("Box_0p075_0p711_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Buckle11" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1.57, 0.45, -0.247)
+
+mesh = SubResource("Box_0p075_0p711_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="WearDeck2" parent="Art/LoadingStages" instance=ExtResource("e16")]
+position = Vector3(3, 1.316, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.497, 1.42, 1.496)
+
+
+[node name="Binding20" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3, 0.09, -3)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Binding21" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3, 1.305, -3)
+
+mesh = SubResource("Box_1p508_0p052_1p508")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Buckle20" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.43, 0.7, -2.247)
+
+mesh = SubResource("Box_0p075_1p106_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Buckle21" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3.57, 0.7, -2.247)
+
+mesh = SubResource("Box_0p075_1p106_0p012")
+material_override = SubResource("WeatheredBrass")
+
+[node name="DyersAwning" type="Node3D" parent="Art"]
+
+
+[node name="MainSail" type="MeshInstance3D" parent="Art/DyersAwning"]
+position = Vector3(9.67, 2.9, -4.46)
+scale = Vector3(1, 1, 1)
+
+material_override = SubResource("RedOchreCanvas")
+mesh = ExtResource("e41")
+
+[node name="WovenEdge" type="MeshInstance3D" parent="Art/DyersAwning"]
+position = Vector3(7.27, 2.9, -4.46)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e19")
+material_override = SubResource("SewnSelvedge")
+
+[node name="StreetPost0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 1.585, -6.885)
+mesh = SubResource("Tube0p06_0p049_3p11_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="PostFoot0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 0.082, -6.885)
+mesh = SubResource("Tube0p13_0p13_0p14_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="PostCap0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 3.175, -6.885)
+mesh = SubResource("Tube0p086_0p086_0p1_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="RopeHitch00" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.8735, -6.885)
+mesh = SubResource("Tube0p075_0p075_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch01" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.8985, -6.885)
+mesh = SubResource("Tube0p0775244_0p0775244_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch02" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.9235, -6.885)
+mesh = SubResource("Tube0p0777279_0p0777279_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch03" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.9485, -6.885)
+mesh = SubResource("Tube0p0754234_0p0754234_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="WallStandard0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.67, 2.035, -6.885)
+mesh = SubResource("Tube0p072_0p072_3p27_8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="WallShoe0" type="MeshInstance3D" parent="Art/DyersAwning"]
+position = Vector3(9.705, 2.75, -6.885)
+
+mesh = SubResource("Box_0p18_0p26_0p21")
+material_override = SubResource("WeatheredBrass")
+
+[node name="EndRafter0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.964205, -0.265156, -0, 0.265156, 0.964205, 1, 0, 0, 8.47, 3.21, -6.885)
+mesh = SubResource("Tube0p037_0p037_2p4891_12")
+material_override = SubResource("WaxedTimber")
+
+[node name="WallStrut0" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.872342, -0.488895, 0, 0.488895, 0.872342, -0, 0, 0, 1, 9.415, 2.905, -6.885)
+mesh = SubResource("Tube0p044_0p044_1p04317_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Backstay01" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(-3.2587e-15, 0.989137, -0.146997, -4.84279e-16, 0.146997, 0.989137, 1, 3.29449e-15, 0, 7.40333, 3.04981, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p269595_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay02" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(3.23622e-15, 0.98572, -0.168394, 5.52855e-16, 0.168394, 0.98572, 1, -3.28311e-15, 0, 7.67, 3.09241, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p27053_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay03" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(3.21099e-15, 0.98187, -0.189555, 6.199e-16, 0.189555, 0.98187, 1, -3.27028e-15, 0, 7.93667, 3.14093, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p271591_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay04" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(-3.18315e-15, 0.977603, -0.210456, -6.85261e-16, 0.210456, 0.977603, 1, 3.25607e-15, 0, 8.20333, 3.19537, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p272776_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay05" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.972937, -0.231072, -0, 0.231072, 0.972937, 1, 0, 0, 8.47, 3.25574, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p274084_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay06" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.967888, -0.251382, -0, 0.251382, 0.967888, 1, 0, 0, 8.73667, 3.32204, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p275514_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay07" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.962477, -0.271365, -0, 0.271365, 0.962477, 1, 0, 0, 9.00333, 3.39426, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p277063_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay08" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.956722, -0.291003, -0, 0.291003, 0.956722, 1, 0, 0, 9.27, 3.47241, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p278729_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay09" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.950645, -0.31028, -0, 0.31028, 0.950645, 1, 0, 0, 9.53667, 3.55648, -6.885)
+mesh = SubResource("Tube0p012_0p012_0p280511_8")
+material_override = SubResource("TarredLine")
+
+[node name="StreetPost1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 1.585, -2.035)
+mesh = SubResource("Tube0p06_0p049_3p11_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="PostFoot1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 0.082, -2.035)
+mesh = SubResource("Tube0p13_0p13_0p14_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="PostCap1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 3.175, -2.035)
+mesh = SubResource("Tube0p086_0p086_0p1_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="RopeHitch10" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.8735, -2.035)
+mesh = SubResource("Tube0p075_0p075_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch11" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.8985, -2.035)
+mesh = SubResource("Tube0p0775244_0p0775244_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch12" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.9235, -2.035)
+mesh = SubResource("Tube0p0777279_0p0777279_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="RopeHitch13" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27, 2.9485, -2.035)
+mesh = SubResource("Tube0p0754234_0p0754234_0p017_12")
+material_override = SubResource("Jute")
+
+[node name="WallStandard1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.67, 2.035, -2.035)
+mesh = SubResource("Tube0p072_0p072_3p27_8")
+material_override = SubResource("PetrolEnamel")
+
+[node name="WallShoe1" type="MeshInstance3D" parent="Art/DyersAwning"]
+position = Vector3(9.705, 2.75, -2.035)
+
+mesh = SubResource("Box_0p18_0p26_0p21")
+material_override = SubResource("WeatheredBrass")
+
+[node name="EndRafter1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.964205, -0.265156, -0, 0.265156, 0.964205, 1, 0, 0, 8.47, 3.21, -2.035)
+mesh = SubResource("Tube0p037_0p037_2p4891_12")
+material_override = SubResource("WaxedTimber")
+
+[node name="WallStrut1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.872342, -0.488895, 0, 0.488895, 0.872342, -0, 0, 0, 1, 9.415, 2.905, -2.035)
+mesh = SubResource("Tube0p044_0p044_1p04317_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Backstay11" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.989137, -0.146997, -0, 0.146997, 0.989137, 1, 0, 0, 7.40333, 3.04981, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p269595_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay12" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.98572, -0.168394, -0, 0.168394, 0.98572, 1, 0, 0, 7.67, 3.09241, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p27053_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay13" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.98187, -0.189555, -0, 0.189555, 0.98187, 1, 0, 0, 7.93667, 3.14093, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p271591_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay14" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.977603, -0.210456, -0, 0.210456, 0.977603, 1, 0, 0, 8.20333, 3.19537, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p272776_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay15" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.972937, -0.231072, -0, 0.231072, 0.972937, 1, 0, 0, 8.47, 3.25574, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p274084_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay16" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.967888, -0.251382, -0, 0.251382, 0.967888, 1, 0, 0, 8.73667, 3.32204, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p275514_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay17" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.962477, -0.271365, -0, 0.271365, 0.962477, 1, 0, 0, 9.00333, 3.39426, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p277063_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay18" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.956722, -0.291003, -0, 0.291003, 0.956722, 1, 0, 0, 9.27, 3.47241, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p278729_8")
+material_override = SubResource("TarredLine")
+
+[node name="Backstay19" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0, 0.950645, -0.31028, -0, 0.31028, 0.950645, 1, 0, 0, 9.53667, 3.55648, -2.035)
+mesh = SubResource("Tube0p012_0p012_0p280511_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge1" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, -0.171181, -0.98524, 0, 0.98524, -0.171181, 7.27, 2.85319, -6.61556)
+mesh = SubResource("Tube0p02_0p02_0p546962_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge2" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, -0.129217, -0.991616, 0, 0.991616, -0.129217, 7.27, 2.77126, -6.07667)
+mesh = SubResource("Tube0p02_0p02_0p543445_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge3" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, -0.0865469, -0.996248, 0, 0.996248, -0.0865469, 7.27, 2.71274, -5.53778)
+mesh = SubResource("Tube0p02_0p02_0p540919_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge4" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, -0.0433955, -0.999058, 0, 0.999058, -0.0433955, 7.27, 2.67763, -4.99889)
+mesh = SubResource("Tube0p02_0p02_0p539397_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge5" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, -0, 1, 0, 7.27, 2.66593, -4.46)
+mesh = SubResource("Tube0p02_0p02_0p538889_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge6" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0.0433955, -0.999058, -0, 0.999058, 0.0433955, 7.27, 2.67763, -3.92111)
+mesh = SubResource("Tube0p02_0p02_0p539397_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge7" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0.0865469, -0.996248, -0, 0.996248, 0.0865469, 7.27, 2.71274, -3.38222)
+mesh = SubResource("Tube0p02_0p02_0p540919_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge8" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0.129217, -0.991616, -0, 0.991616, 0.129217, 7.27, 2.77126, -2.84333)
+mesh = SubResource("Tube0p02_0p02_0p543445_8")
+material_override = SubResource("TarredLine")
+
+[node name="SeamedEdge9" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0.171181, -0.98524, -0, 0.98524, 0.171181, 7.27, 2.85319, -2.30444)
+mesh = SubResource("Tube0p02_0p02_0p546962_8")
+material_override = SubResource("TarredLine")
+
+[node name="Ridge" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, -0, 1, 0, 9.67, 3.55, -4.46)
+mesh = SubResource("Tube0p048_0p048_5_12")
+material_override = SubResource("WaxedTimber")
+
+[node name="ReceiptHouseHanging" type="MeshInstance3D" parent="Art/DyersAwning"]
+position = Vector3(9.64, 2.75, -4.72)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.22, 1.81, 0.65)
+
+mesh = ExtResource("e21")
+material_override = SubResource("IndigoTapestry")
+
+[node name="WeavingRail" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, -0, 1, 0, 9.6, 2.77, -4.72)
+mesh = SubResource("Tube0p035_0p035_1p44_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="WeighHouse" type="Node3D" parent="Art"]
+
+
+[node name="Counter" parent="Art/WeighHouse" instance=ExtResource("e22")]
+position = Vector3(8.99, 0, -4.63)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3.48, 3.46, 3.14)
+
+
+[node name="CounterApron" type="MeshInstance3D" parent="Art/WeighHouse"]
+scale = Vector3(1, 1, 0.82)
+
+mesh = ExtResource("e44")
+material_override = SubResource("CounterWeave")
+position = Vector3(8.99, 0.799235, -4.66)
+
+[node name="Bracket" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 9.205, 2.44, -4.61)
+mesh = SubResource("Tube0p05_0p05_0p93_12")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Gusset" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.615032, -0.788502, 0, 0.788502, 0.615032, -0, 0, 0, 1, 9.4, 2.245, -4.61)
+mesh = SubResource("Tube0p037_0p037_0p634114_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Cleat" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.53, 2.4, -4.61)
+
+mesh = SubResource("Box_0p25_0p27_0p19")
+material_override = SubResource("PetrolEnamel")
+
+[node name="Swivel" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 8.74, 2.315, -4.61)
+mesh = SubResource("Tube0p026_0p026_0p27_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="ScaleBody" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.469472, -0.882948, -0, 0, 0, 1, -0.882948, -0.469472, 0, 8.74, 1.958, -4.61)
+mesh = SubResource("Tube0p268_0p268_0p16_40")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FaceRim" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.469472, -0.882948, -0, 0, 0, 1, -0.882948, -0.469472, 0, 8.66186, 1.958, -4.65155)
+mesh = SubResource("Tube0p253_0p253_0p021_40")
+material_override = SubResource("WeatheredBrass")
+
+[node name="KilogramDial" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.64906, 1.958, -4.65836)
+rotation_degrees = Vector3(0, -118, 0)
+scale = Vector3(0.239, 0.239, 0.239)
+
+mesh = ExtResource("e25")
+material_override = SubResource("DialPrinting")
+
+[node name="Hanger" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 8.74, 1.62, -4.61)
+mesh = SubResource("Tube0p022_0p022_0p18_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="BalancePan" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.74, 0.966, -4.61)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e26")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Bridle0" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.843797, 0.536662, 0, 0.510707, -0.802988, -0.307227, -0.164877, 0.259237, -0.951636, 8.89037, 1.325, -4.53736)
+mesh = SubResource("Tube0p009_0p009_0p560407_12")
+material_override = SubResource("TarredLine")
+
+[node name="Bridle1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.870121, -0.492837, 0, -0.454813, -0.802988, -0.38517, 0.189826, 0.335144, -0.922846, 8.60191, 1.325, -4.51609)
+mesh = SubResource("Tube0p009_0p009_0p560407_12")
+material_override = SubResource("TarredLine")
+
+[node name="Bridle2" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.999039, -0.0438249, 0, -0.0352247, -0.802988, 0.594954, -0.0260738, -0.594382, -0.80376, 8.72772, 1.325, -4.77655)
+mesh = SubResource("Tube0p009_0p009_0p560407_12")
+material_override = SubResource("TarredLine")
+
+[node name="SamplingBottles" parent="Art/WeighHouse" instance=ExtResource("e27")]
+position = Vector3(9.05, 0.780235, -5.53)
+rotation_degrees = Vector3(0, 8, 0)
+scale = Vector3(0.39, 0.39, 0.39)
+
+
+[node name="StandardWeight0" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.81, 0.780235, -3.65)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e28")
+material_override = SubResource("PetrolEnamel")
+
+[node name="StandardWeight1" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.02, 0.780235, -3.72)
+scale = Vector3(0.8, 0.8, 0.8)
+
+mesh = ExtResource("e28")
+material_override = SubResource("PetrolEnamel")
+
+[node name="StandardWeight2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.05, 0.780235, -3.55)
+scale = Vector3(0.61, 0.61, 0.61)
+
+mesh = ExtResource("e28")
+material_override = SubResource("PetrolEnamel")
+
+[node name="TallyStool" parent="Art/WeighHouse" instance=ExtResource("e29")]
+position = Vector3(8.42, 0, -3.3)
+rotation_degrees = Vector3(0, 15, 0)
+scale = Vector3(1.69, 1.69, 1.69)
+
+
+[node name="SaltFreight" type="Node3D" parent="Art"]
+
+
+[node name="LoadedHandcart" parent="Art/SaltFreight" instance=ExtResource("e30")]
+position = Vector3(7.98, 0, -2.48)
+rotation_degrees = Vector3(0, 84, 0)
+scale = Vector3(1.4, 1.4, 1.4)
+
+
+[node name="BrineCask" parent="Art/SaltFreight" instance=ExtResource("e31")]
+position = Vector3(8.79, 0, -6.82)
+rotation_degrees = Vector3(0, 22, 0)
+scale = Vector3(0.73, 0.73, 0.73)
+
+
+[node name="SpareCask" parent="Art/SaltFreight" instance=ExtResource("e31")]
+position = Vector3(9.29, 0, -7.71)
+rotation_degrees = Vector3(0, -6, 0)
+scale = Vector3(0.52, 0.52, 0.52)
+
+
+[node name="ProvisionBox" parent="Art/SaltFreight" instance=ExtResource("e32")]
+position = Vector3(9.06, 0, -2.08)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.71, 0.71, 0.71)
+
+
+[node name="BottleInReturnCase" parent="Art/SaltFreight" instance=ExtResource("e33")]
+position = Vector3(9.04, 0.21, -2.1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.69, 0.69, 0.69)
+
+
+[node name="SaltShovel" parent="Art/SaltFreight" instance=ExtResource("e34")]
+position = Vector3(9.26, 0.009, -6.11)
+rotation_degrees = Vector3(5, 49, -14)
+scale = Vector3(0.68, 0.68, 0.68)
+
+
+[node name="RockSaltBag0" type="MeshInstance3D" parent="Art/SaltFreight"]
+position = Vector3(8.91, 0.005, -5.95)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+
+mesh = ExtResource("e35")
+material_override = SubResource("TradeSacking")
+
+[node name="BagTie0" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94666, 0.62369, -5.95)
+mesh = SubResource("Tube0p09588_0p09588_0p03666_12")
+material_override = SubResource("Jute")
+
+[node name="RockSaltBag1" type="MeshInstance3D" parent="Art/SaltFreight"]
+position = Vector3(9.37, 0.005, -6.19)
+rotation_degrees = Vector3(0, 18, 0)
+scale = Vector3(0.78, 0.78, 0.78)
+
+mesh = ExtResource("e35")
+material_override = SubResource("TradeSacking")
+
+[node name="BagTie1" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.40042, 0.51753, -6.19)
+mesh = SubResource("Tube0p07956_0p07956_0p03042_12")
+material_override = SubResource("Jute")
+
+[node name="RockSaltBag2" type="MeshInstance3D" parent="Art/SaltFreight"]
+position = Vector3(8.57, 0.005, -6.34)
+rotation_degrees = Vector3(0, 36, 0)
+scale = Vector3(0.69, 0.69, 0.69)
+
+mesh = ExtResource("e35")
+material_override = SubResource("TradeSacking")
+
+[node name="BagTie2" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59691, 0.457815, -6.34)
+mesh = SubResource("Tube0p07038_0p07038_0p02691_12")
+material_override = SubResource("Jute")
+
+[node name="GlazedJar0" type="MeshInstance3D" parent="Art/SaltFreight"]
+position = Vector3(8.86, 0.006, -3.36)
+scale = Vector3(0.85, 0.85, 0.85)
+
+mesh = ExtResource("e36")
+material_override = SubResource("Celadon")
+
+[node name="JarRim0" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86, 0.456875, -3.36)
+mesh = SubResource("Tube0p08585_0p08585_0p02975_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="GlazedJar1" type="MeshInstance3D" parent="Art/SaltFreight"]
+position = Vector3(9.23, 0.006, -3.17)
+scale = Vector3(1.18, 1.18, 1.18)
+
+mesh = ExtResource("e36")
+material_override = SubResource("Celadon")
+
+[node name="JarRim1" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.23, 0.63425, -3.17)
+mesh = SubResource("Tube0p11918_0p11918_0p0413_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="WallService" type="Node3D" parent="Art"]
+
+
+[node name="Gritstone0" parent="Art/WallService" instance=ExtResource("e37")]
+position = Vector3(9.24, -0.035, -9.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+
+
+[node name="Gritstone1" parent="Art/WallService" instance=ExtResource("e37")]
+position = Vector3(9.47, -0.035, -8.87)
+rotation_degrees = Vector3(0, 59, 0)
+scale = Vector3(0.078, 0.078, 0.078)
+
+
+[node name="Gritstone2" parent="Art/WallService" instance=ExtResource("e37")]
+position = Vector3(6.27, -0.035, -1.5)
+rotation_degrees = Vector3(0, 118, 0)
+scale = Vector3(0.087, 0.087, 0.087)
+
+
+[node name="SignalHalyard1" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.254536, 0.915451, 0.311707, 0.0835007, -0.300315, 0.950178, 0.963452, 0.267882, -0, 1.50889, 3.33883, -3.72083)
+mesh = SubResource("Tube0p012_0p012_0p740376_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard2" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.263776, 0.93129, 0.251237, 0.0684665, -0.241728, 0.967925, 0.962151, 0.272517, -0, 2.18667, 3.13969, -3.5225)
+mesh = SubResource("Tube0p012_0p012_0p727783_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard3" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.271331, 0.944011, 0.187679, 0.0518444, -0.180377, 0.98223, 0.961089, 0.276239, -0, 2.86444, 2.98698, -3.32417)
+mesh = SubResource("Tube0p012_0p012_0p717977_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard4" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.27685, 0.953179, 0.121676, 0.033938, -0.116847, 0.99257, 0.960314, 0.278922, -0, 3.54222, 2.88068, -3.12583)
+mesh = SubResource("Tube0p012_0p012_0p711071_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard5" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.280058, 0.958462, 0.0540194, 0.0151507, -0.0518512, 0.99854, 0.959863, 0.280468, -0, 4.22, 2.8208, -2.9275)
+mesh = SubResource("Tube0p012_0p012_0p707152_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard6" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.28079, 0.959661, -0.0143883, -0.00404051, 0.0138093, 0.999896, 0.959761, 0.280819, 0, 4.89778, 2.80735, -2.72917)
+mesh = SubResource("Tube0p012_0p012_0p706268_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard7" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.279005, 0.956731, -0.0825948, -0.0231234, 0.0792919, 0.996583, 0.960011, 0.279961, 0, 5.57556, 2.84031, -2.53083)
+mesh = SubResource("Tube0p012_0p012_0p708431_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard8" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.274798, 0.949783, -0.149661, -0.0415951, 0.143765, 0.988737, 0.960602, 0.277928, 0, 6.25333, 2.91969, -2.3325)
+mesh = SubResource("Tube0p012_0p012_0p713613_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalHalyard9" type="MeshInstance3D" parent="Art/WallService"]
+transform = Transform3D(-0.268385, 0.939075, -0.214726, -0.0590056, 0.20646, 0.976674, 0.961503, 0.274795, 0, 6.93111, 3.04549, -2.13417)
+mesh = SubResource("Tube0p012_0p012_0p72175_8")
+material_override = SubResource("TarredLine")
+
+[node name="SignalTab0" type="MeshInstance3D" parent="Art/WallService"]
+position = Vector3(2.573, 3.04115, -3.40945)
+rotation_degrees = Vector3(0, -10, 6)
+scale = Vector3(0.24, 0.29, 0.46)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalClothOxideSlip")
+
+[node name="SignalTab1" type="MeshInstance3D" parent="Art/WallService"]
+position = Vector3(3.122, 2.93531, -3.2488)
+rotation_degrees = Vector3(0, -10, 5)
+scale = Vector3(0.24, 0.38, 0.46)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalClothCeladon")
+
+[node name="SignalTab2" type="MeshInstance3D" parent="Art/WallService"]
+position = Vector3(4.647, 2.80111, -2.80255)
+rotation_degrees = Vector3(0, -10, 4)
+scale = Vector3(0.24, 0.47, 0.46)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalClothBoneInlay")
+
+[node name="SignalTab3" type="MeshInstance3D" parent="Art/WallService"]
+position = Vector3(5.196, 2.81033, -2.6419)
+rotation_degrees = Vector3(0, -10, 3)
+scale = Vector3(0.24, 0.29, 0.46)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalClothOxideSlip")
+
+[node name="SignalTab4" type="MeshInstance3D" parent="Art/WallService"]
+position = Vector3(5.745, 2.85, -2.48125)
+rotation_degrees = Vector3(0, -10, 2)
+scale = Vector3(0.24, 0.38, 0.46)
+
+mesh = ExtResource("e13")
+material_override = SubResource("SignalClothCeladon")
+
+[node name="CornerEyeLacing000" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -6.885)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing001" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -6.863)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing002" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -6.841)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing010" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -6.885)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing011" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -6.863)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing012" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -6.841)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing100" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -2.035)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing101" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -2.013)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing102" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 7.3115, 2.9265, -1.991)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing110" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -2.035)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing111" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -2.013)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CornerEyeLacing112" type="MeshInstance3D" parent="Art/DyersAwning"]
+transform = Transform3D(0.520258, 0.854009, 0, -0.854009, 0.520258, 0, 0, 0, 1, 9.6015, 3.5565, -1.991)
+mesh = SubResource("Tube0p014_0p014_0p101872_12")
+material_override = SubResource("WeatheredBrass")
+
+[node name="FramedCase0" parent="Art/LoadingStages" instance=ExtResource("e32")]
+position = Vector3(1, 0, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.38219, 0.519481, 1.1374)
+
+
+[node name="InnerCase0" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.196, 1)
+
+mesh = SubResource("Box_1p477_0p3896_1p477")
+material_override = SubResource("PetrolEnamel")
+
+[node name="LidSupport0" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.36, 1)
+
+mesh = SubResource("Box_1p48_0p079_1p48")
+material_override = SubResource("WaxedTimber")
+
+[node name="Batch0" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.248, 0.204, 1)
+rotation_degrees = Vector3(0, -90, 0)
+
+mesh = SubResource("QuadBatch0")
+material_override = SubResource("ShippingStencil")
+
+[node name="Latchback00" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.246, 0.23, 0.45)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch00" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.233, 0.24, 0.45)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Latchback01" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.246, 0.23, 1.55)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch01" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.233, 0.24, 1.55)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="FramedCase1" parent="Art/LoadingStages" instance=ExtResource("e32")]
+position = Vector3(1, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.38219, 1.16883, 1.1374)
+
+
+[node name="InnerCase1" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.441, -1)
+
+mesh = SubResource("Box_1p477_0p8766_1p477")
+material_override = SubResource("Celadon")
+
+[node name="LidSupport1" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.86, -1)
+
+mesh = SubResource("Box_1p48_0p079_1p48")
+material_override = SubResource("WaxedTimber")
+
+[node name="Batch1" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.248, 0.459, -1)
+rotation_degrees = Vector3(0, -90, 0)
+
+mesh = SubResource("QuadBatch1")
+material_override = SubResource("ShippingStencil")
+
+[node name="SmallBatch1" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(1, 0.45, -0.248)
+rotation_degrees = Vector3(0, 0, 0)
+
+mesh = SubResource("QuadSmallBatch1")
+material_override = SubResource("ShippingStencil")
+
+[node name="Latchback10" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.246, 0.73, -1.55)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch10" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.233, 0.74, -1.55)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Latchback11" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.246, 0.73, -0.45)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch11" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(0.233, 0.74, -0.45)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="FramedCase2" parent="Art/LoadingStages" instance=ExtResource("e32")]
+position = Vector3(3, 0, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.38219, 1.81818, 1.1374)
+
+
+[node name="InnerCase2" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3, 0.686, -3)
+
+mesh = SubResource("Box_1p477_1p3636_1p477")
+material_override = SubResource("RussetLeather")
+
+[node name="LidSupport2" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3, 1.36, -3)
+
+mesh = SubResource("Box_1p48_0p079_1p48")
+material_override = SubResource("WaxedTimber")
+
+[node name="Batch2" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.248, 0.714, -3)
+rotation_degrees = Vector3(0, -90, 0)
+
+mesh = SubResource("QuadBatch2")
+material_override = SubResource("ShippingStencil")
+
+[node name="SmallBatch2" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(3, 0.7, -2.248)
+rotation_degrees = Vector3(0, 0, 0)
+
+mesh = SubResource("QuadSmallBatch2")
+material_override = SubResource("ShippingStencil")
+
+[node name="Latchback20" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.246, 1.23, -3.55)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch20" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.233, 1.24, -3.55)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="Latchback21" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.246, 1.23, -2.45)
+
+mesh = SubResource("Box_0p014_0p19_0p114")
+material_override = SubResource("PetrolEnamel")
+
+[node name="FlipLatch21" type="MeshInstance3D" parent="Art/LoadingStages"]
+position = Vector3(2.233, 1.24, -2.45)
+
+mesh = SubResource("Box_0p016_0p112_0p053")
+material_override = SubResource("WeatheredBrass")
+
+[node name="CoarseSaltSample" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.74, 0.971, -4.61)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e46")
+material_override = SubResource("Salt")
+
+[node name="WeighingRecord" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.94, 0.799235, -4.03)
+rotation_degrees = Vector3(0, 97, 0)
+scale = Vector3(1, 1, 1)
+
+mesh = ExtResource("e48")
+material_override = SubResource("ReceiptPage")
+
+[node name="LedgerBinding" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.94, 0.794235, -4.03)
+rotation_degrees = Vector3(0, 97, 0)
+
+mesh = SubResource("Box_0p492_0p026_0p325")
+material_override = SubResource("RussetLeather")
+
+[node name="MarkingPencil" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.9916, -0.129339, 0, 0, 0, -1, 0.129339, 0.9916, 0, 8.775, 0.840235, -4.105)
+mesh = SubResource("Tube0p009_0p009_0p231948_6")
+material_override = SubResource("WeatheredBrass")
+
+[node name="GraphitePoint" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.984784, -0.173785, 0, 0, 0, -1, 0.173785, 0.984784, 0, 8.7585, 0.840235, -3.9815)
+mesh = SubResource("Tube0p009_0p001_0p0172627_6")
+material_override = SubResource("TarredLine")
+
+[node name="SwivelEye0Link1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, 0.635382, 0, 0.291378, -0.35412, -0.888649, -0.564632, 0.686213, -0.458588, 8.74625, 2.28852, -4.60325)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link2" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, 0.39245, 0, 0.348298, -0.816295, -0.460815, -0.180847, 0.423846, -0.887496, 8.75708, 2.27552, -4.59156)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link3" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, 0.126567, 0, 0.125359, -0.982495, -0.1378, -0.0174409, 0.136692, -0.99046, 8.76333, 2.253, -4.58481)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link4" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, -0.126567, 0, -0.125359, -0.982495, 0.1378, -0.0174409, -0.136692, -0.99046, 8.76333, 2.227, -4.58481)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link5" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, -0.39245, 0, -0.348298, -0.816295, 0.460815, -0.180847, -0.423846, -0.887496, 8.75708, 2.20448, -4.59156)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link6" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, -0.635382, 0, -0.291378, -0.35412, 0.888649, -0.564632, -0.686213, -0.458588, 8.74625, 2.19148, -4.60325)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link7" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, -0.635382, -0, 0.291378, 0.35412, 0.888649, -0.564632, -0.686213, 0.458588, 8.73375, 2.19148, -4.61675)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link8" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, -0.39245, -0, 0.348298, 0.816295, 0.460815, -0.180847, -0.423846, 0.887496, 8.72292, 2.20448, -4.62844)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link9" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, -0.126567, -0, 0.125359, 0.982495, 0.1378, -0.0174409, -0.136692, 0.99046, 8.71667, 2.227, -4.63519)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link10" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, 0.126567, 0, -0.125359, 0.982495, -0.1378, -0.0174409, 0.136692, 0.99046, 8.71667, 2.253, -4.63519)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link11" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, 0.39245, 0, -0.348298, 0.816295, -0.460815, -0.180847, 0.423846, 0.887496, 8.72292, 2.27552, -4.62844)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye0Link12" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, 0.635382, 0, -0.291378, 0.35412, -0.888649, -0.564632, 0.686213, 0.458588, 8.73375, 2.28852, -4.61675)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, 0.635382, 0, 0.291378, -0.35412, -0.888649, -0.564632, 0.686213, -0.458588, 8.74625, 1.68852, -4.60325)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link2" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, 0.39245, 0, 0.348298, -0.816295, -0.460815, -0.180847, 0.423846, -0.887496, 8.75708, 1.67552, -4.59156)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link3" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, 0.126567, 0, 0.125359, -0.982495, -0.1378, -0.0174409, 0.136692, -0.99046, 8.76333, 1.653, -4.58481)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link4" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, -0.126567, 0, -0.125359, -0.982495, 0.1378, -0.0174409, -0.136692, -0.99046, 8.76333, 1.627, -4.58481)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link5" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, -0.39245, 0, -0.348298, -0.816295, 0.460815, -0.180847, -0.423846, -0.887496, 8.75708, 1.60448, -4.59156)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link6" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, -0.635382, 0, -0.291378, -0.35412, 0.888649, -0.564632, -0.686213, -0.458588, 8.74625, 1.59148, -4.60325)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link7" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, -0.635382, -0, 0.291378, 0.35412, 0.888649, -0.564632, -0.686213, 0.458588, 8.73375, 1.59148, -4.61675)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link8" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, -0.39245, -0, 0.348298, 0.816295, 0.460815, -0.180847, -0.423846, 0.887496, 8.72292, 1.60448, -4.62844)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link9" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, -0.126567, -0, 0.125359, 0.982495, 0.1378, -0.0174409, -0.136692, 0.99046, 8.71667, 1.627, -4.63519)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link10" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.991958, 0.126567, 0, -0.125359, 0.982495, -0.1378, -0.0174409, 0.136692, 0.99046, 8.71667, 1.653, -4.63519)
+mesh = SubResource("Tube0p01_0p01_0p0264632_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link11" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.919773, 0.39245, 0, -0.348298, 0.816295, -0.460815, -0.180847, 0.423846, 0.887496, 8.72292, 1.67552, -4.62844)
+mesh = SubResource("Tube0p01_0p01_0p0233167_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="SwivelEye1Link12" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.772198, 0.635382, 0, -0.291378, 0.35412, -0.888649, -0.564632, 0.686213, 0.458588, 8.73375, 1.68852, -4.61675)
+mesh = SubResource("Tube0p01_0p01_0p0196732_8")
+material_override = SubResource("WeatheredBrass")
+
+[node name="RolledPackingCanvas" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 8.06, 0.77, -2.91)
+mesh = SubResource("Tube0p111_0p111_0p965194_20")
+material_override = SubResource("Celadon")
+
+[node name="PackingCord0" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 7.68495, 0.77, -2.94907)
+mesh = SubResource("Tube0p117_0p117_0p018_20")
+material_override = SubResource("TarredLine")
+
+[node name="PackingCord1" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 7.72335, 0.77, -2.94507)
+mesh = SubResource("Tube0p117_0p117_0p018_20")
+material_override = SubResource("TarredLine")
+
+[node name="PackingCord2" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 8.32815, 0.77, -2.88207)
+mesh = SubResource("Tube0p117_0p117_0p018_20")
+material_override = SubResource("TarredLine")
+
+[node name="PackingCord3" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 8.36655, 0.77, -2.87807)
+mesh = SubResource("Tube0p117_0p117_0p018_20")
+material_override = SubResource("TarredLine")
+
+[node name="RollLayers0" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 7.57901, 0.77, -2.9601)
+mesh = SubResource("Tube0p079_0p079_0p002_20")
+material_override = SubResource("PetrolEnamel")
+
+[node name="RollLayers1" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 7.57702, 0.77, -2.96031)
+mesh = SubResource("Tube0p054_0p054_0p002_20")
+material_override = SubResource("BoneInlay")
+
+[node name="RollLayers2" type="MeshInstance3D" parent="Art/SaltFreight"]
+transform = Transform3D(-0.103606, 0.994618, 0, 0, 0, 1, 0.994618, 0.103606, 0, 7.57503, 0.77, -2.96052)
+mesh = SubResource("Tube0p029_0p029_0p002_20")
+material_override = SubResource("PetrolEnamel")
+
+[editable path="BaseLab"]
