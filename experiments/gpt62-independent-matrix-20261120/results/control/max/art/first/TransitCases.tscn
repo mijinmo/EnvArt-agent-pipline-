@@ -1,0 +1,340 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/Dado.tres" id="r1"]
+[ext_resource type="Texture2D" path="res://art/printing/plinth_plate.jpg" id="r2"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(1.505, 0.03, 1.505)
+
+[sub_resource type="StandardMaterial3D" id="s2"]
+albedo_color = Color(0.105, 0.125, 0.114, 1)
+roughness = 0.72
+metallic = 0.08
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(1.508, 0.042, 1.508)
+
+[sub_resource type="StandardMaterial3D" id="s4"]
+albedo_color = Color(0.285, 0.326, 0.302, 1)
+roughness = 0.39
+metallic = 0.53
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(1.372, 0.258, 0.009)
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(0.009, 0.242, 0.006)
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.115, 0.146, 0.14, 1)
+roughness = 0.53
+metallic = 0.36
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(0.112, 0.024, 0.014)
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(1.372, 0.758, 0.009)
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(0.009, 0.742, 0.006)
+
+[sub_resource type="StandardMaterial3D" id="s11"]
+albedo_texture = ExtResource("r2")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s12"]
+size = Vector2(0.235, 0.041)
+
+[sub_resource type="BoxMesh" id="s13"]
+size = Vector3(0.28, 0.084, 0.024)
+
+[sub_resource type="BoxMesh" id="s14"]
+size = Vector3(0.017, 0.104, 0.045)
+
+[sub_resource type="BoxMesh" id="s15"]
+size = Vector3(0.265, 0.00903, 0.043)
+
+[sub_resource type="BoxMesh" id="s16"]
+size = Vector3(1.372, 1.258, 0.009)
+
+[sub_resource type="BoxMesh" id="s17"]
+size = Vector3(0.009, 1.242, 0.006)
+
+[node name="TransitCases" type="Node3D"]
+
+[node name="TransitPlinths" type="Node3D" parent="."]
+
+[node name="WeighingBase" type="Node3D" parent="TransitPlinths"]
+position = Vector3(1, 0, 1)
+
+[node name="RubberTop" type="MeshInstance3D" parent="TransitPlinths/WeighingBase"]
+position = Vector3(0, 0.387, 0)
+mesh = SubResource("s1")
+material_override = SubResource("s2")
+
+[node name="ApronLip" type="MeshInstance3D" parent="TransitPlinths/WeighingBase"]
+position = Vector3(0, 0.344, 0)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="Face0" type="Node3D" parent="TransitPlinths/WeighingBase"]
+position = Vector3(0, 0, 0.752)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face0"]
+position = Vector3(0, 0.192, 0)
+mesh = SubResource("s5")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face0"]
+position = Vector3(0, 0.192, 0.006)
+mesh = SubResource("s6")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face0"]
+position = Vector3(-0.105, 0.264, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face0"]
+position = Vector3(0.105, 0.264, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="Face1" type="Node3D" parent="TransitPlinths/WeighingBase"]
+position = Vector3(-0.752, 0, 0)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face1"]
+position = Vector3(0, 0.192, 0)
+mesh = SubResource("s5")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face1"]
+position = Vector3(0, 0.192, 0.006)
+mesh = SubResource("s6")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face1"]
+position = Vector3(-0.105, 0.264, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/WeighingBase/Face1"]
+position = Vector3(0.105, 0.264, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="TransitBase" type="Node3D" parent="TransitPlinths"]
+position = Vector3(1, 0, -1)
+
+[node name="RubberTop" type="MeshInstance3D" parent="TransitPlinths/TransitBase"]
+position = Vector3(0, 0.887, 0)
+mesh = SubResource("s1")
+material_override = SubResource("s2")
+
+[node name="ApronLip" type="MeshInstance3D" parent="TransitPlinths/TransitBase"]
+position = Vector3(0, 0.844, 0)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="Face0" type="Node3D" parent="TransitPlinths/TransitBase"]
+position = Vector3(0, 0, 0.752)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(0, 0.432, 0)
+mesh = SubResource("s9")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(0, 0.432, 0.006)
+mesh = SubResource("s10")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(-0.105, 0.594, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(0.105, 0.594, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="AssetTag" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(-0.415, 0.612, 0.012)
+mesh = SubResource("s12")
+material_override = SubResource("s11")
+
+[node name="Vent" type="Node3D" parent="TransitPlinths/TransitBase/Face0"]
+position = Vector3(0.39, 0.297, 0.01)
+
+[node name="Recess" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+mesh = SubResource("s13")
+material_override = SubResource("s2")
+
+[node name="SideL" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(-0.14, 0, 0.014)
+mesh = SubResource("s14")
+material_override = SubResource("s4")
+
+[node name="SideR" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(0.14, 0, 0.014)
+mesh = SubResource("s14")
+material_override = SubResource("s4")
+
+[node name="Louvre1" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(0, -0.0315, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre2" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(0, -0.0105, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre3" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(0, 0.0105, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre4" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face0/Vent"]
+position = Vector3(0, 0.0315, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Face1" type="Node3D" parent="TransitPlinths/TransitBase"]
+position = Vector3(-0.752, 0, 0)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face1"]
+position = Vector3(0, 0.432, 0)
+mesh = SubResource("s9")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face1"]
+position = Vector3(0, 0.432, 0.006)
+mesh = SubResource("s10")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face1"]
+position = Vector3(-0.105, 0.594, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/TransitBase/Face1"]
+position = Vector3(0.105, 0.594, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="ServiceBase" type="Node3D" parent="TransitPlinths"]
+position = Vector3(3, 0, -3)
+
+[node name="RubberTop" type="MeshInstance3D" parent="TransitPlinths/ServiceBase"]
+position = Vector3(0, 1.387, 0)
+mesh = SubResource("s1")
+material_override = SubResource("s2")
+
+[node name="ApronLip" type="MeshInstance3D" parent="TransitPlinths/ServiceBase"]
+position = Vector3(0, 1.344, 0)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="Face0" type="Node3D" parent="TransitPlinths/ServiceBase"]
+position = Vector3(0, 0, 0.752)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(0, 0.672, 0)
+mesh = SubResource("s16")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(0, 0.672, 0.006)
+mesh = SubResource("s17")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(-0.105, 0.924, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(0.105, 0.924, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="AssetTag" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(-0.415, 0.952, 0.012)
+mesh = SubResource("s12")
+material_override = SubResource("s11")
+
+[node name="Vent" type="Node3D" parent="TransitPlinths/ServiceBase/Face0"]
+position = Vector3(0.39, 0.462, 0.01)
+
+[node name="Recess" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+mesh = SubResource("s13")
+material_override = SubResource("s2")
+
+[node name="SideL" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(-0.14, 0, 0.014)
+mesh = SubResource("s14")
+material_override = SubResource("s4")
+
+[node name="SideR" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(0.14, 0, 0.014)
+mesh = SubResource("s14")
+material_override = SubResource("s4")
+
+[node name="Louvre1" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(0, -0.0315, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre2" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(0, -0.0105, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre3" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(0, 0.0105, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Louvre4" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face0/Vent"]
+position = Vector3(0, 0.0315, 0.014)
+rotation_degrees = Vector3(-16, 0, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s4")
+
+[node name="Face1" type="Node3D" parent="TransitPlinths/ServiceBase"]
+position = Vector3(-0.752, 0, 0)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="ServiceDoor" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face1"]
+position = Vector3(0, 0.672, 0)
+mesh = SubResource("s16")
+material_override = ExtResource("r1")
+
+[node name="FoldedSeam" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face1"]
+position = Vector3(0, 0.672, 0.006)
+mesh = SubResource("s17")
+material_override = SubResource("s7")
+
+[node name="RecessHandleA" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face1"]
+position = Vector3(-0.105, 0.924, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+
+[node name="RecessHandleB" type="MeshInstance3D" parent="TransitPlinths/ServiceBase/Face1"]
+position = Vector3(0.105, 0.924, 0.014)
+mesh = SubResource("s8")
+material_override = SubResource("s7")
+

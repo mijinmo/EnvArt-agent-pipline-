@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3]
+[ext_resource type="Shader" path="res://art/station/laid_linoleum.gdshader" id="shader"]
+[ext_resource type="Texture2D" path="res://art/station/floor/sheet.jpg" id="col"]
+[ext_resource type="Texture2D" path="res://art/station/floor/grain.jpg" id="nor"]
+[ext_resource type="Texture2D" path="res://art/station/floor/polish.jpg" id="rough"]
+[resource]
+shader = ExtResource("shader")
+shader_parameter/linoleum = ExtResource("col")
+shader_parameter/surface_normal = ExtResource("nor")
+shader_parameter/surface_rough = ExtResource("rough")

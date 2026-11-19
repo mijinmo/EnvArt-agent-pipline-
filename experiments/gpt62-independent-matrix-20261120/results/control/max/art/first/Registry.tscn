@@ -1,0 +1,1674 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/models/steel_frame_shelves_02/shelving.gltf" id="r1"]
+[ext_resource type="PackedScene" path="res://art/models/cardboard_box_01/carton.gltf" id="r2"]
+[ext_resource type="Mesh" path="res://art/station/folder_jacket.obj" id="r3"]
+[ext_resource type="Texture2D" path="res://art/printing/archive_label.jpg" id="r4"]
+[ext_resource type="Texture2D" path="res://art/printing/tape_carton.jpg" id="r5"]
+[ext_resource type="PackedScene" path="res://art/models/binder_notebook/ledger_closed.gltf" id="r6"]
+[ext_resource type="Texture2D" path="res://art/printing/shelf_label.jpg" id="r7"]
+[ext_resource type="PackedScene" path="res://art/models/pedestal/pedestal.gltf" id="r8"]
+[ext_resource type="Material" path="res://art/materials/Veneer.tres" id="r9"]
+[ext_resource type="PackedScene" path="res://art/models/vintage_radio_transceiver/radio.gltf" id="r10"]
+[ext_resource type="PackedScene" path="res://art/models/metal_office_desk/desk.gltf" id="r11"]
+[ext_resource type="PackedScene" path="res://art/models/reel/reel.gltf" id="r12"]
+[ext_resource type="Texture2D" path="res://art/printing/recorder_dials.jpg" id="r13"]
+[ext_resource type="Mesh" path="res://art/station/reel_flange.obj" id="r14"]
+[ext_resource type="PackedScene" path="res://art/models/desk_lamp_arm_01/anglepoise.gltf" id="r15"]
+[ext_resource type="PackedScene" path="res://art/models/binder_notebook/ledger_open.gltf" id="r16"]
+[ext_resource type="PackedScene" path="res://art/models/office_notepads/carbon_copies.gltf" id="r17"]
+[ext_resource type="Texture2D" path="res://art/printing/release_slip.jpg" id="r18"]
+[ext_resource type="PackedScene" path="res://art/models/office_notepads/memo_pad.gltf" id="r19"]
+[ext_resource type="PackedScene" path="res://art/models/chair/registry_chair.gltf" id="r20"]
+[ext_resource type="PackedScene" path="res://art/models/cabinet/registry_cabinet.gltf" id="r21"]
+[ext_resource type="Material" path="res://art/materials/PinningBoard.tres" id="r22"]
+[ext_resource type="Texture2D" path="res://art/printing/transport_plate.jpg" id="r23"]
+[ext_resource type="Texture2D" path="res://art/printing/carrier_drawing.jpg" id="r24"]
+[ext_resource type="Texture2D" path="res://art/printing/transfer_ledger.jpg" id="r25"]
+[ext_resource type="Texture2D" path="res://art/printing/tone_card.jpg" id="r26"]
+[ext_resource type="PackedScene" path="res://art/models/wall_clock/clock.gltf" id="r27"]
+[ext_resource type="PackedScene" path="res://art/models/utility_box_01/terminal.gltf" id="r28"]
+
+[sub_resource type="BoxShape3D" id="s1"]
+size = Vector3(0.597, 2.18, 0.482)
+
+[sub_resource type="StandardMaterial3D" id="s2"]
+albedo_color = Color(0.57, 0.52, 0.29, 1)
+roughness = 0.85
+metallic = 0.01
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(0.323, 0.013, 0.221)
+
+[sub_resource type="StandardMaterial3D" id="s4"]
+albedo_color = Color(0.78, 0.743, 0.605, 1)
+roughness = 0.93
+metallic = 0
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(0.326, 0.00055, 0.227)
+
+[sub_resource type="StandardMaterial3D" id="s6"]
+albedo_color = Color(0.64, 0.614, 0.515, 1)
+roughness = 0.98
+metallic = 0
+
+[sub_resource type="BoxMesh" id="s7"]
+size = Vector3(0.3253, 0.00055, 0.227)
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(0.3246, 0.00055, 0.227)
+
+[sub_resource type="StandardMaterial3D" id="s9"]
+albedo_texture = ExtResource("r4")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s10"]
+size = Vector2(0.158, 0.057)
+
+[sub_resource type="StandardMaterial3D" id="s11"]
+albedo_color = Color(0.31, 0.405, 0.277, 1)
+roughness = 0.86
+metallic = 0.01
+
+[sub_resource type="StandardMaterial3D" id="s12"]
+albedo_color = Color(0.64, 0.423, 0.244, 1)
+roughness = 0.82
+metallic = 0.02
+
+[sub_resource type="BoxMesh" id="s13"]
+size = Vector3(0.216, 0.028, 0.216)
+
+[sub_resource type="StandardMaterial3D" id="s14"]
+albedo_color = Color(0.51, 0.449, 0.293, 1)
+roughness = 0.88
+metallic = 0.02
+
+[sub_resource type="BoxMesh" id="s15"]
+size = Vector3(0.219, 0.012, 0.219)
+
+[sub_resource type="StandardMaterial3D" id="s16"]
+albedo_color = Color(0.68, 0.622, 0.463, 1)
+roughness = 0.83
+metallic = 0.01
+
+[sub_resource type="StandardMaterial3D" id="s17"]
+albedo_texture = ExtResource("r5")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s18"]
+size = Vector2(0.216, 0.216)
+
+[sub_resource type="BoxMesh" id="s19"]
+size = Vector3(0.246, 0.043, 0.013)
+
+[sub_resource type="StandardMaterial3D" id="s20"]
+albedo_color = Color(0.56, 0.585, 0.54, 1)
+roughness = 0.32
+metallic = 0.66
+
+[sub_resource type="StandardMaterial3D" id="s21"]
+albedo_texture = ExtResource("r7")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s22"]
+size = Vector2(0.228, 0.035)
+
+[sub_resource type="BoxShape3D" id="s23"]
+size = Vector3(0.43, 0.66, 0.54)
+
+[sub_resource type="BoxMesh" id="s24"]
+size = Vector3(0.67, 0.036, 0.58)
+
+[sub_resource type="BoxMesh" id="s25"]
+size = Vector3(2.006, 0.019, 0.924)
+
+[sub_resource type="BoxMesh" id="s26"]
+size = Vector3(1.995, 0.009, 0.006)
+
+[sub_resource type="StandardMaterial3D" id="s27"]
+albedo_color = Color(0.6, 0.49, 0.294, 1)
+roughness = 0.45
+metallic = 0.54
+
+[sub_resource type="BoxShape3D" id="s28"]
+size = Vector3(0.5, 0.766, 0.847)
+
+[sub_resource type="BoxShape3D" id="s29"]
+size = Vector3(2, 0.055, 0.92)
+
+[sub_resource type="StandardMaterial3D" id="s30"]
+albedo_texture = ExtResource("r13")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s31"]
+size = Vector2(0.363, 0.082)
+
+[sub_resource type="StandardMaterial3D" id="s32"]
+albedo_color = Color(0.77, 0.78, 0.704, 1)
+roughness = 0.36
+metallic = 0.61
+
+[sub_resource type="CylinderMesh" id="s33"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.011
+radial_segments = 16
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="s34"]
+albedo_color = Color(0.61, 0.61, 0.56, 1)
+roughness = 0.31
+metallic = 0.62
+
+[sub_resource type="BoxMesh" id="s35"]
+size = Vector3(0.015, 0.009, 0.006)
+
+[sub_resource type="StandardMaterial3D" id="s36"]
+albedo_color = Color(0.96, 0.43, 0.1, 1)
+roughness = 0.33
+metallic = 0.1
+emission_enabled = true
+emission = Color(0.96, 0.43, 0.1, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="QuadMesh" id="s37"]
+size = Vector2(0.112, 0.039)
+
+[sub_resource type="StandardMaterial3D" id="s38"]
+albedo_texture = ExtResource("r18")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s39"]
+size = Vector2(0.166, 0.088)
+
+[sub_resource type="CylinderMesh" id="s40"]
+top_radius = 0.004
+bottom_radius = 0.004
+height = 0.152315
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="s41"]
+albedo_color = Color(0.78, 0.384, 0.165, 1)
+roughness = 0.51
+metallic = 0.17
+
+[sub_resource type="CylinderMesh" id="s42"]
+top_radius = 0.0043
+bottom_radius = 0.0043
+height = 0.015811
+radial_segments = 12
+rings = 0
+
+[sub_resource type="QuadMesh" id="s43"]
+size = Vector2(0.102, 0.032)
+
+[sub_resource type="CylinderMesh" id="s44"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.112196
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="s45"]
+albedo_color = Color(0.105, 0.125, 0.114, 1)
+roughness = 0.72
+metallic = 0.08
+
+[sub_resource type="CylinderMesh" id="s46"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.102103
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="s47"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.075697
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="s48"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.092455
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="s49"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.087499
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="s50"]
+top_radius = 0.005
+bottom_radius = 0.005
+height = 0.139889
+radial_segments = 12
+rings = 0
+
+[sub_resource type="BoxMesh" id="s51"]
+size = Vector3(0.192, 0.092, 0.052)
+
+[sub_resource type="StandardMaterial3D" id="s52"]
+albedo_color = Color(0.285, 0.326, 0.302, 1)
+roughness = 0.39
+metallic = 0.53
+
+[sub_resource type="BoxMesh" id="s53"]
+size = Vector3(0.048, 0.041, 0.024)
+
+[sub_resource type="StandardMaterial3D" id="s54"]
+albedo_color = Color(0.115, 0.146, 0.14, 1)
+roughness = 0.53
+metallic = 0.36
+
+[sub_resource type="BoxShape3D" id="s55"]
+size = Vector3(0.45, 0.24, 0.46)
+
+[sub_resource type="BoxShape3D" id="s56"]
+size = Vector3(0.8, 1.3, 0.47)
+
+[sub_resource type="BoxMesh" id="s57"]
+size = Vector3(0.192, 0.061, 0.009)
+
+[sub_resource type="QuadMesh" id="s58"]
+size = Vector2(0.177, 0.048)
+
+[sub_resource type="BoxMesh" id="s59"]
+size = Vector3(2.71, 1.06, 0.039)
+
+[sub_resource type="BoxMesh" id="s60"]
+size = Vector3(0.016, 1.085, 0.056)
+
+[sub_resource type="BoxMesh" id="s61"]
+size = Vector3(2.733, 0.017, 0.056)
+
+[sub_resource type="StandardMaterial3D" id="s62"]
+albedo_texture = ExtResource("r23")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s63"]
+size = Vector2(0.96, 0.683)
+
+[sub_resource type="CylinderMesh" id="s64"]
+top_radius = 0.0075
+bottom_radius = 0.0075
+height = 0.007
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="s65"]
+albedo_texture = ExtResource("r24")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s66"]
+size = Vector2(0.434, 0.57)
+
+[sub_resource type="StandardMaterial3D" id="s67"]
+albedo_texture = ExtResource("r25")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s68"]
+size = Vector2(0.43, 0.568)
+
+[sub_resource type="StandardMaterial3D" id="s69"]
+albedo_texture = ExtResource("r26")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s70"]
+size = Vector2(0.53, 0.306)
+
+[sub_resource type="QuadMesh" id="s71"]
+size = Vector2(0.358, 0.192)
+
+[sub_resource type="BoxMesh" id="s72"]
+size = Vector3(2.76, 0.025, 0.103)
+
+[sub_resource type="BoxShape3D" id="s73"]
+size = Vector3(0.4, 0.87, 0.34)
+
+[sub_resource type="CylinderMesh" id="s74"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 6.93
+radial_segments = 12
+rings = 0
+
+[sub_resource type="BoxMesh" id="s75"]
+size = Vector3(0.031, 0.043, 0.041)
+
+[sub_resource type="CylinderMesh" id="s76"]
+top_radius = 0.018
+bottom_radius = 0.018
+height = 1.81
+radial_segments = 12
+rings = 0
+
+[sub_resource type="BoxMesh" id="s77"]
+size = Vector3(0.063, 0.027, 0.061)
+
+[sub_resource type="BoxMesh" id="s78"]
+size = Vector3(0.13, 0.14, 0.105)
+
+[sub_resource type="BoxMesh" id="s79"]
+size = Vector3(0.021, 0.217, 0.024)
+
+[sub_resource type="BoxMesh" id="s80"]
+size = Vector3(0.025, 0.035, 0.299)
+
+[node name="Registry" type="Node3D"]
+
+[node name="AudioRegistry" type="Node3D" parent="."]
+position = Vector3(9.75, 0, -4.82)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="IncomingShelf" type="Node3D" parent="AudioRegistry"]
+position = Vector3(-2.4, 0.002, 0.305)
+
+[node name="SteelRack" parent="AudioRegistry/IncomingShelf" instance=ExtResource("r1")]
+scale = Vector3(1.03, 1.03, 1.03)
+
+[node name="RackFeet" type="StaticBody3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(0, 1.09, 0.002)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/IncomingShelf/RackFeet"]
+shape = SubResource("s1")
+
+[node name="BottomCarton" parent="AudioRegistry/IncomingShelf" instance=ExtResource("r2")]
+position = Vector3(-0.004, 0.118, -0.008)
+rotation_degrees = Vector3(0, -5, 0)
+scale = Vector3(0.87, 0.87, 0.87)
+
+[node name="TransferPackets" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(-0.035, 0.641, 0.035)
+
+[node name="Folder1" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(-0.009, 0, -0.005)
+rotation_degrees = Vector3(0, -5, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder1"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder2" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(0, 0.024, 0.01)
+rotation_degrees = Vector3(0, 2, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder2"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder3" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(0.009, 0.048, 0.005)
+rotation_degrees = Vector3(0, 3, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder3"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder4" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(-0.009, 0.072, 0)
+rotation_degrees = Vector3(0, -1, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder4"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder5" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(0, 0.096, -0.005)
+rotation_degrees = Vector3(0, 4, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder5"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder6" type="Node3D" parent="AudioRegistry/IncomingShelf/TransferPackets"]
+position = Vector3(0.009, 0.12, 0.01)
+rotation_degrees = Vector3(0, -5, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/TransferPackets/Folder6"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Masters0" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(-0.084, 1.165, 0.009)
+rotation_degrees = Vector3(0, -6, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters0"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters0"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters0"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="Masters1" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(-0.084, 1.196, 0.009)
+rotation_degrees = Vector3(0, -3, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters1"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters1"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters1"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="Masters2" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(-0.084, 1.227, 0.009)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters2"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters2"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters2"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="Masters3" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(-0.084, 1.258, 0.009)
+rotation_degrees = Vector3(0, 3, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters3"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters3"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/Masters3"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="ShelfRegister" parent="AudioRegistry/IncomingShelf" instance=ExtResource("r6")]
+position = Vector3(0.13, 1.165, -0.065)
+rotation_degrees = Vector3(0, 85, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="SoundCollection" parent="AudioRegistry/IncomingShelf" instance=ExtResource("r2")]
+position = Vector3(-0.026, 1.686, -0.006)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(0.77, 0.77, 0.77)
+
+[node name="HighBox0" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(0.042, 2.208, -0.028)
+rotation_degrees = Vector3(0, 4, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox0"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox0"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox0"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="HighBox1" type="Node3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(0.042, 2.239, -0.028)
+rotation_degrees = Vector3(0, -2, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox1"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox1"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf/HighBox1"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="ShelfTicketClip" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(0.045, 1.146, 0.253)
+mesh = SubResource("s19")
+material_override = SubResource("s20")
+
+[node name="ShelfTicket" type="MeshInstance3D" parent="AudioRegistry/IncomingShelf"]
+position = Vector3(0.045, 1.146, 0.263)
+mesh = SubResource("s22")
+material_override = SubResource("s21")
+
+[node name="ListeningReturn" type="Node3D" parent="AudioRegistry"]
+position = Vector3(-1.57, 0, 0.374)
+
+[node name="FilingPedestal" parent="AudioRegistry/ListeningReturn" instance=ExtResource("r8")]
+position = Vector3(0, 0.002, 0)
+rotation_degrees = Vector3(0, 3, 0)
+
+[node name="PedestalSolid" type="StaticBody3D" parent="AudioRegistry/ListeningReturn"]
+position = Vector3(0, 0.333, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/ListeningReturn/PedestalSolid"]
+shape = SubResource("s23")
+
+[node name="EquipmentShelf" type="MeshInstance3D" parent="AudioRegistry/ListeningReturn"]
+position = Vector3(0.01, 0.679, -0.012)
+mesh = SubResource("s24")
+material_override = ExtResource("r9")
+
+[node name="RegistryIntercom" parent="AudioRegistry/ListeningReturn" instance=ExtResource("r10")]
+position = Vector3(0.008, 0.698, 0.007)
+rotation_degrees = Vector3(0, -9, 0)
+scale = Vector3(0.89, 0.89, 0.89)
+
+[node name="VerificationDesk" type="Node3D" parent="AudioRegistry"]
+
+[node name="SixDrawerDesk" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r11")]
+position = Vector3(0, 0.002, 0.5)
+
+[node name="VeneeredWritingTop" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0, 0.798, 0.505)
+mesh = SubResource("s25")
+material_override = ExtResource("r9")
+
+[node name="EdgeInlay" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0, 0.794, 0.969)
+mesh = SubResource("s26")
+material_override = SubResource("s27")
+
+[node name="DrawerBank0" type="StaticBody3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.72, 0.389, 0.49)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/VerificationDesk/DrawerBank0"]
+shape = SubResource("s28")
+
+[node name="DrawerBank1" type="StaticBody3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.72, 0.389, 0.49)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/VerificationDesk/DrawerBank1"]
+shape = SubResource("s28")
+
+[node name="TopSolid" type="StaticBody3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0, 0.781, 0.5)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/VerificationDesk/TopSolid"]
+shape = SubResource("s29")
+
+[node name="ReferenceDeck" type="Node3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.16, 0.811, 0.46)
+rotation_degrees = Vector3(0, -15, 0)
+
+[node name="OpenReelRecorder" parent="AudioRegistry/VerificationDesk/ReferenceDeck" instance=ExtResource("r12")]
+
+[node name="MeterPanel" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(0, 0.129, 0.078)
+mesh = SubResource("s31")
+material_override = SubResource("s30")
+
+[node name="ReelFlange0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(-0.11, 0.347, 0.113)
+mesh = ExtResource("r14")
+material_override = SubResource("s32")
+
+[node name="LockNut0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(-0.11, 0.347, 0.115)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s33")
+material_override = SubResource("s27")
+
+[node name="ReelFlange1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(0.11, 0.347, 0.113)
+rotation_degrees = Vector3(0, 0, 15)
+mesh = ExtResource("r14")
+material_override = SubResource("s34")
+
+[node name="LockNut1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(0.11, 0.347, 0.115)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s33")
+material_override = SubResource("s27")
+
+[node name="Pilot" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(0.168, 0.207, 0.077)
+mesh = SubResource("s35")
+material_override = SubResource("s36")
+
+[node name="MachineInventory" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/ReferenceDeck"]
+position = Vector3(-0.113, 0.204, 0.078)
+mesh = SubResource("s37")
+material_override = SubResource("s9")
+
+[node name="ClampLamp" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r15")]
+position = Vector3(-0.987, 0.808, 0.316)
+rotation_degrees = Vector3(0, -125, 0)
+scale = Vector3(0.89, 0.89, 0.89)
+
+[node name="ReadingBulb" type="SpotLight3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.839, 1.388, 0.382)
+light_color = Color(1, 0.78, 0.54, 1)
+light_energy = 0.75
+light_size = 0.054
+shadow_enabled = true
+shadow_bias = 0.035
+shadow_normal_bias = 0.4
+rotation_degrees = Vector3(-57.972279, -129.255842, 0)
+spot_range = 1.55
+spot_attenuation = 1
+spot_angle = 52
+spot_angle_attenuation = 0.70
+
+[node name="OpenAccessionBook" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r16")]
+position = Vector3(0.48, 0.81, 0.68)
+rotation_degrees = Vector3(0, -13, 0)
+
+[node name="DuplicateForms" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r17")]
+position = Vector3(0.81, 0.81, 0.335)
+rotation_degrees = Vector3(0, 6, 0)
+scale = Vector3(0.85, 0.85, 0.85)
+
+[node name="LatestRelease" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.787, 0.822, 0.344)
+rotation_degrees = Vector3(-90, 5, 0)
+mesh = SubResource("s39")
+material_override = SubResource("s38")
+
+[node name="Unverified" type="Node3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.66, 0.811, 0.665)
+
+[node name="Folder1" type="Node3D" parent="AudioRegistry/VerificationDesk/Unverified"]
+position = Vector3(-0.009, 0, -0.005)
+rotation_degrees = Vector3(0, -5, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder1"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder2" type="Node3D" parent="AudioRegistry/VerificationDesk/Unverified"]
+position = Vector3(0, 0.024, 0.01)
+rotation_degrees = Vector3(0, 2, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder2"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder3" type="Node3D" parent="AudioRegistry/VerificationDesk/Unverified"]
+position = Vector3(0.009, 0.048, 0.005)
+rotation_degrees = Vector3(0, 3, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/Unverified/Folder3"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="WorkingNote" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r19")]
+position = Vector3(0.063, 0.81, 0.786)
+rotation_degrees = Vector3(0, 14, 0)
+scale = Vector3(0.7, 0.7, 0.7)
+
+[node name="CaseAtDeck0" type="Node3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.475, 0.809, 0.267)
+rotation_degrees = Vector3(0, -3, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck0"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck0"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck0"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="CaseAtDeck1" type="Node3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.475, 0.84, 0.267)
+rotation_degrees = Vector3(0, 5, 0)
+
+[node name="CardBox" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck1"]
+position = Vector3(0, 0.014, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s14")
+
+[node name="LidFold" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck1"]
+position = Vector3(0, 0.025, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk/CaseAtDeck1"]
+position = Vector3(0, 0.0315, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s18")
+material_override = SubResource("s17")
+
+[node name="Pencil" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.7, 0.822, 0.842)
+rotation_degrees = Vector3(90, 66.801409, 0)
+mesh = SubResource("s40")
+material_override = SubResource("s41")
+
+[node name="Ferrule" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.7625, 0.822, 0.8695)
+rotation_degrees = Vector3(90, 71.565051, 0)
+mesh = SubResource("s42")
+material_override = SubResource("s20")
+
+[node name="DrawerIndex0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.715, 0.661, 0.983)
+mesh = SubResource("s43")
+material_override = SubResource("s9")
+
+[node name="DrawerIndex1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.715, 0.661, 0.983)
+mesh = SubResource("s43")
+material_override = SubResource("s9")
+
+[node name="Cable0" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.305, 0.879, 0.358)
+rotation_degrees = Vector3(136.958722, -139.236395, 0)
+mesh = SubResource("s44")
+material_override = SubResource("s45")
+
+[node name="Cable1" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.355, 0.8265, 0.286)
+rotation_degrees = Vector3(103.018342, -149.82648, 0)
+mesh = SubResource("s46")
+material_override = SubResource("s45")
+
+[node name="Cable2" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.37, 0.8145, 0.2065)
+rotation_degrees = Vector3(90.756934, 164.67849, 0)
+mesh = SubResource("s47")
+material_override = SubResource("s45")
+
+[node name="Cable3" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.33, 0.823, 0.136)
+rotation_degrees = Vector3(78.773474, 138.576334, 0)
+mesh = SubResource("s48")
+material_override = SubResource("s45")
+
+[node name="Cable4" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.295, 0.872, 0.085)
+rotation_degrees = Vector3(23.893397, 163.61046, 0)
+mesh = SubResource("s49")
+material_override = SubResource("s45")
+
+[node name="Cable5" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.315, 0.977, 0.0615)
+rotation_degrees = Vector3(21.673012, -104.574216, 0)
+mesh = SubResource("s50")
+material_override = SubResource("s45")
+
+[node name="SocketBox" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.32, 1.065, 0.032)
+mesh = SubResource("s51")
+material_override = SubResource("s52")
+
+[node name="Plug" type="MeshInstance3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(-0.34, 1.056, 0.066)
+mesh = SubResource("s53")
+material_override = SubResource("s54")
+
+[node name="CantileverSeat" parent="AudioRegistry/VerificationDesk" instance=ExtResource("r20")]
+position = Vector3(0.645, 0.002, 1.52)
+rotation_degrees = Vector3(0, -132, 0)
+
+[node name="SeatSolid" type="StaticBody3D" parent="AudioRegistry/VerificationDesk"]
+position = Vector3(0.645, 0.424, 1.52)
+rotation_degrees = Vector3(0, -132, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/VerificationDesk/SeatSolid"]
+shape = SubResource("s55")
+
+[node name="ActiveIndex" type="Node3D" parent="AudioRegistry"]
+position = Vector3(1.57, 0, 0.287)
+
+[node name="GlassFrontedFile" parent="AudioRegistry/ActiveIndex" instance=ExtResource("r21")]
+position = Vector3(0, 0.002, 0)
+
+[node name="FileCarcass" type="StaticBody3D" parent="AudioRegistry/ActiveIndex"]
+position = Vector3(0, 0.652, 0.002)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/ActiveIndex/FileCarcass"]
+shape = SubResource("s56")
+
+[node name="WaitingForSignature" type="Node3D" parent="AudioRegistry/ActiveIndex"]
+position = Vector3(0.025, 1.303, 0.002)
+
+[node name="Folder1" type="Node3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature"]
+position = Vector3(-0.009, 0, -0.005)
+rotation_degrees = Vector3(0, -5, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder1"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder2" type="Node3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature"]
+position = Vector3(0, 0.024, 0.01)
+rotation_degrees = Vector3(0, 2, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder2"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder3" type="Node3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature"]
+position = Vector3(0.009, 0.048, 0.005)
+rotation_degrees = Vector3(0, 3, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s12")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder3"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder4" type="Node3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature"]
+position = Vector3(-0.009, 0.072, 0)
+rotation_degrees = Vector3(0, -1, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s2")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder4"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="Folder5" type="Node3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature"]
+position = Vector3(0, 0.096, -0.005)
+rotation_degrees = Vector3(0, 4, 0)
+
+[node name="LowerFold" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(0, 0.003, 0)
+scale = Vector3(1, 0.4, 1)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="Leaves" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(0.002, 0.01, -0.002)
+mesh = SubResource("s3")
+material_override = SubResource("s4")
+
+[node name="LeafEdge0" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(-0.001, 0.007, -0.001)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="LeafEdge1" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(-0.0004, 0.01, -0.001)
+mesh = SubResource("s7")
+material_override = SubResource("s6")
+
+[node name="LeafEdge2" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(0.0002, 0.013, -0.001)
+mesh = SubResource("s8")
+material_override = SubResource("s6")
+
+[node name="TabCover" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(0, 0.019, 0)
+mesh = ExtResource("r3")
+material_override = SubResource("s11")
+
+[node name="IndexSlip" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex/WaitingForSignature/Folder5"]
+position = Vector3(0.032, 0.025, -0.027)
+rotation_degrees = Vector3(-90, 0, 0)
+mesh = SubResource("s10")
+material_override = SubResource("s9")
+
+[node name="LabelFrame" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex"]
+position = Vector3(0.19, 0.219, 0.237)
+mesh = SubResource("s57")
+material_override = SubResource("s27")
+
+[node name="Label" type="MeshInstance3D" parent="AudioRegistry/ActiveIndex"]
+position = Vector3(0.19, 0.218, 0.244)
+mesh = SubResource("s58")
+material_override = SubResource("s9")
+
+[node name="ReferenceRail" type="Node3D" parent="AudioRegistry"]
+position = Vector3(0.1, 1.779, 0.048)
+
+[node name="LinoleumPinningSurface" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+mesh = SubResource("s59")
+material_override = ExtResource("r22")
+
+[node name="VerticalRim0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(-1.355, 0, 0.011)
+mesh = SubResource("s60")
+material_override = SubResource("s52")
+
+[node name="VerticalRim1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(1.355, 0, 0.011)
+mesh = SubResource("s60")
+material_override = SubResource("s52")
+
+[node name="HorizontalRim0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(0, -0.53, 0.011)
+mesh = SubResource("s61")
+material_override = SubResource("s52")
+
+[node name="HorizontalRim1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(0, 0.53, 0.011)
+mesh = SubResource("s61")
+material_override = SubResource("s52")
+
+[node name="TransportDiagram" type="Node3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(-0.085, 0.113, 0.027)
+rotation_degrees = Vector3(0, 0, 1.3)
+
+[node name="Paper" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/TransportDiagram"]
+mesh = SubResource("s63")
+material_override = SubResource("s62")
+
+[node name="DrawingPin0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/TransportDiagram"]
+position = Vector3(-0.453, 0.3205, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="DrawingPin1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/TransportDiagram"]
+position = Vector3(0.453, 0.3205, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="ExplodedCarrier" type="Node3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(-0.915, 0.075, 0.03)
+rotation_degrees = Vector3(0, 0, -4.4)
+
+[node name="Paper" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ExplodedCarrier"]
+mesh = SubResource("s66")
+material_override = SubResource("s65")
+
+[node name="DrawingPin0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ExplodedCarrier"]
+position = Vector3(-0.19, 0.264, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="DrawingPin1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ExplodedCarrier"]
+position = Vector3(0.19, 0.264, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="LedgerDuplicate" type="Node3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(0.767, 0.042, 0.03)
+rotation_degrees = Vector3(0, 0, 3)
+
+[node name="Paper" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/LedgerDuplicate"]
+mesh = SubResource("s68")
+material_override = SubResource("s67")
+
+[node name="DrawingPin0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/LedgerDuplicate"]
+position = Vector3(-0.188, 0.263, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="DrawingPin1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/LedgerDuplicate"]
+position = Vector3(0.188, 0.263, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="ResponseCurve" type="Node3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(-0.802, -0.322, 0.042)
+rotation_degrees = Vector3(0, 0, 2.5)
+
+[node name="Paper" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ResponseCurve"]
+mesh = SubResource("s70")
+material_override = SubResource("s69")
+
+[node name="DrawingPin0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ResponseCurve"]
+position = Vector3(-0.238, 0.132, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="DrawingPin1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ResponseCurve"]
+position = Vector3(0.238, 0.132, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="ReleaseCounterfoil" type="Node3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(0.501, -0.344, 0.045)
+rotation_degrees = Vector3(0, 0, -5)
+
+[node name="Paper" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ReleaseCounterfoil"]
+mesh = SubResource("s71")
+material_override = SubResource("s38")
+
+[node name="DrawingPin0" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ReleaseCounterfoil"]
+position = Vector3(-0.152, 0.075, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="DrawingPin1" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail/ReleaseCounterfoil"]
+position = Vector3(0.152, 0.075, 0.004)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s64")
+material_override = SubResource("s27")
+
+[node name="BottomPencilGutter" type="MeshInstance3D" parent="AudioRegistry/ReferenceRail"]
+position = Vector3(0, -0.556, 0.051)
+mesh = SubResource("s72")
+material_override = SubResource("s52")
+
+[node name="WallServices" type="Node3D" parent="AudioRegistry"]
+
+[node name="WallClock" parent="AudioRegistry/WallServices" instance=ExtResource("r27")]
+position = Vector3(-1.69, 2.02, 0.039)
+rotation_degrees = Vector3(0, -1, 0)
+scale = Vector3(1.27, 1.27, 1.27)
+
+[node name="PowerDistribution" parent="AudioRegistry/WallServices" instance=ExtResource("r28")]
+position = Vector3(-3.51, 0.002, 0.218)
+scale = Vector3(0.78, 0.78, 0.78)
+
+[node name="PowerBoxSolid" type="StaticBody3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.51, 0.436, 0.218)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Solid" type="CollisionShape3D" parent="AudioRegistry/WallServices/PowerBoxSolid"]
+shape = SubResource("s73")
+
+[node name="GalvanisedConduit0" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-0.075, 2.675, 0.046)
+rotation_degrees = Vector3(90, 90, 0)
+mesh = SubResource("s74")
+material_override = SubResource("s52")
+
+[node name="Saddle00" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.33, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle01" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-2.14, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle02" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-0.97, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle03" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(0.21, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle04" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(1.39, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle05" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(2.58, 2.675, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="GalvanisedConduit1" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-0.075, 2.736, 0.046)
+rotation_degrees = Vector3(90, 90, 0)
+mesh = SubResource("s74")
+material_override = SubResource("s52")
+
+[node name="Saddle10" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.33, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle11" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-2.14, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle12" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-0.97, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle13" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(0.21, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle14" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(1.39, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Saddle15" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(2.58, 2.736, 0.049)
+mesh = SubResource("s75")
+material_override = SubResource("s20")
+
+[node name="Drop" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.49, 1.765, 0.075)
+mesh = SubResource("s76")
+material_override = SubResource("s52")
+
+[node name="WallClip0" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.49, 1.15, 0.069)
+mesh = SubResource("s77")
+material_override = SubResource("s20")
+
+[node name="WallClip1" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.49, 1.75, 0.069)
+mesh = SubResource("s77")
+material_override = SubResource("s20")
+
+[node name="WallClip2" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.49, 2.36, 0.069)
+mesh = SubResource("s77")
+material_override = SubResource("s20")
+
+[node name="PullBox" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-3.49, 2.681, 0.064)
+mesh = SubResource("s78")
+material_override = SubResource("s52")
+
+[node name="LightingSpur" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(0.28, 2.567, 0.045)
+mesh = SubResource("s79")
+material_override = SubResource("s52")
+
+[node name="TubeBracket0" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(-0.12, 2.412, 0.161)
+mesh = SubResource("s80")
+material_override = SubResource("s52")
+
+[node name="TubeBracket1" type="MeshInstance3D" parent="AudioRegistry/WallServices"]
+position = Vector3(0.66, 2.412, 0.161)
+mesh = SubResource("s80")
+material_override = SubResource("s52")
+

@@ -1,0 +1,434 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/BoardCast.tres" id="r1"]
+[ext_resource type="Material" path="res://art/materials/Dado.tres" id="r2"]
+[ext_resource type="Shader" path="res://art/station/wired_glass.gdshader" id="r3"]
+[ext_resource type="Texture2D" path="res://art/printing/door_enamel.jpg" id="r4"]
+[ext_resource type="Texture2D" path="res://art/printing/door_pier.jpg" id="r5"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(2.62, 0.316, 0.55)
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(2.61, 0.386, 0.031)
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.115, 0.146, 0.14, 1)
+roughness = 0.53
+metallic = 0.36
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(0.054, 2.3, 0.604)
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(0.144, 2.306, 0.045)
+
+[sub_resource type="StandardMaterial3D" id="s6"]
+albedo_color = Color(0.285, 0.326, 0.302, 1)
+roughness = 0.39
+metallic = 0.53
+
+[sub_resource type="BoxMesh" id="s7"]
+size = Vector3(0.014, 2.3, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="s8"]
+albedo_color = Color(0.105, 0.125, 0.114, 1)
+roughness = 0.72
+metallic = 0.08
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(0.545, 0.47, 0.026)
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(0.551, 0.018, 0.021)
+
+[sub_resource type="CylinderMesh" id="s11"]
+top_radius = 0.011
+bottom_radius = 0.011
+height = 0.008
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="s12"]
+albedo_color = Color(0.56, 0.585, 0.54, 1)
+roughness = 0.32
+metallic = 0.66
+
+[sub_resource type="BoxMesh" id="s13"]
+size = Vector3(0.097, 1.39, 0.24)
+
+[sub_resource type="BoxMesh" id="s14"]
+size = Vector3(1.43, 0.066, 0.05)
+
+[sub_resource type="BoxMesh" id="s15"]
+size = Vector3(1.31, 0.048, 0.61)
+
+[sub_resource type="BoxMesh" id="s16"]
+size = Vector3(2.64, 0.114, 0.34)
+
+[sub_resource type="BoxMesh" id="s17"]
+size = Vector3(2.64, 0.111, 0.34)
+
+[sub_resource type="QuadMesh" id="s18"]
+size = Vector2(0.598, 1)
+
+[sub_resource type="ShaderMaterial" id="s19"]
+shader = ExtResource("r3")
+shader_parameter/panel_metres = Vector2(0.598, 1)
+
+[sub_resource type="BoxMesh" id="s20"]
+size = Vector3(0.046, 1.038, 0.127)
+
+[sub_resource type="BoxMesh" id="s21"]
+size = Vector3(2.48, 0.022, 0.098)
+
+[sub_resource type="BoxMesh" id="s22"]
+size = Vector3(2.478, 0.431, 0.028)
+
+[sub_resource type="StandardMaterial3D" id="s23"]
+albedo_texture = ExtResource("r4")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s24"]
+size = Vector2(2.46, 0.413)
+
+[sub_resource type="CylinderMesh" id="s25"]
+top_radius = 0.007
+bottom_radius = 0.007
+height = 0.006
+radial_segments = 10
+rings = 0
+
+[sub_resource type="BoxMesh" id="s26"]
+size = Vector3(0.373, 0.511, 0.028)
+
+[sub_resource type="StandardMaterial3D" id="s27"]
+albedo_texture = ExtResource("r5")
+roughness = 0.82
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="s28"]
+size = Vector2(0.355, 0.493)
+
+[sub_resource type="BoxMesh" id="s29"]
+size = Vector3(0.126, 0.211, 0.077)
+
+[sub_resource type="BoxMesh" id="s30"]
+size = Vector3(0.064, 0.014, 0.008)
+
+[sub_resource type="StandardMaterial3D" id="s31"]
+albedo_color = Color(0.6, 0.8, 0.56, 1)
+roughness = 0.38
+metallic = 0.18
+emission_enabled = true
+emission = Color(0.6, 0.8, 0.56, 1)
+emission_energy_multiplier = 1.3
+
+[sub_resource type="BoxMesh" id="s32"]
+size = Vector3(0.018, 0.011, 0.007)
+
+[sub_resource type="BoxMesh" id="s33"]
+size = Vector3(2.59, 0.35, 0.025)
+
+[sub_resource type="BoxMesh" id="s34"]
+size = Vector3(0.095, 0.26, 0.083)
+
+
+[sub_resource type="BoxMesh" id="s36"]
+size = Vector3(2.52, 0.019, 0.155)
+
+[node name="Threshold" type="Node3D"]
+
+[node name="CastIntakePortal" type="Node3D" parent="."]
+position = Vector3(0, 0, -4)
+
+[node name="FasciaRear" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.756, 0)
+mesh = SubResource("s1")
+material_override = ExtResource("r1")
+
+[node name="ShadowBed" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.495, 0.294)
+mesh = SubResource("s2")
+material_override = SubResource("s3")
+
+[node name="WestJamb" type="Node3D" parent="CastIntakePortal"]
+
+[node name="PressedSteelStop" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-0.627, 1.15, 0)
+mesh = SubResource("s4")
+material_override = SubResource("s3")
+
+[node name="ReturnFlange" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-0.676, 1.153, 0.312)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="RubberSeal" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-0.61, 1.15, 0.335)
+mesh = SubResource("s7")
+material_override = SubResource("s8")
+
+[node name="PierApron" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-1.005, 0.235, 0.309)
+mesh = SubResource("s9")
+material_override = ExtResource("r2")
+
+[node name="ApronFold" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-1.006, 0.471, 0.323)
+mesh = SubResource("s10")
+material_override = SubResource("s6")
+
+[node name="ApronPin0" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-1.19, 0.092, 0.33)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s11")
+material_override = SubResource("s12")
+
+[node name="ApronPin1" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-1.19, 0.391, 0.33)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s11")
+material_override = SubResource("s12")
+
+[node name="CrownRail" type="MeshInstance3D" parent="CastIntakePortal/WestJamb"]
+position = Vector3(-1.25, 3.505, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s3")
+
+[node name="EastJamb" type="Node3D" parent="CastIntakePortal"]
+
+[node name="PressedSteelStop" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(0.627, 1.15, 0)
+mesh = SubResource("s4")
+material_override = SubResource("s3")
+
+[node name="ReturnFlange" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(0.676, 1.153, 0.312)
+mesh = SubResource("s5")
+material_override = SubResource("s6")
+
+[node name="RubberSeal" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(0.61, 1.15, 0.335)
+mesh = SubResource("s7")
+material_override = SubResource("s8")
+
+[node name="PierApron" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(1.005, 0.235, 0.309)
+mesh = SubResource("s9")
+material_override = ExtResource("r2")
+
+[node name="ApronFold" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(1.006, 0.471, 0.323)
+mesh = SubResource("s10")
+material_override = SubResource("s6")
+
+[node name="ApronPin0" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(1.19, 0.092, 0.33)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s11")
+material_override = SubResource("s12")
+
+[node name="ApronPin1" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(1.19, 0.391, 0.33)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s11")
+material_override = SubResource("s12")
+
+[node name="CrownRail" type="MeshInstance3D" parent="CastIntakePortal/EastJamb"]
+position = Vector3(1.25, 3.505, 0)
+mesh = SubResource("s13")
+material_override = SubResource("s3")
+
+[node name="SteelHead" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.334, 0.309)
+mesh = SubResource("s14")
+material_override = SubResource("s6")
+
+[node name="HeadLiner" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.324, 0)
+mesh = SubResource("s15")
+material_override = SubResource("s3")
+
+[node name="TransomBase" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.938, 0)
+mesh = SubResource("s16")
+material_override = SubResource("s6")
+
+[node name="TransomHead" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 4.007, 0)
+mesh = SubResource("s17")
+material_override = SubResource("s6")
+
+[node name="CastGlass0" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(-0.94, 3.476, -0.028)
+mesh = SubResource("s18")
+material_override = SubResource("s19")
+
+[node name="CastGlass1" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(-0.32, 3.476, -0.028)
+mesh = SubResource("s18")
+material_override = SubResource("s19")
+
+[node name="CastGlass2" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.32, 3.476, -0.028)
+mesh = SubResource("s18")
+material_override = SubResource("s19")
+
+[node name="CastGlass3" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.94, 3.476, -0.028)
+mesh = SubResource("s18")
+material_override = SubResource("s19")
+
+[node name="TransomMullion0" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(-0.63, 3.47, 0)
+mesh = SubResource("s20")
+material_override = SubResource("s3")
+
+[node name="TransomMullion1" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 3.47, 0)
+mesh = SubResource("s20")
+material_override = SubResource("s3")
+
+[node name="TransomMullion2" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.63, 3.47, 0)
+mesh = SubResource("s20")
+material_override = SubResource("s3")
+
+[node name="TransomGlazingBar0" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 3.21, 0)
+mesh = SubResource("s21")
+material_override = SubResource("s6")
+
+[node name="TransomGlazingBar1" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 3.72, 0)
+mesh = SubResource("s21")
+material_override = SubResource("s6")
+
+[node name="SoundArchiveSign" type="Node3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.657, 0.369)
+
+[node name="BakedEnamel" type="MeshInstance3D" parent="CastIntakePortal/SoundArchiveSign"]
+position = Vector3(0, 0, -0.013)
+mesh = SubResource("s22")
+material_override = SubResource("s3")
+
+[node name="Lettering" type="MeshInstance3D" parent="CastIntakePortal/SoundArchiveSign"]
+position = Vector3(0, 0, 0.002)
+mesh = SubResource("s24")
+material_override = SubResource("s23")
+
+[node name="Rivet0" type="MeshInstance3D" parent="CastIntakePortal/SoundArchiveSign"]
+position = Vector3(-1.18572, 0.17759, 0.005)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s25")
+material_override = SubResource("s12")
+
+[node name="Rivet1" type="MeshInstance3D" parent="CastIntakePortal/SoundArchiveSign"]
+position = Vector3(1.18572, -0.17759, 0.005)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s25")
+material_override = SubResource("s12")
+
+[node name="AccessPlate" type="Node3D" parent="CastIntakePortal"]
+position = Vector3(-1.02, 1.47, 0.326)
+
+[node name="BakedEnamel" type="MeshInstance3D" parent="CastIntakePortal/AccessPlate"]
+position = Vector3(0, 0, -0.013)
+mesh = SubResource("s26")
+material_override = SubResource("s6")
+
+[node name="Lettering" type="MeshInstance3D" parent="CastIntakePortal/AccessPlate"]
+position = Vector3(0, 0, 0.002)
+mesh = SubResource("s28")
+material_override = SubResource("s27")
+
+[node name="Rivet0" type="MeshInstance3D" parent="CastIntakePortal/AccessPlate"]
+position = Vector3(-0.17111, 0.21199, 0.005)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s25")
+material_override = SubResource("s12")
+
+[node name="Rivet1" type="MeshInstance3D" parent="CastIntakePortal/AccessPlate"]
+position = Vector3(0.17111, -0.21199, 0.005)
+rotation_degrees = Vector3(90, 0, 0)
+mesh = SubResource("s25")
+material_override = SubResource("s12")
+
+[node name="ReaderHousing" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.966, 1.22, 0.343)
+mesh = SubResource("s29")
+material_override = SubResource("s3")
+
+[node name="ReaderIndicator" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.966, 1.278, 0.384)
+mesh = SubResource("s30")
+material_override = SubResource("s31")
+
+[node name="Key00" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.936, 1.238, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key01" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.966, 1.238, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key02" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.996, 1.238, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key10" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.936, 1.213, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key11" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.966, 1.213, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key12" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.996, 1.213, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key20" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.936, 1.188, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key21" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.966, 1.188, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="Key22" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.996, 1.188, 0.387)
+mesh = SubResource("s32")
+material_override = SubResource("s6")
+
+[node name="RearHeaderFlash" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.643, -0.314)
+mesh = SubResource("s33")
+material_override = ExtResource("r2")
+
+[node name="EnamelSpacers0" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(-0.93, 2.654, 0.326)
+mesh = SubResource("s34")
+material_override = SubResource("s6")
+
+[node name="EnamelSpacers1" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0.93, 2.654, 0.326)
+mesh = SubResource("s34")
+material_override = SubResource("s6")
+
+
+
+[node name="DoorSignDrip" type="MeshInstance3D" parent="CastIntakePortal"]
+position = Vector3(0, 2.886, 0.313)
+mesh = SubResource("s36")
+material_override = SubResource("s6")

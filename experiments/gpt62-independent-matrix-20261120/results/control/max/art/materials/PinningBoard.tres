@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3]
+[ext_resource type="Texture2D" path="res://art/surfaces/linoleum_brown/Linoleum.jpg" id="col"]
+[ext_resource type="Texture2D" path="res://art/surfaces/linoleum_brown/normal.jpg" id="n"]
+[ext_resource type="Texture2D" path="res://art/surfaces/linoleum_brown/rough.jpg" id="r"]
+
+[resource]
+resource_name = "Pinning linoleum"
+albedo_color = Color(0.56, 0.70, 0.63, 1)
+albedo_texture = ExtResource("col")
+normal_enabled = true
+normal_scale = 0.22
+normal_texture = ExtResource("n")
+roughness = 0.9
+roughness_texture = ExtResource("r")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.500000, 0.500000, 0.500000)
+texture_filter = 5

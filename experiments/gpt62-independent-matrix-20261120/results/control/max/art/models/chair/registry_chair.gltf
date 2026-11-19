@@ -1,0 +1,444 @@
+{
+ "asset": {
+  "generator": "Khronos glTF Blender I/O v5.2.41",
+  "version": "2.0",
+  "copyright": "Authored by Innerscene Corp (innerscene.com). Public domain: dedicated under CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/. Free to use, modify and redistribute for any purpose, with no credit required."
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "name": "Scene",
+   "nodes": [
+    4
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "Cantilever frame - Chrome-plated steel"
+  },
+  {
+   "mesh": 1,
+   "name": "Runner glides - Glides, black nylon / felt"
+  },
+  {
+   "mesh": 2,
+   "name": "Upholstered back - Faux leather, black"
+  },
+  {
+   "mesh": 3,
+   "name": "Upholstered seat - Faux leather, black"
+  },
+  {
+   "children": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "extras": {
+    "license": "CC0-1.0",
+    "original_design": true
+   },
+   "name": "Chrome cantilever chair, upholstered"
+  }
+ ],
+ "materials": [
+  {
+   "doubleSided": true,
+   "name": "Chrome-plated steel",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "roughnessFactor": 0.26,
+    "metallicFactor": 0.84
+   }
+  },
+  {
+   "doubleSided": true,
+   "name": "Glides, black nylon / felt",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0,
+    "roughnessFactor": 0.699999988079071
+   }
+  },
+  {
+   "doubleSided": true,
+   "name": "Faux leather, black",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0,
+    "roughnessFactor": 0.49,
+    "baseColorFactor": [
+     1,
+     1,
+     1,
+     1
+    ]
+   }
+  }
+ ],
+ "meshes": [
+  {
+   "name": "Cantilever frame - Chrome-plated steel",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "material": 0
+    }
+   ]
+  },
+  {
+   "name": "Runner glides - Glides, black nylon / felt",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 4,
+      "NORMAL": 5,
+      "TEXCOORD_0": 6
+     },
+     "indices": 7,
+     "material": 1
+    }
+   ]
+  },
+  {
+   "name": "Upholstered back - Faux leather, black",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 8,
+      "NORMAL": 9,
+      "TEXCOORD_0": 10
+     },
+     "indices": 11,
+     "material": 2
+    }
+   ]
+  },
+  {
+   "name": "Upholstered seat - Faux leather, black",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 12,
+      "NORMAL": 13,
+      "TEXCOORD_0": 14
+     },
+     "indices": 15,
+     "material": 2
+    }
+   ]
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 0,
+   "source": 1
+  },
+  {
+   "sampler": 0,
+   "source": 2
+  },
+  {
+   "source": 3
+  }
+ ],
+ "images": [
+  {
+   "name": "36bfb4a88fa72625",
+   "uri": "surface_00.png"
+  },
+  {
+   "name": "bc524fb524bced2e",
+   "uri": "surface_01.png"
+  },
+  {
+   "name": "5a145fbedb0efea2",
+   "uri": "surface_02.png"
+  },
+  {
+   "name": "saddle",
+   "uri": "registry_saddle.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 916,
+   "max": [
+    0.23250582814216614,
+    0.886315107345581,
+    0.2813296616077423
+   ],
+   "min": [
+    -0.23249512910842896,
+    1.8130000398741686e-06,
+    -0.24443499743938446
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 916,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 916,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 3252,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5126,
+   "count": 1536,
+   "max": [
+    0.23300760984420776,
+    0.007002812344580889,
+    0.26999589800834656
+   ],
+   "min": [
+    -0.23299510776996613,
+    1.8130000398741686e-06,
+    -0.22500477731227875
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5126,
+   "count": 1536,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5126,
+   "count": 1536,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 8,
+   "componentType": 5123,
+   "count": 7056,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 10,
+   "componentType": 5126,
+   "count": 384,
+   "max": [
+    0.22000490128993988,
+    0.8945584297180176,
+    -0.1861216276884079
+   ],
+   "min": [
+    -0.21999511122703552,
+    0.5154452919960022,
+    -0.26388534903526306
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 11,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 12,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 13,
+   "componentType": 5123,
+   "count": 1764,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 15,
+   "componentType": 5126,
+   "count": 384,
+   "max": [
+    0.2300049066543579,
+    0.5120018720626831,
+    0.25499653816223145
+   ],
+   "min": [
+    -0.22999511659145355,
+    0.45200181007385254,
+    -0.19500349462032318
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 16,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 17,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 18,
+   "componentType": 5123,
+   "count": 1764,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteLength": 10992,
+   "byteOffset": 0,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 10992,
+   "byteOffset": 10992,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 7328,
+   "byteOffset": 21984,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 6504,
+   "byteOffset": 29312,
+   "target": 34963
+  },
+  {
+   "buffer": 0,
+   "byteLength": 36835,
+   "byteOffset": 35816
+  },
+  {
+   "buffer": 0,
+   "byteLength": 18432,
+   "byteOffset": 72652,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 18432,
+   "byteOffset": 91084,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 12288,
+   "byteOffset": 109516,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 14112,
+   "byteOffset": 121804,
+   "target": 34963
+  },
+  {
+   "buffer": 0,
+   "byteLength": 36834,
+   "byteOffset": 135916
+  },
+  {
+   "buffer": 0,
+   "byteLength": 4608,
+   "byteOffset": 172752,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 4608,
+   "byteOffset": 177360,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 3072,
+   "byteOffset": 181968,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 3528,
+   "byteOffset": 185040,
+   "target": 34963
+  },
+  {
+   "buffer": 0,
+   "byteLength": 36834,
+   "byteOffset": 188568
+  },
+  {
+   "buffer": 0,
+   "byteLength": 4608,
+   "byteOffset": 225404,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 4608,
+   "byteOffset": 230012,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 3072,
+   "byteOffset": 234620,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 3528,
+   "byteOffset": 237692,
+   "target": 34963
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "chair.bin",
+   "byteLength": 241220
+  }
+ ]
+}

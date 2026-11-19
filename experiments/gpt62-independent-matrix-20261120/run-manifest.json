@@ -183,7 +183,7 @@
       "effort": "max",
       "input_commit": "f10188f67123a26a12b8b270e19fc204222511bb",
       "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "hifi",
@@ -196,6 +196,6 @@
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 24,
-  "completed_run_count": 22,
-  "collected_run_count": 22
+  "completed_run_count": 23,
+  "collected_run_count": 23
 }

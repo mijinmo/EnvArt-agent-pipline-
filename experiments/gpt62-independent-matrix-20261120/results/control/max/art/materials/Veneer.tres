@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+[ext_resource type="Texture2D" path="res://art/surfaces/rosewood_veneer_02/Veneer.jpg" id="col"]
+[ext_resource type="Texture2D" path="res://art/surfaces/rosewood_veneer_02/normal.jpg" id="n"]
+[ext_resource type="Texture2D" path="res://art/surfaces/rosewood_veneer_02/rough.jpg" id="r"]
+
+[resource]
+resource_name = "Veneer"
+albedo_texture = ExtResource("col")
+normal_enabled = true
+normal_scale = 0.37
+normal_texture = ExtResource("n")
+roughness = 0.84
+roughness_texture = ExtResource("r")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.909091, 0.909091, 0.909091)
+texture_filter = 5

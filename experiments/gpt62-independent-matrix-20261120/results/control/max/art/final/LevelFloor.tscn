@@ -1,0 +1,64 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://art/materials/RegistryFloor.tres" id="r1"]
+[ext_resource type="Material" path="res://art/materials/Terrazzo.tres" id="r2"]
+
+[sub_resource type="BoxMesh" id="s1"]
+size = Vector3(18.68, 0.064, 8.035)
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(18.68, 0.064, 7.565)
+
+[sub_resource type="BoxMesh" id="s3"]
+size = Vector3(7.01, 0.064, 0.77)
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(8.97, 0.064, 0.77)
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(2.7, 0.064, 0.738)
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(2.7, 0.064, 0.016)
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.6, 0.49, 0.294, 1)
+roughness = 0.45
+metallic = 0.54
+
+[node name="LevelFloor" type="Node3D"]
+
+[node name="NorthField" type="MeshInstance3D" parent="."]
+position = Vector3(0.98, -0.032, -8.4025)
+mesh = SubResource("s1")
+material_override = ExtResource("r1")
+
+[node name="SouthField" type="MeshInstance3D" parent="."]
+position = Vector3(0.98, -0.032, 0.1675)
+mesh = SubResource("s2")
+material_override = ExtResource("r1")
+
+[node name="WestField" type="MeshInstance3D" parent="."]
+position = Vector3(-4.855, -0.032, -4)
+mesh = SubResource("s3")
+material_override = ExtResource("r1")
+
+[node name="EastField" type="MeshInstance3D" parent="."]
+position = Vector3(5.835, -0.032, -4)
+mesh = SubResource("s4")
+material_override = ExtResource("r1")
+
+[node name="SillInlay" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.032, -4)
+mesh = SubResource("s5")
+material_override = ExtResource("r2")
+
+[node name="NorthMetalJoint" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.032, -4.377)
+mesh = SubResource("s6")
+material_override = SubResource("s7")
+
+[node name="SouthMetalJoint" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.032, -3.623)
+mesh = SubResource("s6")
+material_override = SubResource("s7")
