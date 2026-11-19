@@ -1,0 +1,138 @@
+{
+  "status": "running",
+  "model": "gpt-6.2-astra",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "backend": "Metal Forward+",
+  "resolution": [
+    1280,
+    800
+  ],
+  "art_passes": 2,
+  "coordinator_art_feedback": 0,
+  "planned_games": [
+    "control",
+    "sable",
+    "hifi",
+    "dredge"
+  ],
+  "planned_efforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "runs": [
+    {
+      "game": "control",
+      "effort": "low",
+      "input_commit": "c5565862ffbe538426dcaf5ffb276c190b44922a",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "running"
+    },
+    {
+      "game": "hifi",
+      "effort": "xhigh",
+      "input_commit": "03c93b2b96d8d17e669b1eab7185b23eabf99a6e",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "running"
+    },
+    {
+      "game": "sable",
+      "effort": "medium",
+      "input_commit": "14bfe34254e292a5f234132f9e4671b7ba3872d5",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "status": "running"
+    },
+    {
+      "game": "sable",
+      "effort": "xhigh",
+      "input_commit": "f52ca531d9437dc2ab8e75254cb641d1bbf99baa",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "status": "prepared"
+    },
+    {
+      "game": "hifi",
+      "effort": "high",
+      "input_commit": "c3e4c903811b38b4df115319db3c97c9630df8f9",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "prepared"
+    },
+    {
+      "game": "control",
+      "effort": "medium",
+      "input_commit": "9e8527f73f3e7b4c7f4307c1b2f3deed0d746e4f",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "prepared"
+    },
+    {
+      "game": "control",
+      "effort": "high",
+      "input_commit": "dedea25c5d54519a5904b0059ccb795660a3de7d",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "prepared"
+    },
+    {
+      "game": "control",
+      "effort": "xhigh",
+      "input_commit": "cb80fe870b2af30cade7c91df05369bdcdc937e9",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "prepared"
+    },
+    {
+      "game": "sable",
+      "effort": "low",
+      "input_commit": "9ff6aa3beb99830579eff8560c30eb85b07df8f2",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "status": "prepared"
+    },
+    {
+      "game": "sable",
+      "effort": "high",
+      "input_commit": "d78168b7407a0f073744e84c6c8d2fee6f66cb47",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "status": "prepared"
+    },
+    {
+      "game": "hifi",
+      "effort": "low",
+      "input_commit": "9047588f38737dbd48f04a23bd8d2de699c2b433",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "prepared"
+    },
+    {
+      "game": "hifi",
+      "effort": "medium",
+      "input_commit": "612cb95c824894dd70160d6131bd7d91aa07cf2d",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "medium",
+      "input_commit": "21e976b2661b14833fe3494716cc1214b4768d1f",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "xhigh",
+      "input_commit": "793ba862f9cac5923addf718bcc261b0820b640c",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "low",
+      "input_commit": "8e878d48e99450c13461ceda1ee39a483f4a545a",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "high",
+      "input_commit": "3afe42fe167e4713f36052b70db964c218683eba",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    }
+  ]
+}
