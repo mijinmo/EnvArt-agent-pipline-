@@ -1,0 +1,274 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="R0"]
+[ext_resource type="Script" path="res://review.gd" id="R1"]
+[ext_resource type="PackedScene" path="res://interior_lab.tscn" id="R2"]
+[ext_resource type="Material" path="res://assets/materials/Cast.tres" id="R3"]
+[ext_resource type="Material" path="res://assets/materials/Gunmetal.tres" id="R4"]
+[ext_resource type="Material" path="res://assets/materials/Tube.tres" id="R5"]
+[ext_resource type="PackedScene" path="res://assets/fixtures/desk.glb" id="R6"]
+[ext_resource type="PackedScene" path="res://assets/fixtures/chairDesk.glb" id="R7"]
+
+[sub_resource type="BoxMesh" id="M0"]
+size = Vector3(0.39, 4.5, 10.1)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M1"]
+size = Vector3(4, 4.5, 0.54)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M2"]
+size = Vector3(23, 0.28, 17)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M3"]
+size = Vector3(24, 0.48, 0.5)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M4"]
+size = Vector3(0.013, 4.45, 0.012)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M5"]
+size = Vector3(0.013, 4.45, 0.012)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M6"]
+size = Vector3(0.013, 4.45, 0.012)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M7"]
+size = Vector3(0.013, 4.45, 0.012)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M8"]
+size = Vector3(0.013, 4.45, 0.012)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M9"]
+size = Vector3(0.09, 0.17, 10)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M10"]
+size = Vector3(22, 0.22, 0.3)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M11"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M12"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[sub_resource type="BoxMesh" id="M13"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M14"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[sub_resource type="BoxMesh" id="M15"]
+size = Vector3(22, 0.22, 0.3)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M16"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M17"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[sub_resource type="BoxMesh" id="M18"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M19"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[sub_resource type="BoxMesh" id="M20"]
+size = Vector3(22, 0.22, 0.3)
+material = ExtResource("R3")
+
+[sub_resource type="BoxMesh" id="M21"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M22"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[sub_resource type="BoxMesh" id="M23"]
+size = Vector3(0.31, 0.09, 2.2)
+material = ExtResource("R4")
+
+[sub_resource type="BoxMesh" id="M24"]
+size = Vector3(0.21, 0.022, 2.05)
+material = ExtResource("R5")
+
+[node name="RecordsTransfer" type="Node3D"]
+script = ExtResource("R1")
+
+[node name="BaseLab" parent="." instance=ExtResource("R2")]
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="EastArchiveWall1" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.93, 2.25, -5.95)
+mesh = SubResource("M0")
+
+[node name="CornerReturn2" type="MeshInstance3D" parent="Art"]
+position = Vector3(8, 2.25, -1.01)
+mesh = SubResource("M1")
+
+[node name="Ceiling3" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 4.64, -4)
+mesh = SubResource("M2")
+
+[node name="BackSpandrel4" type="MeshInstance3D" parent="Art"]
+position = Vector3(0, 4.22, -12)
+mesh = SubResource("M3")
+
+[node name="FormJoint5" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.724, 2.24, -10.1)
+mesh = SubResource("M4")
+
+[node name="FormJoint6" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.724, 2.24, -7.95)
+mesh = SubResource("M5")
+
+[node name="FormJoint7" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.724, 2.24, -5.8)
+mesh = SubResource("M6")
+
+[node name="FormJoint8" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.724, 2.24, -3.65)
+mesh = SubResource("M7")
+
+[node name="FormJoint9" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.724, 2.24, -1.5)
+mesh = SubResource("M8")
+
+[node name="Skirt10" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.69, 0.085, -6)
+mesh = SubResource("M9")
+
+[node name="Soffit11" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 4.39, -9.3)
+mesh = SubResource("M10")
+
+[node name="Luminaire12" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.24, -9.3)
+mesh = SubResource("M11")
+
+[node name="Diffuser13" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.185, -9.3)
+mesh = SubResource("M12")
+
+[node name="Practical14" type="OmniLight3D" parent="Art"]
+position = Vector3(-0.1, 3.9, -9.3)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="Luminaire15" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.24, -9.3)
+mesh = SubResource("M13")
+
+[node name="Diffuser16" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.185, -9.3)
+mesh = SubResource("M14")
+
+[node name="Practical17" type="OmniLight3D" parent="Art"]
+position = Vector3(7.7, 3.9, -9.3)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="Soffit18" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 4.39, -5.7)
+mesh = SubResource("M15")
+
+[node name="Luminaire19" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.24, -5.7)
+mesh = SubResource("M16")
+
+[node name="Diffuser20" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.185, -5.7)
+mesh = SubResource("M17")
+
+[node name="Practical21" type="OmniLight3D" parent="Art"]
+position = Vector3(-0.1, 3.9, -5.7)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="Luminaire22" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.24, -5.7)
+mesh = SubResource("M18")
+
+[node name="Diffuser23" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.185, -5.7)
+mesh = SubResource("M19")
+
+[node name="Practical24" type="OmniLight3D" parent="Art"]
+position = Vector3(7.7, 3.9, -5.7)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="Soffit25" type="MeshInstance3D" parent="Art"]
+position = Vector3(1, 4.39, -2.1)
+mesh = SubResource("M20")
+
+[node name="Luminaire26" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.24, -2.1)
+mesh = SubResource("M21")
+
+[node name="Diffuser27" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.1, 4.185, -2.1)
+mesh = SubResource("M22")
+
+[node name="Practical28" type="OmniLight3D" parent="Art"]
+position = Vector3(-0.1, 3.9, -2.1)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="Luminaire29" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.24, -2.1)
+mesh = SubResource("M23")
+
+[node name="Diffuser30" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.7, 4.185, -2.1)
+mesh = SubResource("M24")
+
+[node name="Practical31" type="OmniLight3D" parent="Art"]
+position = Vector3(7.7, 3.9, -2.1)
+light_color = Color(0.91, 0.94, 0.88, 1)
+light_energy = 1.75
+omni_range = 5
+shadow_enabled = true
+light_size = 0.22
+
+[node name="desk32" parent="Art" instance=ExtResource("R6")]
+position = Vector3(8.82, 0, -4.12)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.6, 2.05, 2.2)
+
+[node name="chairDesk33" parent="Art" instance=ExtResource("R7")]
+position = Vector3(7.73, 0, -4.24)
+rotation_degrees = Vector3(0, 112, 0)
+scale = Vector3(1.49, 1.49, 1.49)

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+[ext_resource type="Texture2D" path="res://assets/materials/Wood051_1K-JPG_Color.jpg" id="0"]
+[ext_resource type="Texture2D" path="res://assets/materials/Wood051_1K-JPG_NormalGL.jpg" id="1"]
+[ext_resource type="Texture2D" path="res://assets/materials/Wood051_1K-JPG_Roughness.jpg" id="2"]
+[resource]
+albedo_color = Color(0.43, 0.27, 0.18, 1)
+roughness = 0.55
+metallic = 0
+albedo_texture = ExtResource("0")
+normal_enabled = true
+normal_scale = 0.45
+normal_texture = ExtResource("1")
+roughness_texture = ExtResource("2")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.6, 0.6, 0.6)

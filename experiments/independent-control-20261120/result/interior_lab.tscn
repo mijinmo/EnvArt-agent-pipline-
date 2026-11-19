@@ -1,0 +1,42 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="Lab"]
+[ext_resource type="Material" path="res://assets/materials/Burgundy.tres" id="Burgundy"]
+[ext_resource type="Material" path="res://assets/materials/Cast.tres" id="Cast"]
+[ext_resource type="Material" path="res://assets/materials/Gunmetal.tres" id="Gunmetal"]
+[ext_resource type="Material" path="res://assets/materials/Slab.tres" id="Slab"]
+[sub_resource type="Environment" id="Env"]
+background_mode = 1
+background_color = Color(0.14,0.16,0.17,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.66,0.71,0.72,1)
+ambient_light_energy = 0.48
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 1.1
+ssao_intensity = 2.2
+[node name="ControllerLab" instance=ExtResource("Lab")]
+[node name="WorldEnvironment" parent="."]
+environment = SubResource("Env")
+[node name="Sun" parent="."]
+visible = false
+[node name="Mesh" parent="World/Floor"]
+material_override = ExtResource("Slab")
+[node name="Mesh" parent="World/BackWall"]
+material_override = ExtResource("Cast")
+[node name="Mesh" parent="World/OcclusionWall"]
+material_override = ExtResource("Cast")
+[node name="Mesh" parent="World/OcclusionReturn"]
+material_override = ExtResource("Cast")
+[node name="Mesh" parent="World/DoorLeft"]
+material_override = ExtResource("Gunmetal")
+[node name="Mesh" parent="World/DoorRight"]
+material_override = ExtResource("Gunmetal")
+[node name="Mesh" parent="World/DoorLintel"]
+material_override = ExtResource("Gunmetal")
+[node name="Mesh" parent="World/JumpLow"]
+material_override = ExtResource("Burgundy")
+[node name="Mesh" parent="World/JumpMid"]
+material_override = ExtResource("Burgundy")
+[node name="Mesh" parent="World/JumpHigh"]
+material_override = ExtResource("Burgundy")

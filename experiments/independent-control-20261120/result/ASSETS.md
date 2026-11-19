@@ -1,0 +1,7 @@
+# 下载内容与适配
+
+- [Kenney Furniture Kit 2.0](https://kenney.nl/assets/furniture-kit)；从[第三方镜像包](https://github.com/WaviestSun/atelier-packs/releases/download/packs-2/kenney_furniture-kit.zip)下载；协调端未与作者原包逐文件比对，不能据此证明镜像未经修改。SHA256 e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0。压缩包中直接检查了 GLTF format 实际模型与 License.txt。包内为 CC0，允许商业使用、改造与原件再分发。保留原许可于 assets/licenses。每个随附 GLB 同名对应源文件，保留顶点、法线及网格层级，加地面中心父节点，调整原材质 PBR 常数；原包家具没有 PBR 纹理。desk 原件宽 0.734、高 0.384、深 0.392 m，chairDesk 原件高 0.608 m，根据工作区使用高度独立放置缩放。明亮的家具色卡与档案区落差大，首轮降低木材与金属亮度。主要负责桌椅、书架、箱子、台灯、收音机等叙事家具。墙片本体过薄且带住宅白漆顶/底线，门片的开口没有保护通行所需的真实尺寸，排除用其重建门洞。
+- Lennart Demes / ambientCG，[Concrete034](https://ambientcg.com/view?id=Concrete034)、[Concrete031](https://ambientcg.com/view?id=Concrete031)、[Wood051](https://ambientcg.com/view?id=Wood051)。实际下载各自 1K-JPG 免费包，提取 Color、NormalGL、Roughness；未使用 DX 法线和置换。原包 SHA256 依次为 5839d284d94ffb8d2a56df742ec522b13dd311c52dbd42b8fd33f0409ceedb81、3068e551435d3cdae3942017799d8871b940c88ebfaf5c2b87376972ae448fd6、debf3d60f69a09c30613dc95a94da49c8116160ab8a29f77ac8e32cc33f1a1c3。[作者的 CC0 许可](https://docs.ambientcg.com/license/)允许商用、修改和再分发；本地留存 CC0 正文。选择世界坐标三平面映射以保持墙体和墙角纹理尺度一致。所有源图均不含透明通道。
+- 小样 sampleA / sampleB 使用同一机位、灯和桌椅。相同 2.33 m 重复长度下，A 的浅色抹痕比 B 的深褐水渍更适合有人维护的室内局部；B 的脏斑在连续整墙上过于频繁。选择 A。A 在壁灯处有偏湿亮斑，最终工作区宜把强局部光移向灯罩与台面。
+
+第二轮文件在 assets/finish/ 下单独保存。桌、书架、收音机木壳、衣架和抽屉沿网格面法线主轴投影生成 UV，嵌入 Wood051 的 Color 图；桌椅等仍沿用原网格和法线。布椅、书脊、纸箱重设材质颜色。书架的三排承托面来自输入模型局部 Y = 0.13、0.37、0.61 m；乘以实例高度缩放后摆放。五张印刷 PNG（交接单、分流表、牌匾、箱签和钟面）为本组独立绘制。场景中的顶梁、灯具框、墙面包覆、门框衬板、文件夹及表面收边为按实测空间补齐的自制件。
