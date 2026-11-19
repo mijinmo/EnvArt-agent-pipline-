@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/enamel_print.gdshader" id="sh"]
+[ext_resource type="Texture2D" path="res://paint/deck.png" id="paper"]
+
+[resource]
+shader = ExtResource("sh")
+shader_parameter/coat = Color(1.00000,1.00000,1.00000,1)
+shader_parameter/surface_role = 1
+shader_parameter/local_light = 0.28
+shader_parameter/graphic_light = 0.8
+shader_parameter/hatch_strength = 0.23
+shader_parameter/artwork = ExtResource("paper")

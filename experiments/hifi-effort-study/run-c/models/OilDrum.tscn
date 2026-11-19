@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Barrel_Large.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Safety_yellow.tres" id="Safety_yellow"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+
+[node name="OilDrum" instance=ExtResource("asset")]
+
+[node name="Prop_Barrel_Large" parent="." index="0"]
+surface_material_override/0 = ExtResource("Safety_yellow")
+surface_material_override/1 = ExtResource("Slate")

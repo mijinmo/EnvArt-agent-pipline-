@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Platform_3Plates_service_quiet.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Deck.tres" id="Deck"]
+
+[node name="DeckPlate" instance=ExtResource("asset")]
+
+[node name="Platform_3Plates" parent="." index="0"]
+surface_material_override/0 = ExtResource("Deck")

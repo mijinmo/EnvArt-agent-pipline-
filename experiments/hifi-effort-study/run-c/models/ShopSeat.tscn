@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Chair.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Cherry.tres" id="Cherry"]
+[ext_resource type="Material" path="res://materials/Dark_vinyl.tres" id="Dark_vinyl"]
+
+[node name="ShopSeat" instance=ExtResource("asset")]
+
+[node name="Prop_Chair" parent="." index="0"]
+surface_material_override/0 = ExtResource("Dark_vinyl")
+surface_material_override/1 = ExtResource("Cherry")

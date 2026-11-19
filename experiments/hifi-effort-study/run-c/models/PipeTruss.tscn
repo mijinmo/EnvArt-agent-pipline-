@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Column_Pipes.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Pipe_enamel.tres" id="Pipe_enamel"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+[ext_resource type="Material" path="res://materials/Structure.tres" id="Structure"]
+
+[node name="PipeTruss" instance=ExtResource("asset")]
+
+[node name="Column_Pipes" parent="." index="0"]
+surface_material_override/0 = ExtResource("Pipe_enamel")
+surface_material_override/1 = ExtResource("Structure")
+surface_material_override/2 = ExtResource("Slate")

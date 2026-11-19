@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/WallAstra_Straight_Flat_quiet.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+[ext_resource type="Material" path="res://materials/Structure.tres" id="Structure"]
+[ext_resource type="Material" path="res://materials/Wall.tres" id="Wall"]
+
+[node name="BayWall" instance=ExtResource("asset")]
+
+[node name="WallAstra_Straight_Flat" parent="." index="0"]
+surface_material_override/0 = ExtResource("Wall")
+surface_material_override/1 = ExtResource("Structure")
+surface_material_override/2 = ExtResource("Slate")

@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Crate4.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Sea_glass.tres" id="Sea_glass"]
+
+[node name="PartsCase" instance=ExtResource("asset")]
+
+[node name="Prop_Crate4" parent="." index="0"]
+surface_material_override/0 = ExtResource("Sea_glass")

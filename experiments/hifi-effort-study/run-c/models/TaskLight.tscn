@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Light_Small.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Structure.tres" id="Structure"]
+
+[node name="TaskLight" instance=ExtResource("asset")]
+
+[node name="Prop_Light_Small" parent="." index="0"]
+surface_material_override/0 = ExtResource("Structure")

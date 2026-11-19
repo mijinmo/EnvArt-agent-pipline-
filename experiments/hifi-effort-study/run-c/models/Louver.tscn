@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Vent_Wide.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+[ext_resource type="Material" path="res://materials/Steel.tres" id="Steel"]
+
+[node name="Louver" instance=ExtResource("asset")]
+
+[node name="Prop_Vent_Wide" parent="." index="0"]
+surface_material_override/0 = ExtResource("Slate")
+surface_material_override/1 = ExtResource("Steel")

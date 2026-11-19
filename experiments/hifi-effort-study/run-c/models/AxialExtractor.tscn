@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/axial_extractor.glb" id="asset"]
+[ext_resource type="Material" path="res://materials/Machine.tres" id="Machine"]
+
+[node name="AxialExtractor" instance=ExtResource("asset")]
+
+[node name="Inlet_flange" parent="." index="0"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Rolled_lip" parent="." index="1"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Inlet_throat" parent="." index="2"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Swept_impeller" parent="." index="3"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Hub_cap" parent="." index="4"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Rear_plenum" parent="." index="5"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Pressed_octagonal_cowl" parent="." index="6"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Quarter_lock_track" parent="." index="7"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Captive_lugs" parent="." index="8"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Fasteners" parent="." index="9"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Hub_bolts" parent="." index="10"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Spindle" parent="." index="11"]
+surface_material_override/0 = ExtResource("Machine")

@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/TopCables_Straight.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Dark_vinyl.tres" id="Dark_vinyl"]
+[ext_resource type="Material" path="res://materials/Sea_glass.tres" id="Sea_glass"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+[ext_resource type="Material" path="res://materials/Structure.tres" id="Structure"]
+
+[node name="Services" instance=ExtResource("asset")]
+
+[node name="TopCables_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("Structure")
+surface_material_override/1 = ExtResource("Slate")
+surface_material_override/2 = ExtResource("Dark_vinyl")
+surface_material_override/3 = ExtResource("Sea_glass")

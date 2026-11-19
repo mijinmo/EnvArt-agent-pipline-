@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Door_Frame_Square_service.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+
+[node name="DoorCasting" instance=ExtResource("asset")]
+
+[node name="Door_Frame_Square" parent="." index="0"]
+surface_material_override/0 = ExtResource("Slate")

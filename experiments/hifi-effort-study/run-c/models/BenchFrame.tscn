@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Desk_Medium.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Slate.tres" id="Slate"]
+[ext_resource type="Material" path="res://materials/Steel.tres" id="Steel"]
+[ext_resource type="Material" path="res://materials/Structure.tres" id="Structure"]
+
+[node name="BenchFrame" instance=ExtResource("asset")]
+
+[node name="Prop_Desk_Medium" parent="." index="0"]
+surface_material_override/0 = ExtResource("Structure")
+surface_material_override/1 = ExtResource("Steel")
+surface_material_override/2 = ExtResource("Slate")

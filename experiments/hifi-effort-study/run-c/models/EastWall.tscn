@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/WallBand_Straight_service_quiet.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/Upper_cladding.tres" id="Upper_cladding"]
+[ext_resource type="Material" path="res://materials/Wall.tres" id="Wall"]
+
+[node name="EastWall" instance=ExtResource("asset")]
+
+[node name="WallBand_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("Upper_cladding")
+surface_material_override/1 = ExtResource("Wall")

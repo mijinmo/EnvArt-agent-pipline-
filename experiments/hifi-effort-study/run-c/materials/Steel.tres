@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/enamel_print.gdshader" id="sh"]
+[ext_resource type="Texture2D" path="res://art/T_Trim_01_BaseColor_Red_steel_quiet.png" id="trim"]
+
+[resource]
+shader = ExtResource("sh")
+shader_parameter/coat = Color(0.59216,0.67059,0.69020,1)
+shader_parameter/surface_role = 0
+shader_parameter/local_light = 0.34
+shader_parameter/graphic_light = 0
+shader_parameter/hatch_strength = 0.23
+shader_parameter/source_trim = ExtResource("trim")
+shader_parameter/trim_ink = 0.72
