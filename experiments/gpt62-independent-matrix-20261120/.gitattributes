@@ -1,0 +1,3 @@
+# glTF buffers can lack a NUL in Git's text-detection prefix. Preserve raw bytes.
+*.bin binary
+*.glb binary
