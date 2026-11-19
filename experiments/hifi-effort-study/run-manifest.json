@@ -1,0 +1,11 @@
+{
+  "model": "gpt-6.2-astra",
+  "base_commit": "7205027",
+  "starting_scene_commit": "70ca3df",
+  "runs": {
+    "run-a": "high",
+    "run-b": "low",
+    "run-c": "xhigh",
+    "run-d": "medium"
+  }
+}
