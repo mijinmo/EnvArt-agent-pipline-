@@ -6411,7 +6411,7 @@
         "Producer reviewed 860px JPEG previews rather than original-resolution PNGs; final anonymous review uses the original 1280x800 images."
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-medium",
       "archived_scene_dependencies": [
         {
@@ -6696,7 +6696,7 @@
         "Quaternius historic packs came from a disclosed third-party mirror with a retained Quaternius CC0 statement; byte equivalence against the original historical author downloads was not independently established."
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-low",
       "frozen_contract_check": {
         "reference_image_changes": [],
@@ -7097,7 +7097,7 @@
         "Producer kept before-fix images privately; coordinator archived nine original technical evidence PNGs after completion without changing any source scene."
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-xhigh",
       "frozen_contract_check": {
         "reference_image_changes": [],
@@ -7481,7 +7481,7 @@
         "Coordinator preserved three previously private before-fix original PNGs and the before-fix scene, without editing source delivery."
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-high",
       "frozen_contract_check": {
         "reference_image_changes": [],
@@ -7922,7 +7922,7 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "Kenney Town / Pirate / Food 作者发布包 + Poly Haven 旧木板和石地漫反射；保留真实构件、重投 UV 与色值，补弹簧秤、鱼皮、渔网、收货单和分面远岸。",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-max",
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison complete"
     },
     "ultra": {
       "game": "dredge",
@@ -8276,7 +8276,7 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "Kenney Town 1.0 / Food 1.2 / Pirate 1.1 旧版 OBJ 镜像；转换 GLB、保留材质分区并重投 UV，补鱼皮、吊秤、网绳、渔业标识和海岸天空。",
       "preserved_history_ref": "refs/envart-trials/20261120/dredge-ultra",
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison complete"
     }
   }
 }

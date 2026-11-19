@@ -25,5 +25,35 @@
     "linked_markdown_sha256": "aaf19273c3c27685d2478326aabd6a80f5d8e9f70ac6ce34cb1df6d68ffb2623",
     "review_input_manifest_sha256": "8ce5184fbc57e00f04e8d17f0cbf445c8b48ccdb2b007e4191a89ed1da0eb8b9",
     "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
+  },
+  "dredge": {
+    "sessions": [
+      "01a1f569-7c64-7c01-bcd7-3aaa3e8d22bd"
+    ],
+    "actual_contexts": [
+      {
+        "model": "gpt-6.2-astra",
+        "effort": "xhigh",
+        "approval_policy": "never"
+      }
+    ],
+    "issues": [],
+    "required_image_count": 42,
+    "missing_declared_views": [],
+    "changed_input_files": [],
+    "tool_call_count": 27,
+    "access_flag_count": 0,
+    "review_sha256": "da7b606cfd79b03e9471a75f832da27731bc1b7c6dfcff3e460a45a3408c63c2",
+    "manual_view_and_access_review": "completed",
+    "actual_image_coverage": "Inspected stored view/set helpers and all invocations: 36 candidate original PNGs plus three whitebox originals; references 01/03 direct originals, reference 02 retried as PNG then decoded to same-pixel-size JPEG in memory using ImageIO and displayed via image(). All 42 source images covered; frozen image files unchanged. Candidate calls from 2026-11-19T20:06:06.896Z to 20:07:24.138Z.",
+    "access_review": "All 27 recorded calls reviewed; own package text/images, installed system image frameworks and own report writes only. No access flags, network calls, producer source/effort/usage reads or further delegation found. All frozen input hashes unchanged.",
+    "limitations": [
+      "Pier reference 02 required a same-resolution lossy JPEG display conversion after PNG display attempts; candidate first/final images used the unchanged original PNG files."
+    ],
+    "coordinator_crosscheck": "Subsequently viewed C/xhigh final all three, D/max final all three, E/ultra final close. Confirmed concrete workflow/detail versus architecture/depth tradeoffs, bright-sign distraction, shelf/scale overlap and dark clustered gear. Coordinator check is not blind.",
+    "original_markdown_sha256": "777027652eb4b4c27a9fc70ebec62955df8ac6da9bb7bb211babbf81ddafac20",
+    "linked_markdown_sha256": "f606ace15026555a23e94e5457c5ca2db52ae83e7e002eb6508a7bff465f777c",
+    "review_input_manifest_sha256": "4cdecca11b09ecd7d55d6aba68346bcbc59b501001b3b3dacb967dd40f1ab002",
+    "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
   }
 }
