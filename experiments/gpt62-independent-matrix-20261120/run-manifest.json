@@ -134,12 +134,68 @@
       "effort": "high",
       "input_commit": "3afe42fe167e4713f36052b70db964c218683eba",
       "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "completed"
+    },
+    {
+      "game": "sable",
+      "effort": "max",
+      "input_commit": "321b9373c09fdc4cfa27b5864cb27e31f5e25773",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
       "status": "running"
+    },
+    {
+      "game": "sable",
+      "effort": "ultra",
+      "input_commit": "4d036ee6ba523bc4a25539efe358b8f478c93dec",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "status": "running"
+    },
+    {
+      "game": "control",
+      "effort": "ultra",
+      "input_commit": "69f117fc9fed4e2d79d3a3b65810945a90f5f2c6",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "running"
+    },
+    {
+      "game": "hifi",
+      "effort": "ultra",
+      "input_commit": "0502ed235dc16706faba74d2a8a4a834beccd9e7",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "max",
+      "input_commit": "6b3f1fdbf75026e4fcf3c1ffc1ddd26b7fa584c8",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    },
+    {
+      "game": "dredge",
+      "effort": "ultra",
+      "input_commit": "2e1bccf479fd9f5b0f35a670e8929bcbf09fda5e",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "status": "prepared"
+    },
+    {
+      "game": "control",
+      "effort": "max",
+      "input_commit": "f10188f67123a26a12b8b270e19fc204222511bb",
+      "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
+      "status": "prepared"
+    },
+    {
+      "game": "hifi",
+      "effort": "max",
+      "input_commit": "9e961bdc4d084a017cfa9af92c77ffa8ea6cf857",
+      "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
+      "status": "prepared"
     }
   ],
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
-  "prepared_run_count": 16,
-  "completed_run_count": 15,
-  "collected_run_count": 15
+  "prepared_run_count": 24,
+  "completed_run_count": 16,
+  "collected_run_count": 16
 }

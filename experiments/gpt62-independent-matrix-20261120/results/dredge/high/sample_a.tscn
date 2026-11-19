@@ -1,0 +1,274 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/oak.png" id="e0"]
+[ext_resource type="Texture2D" path="res://art/surfaces/tarwood.png" id="e1"]
+[ext_resource type="Texture2D" path="res://art/surfaces/pine.png" id="e2"]
+[ext_resource type="Texture2D" path="res://art/surfaces/lime.png" id="e3"]
+[ext_resource type="Script" path="res://review.gd" id="e4"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e5"]
+[ext_resource type="Texture2D" path="res://art/surfaces/deck.png" id="e6"]
+[ext_resource type="Texture2D" path="res://art/surfaces/limestone.png" id="e7"]
+[ext_resource type="PackedScene" path="res://art/town/wall.gltf" id="e8"]
+[ext_resource type="PackedScene" path="res://art/town/wall-window-shutters.gltf" id="e9"]
+[ext_resource type="PackedScene" path="res://art/town/stall-bench.gltf" id="e10"]
+[ext_resource type="PackedScene" path="res://art/food/cutting-board.gltf" id="e11"]
+[ext_resource type="PackedScene" path="res://art/food/fish.gltf" id="e12"]
+[ext_resource type="PackedScene" path="res://art/food/cooking-knife-chopping.gltf" id="e13"]
+[ext_resource type="PackedScene" path="res://art/pirate/barrel.gltf" id="e14"]
+[ext_resource type="PackedScene" path="res://art/pirate/crate.gltf" id="e15"]
+
+[sub_resource type="StandardMaterial3D" id="mOak"]
+roughness = 0.84
+albedo_texture = ExtResource("e0")
+uv1_scale = Vector3(1, 1, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mTar"]
+roughness = 0.84
+albedo_texture = ExtResource("e1")
+uv1_scale = Vector3(1, 1, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mLightPine"]
+roughness = 0.84
+albedo_texture = ExtResource("e2")
+uv1_scale = Vector3(1, 1, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mLime"]
+roughness = 0.84
+albedo_texture = ExtResource("e3")
+uv1_scale = Vector3(1, 1, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mIron"]
+roughness = 0.84
+albedo_color = Color(0.20000, 0.24314, 0.25098, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mRed"]
+roughness = 0.84
+albedo_color = Color(0.54902, 0.24706, 0.20784, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mHemp"]
+roughness = 0.84
+albedo_color = Color(0.64314, 0.54118, 0.37647, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mBrass"]
+roughness = 0.84
+albedo_color = Color(0.72157, 0.58039, 0.35686, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mDeepBlue"]
+roughness = 0.84
+albedo_color = Color(0.15686, 0.24314, 0.26275, 1)
+
+
+[sub_resource type="ProceduralSkyMaterial" id="HarborSky"]
+sky_top_color = Color(0.33333, 0.42353, 0.47059, 1)
+sky_horizon_color = Color(0.83529, 0.71373, 0.63529, 1)
+ground_horizon_color = Color(0.63922, 0.65882, 0.64706, 1)
+ground_bottom_color = Color(0.29020, 0.38431, 0.40000, 1)
+sky_curve = 0.26
+sun_angle_max = 9.0
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("HarborSky")
+
+[sub_resource type="Environment" id="Weather"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.73725, 0.78039, 0.83529, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 2
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 1.0
+ssao_intensity = 1.55
+fog_enabled = true
+fog_density = 0.003
+fog_light_color = Color(0.71373, 0.67451, 0.63137, 1)
+
+[sub_resource type="StandardMaterial3D" id="mDeckCaps"]
+roughness = 0.84
+albedo_texture = ExtResource("e6")
+uv1_scale = Vector3(1.5, 1, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mQuay"]
+roughness = 0.84
+albedo_color = Color(0.63137, 0.64314, 0.60784, 1)
+albedo_texture = ExtResource("e7")
+uv1_scale = Vector3(16, 16, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="mBackQuay"]
+roughness = 0.84
+albedo_color = Color(0.67451, 0.68235, 0.66667, 1)
+albedo_texture = ExtResource("e3")
+uv1_scale = Vector3(9, 2, 1)
+
+
+[sub_resource type="BoxMesh" id="box15"]
+size = Vector3(0.41, 3, 10)
+
+[sub_resource type="BoxMesh" id="box16"]
+size = Vector3(4, 3, 0.43)
+
+[node name="NorthSound" type="Node3D"]
+script = ExtResource("e4")
+
+[node name="BaseLab" parent="." instance=ExtResource("e5")]
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-32, -116, 0)
+light_color = Color(1.00000, 0.83137, 0.65490, 1)
+light_energy = 1.35
+shadow_enabled = true
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Weather")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("mDeckCaps")
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("mQuay")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("mBackQuay")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="ShedWalls" type="Node3D" parent="Art"]
+position = Vector3(0, 0, 0)
+
+
+[node name="LongWallCore" type="MeshInstance3D" parent="Art/ShedWalls"]
+position = Vector3(10.04, 1.5, -6)
+mesh = SubResource("box15")
+material_override = SubResource("mDeepBlue")
+
+[node name="EndWallCore" type="MeshInstance3D" parent="Art/ShedWalls"]
+position = Vector3(8, 1.5, -0.98)
+mesh = SubResource("box16")
+material_override = SubResource("mDeepBlue")
+
+[node name="Bay1" parent="Art/ShedWalls" instance=ExtResource("e8")]
+position = Vector3(9.84, 0, -10)
+scale = Vector3(2.2, 3, 2)
+
+
+[node name="Bay2" parent="Art/ShedWalls" instance=ExtResource("e9")]
+position = Vector3(9.84, 0, -8)
+scale = Vector3(1.257143, 3, 2)
+
+
+[node name="Bay3" parent="Art/ShedWalls" instance=ExtResource("e8")]
+position = Vector3(9.84, 0, -6)
+scale = Vector3(2.2, 3, 2)
+
+
+[node name="Bay4" parent="Art/ShedWalls" instance=ExtResource("e9")]
+position = Vector3(9.84, 0, -4)
+scale = Vector3(1.257143, 3, 2)
+
+
+[node name="Bay5" parent="Art/ShedWalls" instance=ExtResource("e8")]
+position = Vector3(9.84, 0, -2)
+scale = Vector3(2.2, 3, 2)
+
+
+[node name="Return1" parent="Art/ShedWalls" instance=ExtResource("e8")]
+position = Vector3(7, 0, -1.16)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2, 3, 2)
+
+
+[node name="Return2" parent="Art/ShedWalls" instance=ExtResource("e8")]
+position = Vector3(9, 0, -1.16)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2, 3, 2)
+
+
+[node name="ReceivingBench" type="Node3D" parent="Art"]
+position = Vector3(0, 0, 0)
+
+
+[node name="Bench" parent="Art/ReceivingBench" instance=ExtResource("e10")]
+position = Vector3(9.02, 0.002, -4.67)
+scale = Vector3(3.923077, 4.523254, 3.457447)
+
+
+[node name="Board" parent="Art/ReceivingBench" instance=ExtResource("e11")]
+position = Vector3(8.96, 1.022, -4.97)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(1.103448, 0.9166667, 1.195122)
+
+
+[node name="Pollock" parent="Art/ReceivingBench" instance=ExtResource("e12")]
+position = Vector3(8.91, 1.19, -4.98)
+rotation_degrees = Vector3(0, 8, 86)
+scale = Vector3(1.061508, 1.055242, 1.192044)
+
+
+[node name="Cleaver" parent="Art/ReceivingBench" instance=ExtResource("e13")]
+position = Vector3(8.66, 1.077, -4.52)
+rotation_degrees = Vector3(0, -28, 0)
+scale = Vector3(0.7666667, 0.8, 0.6736415)
+
+
+[node name="BrineCask" parent="Art/ReceivingBench" instance=ExtResource("e14")]
+position = Vector3(9.13, 0.006, -6.94)
+scale = Vector3(0.6062429, 0.7973035, 0.6062429)
+
+
+[node name="TransitBox" parent="Art/ReceivingBench" instance=ExtResource("e15")]
+position = Vector3(8.77, 0.008, -2.1)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(0.8812616, 0.7402597, 0.6035141)
+
+
+[editable path="BaseLab"]
