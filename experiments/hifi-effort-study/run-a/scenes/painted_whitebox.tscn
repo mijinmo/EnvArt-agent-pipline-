@@ -1,0 +1,346 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" path="res://source/grid.gdshader" id="5_grid"]
+
+[sub_resource type="StandardMaterial3D" id="Grid"]
+albedo_color = Color(0.27059,0.33725,0.39216,1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="Stone"]
+albedo_color = Color(0.21961,0.27843,0.36078,1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="Orange"]
+albedo_color = Color(0.39608,0.41961,0.48627,1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.18431,0.28627,0.34902,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[node name="Whitebox" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+position = Vector3(0, -0.25, 0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("FloorMesh")
+material_override = SubResource("Grid")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2, -12)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/BackWall"]
+mesh = SubResource("BackWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" type="StaticBody3D" parent="World"]
+position = Vector3(10, 1.5, -6)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionWall"]
+mesh = SubResource("OcclusionWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionWall"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" type="StaticBody3D" parent="World"]
+position = Vector3(8, 1.5, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionReturn"]
+mesh = SubResource("OcclusionReturnMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionReturn"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" type="StaticBody3D" parent="World"]
+position = Vector3(-0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLeft"]
+mesh = SubResource("DoorLeftMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLeft"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" type="StaticBody3D" parent="World"]
+position = Vector3(0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorRight"]
+mesh = SubResource("DoorRightMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorRight"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLintel"]
+mesh = SubResource("DoorLintelMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLintel"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Ramp"]
+mesh = SubResource("RampMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Ramp"]
+shape = SubResource("RampShape")
+
+[node name="Landing" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 1, -7)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Landing"]
+mesh = SubResource("LandingMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Landing"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.1, 2.0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step1"]
+mesh = SubResource("Step1Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.2, 1.4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step2"]
+mesh = SubResource("Step2Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step2"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.30000000000000004, 0.8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step3"]
+mesh = SubResource("Step3Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step3"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.4, 0.20000000000000018)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step4"]
+mesh = SubResource("Step4Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step4"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.2, 1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpLow"]
+mesh = SubResource("JumpLowMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpLow"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.45, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpMid"]
+mesh = SubResource("JumpMidMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpMid"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" type="StaticBody3D" parent="World"]
+position = Vector3(3, 0.7, -3)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpHigh"]
+mesh = SubResource("JumpHighMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpHigh"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" type="StaticBody3D" parent="World"]
+position = Vector3(0, 0.01, 8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/SpawnPad"]
+mesh = SubResource("SpawnPadMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/SpawnPad"]
+shape = SubResource("SpawnPadShape")
