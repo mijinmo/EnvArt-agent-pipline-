@@ -1,0 +1,265 @@
+[gd_scene load_steps=29 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/wall.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/lime.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/rendered_wall.obj" id="3"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/pillar.obj" id="4"]
+[ext_resource type="Material" path="res://art/materials/workstone.tres" id="5"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="6"]
+[ext_resource type="Material" path="res://art/materials/enamel.tres" id="7"]
+[ext_resource type="Material" path="res://art/materials/basalt.tres" id="8"]
+[ext_resource type="Material" path="res://art/materials/caskwood.tres" id="9"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/floor_foundation_allsides.obj" id="10"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/floor_wood_large.obj" id="11"]
+[ext_resource type="Material" path="res://art/materials/freight.tres" id="12"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/floor_tile_large.obj" id="13"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/floor_tile_big_grate.obj" id="14"]
+
+[ext_resource type="Material" path="res://art/final/materials/old_flagstone.tres" id="flag"]
+
+[ext_resource type="Material" path="res://art/final/materials/freight.tres" id="dock"]
+
+[ext_resource type="PackedScene" path="res://art/final/paving_beds.tscn" id="f_MortarBeds"]
+
+[ext_resource type="PackedScene" path="res://art/final/skid_hardware.tscn" id="f_ApronInfeed"]
+
+[ext_resource type="PackedScene" path="res://art/final/skid_hardware.tscn" id="f_ApronSorting"]
+
+[ext_resource type="PackedScene" path="res://art/final/skid_hardware.tscn" id="f_ApronOutfeed"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(10.12, 0.099, 0.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2"]
+size = Vector3(10.141, 0.067, 0.68)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3"]
+size = Vector3(4.14, 0.099, 0.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4"]
+size = Vector3(4.161, 0.067, 0.68)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5"]
+size = Vector3(24.06, 0.086, 0.56)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6"]
+size = Vector3(24, 0.13, 0.505)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7"]
+size = Vector3(1.49, 0.068, 1.49)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8"]
+size = Vector3(0.052, 0.006, 1.45)
+
+[node name="YardMasonry" type="Node3D"]
+
+[node name="EastWall" type="Node3D" parent="."]
+
+[node name="BondedBay1" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.965, 0, -9.333333)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(0.833333, 0.7725, 0.59)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="LimeRenderedBay" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.965, 0, -6)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(0.833333, 0.772, 0.585)
+mesh = ExtResource("3")
+material_override = ExtResource("2")
+
+[node name="BondedBay3" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.965, 0, -2.666667)
+rotation = Vector3(0, -1.570796, 0)
+scale = Vector3(0.833333, 0.7725, 0.59)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="ReturnFace" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(8, 0, -1)
+scale = Vector3(1, 0.775, 0.62)
+mesh = ExtResource("3")
+material_override = ExtResource("2")
+
+[node name="CornerShoe" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.81, 0, -1.065)
+scale = Vector3(0.353333, 0.7925, 0.386667)
+mesh = ExtResource("4")
+material_override = ExtResource("5")
+
+[node name="SouthEnd" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(6.14, 0, -1)
+scale = Vector3(0.353333, 0.7925, 0.386667)
+mesh = ExtResource("4")
+material_override = ExtResource("5")
+
+[node name="NorthEnd" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.96, 0, -10.84)
+scale = Vector3(0.353333, 0.7925, 0.386667)
+mesh = ExtResource("4")
+material_override = ExtResource("5")
+
+[node name="EastBed" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.965, 3.09, -6)
+rotation = Vector3(0, 1.570796, 0)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("6")
+
+[node name="EastCoping" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(9.965, 3.173, -6)
+rotation = Vector3(0, 1.570796, 0)
+mesh = SubResource("BoxMesh_2")
+material_override = ExtResource("7")
+
+[node name="SouthBed" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(8, 3.09, -1)
+mesh = SubResource("BoxMesh_3")
+material_override = ExtResource("6")
+
+[node name="SouthCoping" type="MeshInstance3D" parent="EastWall"]
+position = Vector3(8, 3.173, -1)
+mesh = SubResource("BoxMesh_4")
+material_override = ExtResource("7")
+
+[node name="BoundaryCap" type="MeshInstance3D" parent="."]
+position = Vector3(0, 4, -12)
+mesh = SubResource("BoxMesh_5")
+material_override = ExtResource("8")
+
+[node name="BoundaryBed" type="MeshInstance3D" parent="."]
+position = Vector3(0, 3.82, -12)
+mesh = SubResource("BoxMesh_6")
+material_override = ExtResource("9")
+
+[node name="LoadingBlocks" type="Node3D" parent="."]
+
+[node name="Infeed" type="Node3D" parent="LoadingBlocks"]
+position = Vector3(1, 0, 1)
+
+[node name="StonePlinth" type="MeshInstance3D" parent="LoadingBlocks/Infeed"]
+position = Vector3(0, 0, 0)
+scale = Vector3(0.681818, 0.1525, 0.681818)
+mesh = ExtResource("10")
+material_override = ExtResource("2")
+
+[node name="Frame" type="MeshInstance3D" parent="LoadingBlocks/Infeed"]
+position = Vector3(0, 0.323, 0)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("7")
+
+[node name="Deck" type="MeshInstance3D" parent="LoadingBlocks/Infeed"]
+position = Vector3(0, 0.344, 0)
+scale = Vector3(0.375, 0.373333, 0.375)
+mesh = ExtResource("11")
+material_override = ExtResource("12")
+
+[node name="Strap1" type="MeshInstance3D" parent="LoadingBlocks/Infeed"]
+position = Vector3(-0.55, 0.397, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="Strap2" type="MeshInstance3D" parent="LoadingBlocks/Infeed"]
+position = Vector3(0.55, 0.397, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="Sorting" type="Node3D" parent="LoadingBlocks"]
+position = Vector3(1, 0, -1)
+
+[node name="StonePlinth" type="MeshInstance3D" parent="LoadingBlocks/Sorting"]
+position = Vector3(0, 0, 0)
+scale = Vector3(0.681818, 0.4025, 0.681818)
+mesh = ExtResource("10")
+material_override = ExtResource("2")
+
+[node name="Frame" type="MeshInstance3D" parent="LoadingBlocks/Sorting"]
+position = Vector3(0, 0.823, 0)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("7")
+
+[node name="Deck" type="MeshInstance3D" parent="LoadingBlocks/Sorting"]
+position = Vector3(0, 0.844, 0)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(0.375, 0.373333, 0.375)
+mesh = ExtResource("11")
+material_override = ExtResource("12")
+
+[node name="Strap1" type="MeshInstance3D" parent="LoadingBlocks/Sorting"]
+position = Vector3(-0.55, 0.897, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="Strap2" type="MeshInstance3D" parent="LoadingBlocks/Sorting"]
+position = Vector3(0.55, 0.897, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="Outfeed" type="Node3D" parent="LoadingBlocks"]
+position = Vector3(3, 0, -3)
+
+[node name="StonePlinth" type="MeshInstance3D" parent="LoadingBlocks/Outfeed"]
+position = Vector3(0, 0, 0)
+scale = Vector3(0.681818, 0.6525, 0.681818)
+mesh = ExtResource("10")
+material_override = ExtResource("2")
+
+[node name="Frame" type="MeshInstance3D" parent="LoadingBlocks/Outfeed"]
+position = Vector3(0, 1.323, 0)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("7")
+
+[node name="Deck" type="MeshInstance3D" parent="LoadingBlocks/Outfeed"]
+position = Vector3(0, 1.344, 0)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(0.375, 0.373333, 0.375)
+mesh = ExtResource("11")
+material_override = ExtResource("dock")
+
+[node name="Strap1" type="MeshInstance3D" parent="LoadingBlocks/Outfeed"]
+position = Vector3(-0.55, 1.397, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="Strap2" type="MeshInstance3D" parent="LoadingBlocks/Outfeed"]
+position = Vector3(0.55, 1.397, 0)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("6")
+
+[node name="ThresholdPaving" type="Node3D" parent="."]
+
+[node name="Flagstone1" type="MeshInstance3D" parent="ThresholdPaving"]
+position = Vector3(0, -0.072, -2.94)
+scale = Vector3(0.3925, 0.48, 0.355)
+mesh = ExtResource("13")
+material_override = ExtResource("flag")
+
+[node name="Flagstone2" type="MeshInstance3D" parent="ThresholdPaving"]
+position = Vector3(0, -0.072, -4.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(0.32, 0.48, 0.3225)
+mesh = ExtResource("13")
+material_override = ExtResource("flag")
+
+[node name="Flagstone3" type="MeshInstance3D" parent="ThresholdPaving"]
+position = Vector3(0, -0.072, -5.47)
+scale = Vector3(0.36, 0.48, 0.255)
+mesh = ExtResource("13")
+material_override = ExtResource("flag")
+
+[node name="SandTrap" type="MeshInstance3D" parent="ThresholdPaving"]
+position = Vector3(-1.26, -0.172, -3.22)
+scale = Vector3(0.14, 0.166667, 0.1525)
+mesh = ExtResource("14")
+material_override = ExtResource("12")
+
+[node name="MortarBeds" parent="ThresholdPaving" instance=ExtResource("f_MortarBeds")]
+
+[node name="ApronInfeed" parent="LoadingBlocks/Infeed" instance=ExtResource("f_ApronInfeed")]
+position = Vector3(0, 0.4, 0)
+
+[node name="ApronSorting" parent="LoadingBlocks/Sorting" instance=ExtResource("f_ApronSorting")]
+position = Vector3(0, 0.9, 0)
+
+[node name="ApronOutfeed" parent="LoadingBlocks/Outfeed" instance=ExtResource("f_ApronOutfeed")]
+position = Vector3(0, 1.4, 0)

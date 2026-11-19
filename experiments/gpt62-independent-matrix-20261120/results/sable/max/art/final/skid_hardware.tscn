@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/deck_fender.obj" id="1"]
+[ext_resource type="Material" path="res://art/final/materials/patinated_iron.tres" id="2"]
+[ext_resource type="Material" path="res://art/final/materials/fender_trim.tres" id="3"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(0.115, 0.085, 0.02)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.018
+bottom_radius = 0.018
+height = 0.006
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.005
+radial_segments = 10
+rings = 1
+
+[node name="LandingHardware" type="Node3D"]
+
+[node name="PressedSteelRail" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="SouthCleat0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.539, -0.124, 0.739)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("3")
+
+[node name="SouthRivet0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.539, -0.124, 0.746)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("4")
+
+[node name="SouthCleat1" type="MeshInstance3D" parent="."]
+position = Vector3(0.539, -0.124, 0.739)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("3")
+
+[node name="SouthRivet1" type="MeshInstance3D" parent="."]
+position = Vector3(0.539, -0.124, 0.746)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("4")
+
+[node name="NorthCleat0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.539, -0.124, -0.739)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("3")
+
+[node name="NorthRivet0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.539, -0.124, -0.746)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("4")
+
+[node name="NorthCleat1" type="MeshInstance3D" parent="."]
+position = Vector3(0.539, -0.124, -0.739)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("3")
+
+[node name="NorthRivet1" type="MeshInstance3D" parent="."]
+position = Vector3(0.539, -0.124, -0.746)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("4")
+
+[node name="EastStud0" type="MeshInstance3D" parent="."]
+position = Vector3(0.747, -0.125, -0.55)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("4")
+
+[node name="EastStud1" type="MeshInstance3D" parent="."]
+position = Vector3(0.747, -0.125, 0.55)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("4")
+
+[node name="WestStud0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.747, -0.125, -0.55)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("4")
+
+[node name="WestStud1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.747, -0.125, 0.55)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("4")

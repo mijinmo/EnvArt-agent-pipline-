@@ -1,0 +1,172 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/cistern_risers.obj" id="1"]
+[ext_resource type="Material" path="res://art/final/materials/pipe_green.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/cistern_couplings.obj" id="3"]
+[ext_resource type="Material" path="res://art/final/materials/pipe_joint.tres" id="4"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="5"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/shutoff_wheel.obj" id="7"]
+[ext_resource type="Material" path="res://art/final/materials/valve_red.tres" id="8"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="9"]
+[ext_resource type="Material" path="res://art/materials/enamel.tres" id="10"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/gauge_glass.obj" id="11"]
+[ext_resource type="Material" path="res://art/final/materials/cistern_cover.tres" id="12"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/fill_hose.obj" id="13"]
+[ext_resource type="Material" path="res://art/materials/charcoal.tres" id="14"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+top_radius = 0.079
+bottom_radius = 0.086
+height = 0.137
+radial_segments = 22
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.025
+bottom_radius = 0.023
+height = 0.112
+radial_segments = 14
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.021
+bottom_radius = 0.023
+height = 0.022
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.338
+bottom_radius = 0.342
+height = 0.055
+radial_segments = 48
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.312
+bottom_radius = 0.318
+height = 0.033
+radial_segments = 52
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6"]
+top_radius = 0.015
+bottom_radius = 0.018
+height = 0.021
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7"]
+top_radius = 0.042
+bottom_radius = 0.052
+height = 0.071
+radial_segments = 12
+rings = 1
+
+[node name="CisternConnection" type="Node3D"]
+
+[node name="PairedRisers" type="Node3D" parent="."]
+position = Vector3(7.71, 1.79, -1.158)
+rotation = Vector3(0, 3.141593, 0)
+
+[node name="EnamelPipes" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="UnionCollars" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("3")
+material_override = ExtResource("4")
+
+[node name="ValveBody" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0.084, -0.017, 0.343)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("5")
+
+[node name="ValveSpindle" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0.084, -0.017, 0.432)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("6")
+
+[node name="ShutoffWheel" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("7")
+material_override = ExtResource("8")
+
+[node name="WheelNut" type="MeshInstance3D" parent="PairedRisers"]
+position = Vector3(0.084, -0.017, 0.502)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("9")
+
+[node name="ManholeCover" type="Node3D" parent="."]
+position = Vector3(8.41, 1.91, -1.172)
+rotation = Vector3(0, 3.141593, 0)
+
+[node name="BackingFlange" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0, 0, 0.014)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("5")
+
+[node name="RemovableLid" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0, 0, 0.053)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("10")
+
+[node name="WaterMark" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0, 0, 0.071)
+scale = Vector3(0.598, 0.598, 0.598)
+mesh = ExtResource("11")
+material_override = ExtResource("12")
+
+[node name="Bolt0" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0.322, 0, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="Bolt1" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0.161, 0.27886, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="Bolt2" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(-0.161, 0.27886, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="Bolt3" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(-0.322, 0, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="Bolt4" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(-0.161, -0.27886, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="Bolt5" type="MeshInstance3D" parent="ManholeCover"]
+position = Vector3(0.161, -0.27886, 0.052)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("9")
+
+[node name="FillingHose" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("13")
+material_override = ExtResource("14")
+
+[node name="BungCoupling" type="MeshInstance3D" parent="."]
+position = Vector3(7.69, 1.168, -1.79)
+mesh = SubResource("CylinderMesh_7")
+material_override = ExtResource("9")

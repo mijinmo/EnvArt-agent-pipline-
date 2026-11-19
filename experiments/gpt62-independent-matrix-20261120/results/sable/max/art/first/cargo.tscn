@@ -1,0 +1,278 @@
+[gd_scene load_steps=37 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/flatweave.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/yard_weave.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/selvage.obj" id="3"]
+[ext_resource type="Material" path="res://art/materials/linen.tres" id="4"]
+[ext_resource type="Material" path="res://art/materials/caskwood.tres" id="5"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/floor_wood_large.obj" id="6"]
+[ext_resource type="Material" path="res://art/materials/freight.tres" id="7"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="8"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/bag.obj" id="9"]
+[ext_resource type="Material" path="res://art/materials/sackcloth.tres" id="10"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/bag_open.obj" id="11"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/bag_open_1.obj" id="12"]
+[ext_resource type="Material" path="res://art/materials/rock_salt.tres" id="13"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="14"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/box_large.obj" id="15"]
+[ext_resource type="PackedScene" path="res://art/first/sealed_lot.tscn" id="16"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/barrel_small.obj" id="17"]
+[ext_resource type="Material" path="res://art/materials/lake.tres" id="18"]
+[ext_resource type="Material" path="res://art/materials/sienna.tres" id="19"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="20"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/roll_ends.obj" id="21"]
+[ext_resource type="Material" path="res://art/materials/oat.tres" id="22"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/keg.obj" id="23"]
+[ext_resource type="PackedScene" path="res://art/first/water_jar.tscn" id="24"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/cup.obj" id="25"]
+[ext_resource type="Material" path="res://art/materials/porcelain.tres" id="26"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(0.105, 0.1, 1.49)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2"]
+size = Vector3(1.54, 0.036, 0.034)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.012
+bottom_radius = 0.014
+height = 0.231692
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.05
+bottom_radius = 0.044
+height = 0.066
+radial_segments = 14
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.125
+bottom_radius = 0.132
+height = 0.846
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6"]
+top_radius = 0.136
+bottom_radius = 0.136
+height = 0.056
+radial_segments = 30
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_7"]
+size = Vector3(0.072, 0.024, 0.071)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8"]
+top_radius = 0.063
+bottom_radius = 0.068
+height = 0.047
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_9"]
+top_radius = 0.023
+bottom_radius = 0.032
+height = 0.117034
+radial_segments = 14
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_10"]
+size = Vector3(0.125, 0.027, 0.027)
+
+[node name="BaggageAndProvisions" type="Node3D"]
+
+[node name="LoadersMat" type="Node3D" parent="."]
+
+[node name="Flatweave" type="MeshInstance3D" parent="LoadersMat"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="CutFringe" type="MeshInstance3D" parent="LoadersMat"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("3")
+material_override = ExtResource("4")
+
+[node name="ReceivingSled" type="Node3D" parent="."]
+position = Vector3(8.52, 0, -6.77)
+rotation = Vector3(0, 0.10472, 0)
+
+[node name="Runner0" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(-0.49, 0.05, 0)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("5")
+
+[node name="Runner1" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0.49, 0.05, 0)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("5")
+
+[node name="SlattedSkid" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0, 0.099, 0)
+scale = Vector3(0.385, 0.453333, 0.3875)
+mesh = ExtResource("6")
+material_override = ExtResource("7")
+
+[node name="EdgeBinder" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0, 0.14, 0.763)
+mesh = SubResource("BoxMesh_2")
+material_override = ExtResource("8")
+
+[node name="SealedSack1" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0.17, 0.168, -0.28)
+rotation = Vector3(0, 0.139626, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+mesh = ExtResource("9")
+material_override = ExtResource("10")
+
+[node name="SealedSack2" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0.18, 0.168, 0.29)
+rotation = Vector3(0, -0.069813, 0)
+scale = Vector3(0.86, 0.86, 0.86)
+mesh = ExtResource("9")
+material_override = ExtResource("4")
+
+[node name="SealedSack3" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(0.17, 0.443, -0.065)
+rotation = Vector3(0, 0.279253, 0)
+scale = Vector3(0.86, 0.86, 0.86)
+mesh = ExtResource("9")
+material_override = ExtResource("10")
+
+[node name="OpenSaltSack" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(-0.475, 0.169, 0.31)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(0.48, 0.6, 0.46)
+mesh = ExtResource("11")
+material_override = ExtResource("4")
+
+[node name="CoarseSalt" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(-0.475, 0.169, 0.31)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(0.48, 0.6, 0.46)
+mesh = ExtResource("12")
+material_override = ExtResource("13")
+
+[node name="ScoopHandle" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(-0.53, 0.5985, 0.24)
+rotation = Vector3(0.446275, -2.214297, 0)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("5")
+
+[node name="Scoop" type="MeshInstance3D" parent="ReceivingSled"]
+position = Vector3(-0.494, 0.485, 0.279)
+rotation = Vector3(0.261799, 0, 0.331613)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("14")
+
+[node name="BoundForKestrel" type="Node3D" parent="."]
+position = Vector3(9.06, 0, -8.32)
+rotation = Vector3(0, -0.15708, 0)
+
+[node name="TravelChest" type="MeshInstance3D" parent="BoundForKestrel"]
+position = Vector3(0, 0, 0)
+scale = Vector3(0.626667, 0.44, 0.493333)
+mesh = ExtResource("15")
+material_override = ExtResource("7")
+
+[node name="SealedConsignment" parent="BoundForKestrel" instance=ExtResource("16")]
+position = Vector3(0.038, 0.662, 0.052)
+rotation = Vector3(0, 0.20944, 0)
+
+[node name="UprightCask" type="MeshInstance3D" parent="."]
+position = Vector3(8.03, 0, -8.12)
+rotation = Vector3(0, -0.10472, 0)
+scale = Vector3(0.71, 0.71, 0.71)
+mesh = ExtResource("17")
+material_override = ExtResource("7")
+
+[node name="CanvasRoll" type="Node3D" parent="."]
+position = Vector3(9.097, 0.662, -8.553)
+rotation = Vector3(0, -0.15708, 0)
+
+[node name="Roll" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(0, 0.128, 0)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("18")
+
+[node name="CinchedStrap0" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(-0.23, 0.128, 0)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("19")
+
+[node name="Buckle0" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(-0.23, 0.252, 0.019)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("20")
+
+[node name="CinchedStrap1" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(0.23, 0.128, 0)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("19")
+
+[node name="Buckle1" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(0.23, 0.252, 0.019)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("20")
+
+[node name="SpiralledSelvages" type="MeshInstance3D" parent="CanvasRoll"]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("21")
+material_override = ExtResource("22")
+
+[node name="WaterIssue" type="Node3D" parent="."]
+position = Vector3(7.64, 0, -1.87)
+rotation = Vector3(0, 2.844887, 0)
+
+[node name="SpigotedCask" type="MeshInstance3D" parent="WaterIssue"]
+position = Vector3(0, 0, 0)
+scale = Vector3(0.57, 0.57, 0.57)
+mesh = ExtResource("23")
+material_override = ExtResource("7")
+
+[node name="TapCollar" type="MeshInstance3D" parent="WaterIssue"]
+position = Vector3(0, 0.495, 0.541)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_8")
+material_override = ExtResource("20")
+
+[node name="TapSpout" type="MeshInstance3D" parent="WaterIssue"]
+position = Vector3(0, 0.462, 0.5975)
+rotation = Vector3(2.277569, 0, 0)
+mesh = SubResource("CylinderMesh_9")
+material_override = ExtResource("14")
+
+[node name="TapKey" type="MeshInstance3D" parent="WaterIssue"]
+position = Vector3(0, 0.571, 0.565)
+mesh = SubResource("BoxMesh_10")
+material_override = ExtResource("8")
+
+[node name="StonewareJar" parent="." instance=ExtResource("24")]
+position = Vector3(6.75, 0, -1.84)
+rotation = Vector3(0, -0.506145, 0)
+
+[node name="SmallTravelJar" parent="." instance=ExtResource("24")]
+position = Vector3(7.04, 0, -2.26)
+rotation = Vector3(0, 0.645772, 0)
+scale = Vector3(0.73,0.79,0.73)
+
+[node name="MeasuringCup" type="MeshInstance3D" parent="WaterIssue"]
+position = Vector3(0, 0, 0.641)
+mesh = ExtResource("25")
+material_override = ExtResource("26")
+
+[node name="EmptyReturnBox" type="MeshInstance3D" parent="."]
+position = Vector3(9.06, 0, -2.08)
+rotation = Vector3(0, 0.069813, 0)
+scale = Vector3(0.526667, 0.386667, 0.46)
+mesh = ExtResource("15")
+material_override = ExtResource("7")
+
+[node name="ReturnPacket" parent="." instance=ExtResource("16")]
+position = Vector3(9.06, 0.585, -2.06)
+rotation = Vector3(0, -0.226893, 0)

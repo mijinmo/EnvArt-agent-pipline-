@@ -1,0 +1,47 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/folded_lot.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/ochre.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/crossed_twine.obj" id="3"]
+[ext_resource type="Material" path="res://art/materials/cord.tres" id="4"]
+[ext_resource type="Material" path="res://art/final/materials/freight_tag.tres" id="5"]
+[ext_resource type="Material" path="res://art/materials/wax.tres" id="6"]
+
+[ext_resource type="Material" path="res://art/final/materials/wrapped_paper.tres" id="waxpaper"]
+
+[ext_resource type="PackedScene" path="res://art/final/parcel_ticket.tscn" id="f_ConsignmentTicket"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+size = Vector2(0.17500, 0.11200)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.037
+bottom_radius = 0.034
+height = 0.011
+radial_segments = 13
+rings = 1
+
+[node name="WaxedParcel" type="Node3D"]
+
+[node name="FoldedOilpaper" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("waxpaper")
+
+[node name="HempTwine" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("3")
+material_override = ExtResource("4")
+
+[node name="ConsignmentLabel" type="MeshInstance3D" parent="."]
+position = Vector3(-0.035, 0.226, 0.054)
+rotation = Vector3(-1.570796, -0.191986, 0)
+mesh = SubResource("QuadMesh_1")
+material_override = ExtResource("5")
+
+[node name="WaxSeal" type="MeshInstance3D" parent="."]
+position = Vector3(0.141, 0.231, -0.011)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("6")
+
+[node name="ConsignmentTicket" parent="." instance=ExtResource("f_ConsignmentTicket")]

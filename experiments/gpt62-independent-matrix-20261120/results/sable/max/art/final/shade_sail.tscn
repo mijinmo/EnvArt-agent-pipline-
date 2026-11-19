@@ -1,0 +1,281 @@
+[gd_scene load_steps=29 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/sailcloth.obj" id="1"]
+[ext_resource type="Material" path="res://art/final/materials/sun_sail.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/sail_valance.obj" id="3"]
+[ext_resource type="Material" path="res://art/materials/maroon.tres" id="4"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/OuterBoltRope.obj" id="5"]
+[ext_resource type="Material" path="res://art/materials/linen.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/NearBoltRope.obj" id="7"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/FarBoltRope.obj" id="8"]
+[ext_resource type="Material" path="res://art/materials/inkblue.tres" id="9"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="10"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="11"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="12"]
+[ext_resource type="Material" path="res://art/materials/cord.tres" id="13"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/signal_line.obj" id="14"]
+[ext_resource type="Material" path="res://art/materials/charcoal.tres" id="15"]
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/route_pennant.obj" id="16"]
+[ext_resource type="Material" path="res://art/materials/lake.tres" id="17"]
+[ext_resource type="Material" path="res://art/materials/ochre.tres" id="18"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+top_radius = 0.036
+bottom_radius = 0.046
+height = 2.831351
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.059
+bottom_radius = 0.06
+height = 0.083
+radial_segments = 14
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.059
+bottom_radius = 0.06
+height = 0.046
+radial_segments = 14
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.095
+bottom_radius = 0.117
+height = 0.05
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.018
+bottom_radius = 0.018
+height = 0.188481
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6"]
+top_radius = 0.035
+bottom_radius = 0.048
+height = 0.915492
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 0.155563
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_8"]
+size = Vector3(0.17, 0.12, 0.23)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_9"]
+top_radius = 0.036
+bottom_radius = 0.046
+height = 3.081242
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_10"]
+top_radius = 0.035
+bottom_radius = 0.048
+height = 0.990454
+radial_segments = 10
+rings = 1
+
+[node name="ShadeSail" type="Node3D"]
+
+[node name="WaxedCanvas" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="TurnedHem" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("3")
+material_override = ExtResource("4")
+
+[node name="OuterBoltRope" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("5")
+material_override = ExtResource("6")
+
+[node name="NearBoltRope" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("7")
+material_override = ExtResource("6")
+
+[node name="FarBoltRope" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("8")
+material_override = ExtResource("6")
+
+[node name="NorthSpar" type="Node3D" parent="."]
+
+[node name="Spar" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.1075, 1.415, -8.0475)
+rotation = Vector3(0.030896, 2.601173, 0)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("9")
+
+[node name="Ferrule0" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.086125, 0.07075, -8.011875)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("10")
+
+[node name="Ferrule1" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.08815, 0.1981, -8.01525)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("10")
+
+[node name="Ferrule2" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.1174, 2.0376, -8.064)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("10")
+
+[node name="Ferrule3" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.125725, 2.56115, -8.077875)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("11")
+
+[node name="Ferrule4" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.128785, 2.75359, -8.082975)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("11")
+
+[node name="Footplate" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.085, 0.025, -8.01)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("12")
+
+[node name="Lashing" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(7.155, 2.74, -8.0725)
+rotation = Vector3(0.301121, -2.034444, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("13")
+
+[node name="WallSpike" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(9.885, 3.5325, -7.72)
+rotation = Vector3(0.032775, -1.570796, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("12")
+
+[node name="WallTie" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(9.815, 3.905, -7.72)
+rotation = Vector3(0.785398, 1.570796, 0)
+mesh = SubResource("CylinderMesh_7")
+material_override = ExtResource("13")
+
+[node name="AnchorSocket" type="MeshInstance3D" parent="NorthSpar"]
+position = Vector3(9.87, 3.16, -7.72)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("10")
+
+[node name="SouthSpar" type="Node3D" parent="."]
+
+[node name="Spar" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.6875, 1.54, -1.6225)
+rotation = Vector3(0.02839, 0.54042, 0)
+mesh = SubResource("CylinderMesh_9")
+material_override = ExtResource("9")
+
+[node name="Ferrule0" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.666125, 0.077, -1.658125)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("10")
+
+[node name="Ferrule1" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.66815, 0.2156, -1.65475)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("10")
+
+[node name="Ferrule2" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.6974, 2.2176, -1.606)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("10")
+
+[node name="Ferrule3" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.705725, 2.7874, -1.592125)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("11")
+
+[node name="Ferrule4" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.708785, 2.99684, -1.587025)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("11")
+
+[node name="Footplate" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.665, 0.025, -1.66)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("12")
+
+[node name="Lashing" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(6.735, 2.99, -1.5975)
+rotation = Vector3(0.301121, -1.107149, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("13")
+
+[node name="WallSpike" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(9.885, 3.57, -2)
+rotation = Vector3(0.030294, -1.570796, 0)
+mesh = SubResource("CylinderMesh_10")
+material_override = ExtResource("12")
+
+[node name="WallTie" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(9.815, 3.98, -2)
+rotation = Vector3(0.785398, 1.570796, 0)
+mesh = SubResource("CylinderMesh_7")
+material_override = ExtResource("13")
+
+[node name="AnchorSocket" type="MeshInstance3D" parent="SouthSpar"]
+position = Vector3(9.87, 3.16, -2)
+mesh = SubResource("BoxMesh_8")
+material_override = ExtResource("10")
+
+[node name="SignalLine" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("14")
+material_override = ExtResource("15")
+
+[node name="RouteFlag1" type="MeshInstance3D" parent="."]
+position = Vector3(2.6796, 4.182352, -4.696)
+rotation = Vector3(0, 0.418879, 0.087266)
+scale = Vector3(1, 0.88, 1)
+mesh = ExtResource("16")
+material_override = ExtResource("4")
+
+[node name="RouteFlag2" type="MeshInstance3D" parent="."]
+position = Vector3(3.6212, 4.080668, -5.092)
+rotation = Vector3(0, 0.418879, -0.087266)
+mesh = ExtResource("16")
+material_override = ExtResource("6")
+
+[node name="RouteFlag3" type="MeshInstance3D" parent="."]
+position = Vector3(4.9908, 3.972508, -5.668)
+rotation = Vector3(0, 0.418879, 0.087266)
+scale = Vector3(1, 0.7, 1)
+mesh = ExtResource("16")
+material_override = ExtResource("17")
+
+[node name="RouteFlag4" type="MeshInstance3D" parent="."]
+position = Vector3(6.018, 3.9223, -6.1)
+rotation = Vector3(0, 0.418879, -0.087266)
+scale = Vector3(1, 0.9, 1)
+mesh = ExtResource("16")
+material_override = ExtResource("18")
+
+[node name="RouteFlag5" type="MeshInstance3D" parent="."]
+position = Vector3(7.3876, 3.896572, -6.676)
+rotation = Vector3(0, 0.418879, 0.087266)
+scale = Vector3(1, 0.68, 1)
+mesh = ExtResource("16")
+material_override = ExtResource("4")
+
+[node name="RouteFlag6" type="MeshInstance3D" parent="."]
+position = Vector3(8.3292, 3.906208, -7.072)
+rotation = Vector3(0, 0.418879, -0.087266)
+scale = Vector3(1, 0.85, 1)
+mesh = ExtResource("16")
+material_override = ExtResource("6")

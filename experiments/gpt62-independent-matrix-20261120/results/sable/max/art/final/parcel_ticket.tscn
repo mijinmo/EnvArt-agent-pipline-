@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/final/meshes/paper_tucks.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/cord.tres" id="2"]
+[ext_resource type="Material" path="res://art/final/materials/freight_tag.tres" id="3"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+size = Vector2(0.14800, 0.09100)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.008
+bottom_radius = 0.009
+height = 0.005
+radial_segments = 10
+rings = 1
+
+[node name="TiedWaybill" type="Node3D"]
+
+[node name="FoldAndTicketCord" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="HangingLotTag" type="MeshInstance3D" parent="."]
+position = Vector3(0.049, 0.132, 0.189)
+rotation = Vector3(0.05236, -0.034907, 0)
+mesh = SubResource("QuadMesh_1")
+material_override = ExtResource("3")
+
+[node name="TicketEyelet" type="MeshInstance3D" parent="."]
+position = Vector3(0.064, 0.158, 0.192)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("4")

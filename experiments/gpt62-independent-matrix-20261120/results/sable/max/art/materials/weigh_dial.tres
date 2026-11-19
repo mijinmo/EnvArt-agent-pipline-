@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://art/shaders/relay_surface.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://art/print/weigh_dial.png" id="2"]
+
+[resource]
+resource_name = "weigh dial"
+shader = ExtResource("1")
+shader_parameter/pigment = Color(1, 1, 1, 1)
+shader_parameter/surface_map = ExtResource("2")
+shader_parameter/mapping = 1
+shader_parameter/meters_per_tile = 3
+shader_parameter/band_mix = 0.76
+shader_parameter/tooth = 0.07
+shader_parameter/sheen = 0

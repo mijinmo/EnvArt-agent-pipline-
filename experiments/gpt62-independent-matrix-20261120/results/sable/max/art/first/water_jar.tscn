@@ -1,0 +1,94 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/thrown_jar.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/clay.tres" id="2"]
+[ext_resource type="Material" path="res://art/materials/paper.tres" id="3"]
+[ext_resource type="Material" path="res://art/materials/blue.tres" id="4"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="5"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/potters_handles.obj" id="6"]
+[ext_resource type="Material" path="res://art/materials/sienna.tres" id="7"]
+[ext_resource type="Material" path="res://art/materials/inkblue.tres" id="8"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+top_radius = 0.237
+bottom_radius = 0.234
+height = 0.025
+radial_segments = 44
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.255
+bottom_radius = 0.252
+height = 0.014
+radial_segments = 44
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.254
+bottom_radius = 0.256
+height = 0.032
+radial_segments = 44
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.237
+bottom_radius = 0.239
+height = 0.012
+radial_segments = 44
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.103
+bottom_radius = 0.105
+height = 0.013
+radial_segments = 44
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6"]
+top_radius = 0.087
+bottom_radius = 0.087
+height = 0.003
+radial_segments = 44
+rings = 1
+
+[node name="GlazedWaterJar" type="Node3D"]
+
+[node name="ThrownBody" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="SlipBand0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.211, 0)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("3")
+
+[node name="SlipBand1" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.25, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("3")
+
+[node name="SlipBand2" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.395, 0)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("4")
+
+[node name="SlipBand3" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.43, 0)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("4")
+
+[node name="SlipBand4" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.651, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("5")
+
+[node name="LoopHandles" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("6")
+material_override = ExtResource("7")
+
+[node name="DarkMouth" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.65, 0)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("8")

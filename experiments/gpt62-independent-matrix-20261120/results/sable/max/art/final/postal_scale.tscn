@@ -1,0 +1,165 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/scale_base.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/lake.tres" id="2"]
+[ext_resource type="Material" path="res://art/materials/charcoal.tres" id="3"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/scale_body.obj" id="4"]
+[ext_resource type="Material" path="res://art/materials/enamel.tres" id="5"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/gauge_glass.obj" id="7"]
+[ext_resource type="Material" path="res://art/final/materials/weigh_dial.tres" id="8"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/pointer.obj" id="9"]
+[ext_resource type="Material" path="res://art/materials/wax.tres" id="10"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="11"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="12"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/postal_pan.obj" id="13"]
+[ext_resource type="PackedScene" path="res://art/final/sealed_lot.tscn" id="14"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+top_radius = 0.045
+bottom_radius = 0.049
+height = 0.025
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+top_radius = 0.229
+bottom_radius = 0.236
+height = 0.16
+radial_segments = 56
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3"]
+top_radius = 0.234
+bottom_radius = 0.235
+height = 0.03
+radial_segments = 64
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.016
+bottom_radius = 0.018
+height = 0.017
+radial_segments = 20
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.022
+bottom_radius = 0.022
+height = 0.292367
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6"]
+top_radius = 0.033
+bottom_radius = 0.033
+height = 0.077
+radial_segments = 20
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7"]
+top_radius = 0.076
+bottom_radius = 0.078
+height = 0.15
+radial_segments = 16
+rings = 1
+
+[node name="PostalScale" type="Node3D"]
+
+[node name="CastFoot" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="RubberFoot00" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27, 0.0125, -0.156)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("3")
+
+[node name="RubberFoot01" type="MeshInstance3D" parent="."]
+position = Vector3(-0.27, 0.0125, 0.156)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("3")
+
+[node name="RubberFoot10" type="MeshInstance3D" parent="."]
+position = Vector3(0.27, 0.0125, -0.156)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("3")
+
+[node name="RubberFoot11" type="MeshInstance3D" parent="."]
+position = Vector3(0.27, 0.0125, 0.156)
+mesh = SubResource("CylinderMesh_1")
+material_override = ExtResource("3")
+
+[node name="CastHousing" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("4")
+material_override = ExtResource("5")
+
+[node name="GaugeDrum" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.356, 0.12)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_2")
+material_override = ExtResource("2")
+
+[node name="Bezel" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.356, 0.209)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_3")
+material_override = ExtResource("6")
+
+[node name="GraduatedFace" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.356, 0.225)
+scale = Vector3(0.443, 0.443, 0.443)
+mesh = ExtResource("7")
+material_override = ExtResource("8")
+
+[node name="VermilionPointer" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.356, 0.228)
+rotation = Vector3(0, 0, 0.977384)
+mesh = ExtResource("9")
+material_override = ExtResource("10")
+
+[node name="PivotCap" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.356, 0.235)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("11")
+
+[node name="Yoke0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.16524, 0.4605, -0.055)
+rotation = Vector3(0.346405, -0.896181, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("6")
+
+[node name="Pivot0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.16116, 0.431, -0.064)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("12")
+
+[node name="Yoke1" type="MeshInstance3D" parent="."]
+position = Vector3(0.16524, 0.4605, -0.055)
+rotation = Vector3(0.346405, 0.896181, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("6")
+
+[node name="Pivot1" type="MeshInstance3D" parent="."]
+position = Vector3(0.16116, 0.431, -0.064)
+rotation = Vector3(0, 0, 1.570796)
+mesh = SubResource("CylinderMesh_6")
+material_override = ExtResource("12")
+
+[node name="Plunger" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.553, -0.012)
+mesh = SubResource("CylinderMesh_7")
+material_override = ExtResource("12")
+
+[node name="TaredCopperTray" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.613, -0.012)
+mesh = ExtResource("13")
+material_override = ExtResource("11")
+
+[node name="RockSaltParcel" parent="." instance=ExtResource("14")]
+position = Vector3(-0.023, 0.647, -0.009)
+rotation = Vector3(0, -0.139626, 0)

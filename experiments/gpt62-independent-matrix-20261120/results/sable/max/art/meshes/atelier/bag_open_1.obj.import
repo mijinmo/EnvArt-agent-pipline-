@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1ngt8mya33ky"
+path="res://.godot/imported/bag_open_1.obj-b84702f83fe248dbd0fbcbd9d2fbe1f3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bag_open_1.obj-b84702f83fe248dbd0fbcbd9d2fbe1f3.mesh"]
+
+source_file="res://art/meshes/atelier/bag_open_1.obj"
+dest_files=["res://.godot/imported/bag_open_1.obj-b84702f83fe248dbd0fbcbd9d2fbe1f3.mesh", "res://.godot/imported/bag_open_1.obj-b84702f83fe248dbd0fbcbd9d2fbe1f3.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

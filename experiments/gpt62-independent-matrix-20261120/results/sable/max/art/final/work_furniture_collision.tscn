@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3]
+
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(1.16, 0.104, 2.77)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2"]
+size = Vector3(0.92, 0.76, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3"]
+size = Vector3(1.52, 0.164, 1.53)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4"]
+size = Vector3(0.8, 0.46, 0.87)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5"]
+height = 0.93
+radius = 0.457
+
+[node name="WorkFurnitureCollision" type="Node3D"]
+
+[node name="Bench" type="StaticBody3D" parent="."]
+position = Vector3(8.85, 0, -4.13)
+rotation = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Top" type="CollisionShape3D" parent="Bench"]
+position = Vector3(0, 0.817, 0)
+rotation = Vector3(0, 0, 0)
+shape = SubResource("BoxShape3D_1")
+
+[node name="Trestle0" type="CollisionShape3D" parent="Bench"]
+position = Vector3(0, 0.38, -1.02)
+rotation = Vector3(0, 0, 0)
+shape = SubResource("BoxShape3D_2")
+
+[node name="Trestle1" type="CollisionShape3D" parent="Bench"]
+position = Vector3(0, 0.38, 1.02)
+rotation = Vector3(0, 0, 0)
+shape = SubResource("BoxShape3D_2")
+
+[node name="ReceivingSkid" type="StaticBody3D" parent="."]
+position = Vector3(8.52, 0, -6.77)
+rotation = Vector3(0, 0.10472, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="SlattedBase" type="CollisionShape3D" parent="ReceivingSkid"]
+position = Vector3(0, 0.082, 0)
+rotation = Vector3(0, 0, 0)
+shape = SubResource("BoxShape3D_3")
+
+[node name="Stack" type="CollisionShape3D" parent="ReceivingSkid"]
+position = Vector3(0.15, 0.39, -0.04)
+rotation = Vector3(0, 0, 0)
+shape = SubResource("BoxShape3D_4")
+
+[node name="WaterCask" type="StaticBody3D" parent="."]
+position = Vector3(7.64, 0, -1.87)
+rotation = Vector3(0, 2.844887, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Barrel" type="CollisionShape3D" parent="WaterCask"]
+position = Vector3(0, 0.677, 0)
+rotation = Vector3(1.570796, 0, 0)
+shape = SubResource("CylinderShape3D_5")

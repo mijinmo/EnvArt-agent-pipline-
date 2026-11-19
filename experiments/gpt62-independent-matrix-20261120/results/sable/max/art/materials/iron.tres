@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://art/shaders/relay_surface.gdshader" id="1"]
+
+[resource]
+resource_name = "iron"
+shader = ExtResource("1")
+shader_parameter/pigment = Color(0.203922, 0.27451, 0.286275, 1)
+shader_parameter/mapping = 0
+shader_parameter/meters_per_tile = 3
+shader_parameter/band_mix = 0.83
+shader_parameter/tooth = 0.095
+shader_parameter/sheen = 0.28

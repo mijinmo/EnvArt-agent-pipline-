@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0rlsypp5kfpo"
+path="res://.godot/imported/signal_line.obj-0411e5c91df5c2268c671707186f932c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/signal_line.obj-0411e5c91df5c2268c671707186f932c.mesh"]
+
+source_file="res://art/final/meshes/signal_line.obj"
+dest_files=["res://.godot/imported/signal_line.obj-0411e5c91df5c2268c671707186f932c.mesh", "res://.godot/imported/signal_line.obj-0411e5c91df5c2268c671707186f932c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

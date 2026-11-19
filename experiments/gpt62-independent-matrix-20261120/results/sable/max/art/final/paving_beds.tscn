@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Material" path="res://art/final/materials/mortar.tres" id="1"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(1.576, 0.068, 1.426)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2"]
+size = Vector3(1.286, 0.068, 1.296)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3"]
+size = Vector3(1.446, 0.068, 1.026)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4"]
+size = Vector3(0.57, 0.06, 0.62)
+
+[node name="RecessedBedding" type="Node3D"]
+
+[node name="Mortar1" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.049, -2.94)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("1")
+
+[node name="Mortar2" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.049, -4.3)
+mesh = SubResource("BoxMesh_2")
+material_override = ExtResource("1")
+
+[node name="Mortar3" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.049, -5.47)
+mesh = SubResource("BoxMesh_3")
+material_override = ExtResource("1")
+
+[node name="SiltUnderGrille" type="MeshInstance3D" parent="."]
+position = Vector3(-1.26, -0.053, -3.22)
+mesh = SubResource("BoxMesh_4")
+material_override = ExtResource("2")

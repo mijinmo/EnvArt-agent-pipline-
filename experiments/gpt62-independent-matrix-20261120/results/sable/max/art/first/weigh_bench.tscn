@@ -1,0 +1,270 @@
+[gd_scene load_steps=38 format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/table_long.obj" id="1"]
+[ext_resource type="Material" path="res://art/materials/freight.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/table_runner.obj" id="3"]
+[ext_resource type="Material" path="res://art/materials/indigo_runner.tres" id="4"]
+[ext_resource type="PackedScene" path="res://art/first/postal_scale.tscn" id="5"]
+[ext_resource type="Material" path="res://art/materials/caskwood.tres" id="6"]
+[ext_resource type="Material" path="res://art/materials/weighbill.tres" id="7"]
+[ext_resource type="Material" path="res://art/materials/brass.tres" id="8"]
+[ext_resource type="Material" path="res://art/materials/claret.tres" id="9"]
+[ext_resource type="Material" path="res://art/materials/charcoal.tres" id="10"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/hand_stamp.obj" id="11"]
+[ext_resource type="Material" path="res://art/materials/sienna.tres" id="12"]
+[ext_resource type="Material" path="res://art/materials/inkblue.tres" id="13"]
+[ext_resource type="Material" path="res://art/materials/enamel.tres" id="14"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/kilogram_weight.obj" id="15"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/hung_survey.obj" id="16"]
+[ext_resource type="Material" path="res://art/materials/road_survey.tres" id="17"]
+[ext_resource type="Material" path="res://art/materials/bronze.tres" id="18"]
+[ext_resource type="Material" path="res://art/materials/iron.tres" id="19"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/atelier/pegged_coil.obj" id="20"]
+[ext_resource type="Material" path="res://art/materials/cord.tres" id="21"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/shelf_small.obj" id="22"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/bottle_B_green.obj" id="23"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/bottle_A_labeled_green.obj" id="24"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/kaykit/stool.obj" id="25"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(0.348, 0.021, 0.455)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2"]
+size = Vector2(0.31700, 0.42500)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3"]
+size = Vector3(0.135, 0.012, 0.034)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4"]
+top_radius = 0.009
+bottom_radius = 0.009
+height = 0.212941
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5"]
+top_radius = 0.001
+bottom_radius = 0.009
+height = 0.018111
+radial_segments = 6
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_6"]
+size = Vector3(0.112, 0.028, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7"]
+size = Vector3(0.395, 0.032, 0.151)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8"]
+top_radius = 0.029
+bottom_radius = 0.029
+height = 1.7
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_9"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.188809
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_10"]
+top_radius = 0.036
+bottom_radius = 0.039
+height = 0.021
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_11"]
+top_radius = 0.065
+bottom_radius = 0.077
+height = 0.067
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_12"]
+top_radius = 0.022
+bottom_radius = 0.022
+height = 0.169248
+radial_segments = 12
+rings = 1
+
+[node name="WeighBench" type="Node3D"]
+
+[node name="TrestleTable" type="MeshInstance3D" parent="."]
+position = Vector3(8.85, 0, -4.13)
+scale = Vector3(0.59, 0.87, 0.6975)
+mesh = ExtResource("1")
+material_override = ExtResource("2")
+
+[node name="IndigoScaleCloth" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+mesh = ExtResource("3")
+material_override = ExtResource("4")
+
+[node name="CounterScale" parent="." instance=ExtResource("5")]
+position = Vector3(8.76, 0.885, -4.48)
+rotation = Vector3(0, -1.832596, 0)
+
+[node name="ClerksBoard" type="Node3D" parent="."]
+position = Vector3(8.67, 0.879, -3.46)
+rotation = Vector3(0, -1.710423, 0)
+
+[node name="WritingBoard" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(0, 0.011, 0)
+mesh = SubResource("BoxMesh_1")
+material_override = ExtResource("6")
+
+[node name="ManifestSheet" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(0, 0.023, 0)
+rotation = Vector3(-1.570796, 0, 0)
+mesh = SubResource("QuadMesh_2")
+material_override = ExtResource("7")
+
+[node name="BrassClip" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(0, 0.031, -0.196)
+mesh = SubResource("BoxMesh_3")
+material_override = ExtResource("8")
+
+[node name="GraphitePencil" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(0.205, 0.016, -0.065)
+rotation = Vector3(1.570796, 0.094061, 0)
+mesh = SubResource("CylinderMesh_4")
+material_override = ExtResource("9")
+
+[node name="PencilTip" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(0.216, 0.016, 0.05)
+rotation = Vector3(1.570796, 0.110657, 0)
+mesh = SubResource("CylinderMesh_5")
+material_override = ExtResource("10")
+
+[node name="SealHandle" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(-0.225, 0, -0.07)
+mesh = ExtResource("11")
+material_override = ExtResource("12")
+
+[node name="InkPad" type="MeshInstance3D" parent="ClerksBoard"]
+position = Vector3(-0.228, 0.015, 0.101)
+mesh = SubResource("BoxMesh_6")
+material_override = ExtResource("13")
+
+[node name="TestWeights" type="Node3D" parent="."]
+position = Vector3(8.8, 0.876, -5.16)
+rotation = Vector3(0, -1.58825, 0)
+
+[node name="WoodRack" type="MeshInstance3D" parent="TestWeights"]
+position = Vector3(0, 0.016, 0)
+mesh = SubResource("BoxMesh_7")
+material_override = ExtResource("14")
+
+[node name="ProofWeight1" type="MeshInstance3D" parent="TestWeights"]
+position = Vector3(-0.13, 0.032, 0)
+mesh = ExtResource("15")
+material_override = ExtResource("8")
+
+[node name="ProofWeight2" type="MeshInstance3D" parent="TestWeights"]
+position = Vector3(0.004, 0.032, 0)
+scale = Vector3(0.84, 0.84, 0.84)
+mesh = ExtResource("15")
+material_override = ExtResource("8")
+
+[node name="ProofWeight3" type="MeshInstance3D" parent="TestWeights"]
+position = Vector3(0.123, 0.032, 0)
+scale = Vector3(0.69, 0.69, 0.69)
+mesh = ExtResource("15")
+material_override = ExtResource("8")
+
+[node name="RouteSurvey" type="Node3D" parent="."]
+position = Vector3(9.698, 2.54, -4.42)
+rotation = Vector3(0, -1.570796, 0)
+
+[node name="LinenSurvey" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(0, -0.025, 0.077)
+mesh = ExtResource("16")
+material_override = ExtResource("17")
+
+[node name="MapRoller0" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(0, 0.014, 0.09)
+rotation = Vector3(1.570796, 1.570796, 0)
+mesh = SubResource("CylinderMesh_8")
+material_override = ExtResource("18")
+
+[node name="MapRoller1" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(0, -1.15, 0.09)
+rotation = Vector3(1.570796, 1.570796, 0)
+mesh = SubResource("CylinderMesh_8")
+material_override = ExtResource("18")
+
+[node name="Bracket0" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(-0.71, 0.0875, 0.031)
+rotation = Vector3(2.36743, 0, 0)
+mesh = SubResource("CylinderMesh_9")
+material_override = ExtResource("19")
+
+[node name="WallButton0" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(-0.71, 0.151, -0.017)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_10")
+material_override = ExtResource("8")
+
+[node name="Bracket1" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(0.71, 0.0875, 0.031)
+rotation = Vector3(2.36743, 0, 0)
+mesh = SubResource("CylinderMesh_9")
+material_override = ExtResource("19")
+
+[node name="WallButton1" type="MeshInstance3D" parent="RouteSurvey"]
+position = Vector3(0.71, 0.151, -0.017)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_10")
+material_override = ExtResource("8")
+
+[node name="RopePeg" type="Node3D" parent="."]
+position = Vector3(9.64, 2.07, -5.77)
+rotation = Vector3(0, -1.570796, 0)
+
+[node name="PegFlange" type="MeshInstance3D" parent="RopePeg"]
+position = Vector3(0, 0, 0.008)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("CylinderMesh_11")
+material_override = ExtResource("19")
+
+[node name="Hook" type="MeshInstance3D" parent="RopePeg"]
+position = Vector3(0, 0.0165, 0.111)
+rotation = Vector3(1.37456, 0, 0)
+mesh = SubResource("CylinderMesh_12")
+material_override = ExtResource("18")
+
+[node name="SpareLashing" type="MeshInstance3D" parent="RopePeg"]
+position = Vector3(0, 0.027, 0.083)
+mesh = ExtResource("20")
+material_override = ExtResource("21")
+
+[node name="BottleShelf" type="MeshInstance3D" parent="."]
+position = Vector3(9.514, 1.42, -2.64)
+rotation = Vector3(0, -1.570796, 0)
+scale = Vector3(1.04, 0.6125, 0.866)
+mesh = ExtResource("22")
+material_override = ExtResource("2")
+
+[node name="GlazedCarboy" type="MeshInstance3D" parent="."]
+position = Vector3(9.491, 1.665, -2.43)
+rotation = Vector3(0, 0.575959, 0)
+scale = Vector3(0.487743, 0.487743, 0.487743)
+mesh = ExtResource("23")
+material_override = ExtResource("2")
+
+[node name="LabelledMeasure" type="MeshInstance3D" parent="."]
+position = Vector3(9.491, 1.665, -2.79)
+rotation = Vector3(0, -1.658063, 0)
+scale = Vector3(0.403065, 0.403065, 0.403065)
+mesh = ExtResource("24")
+material_override = ExtResource("2")
+
+[node name="ClerksStool" type="MeshInstance3D" parent="."]
+position = Vector3(8.23, 0, -2.84)
+rotation = Vector3(0, 0.191986, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+mesh = ExtResource("25")
+material_override = ExtResource("2")
