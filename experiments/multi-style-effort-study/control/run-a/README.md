@@ -24,6 +24,6 @@
 
 - 钢架为 James Ray Cock 的 Steel Frame Shelves 01，按 0.11 等比缩放；箱体为 Rahul Chaudhary 的 Cardboard Box 01，保留扫描纸板表面。座椅为 Kuutti Siitonen 的 Mid Century Lounge Chair，沿用原底色、ARM 和法线，座面整体压暗；金属办公桌、无线电、原推车及灯具保留起点资产。均使用本地已供给的 Poly Haven CC0 完整模型及所选贴图。原始来源与作者见[道具清单](provenance/asset_manifest.json)及[细节清单](provenance/detail_manifest.json)。
 - 档案柜沿用 Ron Kapaun / 3TD Studios 的 Office Starter Pack 免费 CC0 柜体。车架使用本地 3TD 漆面扫描作为底层起伏。柜体与车架在 finish_enamel.gdshader 的 body 参数分别设灰蓝与汽油蓝，粗糙度由扫描调制。自绘印刷图、弯管和收件盘均为本轮制作。项目保留[原资产许可](baseline/licenses/)。
-- 墙体 pour.gdshader 使用 Smooth Concrete Floor 扫描，分板间距 2.48 × 1.86 米；ground.gdshader 使用 Terrazzo Tiles，分缝间距 2.8 米，concourse 参数切换入口哑光红面。最终版 walnut.gdshader 使用 Plywood 的三个 PBR 通道，每 0.90 米调整取样偏移。上述扫描为本地 Poly Haven CC0 图集。来源见[材质清单](provenance/astra-v2/README.md)。这些参数是基于图像的制作选择。
+- 墙体 pour.gdshader 使用 Smooth Concrete Floor 扫描，分板间距 2.48 × 1.86 米；ground.gdshader 使用 Terrazzo Tiles，分缝间距 2.8 米，concourse 参数切换入口哑光红面。最终版 walnut.gdshader 使用 Plywood 的三个 PBR 通道，每 0.90 米调整取样偏移。上述扫描为本地 Poly Haven CC0 图集。来源见[材质清单](provenance/astra-v2/selection.md)。这些参数是基于图像的制作选择。
 - 两轮分别保存重开实拍，每轮三张 1600 × 1000 PNG。渲染包装器报告两次 GPU 排队均为 0.00 秒。技术重拍 0 次；两次退出均报告 7 个纹理 RID 未释放，六张 PNG 均成功写出并已看图。无头导入不能保存用户级编辑器设置，项目内的资源导入文件均已生成。
-- 两轮约束记录逐项相等，含 17 个 StaticBody3D 和三个相机；191 个冻结清单文件的 SHA-256 全部匹配。门洞维持 1.2 × 2.3 米，门槛压条与贴面只做视觉收口。第一轮提交 355cb8a，第二轮提交可用本目录内的 git log -1 -- final.tscn 查询。
+- 两轮约束记录逐项相等，含 17 个 StaticBody3D 和三个相机；191 个冻结清单文件的 SHA-256 全部匹配。门洞维持 1.2 × 2.3 米，门槛压条与贴面只做视觉收口。第一轮提交 355cb8a，第二轮提交 1a7c14f。
