@@ -1,7 +1,7 @@
 config_version=5
 [application]
 config/name="sable effort sample"
-run/main_scene="res://start.tscn"
+run/main_scene="res://final.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 [display]
 window/size/viewport_width=1600
