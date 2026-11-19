@@ -321,7 +321,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Poly Haven 办公模型与 1K 扫描表面；原 UV / PBR 通道、局部染色。"
     },
     "medium": {
       "game": "control",
@@ -673,7 +674,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Poly Haven 办公模型与扫描表面；原 UV、三向映射与印刷细节。"
     },
     "high": {
       "game": "control",
@@ -1141,7 +1143,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Poly Haven 办公及放映道具、PBR 表面；原创构件与印刷图。"
     },
     "xhigh": {
       "game": "control",
@@ -1669,7 +1672,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Poly Haven 办公模型与 PBR 表面；原创盘带机、盘盒及移交窗。"
     }
   },
   "sable": {
@@ -1965,7 +1969,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "KayKit Dungeon Remastered；源色板与原创称量、路标组件。"
     },
     "xhigh": {
       "game": "sable",
@@ -2300,7 +2305,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Town / Pirate + Poly Haven Sandstone Blocks 08；砂岩改色提缝与原创棚旗道具。"
     },
     "low": {
       "game": "sable",
@@ -2567,7 +2573,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "KayKit Dungeon Remastered 九个 GLB；砂岩改色与源色板。"
     },
     "high": {
       "game": "sable",
@@ -2877,7 +2884,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "KayKit Dungeon Remastered；墙件去凸砖、米制错缝及深度/法线细线。"
     }
   },
   "hifi": {
@@ -3287,7 +3295,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Quaternius Modular Sci-Fi MegaKit 免费 Standard + Kenney Factory；静态部件与屏面 UV 适配。"
     },
     "high": {
       "game": "hifi",
@@ -3638,7 +3647,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Space Station / Factory；保留模型，重写面色 UV 并绘制选择性棱线。"
     },
     "low": {
       "game": "hifi",
@@ -3908,7 +3918,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "KayKit Space Base Bits；色板网格转换、世界坐标排线与外壳描边。"
     },
     "medium": {
       "game": "hifi",
@@ -4197,7 +4208,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Space Station；分区漆色、排线、测试线与说明图。"
     }
   },
   "dredge": {
@@ -4500,7 +4512,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Town / Pirate / Food；原色板重映射、世界坐标表面细节与原创渔具。"
     },
     "low": {
       "game": "dredge",
@@ -4757,7 +4770,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": false,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Quaternius 历史包第三方镜像；FBX 转 OBJ、统一枢轴与分面色。"
     },
     "xhigh": {
       "game": "dredge",
@@ -5150,7 +5164,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Town / Pirate / Food + Poly Haven 石面漫反射；鱼体网格/贴图改造与原创渔具。"
     },
     "high": {
       "game": "dredge",
@@ -5526,7 +5541,8 @@
         "brief_original_prefix_preserved": true,
         "brief_delivery_appendix_added": true,
         "godot_cache_identity_preserved": true
-      }
+      },
+      "source_route": "Kenney Town / Pirate / Food；重新投影的表面图、鱼体适配与原创称量/绳网。"
     }
   }
 }
