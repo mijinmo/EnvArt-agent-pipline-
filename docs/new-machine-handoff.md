@@ -1,0 +1,53 @@
+# 新电脑接续说明
+
+截至本次收尾：四游戏 × 四档 effort 的场景和截图均已保存；统一 HTML、隔离规则和访问检查已整理。**新规则下的下一轮验证尚未运行，当前 MacBook 不再启动 Godot。** 没有后台续跑或自动开始下一批的安排。
+
+## 先看结果，不需要引擎
+
+用浏览器打开 [环境美术成果总览](multi-style-effort-study.html)。四游戏可切机位、看共同起点/首轮/终图，历史区域收录此前各方向和迭代版本。实机截图全部使用仓库内相对路径，可离线查看；原作参考图远程引用，需联网，版权归原权利方。
+
+请迁移整个仓库的目录结构，不能只复制 HTML。`docs/` 与 `experiments/` 是页面图片和工程链接的相对位置。
+
+## 转移 Git 和文件
+
+本次提交在本地，未执行 push。若新电脑仅从旧远端 clone，并不会自动得到这些本地提交。
+
+可直接复制完整仓库（包括隐藏的 `.git`），或在本机手动创建 Git bundle，再把 bundle 复制到新电脑。下面只是操作说明，本次没有执行导出或推送：
+
+```sh
+# 旧电脑：在仓库目录中运行，输出到仓库外。
+git bundle create ../envart-handoff.bundle --all
+
+# 新电脑：在打算存放项目的目录中运行。
+git clone /path/to/envart-handoff.bundle EnvArt-agent-pipline
+```
+
+bundle 包含所有已提交分支/标签及历史，不包含被忽略的本地素材、缓存、未跟踪文件或远端登录凭证。从 bundle 克隆后 origin 指向 bundle 文件；以后需要联网推送时再配置自己的仓库地址。复制完整仓库则保留原有 Git 配置。
+
+不需要迁移 `.godot/`、运行日志、临时截图和 `/tmp` 工具。源文件旁的 `.uid`、`.import` 已纳入版本管理；新电脑会按平台重新生成缓存。主工程 Mixamo 角色属于本地自用资源，不在 Git 内；若需要人形试玩，按根 README 通过自己的下载重新安装。环境美术试跑工程不依赖这套角色。
+
+## 打开可编辑场景
+
+使用当前验证版本 **Godot 4.7.2 标准版**，无需 .NET。只导入准备查看的那个 `project.godot`，不要一次批量打开所有项目。工程索引：
+
+- [Control / Sable / DREDGE 四档](../experiments/multi-style-effort-study/README.md)：F5 打开 `final.tscn`；起点与首轮在工程根目录。
+- [Hi-Fi Rush 四档](../experiments/hifi-effort-study/README.md)：F5 打开 `scenes/final.tscn`，其他版本也在 `scenes/`。
+- [主测试场](../GodotProject/envart-pipline/project.godot)：玩家、白盒、轨迹相机及原三方向入口；操作见根 README。
+
+现有实机证据来自 macOS Metal Forward+。Windows/Linux 使用平台对应驱动，不要复制历史命令里的 `--rendering-driver metal`。专用 shader 对其他后端的表现尚未检查；迁移后只做一次必要导入、打开目标场景和实机查看，发现画面差异再针对修复，不跑全套控制器回归。
+
+已保存 `.tscn` 和资源可以直接编辑，不依赖当时 `/private/tmp` 下的 builder、GPU 排队脚本或 Python 环境。不要运行旧 builder 覆盖手工修订。要重拍时写入新的证据名，不能覆盖已评审图。三游戏的 `capture.gd` 接受场景名和可选输出标签（例如 `final migrated-final`）；Hi-Fi Rush 的旧 capture 不支持单独标签，先复制工程/调整输出目录，再运行。
+
+## 新规则的下一轮
+
+仓库中的 [godot-envart](../skills/godot-envart/SKILL.md) 是迁移的规则来源，重点新增 [独立试跑约定](../skills/godot-envart/references/independent-trials.md)。需要作为本机 skill 使用时，把整个 `skills/godot-envart/` 目录安装/复制到新电脑 Codex 的个人 skills 目录；不是只复制 SKILL.md。独立制作 agent 只收到该版本的输入包与 skill 副本，不应获得这个结果总仓库。
+
+当前四档实验以既有美术续作，不能评价从白盒找素材的独立能力。下一次要验证完整管线，应由主 agent 从原白盒准备干净输入包：明确室内/室外/半开放与局部范围，保留同机位和空间约束，不带旧成品、评语、shader 和历史 Git。
+
+每个制作组用独立的新 Git 仓库、临时目录和新上下文；主 agent 完成后再收集。若平台无法强制限制读取范围，必须如实标注逻辑隔离。参考搜索或素材搜索是否由各组独立进行，要在输入中说明；固定素材池的测试不能再声称是在测试找素材。两轮内先看实际出图再修订，允许按参考改造模型、材质和 shader。
+
+旧输入清单中的 `/private/tmp/...` 是历史参考缓存位置，不是迁移要求。三游戏参考 URL 已在 `run-manifest.json`，Hi-Fi Rush 的 URL 也在统一 HTML 和原 BRIEF。新试跑如需下载，放入各组受控参考目录，记录实际下载/缩放后的哈希；旧哈希可能对应缩小图，不能直接拿远程原图哈希冒充一致。
+
+可在新电脑用以下交接语恢复工作，具体游戏和规模再按当时意图确定：
+
+> 阅读仓库 README、docs/new-machine-handoff.md 和新版 godot-envart skill。先确认这轮比较续作还是从白盒独立生产；若验证完整管线，用原白盒与明确空间意图准备干净输入，不把旧成品和评语交给制作组。每组独立 Git/临时目录，禁止横读。重点评素材筛选、细节、风格统一与光影，允许有依据的 shader。保留旧版和固定机位，只做局部；实际看图后修订，完成可审阅阶段就提交。只做必要导入/渲染检查。

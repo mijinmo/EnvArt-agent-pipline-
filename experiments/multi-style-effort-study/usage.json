@@ -1,0 +1,477 @@
+{
+  "measurement": "Local Codex rollout metadata, scoped to this study. Output includes reasoning when reported. Tokens are not currency or subscription charges.",
+  "runs": {
+    "sable/run-a": {
+      "task": "/root/sable_effort_a",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "medium",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "medium"
+        }
+      ],
+      "start_utc": "2026-11-19T09:54:55.487Z",
+      "completed_utc": "2026-11-19T10:16:08.006Z",
+      "usage_record_utc": "2026-11-19T10:16:07.994Z",
+      "usage_records": 52,
+      "token_usage": {
+        "input_tokens": 3656057,
+        "cached_input_tokens": 3537536,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 28928,
+        "reasoning_output_tokens": 5028,
+        "total_tokens": 3684985
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22851,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 126,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22977
+      },
+      "wall_seconds": 1272.519,
+      "uncached_input_tokens": 118521
+    },
+    "sable/run-b": {
+      "task": "/root/sable_effort_b",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "xhigh",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "xhigh"
+        }
+      ],
+      "start_utc": "2026-11-19T09:06:12.905Z",
+      "completed_utc": "2026-11-19T09:50:00.454Z",
+      "usage_record_utc": "2026-11-19T09:50:00.444Z",
+      "usage_records": 46,
+      "token_usage": {
+        "input_tokens": 4482801,
+        "cached_input_tokens": 4313344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 31132,
+        "reasoning_output_tokens": 4188,
+        "total_tokens": 4513933
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22851,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 194,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 23045
+      },
+      "wall_seconds": 2627.549,
+      "uncached_input_tokens": 169457
+    },
+    "sable/run-c": {
+      "task": "/root/sable_effort_c",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "low",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low"
+        }
+      ],
+      "start_utc": "2026-11-19T11:52:26.497Z",
+      "completed_utc": "2026-11-19T11:58:55.330Z",
+      "usage_record_utc": "2026-11-19T11:58:55.323Z",
+      "usage_records": 22,
+      "token_usage": {
+        "input_tokens": 996548,
+        "cached_input_tokens": 882944,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9505,
+        "reasoning_output_tokens": 401,
+        "total_tokens": 1006053
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22851,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22968
+      },
+      "wall_seconds": 388.833,
+      "uncached_input_tokens": 113604
+    },
+    "sable/run-d": {
+      "task": "/root/sable_effort_d",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "start_utc": "2026-11-19T08:32:56.667Z",
+      "completed_utc": "2026-11-19T09:02:37.165Z",
+      "usage_record_utc": "2026-11-19T09:02:37.160Z",
+      "usage_records": 97,
+      "token_usage": {
+        "input_tokens": 9027443,
+        "cached_input_tokens": 8918656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 35109,
+        "reasoning_output_tokens": 7207,
+        "total_tokens": 9062552
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22851,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 131,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22982
+      },
+      "wall_seconds": 1780.498,
+      "uncached_input_tokens": 108787
+    },
+    "dredge/run-a": {
+      "task": "/root/dredge_effort_a",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "medium",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "medium"
+        }
+      ],
+      "start_utc": "2026-11-19T08:33:34.203Z",
+      "completed_utc": "2026-11-19T08:49:34.478Z",
+      "usage_record_utc": "2026-11-19T08:49:31.398Z",
+      "usage_records": 55,
+      "token_usage": {
+        "input_tokens": 4030221,
+        "cached_input_tokens": 3938176,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 22562,
+        "reasoning_output_tokens": 5044,
+        "total_tokens": 4052783
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22855,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 135,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22990
+      },
+      "wall_seconds": 960.275,
+      "uncached_input_tokens": 92045
+    },
+    "dredge/run-b": {
+      "task": "/root/dredge_effort_b",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "xhigh",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "xhigh"
+        }
+      ],
+      "start_utc": "2026-11-19T08:53:23.891Z",
+      "completed_utc": "2026-11-19T09:13:48.085Z",
+      "usage_record_utc": "2026-11-19T09:13:48.048Z",
+      "usage_records": 49,
+      "token_usage": {
+        "input_tokens": 4783110,
+        "cached_input_tokens": 4661504,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 32082,
+        "reasoning_output_tokens": 6708,
+        "total_tokens": 4815192
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22855,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 149,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 23004
+      },
+      "wall_seconds": 1224.194,
+      "uncached_input_tokens": 121606
+    },
+    "dredge/run-c": {
+      "task": "/root/dredge_effort_c",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "low",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low"
+        }
+      ],
+      "start_utc": "2026-11-19T09:44:30.926Z",
+      "completed_utc": "2026-11-19T09:52:46.315Z",
+      "usage_record_utc": "2026-11-19T09:52:46.307Z",
+      "usage_records": 29,
+      "token_usage": {
+        "input_tokens": 1527543,
+        "cached_input_tokens": 1450496,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 12780,
+        "reasoning_output_tokens": 1248,
+        "total_tokens": 1540323
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22855,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 98,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22953
+      },
+      "wall_seconds": 495.389,
+      "uncached_input_tokens": 77047
+    },
+    "dredge/run-d": {
+      "task": "/root/dredge_effort_d",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "start_utc": "2026-11-19T09:56:29.408Z",
+      "completed_utc": "2026-11-19T12:20:06.308Z",
+      "usage_record_utc": "2026-11-19T12:20:06.301Z",
+      "usage_records": 49,
+      "token_usage": {
+        "input_tokens": 4334131,
+        "cached_input_tokens": 4170496,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 26410,
+        "reasoning_output_tokens": 4465,
+        "total_tokens": 4360541
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22855,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 146,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 23001
+      },
+      "wall_seconds": 8616.9,
+      "uncached_input_tokens": 163635
+    },
+    "control/run-a": {
+      "task": "/root/control_effort_a",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "medium",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "medium"
+        }
+      ],
+      "start_utc": "2026-11-19T09:33:49.846Z",
+      "completed_utc": "2026-11-19T09:45:22.971Z",
+      "usage_record_utc": "2026-11-19T09:45:22.964Z",
+      "usage_records": 38,
+      "token_usage": {
+        "input_tokens": 2584677,
+        "cached_input_tokens": 2505344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18022,
+        "reasoning_output_tokens": 2576,
+        "total_tokens": 2602699
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22848,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 143,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22991
+      },
+      "wall_seconds": 693.125,
+      "uncached_input_tokens": 79333
+    },
+    "control/run-b": {
+      "task": "/root/control_effort_b",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "xhigh",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "xhigh"
+        }
+      ],
+      "start_utc": "2026-11-19T08:32:29.567Z",
+      "completed_utc": "2026-11-19T09:44:29.519Z",
+      "usage_record_utc": "2026-11-19T09:44:29.488Z",
+      "usage_records": 77,
+      "token_usage": {
+        "input_tokens": 8251358,
+        "cached_input_tokens": 8113664,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 29465,
+        "reasoning_output_tokens": 5298,
+        "total_tokens": 8280823
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22848,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 195,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 23043
+      },
+      "wall_seconds": 4319.952,
+      "uncached_input_tokens": 137694
+    },
+    "control/run-c": {
+      "task": "/root/control_effort_c",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "low",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low"
+        }
+      ],
+      "start_utc": "2026-11-19T12:10:35.047Z",
+      "completed_utc": "2026-11-19T12:18:37.554Z",
+      "usage_record_utc": "2026-11-19T12:18:37.523Z",
+      "usage_records": 43,
+      "token_usage": {
+        "input_tokens": 2370160,
+        "cached_input_tokens": 2311808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9592,
+        "reasoning_output_tokens": 417,
+        "total_tokens": 2379752
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22848,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 115,
+        "reasoning_output_tokens": 13,
+        "total_tokens": 22963
+      },
+      "wall_seconds": 482.507,
+      "uncached_input_tokens": 58352
+    },
+    "control/run-d": {
+      "task": "/root/control_effort_d",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "start_utc": "2026-11-19T09:49:02.208Z",
+      "completed_utc": "2026-11-19T12:24:23.312Z",
+      "usage_record_utc": "2026-11-19T12:24:23.307Z",
+      "usage_records": 59,
+      "token_usage": {
+        "input_tokens": 6304466,
+        "cached_input_tokens": 6164736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 38354,
+        "reasoning_output_tokens": 7843,
+        "total_tokens": 6342820
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22848,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 146,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22994
+      },
+      "wall_seconds": 9321.104,
+      "uncached_input_tokens": 139730
+    }
+  },
+  "limits": {
+    "time": "Raw task-start to task-complete timestamp span, not active compute time. Includes waits and unexplained long gaps; not suitable for speed rankings.",
+    "cost": "No money or subscription charge measured. Parent preparation, coordination and integration unallocated.",
+    "sample": "One continuation sample per setting per game; see ISOLATION-AUDIT.md."
+  },
+  "review_overhead": {
+    "control": {
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "token_usage": {
+        "input_tokens": 458751,
+        "cached_input_tokens": 409728,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2162,
+        "reasoning_output_tokens": 107,
+        "total_tokens": 460913
+      },
+      "excluded_from_producer_totals": true
+    },
+    "sable": {
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "token_usage": {
+        "input_tokens": 418246,
+        "cached_input_tokens": 379264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2731,
+        "reasoning_output_tokens": 50,
+        "total_tokens": 420977
+      },
+      "excluded_from_producer_totals": true
+    },
+    "dredge": {
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "token_usage": {
+        "input_tokens": 369382,
+        "cached_input_tokens": 345856,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2465,
+        "reasoning_output_tokens": 251,
+        "total_tokens": 371847
+      },
+      "excluded_from_producer_totals": true
+    }
+  }
+}

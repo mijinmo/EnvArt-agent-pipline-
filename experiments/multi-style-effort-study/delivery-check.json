@@ -1,0 +1,386 @@
+[
+  {
+    "run": "control/run-a",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "control/run-b",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "control/run-c",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "control/run-d",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "dredge/run-a",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "dredge/run-b",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "dredge/run-c",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "dredge/run-d",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "sable/run-a",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "sable/run-b",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "sable/run-c",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  },
+  {
+    "run": "sable/run-d",
+    "frozen_changes": [],
+    "body_camera_snapshots_match": true,
+    "image_sizes": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ],
+      [
+        1600,
+        1000
+      ]
+    ],
+    "f5_final": true
+  }
+]
