@@ -36,56 +36,56 @@
       "effort": "xhigh",
       "input_commit": "03c93b2b96d8d17e669b1eab7185b23eabf99a6e",
       "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "sable",
       "effort": "medium",
       "input_commit": "14bfe34254e292a5f234132f9e4671b7ba3872d5",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "sable",
       "effort": "xhigh",
       "input_commit": "f52ca531d9437dc2ab8e75254cb641d1bbf99baa",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "hifi",
       "effort": "high",
       "input_commit": "c3e4c903811b38b4df115319db3c97c9630df8f9",
       "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
-      "status": "prepared"
+      "status": "completed"
     },
     {
       "game": "control",
       "effort": "medium",
       "input_commit": "9e8527f73f3e7b4c7f4307c1b2f3deed0d746e4f",
       "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
-      "status": "prepared"
+      "status": "completed"
     },
     {
       "game": "control",
       "effort": "high",
       "input_commit": "dedea25c5d54519a5904b0059ccb795660a3de7d",
       "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "control",
       "effort": "xhigh",
       "input_commit": "cb80fe870b2af30cade7c91df05369bdcdc937e9",
       "normalized_input_sha256": "5c4cf04e38d383b9c210ad989875dcd30527d3e75ad488820192f6b4e10c1a20",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "sable",
       "effort": "low",
       "input_commit": "9ff6aa3beb99830579eff8560c30eb85b07df8f2",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "sable",
@@ -137,5 +137,9 @@
       "status": "prepared"
     }
   ],
-  "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort."
+  "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
+  "planned_run_count": 24,
+  "prepared_run_count": 16,
+  "completed_run_count": 6,
+  "collected_run_count": 6
 }
