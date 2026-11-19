@@ -9,7 +9,7 @@
 - 用户随后要求先解决 Codex 找不到 GPT-6.2 的问题。桌面更新器报告已安装 `26.1023.51421`（build `22530`，prod），可更新到 `26.1111.71704`（build `29030`）；本次仅完成检查，未安装或重启。
 - 独立 CLI 为 `0.165.0`；其当次刷新后的模型缓存未列出 GPT-6.2，默认配置为 `gpt-6-astra`。这些是本机诊断证据，不能据此判定账户无权限，也不能保证更新后模型一定出现。先更新桌面客户端并重启，再确认模型选择器中的 GPT-6.2 Astra / Sol；[官方发布说明](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol) 已宣布 Codex 支持这两个模型。
 - 更新后确认：桌面版 `26.1111.71704`（build `29030`），新模型缓存客户端版本 `0.169.1`；`gpt-6.2-astra` 与 `gpt-6.2-sol` 均为可选，当前工具也列出两者。模型发现阻塞已解除。
-- 已接续 [Control 从白盒局部验证](../experiments/independent-control-20261120/README.md)：门洞与右侧档案交接角，独立参考/素材发现，单组两轮；Godot 4.7.2 导入与三张固定机位白盒实图已检查，制作结果尚未完成。不恢复四档批量试跑。
+- 已接续 [Control 从白盒局部验证](../experiments/independent-control-20261120/README.md)：门洞与右侧档案交接角，独立参考/素材发现，单组两轮；Godot 4.7.2 导入与三张固定机位白盒实图已检查，先行制作已完成两轮，作为不计排名的管线预检。用户随后明确扩大授权：按 [正式 16 组独立制作比较](../experiments/gpt62-independent-matrix-20261120/README.md) 重跑 Control / Sable / Hi-Fi RUSH / DREDGE 的 low、medium、high、xhigh；从白盒重新制作，统一参考，隔离目录和历史，完成后整理 HTML 对比。正式制作准备中。
 
 ## 用 Termius 接续本条聊天
 
