@@ -11,6 +11,19 @@
 - 更新后确认：桌面版 `26.1111.71704`（build `29030`），新模型缓存客户端版本 `0.169.1`；`gpt-6.2-astra` 与 `gpt-6.2-sol` 均为可选，当前工具也列出两者。模型发现阻塞已解除。
 - 已接续 [Control 从白盒局部验证](../experiments/independent-control-20261120/README.md)：门洞与右侧档案交接角，独立参考/素材发现，单组两轮；Godot 4.7.2 导入与三张固定机位白盒实图已检查，制作结果尚未完成。不恢复四档批量试跑。
 
+## 用 Termius 接续本条聊天
+
+Termius 通过 SSH 以 `paulchen` 登录存有此仓库的同一台 Mac。2026-11-20 检查时，PATH 中独立 `codex` 仍为 `0.165.0`，应用附带 CLI 已为 `0.169.1`；本条聊天记录已存在于本机。先用应用附带版本接续：
+
+```sh
+tmux new -As envart
+cd /Users/paulchen/GodotProjects/EnvArtPipline
+/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex resume \
+  --model gpt-6.2-astra 01a1f4cd-91a4-7201-8d3a-883032c94e1a
+```
+
+`tmux` 已安装；断线后重新连接，执行第一行重新附着。接续前等桌面端当前回合结束。`resume` 保留聊天历史并使用当前工作区文件；具体可用工具以 CLI 启动后的状态为准，桌面插件和图形界面不保证等同。以上已验证二进制版本、命令帮助与记录存在，未在活跃回合中再启动第二个 CLI 会话。[官方接续说明](https://learn.chatgpt.com/docs/projects?surface=app)。
+
 ## 先看结果，不需要引擎
 
 用浏览器打开 [环境美术成果总览](multi-style-effort-study.html)。四游戏可切机位、看共同起点/首轮/终图，历史区域收录此前各方向和迭代版本。实机截图全部使用仓库内相对路径，可离线查看；原作参考图远程引用，需联网，版权归原权利方。
