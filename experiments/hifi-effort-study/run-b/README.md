@@ -1,3 +1,9 @@
-# Hi-Fi Rush effort trial
+# D1 双叶轮检修间
 
-起始场景 scenes/start.tscn，参考与制作范围见 ../BRIEF.md。交付后补充制作记录。
+使用 Godot 4.7.2 Forward+ 打开本目录的 project.godot。scenes/start.tscn 为冻结场景，scenes/pass01.tscn 为第一轮。三组固定机位在 Views 下。第一轮捕获一次，输出三张 1600×1000 图像，GPU 排队 0 秒。
+
+51.jpg 的走道以深蓝结构压住墙板，用红色局部照明和跨板色带划区，地板防滑孔比细划痕更醒目。60.jpg 的大机器以亮红主体、黄色切线、凹口和层叠截面表达重量。起图的双风机装在方板上，两台运转状态相似。全景里地面细小金属反光与近景检修器件争夺注意力。
+
+第一轮保留 Quaternius 的风机、工作台、设备、门楣、墙和地板网格。资产为共同输入里的 CC0 免费模型，许可保存在 art 目录。原创铸造侧颊、带密封层的外圈、进风槽和底部散热盒沿现有叶轮装配。B 机增加有转轴、栓帽和斜纹的隔离杆，与桌边的 HOLD 状态对应。制作了原创旋转机械安全插画和车间横幅。几何增件保存在 fabrication，可独立移动。
+
+第一轮的 press_ink.gdshader 读取真实材质的底色图，以 enamel、shade、stock_mix、hatch_density 和 surface_role 调整色墨、阴影、原贴图占比、排线与钢板冲孔。applied_finishes.gd 在场景加载时逐表面绑定，编辑器中也能预览。start 的屏幕轮廓参数沿用。首轮回看，地板槽、墙板折边和检修器件压线被抹得过平，工作台下方和门框外缘仍是大片空色。导入及捕获成功。沙箱内 headless editor 报个人设置目录不可写，产物导入完成，图形捕获日志无报错。共同起点缺少的 painted_whitebox 由试验组织者统一补齐。
