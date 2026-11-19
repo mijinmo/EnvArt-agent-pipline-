@@ -28,6 +28,8 @@
 
 2026-11-18 完成 [GPT-6.2 astra 新管线 Control 局部试跑](docs/control-astra-v2-trial.html)：重选环境清楚的参考，比较材质小样并迭代三轮。候选场景 `interior_astra_v2_03.tscn` 用 F6 打开，F5 保留旧版；同机位结果有局部改善，资产构造与细节组织仍有不足。
 
+2026-11-19 新增 [Sable / Hi‑Fi Rush / DREDGE 风格化局部实机对照](docs/stylized-reference-trials.html)：三个 GPT-6.2 astra subagent 各完成独立首轮、自主修订与主审反馈后三轮，尝试专用 shader。可切换白盒、首轮、第二轮与 shader 对照，三个固定机位全部保留；[工程索引](experiments/stylized-reference-trials/README.md)。模型 effort 未显式设置，实际继承档位未核实；本轮不用于 effort 排名。主要素材来自既有授权库，造型贴合仍有不足。
+
 提交新白盒给 agent 前，按 [白盒输入说明](skills/godot-envart/references/whitebox-input.md) 明确室内、室外或半开放区域，以及顶棚、围护、采光开口与允许补建的范围；缺少屋顶不等于室外。主要墙面须按参考检查整面墙的重复图案与分格尺度，不能仅因素材叫“混凝土”就判定合适。
 
 1. 使用 **Godot 4.7.2 标准版**导入 `GodotProject/envart-pipline/project.godot`。项目使用 GDScript，无需 .NET 或第三方插件。
