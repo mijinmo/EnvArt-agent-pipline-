@@ -1,0 +1,178 @@
+{
+ "asset": {
+  "generator": "Khronos glTF Blender I/O v3.6.27",
+  "version": "2.0"
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "counter_shutter",
+   "mesh": 0
+  }
+ ],
+ "meshes": [
+  {
+   "name": "Plane.005",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "doubleSided": true,
+   "name": "rollershutter_window_02",
+   "normalTexture": {
+    "index": 0
+   },
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicRoughnessTexture": {
+     "index": 2
+    }
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 0,
+   "source": 1
+  },
+  {
+   "sampler": 0,
+   "source": 2
+  }
+ ],
+ "images": [
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_nor_gl",
+   "uri": "textures/rollershutter_window_02_nor_gl_1k.jpg"
+  },
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_diff",
+   "uri": "textures/rollershutter_window_02_diff_1k.jpg"
+  },
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_metal-rollershutter_window_02_rough",
+   "uri": "textures/rollershutter_window_02_arm_1k.jpg"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "type": "VEC3",
+   "count": 884,
+   "min": [
+    -0.8000001311302185,
+    0.71,
+    -0.0010000001639127731
+   ],
+   "max": [
+    0.8000001311302185,
+    1.5608705282211304,
+    0.1670706868171692
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "type": "VEC3",
+   "count": 884,
+   "min": [
+    -1.0,
+    -1.0,
+    -1.0
+   ],
+   "max": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "type": "VEC2",
+   "count": 884,
+   "min": [
+    0.001002386910840869,
+    0.001174837854358566
+   ],
+   "max": [
+    0.9989883899688721,
+    0.998993456363678
+   ]
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5125,
+   "type": "SCALAR",
+   "count": 924,
+   "min": [
+    0
+   ],
+   "max": [
+    883
+   ]
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 10608
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 10608,
+   "byteLength": 10608
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 21216,
+   "byteLength": 7072
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 28288,
+   "byteLength": 3696
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "counter_part_open.bin",
+   "byteLength": 31984
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987
+  }
+ ]
+}

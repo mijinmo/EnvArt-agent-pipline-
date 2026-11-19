@@ -1,0 +1,158 @@
+{
+ "asset": {
+  "generator": "Khronos glTF Blender I/O v3.6.27",
+  "version": "2.0"
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "counter_shutter",
+   "mesh": 0
+  }
+ ],
+ "meshes": [
+  {
+   "name": "Plane.005",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "doubleSided": true,
+   "name": "rollershutter_window_02",
+   "normalTexture": {
+    "index": 0
+   },
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicRoughnessTexture": {
+     "index": 2
+    }
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 0,
+   "source": 1
+  },
+  {
+   "sampler": 0,
+   "source": 2
+  }
+ ],
+ "images": [
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_nor_gl",
+   "uri": "textures/rollershutter_window_02_nor_gl_1k.jpg"
+  },
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_diff",
+   "uri": "textures/rollershutter_window_02_diff_1k.jpg"
+  },
+  {
+   "mimeType": "image/jpeg",
+   "name": "rollershutter_window_02_metal-rollershutter_window_02_rough",
+   "uri": "textures/rollershutter_window_02_arm_1k.jpg"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 672,
+   "max": [
+    0.8000001311302185,
+    1.5608705282211304,
+    0.1670706868171692
+   ],
+   "min": [
+    -0.8000001311302185,
+    2.2873277885082643e-06,
+    -0.0010000001639127731
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 672,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 672,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 1680,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteLength": 8064,
+   "byteOffset": 0,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 8064,
+   "byteOffset": 8064,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 5376,
+   "byteOffset": 16128,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 3360,
+   "byteOffset": 21504,
+   "target": 34963
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "counter_shutter.bin",
+   "byteLength": 24864
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987
+  }
+ ]
+}

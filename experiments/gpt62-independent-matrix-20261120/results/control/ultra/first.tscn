@@ -1,0 +1,2310 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://review.gd" id="E1"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="E2"]
+[ext_resource type="Shader" path="res://art/surfaces/architectural_finish.gdshader" id="E3"]
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_textured_concrete_color.jpg" id="E4"]
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_textured_concrete_normal.jpg" id="E5"]
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_textured_concrete_rough.jpg" id="E6"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_tiles_color.jpg" id="E7"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_tiles_normal.jpg" id="E8"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_tiles_rough.jpg" id="E9"]
+[ext_resource type="PackedScene" path="res://art/models/metal_office_desk/metal_office_desk.gltf" id="E10"]
+[ext_resource type="PackedScene" path="res://art/models/filmstrip_projector_8mm/filmstrip_projector_8mm.gltf" id="E11"]
+[ext_resource type="PackedScene" path="res://art/models/vintage_wooden_drawer_01/vintage_wooden_drawer_01.gltf" id="E12"]
+[ext_resource type="PackedScene" path="res://art/models/SchoolChair_01/SchoolChair_01.gltf" id="E13"]
+[ext_resource type="Texture2D" path="res://art/surfaces/concrete_cast_color.jpg" id="E14"]
+[ext_resource type="Texture2D" path="res://art/surfaces/concrete_cast_normal.jpg" id="E15"]
+[ext_resource type="Texture2D" path="res://art/surfaces/concrete_cast_rough.jpg" id="E16"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_honed_color.jpg" id="E17"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_honed_normal.jpg" id="E18"]
+[ext_resource type="Texture2D" path="res://art/surfaces/terrazzo_honed_rough.jpg" id="E19"]
+[ext_resource type="PackedScene" path="res://art/models/mounted_fluorescent_lights/tube_a.gltf" id="E20"]
+[ext_resource type="Texture2D" path="res://art/print/door_header.jpg" id="E21"]
+[ext_resource type="Texture2D" path="res://art/print/door_pier.jpg" id="E22"]
+[ext_resource type="PackedScene" path="res://art/models/fire_alarm/fire_alarm.gltf" id="E23"]
+[ext_resource type="PackedScene" path="res://art/models/rollershutter_door/vault_shutter.gltf" id="E24"]
+[ext_resource type="Texture2D" path="res://art/print/storage.jpg" id="E25"]
+[ext_resource type="Texture2D" path="res://art/print/drawer_label.jpg" id="E26"]
+[ext_resource type="PackedScene" path="res://art/models/rollershutter_window_02/counter_shutter.gltf" id="E27"]
+[ext_resource type="Texture2D" path="res://art/print/receiving.jpg" id="E28"]
+[ext_resource type="Texture2D" path="res://art/print/transport_plate.jpg" id="E29"]
+[ext_resource type="Texture2D" path="res://art/print/form2.jpg" id="E30"]
+[ext_resource type="Texture2D" path="res://art/print/form1.jpg" id="E31"]
+[ext_resource type="Texture2D" path="res://art/print/form0.jpg" id="E32"]
+[ext_resource type="Texture2D" path="res://art/print/form3.jpg" id="E33"]
+[ext_resource type="Texture2D" path="res://art/print/bench_header.jpg" id="E34"]
+[ext_resource type="PackedScene" path="res://art/models/wall_clock/wall_clock.gltf" id="E35"]
+[ext_resource type="PackedScene" path="res://art/models/binder_notebook/binder_open.gltf" id="E36"]
+[ext_resource type="PackedScene" path="res://art/models/office_notepads/legal_pad.gltf" id="E37"]
+[ext_resource type="PackedScene" path="res://art/models/vintage_stapler/vintage_stapler.gltf" id="E38"]
+[ext_resource type="PackedScene" path="res://art/models/desk_lamp_arm_01/desk_lamp_arm_01.gltf" id="E39"]
+[ext_resource type="PackedScene" path="res://art/models/cardboard_box_01/cardboard_box_01.gltf" id="E40"]
+[ext_resource type="PackedScene" path="res://art/models/office_notepads/index_cards.gltf" id="E41"]
+[ext_resource type="PackedScene" path="res://art/models/binder_notebook/binder_closed.gltf" id="E42"]
+[ext_resource type="PackedScene" path="res://art/models/clipboard/clipboard.gltf" id="E43"]
+[ext_resource type="Texture2D" path="res://art/print/can_label.jpg" id="E44"]
+
+[sub_resource type="Environment" id="Interior"]
+background_mode = 1
+background_color = Color(0.2, 0.243137, 0.25098, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.670588, 0.768627, 0.768627, 1)
+ambient_light_energy = 0.38
+reflected_light_source = 1
+tonemap_mode = 2
+tonemap_white = 4.1
+ssao_enabled = true
+ssao_radius = 0.42
+ssao_intensity = 1.35
+ssao_sharpness = 0.86
+glow_enabled = true
+glow_intensity = 0.28
+glow_bloom = 0.03
+
+[sub_resource type="ShaderMaterial" id="wood_textured_concrete"]
+shader = ExtResource("E3")
+shader_parameter/finish_color = ExtResource("E14")
+shader_parameter/finish_normal = ExtResource("E15")
+shader_parameter/finish_roughness = ExtResource("E16")
+shader_parameter/repeat_m = 1.8
+shader_parameter/saturation = 0.24
+shader_parameter/stain = Color(0.882353, 0.937255, 0.917647, 1)
+shader_parameter/value_gain = 1.85
+shader_parameter/relief = 0.46
+shader_parameter/polish = 0
+
+[sub_resource type="ShaderMaterial" id="terrazzo_tiles"]
+shader = ExtResource("E3")
+shader_parameter/finish_color = ExtResource("E17")
+shader_parameter/finish_normal = ExtResource("E18")
+shader_parameter/finish_roughness = ExtResource("E19")
+shader_parameter/repeat_m = 2
+shader_parameter/saturation = 0.18
+shader_parameter/stain = Color(0.701961, 0.819608, 0.8, 1)
+shader_parameter/value_gain = 0.83
+shader_parameter/relief = 0.22
+shader_parameter/polish = 0.04
+
+[sub_resource type="StandardMaterial3D" id="Enamel"]
+albedo_color = Color(0.211765, 0.360784, 0.360784, 1)
+roughness = 0.37
+metallic = 0.22
+
+[sub_resource type="StandardMaterial3D" id="Iron"]
+albedo_color = Color(0.156863, 0.207843, 0.215686, 1)
+roughness = 0.48
+metallic = 0.48
+
+[sub_resource type="BoxMesh" id="Box_Vector3_22_0_002_16_"]
+size = Vector3(22, 0.002, 16)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_5_1_6_10_"]
+size = Vector3(0.5, 1.6, 10)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_4_1_6_0_5_"]
+size = Vector3(4, 1.6, 0.5)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_24_0_64_0_5_"]
+size = Vector3(24, 0.64, 0.5)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_5_4_6_0_75_"]
+size = Vector3(0.5, 4.6, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="Ceiling"]
+albedo_color = Color(0.407843, 0.45098, 0.439216, 1)
+roughness = 0.92
+metallic = 0
+
+[sub_resource type="BoxMesh" id="Box_Vector3_22_0_36_16_4_"]
+size = Vector3(22, 0.36, 16.4)
+
+[sub_resource type="StandardMaterial3D" id="Porcelain"]
+albedo_color = Color(0.776471, 0.776471, 0.713725, 1)
+roughness = 0.42
+metallic = 0.07
+
+[sub_resource type="StandardMaterial3D" id="Recess"]
+albedo_color = Color(0.090196, 0.152941, 0.156863, 1)
+roughness = 0.82
+metallic = 0.15
+
+[sub_resource type="StandardMaterial3D" id="Galvanized"]
+albedo_color = Color(0.490196, 0.533333, 0.505882, 1)
+roughness = 0.36
+metallic = 0.65
+
+[sub_resource type="StandardMaterial3D" id="AgedBrass"]
+albedo_color = Color(0.670588, 0.592157, 0.396078, 1)
+roughness = 0.45
+metallic = 0.63
+
+[sub_resource type="StandardMaterial3D" id="DeepGreen"]
+albedo_color = Color(0.184314, 0.32549, 0.321569, 1)
+roughness = 0.6
+metallic = 0.13
+
+[sub_resource type="StandardMaterial3D" id="PanelGreen"]
+albedo_color = Color(0.337255, 0.45098, 0.447059, 1)
+roughness = 0.58
+metallic = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Rubber"]
+albedo_color = Color(0.12549, 0.180392, 0.172549, 1)
+roughness = 0.91
+metallic = 0
+
+[sub_resource type="StandardMaterial3D" id="Fluorescent"]
+albedo_color = Color(0.94902, 0.94902, 0.85098, 1)
+roughness = 0.4
+metallic = 0
+emission_enabled = true
+emission = Color(0.94902, 0.94902, 0.85098, 1)
+emission_energy_multiplier = 3.2
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_48_4_5_4_9_"]
+size = Vector3(0.48, 4.5, 4.9)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_4_4_4_5_0_32_"]
+size = Vector3(4.4, 4.5, 0.32)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_4_0_18_0_033_"]
+size = Vector3(4, 0.18, 0.033)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_03_0_18_10_"]
+size = Vector3(0.03, 0.18, 10)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_24_0_18_0_03_"]
+size = Vector3(24, 0.18, 0.03)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_21_3_0_3_0_26_"]
+size = Vector3(21.3, 0.3, 0.26)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_19_0_16_16_05_"]
+size = Vector3(0.19, 0.16, 16.05)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_846_0_048_0_132_"]
+size = Vector3(1.846, 0.048, 0.132)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_7_1_86_0_6_"]
+size = Vector3(0.7, 1.86, 0.6)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_702_0_014_0_604_"]
+size = Vector3(0.702, 0.014, 0.604)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_69_0_33_0_025_"]
+size = Vector3(0.69, 0.33, 0.025)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_067_2_3_0_057_"]
+size = Vector3(0.067, 2.3, 0.057)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_012_2_3_0_54_"]
+size = Vector3(0.012, 2.3, 0.54)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_014_0_33_0_62_"]
+size = Vector3(0.014, 0.33, 0.62)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_21_1_7_0_39_"]
+size = Vector3(1.21, 1.7, 0.39)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_18_0_054_0_09_"]
+size = Vector3(1.18, 0.054, 0.09)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_3_0_46_0_77_"]
+size = Vector3(3, 0.46, 0.77)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_35_0_052_0_045_"]
+size = Vector3(1.35, 0.052, 0.045)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_772_0_381_0_02_"]
+size = Vector3(1.772, 0.381, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="Print_door_header"]
+albedo_texture = ExtResource("E21")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_40"]
+size = Vector2(1.75, 0.359)
+material = SubResource("Print_door_header")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_442_0_588_0_02_"]
+size = Vector3(0.442, 0.588, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="Print_door_pier"]
+albedo_texture = ExtResource("E22")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_43"]
+size = Vector2(0.42, 0.566)
+material = SubResource("Print_door_pier")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_652_0_356_0_02_"]
+size = Vector3(1.652, 0.356, 0.02)
+
+[sub_resource type="QuadMesh" id="Sheet_45"]
+size = Vector2(1.63, 0.334)
+material = SubResource("Print_door_header")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_198_0_003_0_57_"]
+size = Vector3(1.198, 0.003, 0.57)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_196_0_001_0_009_"]
+size = Vector3(1.196, 0.001, 0.009)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_24_4_38_0_18_"]
+size = Vector3(0.24, 4.38, 0.18)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_2_65_1_03_0_04_"]
+size = Vector3(2.65, 1.03, 0.04)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_2_67_0_043_0_055_"]
+size = Vector3(2.67, 0.043, 0.055)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_19_2_46_0_09_"]
+size = Vector3(1.19, 2.46, 0.09)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_872_0_277_0_02_"]
+size = Vector3(0.872, 0.277, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="Print_storage"]
+albedo_texture = ExtResource("E25")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_54"]
+size = Vector2(0.85, 0.255)
+material = SubResource("Print_storage")
+
+[sub_resource type="QuadMesh" id="Sheet_55"]
+size = Vector2(0.85, 0.255)
+material = SubResource("Print_storage")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_503_0_124_1_502_"]
+size = Vector3(1.503, 0.124, 1.502)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_521_0_048_1_521_"]
+size = Vector3(1.521, 0.048, 1.521)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_508_0_012_1_508_"]
+size = Vector3(1.508, 0.012, 1.508)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_431_0_185_0_02_"]
+size = Vector3(1.431, 0.185, 0.02)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_013_0_029_0_045_"]
+size = Vector3(0.013, 0.029, 0.045)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_15_0_021_0_012_"]
+size = Vector3(0.15, 0.021, 0.012)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_21_0_059_0_009_"]
+size = Vector3(0.21, 0.059, 0.009)
+
+[sub_resource type="StandardMaterial3D" id="Print_drawer_label"]
+albedo_texture = ExtResource("E26")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_64"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_013_0_256_1_21_"]
+size = Vector3(0.013, 0.256, 1.21)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_007_0_009_0_26_"]
+size = Vector3(0.007, 0.009, 0.26)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_431_0_218333_0_02_"]
+size = Vector3(1.431, 0.218333, 0.02)
+
+[sub_resource type="QuadMesh" id="Sheet_68"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_69"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_70"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_013_0_576_1_21_"]
+size = Vector3(0.013, 0.576, 1.21)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_431_0_225_0_02_"]
+size = Vector3(1.431, 0.225, 0.02)
+
+[sub_resource type="QuadMesh" id="Sheet_73"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_74"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_75"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_76"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="QuadMesh" id="Sheet_77"]
+size = Vector2(0.192, 0.052)
+material = SubResource("Print_drawer_label")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_013_0_896_1_21_"]
+size = Vector3(0.013, 0.896, 1.21)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_985_0_024_0_02_"]
+size = Vector3(1.985, 0.024, 0.02)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_044_1_086_0_98_"]
+size = Vector3(0.044, 1.086, 0.98)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_07_0_046_5_95_"]
+size = Vector3(0.07, 0.046, 5.95)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_98_2_93_0_062_"]
+size = Vector3(0.98, 2.93, 0.062)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_3_94_0_062_0_092_"]
+size = Vector3(3.94, 0.062, 0.092)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_3_94_0_073_0_089_"]
+size = Vector3(3.94, 0.073, 0.089)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_62_0_062_0_29_"]
+size = Vector3(1.62, 0.062, 0.29)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_022_0_306_0_02_"]
+size = Vector3(1.022, 0.306, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="Print_receiving"]
+albedo_texture = ExtResource("E28")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_88"]
+size = Vector2(1, 0.284)
+material = SubResource("Print_receiving")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_2_36_0_035_0_03_"]
+size = Vector3(2.36, 0.035, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="Print_transport_plate"]
+albedo_texture = ExtResource("E29")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_91"]
+size = Vector2(0.91, 0.641)
+material = SubResource("Print_transport_plate")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_023_0_019_0_007_"]
+size = Vector3(0.023, 0.019, 0.007)
+
+[sub_resource type="StandardMaterial3D" id="Print_form2"]
+albedo_texture = ExtResource("E30")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_94"]
+size = Vector2(0.245, 0.333)
+material = SubResource("Print_form2")
+
+[sub_resource type="StandardMaterial3D" id="Print_form1"]
+albedo_texture = ExtResource("E31")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_96"]
+size = Vector2(0.252, 0.342)
+material = SubResource("Print_form1")
+
+[sub_resource type="StandardMaterial3D" id="Print_form0"]
+albedo_texture = ExtResource("E32")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_98"]
+size = Vector2(0.237, 0.322)
+material = SubResource("Print_form0")
+
+[sub_resource type="StandardMaterial3D" id="Print_form3"]
+albedo_texture = ExtResource("E33")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_100"]
+size = Vector2(0.225, 0.305)
+material = SubResource("Print_form3")
+
+[sub_resource type="QuadMesh" id="Sheet_101"]
+size = Vector2(0.221, 0.3)
+material = SubResource("Print_form0")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_1_792_0_317_0_02_"]
+size = Vector3(1.792, 0.317, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="Print_bench_header"]
+albedo_texture = ExtResource("E34")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_104"]
+size = Vector2(1.77, 0.295)
+material = SubResource("Print_bench_header")
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_035_0_055_0_184_"]
+size = Vector3(0.035, 0.055, 0.184)
+
+[sub_resource type="BoxMesh" id="Box_Vector3_0_923_0_048_0_132_"]
+size = Vector3(0.923, 0.048, 0.132)
+
+[sub_resource type="StandardMaterial3D" id="Tinplate"]
+albedo_color = Color(0.52549, 0.580392, 0.552941, 1)
+roughness = 0.43
+metallic = 0.62
+
+[sub_resource type="CylinderMesh" id="Cylinder_108"]
+top_radius = 0.143
+bottom_radius = 0.143
+height = 0.046
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_109"]
+top_radius = 0.146
+bottom_radius = 0.146
+height = 0.011
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_110"]
+top_radius = 0.1287
+bottom_radius = 0.1287
+height = 0.004
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_111"]
+top_radius = 0.143
+bottom_radius = 0.143
+height = 0.046
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_112"]
+top_radius = 0.146
+bottom_radius = 0.146
+height = 0.011
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_113"]
+top_radius = 0.1287
+bottom_radius = 0.1287
+height = 0.004
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_114"]
+top_radius = 0.143
+bottom_radius = 0.143
+height = 0.046
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_115"]
+top_radius = 0.146
+bottom_radius = 0.146
+height = 0.011
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_116"]
+top_radius = 0.1287
+bottom_radius = 0.1287
+height = 0.004
+radial_segments = 32
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="Print_can_label"]
+albedo_texture = ExtResource("E44")
+roughness = 0.86
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="Sheet_118"]
+size = Vector2(0.1859, 0.076505)
+material = SubResource("Print_can_label")
+
+[sub_resource type="CylinderMesh" id="Cylinder_119"]
+top_radius = 0.135
+bottom_radius = 0.135
+height = 0.046
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_120"]
+top_radius = 0.138
+bottom_radius = 0.138
+height = 0.011
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Cylinder_121"]
+top_radius = 0.1215
+bottom_radius = 0.1215
+height = 0.004
+radial_segments = 32
+rings = 1
+
+[sub_resource type="QuadMesh" id="Sheet_122"]
+size = Vector2(0.1755, 0.072225)
+material = SubResource("Print_can_label")
+
+[node name="RecordsTransfer" type="Node3D"]
+script = ExtResource("E1")
+
+[node name="BaseLab" parent="." instance=ExtResource("E2")]
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Interior")
+
+[node name="Sun" parent="BaseLab"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("Enamel")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("Enamel")
+
+[node name="ArchitecturalShell" type="Node3D" parent="Art"]
+
+[node name="LocalFloor" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1, 0.001, -4.1)
+mesh = SubResource("Box_Vector3_22_0_002_16_")
+material_override = SubResource("terrazzo_tiles")
+
+[node name="EastUpstand" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(10, 3.8, -6)
+mesh = SubResource("Box_Vector3_0_5_1_6_10_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="ReturnUpstand" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(8, 3.8, -1)
+mesh = SubResource("Box_Vector3_4_1_6_0_5_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="RearSoffit" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(0, 4.32, -12)
+mesh = SubResource("Box_Vector3_24_0_64_0_5_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="EastRearClosure" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(10, 2.3, -11.375)
+mesh = SubResource("Box_Vector3_0_5_4_6_0_75_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingSlab" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.68, -4.15)
+mesh = SubResource("Box_Vector3_22_0_36_16_4_")
+material_override = SubResource("Ceiling")
+
+[node name="Practicals" type="Node3D" parent="Art"]
+
+[node name="BenchOverhead" type="OmniLight3D" parent="Art/Practicals"]
+position = Vector3(7.75, 3.35, -4.7)
+light_color = Color(0.952941, 0.917647, 0.807843, 1)
+light_energy = 2.55
+light_size = 0.035
+omni_range = 7
+omni_attenuation = 1.35
+shadow_enabled = true
+shadow_bias = 0.045
+
+[node name="AisleOverhead" type="OmniLight3D" parent="Art/Practicals"]
+position = Vector3(1, 3.65, -2.8)
+light_color = Color(0.839216, 0.941176, 0.929412, 1)
+light_energy = 2.9
+light_size = 0.06
+omni_range = 8
+omni_attenuation = 1.35
+shadow_enabled = true
+shadow_bias = 0.045
+
+[node name="NorthOverhead" type="OmniLight3D" parent="Art/Practicals"]
+position = Vector3(4, 3.8, -9.2)
+light_color = Color(0.760784, 0.87451, 0.87451, 1)
+light_energy = 2.7
+light_size = 0.035
+omni_range = 7
+omni_attenuation = 1.35
+shadow_enabled = true
+shadow_bias = 0.045
+
+[node name="EntranceFill" type="OmniLight3D" parent="Art/Practicals"]
+position = Vector3(-3.3, 3.45, -0.5)
+light_color = Color(0.956863, 0.933333, 0.882353, 1)
+light_energy = 2.3
+light_size = 0.035
+omni_range = 6
+omni_attenuation = 1.35
+shadow_enabled = true
+shadow_bias = 0.045
+
+[node name="Workstation" type="Node3D" parent="Art"]
+
+[node name="InspectionDesk" parent="Art/Workstation" instance=ExtResource("E10")]
+position = Vector3(9.23, 0.003, -4.6)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="FilmProjector" parent="Art/Workstation" instance=ExtResource("E11")]
+position = Vector3(9.16, 0.792, -4.95)
+rotation_degrees = Vector3(0, -17, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="IndexDrawers" parent="Art/Workstation" instance=ExtResource("E12")]
+position = Vector3(9.23, 0.003, -2.65)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="OperatorsChair" parent="Art/Workstation" instance=ExtResource("E13")]
+position = Vector3(8.25, 0.005, -4.05)
+rotation_degrees = Vector3(0, 67, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="ReturnContinuation" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(9.99, 2.25, 1.7)
+mesh = SubResource("Box_Vector3_0_48_4_5_4_9_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="EndBay" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(8.05, 2.25, 4.05)
+mesh = SubResource("Box_Vector3_4_4_4_5_0_32_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="ReturnBase" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(8, 0.093, -1.264)
+mesh = SubResource("Box_Vector3_4_0_18_0_033_")
+material_override = SubResource("Iron")
+
+[node name="RightBase" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(9.729, 0.094, -6)
+mesh = SubResource("Box_Vector3_0_03_0_18_10_")
+material_override = SubResource("Iron")
+
+[node name="BackBase" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(0, 0.094, -11.729)
+mesh = SubResource("Box_Vector3_24_0_18_0_03_")
+material_override = SubResource("Iron")
+
+[node name="CeilingRib0" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.35, -11.4)
+mesh = SubResource("Box_Vector3_21_3_0_3_0_26_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingRib1" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.35, -7.7)
+mesh = SubResource("Box_Vector3_21_3_0_3_0_26_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingRib2" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.35, -4)
+mesh = SubResource("Box_Vector3_21_3_0_3_0_26_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingRib3" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.35, 0.05)
+mesh = SubResource("Box_Vector3_21_3_0_3_0_26_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingRib4" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.2, 4.35, 3.75)
+mesh = SubResource("Box_Vector3_21_3_0_3_0_26_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="LongitudinalRib0" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(-6.4, 4.42, -4.1)
+mesh = SubResource("Box_Vector3_0_19_0_16_16_05_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="LongitudinalRib1" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(-2.7, 4.42, -4.1)
+mesh = SubResource("Box_Vector3_0_19_0_16_16_05_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="LongitudinalRib2" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(1.05, 4.42, -4.1)
+mesh = SubResource("Box_Vector3_0_19_0_16_16_05_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="LongitudinalRib3" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(4.8, 4.42, -4.1)
+mesh = SubResource("Box_Vector3_0_19_0_16_16_05_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="LongitudinalRib4" type="MeshInstance3D" parent="Art/ArchitecturalShell"]
+position = Vector3(8.58, 4.42, -4.1)
+mesh = SubResource("Box_Vector3_0_19_0_16_16_05_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="CeilingStrip0" type="Node3D" parent="Art/Practicals"]
+position = Vector3(-2.7, 4.306, -1.9)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip0"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip0" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip0" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip0" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip0" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CeilingStrip1" type="Node3D" parent="Art/Practicals"]
+position = Vector3(1.05, 4.306, -5.87)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip1"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip1" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip1" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip1" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip1" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CeilingStrip2" type="Node3D" parent="Art/Practicals"]
+position = Vector3(4.8, 4.306, -9.55)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip2"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip2" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip2" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip2" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip2" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CeilingStrip3" type="Node3D" parent="Art/Practicals"]
+position = Vector3(8.58, 4.306, -5.87)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip3"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip3" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip3" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip3" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip3" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CeilingStrip4" type="Node3D" parent="Art/Practicals"]
+position = Vector3(8.58, 4.306, 1.9)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip4"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip4" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip4" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip4" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip4" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CeilingStrip5" type="Node3D" parent="Art/Practicals"]
+position = Vector3(4.8, 4.306, -1.9)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/CeilingStrip5"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_1_846_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/CeilingStrip5" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/CeilingStrip5" instance=ExtResource("E20")]
+position = Vector3(-0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_0" parent="Art/Practicals/CeilingStrip5" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire1_1" parent="Art/Practicals/CeilingStrip5" instance=ExtResource("E20")]
+position = Vector3(0.462, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ArchivePortal" type="Node3D" parent="Art"]
+
+[node name="PierExtension0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.95, 3.53, -4)
+mesh = SubResource("Box_Vector3_0_7_1_86_0_6_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="ShadowJoint0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.95, 2.603, -4)
+mesh = SubResource("Box_Vector3_0_702_0_014_0_604_")
+material_override = SubResource("Recess")
+
+[node name="KickFront0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.95, 0.165, -3.687)
+mesh = SubResource("Box_Vector3_0_69_0_33_0_025_")
+material_override = SubResource("Iron")
+
+[node name="KickRear0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.95, 0.165, -4.313)
+mesh = SubResource("Box_Vector3_0_69_0_33_0_025_")
+material_override = SubResource("Iron")
+
+[node name="SteelStop0_0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.634, 1.15, -4.29)
+mesh = SubResource("Box_Vector3_0_067_2_3_0_057_")
+material_override = SubResource("Iron")
+
+[node name="SteelStop0_1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.634, 1.15, -3.708)
+mesh = SubResource("Box_Vector3_0_067_2_3_0_057_")
+material_override = SubResource("Iron")
+
+[node name="InnerLining0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.606, 1.15, -4)
+mesh = SubResource("Box_Vector3_0_012_2_3_0_54_")
+material_override = SubResource("DeepGreen")
+
+[node name="ShoeSide0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(-1.307, 0.165, -4)
+mesh = SubResource("Box_Vector3_0_014_0_33_0_62_")
+material_override = SubResource("Iron")
+
+[node name="PierExtension1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.95, 3.53, -4)
+mesh = SubResource("Box_Vector3_0_7_1_86_0_6_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="ShadowJoint1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.95, 2.603, -4)
+mesh = SubResource("Box_Vector3_0_702_0_014_0_604_")
+material_override = SubResource("Recess")
+
+[node name="KickFront1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.95, 0.165, -3.687)
+mesh = SubResource("Box_Vector3_0_69_0_33_0_025_")
+material_override = SubResource("Iron")
+
+[node name="KickRear1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.95, 0.165, -4.313)
+mesh = SubResource("Box_Vector3_0_69_0_33_0_025_")
+material_override = SubResource("Iron")
+
+[node name="SteelStop1_0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.634, 1.15, -4.29)
+mesh = SubResource("Box_Vector3_0_067_2_3_0_057_")
+material_override = SubResource("Iron")
+
+[node name="SteelStop1_1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.634, 1.15, -3.708)
+mesh = SubResource("Box_Vector3_0_067_2_3_0_057_")
+material_override = SubResource("Iron")
+
+[node name="InnerLining1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0.606, 1.15, -4)
+mesh = SubResource("Box_Vector3_0_012_2_3_0_54_")
+material_override = SubResource("DeepGreen")
+
+[node name="ShoeSide1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(1.307, 0.165, -4)
+mesh = SubResource("Box_Vector3_0_014_0_33_0_62_")
+material_override = SubResource("Iron")
+
+[node name="TransomBacking" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.45, -4)
+mesh = SubResource("Box_Vector3_1_21_1_7_0_39_")
+material_override = SubResource("Recess")
+
+[node name="TransomLouver0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.72, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.803, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver2" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.886, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver3" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.969, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver4" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.052, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver5" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.135, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver6" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.218, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver7" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.301, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver8" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.384, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver9" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.467, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver10" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.55, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="TransomLouver11" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.633, -3.787)
+mesh = SubResource("Box_Vector3_1_18_0_054_0_09_")
+material_override = SubResource("Iron")
+rotation_degrees = Vector3(-18, 0, 0)
+
+[node name="EntryBeam" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 3.96, -4)
+mesh = SubResource("Box_Vector3_3_0_46_0_77_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="HeadCap" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.326, -3.69)
+mesh = SubResource("Box_Vector3_1_35_0_052_0_045_")
+material_override = SubResource("Iron")
+
+[node name="LintelSign" type="Node3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.524, -3.674)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/ArchivePortal/LintelSign"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_1_772_0_381_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/ArchivePortal/LintelSign"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_40")
+
+[node name="PierNumber" type="Node3D" parent="Art/ArchivePortal"]
+position = Vector3(-0.965, 1.64, -3.675)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/ArchivePortal/PierNumber"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_0_442_0_588_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/ArchivePortal/PierNumber"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_43")
+
+[node name="AlarmCallPoint" parent="Art/ArchivePortal" instance=ExtResource("E23")]
+position = Vector3(-1.304, 1.32, -3.98)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ReverseSign" type="Node3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 2.527, -4.326)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/ArchivePortal/ReverseSign"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_1_652_0_356_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/ArchivePortal/ReverseSign"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_45")
+
+[node name="Sill" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 0.0035, -4)
+mesh = SubResource("Box_Vector3_1_198_0_003_0_57_")
+material_override = SubResource("Galvanized")
+
+[node name="SillGroove0" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 0.0057, -4.23)
+mesh = SubResource("Box_Vector3_1_196_0_001_0_009_")
+material_override = SubResource("Rubber")
+
+[node name="SillGroove1" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 0.0057, -4.19)
+mesh = SubResource("Box_Vector3_1_196_0_001_0_009_")
+material_override = SubResource("Rubber")
+
+[node name="SillGroove2" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 0.0057, -3.81)
+mesh = SubResource("Box_Vector3_1_196_0_001_0_009_")
+material_override = SubResource("Rubber")
+
+[node name="SillGroove3" type="MeshInstance3D" parent="Art/ArchivePortal"]
+position = Vector3(0, 0.0057, -3.77)
+mesh = SubResource("Box_Vector3_1_196_0_001_0_009_")
+material_override = SubResource("Rubber")
+
+[node name="NorthWall" type="Node3D" parent="Art"]
+
+[node name="Pilaster0" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(-3.6, 2.19, -11.661)
+mesh = SubResource("Box_Vector3_0_24_4_38_0_18_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Wainscot0" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(-2.11, 0.52, -11.724)
+mesh = SubResource("Box_Vector3_2_65_1_03_0_04_")
+material_override = SubResource("DeepGreen")
+
+[node name="ChairRail0" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(-2.11, 1.046, -11.689)
+mesh = SubResource("Box_Vector3_2_67_0_043_0_055_")
+material_override = SubResource("Galvanized")
+
+[node name="Pilaster1" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(-0.65, 2.19, -11.661)
+mesh = SubResource("Box_Vector3_0_24_4_38_0_18_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Wainscot1" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(0.84, 0.52, -11.724)
+mesh = SubResource("Box_Vector3_2_65_1_03_0_04_")
+material_override = SubResource("DeepGreen")
+
+[node name="ChairRail1" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(0.84, 1.046, -11.689)
+mesh = SubResource("Box_Vector3_2_67_0_043_0_055_")
+material_override = SubResource("Galvanized")
+
+[node name="Pilaster2" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(2.3, 2.19, -11.661)
+mesh = SubResource("Box_Vector3_0_24_4_38_0_18_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Wainscot2" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(3.79, 0.52, -11.724)
+mesh = SubResource("Box_Vector3_2_65_1_03_0_04_")
+material_override = SubResource("DeepGreen")
+
+[node name="ChairRail2" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(3.79, 1.046, -11.689)
+mesh = SubResource("Box_Vector3_2_67_0_043_0_055_")
+material_override = SubResource("Galvanized")
+
+[node name="Pilaster3" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(5.25, 2.19, -11.661)
+mesh = SubResource("Box_Vector3_0_24_4_38_0_18_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Wainscot3" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(6.74, 0.52, -11.724)
+mesh = SubResource("Box_Vector3_2_65_1_03_0_04_")
+material_override = SubResource("DeepGreen")
+
+[node name="ChairRail3" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(6.74, 1.046, -11.689)
+mesh = SubResource("Box_Vector3_2_67_0_043_0_055_")
+material_override = SubResource("Galvanized")
+
+[node name="Pilaster4" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(8.2, 2.19, -11.661)
+mesh = SubResource("Box_Vector3_0_24_4_38_0_18_")
+material_override = SubResource("wood_textured_concrete")
+
+[node name="Wainscot4" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(9.69, 0.52, -11.724)
+mesh = SubResource("Box_Vector3_2_65_1_03_0_04_")
+material_override = SubResource("DeepGreen")
+
+[node name="ChairRail4" type="MeshInstance3D" parent="Art/NorthWall"]
+position = Vector3(9.69, 1.046, -11.689)
+mesh = SubResource("Box_Vector3_2_67_0_043_0_055_")
+material_override = SubResource("Galvanized")
+
+[node name="VaultBay0" type="Node3D" parent="Art/NorthWall"]
+position = Vector3(0.86, 0, -11.62)
+
+[node name="Frame" type="MeshInstance3D" parent="Art/NorthWall/VaultBay0"]
+position = Vector3(0, 1.2, -0.03)
+mesh = SubResource("Box_Vector3_1_19_2_46_0_09_")
+material_override = SubResource("Iron")
+
+[node name="SteelShutter" parent="Art/NorthWall/VaultBay0" instance=ExtResource("E24")]
+position = Vector3(0, 0.004, 0.011)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Header" type="Node3D" parent="Art/NorthWall/VaultBay0"]
+position = Vector3(0, 2.573, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/NorthWall/VaultBay0/Header"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_0_872_0_277_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/NorthWall/VaultBay0/Header"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_54")
+
+[node name="VaultBay1" type="Node3D" parent="Art/NorthWall"]
+position = Vector3(6.75, 0, -11.62)
+
+[node name="Frame" type="MeshInstance3D" parent="Art/NorthWall/VaultBay1"]
+position = Vector3(0, 1.2, -0.03)
+mesh = SubResource("Box_Vector3_1_19_2_46_0_09_")
+material_override = SubResource("Iron")
+
+[node name="SteelShutter" parent="Art/NorthWall/VaultBay1" instance=ExtResource("E24")]
+position = Vector3(0, 0.004, 0.011)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Header" type="Node3D" parent="Art/NorthWall/VaultBay1"]
+position = Vector3(0, 2.573, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/NorthWall/VaultBay1/Header"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_0_872_0_277_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/NorthWall/VaultBay1/Header"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_55")
+
+[node name="FlatFileBank" type="Node3D" parent="Art"]
+
+[node name="File0" type="Node3D" parent="Art/FlatFileBank"]
+position = Vector3(1, 0, 1)
+
+[node name="RecessedPlinth" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.062, 0.002)
+mesh = SubResource("Box_Vector3_1_503_0_124_1_502_")
+material_override = SubResource("Iron")
+
+[node name="Lid" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.376, 0)
+mesh = SubResource("Box_Vector3_1_521_0_048_1_521_")
+material_override = SubResource("PanelGreen")
+
+[node name="LidGasket" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.346, 0)
+mesh = SubResource("Box_Vector3_1_508_0_012_1_508_")
+material_override = SubResource("Rubber")
+
+[node name="Drawer0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.235, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_185_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post0_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.539, 0.247, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.401, 0.247, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.47, 0.247, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0.401, 0.247, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0.539, 0.247, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0.47, 0.247, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.235, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(0, 0.235, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_64")
+
+[node name="EndInset" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.752, 0.2, 0)
+mesh = SubResource("Box_Vector3_0_013_0_256_1_21_")
+material_override = SubResource("DeepGreen")
+
+[node name="PressedVent0" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.762, 0.236, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent1" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.762, 0.21, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent2" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.762, 0.184, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent3" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.762, 0.158, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent4" type="MeshInstance3D" parent="Art/FlatFileBank/File0"]
+position = Vector3(-0.762, 0.132, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="File1" type="Node3D" parent="Art/FlatFileBank"]
+position = Vector3(1, 0, -1)
+
+[node name="RecessedPlinth" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.062, 0.002)
+mesh = SubResource("Box_Vector3_1_503_0_124_1_502_")
+material_override = SubResource("Iron")
+
+[node name="Lid" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.876, 0)
+mesh = SubResource("Box_Vector3_1_521_0_048_1_521_")
+material_override = SubResource("PanelGreen")
+
+[node name="LidGasket" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.846, 0)
+mesh = SubResource("Box_Vector3_1_508_0_012_1_508_")
+material_override = SubResource("Rubber")
+
+[node name="Drawer0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.251667, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_218333_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post0_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.539, 0.263667, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.401, 0.263667, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.47, 0.263667, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.401, 0.263667, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.539, 0.263667, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.47, 0.263667, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.251667, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.251667, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_68")
+
+[node name="Drawer1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.485, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_218333_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post1_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.539, 0.497, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.401, 0.497, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.47, 0.497, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.401, 0.497, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.539, 0.497, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.47, 0.497, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.485, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.485, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_69")
+
+[node name="Drawer2" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.718333, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_218333_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post2_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.539, 0.730333, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.401, 0.730333, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull2_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.47, 0.730333, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.401, 0.730333, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.539, 0.730333, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull2_1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0.47, 0.730333, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder2" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.718333, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption2" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(0, 0.718333, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_70")
+
+[node name="EndInset" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.752, 0.45, 0)
+mesh = SubResource("Box_Vector3_0_013_0_576_1_21_")
+material_override = SubResource("DeepGreen")
+
+[node name="PressedVent0" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.762, 0.531, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent1" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.762, 0.505, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent2" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.762, 0.479, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent3" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.762, 0.453, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent4" type="MeshInstance3D" parent="Art/FlatFileBank/File1"]
+position = Vector3(-0.762, 0.427, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="File2" type="Node3D" parent="Art/FlatFileBank"]
+position = Vector3(3, 0, -3)
+
+[node name="RecessedPlinth" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.062, 0.002)
+mesh = SubResource("Box_Vector3_1_503_0_124_1_502_")
+material_override = SubResource("Iron")
+
+[node name="Lid" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 1.376, 0)
+mesh = SubResource("Box_Vector3_1_521_0_048_1_521_")
+material_override = SubResource("PanelGreen")
+
+[node name="LidGasket" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 1.346, 0)
+mesh = SubResource("Box_Vector3_1_508_0_012_1_508_")
+material_override = SubResource("Rubber")
+
+[node name="Drawer0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.255, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_225_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post0_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.539, 0.267, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.401, 0.267, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.47, 0.267, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.401, 0.267, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post0_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.539, 0.267, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.47, 0.267, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.255, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.255, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_73")
+
+[node name="Drawer1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.495, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_225_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post1_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.539, 0.507, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.401, 0.507, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.47, 0.507, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.401, 0.507, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post1_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.539, 0.507, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.47, 0.507, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.495, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.495, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_74")
+
+[node name="Drawer2" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.735, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_225_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post2_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.539, 0.747, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.401, 0.747, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull2_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.47, 0.747, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.401, 0.747, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post2_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.539, 0.747, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull2_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.47, 0.747, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder2" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.735, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption2" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.735, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_75")
+
+[node name="Drawer3" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.975, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_225_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post3_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.539, 0.987, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post3_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.401, 0.987, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull3_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.47, 0.987, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post3_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.401, 0.987, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post3_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.539, 0.987, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull3_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.47, 0.987, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder3" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.975, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption3" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 0.975, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_76")
+
+[node name="Drawer4" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 1.215, 0.752)
+mesh = SubResource("Box_Vector3_1_431_0_225_0_02_")
+material_override = SubResource("PanelGreen")
+
+[node name="Post4_0_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.539, 1.227, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post4_0_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.401, 1.227, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull4_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.47, 1.227, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="Post4_1_0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.401, 1.227, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Post4_1_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.539, 1.227, 0.776)
+mesh = SubResource("Box_Vector3_0_013_0_029_0_045_")
+material_override = SubResource("Galvanized")
+
+[node name="Pull4_1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0.47, 1.227, 0.798)
+mesh = SubResource("Box_Vector3_0_15_0_021_0_012_")
+material_override = SubResource("Galvanized")
+
+[node name="CardHolder4" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 1.215, 0.77)
+mesh = SubResource("Box_Vector3_0_21_0_059_0_009_")
+material_override = SubResource("AgedBrass")
+
+[node name="Caption4" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(0, 1.215, 0.775)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_77")
+
+[node name="EndInset" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.752, 0.7, 0)
+mesh = SubResource("Box_Vector3_0_013_0_896_1_21_")
+material_override = SubResource("DeepGreen")
+
+[node name="PressedVent0" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.762, 0.826, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent1" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.762, 0.8, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent2" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.762, 0.774, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent3" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.762, 0.748, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="PressedVent4" type="MeshInstance3D" parent="Art/FlatFileBank/File2"]
+position = Vector3(-0.762, 0.722, -0.38)
+mesh = SubResource("Box_Vector3_0_007_0_009_0_26_")
+material_override = SubResource("Iron")
+
+[node name="StepNosing0" type="MeshInstance3D" parent="Art/FlatFileBank"]
+position = Vector3(5, 0.188, 2.289)
+mesh = SubResource("Box_Vector3_1_985_0_024_0_02_")
+material_override = SubResource("Galvanized")
+
+[node name="StepNosing1" type="MeshInstance3D" parent="Art/FlatFileBank"]
+position = Vector3(5, 0.388, 1.689)
+mesh = SubResource("Box_Vector3_1_985_0_024_0_02_")
+material_override = SubResource("Galvanized")
+
+[node name="StepNosing2" type="MeshInstance3D" parent="Art/FlatFileBank"]
+position = Vector3(5, 0.588, 1.089)
+mesh = SubResource("Box_Vector3_1_985_0_024_0_02_")
+material_override = SubResource("Galvanized")
+
+[node name="StepNosing3" type="MeshInstance3D" parent="Art/FlatFileBank"]
+position = Vector3(5, 0.788, 0.489)
+mesh = SubResource("Box_Vector3_1_985_0_024_0_02_")
+material_override = SubResource("Galvanized")
+
+[node name="ServiceJoinery" type="Node3D" parent="Art"]
+
+[node name="EnamelPanel0" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -7.42)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("Enamel")
+
+[node name="EnamelPanel1" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -6.43)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("DeepGreen")
+
+[node name="EnamelPanel2" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -5.44)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("DeepGreen")
+
+[node name="EnamelPanel3" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -4.45)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("Enamel")
+
+[node name="EnamelPanel4" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -3.46)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("DeepGreen")
+
+[node name="EnamelPanel5" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.725, 0.546, -2.47)
+mesh = SubResource("Box_Vector3_0_044_1_086_0_98_")
+material_override = SubResource("DeepGreen")
+
+[node name="DeskRail" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.688, 1.108, -4.945)
+mesh = SubResource("Box_Vector3_0_07_0_046_5_95_")
+material_override = SubResource("Galvanized")
+
+[node name="HatchPanel0" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(6.49, 1.49, -1.28)
+mesh = SubResource("Box_Vector3_0_98_2_93_0_062_")
+material_override = SubResource("PanelGreen")
+
+[node name="HatchPanel1" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(7.48, 1.49, -1.28)
+mesh = SubResource("Box_Vector3_0_98_2_93_0_062_")
+material_override = SubResource("PanelGreen")
+
+[node name="HatchPanel2" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(8.47, 1.49, -1.28)
+mesh = SubResource("Box_Vector3_0_98_2_93_0_062_")
+material_override = SubResource("PanelGreen")
+
+[node name="HatchPanel3" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(9.46, 1.49, -1.28)
+mesh = SubResource("Box_Vector3_0_98_2_93_0_062_")
+material_override = SubResource("PanelGreen")
+
+[node name="HatchRail" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(7.98, 0.94, -1.328)
+mesh = SubResource("Box_Vector3_3_94_0_062_0_092_")
+material_override = SubResource("Iron")
+
+[node name="HatchTopRail" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(7.98, 2.98, -1.307)
+mesh = SubResource("Box_Vector3_3_94_0_073_0_089_")
+material_override = SubResource("Iron")
+
+[node name="ReceivingShutter" parent="Art/ServiceJoinery" instance=ExtResource("E27")]
+position = Vector3(7.86, 0.98, -1.318)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="ReceivingLedge" type="MeshInstance3D" parent="Art/ServiceJoinery"]
+position = Vector3(7.86, 0.967, -1.461)
+mesh = SubResource("Box_Vector3_1_62_0_062_0_29_")
+material_override = SubResource("Galvanized")
+
+[node name="ReceivingSign" type="Node3D" parent="Art/ServiceJoinery"]
+position = Vector3(7.86, 2.55, -1.332)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/ServiceJoinery/ReceivingSign"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_1_022_0_306_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/ServiceJoinery/ReceivingSign"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_88")
+
+[node name="InspectionInstructions" type="Node3D" parent="Art"]
+position = Vector3(9.694, 1.72, -4.79)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Rail" type="MeshInstance3D" parent="Art/InspectionInstructions"]
+position = Vector3(0, 0.449, -0.003)
+mesh = SubResource("Box_Vector3_2_36_0_035_0_03_")
+material_override = SubResource("Galvanized")
+
+[node name="Sheet0" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(-0.33, -0.02, 0.013)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet0"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_91")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet0"]
+position = Vector3(-0.3003, 0.3115, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet0"]
+position = Vector3(0.3003, 0.3115, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Sheet1" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(0.355, 0.116, 0.014)
+rotation_degrees = Vector3(0, 0, 2)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet1"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_94")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet1"]
+position = Vector3(-0.08085, 0.1575, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet1"]
+position = Vector3(0.08085, 0.1575, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Sheet2" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(0.652, 0.081, 0.015)
+rotation_degrees = Vector3(0, 0, -3)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet2"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_96")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet2"]
+position = Vector3(-0.08316, 0.162, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet2"]
+position = Vector3(0.08316, 0.162, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Sheet3" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(0.346, -0.232, 0.016)
+rotation_degrees = Vector3(0, 0, -4)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet3"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_98")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet3"]
+position = Vector3(-0.07821, 0.152, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet3"]
+position = Vector3(0.07821, 0.152, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Sheet4" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(0.641, -0.247, 0.017)
+rotation_degrees = Vector3(0, 0, 2)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet4"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_100")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet4"]
+position = Vector3(-0.07425, 0.1435, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet4"]
+position = Vector3(0.07425, 0.1435, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Sheet5" type="Node3D" parent="Art/InspectionInstructions"]
+position = Vector3(-0.952, -0.102, 0.018)
+rotation_degrees = Vector3(0, 0, 3)
+
+[node name="PrintedFace" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet5"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_101")
+
+[node name="Clip0" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet5"]
+position = Vector3(-0.07293, 0.141, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="Clip1" type="MeshInstance3D" parent="Art/InspectionInstructions/Sheet5"]
+position = Vector3(0.07293, 0.141, 0.003)
+mesh = SubResource("Box_Vector3_0_023_0_019_0_007_")
+material_override = SubResource("AgedBrass")
+
+[node name="StationSign" type="Node3D" parent="Art/Workstation"]
+position = Vector3(9.694, 2.504, -4.73)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Backing" type="MeshInstance3D" parent="Art/Workstation/StationSign"]
+position = Vector3(0, 0, -0.01)
+mesh = SubResource("Box_Vector3_1_792_0_317_0_02_")
+material_override = SubResource("Iron")
+
+[node name="Face" type="MeshInstance3D" parent="Art/Workstation/StationSign"]
+position = Vector3(0, 0, 0.001)
+rotation_degrees = Vector3(0, 0, 0)
+mesh = SubResource("Sheet_104")
+
+[node name="Clock" parent="Art/Workstation" instance=ExtResource("E35")]
+position = Vector3(9.703, 2.32, -3.38)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="WallLamp" type="Node3D" parent="Art/Practicals"]
+position = Vector3(9.51, 2.207, -4.88)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Bracket0" type="MeshInstance3D" parent="Art/Practicals/WallLamp"]
+position = Vector3(-0.33, 0, -0.091)
+mesh = SubResource("Box_Vector3_0_035_0_055_0_184_")
+material_override = SubResource("Galvanized")
+
+[node name="Bracket1" type="MeshInstance3D" parent="Art/Practicals/WallLamp"]
+position = Vector3(0.33, 0, -0.091)
+mesh = SubResource("Box_Vector3_0_035_0_055_0_184_")
+material_override = SubResource("Galvanized")
+
+[node name="WorkTube" type="Node3D" parent="Art/Practicals/WallLamp"]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Spine" type="MeshInstance3D" parent="Art/Practicals/WallLamp/WorkTube"]
+position = Vector3(0, 0.024, 0)
+mesh = SubResource("Box_Vector3_0_923_0_048_0_132_")
+material_override = SubResource("Iron")
+
+[node name="Luminaire0_0" parent="Art/Practicals/WallLamp/WorkTube" instance=ExtResource("E20")]
+position = Vector3(0, 0, -0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Luminaire0_1" parent="Art/Practicals/WallLamp/WorkTube" instance=ExtResource("E20")]
+position = Vector3(0, 0, 0.039)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="WorkTubeBounce" type="OmniLight3D" parent="Art/Practicals"]
+position = Vector3(9.28, 1.98, -4.95)
+light_color = Color(1, 0.929412, 0.788235, 1)
+light_energy = 0.85
+light_size = 0.026
+omni_range = 2.85
+omni_attenuation = 1.35
+shadow_enabled = true
+shadow_bias = 0.045
+
+[node name="InspectorsBook" parent="Art/Workstation" instance=ExtResource("E36")]
+position = Vector3(9.06, 0.795, -4.16)
+rotation_degrees = Vector3(0, -85, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="LegalPad" parent="Art/Workstation" instance=ExtResource("E37")]
+position = Vector3(9.46, 0.792, -3.95)
+rotation_degrees = Vector3(0, -66, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Stapler" parent="Art/Workstation" instance=ExtResource("E38")]
+position = Vector3(9.48, 0.805, -4.28)
+rotation_degrees = Vector3(0, -78, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="DeskLamp" parent="Art/Workstation" instance=ExtResource("E39")]
+position = Vector3(9.62, 0.795, -5.29)
+rotation_degrees = Vector3(0, 74, 0)
+scale = Vector3(0.75, 0.75, 0.75)
+
+[node name="ReceivingBox" parent="Art/Workstation" instance=ExtResource("E40")]
+position = Vector3(9.24, 1.1, -2.46)
+rotation_degrees = Vector3(0, -72, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="ReceivedIndexCards" parent="Art/Workstation" instance=ExtResource("E41")]
+position = Vector3(8.96, 1.094, -2.12)
+rotation_degrees = Vector3(0, -65, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ReceivedFolder" parent="Art/Workstation" instance=ExtResource("E42")]
+position = Vector3(9.11, 1.093, -3.24)
+rotation_degrees = Vector3(0, -82, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CheckSheetOnBoard" parent="Art/Workstation" instance=ExtResource("E43")]
+position = Vector3(8.98, 0.795, -5.43)
+rotation_degrees = Vector3(0, -88, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="UnexaminedReels" type="Node3D" parent="Art/Workstation"]
+position = Vector3(9.05, 1.094, -2.94)
+
+[node name="Tin0" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0, 0.024, 0.008)
+mesh = SubResource("Cylinder_108")
+material_override = SubResource("Tinplate")
+
+[node name="LidRim0" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0, 0.045, 0.008)
+mesh = SubResource("Cylinder_109")
+material_override = SubResource("Galvanized")
+
+[node name="PressedFace0" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0, 0.051, 0.008)
+mesh = SubResource("Cylinder_110")
+material_override = SubResource("Tinplate")
+
+[node name="Tin1" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(-0.00142, 0.073, -0.001505)
+mesh = SubResource("Cylinder_111")
+material_override = SubResource("Tinplate")
+
+[node name="LidRim1" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(-0.00142, 0.094, -0.001505)
+mesh = SubResource("Cylinder_112")
+material_override = SubResource("Galvanized")
+
+[node name="PressedFace1" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(-0.00142, 0.1, -0.001505)
+mesh = SubResource("Cylinder_113")
+material_override = SubResource("Tinplate")
+
+[node name="Tin2" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0.002804, 0.122, -0.007434)
+mesh = SubResource("Cylinder_114")
+material_override = SubResource("Tinplate")
+
+[node name="LidRim2" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0.002804, 0.143, -0.007434)
+mesh = SubResource("Cylinder_115")
+material_override = SubResource("Galvanized")
+
+[node name="PressedFace2" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0.002804, 0.149, -0.007434)
+mesh = SubResource("Cylinder_116")
+material_override = SubResource("Tinplate")
+
+[node name="AccessionSticker" type="MeshInstance3D" parent="Art/Workstation/UnexaminedReels"]
+position = Vector3(0.002804, 0.152, -0.007434)
+rotation_degrees = Vector3(-90, 12, 0)
+mesh = SubResource("Sheet_118")
+
+[node name="ReturnCopy" type="Node3D" parent="Art/Workstation"]
+position = Vector3(9.43, 1.094, -3.22)
+
+[node name="Tin0" type="MeshInstance3D" parent="Art/Workstation/ReturnCopy"]
+position = Vector3(0, 0.024, 0.008)
+mesh = SubResource("Cylinder_119")
+material_override = SubResource("Tinplate")
+
+[node name="LidRim0" type="MeshInstance3D" parent="Art/Workstation/ReturnCopy"]
+position = Vector3(0, 0.045, 0.008)
+mesh = SubResource("Cylinder_120")
+material_override = SubResource("Galvanized")
+
+[node name="PressedFace0" type="MeshInstance3D" parent="Art/Workstation/ReturnCopy"]
+position = Vector3(0, 0.051, 0.008)
+mesh = SubResource("Cylinder_121")
+material_override = SubResource("Tinplate")
+
+[node name="AccessionSticker" type="MeshInstance3D" parent="Art/Workstation/ReturnCopy"]
+position = Vector3(0, 0.054, 0.008)
+rotation_degrees = Vector3(-90, 12, 0)
+mesh = SubResource("Sheet_122")
+
+[editable path="BaseLab"]
