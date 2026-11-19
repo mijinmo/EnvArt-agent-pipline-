@@ -19,7 +19,9 @@
     "low",
     "medium",
     "high",
-    "xhigh"
+    "xhigh",
+    "max",
+    "ultra"
   ],
   "runs": [
     {
@@ -134,5 +136,6 @@
       "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
       "status": "prepared"
     }
-  ]
+  ],
+  "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort."
 }

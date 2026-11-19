@@ -22,4 +22,4 @@ godot --path experiments/independent-control-20261120/input --rendering-driver m
 
 拍摄工具拒绝覆盖已有输出目录。Windows/Linux 请换用实际平台支持的渲染后端；本轮尚未验证跨平台画面。结果见 [对比页面](../../docs/independent-control-20261120.html)、[可编辑工程](result/project.godot) 和 [收集清单](result-manifest.json)。F5 在结果工程打开 final.tscn。
 
-本组为预检，不纳入后续固定参考的 16 组排名。实际图显示第二轮的文件标签、办理表单、木材与收纳变化更可读；主要家具轮廓仍简化，深色书架遮住细节，门洞前景仍被跳台占据，建筑与道具精细度没有达到 Control 参考。没有用户美术验收。
+本组为预检，不纳入后续固定参考的 24 组排名。实际图显示第二轮的文件标签、办理表单、木材与收纳变化更可读；主要家具轮廓仍简化，深色书架遮住细节，门洞前景仍被跳台占据，建筑与道具精细度没有达到 Control 参考。没有用户美术验收。

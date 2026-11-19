@@ -88,7 +88,6 @@
         "characters/mixamo_local/humanoid.scn"
       ],
       "tool_call_count": 25,
-      "view_image_call_count": 3,
       "access_flags_requiring_manual_review": 0,
       "forbidden_tracked_files": [],
       "required_delivery_present": true,
@@ -281,7 +280,9 @@
         "reference_views": "all 3 frozen source images plus whitebox contact sheet"
       },
       "first_dependency_unresolved_explanation": "characters/mixamo_local/humanoid.scn is the unchanged optional character path guarded by ResourceLoader.exists in supplied infrastructure; absent in the neutral input too.",
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison pending",
+      "view_image_blocks_with_literal_tool_name": 3,
+      "preserved_history_ref": "refs/envart-trials/20261120/control-low"
     }
   },
   "sable": {
@@ -373,7 +374,6 @@
         "characters/mixamo_local/humanoid.scn"
       ],
       "tool_call_count": 46,
-      "view_image_call_count": 7,
       "access_flags_requiring_manual_review": 0,
       "forbidden_tracked_files": [],
       "required_delivery_present": true,
@@ -537,7 +537,9 @@
         "Initial audition was occluded by original placeholder mesh; corrected visual override, kept initial and corrected images.",
         "Moved four 18 mm-high decorative threshold stones out of protected doorway after final capture; retained final-before-clearance images and recaptured all three views."
       ],
-      "stage_status": "collected and audited; visual comparison pending"
+      "stage_status": "collected and audited; visual comparison pending",
+      "view_image_blocks_with_literal_tool_name": 7,
+      "preserved_history_ref": "refs/envart-trials/20261120/sable-medium"
     }
   }
 }
