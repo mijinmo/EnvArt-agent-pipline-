@@ -4,7 +4,7 @@
 
 **最新结果入口：[环境美术成果总览 HTML](docs/multi-style-effort-study.html)。** 汇总 Control、Sable、Hi-Fi Rush、DREDGE 四档 effort 的 16 份两轮结果，可同步切换机位、起点/首轮/终图，并在同页浏览 13 类历史案例。实机图使用仓库相对路径，离线浏览无需打开 Godot；原作参考图需联网。
 
-**本 MacBook 的后续运行已停止，下一轮转到新电脑。** [迁移与接续说明](docs/new-machine-handoff.md) 说明如何带走本地 Git 提交、打开保存场景和安装 skill。新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 已整理，尚未实际试跑。当前四档是既有成品局部的续作；三游戏访问检查发现共享 Git 元数据和中性临时工具接触，未发现直接读取其他组美术内容，但不能称为严格隔离。见 [检查范围与边界](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
+**2026-11-20 已迁移到新电脑，用户已授权继续局部制作验证；当前先处理 Codex 缺少 GPT-6.2 的问题，尚未启动新试跑。** 原 MacBook 的停止运行约定仍保留。[迁移与接续说明](docs/new-machine-handoff.md) 记录当前接续状态、保存场景和 skill 安装方式。新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 已整理，尚未实际试跑。当前四档是既有成品局部的续作；三游戏访问检查发现共享 Git 元数据和中性临时工具接触，未发现直接读取其他组美术内容，但不能称为严格隔离。见 [检查范围与边界](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
 
 当前入口为 **三方向真实素材对比样板**：晴日货运庭院、灰烬庭院、Facility 07。三者沿用同一测试场与观察机位，分别装配门洞、坡道、墙边道具、完整地面和外围远景。原始玩法碰撞不变，新增道具使用简化碰撞。跳台和台阶仍是测试几何，尚未完成全场正式关卡美术。
 
