@@ -20,15 +20,16 @@ func _ready() -> void:
 		var mat := StandardMaterial3D.new()
 		match body.name:
 			&"Floor":
-				mat.albedo_color = Color("#bdb7ab")
-				mat.albedo_texture = preload("res://materials/dockboards.svg")
-				mat.uv1_scale = Vector3(5,5,5)
+				mat.albedo_color = Color("#d2d5cd")
+				mat.albedo_texture = preload("res://materials/paint/quay.png")
+				mat.uv1_scale = Vector3(9,9,9)
 			&"BackWall", &"OcclusionWall", &"OcclusionReturn":
 				mat.albedo_color = Color("#594e4a")
 			_:
-				mat.albedo_texture = preload("res://materials/dockboards.svg")
-				mat.albedo_color = Color("#827f79")
-				mat.uv1_scale = Vector3(.48,.48,.48)
+				mat.albedo_texture = preload("res://materials/paint/quay.png")
+				mat.albedo_color = Color("#91a9a8")
+				var size: Vector3 = (mesh_node.mesh as BoxMesh).size
+				mat.uv1_scale = Vector3(maxf(.40,size.x/2.4),maxf(.40,size.y/2.4),1)
 		mesh_node.material_override = harmonize(mat,Color.WHITE)
 	for mesh_node in $Harbor.find_children("*", "MeshInstance3D", true, false):
 		var node := mesh_node as MeshInstance3D
@@ -39,14 +40,28 @@ func _ready() -> void:
 			ancestor = ancestor.get_parent()
 		if ancestor == self:
 			continue
-		var wash := Color(str(ancestor.get_meta("wash")))
+		var roof := str(ancestor.name).begins_with("Roof_Wooden")
 		for i in node.mesh.get_surface_count():
 			var base := node.mesh.surface_get_material(i) as StandardMaterial3D
 			if base:
-				var tint := wash
-				if base.resource_name.contains("Plaster"):
-					tint = Color("#ffe0b5")
-				node.set_surface_override_material(i,harmonize(base,tint))
+				var role := "items"
+				match base.resource_name:
+					"MI_WoodTrim","MI_WoodTrim_Wear": role = "roof" if roof else "wood"
+					"MI_Trim_Furniture": role = "boards"
+					"MI_Trim_Metal": role = "cast"
+					"MI_Trim_Cloth","MI_Banner": role = "fabric"
+					"MI_Plaster": role = "plaster"
+					"MI_Brick": role = "brick"
+					"MI_UnevenBrick": role = "stone"
+					"colormap": role = "survival"
+				var key := str(base.get_instance_id()) + role
+				var paint: StandardMaterial3D = cache.get(key)
+				if not paint:
+					paint = base.duplicate()
+					paint.albedo_texture = load("res://materials/paint/"+role+".png")
+					paint.albedo_color = Color.WHITE
+					cache[key] = paint
+				node.set_surface_override_material(i,harmonize(paint,Color.WHITE))
 	if plain_comparison:
 		var water := $Harbor.get_node_or_null("Sea") as MeshInstance3D
 		if water:
