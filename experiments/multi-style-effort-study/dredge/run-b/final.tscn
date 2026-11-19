@@ -1,0 +1,1031 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://baseline/round03.tscn" id="E0"]
+[ext_resource type="Script" path="res://art/final/PilotWorkshop.gd" id="E1"]
+[ext_resource type="Shader" path="res://art/final/LowClouds.gdshader" id="E2"]
+[ext_resource type="Shader" path="res://art/pass01/SlackTide.gdshader" id="E3"]
+[ext_resource type="Texture2D" path="res://art/pass01/GreyReachPilotChart.png" id="E4"]
+[ext_resource type="PackedScene" path="res://art/final/CleftShakes17.glb" id="E5"]
+[ext_resource type="PackedScene" path="res://art/final/CleftShakes43.glb" id="E6"]
+[ext_resource type="PackedScene" path="res://art/final/CleftShakes65.glb" id="E7"]
+[ext_resource type="Texture2D" path="res://art/pass01/TideYardEnamel.png" id="E8"]
+[ext_resource type="Texture2D" path="res://art/pass01/SoundingHouseEnamel.png" id="E9"]
+[ext_resource type="PackedScene" path="res://art/pass01/BentWillowCreel.glb" id="E10"]
+[ext_resource type="PackedScene" path="res://baseline/assets/props/Crate_Wooden.gltf" id="E11"]
+[ext_resource type="PackedScene" path="res://art/pass01/NetLoft.tscn" id="E12"]
+
+[ext_resource type="Shader" path="res://art/final/BulkheadBoards.gdshader" id="F0"]
+[ext_resource type="PackedScene" path="res://art/final/RepairOar.glb" id="F1"]
+[ext_resource type="PackedScene" path="res://art/final/StormLantern.glb" id="F2"]
+[ext_resource type="Texture2D" path="res://art/final/CargoStamp.png" id="F3"]
+[ext_resource type="PackedScene" path="res://art/pass01/NetLoft.tscn" id="F4"]
+[ext_resource type="PackedScene" path="res://art/final/ShortEave17.glb" id="F5"]
+[ext_resource type="PackedScene" path="res://art/final/ShortEave43.glb" id="F6"]
+[ext_resource type="PackedScene" path="res://art/final/ShortEave65.glb" id="F7"]
+
+[sub_resource type="ShaderMaterial" id="S0"]
+shader = ExtResource("E2")
+
+[sub_resource type="Sky" id="S1"]
+sky_material = SubResource("S0")
+
+[sub_resource type="Environment" id="S2"]
+background_mode = 2
+sky = SubResource("S1")
+ambient_light_source = 2
+ambient_light_color = Color(0.69,0.77,0.84,1)
+ambient_light_energy = 0.92
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.64
+ssao_intensity = 1.7
+glow_enabled = true
+glow_intensity = 0.26
+
+[sub_resource type="ShaderMaterial" id="S3"]
+shader = ExtResource("E3")
+shader_parameter/phase = 0.36
+shader_parameter/channel = Color(0.18,0.29,0.32,1)
+shader_parameter/shallows = Color(0.27,0.35,0.36,1)
+shader_parameter/reflected_sky = Color(0.38,0.32,0.34,1)
+shader_parameter/silver = Color(0.41,0.47,0.46,1)
+
+[sub_resource type="StandardMaterial3D" id="S4"]
+albedo_texture = ExtResource("E4")
+roughness = 0.98
+texture_filter = 5
+
+[sub_resource type="StandardMaterial3D" id="S5"]
+albedo_texture = ExtResource("E8")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="S6"]
+size = Vector2(2.54,0.406)
+material = SubResource("S5")
+
+[sub_resource type="StandardMaterial3D" id="S7"]
+albedo_texture = ExtResource("E9")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="S8"]
+size = Vector2(3.49,0.394)
+material = SubResource("S7")
+
+[sub_resource type="StandardMaterial3D" id="S9"]
+albedo_color = Color(0.107023,0.066626,0.052861,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="S10"]
+size = Vector3(0.790000, 0.170000, 7.366139)
+material = SubResource("S9")
+
+[sub_resource type="StandardMaterial3D" id="S11"]
+albedo_color = Color(0.111932,0.08022,0.066626,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="S12"]
+top_radius = 0.093
+bottom_radius = 0.093
+height = 3.49000
+radial_segments = 7
+rings = 0
+material = SubResource("S11")
+
+[sub_resource type="BoxMesh" id="S13"]
+size = Vector3(0.790000, 0.170000, 7.787811)
+material = SubResource("S9")
+
+[sub_resource type="BoxMesh" id="S14"]
+size = Vector3(0.790000, 0.170000, 7.093659)
+material = SubResource("S9")
+
+[sub_resource type="StandardMaterial3D" id="S15"]
+albedo_color = Color(0.059511,0.068478,0.064803,1)
+roughness = 0.94
+
+[sub_resource type="TorusMesh" id="S16"]
+inner_radius = 0.028
+outer_radius = 0.050
+rings = 12
+ring_segments = 6
+material = SubResource("S15")
+
+[sub_resource type="StandardMaterial3D" id="G0"]
+albedo_color = Color(0.305882,0.313725,0.321569,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G1"]
+size = Vector3(2.700000, 0.054000, 0.240000)
+material = SubResource("G0")
+
+[sub_resource type="StandardMaterial3D" id="G2"]
+albedo_color = Color(0.686275,0.611765,0.447059,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G3"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.02700
+radial_segments = 8
+rings = 0
+material = SubResource("G2")
+
+[sub_resource type="ShaderMaterial" id="G4"]
+shader = ExtResource("F0")
+
+[sub_resource type="BoxMesh" id="G5"]
+size = Vector3(23.200000, 0.780000, 0.064000)
+material = SubResource("G4")
+
+[sub_resource type="StandardMaterial3D" id="G6"]
+albedo_color = Color(0.431373,0.407843,0.376471,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G7"]
+size = Vector3(23.250000, 0.075000, 0.110000)
+material = SubResource("G6")
+
+[sub_resource type="BoxMesh" id="G8"]
+size = Vector3(0.055000, 0.780000, 9.900000)
+material = SubResource("G4")
+
+[sub_resource type="BoxMesh" id="G9"]
+size = Vector3(0.110000, 0.075000, 9.950000)
+material = SubResource("G6")
+
+[sub_resource type="StandardMaterial3D" id="G10"]
+albedo_color = Color(0.388235,0.380392,0.356863,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G11"]
+size = Vector3(0.105000, 0.780000, 0.080000)
+material = SubResource("G10")
+
+[sub_resource type="StandardMaterial3D" id="G12"]
+albedo_color = Color(0.509804,0.403922,0.313725,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G13"]
+size = Vector3(1.670000, 0.095000, 0.140000)
+material = SubResource("G12")
+
+[sub_resource type="StandardMaterial3D" id="G14"]
+albedo_color = Color(0.352941,0.345098,0.32549,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G15"]
+size = Vector3(0.053000, 0.200000, 0.230000)
+material = SubResource("G14")
+
+[sub_resource type="StandardMaterial3D" id="G16"]
+albedo_color = Color(0.364706,0.443137,0.439216,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G17"]
+size = Vector3(0.040000, 1.020000, 1.030000)
+material = SubResource("G16")
+
+[sub_resource type="StandardMaterial3D" id="G18"]
+albedo_color = Color(0.396078,0.329412,0.282353,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G19"]
+size = Vector3(0.083000, 1.070000, 0.046000)
+material = SubResource("G18")
+
+[sub_resource type="StandardMaterial3D" id="G20"]
+albedo_color = Color(0.505882,0.447059,0.384314,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G21"]
+size = Vector3(0.230000, 0.080000, 1.190000)
+material = SubResource("G20")
+
+[sub_resource type="StandardMaterial3D" id="G22"]
+albedo_color = Color(0.713725,0.65098,0.482353,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G23"]
+size = Vector3(0.390000, 0.021000, 0.029000)
+material = SubResource("G22")
+
+[sub_resource type="StandardMaterial3D" id="G24"]
+albedo_color = Color(0.662745,0.623529,0.521569,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G25"]
+size = Vector3(0.027000, 0.028000, 0.096000)
+material = SubResource("G24")
+
+[sub_resource type="StandardMaterial3D" id="G26"]
+albedo_color = Color(0.576471,0.533333,0.435294,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G27"]
+size = Vector3(0.072000, 0.019000, 0.047000)
+material = SubResource("G26")
+
+[sub_resource type="StandardMaterial3D" id="G28"]
+albedo_color = Color(0.333333,0.356863,0.333333,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G29"]
+size = Vector3(0.004000, 0.002000, 0.015000)
+material = SubResource("G28")
+
+[sub_resource type="StandardMaterial3D" id="G30"]
+albedo_color = Color(0.384314,0.439216,0.427451,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G31"]
+top_radius = 0.048
+bottom_radius = 0.048
+height = 1.43000
+radial_segments = 10
+rings = 0
+material = SubResource("G30")
+
+[sub_resource type="StandardMaterial3D" id="G32"]
+albedo_color = Color(0.564706,0.572549,0.505882,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G33"]
+top_radius = 0.096
+bottom_radius = 0.096
+height = 0.06400
+radial_segments = 10
+rings = 0
+material = SubResource("G32")
+
+[sub_resource type="StandardMaterial3D" id="G34"]
+albedo_color = Color(0.337255,0.380392,0.372549,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G35"]
+top_radius = 0.029
+bottom_radius = 0.029
+height = 0.22366
+radial_segments = 7
+rings = 0
+material = SubResource("G34")
+
+[sub_resource type="StandardMaterial3D" id="G36"]
+albedo_color = Color(0.670588,0.52549,0.356863,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G37"]
+top_radius = 0.032
+bottom_radius = 0.032
+height = 0.16200
+radial_segments = 8
+rings = 0
+material = SubResource("G36")
+
+[sub_resource type="StandardMaterial3D" id="G38"]
+albedo_color = Color(0.470588,0.376471,0.305882,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G39"]
+size = Vector3(0.520000, 0.044000, 0.420000)
+material = SubResource("G38")
+
+[sub_resource type="StandardMaterial3D" id="G40"]
+albedo_texture = ExtResource("F3")
+transparency = 1
+roughness = 0.98
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="G41"]
+size = Vector2(0.67,0.31)
+material = SubResource("G40")
+
+[sub_resource type="StandardMaterial3D" id="G42"]
+albedo_color = Color(0.403922,0.32549,0.301961,1)
+roughness = 0.94
+
+[sub_resource type="BoxMesh" id="G43"]
+size = Vector3(0.780000, 0.150000, 7.613967)
+material = SubResource("G42")
+
+[sub_resource type="StandardMaterial3D" id="G44"]
+albedo_color = Color(0.411765,0.333333,0.309804,1)
+roughness = 0.94
+
+[sub_resource type="CylinderMesh" id="G45"]
+top_radius = 0.11
+bottom_radius = 0.11
+height = 3.95000
+radial_segments = 7
+rings = 0
+material = SubResource("G44")
+
+[sub_resource type="BoxMesh" id="G46"]
+size = Vector3(0.780000, 0.150000, 7.871467)
+material = SubResource("G42")
+
+[sub_resource type="BoxMesh" id="G47"]
+size = Vector3(0.780000, 0.150000, 6.530697)
+material = SubResource("G42")
+
+[node name="SoundingHouse" instance=ExtResource("E0")]
+script = ExtResource("E1")
+
+[node name="MaritimeAir" parent="."]
+environment = SubResource("S2")
+
+[node name="LowSun" parent="."]
+rotation_degrees = Vector3(-25,-43,0)
+light_color = Color(1.0,0.82,0.69,1)
+light_energy = 1.42
+light_angular_distance = 0.65
+
+[node name="Sea" parent="Harbor"]
+material_override = SubResource("S3")
+
+[node name="GateLetter58" parent="Harbor"]
+visible = false
+
+[node name="ShopLetter61" parent="Harbor"]
+visible = false
+
+[node name="LanternFlame242" parent="Harbor"]
+position = Vector3(0.490000, 1.735000, -6.979000)
+scale = Vector3(0.660000, 0.530000, 0.660000)
+
+[node name="WarmPool243" parent="Harbor"]
+position = Vector3(0.490000, 1.760000, -6.950000)
+light_energy = 1.16
+
+[node name="LanternFlame245" parent="Harbor"]
+position = Vector3(6.530000, 1.735000, -6.979000)
+scale = Vector3(0.660000, 0.530000, 0.660000)
+
+[node name="WarmPool246" parent="Harbor"]
+position = Vector3(6.530000, 1.760000, -6.950000)
+light_energy = 1.16
+
+[node name="SoundingChart" parent="Harbor"]
+material_override = SubResource("S4")
+
+[node name="WorkshopAdditions" type="Node3D" parent="."]
+
+
+[node name="StormShingles" type="Node3D" parent="WorkshopAdditions"]
+
+
+[node name="ShakeRun6" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(-9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun7" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(-9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun9" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(-7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun10" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(-7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun12" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(-5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun13" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(-5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun15" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(-3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun16" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(-3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun20" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun21" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(3.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun23" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun24" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(5.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun26" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun27" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(7.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun29" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun30" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(9.000000, 3.930000, -12.130000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.000000, 1.550000, 1.450000)
+
+[node name="ShakeRun33" parent="WorkshopAdditions/StormShingles" instance=ExtResource("F5")]
+position = Vector3(1.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+
+[node name="ShakeRun34" parent="WorkshopAdditions/StormShingles" instance=ExtResource("F6")]
+position = Vector3(3.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+
+[node name="ShakeRun35" parent="WorkshopAdditions/StormShingles" instance=ExtResource("F7")]
+position = Vector3(5.500000, 2.780000, -9.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.070000, 1.550000)
+
+[node name="ShakeRun42" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(9.980000, 2.940000, -10.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun44" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(9.980000, 2.940000, -8.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun46" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(9.980000, 2.940000, -6.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun48" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(9.980000, 2.940000, -4.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun50" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(9.980000, 2.940000, -2.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun52" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(7.000000, 2.950000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun54" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(9.000000, 2.950000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 0.800000, 0.850000)
+
+[node name="ShakeRun295" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(6.650000, 4.000000, -11.350000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+
+[node name="ShakeRun296" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E7")]
+position = Vector3(6.650000, 4.000000, -11.350000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+
+[node name="ShakeRun297" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E5")]
+position = Vector3(6.650000, 4.000000, -13.140000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+
+[node name="ShakeRun298" parent="WorkshopAdditions/StormShingles" instance=ExtResource("E6")]
+position = Vector3(6.650000, 4.000000, -13.140000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.940000, 1.310000)
+
+[node name="CastEnamelGate" type="MeshInstance3D" parent="WorkshopAdditions"]
+position = Vector3(0.000000, 2.540000, -3.353000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("S6")
+
+[node name="EnamelRepairOffice" type="MeshInstance3D" parent="WorkshopAdditions"]
+position = Vector3(3.550000, 2.510000, -7.264000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("S8")
+
+[node name="CreelOrders" type="Node3D" parent="WorkshopAdditions"]
+
+
+[node name="WillowPot0" parent="WorkshopAdditions/CreelOrders" instance=ExtResource("E10")]
+position = Vector3(-1.670000, 0.860000, -9.550000)
+rotation_degrees = Vector3(0.000000, -17.000000, 0.000000)
+scale = Vector3(0.830000, 0.830000, 0.830000)
+
+
+[node name="WillowPot1" parent="WorkshopAdditions/CreelOrders" instance=ExtResource("E10")]
+position = Vector3(-1.320000, 0.015000, -8.320000)
+rotation_degrees = Vector3(0.000000, 64.000000, 0.000000)
+scale = Vector3(1.030000, 1.030000, 1.030000)
+
+
+[node name="WillowPot2" parent="WorkshopAdditions/CreelOrders" instance=ExtResource("E10")]
+position = Vector3(7.450000, 0.014000, -7.830000)
+rotation_degrees = Vector3(0.000000, -22.000000, 0.000000)
+scale = Vector3(1.040000, 1.040000, 1.040000)
+
+
+[node name="WillowPot3" parent="WorkshopAdditions/CreelOrders" instance=ExtResource("E10")]
+position = Vector3(7.500000, 0.521000, -7.830000)
+rotation_degrees = Vector3(0.000000, -11.000000, 0.000000)
+scale = Vector3(0.950000, 0.950000, 0.950000)
+
+
+[node name="WillowPot4" parent="WorkshopAdditions/CreelOrders" instance=ExtResource("E10")]
+position = Vector3(8.220000, 0.017000, -6.740000)
+rotation_degrees = Vector3(0.000000, 14.000000, 0.000000)
+scale = Vector3(0.930000, 0.930000, 0.930000)
+
+
+[node name="FreightCase0" parent="Harbor" instance=ExtResource("E11")]
+position = Vector3(3.008000, 0.079000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.780925, 1.503876, 1.651449)
+metadata/wash = "#998260"
+
+[node name="FreightCase1" parent="Harbor" instance=ExtResource("E11")]
+position = Vector3(1.008000, 0.050000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.780925, 0.966777, 1.651449)
+metadata/wash = "#998260"
+
+[node name="ForgedEye0" type="MeshInstance3D" parent="WorkshopAdditions"]
+position = Vector3(3.810000, 1.642000, -8.820000)
+rotation_degrees = Vector3(82.000000, -19.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("S16")
+
+[node name="ForgedEye1" type="MeshInstance3D" parent="WorkshopAdditions"]
+position = Vector3(5.480000, 0.910000, -8.160000)
+rotation_degrees = Vector3(82.000000, -19.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("S16")
+
+[node name="ForgedEye2" type="MeshInstance3D" parent="WorkshopAdditions"]
+position = Vector3(5.750000, 0.769000, -8.040000)
+rotation_degrees = Vector3(82.000000, -19.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("S16")
+
+[node name="ApronSkyBounce" type="OmniLight3D" parent="WorkshopAdditions"]
+position = Vector3(1.300000, 3.600000, -5.950000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+light_color = Color(0.88,0.88,0.85,1)
+light_energy = 0.66
+omni_range = 8.5
+omni_attenuation = 1.15
+light_specular = 0.18
+
+[node name="Renewal" type="Node3D" parent="."]
+
+
+[node name="PortAuthorityEnamel57" parent="Harbor"]
+position = Vector3(0.000000, 2.540000, -3.409000)
+
+[node name="FlashedGateCrown" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(0.000000, 2.767000, -3.430000)
+rotation_degrees = Vector3(4.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G1")
+
+[node name="GateBolt3" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(-1.160000, 2.400000, -3.341500)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G3")
+
+[node name="GateBolt4" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(-1.160000, 2.680000, -3.341500)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G3")
+
+[node name="GateBolt5" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(1.160000, 2.400000, -3.341500)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G3")
+
+[node name="GateBolt6" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(1.160000, 2.680000, -3.341500)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G3")
+
+[node name="CutSteelHerring" parent="Harbor"]
+position = Vector3(1.560000, 2.150000, -7.210000)
+
+[node name="SmallIronHanger465" parent="Harbor"]
+position = Vector3(1.280000, 2.519000, -7.220000)
+scale = Vector3(1.000000, 1.250000, 1.000000)
+
+[node name="SmallIronHanger466" parent="Harbor"]
+position = Vector3(1.840000, 2.519000, -7.220000)
+scale = Vector3(1.000000, 1.250000, 1.000000)
+
+[node name="SaltwashedSiding" type="Node3D" parent="Renewal"]
+
+
+[node name="WestReturn" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-0.040000, 0.390000, -11.192000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G5")
+
+[node name="BackCap" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-0.040000, 0.790000, -11.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G7")
+
+[node name="EastWorkshop" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.160000, 0.390000, -6.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G8")
+
+[node name="EastCap" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.140000, 0.790000, -6.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G9")
+
+[node name="PostShoe0" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-9.860000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="PostShoe1" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-5.940000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="PostShoe2" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-2.040000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="PostShoe3" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(1.980000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="PostShoe4" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(5.980000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="PostShoe5" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.900000, 0.390000, -11.135000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G11")
+
+[node name="RackOar0" parent="Renewal/SaltwashedSiding" instance=ExtResource("F1")]
+position = Vector3(-3.620000, 0.020000, -10.960000)
+rotation_degrees = Vector3(3.000000, -10.000000, -6.000000)
+scale = Vector3(1.120000, 1.250000, 1.120000)
+
+
+[node name="RackOar1" parent="Renewal/SaltwashedSiding" instance=ExtResource("F1")]
+position = Vector3(-3.300000, 0.020000, -10.960000)
+rotation_degrees = Vector3(3.000000, -10.000000, 0.000000)
+scale = Vector3(1.120000, 1.250000, 1.120000)
+
+
+[node name="RackOar2" parent="Renewal/SaltwashedSiding" instance=ExtResource("F1")]
+position = Vector3(-2.940000, 0.020000, -10.960000)
+rotation_degrees = Vector3(3.000000, -10.000000, 6.000000)
+scale = Vector3(1.120000, 1.250000, 1.120000)
+
+
+[node name="RackOar3" parent="Renewal/SaltwashedSiding" instance=ExtResource("F1")]
+position = Vector3(-2.650000, 0.020000, -10.960000)
+rotation_degrees = Vector3(3.000000, -10.000000, 12.000000)
+scale = Vector3(1.120000, 1.250000, 1.120000)
+
+
+[node name="PaddleRack" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-3.160000, 1.050000, -11.070000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G13")
+
+[node name="RackBracket26" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-3.890000, 0.980000, -11.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G15")
+
+[node name="RackBracket27" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(-2.430000, 0.980000, -11.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G15")
+
+[node name="WindowGlass0" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.470000, 1.530000, -8.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G17")
+
+[node name="WindowPost0" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.425000, 1.520000, -8.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G19")
+
+[node name="WindowSill0" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.390000, 0.987000, -8.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G21")
+
+[node name="WindowGlass1" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.470000, 1.530000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G17")
+
+[node name="WindowPost1" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.425000, 1.520000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G19")
+
+[node name="WindowSill1" type="MeshInstance3D" parent="Renewal/SaltwashedSiding"]
+position = Vector3(9.390000, 0.987000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G21")
+
+[node name="BenchLamp" type="Node3D" parent="Renewal"]
+
+
+[node name="StormLamp" parent="Renewal/BenchLamp" instance=ExtResource("F2")]
+position = Vector3(3.130000, 0.921000, -8.900000)
+rotation_degrees = Vector3(0.000000, -17.000000, 0.000000)
+scale = Vector3(1.180000, 1.180000, 1.180000)
+
+
+[node name="FlameBounce" type="OmniLight3D" parent="Renewal/BenchLamp"]
+position = Vector3(3.130000, 1.206000, -8.900000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+light_color = Color(1.0,0.76,0.47,1)
+light_energy = 2.7
+omni_range = 3.65
+omni_attenuation = 1.13
+light_specular = 0.28
+
+[node name="BenchGauge" type="Node3D" parent="Renewal"]
+position = Vector3(3.360000, 0.928000, -8.445000)
+rotation_degrees = Vector3(0.000000, -14.000000, 0.000000)
+
+[node name="GaugeBar" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.000000, 0.012000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G23")
+
+[node name="Jaw39" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(-0.160000, 0.017000, 0.028000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G25")
+
+[node name="Jaw40" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.005000, 0.017000, 0.028000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G25")
+
+[node name="Slide" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.007000, 0.028000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G27")
+
+[node name="Division0" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(-0.115000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division1" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(-0.081000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division2" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(-0.047000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division3" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(-0.013000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division4" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.021000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division5" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.055000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division6" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.089000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division7" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.123000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="Division8" type="MeshInstance3D" parent="Renewal/BenchGauge"]
+position = Vector3(0.157000, 0.024000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G29")
+
+[node name="GrinderDrive" type="Node3D" parent="Renewal"]
+position = Vector3(1.800000, 0.000000, -8.500000)
+rotation_degrees = Vector3(0.000000, 18.000000, 0.000000)
+
+[node name="DriveShaft" type="MeshInstance3D" parent="Renewal/GrinderDrive"]
+position = Vector3(-0.045000, 0.868000, 0.000000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G31")
+
+[node name="OuterBearing" type="MeshInstance3D" parent="Renewal/GrinderDrive"]
+position = Vector3(-0.652000, 0.868000, 0.000000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G33")
+
+[node name="Eccentric" type="MeshInstance3D" parent="Renewal/GrinderDrive"]
+position = Vector3(-0.748000, 0.809000, 0.095000)
+rotation_degrees = Vector3(121.842457, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G35")
+
+[node name="TurningGrip" type="MeshInstance3D" parent="Renewal/GrinderDrive"]
+position = Vector3(-0.820000, 0.750000, 0.190000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G37")
+
+[node name="Footboard" type="MeshInstance3D" parent="Renewal/GrinderDrive"]
+position = Vector3(0.000000, 0.120000, 0.210000)
+rotation_degrees = Vector3(-7.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G39")
+
+[node name="FreightMark0" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(3.000000, 0.700000, -2.295000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G41")
+
+[node name="FreightMark1" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(1.000000, 0.440000, -0.295000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G41")
+
+[node name="LandingHouse0" parent="Renewal" instance=ExtResource("F4")]
+position = Vector3(13.400000, 0.000000, -53.000000)
+rotation_degrees = Vector3(0.000000, -13.000000, 0.000000)
+scale = Vector3(1.030000, 1.030000, 1.030000)
+
+
+[node name="LandingHouse1" parent="Renewal" instance=ExtResource("F4")]
+position = Vector3(20.000000, 0.000000, -55.700000)
+rotation_degrees = Vector3(0.000000, -29.000000, 0.000000)
+scale = Vector3(0.950000, 0.950000, 0.950000)
+
+
+[node name="LandingHouse2" parent="Renewal" instance=ExtResource("F4")]
+position = Vector3(53.800000, 0.000000, -22.500000)
+rotation_degrees = Vector3(0.000000, -15.000000, 0.000000)
+scale = Vector3(1.090000, 1.090000, 1.090000)
+
+
+[node name="LandingHouse3" parent="Renewal" instance=ExtResource("F4")]
+position = Vector3(60.000000, 0.000000, -25.900000)
+rotation_degrees = Vector3(0.000000, -38.000000, 0.000000)
+scale = Vector3(0.930000, 0.930000, 0.930000)
+
+
+[node name="LandingHouse4" parent="Renewal" instance=ExtResource("F4")]
+position = Vector3(66.600000, 0.000000, -27.500000)
+rotation_degrees = Vector3(0.000000, -28.000000, 0.000000)
+scale = Vector3(1.080000, 1.080000, 1.080000)
+
+
+[node name="OuterGangway64" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(17.150000, 1.285000, -52.225000)
+rotation_degrees = Vector3(0.000000, 111.172579, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G43")
+
+[node name="TidalPile65" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(15.233000, -0.425000, -51.482500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
+
+[node name="TidalPile66" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(18.925000, -0.425000, -52.912500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
+
+[node name="OuterGangway67" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(57.300000, 1.320000, -22.100000)
+rotation_degrees = Vector3(0.000000, 117.216112, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G46")
+
+[node name="TidalPile68" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(55.410000, -0.425000, -21.128000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
+
+[node name="TidalPile69" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(59.050000, -0.425000, -23.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
+
+[node name="OuterGangway70" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(64.000000, 1.310000, -24.550000)
+rotation_degrees = Vector3(0.000000, 101.481991, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G47")
+
+[node name="TidalPile71" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(62.272000, -0.425000, -24.199000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
+
+[node name="TidalPile72" type="MeshInstance3D" parent="Renewal"]
+position = Vector3(65.600000, -0.425000, -24.875000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("G45")
