@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://harbor.tscn" id="1_harbor"]
+[ext_resource type="Texture2D" path="res://materials/round03/plaster.png" id="2_lime"]
+[ext_resource type="Texture2D" path="res://materials/round03/wood.png" id="3_beams"]
+
+[node name="SoundingHouse" instance=ExtResource("1_harbor")]
+architectural_pigments = Dictionary[String, Texture2D]({"plaster": ExtResource("2_lime"), "wood": ExtResource("3_beams")})

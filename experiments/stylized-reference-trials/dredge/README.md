@@ -1,13 +1,15 @@
 # Sounding House · DREDGE 港边浮标修理棚
 
-在 Godot 4.7.2 导入本目录的 project.godot，打开 harbor.tscn，按 F6 或 F5。默认是斜俯总览。展开 Harbor 可选独立屋顶、柱、工台、网、浮标、吊索与招牌；相机 Overall、Detail、Transition 同为原生可编辑节点。Whitebox 是原场景实例，surface_treatment.gd 在编辑器和运行时给可见表面加载材质。
+在 Godot 4.7.2 导入本目录的 project.godot，打开 round03.tscn，按 F6 或 F5。默认是斜俯总览。第三轮场景继承 harbor.tscn。打开该基础场景并展开 Harbor 可选独立屋顶、柱、工台、网、浮标、吊索与招牌；相机 Overall、Detail、Transition 同为原生可编辑节点。Whitebox 是原场景实例，surface_treatment.gd 在编辑器和运行时给可见表面加载材质。
 
 | 版本 | 总览 | 工位细节 | 门洞过渡 |
 |---|---|---|---|
 | 白盒 | [总览](captures/whitebox/overall.png) | [工位](captures/whitebox/detail.png) | [门洞](captures/whitebox/transition.png) |
 | 独立首轮 | [总览](captures/first/overall.png) | [工位](captures/first/detail.png) | [门洞](captures/first/transition.png) |
-| 修订 | [总览](captures/final/overall.png) | [工位](captures/final/detail.png) | [门洞](captures/final/transition.png) |
-| 同场基础材质 | [总览](captures/control/overall.png) | [工位](captures/control/detail.png) | [门洞](captures/control/transition.png) |
+| 自主第二轮 | [总览](captures/final/overall.png) | [工位](captures/final/detail.png) | [门洞](captures/final/transition.png) |
+| 第二轮基础材质 | [总览](captures/control/overall.png) | [工位](captures/control/detail.png) | [门洞](captures/control/transition.png) |
+| 第三轮，父 agent 评图后 | [总览](captures/round03/overall.png) | [工位](captures/round03/detail.png) | [门洞](captures/round03/transition.png) |
+| 第三轮基础材质 | [总览](captures/control03/overall.png) | [工位](captures/control03/detail.png) | [门洞](captures/control03/transition.png) |
 
 ## 从白盒到码头工位
 
@@ -15,13 +17,15 @@
 
 首轮场景固定在 passes/first/harbor.tscn，保留当时的渲染脚本、木板与天空资源。首轮的檐口和橙色连成一片。修订拆分屋脊，增加浮标检修和吊装线索，重画风化青灰木色。最终建筑保持门洞、东墙与后墙局部的半开放检修棚；原 32 m 地板上没有海水。可见的海面高度为 -1.35 m。
 
+第三轮为父 agent 反馈辅助。第二轮墙面重复的深斑在工位近景分散了对道具的注意，第三轮将原墙面 UV 的石灰色域收窄至浅赭与暖灰之间，柔化斑边，同时压暗门柱、木撑与窗棂。近景阴面仍呈冷青色，受光面转暖。两张改绘底图位于 materials/round03；第三轮基础材质对照也读取它们。第二轮工程继续使用原底图。本试跑使用 GPT-6.2 astra；启动时 reasoning_effort 沿用上层设置，具体档位未核实。
+
 ## 材质控制与复拍
 
 - materials/saltwood.gdshader 在源 UV 上读洗色底图。grain_relief（默认 0.42）将亮度向离散印色值拉近。band_strength（0.78）控制受光面的三段柔化分阶。用大面区分朝向，保留桶箍、绳和木板的独立底色。
 - materials/tide.gdshader 用断开的波脊、定向条纹和距离衰减绘制外海。phase 固定为 0.36，可手调观察波形。所有提交图为同相位静态场景。
 - materials/sky.gdshader 通过三角插值噪声产生平面化云带。天空与灯光在最终和基础材质组完全共享。control 为相同 UV、洗色底图、模型、机位、投影和灯位的 StandardMaterial3D；海面恢复相同基础蓝绿底色。屋顶、投影边缘与海面最容易看到变化。工位的主要可读性来自实际模型、配色和装配，对照近景相对接近。
 
-在此工程目录运行下例，替换 Godot 安装路径。为保留冻结图，将新结果写入其它目录。白盒、独立首轮与控制版本分别在最后追加 --whitebox、--first、--control。
+在此工程目录运行下例，替换 Godot 安装路径。为保留冻结图，将新结果写入其它目录。默认捕获当前第三轮，第三轮对照追加 --control。白盒追加 --whitebox，独立首轮追加 --first，第二轮追加 --round02，第二轮对照追加 --round02 --control。
 
 ```sh
 /Applications/Godot.app/Contents/MacOS/Godot --path . --resolution 1600x1000 --script capture.gd -- /tmp/sounding-house-review
@@ -31,4 +35,4 @@
 
 ## 剩余美术局限
 
-总览里长围墙与几何跳台仍暴露原测试场形态。近景磨轮的简模棱角与刻画更细的木制品并置，顶缘裁到鱼招牌。远岸只在抬高视角可见，样板聚焦修理活动；没有复刻原作完整港村。当前为制作侧观察，等待用户美术复核。
+主参考 12 的港屋具有不规则茅顶檐缘，工程采用免费木板屋顶，深红板条与直檐形成了另一种建筑轮廓。该差异来自选用的屋顶模型与铺设方式。总览里长围墙与几何跳台仍暴露原测试场形态。近景磨轮的简模棱角与刻画更细的木制品并置，顶缘裁到鱼招牌。远岸只在抬高视角可见，样板聚焦修理活动；没有复刻原作完整港村。当前为制作侧观察，等待用户美术复核。

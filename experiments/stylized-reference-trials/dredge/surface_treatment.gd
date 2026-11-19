@@ -3,6 +3,7 @@ extends Node3D
 
 @export var print_shader: Shader = preload("res://materials/saltwood.gdshader")
 @export var plain_comparison := false
+@export var architectural_pigments: Dictionary[String,Texture2D] = {}
 var cache := {}
 
 func _ready() -> void:
@@ -58,7 +59,10 @@ func _ready() -> void:
 				var paint: StandardMaterial3D = cache.get(key)
 				if not paint:
 					paint = base.duplicate()
-					paint.albedo_texture = load("res://materials/paint/"+role+".png")
+					if architectural_pigments.has(role):
+						paint.albedo_texture = architectural_pigments[role]
+					else:
+						paint.albedo_texture = load("res://materials/paint/"+role+".png")
 					paint.albedo_color = Color.WHITE
 					cache[key] = paint
 				node.set_surface_override_material(i,harmonize(paint,Color.WHITE))

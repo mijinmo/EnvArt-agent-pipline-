@@ -15,7 +15,11 @@ func capture() -> void:
 		push_error("Cannot create capture directory: " + output)
 		quit(1)
 		return
-	var scene_path := "res://passes/first/harbor.tscn" if "--first" in args else "res://harbor.tscn"
+	var scene_path := "res://round03.tscn"
+	if "--first" in args:
+		scene_path = "res://passes/first/harbor.tscn"
+	elif "--round02" in args:
+		scene_path = "res://harbor.tscn"
 	var packed := load(scene_path) as PackedScene
 	if packed == null:
 		quit(1)
