@@ -9,7 +9,7 @@ Deliver an editable environment, supported by actual engine images. Treat refere
 
 ## Enter at the right stage
 
-Read the existing task entry (such as `ENVIRONMENT.md`), current scene and relevant evidence before acting. Recover user constraints, current work, open issues and the last reviewed pass. Do not restart discovery for a narrow edit unless its premise has failed. For a new job or a pipeline handoff, use [production-loop.md](references/production-loop.md) for stage outputs, return paths and record ownership.
+Read the assigned task entry (such as `ENVIRONMENT.md`), current scene and permitted evidence before acting. Stay within the task's input boundary; an independent trial must not browse the host repository's other results or history. Recover user constraints, current work, open issues and the last reviewed pass when supplied. Do not restart discovery for a narrow edit unless its premise has failed. For a new job or a pipeline handoff, use [production-loop.md](references/production-loop.md) for stage outputs, return paths and record ownership.
 
 The working loop is:
 
@@ -69,4 +69,4 @@ Provide the editable scene, actual same-view comparisons, asset provenance, open
 
 Carry forward asset-specific adaptations, accepted reference/asset choices and scoped user decisions. Recheck them when their source, reference or intended distance changes. Expand only within the requested scope; a successful hero view does not establish completion of the whole level.
 
-For an explicitly requested skill/model trial, keep reference inputs, whitebox constraints, raw asset access and work allowance comparable; record actual model and skill version when known. Separate first-pass results from feedback-assisted revisions. Do not supply the intended answer or old completed scene to an independent replication trial. Model availability is not evidence of better art; evaluate its selections and saved-engine images.
+For an explicitly requested skill/model trial, follow [independent-trials.md](references/independent-trials.md) before preparing inputs or launching agents. Distinguish continuation of existing art from independent production from a whitebox. Keep the relevant inputs and work allowance comparable, isolate each producer's files and history, and record actual model/effort and skill version when known. Separate first-pass results from feedback-assisted revisions. Model availability is not evidence of better art; evaluate its selections and saved-engine images. Do not launch a deferred trial merely to validate a documentation change.
