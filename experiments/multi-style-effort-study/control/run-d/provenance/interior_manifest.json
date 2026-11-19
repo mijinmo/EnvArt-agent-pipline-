@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-14",
+  "scope": "Interior records-transfer corner and doorway; original 17 whitebox bodies retained.",
+  "reuse_manifest": "asset_manifest.json",
+  "new_asset": {
+    "id": "smooth_concrete_floor",
+    "source": "https://polyhaven.com/a/smooth_concrete_floor",
+    "author": "Dimitrios Savva",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "free_scope": "Public full material; three JPG maps at 2K downloaded, not a paid demo.",
+    "used": [
+      "Diffuse.jpg",
+      "Rough.jpg"
+    ],
+    "downloaded_not_used": [
+      "nor_gl.jpg"
+    ],
+    "adaptation": "World-space triplanar sampling at physical 2m scale; desaturated source luminance remapped to restrained neutral concrete, second offset/frequency sample reduces recognizable periodic motifs. Roughness retained; fine normal variation from texture derivatives. No bitmap editing.",
+    "sha256": {
+      "Rough.jpg": "6d21666ada82093a437b87d5ba32361792f26016ad4e5978487488c3e61ca54a",
+      "Diffuse.jpg": "19fecf502443f53f5e94b67569461dc571f1de60d3676f925b74b78b398f4897",
+      "nor_gl.jpg": "0f698e2f3ca8f1b74c79765c8d51489772af05c969715d326490eafb1e92ae79"
+    }
+  },
+  "selection": "Rejected previous concrete_wall_009 for repeating formwork/tie-hole grid. Smooth concrete candidate has no panel seams but is brown and weathered; shader adaptation attenuates source color/wear.",
+  "authored_gap_fill": [
+    "Authorized ceiling and wall extensions fitted to existing whitebox",
+    "Glazed skylight frame",
+    "Suspended luminaire, service conduit and noticeboard",
+    "Removed previous seam overlays and station rectangle paint"
+  ],
+  "lighting": "Cool daylight approximation at actual skylight opening, neutral office fixture, warm desk lamp, portal fixture; manual diffuse bounce plus SSIL, not full GI.",
+  "constraints": "17 original local transforms, mesh sizes and collision shapes compared after reload; 3 before/after camera transforms/FOV match. Ceiling 5.5m; doorway clearance remains 1.2m x 2.3m. New upper pier begins at 2.6m. Added enclosure is visual-only.",
+  "render": "Godot 4.7.2 Metal Forward+, 1600x1000, TAA and identical settings in before/after. Before is newly rendered art_lit with the comparison cameras, not an untouched previous screenshot.",
+  "limits": [
+    "Full test floor is enclosed for light blocking; only the office/portal slice is dressed.",
+    "Cabinet model sides remain low-detail; doorway dark; luminaire shadow still visible.",
+    "Build/capture emit exit-time RID cleanup warnings; scene loads and captures completed."
+  ]
+}

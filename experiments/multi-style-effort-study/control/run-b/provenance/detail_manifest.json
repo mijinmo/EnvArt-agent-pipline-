@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-15",
+  "scope": "Same indoor records-transfer slice, no full-level expansion.",
+  "scene": "interior_detailed.tscn",
+  "baseline_scene": "interior.tscn",
+  "baseline_capture": "captures/interior-glazed",
+  "capture": "captures/detail-01",
+  "reuse_manifests": [
+    "asset_manifest.json",
+    "interior_manifest.json"
+  ],
+  "new_assets": [
+    {
+      "id": "steel_frame_shelves_01",
+      "source": "https://polyhaven.com/a/steel_frame_shelves_01",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "free_scope": "Public complete 1K glTF, binary mesh and diffuse/ARM/OpenGL normal textures; not a paid preview.",
+      "uniform_scale": 0.11,
+      "adaptation": "Rear-wall pending-records shelf; 2.355m high after uniform scale.",
+      "download_metadata": "assets/steel_frame_shelves_01/source_files.json"
+    },
+    {
+      "id": "industrial_storage_cart",
+      "source": "https://polyhaven.com/a/industrial_storage_cart",
+      "authors": {
+        "Jule Bielitz": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "free_scope": "Public complete 1K glTF, binary mesh and diffuse/ARM/OpenGL normal textures; not a paid preview.",
+      "uniform_scale": 0.73,
+      "adaptation": "Wheeled records-transfer trolley; approximately 1.0m high.",
+      "download_metadata": "assets/industrial_storage_cart/source_files.json"
+    },
+    {
+      "id": "office_notepads",
+      "source": "https://polyhaven.com/a/office_notepads",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "free_scope": "Public complete 1K glTF, binary mesh and diffuse/ARM/OpenGL normal textures; not a paid preview.",
+      "uniform_scale": null,
+      "adaptation": "Selected yellow_pad, sticky_stack and a4_stack variants; removed catalogue siblings before placement.",
+      "download_metadata": "assets/office_notepads/source_files.json"
+    }
+  ],
+  "material": "Reuses smooth_concrete_floor 2K diffuse, roughness and OpenGL normal maps. New concrete_detail.gdshader restores albedo variation, adds triplanar source normal response and restrained lower-wall darkening. Mixed albedo frequencies reduce recognizable repetition; not a claim of mathematically nonrepeating texture.",
+  "dressing": "Real shelf and trolley with supported paper stacks, ledgers and outgoing/intake cartons. Existing closed binder model stood upright for reference ledgers. Individual notepad variants supplement desk.",
+  "lighting": "Cool skylight key redirected toward rear working wall; reduced broad ambient; warmer office fixture and added mounted records-board practical; restrained portal bounce fill. Manual bounce approximation plus screen-space effects, not full GI.",
+  "rejected_assets": [
+    {
+      "id": "book_encyclopedia_set_01",
+      "reason": "Incomplete binary after bounded retries; excluded from project. Reused existing binder model instead."
+    }
+  ],
+  "limits": [
+    "Cabinet side meshes remain simplistic; wall still lacks the construction/detail richness of the game reference.",
+    "The trolley has heavier wear than office furniture; its role is a service-transfer cart.",
+    "Only the office and entrance slice is dressed; new enclosure/props remain visual additions without new collision systems.",
+    "Capture completed on Godot 4.7.2 Metal Forward+; exit reports 7 Texture RID cleanup warnings."
+  ],
+  "review": "Three actual 1600x1000 engine views inspected. Pending user art review; no claim of reference-game fidelity."
+}

@@ -1,0 +1,8 @@
+Poly Haven asset license: CC0 1.0 Universal.
+https://polyhaven.com/license
+https://creativecommons.org/publicdomain/zero/1.0/
+Verified 2026-11-13: assets may be used commercially, modified and redistributed.
+Assets: metal_office_desk, desk_lamp_arm_01, mid_century_lounge_chair, concrete_panels.
+License applies to actual asset files, not website preview artwork.
+
+Round-02 additions: binder_notebook, cardboard_box_01, vintage_radio_transceiver, concrete_wall_009, concrete_floor_worn_001. Same CC0 license and commercial use scope.

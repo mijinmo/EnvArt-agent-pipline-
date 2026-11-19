@@ -1,0 +1,416 @@
+[gd_scene load_steps=50 format=3]
+
+[ext_resource type="PackedScene" path="res://controllers/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://controllers/camera_rig.tscn" id="2_camera"]
+[ext_resource type="Script" path="res://controllers/player_input.gd" id="3_input"]
+[ext_resource type="Script" path="res://demo/controller_lab.gd" id="4_lab"]
+[ext_resource type="Shader" path="res://demo/grid.gdshader" id="5_grid"]
+[ext_resource type="PackedScene" path="res://controllers/rail_camera.tscn" id="6_rail"]
+[ext_resource type="PackedScene" path="res://demo/rail_controls.tscn" id="7_controls"]
+[sub_resource type="ShaderMaterial" id="Grid"]
+shader = ExtResource("5_grid")
+[sub_resource type="StandardMaterial3D" id="Stone"]
+albedo_color = Color(0.48, 0.56, 0.62, 1)
+roughness = 0.8
+[sub_resource type="StandardMaterial3D" id="Orange"]
+albedo_color = Color(0.88, 0.44, 0.15, 1)
+roughness = 0.8
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.12, 0.58, 0.59, 1)
+roughness = 0.8
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial"]
+sky_top_color = Color(0.19, 0.32, 0.47, 1)
+sky_horizon_color = Color(0.65, 0.74, 0.8, 1)
+ground_bottom_color = Color(0.12, 0.16, 0.22, 1)
+ground_horizon_color = Color(0.65, 0.74, 0.8, 1)
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMaterial")
+[sub_resource type="Environment" id="Environment"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 3
+ambient_light_color = Color(0.65, 0.77, 0.9, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 2
+tonemap_mode = 2
+[sub_resource type="StyleBoxFlat" id="HUDStyle"]
+bg_color = Color(0.025, 0.045, 0.07, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+corner_radius_bottom_right = 8
+border_width_left = 3
+border_color = Color(0.15, 0.75, 0.78, 1)
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[node name="ControllerLab" type="Node3D"]
+script = ExtResource("4_lab")
+[node name="World" type="Node3D" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-48, -32, 0)
+light_color = Color(1, 0.92, 0.8, 1)
+light_energy = 1.4
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+position = Vector3(0, -0.25, 0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("FloorMesh")
+material_override = SubResource("Grid")
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2, -12)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/BackWall"]
+mesh = SubResource("BackWallMesh")
+material_override = SubResource("Stone")
+[node name="Collision" type="CollisionShape3D" parent="World/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" type="StaticBody3D" parent="World"]
+position = Vector3(10, 1.5, -6)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionWall"]
+mesh = SubResource("OcclusionWallMesh")
+material_override = SubResource("Stone")
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionWall"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" type="StaticBody3D" parent="World"]
+position = Vector3(8, 1.5, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionReturn"]
+mesh = SubResource("OcclusionReturnMesh")
+material_override = SubResource("Stone")
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionReturn"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" type="StaticBody3D" parent="World"]
+position = Vector3(-0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLeft"]
+mesh = SubResource("DoorLeftMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLeft"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" type="StaticBody3D" parent="World"]
+position = Vector3(0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorRight"]
+mesh = SubResource("DoorRightMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/DoorRight"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLintel"]
+mesh = SubResource("DoorLintelMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLintel"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Ramp"]
+mesh = SubResource("RampMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/Ramp"]
+shape = SubResource("RampShape")
+
+[node name="Landing" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 1, -7)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Landing"]
+mesh = SubResource("LandingMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/Landing"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.1, 2.0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Step1"]
+mesh = SubResource("Step1Mesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/Step1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.2, 1.4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Step2"]
+mesh = SubResource("Step2Mesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/Step2"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.30000000000000004, 0.8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Step3"]
+mesh = SubResource("Step3Mesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/Step3"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.4, 0.20000000000000018)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/Step4"]
+mesh = SubResource("Step4Mesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/Step4"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.2, 1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpLow"]
+mesh = SubResource("JumpLowMesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/JumpLow"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.45, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpMid"]
+mesh = SubResource("JumpMidMesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/JumpMid"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" type="StaticBody3D" parent="World"]
+position = Vector3(3, 0.7, -3)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpHigh"]
+mesh = SubResource("JumpHighMesh")
+material_override = SubResource("Orange")
+[node name="Collision" type="CollisionShape3D" parent="World/JumpHigh"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" type="StaticBody3D" parent="World"]
+position = Vector3(0, 0.01, 8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+[node name="Mesh" type="MeshInstance3D" parent="World/SpawnPad"]
+mesh = SubResource("SpawnPadMesh")
+material_override = SubResource("Teal")
+[node name="Collision" type="CollisionShape3D" parent="World/SpawnPad"]
+shape = SubResource("SpawnPadShape")
+
+[node name="DoorLabel" type="Label3D" parent="World"]
+position = Vector3(0, 3.15, -4)
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "1.2 m CLEAR / 2.3 m HIGH"
+font_size = 48
+pixel_size = 0.007
+no_depth_test = false
+
+[node name="RampLabel" type="Label3D" parent="World"]
+position = Vector3(-6, 3, -4)
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "RAMP / 18.4 deg"
+font_size = 48
+pixel_size = 0.007
+no_depth_test = false
+
+[node name="StepLabel" type="Label3D" parent="World"]
+position = Vector3(5, 1.9, 2)
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "RAW STEPS / JUMP TO CLIMB"
+font_size = 48
+pixel_size = 0.007
+no_depth_test = false
+
+[node name="WallLabel" type="Label3D" parent="World"]
+position = Vector3(8, 3.5, -4)
+billboard = 1
+modulate = Color(0.82, 0.94, 1, 1)
+outline_modulate = Color(0.02, 0.04, 0.07, 1)
+text = "CAMERA OCCLUSION"
+font_size = 48
+pixel_size = 0.007
+no_depth_test = false
+
+[node name="Spawn" type="Marker3D" parent="."]
+position = Vector3(0, 0.08, 8)
+[node name="RailCamera" parent="." instance=ExtResource("6_rail")]
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector3(0, 0.08, 8)
+[node name="CameraRig" parent="." node_paths=PackedStringArray("target", "rail_camera") instance=ExtResource("2_camera")]
+target = NodePath("../Player")
+rail_camera = NodePath("../RailCamera")
+[node name="PlayerInput" type="Node" parent="." node_paths=PackedStringArray("player", "cameras")]
+script = ExtResource("3_input")
+player = NodePath("../Player")
+cameras = NodePath("../CameraRig")
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="RailControls" parent="HUD" node_paths=PackedStringArray("director") instance=ExtResource("7_controls")]
+director = NodePath("../../CameraRig")
+[node name="Panel" type="PanelContainer" parent="HUD"]
+offset_left = 20.0
+offset_top = 20.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("HUDStyle")
+[node name="Margin" type="MarginContainer" parent="HUD/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+[node name="Readout" type="Label" parent="HUD/Panel/Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.94, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "ENVART / CONTROLLER LAB"
+[node name="Crosshair" type="Label" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -14.0
+offset_right = 8.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+text = "+"
+horizontal_alignment = 1

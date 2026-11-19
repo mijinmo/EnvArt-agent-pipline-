@@ -1,0 +1,347 @@
+{
+  "bodies": {
+    "ArtContent/Whitebox/World/BackWall": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(24.0, 4.0, 0.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(24.0, 4.0, 0.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 2.0, -12.0)]"
+    },
+    "ArtContent/Whitebox/World/DoorLeft": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(0.7, 2.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(0.7, 2.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.95, 1.3, -4.0)]"
+    },
+    "ArtContent/Whitebox/World/DoorLintel": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.6, 0.3, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.6, 0.3, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 2.45, -4.0)]"
+    },
+    "ArtContent/Whitebox/World/DoorRight": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(0.7, 2.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(0.7, 2.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.95, 1.3, -4.0)]"
+    },
+    "ArtContent/Whitebox/World/Floor": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(32.0, 0.5, 32.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(32.0, 0.5, 32.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, -0.25, 0.0)]"
+    },
+    "ArtContent/Whitebox/World/JumpHigh": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(1.5, 1.4, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(1.5, 1.4, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (3.0, 0.7, -3.0)]"
+    },
+    "ArtContent/Whitebox/World/JumpLow": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(1.5, 0.4, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(1.5, 0.4, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (1.0, 0.2, 1.0)]"
+    },
+    "ArtContent/Whitebox/World/JumpMid": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(1.5, 0.9, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(1.5, 0.9, 1.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (1.0, 0.45, -1.0)]"
+    },
+    "ArtContent/Whitebox/World/Landing": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(3.0, 2.0, 2.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(3.0, 2.0, 2.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-6.0, 1.0, -7.0)]"
+    },
+    "ArtContent/Whitebox/World/OcclusionReturn": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(4.0, 3.0, 0.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(4.0, 3.0, 0.5)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (8.0, 1.5, -1.0)]"
+    },
+    "ArtContent/Whitebox/World/OcclusionWall": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(0.5, 3.0, 10.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(0.5, 3.0, 10.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (10.0, 1.5, -6.0)]"
+    },
+    "ArtContent/Whitebox/World/Ramp": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(3.0, 0.3, 6.3249)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(3.0, 0.3, 6.3249)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.948683, 0.316228), Z: (0.0, -0.316228, 0.948683), O: (-6.0, 0.85, -3.0)]"
+    },
+    "ArtContent/Whitebox/World/SpawnPad": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.0, 0.02, 2.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.0, 0.02, 2.0)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.01, 8.0)]"
+    },
+    "ArtContent/Whitebox/World/Step1": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.0, 0.2, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.0, 0.2, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (5.0, 0.1, 2.0)]"
+    },
+    "ArtContent/Whitebox/World/Step2": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.0, 0.4, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.0, 0.4, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (5.0, 0.2, 1.4)]"
+    },
+    "ArtContent/Whitebox/World/Step3": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.0, 0.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.0, 0.6, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (5.0, 0.3, 0.8)]"
+    },
+    "ArtContent/Whitebox/World/Step4": {
+      "children": [
+        {
+          "mesh": "BoxMesh",
+          "name": "Mesh",
+          "size": "(2.0, 0.8, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        },
+        {
+          "name": "Collision",
+          "shape": "BoxShape3D",
+          "size": "(2.0, 0.8, 0.6)",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "layer": 1,
+      "mask": 2,
+      "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (5.0, 0.4, 0.2)]"
+    }
+  },
+  "cameras": {
+    "Cameras/door": {
+      "fov": 60.0,
+      "projection": 0,
+      "size": 1.0,
+      "transform": "[X: (0.998169, 0.0, 0.060495), Y: (0.006369, 0.994443, -0.105085), Z: (-0.060159, 0.105278, 0.992622), O: (-0.2, 1.65, -0.7)]"
+    },
+    "Cameras/props": {
+      "fov": 58.0,
+      "projection": 0,
+      "size": 1.0,
+      "transform": "[X: (0.695421, 0.0, 0.718602), Y: (0.177554, 0.968995, -0.171826), Z: (-0.696322, 0.247082, 0.67386), O: (5.7, 2.0, -4.6)]"
+    },
+    "Cameras/room": {
+      "fov": 67.0,
+      "projection": 0,
+      "size": 1.0,
+      "transform": "[X: (0.669769, 0.0, 0.74257), Y: (0.005406, 0.999974, -0.004876), Z: (-0.74255, 0.00728, 0.669751), O: (3.3, 2.15, -3.5)]"
+    }
+  }
+}

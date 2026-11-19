@@ -1,0 +1,98 @@
+{
+  "model": "gpt-6.2-astra",
+  "base_commit": "8a174483415008b465ffdb45e063104e94eb3d15",
+  "runs": {
+    "run-a": "medium",
+    "run-b": "xhigh",
+    "run-c": "low",
+    "run-d": "high"
+  },
+  "cases": {
+    "sable": {
+      "source": "experiments/stylized-reference-trials/sable",
+      "scene": "round03.tscn",
+      "camera_paths": [
+        "overall",
+        "detail",
+        "transition"
+      ],
+      "references": [
+        {
+          "local": "/private/tmp/sabletrial-09.jpg",
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/ss_ef49b11e14ab919a138a20739d50fd04fdd806ad.1920x1080.jpg",
+          "role": "主参考：开放商棚结构、颜色、杆索和疏密。架空载具不能取代原白盒通路。",
+          "sha256": "474fdde4e4d2c8342099543e2512dce9cd7ea30598104ac2bcce793ad7306798"
+        },
+        {
+          "local": "/private/tmp/sabletrial-00.jpg",
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/ss_f7cf5d40340dfcfc534daff63be314fdbb9e6817.1920x1080.jpg",
+          "role": "辅助：远景层次，不扩大样板。",
+          "sha256": "b3b024fa7622e8a57110ba3835bd03d971ed7d60ba5430b1235f117448cd8ccb"
+        },
+        {
+          "local": "/private/tmp/sabletrial-15.jpg",
+          "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/ss_eef53ec54dda09b085b5435c276e9c765250fea0.1920x1080.jpg",
+          "role": "辅助构造；人物对话主导，不能据此确定布局。",
+          "sha256": "c31989f4640c11cb78a012b5442482dc7b92e9ed366b8edbd8850b106a25d5f0"
+        }
+      ],
+      "files": 191,
+      "baseline_hash": "b27b672b6afb72c7e6968585b1dcf39f713ff491e9c98340346897725f6aecd1"
+    },
+    "dredge": {
+      "source": "experiments/stylized-reference-trials/dredge",
+      "scene": "round03.tscn",
+      "camera_paths": [
+        "Overall",
+        "Detail",
+        "Transition"
+      ],
+      "references": [
+        {
+          "local": "/private/tmp/dredge-explore.jpg",
+          "url": "https://static.wixstatic.com/media/e609d3_1398d6b764a346a69d945f263e8aec34~mv2.png",
+          "role": "主参考：港村建筑、配色、形状和光影。斜俯远视不能证明近景道具细节。",
+          "sha256": "9876e8d3d6f19e3af50801c4b2a8ce9cf9e75cec2105383570e577c2fd313b1a"
+        },
+        {
+          "local": "/private/tmp/dredge-light-small.jpg",
+          "url": "https://static.wixstatic.com/media/e609d3_e0eb701824064407a49c0e9a0590b2cb~mv2.jpg",
+          "role": "辅助：水面、冷暖与远景关系。",
+          "sha256": "668d9d54ab9eec5d72ca5b19342b7fd298d8c184625bbe17d60fab2bca99bc60"
+        }
+      ],
+      "files": 257,
+      "baseline_hash": "6691b7b2f35ba80c98d87b46f4ade497626d3456ea450109d1156dca797b0998"
+    },
+    "control": {
+      "source": "experiments/whitebox-lighting-study",
+      "scene": "interior_astra_v2_03.tscn",
+      "camera_paths": [
+        "Cameras/room",
+        "Cameras/props",
+        "Cameras/door"
+      ],
+      "references": [
+        {
+          "local": "/private/tmp/astra-ref1.jpg",
+          "url": "https://cdn.mos.cms.futurecdn.net/naFRXRm5Rufg52AvrWMD4i.jpg",
+          "role": "主参考：混凝土、地坪、办公材质、档案陈设与稳定光照；人物遮挡部分地坪。",
+          "sha256": "c0d2330b6e9680c4369f0c1f176883683caa4394f80aaa59e892278d8066a89d"
+        },
+        {
+          "local": "/private/tmp/astra-ref2.jpg",
+          "url": "https://image.jeuxvideo.com/medias-md/156691/1566905271-9637-capture-d-ecran.jpg",
+          "role": "辅助：门侧目录、木饰面与过渡空间；不增加堵门门扇。",
+          "sha256": "7e6569c85bf7bc29ca7ed7d20020e0e805bc85ea5bc78d1b16e1568dc8165178"
+        }
+      ],
+      "files": 261,
+      "baseline_hash": "7af04f0adea2eb5c44f6591f486bc37347e659dd785001d7616c103b6a0e920d"
+    }
+  },
+  "art_iterations": 2,
+  "resolution": [
+    1600,
+    1000
+  ]
+}

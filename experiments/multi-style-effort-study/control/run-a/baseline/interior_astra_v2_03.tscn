@@ -1,0 +1,503 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://baseline/interior_detailed.tscn" id="base"]
+[ext_resource type="Shader" path="res://baseline/astra-v2/materials/stone.gdshader" id="stone"]
+[ext_resource type="Texture2D" path="res://baseline/assets/smooth_concrete_floor/Diffuse.jpg" id="wallscan"]
+[ext_resource type="Texture2D" path="res://baseline/assets/smooth_concrete_floor/Rough.jpg" id="wallrough_scan"]
+[ext_resource type="Texture2D" path="res://baseline/assets/smooth_concrete_floor/nor_gl.jpg" id="wallnormal_scan"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/terrazzo_tiles_diff.jpg" id="floorscan"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/terrazzo_tiles_rough.jpg" id="floorrough_scan"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/terrazzo_tiles_nor_gl.jpg" id="floornormal_scan"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/plywood_diff.jpg" id="woodcolor"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/plywood_rough.jpg" id="woodrough"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/materials/plywood_nor_gl.jpg" id="woodnormal"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/print/station.png" id="station"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/print/custody.png" id="custody"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/print/directory.png" id="directory"]
+[ext_resource type="Texture2D" path="res://baseline/astra-v2/print/carton.png" id="carton"]
+[ext_resource type="PackedScene" path="res://baseline/assets/cardboard_box_01/cardboard_box_01.gltf" id="archivebox"]
+
+[ext_resource type="Shader" path="res://baseline/astra-v2/materials/registry_aggregate.gdshader" id="aggregate"]
+[ext_resource type="Shader" path="res://baseline/astra-v2/materials/vertical_veneer.gdshader" id="veneerFinish"]
+[ext_resource type="Shader" path="res://baseline/astra-v2/materials/enamel.gdshader" id="enamel"]
+[ext_resource type="Texture2D" path="res://baseline/assets/3td/OfficeFileCabinet_01/OfficeFileCabinet_01_0.jpg" id="paint"]
+
+[sub_resource type="ShaderMaterial" id="wall"]
+shader = ExtResource("stone")
+shader_parameter/floor_finish = false
+shader_parameter/scan = ExtResource("wallscan")
+shader_parameter/rough_scan = ExtResource("wallrough_scan")
+shader_parameter/normal_scan = ExtResource("wallnormal_scan")
+
+[sub_resource type="ShaderMaterial" id="floor"]
+shader = ExtResource("aggregate")
+shader_parameter/scan = ExtResource("floorscan")
+shader_parameter/rough_scan = ExtResource("floorrough_scan")
+shader_parameter/normal_scan = ExtResource("floornormal_scan")
+
+[sub_resource type="StandardMaterial3D" id="Frame"]
+albedo_color = Color(0.19, 0.22, 0.21, 1)
+roughness = 0.4
+metallic = 0.55
+
+[sub_resource type="ShaderMaterial" id="Veneer"]
+shader = ExtResource("veneerFinish")
+shader_parameter/veneer = ExtResource("woodcolor")
+shader_parameter/rough_scan = ExtResource("woodrough")
+shader_parameter/normal_scan = ExtResource("woodnormal")
+
+[sub_resource type="StandardMaterial3D" id="stationInk"]
+albedo_texture = ExtResource("station")
+roughness = 0.82
+
+[sub_resource type="QuadMesh" id="stationQuad"]
+size = Vector2(1.55, 0.565)
+material = SubResource("stationInk")
+
+[sub_resource type="StandardMaterial3D" id="custodyInk"]
+albedo_texture = ExtResource("custody")
+roughness = 0.82
+
+[sub_resource type="QuadMesh" id="custodyQuad"]
+size = Vector2(0.52, 0.715)
+material = SubResource("custodyInk")
+
+[sub_resource type="StandardMaterial3D" id="directoryInk"]
+albedo_texture = ExtResource("directory")
+roughness = 0.82
+
+[sub_resource type="QuadMesh" id="directoryQuad"]
+size = Vector2(1.7, 1.44)
+material = SubResource("directoryInk")
+
+[sub_resource type="StandardMaterial3D" id="cartonInk"]
+albedo_texture = ExtResource("carton")
+roughness = 0.82
+
+[sub_resource type="QuadMesh" id="cartonQuad"]
+size = Vector2(0.26, 0.136)
+material = SubResource("cartonInk")
+
+[sub_resource type="BoxMesh" id="IntakeSignMountMesh"]
+size = Vector3(0.057, 0.595, 1.58)
+material = SubResource("Frame")
+
+[sub_resource type="BoxMesh" id="CustodyPosterFrameMesh"]
+size = Vector3(0.022, 0.744, 0.55)
+material = SubResource("Frame")
+
+[sub_resource type="BoxMesh" id="DeskWainscot0Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot1Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot2Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot3Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot4Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot5Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DeskWainscot6Mesh"]
+size = Vector3(0.036, 0.97, 0.925)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="WainscotCapMesh"]
+size = Vector3(0.045, 0.023, 6.51)
+material = SubResource("Frame")
+
+[sub_resource type="BoxMesh" id="DirectoryVeneer0Mesh"]
+size = Vector3(0.894, 2.54, 0.033)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DirectoryVeneer1Mesh"]
+size = Vector3(0.894, 2.54, 0.033)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DirectoryVeneer2Mesh"]
+size = Vector3(0.894, 2.54, 0.033)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DirectoryVeneer3Mesh"]
+size = Vector3(0.894, 2.54, 0.033)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DirectoryVeneer4Mesh"]
+size = Vector3(0.894, 2.54, 0.033)
+material = SubResource("Veneer")
+
+[sub_resource type="BoxMesh" id="DirectoryCorniceMesh"]
+size = Vector3(4.5, 0.09, 0.18)
+material = SubResource("Frame")
+
+[sub_resource type="BoxMesh" id="DirectoryFrameMesh"]
+size = Vector3(1.77, 1.5, 0.058)
+material = SubResource("Frame")
+
+[sub_resource type="StandardMaterial3D" id="Fluorescent"]
+albedo_color = Color(0.91,0.91,0.80,1)
+emission_enabled = true
+emission = Color(0.95,0.91,0.78,1)
+emission_energy_multiplier = 1.7
+
+[sub_resource type="BoxMesh" id="DirectoryLensMesh"]
+size = Vector3(1.81, 0.015, 0.085)
+material = SubResource("Fluorescent")
+
+[sub_resource type="ShaderMaterial" id="RegistryEnamel"]
+shader = ExtResource("enamel")
+shader_parameter/paint = ExtResource("paint")
+
+[sub_resource type="PlaneMesh" id="RegistryFloorFinish"]
+size = Vector2(11.76, 10.8)
+material = SubResource("floor")
+
+[node name="RecordsInterior" instance=ExtResource("base")]
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/BackWall" index="0"]
+material_override = SubResource("wall")
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/OcclusionWall" index="0"]
+material_override = SubResource("wall")
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/OcclusionReturn" index="0"]
+material_override = SubResource("wall")
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/DoorLeft" index="0"]
+material_override = SubResource("wall")
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/DoorRight" index="0"]
+material_override = SubResource("wall")
+
+[node name="Mesh" parent="ArtContent/Whitebox/World/DoorLintel" index="0"]
+material_override = SubResource("wall")
+
+[node name="EastUpper" parent="ArtContent/Art_Added" index="45"]
+material_override = SubResource("wall")
+
+[node name="ReturnUpper" parent="ArtContent/Art_Added" index="46"]
+material_override = SubResource("wall")
+
+[node name="BackUpper" parent="ArtContent/Art_Added" index="47"]
+material_override = SubResource("wall")
+
+[node name="PortalUpperPier" parent="ArtContent/Art_Added" index="48"]
+material_override = SubResource("wall")
+
+[node name="RoofWest" parent="ArtContent/Art_Added" index="58"]
+material_override = SubResource("wall")
+
+[node name="RoofEast" parent="ArtContent/Art_Added" index="59"]
+material_override = SubResource("wall")
+
+[node name="RoofNorth" parent="ArtContent/Art_Added" index="60"]
+material_override = SubResource("wall")
+
+[node name="RoofSouth" parent="ArtContent/Art_Added" index="61"]
+material_override = SubResource("wall")
+
+[node name="ArchiveCabinet0" parent="ArtContent/Art_Added" index="28"]
+rotation = Vector3(0, -1.5707963, 0)
+
+[node name="ArchiveCabinet1" parent="ArtContent/Art_Added" index="29"]
+rotation = Vector3(0, -1.5707963, 0)
+
+[node name="ArchiveCabinet2" parent="ArtContent/Art_Added" index="30"]
+rotation = Vector3(0, -1.5707963, 0)
+
+[node name="RegistryDressing" type="Node3D" parent="."]
+
+
+[node name="RecordsStation" parent="ArtContent/Art_Added" index="38"]
+visible = false
+
+[node name="StationSubline" parent="ArtContent/Art_Added" index="76"]
+visible = false
+
+[node name="CabinetIndex" parent="ArtContent/Art_Added" index="78"]
+visible = false
+
+[node name="@Label3D@10" parent="ArtContent/Art_Added" index="79"]
+visible = false
+
+[node name="@Label3D@11" parent="ArtContent/Art_Added" index="80"]
+visible = false
+
+[node name="@Label3D@12" parent="ArtContent/Art_Added" index="81"]
+visible = false
+
+[node name="@Label3D@13" parent="ArtContent/Art_Added" index="82"]
+visible = false
+
+[node name="@Label3D@14" parent="ArtContent/Art_Added" index="83"]
+visible = false
+
+[node name="@Label3D@15" parent="ArtContent/Art_Added" index="84"]
+visible = false
+
+[node name="@Label3D@16" parent="ArtContent/Art_Added" index="85"]
+visible = false
+
+[node name="@Label3D@17" parent="ArtContent/Art_Added" index="86"]
+visible = false
+
+[node name="@Label3D@18" parent="ArtContent/Art_Added" index="87"]
+visible = false
+
+[node name="@Label3D@19" parent="ArtContent/Art_Added" index="88"]
+visible = false
+
+[node name="@Label3D@20" parent="ArtContent/Art_Added" index="89"]
+visible = false
+
+[node name="IntakeSignMount" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.702, 2.29, -7.32)
+mesh = SubResource("IntakeSignMountMesh")
+
+[node name="IntakeEnamel" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.672, 2.29, -7.32)
+rotation = Vector3(0, -1.5707963267948966, 0)
+mesh = SubResource("stationQuad")
+
+[node name="CustodyPosterFrame" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.728, 1.84, -5.57)
+mesh = SubResource("CustodyPosterFrameMesh")
+
+[node name="CustodyBulletin" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.715, 1.84, -5.57)
+rotation = Vector3(0, -1.5707963267948966, 0)
+mesh = SubResource("custodyQuad")
+
+[node name="DeskWainscot0" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -10.65)
+mesh = SubResource("DeskWainscot0Mesh")
+
+[node name="DeskWainscot1" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -9.72)
+mesh = SubResource("DeskWainscot1Mesh")
+
+[node name="DeskWainscot2" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -8.790000000000001)
+mesh = SubResource("DeskWainscot2Mesh")
+
+[node name="DeskWainscot3" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -7.86)
+mesh = SubResource("DeskWainscot3Mesh")
+
+[node name="DeskWainscot4" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -6.93)
+mesh = SubResource("DeskWainscot4Mesh")
+
+[node name="DeskWainscot5" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -6.0)
+mesh = SubResource("DeskWainscot5Mesh")
+
+[node name="DeskWainscot6" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.72, 0.626, -5.07)
+mesh = SubResource("DeskWainscot6Mesh")
+
+[node name="WainscotCap" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.697, 1.118, -7.86)
+mesh = SubResource("WainscotCapMesh")
+
+[node name="DirectoryVeneer0" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(-1.38, 1.43, -11.727)
+mesh = SubResource("DirectoryVeneer0Mesh")
+
+[node name="DirectoryVeneer1" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(-0.47999999999999987, 1.43, -11.727)
+mesh = SubResource("DirectoryVeneer1Mesh")
+
+[node name="DirectoryVeneer2" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(0.42000000000000015, 1.43, -11.727)
+mesh = SubResource("DirectoryVeneer2Mesh")
+
+[node name="DirectoryVeneer3" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(1.3200000000000003, 1.43, -11.727)
+mesh = SubResource("DirectoryVeneer3Mesh")
+
+[node name="DirectoryVeneer4" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(2.22, 1.43, -11.727)
+mesh = SubResource("DirectoryVeneer4Mesh")
+
+[node name="DirectoryCornice" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(0.42, 2.72, -11.66)
+mesh = SubResource("DirectoryCorniceMesh")
+
+[node name="DirectoryFrame" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(0.63, 1.59, -11.68)
+mesh = SubResource("DirectoryFrameMesh")
+
+[node name="SectorDirectory" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(0.63, 1.59, -11.647)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("directoryQuad")
+
+[node name="DirectoryLens" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(0.63, 2.668, -11.57)
+mesh = SubResource("DirectoryLensMesh")
+
+[node name="DirectoryWash" type="SpotLight3D" parent="RegistryDressing"]
+position = Vector3(0.63, 2.65, -11.32)
+rotation = Vector3(-1.2, 0, 0)
+light_color = Color(0.99,0.87,0.70,1)
+light_energy = 2.6
+light_specular = 0.2
+light_size = 0.25
+spot_range = 4
+spot_angle = 68
+shadow_enabled = true
+
+[node name="DirectorySpill" type="OmniLight3D" parent="RegistryDressing"]
+position = Vector3(0.64,2.15,-10.48)
+light_color = Color(0.97,0.87,0.74,1)
+light_energy = 0.9
+light_specular = 0.0
+omni_range = 3.4
+
+[node name="OfficePractical" parent="Lighting" index="2"]
+light_color = Color(0.94,0.97,0.90,1)
+light_energy = 2.9
+light_specular = 0.4
+light_size = 0.43
+
+[node name="SkylightDaylight" parent="Lighting" index="1"]
+light_energy = 4.3
+spot_angle = 58.0
+light_size = 0.55
+
+[node name="EntryBounceApproximation" parent="Lighting" index="8"]
+light_energy = 0.85
+light_specular = 0.0
+omni_range = 5.3
+
+[node name="TransferCase0" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(6.8, 0.153384, -11.36)
+scale = Vector3(0.88, 0.88, 0.88)
+
+[node name="TransferCaseLabel0" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(6.8, 0.30228, -11.1008)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="TransferCase1" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(7.56, 1.823076, -11.36)
+scale = Vector3(0.82, 0.82, 0.82)
+
+[node name="TransferCaseLabel1" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(7.56, 1.96182, -11.1182)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="TransferCase2" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(6.8, 2.3497440000000003, -11.36)
+scale = Vector3(0.83, 0.83, 0.83)
+
+[node name="TransferCaseLabel2" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(6.8, 2.49018, -11.1153)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="TransferCase3" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(7.16, 2.3497440000000003, -11.35)
+scale = Vector3(0.83, 0.83, 0.83)
+
+[node name="TransferCaseLabel3" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(7.16, 2.49018, -11.1053)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="TransferCase4" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(7.54, 2.349812, -11.36)
+scale = Vector3(0.84, 0.84, 0.84)
+
+[node name="TransferCaseLabel4" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(7.54, 2.49194, -11.1124)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="TransferCase5" parent="RegistryDressing" instance=ExtResource("archivebox")]
+position = Vector3(9.2, 1.641204, -10.29)
+scale = Vector3(1.03, 1.03, 1.03)
+
+[node name="TransferCaseLabel5" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(9.2, 1.81548, -9.9873)
+rotation = Vector3(0, 0, 0)
+mesh = SubResource("cartonQuad")
+
+[node name="geom-OfficeFileCabinetOne300" parent="ArtContent/Art_Added/ArchiveCabinet0" index="0"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_1" parent="ArtContent/Art_Added/ArchiveCabinet0" index="1"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_2" parent="ArtContent/Art_Added/ArchiveCabinet0" index="2"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_3" parent="ArtContent/Art_Added/ArchiveCabinet0" index="3"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_4" parent="ArtContent/Art_Added/ArchiveCabinet0" index="4"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_5" parent="ArtContent/Art_Added/ArchiveCabinet0" index="5"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300" parent="ArtContent/Art_Added/ArchiveCabinet1" index="0"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_1" parent="ArtContent/Art_Added/ArchiveCabinet1" index="1"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_2" parent="ArtContent/Art_Added/ArchiveCabinet1" index="2"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_3" parent="ArtContent/Art_Added/ArchiveCabinet1" index="3"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_4" parent="ArtContent/Art_Added/ArchiveCabinet1" index="4"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_5" parent="ArtContent/Art_Added/ArchiveCabinet1" index="5"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300" parent="ArtContent/Art_Added/ArchiveCabinet2" index="0"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_1" parent="ArtContent/Art_Added/ArchiveCabinet2" index="1"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_2" parent="ArtContent/Art_Added/ArchiveCabinet2" index="2"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_3" parent="ArtContent/Art_Added/ArchiveCabinet2" index="3"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_4" parent="ArtContent/Art_Added/ArchiveCabinet2" index="4"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="geom-OfficeFileCabinetOne300_5" parent="ArtContent/Art_Added/ArchiveCabinet2" index="5"]
+material_override = SubResource("RegistryEnamel")
+
+[node name="SkylightBounceApproximation" parent="Lighting" index="5"]
+light_specular = 0.0
+
+[node name="DoorPractical" parent="Lighting" index="4"]
+light_specular = 0.25
+
+[node name="RegistryFloorFinish" type="MeshInstance3D" parent="RegistryDressing"]
+position = Vector3(3.88, 0.002, -6.35)
+mesh = SubResource("RegistryFloorFinish")
+cast_shadow = 0
