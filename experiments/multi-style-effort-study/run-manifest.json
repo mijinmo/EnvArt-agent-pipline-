@@ -37,7 +37,9 @@
         }
       ],
       "files": 191,
-      "baseline_hash": "b27b672b6afb72c7e6968585b1dcf39f713ff491e9c98340346897725f6aecd1"
+      "baseline_hash": "b27b672b6afb72c7e6968585b1dcf39f713ff491e9c98340346897725f6aecd1",
+      "prepared_files": 140,
+      "prepared_baseline_hash": "5c4dd4945bf08175c1ae8ae4450279f2b6866d8f4246b14cd50f2a7eb37ae2c4"
     },
     "dredge": {
       "source": "experiments/stylized-reference-trials/dredge",
@@ -62,7 +64,9 @@
         }
       ],
       "files": 257,
-      "baseline_hash": "6691b7b2f35ba80c98d87b46f4ade497626d3456ea450109d1156dca797b0998"
+      "baseline_hash": "6691b7b2f35ba80c98d87b46f4ade497626d3456ea450109d1156dca797b0998",
+      "prepared_files": 185,
+      "prepared_baseline_hash": "c0f9eb21891da5f631221081f12ecef37a735de80bfee32359f76e1f43b80243"
     },
     "control": {
       "source": "experiments/whitebox-lighting-study",
@@ -87,12 +91,15 @@
         }
       ],
       "files": 261,
-      "baseline_hash": "7af04f0adea2eb5c44f6591f486bc37347e659dd785001d7616c103b6a0e920d"
+      "baseline_hash": "7af04f0adea2eb5c44f6591f486bc37347e659dd785001d7616c103b6a0e920d",
+      "prepared_files": 191,
+      "prepared_baseline_hash": "533aa4fe1250c8985d8d7e4ebd07c8664194d0340cf7a988a576c6acd400d09c"
     }
   },
   "art_iterations": 2,
   "resolution": [
     1600,
     1000
-  ]
+  ],
+  "preparation": "All three isolated baselines imported and graphically recaptured before production agents started; their prepared resources and Godot import caches were copied identically to four runs per game. Source_* images retain original captures; start_* are fresh baseline captures. No input dependency repair during production."
 }

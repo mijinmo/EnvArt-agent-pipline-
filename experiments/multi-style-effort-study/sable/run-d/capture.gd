@@ -34,7 +34,7 @@ func capture() -> void:
   cam.make_current()
   for frame in range(16):
    await process_frame
-   await RenderingServer.frame_post_draw
+   RenderingServer.force_draw(false)
   var im=root.get_texture().get_image()
   var target=output+names[i]+".png"
   if im.save_png(target)!=OK:
