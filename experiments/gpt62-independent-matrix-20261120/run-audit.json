@@ -2442,7 +2442,7 @@
         "Initial audition was occluded by original placeholder mesh; corrected visual override, kept initial and corrected images.",
         "Moved four 18 mm-high decorative threshold stones out of protected doorway after final capture; retained final-before-clearance images and recaptured all three views."
       ],
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "view_image_blocks_with_literal_tool_name": 7,
       "preserved_history_ref": "refs/envart-trials/20261120/sable-medium",
       "actual_render_backends": [
@@ -2786,7 +2786,7 @@
         "Corrected transposed local axes of rods/scale assembly during the permitted first-to-final revision.",
         "After final capture, changed only five small flags to separate two-sided material; kept pre-repair captures/technical/single-sided-flags and recaptured/viewed all three final images."
       ],
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-xhigh",
       "actual_render_backends": [
         "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
@@ -3067,7 +3067,7 @@
         "final": "all 3 through stored views helper"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-low",
       "preexisting_resource_changes_after_first": [],
       "render_stdout_error_lines": [],
@@ -3376,7 +3376,7 @@
         "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-high",
       "view_review_evidence": {
         "references_and_whitebox": "all three frozen references and all three whitebox views",
@@ -3778,7 +3778,7 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "KayKit Dungeon Remastered；重设枢轴、显式材质色和浅石印纹，原创双盘秤、校准盒与运输组合。",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-ultra",
       "technical_limitations": [
         "A separate direct headless main-load log contains a macOS get_system_ca_certificates access error under the restricted profile. The brokered graphical captures completed without scene/script error strings; no online game features were tested."
@@ -4335,7 +4335,7 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "KayKit Dungeon 构件与货具 + Poly Haven 砂岩/沙地 + Quaternius 货袋/管道；重配图集、米制材质与分段明暗，补称量台、遮阳帆和配水叙事。",
       "preserved_history_ref": "refs/envart-trials/20261120/sable-max",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "project_settings_check": {
         "only_main_scene_change": true,
         "main_scene": [

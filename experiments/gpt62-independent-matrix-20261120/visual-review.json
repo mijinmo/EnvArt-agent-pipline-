@@ -1,0 +1,146 @@
+{
+  "sable": {
+    "preferred": [
+      "A"
+    ],
+    "tiers": [
+      [
+        "A"
+      ],
+      [
+        "F"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E"
+      ],
+      [
+        "B"
+      ]
+    ],
+    "summary": "整体首选 A，次选 F。A 的 door 从站牌、门侧小旗就能望见红棚下的秤。到 close，秤上有贴签包裹，左手边是砝码，右手边是单据和印章，再往右是带龙头的储水桶与接水杯。三个机位把到站、交货和补给交代成同一个地方。代价是 props 的棚沿盖住路线图上部，木凳、桌腿也比台面器物粗简。F 把运袋手车和秤具做得更可信，居次的原因是门侧两个台体与货运工作的关系较弱，props 的前柱也正好压住墙旗。C 与 D 同档，C 胜在建筑、沙地与远山的关系，D 胜在棚下光影。E 的双盘秤和入口木箱完整，B 的收发点主要靠图牌说明。",
+    "categories": {
+      "fidelity": {
+        "preferred": [
+          "C"
+        ],
+        "evidence": "C/final/door 的远山用少量浅线分出岩层，门柱用较深的接缝分出石块，外侧弯管的箍带又是另一种轮廓。这种随材质和距离改变线条的做法最接近参考 01。props 的红棚在支点间下垂，深色杆索前后分开，墙边小车载着袋与卷材，让人想起参考 02 平台边缘的装具。close 右墙褪色的日纹透出石缝，左侧织旗的纹边却还清楚。短板在近景木台，厚板和支脚大片同色，木、石之间的表面差异尚不及参考。"
+      },
+      "unity": {
+        "preferred": [
+          "A"
+        ],
+        "evidence": "A/final/door 的站牌和黄旗上是同一鸟形，转到 props，红棚上的鸟形直接标出工作区。近看地图题头、秤座、供水牌沿用门牌的深青，桌旗和地毯共享菱纹却改变了颜色和纹样尺度。去掉可读文字仍能认出同一站点。E 的太阳与山形标也很一致，但 props 墙上成组重复的砖框和大块矩形吊旗，使墙与布的差别变弱。A 自己的招牌边框、织纹也比墙皮整齐得多。"
+      },
+      "assets": {
+        "preferred": [
+          "F"
+        ],
+        "evidence": "F/final/props 左下手车有辐条轮、双柄和停车支脚，车板宽度容得下并列的扎口袋。close 的砝码盒敞开，盒内陈列着大小不同的砝码，双盘各有吊索，横梁、表盘和底座的关系清楚。右端卷毯露出卷芯，和门内框的金属包边、墙面的错缝形成材质差别。局限是凳脚和桌腿仍显整块，手车柄在 close 左缘与桌角贴得很近。C 的带拱架小车也有运输用途，近轮被矮凳挡去一部分。"
+      },
+      "detail": {
+        "preferred": [
+          "A"
+        ],
+        "evidence": "A/final/props 把托板上的袋装货、称量桌和靠墙取水处排成三组，中间地面留给人靠近。close 里包裹标签朝外，纸旁是印章，盘绳挂在路线图旁，右侧阀轮、横桶龙头和下方小杯互相解释。仅看物件的位置也能读出工作内容。墙皮下缘有断续剥落，桌旗却有整齐收边，细节密度随使用位置变化。相比之下，B 的墙图和桌图指向同一条路线，桌上物件与实际货物的联系较弱。A 的水标和路线图都很抢眼，中景又被棚沿切去了部分信息。"
+      },
+      "lighting": {
+        "preferred": [
+          "D"
+        ],
+        "evidence": "D/final/props 的棚影从左墙落到横桶和木地面，前方日照沙地上能辨出细绳与小旗的投影，沿着影子可以找回头顶构件。close 墙角留一条暖亮面，阴影里的浅色桌布把深色印章、笔和秤盘托出来，桌下的红包仍有轮廓。door 的深绿门框衬在亮沙前，也交代了露天入口。D 的墙面斑点在暗处稍抢秤的轮廓。A 的阴区也保住了地图与砝码，但 close 中秤面和后墙的明度更接近。"
+      }
+    },
+    "candidates": {
+      "A": {
+        "note": "door 的高门楣和窄黄旗先定入口，右边低一些的红棚露出第二个使用点。props 的麻袋垫木板、秤桌铺织物、陶罐落在横桶旁，同一面墙下能分清干货和取水处。close 的桌腿与小凳较厚直，桶端切面也偏硬。",
+        "revision": "door 中棚面从窄红带展开，鸟形可辨，门脚原先浅淡的方框变成格栅，后方台体换深青顶。props 的前柱退到左缘，秤桌更完整，代价是降低的棚沿盖住路线图上边。close 把图移到秤左，简化桌旗纹样，并在横桶上方补出双管、阀轮与水牌，首轮已有的秤、印章和桶因而更好读。"
+      },
+      "B": {
+        "note": "door 的深绿门柱和浅色站名在远处认得快，props 用桌子居中、箱桶分列两侧，入口关系很直观。close 的瓶有明显圆滑高光，箱框和桶箍却厚钝，背景和木面少有能区分材料的细线。",
+        "revision": "door 把纯色后墙与前景台体分出砖缝。props 中三只叠桶向右错开，原先与桶重合的后侧棚柱露出柱脚。close 从一只绿瓶的空桌变成有图纸、桌牌和小件的收发桌，并铺了深色地垫。岗位更明确，但墙图、桌图重复相近的路线图形，棚内货物本身几乎没有补充信息。"
+      },
+      "C": {
+        "note": "door 的门侧管、旗杆和箱扣让砌块门洞与装运联系起来。props 留出车辙通向的开阔沙地，close 的挂秤旁紧接着装袋、卷材的小车。矮凳在此角度遮住近侧车轮，厚桌板占了较长一段缺少变化的近景。",
+        "revision": "first 的 props 有多截黑线突过棚沿，右边旗片之间的线还断开。final 的拉索连续，布沿与支杆的高低清楚了。close 的秤由半边暗壳挡住刻度、吊线相交，变为正面刻度、三角吊线和装货的秤盘。door 两个台体加上不同色箱板和向上标记，更像待运货箱，但也从门洞分走注意。"
+      },
+      "D": {
+        "note": "door 的拱窗和门脚铺石给墙厚与地面尺度提供了依据，props 用木地面和窄毯界定办理处。close 的地图、悬臂秤和桌面单据能顺着读过去。外面两只箱的灰色包框显著厚于木板，近景石墙又几乎每块都有密点，与细小器件争夺注意。",
+        "revision": "first 的 door 和 props 有许多尖长线段从红棚穿向天空，close 连秤盘下也叠出一个浅盘。final 的旗绳连成弧线，墙托、斜撑、吊盘之间能逐段看清。墙图、章和朝向桌前的淡脚印使柜台有来客的意味。props 的前柱仍遮住墙图右侧，放大的箱牌又给 door 增添了一个醒目焦点。"
+      },
+      "E": {
+        "note": "door 木箱的板缝、角钉和搬运箭头能从入口读出，close 的天平两盘及桌面砝码也容易辨认。props 的尖角棚边和菱纹地毯呼应，但墙上重复的小砖框看起来像一排排画在表面的符号。角落的桶、箱和矮柜挤在一起，难以分清前后。",
+        "revision": "door 从深绿盾纹柱变为浅石分段、挂编号牌的门柱，两个素箱面补了板条与货标。props 的棚向前展开，右墙添了百叶，左墙能看到管线。close 左缘原来挡住大桶的前柱移出了画面，秤左的瓶与秤杆也分开了。中景的前柱则仍压在左侧叠桶前，大块素色吊旗占了棚前的天空。"
+      },
+      "F": {
+        "note": "door 的浅石外框、青灰内框与门脚铺面把入口厚度交代得清楚。props 的手车满载扎口袋，停在秤桌一端，另一端才是储物架，进货方向很自然。close 的器具最耐看，门侧两座浅色台体则稍显空。props 的前棚柱也挡了部分墙旗。",
+        "revision": "first 的 door 中两侧突出石块夹住红招牌，内框几乎成一整块暗面。final 让完整站名与 07 露出，内框分出箍带和接缝，橙色前景体改为浅石身、深顶面。props 和 close 把原来叠在秤后的墙旗移向左侧，开盖砝码盒、卷毯与桌边垂布各有位置。近景图形清楚了，中景仍受前柱遮挡，门前台体也失去首轮醒目的颜色区分。"
+      }
+    },
+    "visible_constraint_concerns": [
+      "共同白盒 door 已有门右高低两块，props 的墙外短台和 close 的直角墙也已存在。六组 door 仍能透过门看到后方，前景台体各有遮住棚下低处的视角。这里只评包覆和遮挡，单张透视图无法量出净空。",
+      "A/final/props 棚沿横过路线图上缘，F/final/props 左前柱横过称量墙旗，D/final/props 前柱切到墙图右端。三处在各自 close 都能看清，属于特定机位的遮挡。",
+      "B/first/close 右侧棚柱落在桶端轮廓内，B/final/props 两者已分开。C、D 首轮棚沿外的断线或尖刺在共同白盒里没有对应物，两组 final 的相应轮廓已整理。",
+      "C/final/close 的矮凳遮去部分车轮，F/final/close 左缘车柄与桌角投影相切。画面可以确认轮廓关系，实物间距与碰撞仍待场景实测。"
+    ],
+    "viewed_files": [
+      "references/01_outdoor_building.jpg",
+      "references/02_travelling_work_platform.jpg",
+      "references/03_sheltered_station_supplies.jpg",
+      "whitebox/door.png",
+      "whitebox/props.png",
+      "whitebox/close.png",
+      "A/first/door.png",
+      "A/first/props.png",
+      "A/first/close.png",
+      "A/final/door.png",
+      "A/final/props.png",
+      "A/final/close.png",
+      "B/first/door.png",
+      "B/first/props.png",
+      "B/first/close.png",
+      "B/final/door.png",
+      "B/final/props.png",
+      "B/final/close.png",
+      "C/first/door.png",
+      "C/first/props.png",
+      "C/first/close.png",
+      "C/final/door.png",
+      "C/final/props.png",
+      "C/final/close.png",
+      "D/first/door.png",
+      "D/first/props.png",
+      "D/first/close.png",
+      "D/final/door.png",
+      "D/final/props.png",
+      "D/final/close.png",
+      "E/first/door.png",
+      "E/first/props.png",
+      "E/first/close.png",
+      "E/final/door.png",
+      "E/final/props.png",
+      "E/final/close.png",
+      "F/first/door.png",
+      "F/first/props.png",
+      "F/first/close.png",
+      "F/final/door.png",
+      "F/final/props.png",
+      "F/final/close.png"
+    ],
+    "limits": "参考 01 支持露天建筑、砌体与金属的线条区别，02 支持移动工作平台的货物、杆索与落影，03 补充棚下织物和储物分组，人物与对话框挡住了部分地面。三图都缺少固定货运柜台的操作近景。评审仅据六组同机位静帧作相对选择。门洞净宽 1.2 米、净高 2.3 米及坡道、台阶、跳台与碰撞的保留情况，无法据图验收。静帧也不能验证背面、移动时的穿插或素材来源与许可。六组与原作在近景材质辨识、构件接合和表面变化上仍有差距。本轮尚未获用户验收。",
+    "valueChoice": [
+      "F"
+    ],
+    "valueReason": "接受整体次选时可选 F / ultra：本次未缓存输入 146,436、输出 44,531，比 A / max 分别少约 29% 和 43%。质量优先仍保留 A；若主要追求参考线条与空间语言，重点看 C / xhigh。不是等质替代，也不是金额测算。",
+    "coordinator_pipeline_choice": {
+      "quality_effort": "max",
+      "reference_priority_effort": "xhigh",
+      "lower_usage_alternative": "ultra",
+      "status": "Observed whole-run choices from one sample each; any combined-stage effort pipeline is untested."
+    }
+  },
+  "summary": "整体优选与分类强项来自独立匿名评审；揭示档位后再看素材路线与实际用量。每档只有一次样本，结论用于本次局部方案筛选，尚未经过用户美术验收。"
+}

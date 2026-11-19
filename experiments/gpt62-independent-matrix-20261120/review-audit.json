@@ -1,0 +1,29 @@
+{
+  "sable": {
+    "sessions": [
+      "01a1f565-7ada-7a83-bcb2-056f4de6992a"
+    ],
+    "actual_contexts": [
+      {
+        "model": "gpt-6.2-astra",
+        "effort": "xhigh",
+        "approval_policy": "never"
+      }
+    ],
+    "issues": [],
+    "required_image_count": 42,
+    "missing_declared_views": [],
+    "changed_input_files": [],
+    "tool_call_count": 19,
+    "access_flag_count": 0,
+    "review_sha256": "e2ed6541ccdc02418513454820209df5cb67a77aada16f54ddeb618a08a303e0",
+    "manual_view_and_access_review": "completed",
+    "actual_image_coverage": "Inspected stored viewer/set helpers and all invocations: three frozen reference originals, three whitebox originals, A-F first/final door/props/close originals, 42 files. Calls ran from 2026-11-19T20:00:43.092Z through 20:01:35.393Z.",
+    "access_review": "All 19 recorded calls reviewed; own package text/images and own report writes only, no access flags, network calls, producer source/effort/usage reads or further delegation found. All frozen review input hashes unchanged.",
+    "coordinator_crosscheck": "Coordinator subsequently viewed A first props and final all three, C final door/props, F final props/close and D final props; observed the recorded sail/map and pole/banner occlusion tradeoffs, detailed cart/scale parts and different lighting. This supplementary check is not blind.",
+    "original_markdown_sha256": "047de7ce8eaf81fcc654b449d0c0edd052e4fabd19b8bd1b45ff23c465b21515",
+    "linked_markdown_sha256": "aaf19273c3c27685d2478326aabd6a80f5d8e9f70ac6ce34cb1df6d68ffb2623",
+    "review_input_manifest_sha256": "8ce5184fbc57e00f04e8d17f0cbf445c8b48ccdb2b007e4191a89ed1da0eb8b9",
+    "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
+  }
+}
