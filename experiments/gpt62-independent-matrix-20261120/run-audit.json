@@ -3841,8 +3841,8 @@
       "access_flags_requiring_manual_review": 0,
       "forbidden_tracked_files": [],
       "required_delivery_present": true,
-      "access_review": "pending coordinator review; private raw records excluded",
-      "technical_summary": "审计待完成",
+      "access_review": "Reviewed explicit own-file image calls and public asset sources; no flagged peer/host art or solution reads and no further delegation observed in available records. Untested tool surfaces remain outside absolute isolation claims.",
+      "technical_summary": "小样小数语法错误已修正后重拍；两轮 Metal 三机位正常，首轮与冻结输入保持。独立无窗口启动有系统 CA 权限提示，未做手动通行验收。",
       "actual_render_backends": [
         "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
       ],
@@ -4249,7 +4249,23 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "view_review_evidence": {
+        "references_and_whitebox": "All three references and all three whitebox originals at 2026-11-19T19:06:24.869Z",
+        "samples": "Both corrected sample-a-wash and sample-b, all three original views at 19:15:59.584Z",
+        "first_all_three": "2026-11-19T19:27:15.666Z",
+        "final_all_three": "2026-11-19T19:36:53.426Z"
+      },
+      "technical_repairs": [
+        "Sample A numeric syntax parse error before any image; corrected sample captured in new sample-a-wash directory. No extra finished art pass."
+      ],
+      "limitations": [
+        "Separate direct headless startup exited 0 but reported macOS system CA certificate permission diagnostic; final broker Metal captures clean. No manual key-by-key traversal."
+      ],
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "source_route": "KayKit Dungeon 构件与货具 + Poly Haven 砂岩/沙地 + Quaternius 货袋/管道；重配图集、米制材质与分段明暗，补称量台、遮阳帆和配水叙事。",
+      "preserved_history_ref": "refs/envart-trials/20261120/sable-max",
+      "stage_status": "collected and audited; visual comparison pending"
     }
   },
   "hifi": {
