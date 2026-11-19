@@ -22,22 +22,32 @@
 [ext_resource type="PackedScene" path="res://assets/kenney/bottle.glb" id="r17"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Mug.gltf" id="r18"]
 [ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Vent_Wide.gltf" id="r19"]
-[ext_resource type="Shader" path="res://shaders/round01/ink.gdshader" id="r20"]
+[ext_resource type="Shader" path="res://shaders/final/ink.gdshader" id="r20"]
+
+[ext_resource type="PackedScene" path="res://assets/fitted/ThresholdPaint.gltf" id="ThresholdPaint"]
+[ext_resource type="PackedScene" path="res://assets/fitted/SandMarks.gltf" id="SandMarks"]
+[ext_resource type="PackedScene" path="res://assets/fitted/WorkshopRacks.gltf" id="WorkshopRacks"]
+[ext_resource type="PackedScene" path="res://assets/fitted/GateBadges.gltf" id="GateBadges"]
+[ext_resource type="PackedScene" path="res://assets/fitted/CanvasSeams.gltf" id="CanvasSeams"]
+[ext_resource type="Texture2D" path="res://assets/signs/depot.png" id="TexBenchDiagram"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexIncomingRoute"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexGatePlate"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexEastMarker"]
 
 [sub_resource type="StandardMaterial3D" id="Grid"]
-albedo_color = Color(0.854993, 0.439657, 0.181164, 1.000000)
+albedo_color = Color(0.920000, 0.740000, 0.520000, 1.000000)
 roughness = 1.0
 
 [sub_resource type="StandardMaterial3D" id="Stone"]
-albedo_color = Color(0.791298, 0.508881, 0.291771, 1.000000)
+albedo_color = Color(0.850000, 0.710000, 0.570000, 1.000000)
 roughness = 1.0
 
 [sub_resource type="StandardMaterial3D" id="Orange"]
-albedo_color = Color(0.423268, 0.201556, 0.144128, 1.000000)
+albedo_color = Color(0.810000, 0.670000, 0.530000, 1.000000)
 roughness = 1.0
 
 [sub_resource type="StandardMaterial3D" id="Teal"]
-albedo_color = Color(0.095307, 0.181164, 0.177888, 1.000000)
+albedo_color = Color(0.650000, 0.610000, 0.530000, 1.000000)
 roughness = 1.0
 
 [sub_resource type="BoxMesh" id="FloorMesh"]
@@ -157,6 +167,38 @@ shader = ExtResource("r20")
 [sub_resource type="QuadMesh" id="quad"]
 size = Vector2(2,2)
 material = SubResource("ink")
+
+[sub_resource type="StandardMaterial3D" id="PaintBenchDiagram"]
+albedo_texture = ExtResource("TexBenchDiagram")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelBenchDiagram"]
+size = Vector2(1.8,1.2)
+material = SubResource("PaintBenchDiagram")
+
+[sub_resource type="StandardMaterial3D" id="PaintIncomingRoute"]
+albedo_texture = ExtResource("TexIncomingRoute")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelIncomingRoute"]
+size = Vector2(1.7,1.13)
+material = SubResource("PaintIncomingRoute")
+
+[sub_resource type="StandardMaterial3D" id="PaintGatePlate"]
+albedo_texture = ExtResource("TexGatePlate")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelGatePlate"]
+size = Vector2(0.84,0.49)
+material = SubResource("PaintGatePlate")
+
+[sub_resource type="StandardMaterial3D" id="PaintEastMarker"]
+albedo_texture = ExtResource("TexEastMarker")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelEastMarker"]
+size = Vector2(1.47,0.98)
+material = SubResource("PaintEastMarker")
 
 [node name="Whitebox" type="Node3D"]
 
@@ -414,19 +456,19 @@ rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
 scale = Vector3(0.535000, 0.520000, 1.540000)
 
 [node name="ServiceWall0" instance=ExtResource("r6") parent="."]
-position = Vector3(2.650000, 0.000000, -11.690000)
-rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
-scale = Vector3(0.610000, 0.760000, 0.700000)
+position = Vector3(2.650000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
 
 [node name="ServiceWall1" instance=ExtResource("r6") parent="."]
-position = Vector3(5.680000, 0.000000, -11.690000)
-rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
-scale = Vector3(0.610000, 0.760000, 0.700000)
+position = Vector3(5.680000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
 
 [node name="ServiceWall2" instance=ExtResource("r6") parent="."]
-position = Vector3(8.710000, 0.000000, -11.690000)
-rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
-scale = Vector3(0.610000, 0.760000, 0.700000)
+position = Vector3(8.710000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
 
 [node name="Riser" instance=ExtResource("r7") parent="."]
 position = Vector3(9.450000, 0.000000, -9.900000)
@@ -464,7 +506,7 @@ rotation_degrees = Vector3(0.000000, 15.000000, 0.000000)
 scale = Vector3(0.750000, 0.750000, 0.750000)
 
 [node name="PartsBox" instance=ExtResource("r14") parent="."]
-position = Vector3(3.530000, 0.000000, -10.930000)
+position = Vector3(3.530000, 0.308000, -10.930000)
 rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
 scale = Vector3(0.550000, 0.550000, 0.550000)
 
@@ -479,18 +521,18 @@ rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
 scale = Vector3(1.800000, 1.800000, 1.800000)
 
 [node name="Vessel" instance=ExtResource("r17") parent="."]
-position = Vector3(5.600000, 0.880000, -10.360000)
+position = Vector3(5.600000, 0.809000, -10.360000)
 rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
 scale = Vector3(2.300000, 2.300000, 2.300000)
 
 [node name="Mug" instance=ExtResource("r18") parent="."]
-position = Vector3(6.090000, 0.880000, -10.340000)
+position = Vector3(6.090000, 0.809000, -10.340000)
 rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
 scale = Vector3(1.000000, 1.000000, 1.000000)
 
 [node name="WallVent" instance=ExtResource("r19") parent="."]
-position = Vector3(6.120000, 2.680000, -11.300000)
-rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+position = Vector3(6.120000, 2.920000, -11.393000)
+rotation_degrees = Vector3(90, 0, 0)
 scale = Vector3(0.680000, 0.680000, 0.680000)
 
 [node name="overall" type="Camera3D" parent="."]
@@ -522,3 +564,29 @@ directional_shadow_max_distance = 55.0
 mesh = SubResource("quad")
 extra_cull_margin = 16384.0
 cast_shadow = 0
+
+[node name="ThresholdPaint" parent="." instance=ExtResource("ThresholdPaint")]
+
+[node name="SandMarks" parent="." instance=ExtResource("SandMarks")]
+
+[node name="WorkshopRacks" parent="." instance=ExtResource("WorkshopRacks")]
+
+[node name="GateBadges" parent="." instance=ExtResource("GateBadges")]
+
+[node name="CanvasSeams" parent="." instance=ExtResource("CanvasSeams")]
+
+[node name="BenchDiagram" type="MeshInstance3D" parent="."]
+position = Vector3(5.460000, 2.660000, -11.390000)
+mesh = SubResource("PanelBenchDiagram")
+
+[node name="IncomingRoute" type="MeshInstance3D" parent="."]
+position = Vector3(0.340000, 1.800000, -11.710000)
+mesh = SubResource("PanelIncomingRoute")
+
+[node name="GatePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 2.460000, -3.558000)
+mesh = SubResource("PanelGatePlate")
+
+[node name="EastMarker" type="MeshInstance3D" parent="."]
+position = Vector3(8.180000, 1.650000, -0.732000)
+mesh = SubResource("PanelEastMarker")

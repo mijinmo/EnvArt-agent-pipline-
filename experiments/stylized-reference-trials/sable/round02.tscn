@@ -1,0 +1,592 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" path="res://source/grid.gdshader" id="5_grid"]
+
+[ext_resource type="PackedScene" path="res://assets/fitted/Gate.gltf" id="r0"]
+[ext_resource type="PackedScene" path="res://assets/fitted/CanopyBows.gltf" id="r1"]
+[ext_resource type="PackedScene" path="res://assets/fitted/Fabric.gltf" id="r2"]
+[ext_resource type="PackedScene" path="res://assets/fitted/Rig.gltf" id="r3"]
+[ext_resource type="PackedScene" path="res://assets/fitted/DistantBluffs.gltf" id="r4"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Door_Frame_Square.gltf" id="r5"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/WallBand_Straight.gltf" id="r6"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Column_Pipes.gltf" id="r7"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_SatelliteDish.gltf" id="r8"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Desk_Medium.gltf" id="r9"]
+[ext_resource type="PackedScene" path="res://assets/kenney/workbench-grind.glb" id="r10"]
+[ext_resource type="PackedScene" path="res://assets/kenney/box-open.glb" id="r11"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Barrel2_Closed.gltf" id="r12"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Crate_Tarp.gltf" id="r13"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Crate4.gltf" id="r14"]
+[ext_resource type="PackedScene" path="res://assets/kenney/bedroll-packed.glb" id="r15"]
+[ext_resource type="PackedScene" path="res://assets/kenney/bucket.glb" id="r16"]
+[ext_resource type="PackedScene" path="res://assets/kenney/bottle.glb" id="r17"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Mug.gltf" id="r18"]
+[ext_resource type="PackedScene" path="res://assets/quaternius/Prop_Vent_Wide.gltf" id="r19"]
+[ext_resource type="Shader" path="res://shaders/round02/ink.gdshader" id="r20"]
+
+[ext_resource type="PackedScene" path="res://assets/fitted/ThresholdPaint.gltf" id="ThresholdPaint"]
+[ext_resource type="PackedScene" path="res://assets/fitted/SandMarks.gltf" id="SandMarks"]
+[ext_resource type="PackedScene" path="res://assets/fitted/WorkshopRacks.gltf" id="WorkshopRacks"]
+[ext_resource type="PackedScene" path="res://assets/fitted/GateBadges.gltf" id="GateBadges"]
+[ext_resource type="PackedScene" path="res://assets/fitted/CanvasSeams.gltf" id="CanvasSeams"]
+[ext_resource type="Texture2D" path="res://assets/signs/depot.png" id="TexBenchDiagram"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexIncomingRoute"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexGatePlate"]
+[ext_resource type="Texture2D" path="res://assets/signs/route.png" id="TexEastMarker"]
+
+[sub_resource type="StandardMaterial3D" id="Grid"]
+albedo_color = Color(0.920000, 0.740000, 0.520000, 1.000000)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Stone"]
+albedo_color = Color(0.850000, 0.710000, 0.570000, 1.000000)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Orange"]
+albedo_color = Color(0.810000, 0.670000, 0.530000, 1.000000)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.650000, 0.610000, 0.530000, 1.000000)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="Environment" id="sky"]
+background_mode = 1
+background_color = Color(0.62, 0.94, 0.94, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.95, 0.84, 0.89, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 1
+
+[sub_resource type="ShaderMaterial" id="ink"]
+render_priority = 120
+shader = ExtResource("r20")
+
+[sub_resource type="QuadMesh" id="quad"]
+size = Vector2(2,2)
+material = SubResource("ink")
+
+[sub_resource type="StandardMaterial3D" id="PaintBenchDiagram"]
+albedo_texture = ExtResource("TexBenchDiagram")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelBenchDiagram"]
+size = Vector2(1.8,1.2)
+material = SubResource("PaintBenchDiagram")
+
+[sub_resource type="StandardMaterial3D" id="PaintIncomingRoute"]
+albedo_texture = ExtResource("TexIncomingRoute")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelIncomingRoute"]
+size = Vector2(1.7,1.13)
+material = SubResource("PaintIncomingRoute")
+
+[sub_resource type="StandardMaterial3D" id="PaintGatePlate"]
+albedo_texture = ExtResource("TexGatePlate")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelGatePlate"]
+size = Vector2(0.84,0.49)
+material = SubResource("PaintGatePlate")
+
+[sub_resource type="StandardMaterial3D" id="PaintEastMarker"]
+albedo_texture = ExtResource("TexEastMarker")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelEastMarker"]
+size = Vector2(1.47,0.98)
+material = SubResource("PaintEastMarker")
+
+[node name="Whitebox" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+position = Vector3(0, -0.25, 0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("FloorMesh")
+material_override = SubResource("Grid")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2, -12)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/BackWall"]
+mesh = SubResource("BackWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" type="StaticBody3D" parent="World"]
+position = Vector3(10, 1.5, -6)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionWall"]
+mesh = SubResource("OcclusionWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionWall"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" type="StaticBody3D" parent="World"]
+position = Vector3(8, 1.5, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionReturn"]
+mesh = SubResource("OcclusionReturnMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionReturn"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" type="StaticBody3D" parent="World"]
+position = Vector3(-0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLeft"]
+mesh = SubResource("DoorLeftMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLeft"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" type="StaticBody3D" parent="World"]
+position = Vector3(0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorRight"]
+mesh = SubResource("DoorRightMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorRight"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLintel"]
+mesh = SubResource("DoorLintelMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLintel"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Ramp"]
+mesh = SubResource("RampMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Ramp"]
+shape = SubResource("RampShape")
+
+[node name="Landing" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 1, -7)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Landing"]
+mesh = SubResource("LandingMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Landing"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.1, 2.0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step1"]
+mesh = SubResource("Step1Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.2, 1.4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step2"]
+mesh = SubResource("Step2Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step2"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.30000000000000004, 0.8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step3"]
+mesh = SubResource("Step3Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step3"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.4, 0.20000000000000018)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step4"]
+mesh = SubResource("Step4Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step4"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.2, 1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpLow"]
+mesh = SubResource("JumpLowMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpLow"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.45, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpMid"]
+mesh = SubResource("JumpMidMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpMid"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" type="StaticBody3D" parent="World"]
+position = Vector3(3, 0.7, -3)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpHigh"]
+mesh = SubResource("JumpHighMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpHigh"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" type="StaticBody3D" parent="World"]
+position = Vector3(0, 0.01, 8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/SpawnPad"]
+mesh = SubResource("SpawnPadMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/SpawnPad"]
+shape = SubResource("SpawnPadShape")
+
+[node name="Gate" instance=ExtResource("r0") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="CanopyBows" instance=ExtResource("r1") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Fabric" instance=ExtResource("r2") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Rig" instance=ExtResource("r3") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="DistantBluffs" instance=ExtResource("r4") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="GateFrame" instance=ExtResource("r5") parent="."]
+position = Vector3(0.000000, 0.000000, -3.970000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.535000, 0.520000, 1.540000)
+
+[node name="ServiceWall0" instance=ExtResource("r6") parent="."]
+position = Vector3(2.650000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall1" instance=ExtResource("r6") parent="."]
+position = Vector3(5.680000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall2" instance=ExtResource("r6") parent="."]
+position = Vector3(8.710000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="Riser" instance=ExtResource("r7") parent="."]
+position = Vector3(9.450000, 0.000000, -9.900000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="RelayDish" instance=ExtResource("r8") parent="."]
+position = Vector3(8.100000, 3.650000, -12.050000)
+rotation_degrees = Vector3(0.000000, -23.000000, 0.000000)
+scale = Vector3(0.570000, 0.570000, 0.570000)
+
+[node name="Desk" instance=ExtResource("r9") parent="."]
+position = Vector3(5.720000, 0.000000, -10.310000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.860000, 0.860000, 0.860000)
+
+[node name="Grinder" instance=ExtResource("r10") parent="."]
+position = Vector3(4.450000, 0.000000, -9.330000)
+rotation_degrees = Vector3(0.000000, 36.000000, 0.000000)
+scale = Vector3(3.400000, 3.400000, 3.400000)
+
+[node name="UnderBench" instance=ExtResource("r11") parent="."]
+position = Vector3(5.850000, 0.000000, -10.020000)
+rotation_degrees = Vector3(0.000000, 16.000000, 0.000000)
+scale = Vector3(1.650000, 1.650000, 1.650000)
+
+[node name="Barrel" instance=ExtResource("r12") parent="."]
+position = Vector3(7.780000, 0.000000, -9.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 0.750000, 0.750000)
+
+[node name="Crate" instance=ExtResource("r13") parent="."]
+position = Vector3(7.980000, 0.000000, -8.480000)
+rotation_degrees = Vector3(0.000000, 15.000000, 0.000000)
+scale = Vector3(0.750000, 0.750000, 0.750000)
+
+[node name="PartsBox" instance=ExtResource("r14") parent="."]
+position = Vector3(3.530000, 0.308000, -10.930000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+
+[node name="SupplyRoll" instance=ExtResource("r15") parent="."]
+position = Vector3(3.940000, 0.000000, -8.640000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(2.700000, 2.700000, 2.700000)
+
+[node name="Pail" instance=ExtResource("r16") parent="."]
+position = Vector3(4.890000, 0.000000, -9.700000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.800000, 1.800000, 1.800000)
+
+[node name="Vessel" instance=ExtResource("r17") parent="."]
+position = Vector3(5.600000, 0.809000, -10.360000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.300000, 2.300000, 2.300000)
+
+[node name="Mug" instance=ExtResource("r18") parent="."]
+position = Vector3(6.090000, 0.809000, -10.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="WallVent" instance=ExtResource("r19") parent="."]
+position = Vector3(6.120000, 2.920000, -11.393000)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="overall" type="Camera3D" parent="."]
+transform = Transform3D(0.8308917, 0.0271638, -0.5557708, -0.0000000, 0.9988077, 0.0488177, 0.5564342, -0.0405622, 0.8299010, -4.1000000, 2.6500000, 3.2500000)
+fov = 63
+current = true
+
+[node name="detail" type="Camera3D" parent="."]
+transform = Transform3D(0.8530935, 0.0415961, -0.5200974, -0.0000000, 0.9968171, 0.0797230, 0.5217581, -0.0680111, 0.8503781, 3.3600000, 1.8700000, -5.6000000)
+fov = 60
+current = false
+
+[node name="transition" type="Camera3D" parent="."]
+transform = Transform3D(0.9293326, 0.0035743, -0.3692264, -0.0000000, 0.9999531, 0.0096801, 0.3692438, -0.0089960, 0.9292890, -0.3200000, 1.7100000, -2.0800000)
+fov = 71
+current = false
+
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("sky")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-46, -34, 0)
+light_color = Color(1, 0.93, 0.82, 1)
+light_energy = 1.0
+shadow_enabled = true
+directional_shadow_max_distance = 55.0
+
+[node name="Ink" type="MeshInstance3D" parent="."]
+mesh = SubResource("quad")
+extra_cull_margin = 16384.0
+cast_shadow = 0
+
+[node name="ThresholdPaint" parent="." instance=ExtResource("ThresholdPaint")]
+
+[node name="SandMarks" parent="." instance=ExtResource("SandMarks")]
+
+[node name="WorkshopRacks" parent="." instance=ExtResource("WorkshopRacks")]
+
+[node name="GateBadges" parent="." instance=ExtResource("GateBadges")]
+
+[node name="CanvasSeams" parent="." instance=ExtResource("CanvasSeams")]
+
+[node name="BenchDiagram" type="MeshInstance3D" parent="."]
+position = Vector3(5.460000, 2.660000, -11.390000)
+mesh = SubResource("PanelBenchDiagram")
+
+[node name="IncomingRoute" type="MeshInstance3D" parent="."]
+position = Vector3(0.340000, 1.800000, -11.710000)
+mesh = SubResource("PanelIncomingRoute")
+
+[node name="GatePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 2.460000, -3.558000)
+mesh = SubResource("PanelGatePlate")
+
+[node name="EastMarker" type="MeshInstance3D" parent="."]
+position = Vector3(8.180000, 1.650000, -0.732000)
+mesh = SubResource("PanelEastMarker")
