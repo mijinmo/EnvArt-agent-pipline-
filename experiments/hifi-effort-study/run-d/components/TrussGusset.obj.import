@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dj73xqkkyx1px"
+path="res://.godot/imported/TrussGusset.obj-0de0b27c2da42acbfab2e4aff2d2abde.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TrussGusset.obj-0de0b27c2da42acbfab2e4aff2d2abde.mesh"]
+
+source_file="res://components/TrussGusset.obj"
+dest_files=["res://.godot/imported/TrussGusset.obj-0de0b27c2da42acbfab2e4aff2d2abde.mesh", "res://.godot/imported/TrussGusset.obj-0de0b27c2da42acbfab2e4aff2d2abde.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
