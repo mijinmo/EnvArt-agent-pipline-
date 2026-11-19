@@ -11,3 +11,47 @@ Hi-Fi Rush 室内工业设备检修局部。GPT‑6.2 astra，本轮使用仓库
 - [生产机械实机图](https://cgworld.jp/article/11358812b6f69a3ef7162b4a164d34fcc25e2486.jpg)
 
 原白盒的路面、墙、台阶、跳台与碰撞保留。工作区夹在后墙与东侧围护内；顶棚与可见任务灯建立室内。前方门洞保留原净宽与净高。三个相机分别看完整检修区、换芯台和入口。
+
+## 打开与比对
+
+用 Godot 4.7.2 导入本目录的 `project.godot`，按 F6 运行 `scenes/final.tscn` 或按 F5。编辑器中可直接移动 Shell、MachineRoom、Bench、Print 内的独立对象，在 Views 下切换相机。采用 macOS Metal 4 Forward+，项目不含控制器。
+
+| 同机位原图，1600 × 1000 | 整体 | 工作台 | 入口 |
+| --- | --- | --- | --- |
+| 白盒 | [整体](evidence/whitebox_overall.png) | [工作台](evidence/whitebox_detail.png) | [入口](evidence/whitebox_transition.png) |
+| 素材小样 | [整体](evidence/audition_overall.png) | [工作台](evidence/audition_detail.png) | [入口](evidence/audition_transition.png) |
+| 首轮 | [整体](evidence/first_overall.png) | [工作台](evidence/first_detail.png) | [入口](evidence/first_transition.png) |
+| 最终 | [整体](evidence/final_overall.png) | [工作台](evidence/final_detail.png) | [入口](evidence/final_transition.png) |
+| 最终连续着色对照 | [整体](evidence/control_overall.png) | [工作台](evidence/control_detail.png) | [入口](evidence/control_transition.png) |
+
+每个图组有同名场景。若要重拍，在本工程目录执行下例，末尾可换成 whitebox、audition、first、control。脚本会覆盖对应图组。默认验收直接打开已保存图片。
+
+```sh
+/Applications/Godot.app/Contents/MacOS/Godot --path . --resolution 1600x1000 --script res://capture.gd -- final
+```
+
+## 素材与适配
+
+取自项目已有合法缓存。两包均为 Quaternius **Standard 免费子集，CC0 1.0**；后缀 service 为本次局部适配。原版缓存位于主项目 `envart/assets/quaternius_scifi` 和 `quaternius_scifi_props`。本工程包含实际使用的 glTF、二进制几何、贴图和两份原许可，独立打开即可。包内不含付费整包、示例工程或其专用 shader。
+
+| 来源 | 选用与取舍 |
+| --- | --- |
+| [Modular Sci-Fi MegaKit](https://opengameart.org/content/modular-sci-fi-megakit) | 比较带厚立柱的 WallAstra 与较薄的 WallBand；厚模块在风机和任务台后挤压设备进深，后墙采用 Flat 版，东墙采用 Band。采用 TopCables、Column_Pipes、Platform_3Plates、门框、风机、灯具、夹具、立式终端、箱桶和风口。较强的真实金属反光冲淡警戒色，最终版降低地板镜面反射和明度，重设无贴图风机的两种漆色。 |
+| [Sci-Fi Essentials](https://opengameart.org/content/sci-fi-essentials-kit) | 采用工作台、椅、工具柜、矮架、杯、密封小盒和筒形零件。把备件、夹具、取出的叶轮与状态屏成组放置。保留桌椅实际支撑、贴图 UV 和主要原始凹凸/粗糙度信息。 |
+| 本次制作 | 机盒安装板、顶棚和受力桁架、任务灯灯罩及安全标签补足专用设备。标牌为原创栅格图形，独立面片贴在表面，旋转/缩放可编辑。图形文件不包含原游戏截图或招牌贴图。 |
+
+检查了 glTF 的层级、顶点包围盒、局部朝向与材质槽，先用固定工作距离观察真实墙片、地面和相邻设备的小样，再完成围护、印刷标识和工作区。门框保留作者轮廓，在最终版把进入原 1.20 m × 2.30 m 门洞净空的三角形裁去，消除原素材的凸起下槛。原 17 个静态物体的变换、网格尺寸、碰撞和子节点已逐段比对。新增美术对象无碰撞。
+
+## 印刷着色
+
+`shaders/print_final.gdshader` 在 Forward+ 读取场景颜色、深度与法线。它把相邻像素间的深度断层和强法线转折画成深蓝墨线，适度收拢明暗过渡，只在偏暗区域叠很淡的斜排线。漫反射色、烤漆、贴图 UV、法线、显示器和灯具都来自同一套装配。对照只移除 PrintPass，几何、灯、背景、曝光、镜头、基础漆色与贴图不变。该方法是当前固定观察距离下的近似。实现参考 [Godot spatial shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)。
+
+| 参数 | 最终值 | 调整效果 |
+| --- | --- | --- |
+| line_pixels | 1.80 | 以屏幕像素为单位采样轮廓邻域 |
+| crease_threshold | 0.25 | 较高值让弱折线退出轮廓 |
+| ink_strength | 0.84 | 墨线混合量 |
+| band_strength | 0.59 | 七级近似亮度阶梯向连续结果的混合比例，较高时分层更明显 |
+| shadow_hatching | 0.17 | 限制在暗部的斜排线强度 |
+
+实机近景中，叶轮的外缘、壳体、工作台底脚和椅子边缘得到更深的分界。整体最大的风格转变来自机壳主色、层次化图形、钢桁架和警戒标记；shader 主要帮助实体压住其后方细节。地板和高处节点仍显整齐重复，两台风机的状态差异主要由工作台解释，缺少参考中更大型生产设备的层叠剪影。视线在入口边缘仍能看到原测试场的未制作区域。本轮交付仅限该局部，用户美术验收待定。
