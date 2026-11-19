@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3]
+[ext_resource type="Shader" path="res://art/surfaces/printed_steel.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/shell_dark = Color(0.19216, 0.24314, 0.31765, 1)
+shader_parameter/shell_light = Color(0.51373, 0.59216, 0.62353, 1)
+shader_parameter/trim = Color(0.82353, 0.63137, 0.24314, 1)
+shader_parameter/glass = Color(0.07843, 0.84706, 0.78431, 1)
+shader_parameter/deck = 1.0

@@ -1,0 +1,769 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="r1"]
+[ext_resource type="Script" path="res://review.gd" id="r2"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-floor.obj" id="r3"]
+[ext_resource type="Material" path="res://art/surfaces/decks.tres" id="r4"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-floor-panel.obj" id="r5"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/factory-structure-wall.obj" id="r6"]
+[ext_resource type="Material" path="res://art/surfaces/machine.tres" id="r7"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-wall-banner.obj" id="r8"]
+[ext_resource type="Material" path="res://art/surfaces/bulkhead.tres" id="r9"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-wall.obj" id="r10"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-wall-pillar.obj" id="r11"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/factory-machine-connection-pipe.obj" id="r12"]
+[ext_resource type="Material" path="res://art/surfaces/enamel.tres" id="r13"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-computer-wide.obj" id="r14"]
+[ext_resource type="Material" path="res://art/surfaces/console.tres" id="r15"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/factory-pipe-large-valve.obj" id="r16"]
+[ext_resource type="ArrayMesh" path="res://art/meshes/station-container-flat-open.obj" id="r17"]
+[ext_resource type="Material" path="res://art/surfaces/cargo.tres" id="r18"]
+
+[sub_resource type="Environment" id="Env"]
+background_mode = 1
+background_color = Color(0.14510, 0.21176, 0.29804, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.72941, 0.79608, 0.91765, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 2.1
+tonemap_mode = 0
+
+
+[sub_resource type="BoxMesh" id="Cube"]
+size = Vector3(1,1,1)
+
+[sub_resource type="StandardMaterial3D" id="M40465c0"]
+albedo_color = Color(0.25098, 0.27451, 0.36078, 1)
+roughness = 0.84
+
+[sub_resource type="StandardMaterial3D" id="M343d520"]
+albedo_color = Color(0.20392, 0.23922, 0.32157, 1)
+roughness = 0.84
+
+[sub_resource type="StandardMaterial3D" id="M505d710"]
+albedo_color = Color(0.31373, 0.36471, 0.44314, 1)
+roughness = 0.84
+
+[sub_resource type="StandardMaterial3D" id="M2936480"]
+albedo_color = Color(0.16078, 0.21176, 0.28235, 1)
+roughness = 0.84
+
+[sub_resource type="StandardMaterial3D" id="Mfff1cc1p4"]
+albedo_color = Color(1.00000, 0.94510, 0.80000, 1)
+roughness = 0.84
+emission_enabled = true
+emission = Color(1.00000, 0.94510, 0.80000, 1)
+emission_energy_multiplier = 1.4
+
+[node name="Exchange" type="Node3D"]
+script = ExtResource("r2")
+
+[node name="BaseLab" parent="." instance=ExtResource("r1")]
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("Env")
+
+[node name="Sun" parent="BaseLab" index="2"]
+visible = false
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Deck" type="Node3D" parent="Art"]
+
+[node name="station-floor_001" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_002" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_003" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_004" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_005" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_006" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_007" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_008" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_009" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_010" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_011" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_012" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_013" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_014" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_015" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_016" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_017" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_018" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_019" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_020" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_021" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_022" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_023" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_024" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_025" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_026" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_027" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_028" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_029" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_030" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_031" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_032" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_033" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_034" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_035" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_036" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_037" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_038" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_039" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_040" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_041" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_042" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_043" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_044" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_045" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_046" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_047" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_048" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor-panel_049" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r5")
+material_override = ExtResource("r4")
+
+[node name="station-floor_050" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor-panel_051" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r5")
+material_override = ExtResource("r4")
+
+[node name="station-floor_052" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor-panel_053" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r5")
+material_override = ExtResource("r4")
+
+[node name="station-floor_054" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor-panel_055" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r5")
+material_override = ExtResource("r4")
+
+[node name="station-floor_056" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_057" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -11)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_058" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -9)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_059" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -7)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_060" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -5)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_061" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_062" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, -1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_063" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, 1)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="station-floor_064" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.294, 3)
+scale = Vector3(1.999, 1, 1.999)
+mesh = ExtResource("r3")
+material_override = ExtResource("r4")
+
+[node name="ServiceWalls" type="Node3D" parent="Art"]
+
+[node name="factory-structure-wall_065" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -10.75)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="factory-structure-wall_066" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -9)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="factory-structure-wall_067" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -7.25)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="factory-structure-wall_068" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -5.5)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="factory-structure-wall_069" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -3.75)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="factory-structure-wall_070" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -2)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.75, 1.49, 0.45)
+mesh = ExtResource("r6")
+material_override = ExtResource("r7")
+
+[node name="station-wall-banner_071" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(6.98, 0, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1.96, 3, 1.8)
+mesh = ExtResource("r8")
+material_override = ExtResource("r9")
+
+[node name="station-wall_072" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(6.98, 3, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1.96, 1.55, 1.8)
+mesh = ExtResource("r10")
+material_override = ExtResource("r9")
+
+[node name="station-wall-banner_073" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(8.94, 0, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1.96, 3, 1.8)
+mesh = ExtResource("r8")
+material_override = ExtResource("r9")
+
+[node name="station-wall_074" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(8.94, 3, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1.96, 1.55, 1.8)
+mesh = ExtResource("r10")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_075" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(-6, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_076" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(-4, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_077" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(-2, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_078" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(0, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_079" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(2, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_080" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(4, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_081" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(6, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_082" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(8, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="station-wall-pillar_083" type="MeshInstance3D" parent="Art/ServiceWalls"]
+position = Vector3(10, 0, -12)
+scale = Vector3(2, 4.55, 2.1)
+mesh = ExtResource("r11")
+material_override = ExtResource("r9")
+
+[node name="Roof" type="Node3D" parent="Art"]
+
+[node name="Ceiling_084" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2.4, 4.68, -5)
+scale = Vector3(16, 0.25, 14)
+mesh = SubResource("Cube")
+material_override = SubResource("M40465c0")
+
+[node name="Beam_085" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.49, -10.8)
+scale = Vector3(16, 0.24, 0.19)
+mesh = SubResource("Cube")
+material_override = SubResource("M343d520")
+
+[node name="BeamFlange_086" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.34, -10.8)
+scale = Vector3(16, 0.065, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("M505d710")
+
+[node name="Beam_087" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.49, -7.2)
+scale = Vector3(16, 0.24, 0.19)
+mesh = SubResource("Cube")
+material_override = SubResource("M343d520")
+
+[node name="BeamFlange_088" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.34, -7.2)
+scale = Vector3(16, 0.065, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("M505d710")
+
+[node name="Beam_089" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.49, -3.6)
+scale = Vector3(16, 0.24, 0.19)
+mesh = SubResource("Cube")
+material_override = SubResource("M343d520")
+
+[node name="BeamFlange_090" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.34, -3.6)
+scale = Vector3(16, 0.065, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("M505d710")
+
+[node name="Beam_091" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.49, 0)
+scale = Vector3(16, 0.24, 0.19)
+mesh = SubResource("Cube")
+material_override = SubResource("M343d520")
+
+[node name="BeamFlange_092" type="MeshInstance3D" parent="Art/Roof"]
+position = Vector3(2, 4.34, 0)
+scale = Vector3(16, 0.065, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("M505d710")
+
+[node name="TaskLighting" type="Node3D" parent="Art"]
+
+[node name="PortalHousing_093" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(-1.4, 4.19, -2)
+scale = Vector3(1.2, 0.2, 0.47)
+mesh = SubResource("Cube")
+material_override = SubResource("M2936480")
+
+[node name="PortalDiffuser_094" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(-1.4, 4.074, -2)
+scale = Vector3(1.04, 0.035, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("Mfff1cc1p4")
+
+[node name="Portal_095" type="SpotLight3D" parent="Art/TaskLighting"]
+position = Vector3(-1.4, 4.03, -2)
+rotation_degrees = Vector3(-58.7932, -34.992, 0)
+light_color = Color(1.00000, 0.87059, 0.69804, 1)
+light_energy = 5.3
+spot_range = 10
+spot_angle = 56
+spot_angle_attenuation = 0.47
+spot_attenuation = 0.72
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="BenchHousing_096" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.21, -5.3)
+scale = Vector3(1.2, 0.2, 0.47)
+mesh = SubResource("Cube")
+material_override = SubResource("M2936480")
+
+[node name="BenchDiffuser_097" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.094, -5.3)
+scale = Vector3(1.04, 0.035, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("Mfff1cc1p4")
+
+[node name="Bench_098" type="SpotLight3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.05, -5.3)
+rotation_degrees = Vector3(-63.1132, -120.964, 0)
+light_color = Color(1.00000, 0.90588, 0.80784, 1)
+light_energy = 6.5
+spot_range = 10
+spot_angle = 56
+spot_angle_attenuation = 0.47
+spot_attenuation = 0.72
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="StorageHousing_099" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.23, -2.3)
+scale = Vector3(1.2, 0.2, 0.47)
+mesh = SubResource("Cube")
+material_override = SubResource("M2936480")
+
+[node name="StorageDiffuser_100" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.114, -2.3)
+scale = Vector3(1.04, 0.035, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("Mfff1cc1p4")
+
+[node name="Storage_101" type="SpotLight3D" parent="Art/TaskLighting"]
+position = Vector3(7.6, 4.07, -2.3)
+rotation_degrees = Vector3(-78.5804, -123.69, 0)
+light_color = Color(0.70980, 0.85882, 1.00000, 1)
+light_energy = 3.8
+spot_range = 10
+spot_angle = 56
+spot_angle_attenuation = 0.47
+spot_attenuation = 0.72
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="RearHousing_102" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(5.5, 4.2, -9.6)
+scale = Vector3(1.2, 0.2, 0.47)
+mesh = SubResource("Cube")
+material_override = SubResource("M2936480")
+
+[node name="RearDiffuser_103" type="MeshInstance3D" parent="Art/TaskLighting"]
+position = Vector3(5.5, 4.084, -9.6)
+scale = Vector3(1.04, 0.035, 0.32)
+mesh = SubResource("Cube")
+material_override = SubResource("Mfff1cc1p4")
+
+[node name="Rear_104" type="SpotLight3D" parent="Art/TaskLighting"]
+position = Vector3(5.5, 4.04, -9.6)
+rotation_degrees = Vector3(-79.0584, -39.8056, 0)
+light_color = Color(0.73725, 0.84706, 1.00000, 1)
+light_energy = 4.2
+spot_range = 10
+spot_angle = 56
+spot_angle_attenuation = 0.47
+spot_attenuation = 0.72
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="PressureTest" type="Node3D" parent="Art"]
+
+[node name="factory-machine-connection-pipe_105" type="MeshInstance3D" parent="Art/PressureTest"]
+position = Vector3(9.1, 0.009, -4.44)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.98, 1.12, 0.98)
+mesh = ExtResource("r12")
+material_override = ExtResource("r13")
+
+[node name="station-computer-wide_106" type="MeshInstance3D" parent="Art/PressureTest"]
+position = Vector3(9, 0.009, -6.02)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.05, 2.05, 2.05)
+mesh = ExtResource("r14")
+material_override = ExtResource("r15")
+
+[node name="factory-pipe-large-valve_107" type="MeshInstance3D" parent="Art/PressureTest"]
+position = Vector3(9.33, 2.47, -4.7)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.94, 0.49, 0.49)
+mesh = ExtResource("r16")
+material_override = ExtResource("r13")
+
+[node name="station-container-flat-open_108" type="MeshInstance3D" parent="Art/PressureTest"]
+position = Vector3(8.65, 0.009, -2.86)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.2, 1.2, 1.2)
+mesh = ExtResource("r17")
+material_override = ExtResource("r18")
+
+[editable path="BaseLab"]
