@@ -26,3 +26,5 @@
 - 最终总览能同时读出运行/停机、备件与检修区。近景能看到吊具投影、终端显示以及涂装和铸造边缘。仍有弱项：右墙两幅三角光斑的轮廓较规整。前景两根导向线的收尾略生硬。近景的抽屉面板能看出厚度较浅。两台风机沿用同一铸件，视觉差别主要来自标记和状态灯。
 - 实际美术制作共 2 轮。图形捕获共 2 次、6 张，GPU 队列等待分别为 0.00 秒与 0.00 秒。两轮均成功，无图形捕获失败或重拍。环境依赖探查 1 次失败，另有 1 次日志目标不可写和沙箱全局设置/证书提示。导入、打开及约束检查完成。Godot 对照起始与最终实例确认 17 个 body、17 个碰撞形状与三个机位一致。未新增用户美术反馈轮次。
 - 共同图像来自 [CGWORLD 制作访谈](https://cgworld.jp/article/202306-hifirush02.html)。[主参考](https://cgworld.jp/article/818ee60f0aedfa6eaff670b2e3567f517a8b9ccc.jpg)。[辅参考](https://cgworld.jp/article/11358812b6f69a3ef7162b4a164d34fcc25e2486.jpg)。实现使用 Godot 的空间材质、vertex、fragment 和 light 阶段。[Godot spatial shader](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)
+
+交付整合：F5 默认打开 scenes/final.tscn；冻结起点仍可打开 scenes/start.tscn 后按 F6 查看。整合只改默认入口，不改已审阅场景和截图。

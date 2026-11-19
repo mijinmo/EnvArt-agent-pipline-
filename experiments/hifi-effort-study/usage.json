@@ -1,0 +1,161 @@
+{
+  "measurement": "Local Codex rollout metadata; token counts are not a subscription charge or currency price. Output includes reasoning when reported.",
+  "runs": {
+    "run-a": {
+      "task": "/root/hifi_effort_a",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "high",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "high"
+        }
+      ],
+      "start_utc": "2026-11-19T07:40:17.919Z",
+      "completed_utc": "2026-11-19T07:58:15.103Z",
+      "usage_record_utc": "2026-11-19T07:58:15.090Z",
+      "usage_records": 46,
+      "token_usage": {
+        "input_tokens": 4181021,
+        "cached_input_tokens": 4043520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 30142,
+        "reasoning_output_tokens": 6925,
+        "total_tokens": 4211163
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22819,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 141,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22960
+      },
+      "wall_seconds": 1077.184,
+      "uncached_input_tokens": 137501
+    },
+    "run-b": {
+      "task": "/root/hifi_effort_b",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "low",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low"
+        }
+      ],
+      "start_utc": "2026-11-19T07:40:27.701Z",
+      "completed_utc": "2026-11-19T07:50:14.174Z",
+      "usage_record_utc": "2026-11-19T07:50:14.155Z",
+      "usage_records": 31,
+      "token_usage": {
+        "input_tokens": 1779006,
+        "cached_input_tokens": 1715584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14556,
+        "reasoning_output_tokens": 1181,
+        "total_tokens": 1793562
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22819,
+        "cached_input_tokens": 20608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 90,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22909
+      },
+      "wall_seconds": 586.473,
+      "uncached_input_tokens": 63422
+    },
+    "run-c": {
+      "task": "/root/hifi_effort_c",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "xhigh",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "xhigh"
+        }
+      ],
+      "start_utc": "2026-11-19T07:40:38.435Z",
+      "completed_utc": "2026-11-19T08:04:47.437Z",
+      "usage_record_utc": "2026-11-19T08:04:47.427Z",
+      "usage_records": 53,
+      "token_usage": {
+        "input_tokens": 6057815,
+        "cached_input_tokens": 5905536,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 41573,
+        "reasoning_output_tokens": 10660,
+        "total_tokens": 6099388
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22819,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 147,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22966
+      },
+      "wall_seconds": 1449.002,
+      "uncached_input_tokens": 152279
+    },
+    "run-d": {
+      "task": "/root/hifi_effort_d",
+      "requested_and_db_model": "gpt-6.2-astra",
+      "db_effort": "medium",
+      "runtime_turn_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "medium"
+        }
+      ],
+      "start_utc": "2026-11-19T07:50:33.975Z",
+      "completed_utc": "2026-11-19T08:06:38.285Z",
+      "usage_record_utc": "2026-11-19T08:06:38.276Z",
+      "usage_records": 39,
+      "token_usage": {
+        "input_tokens": 2857690,
+        "cached_input_tokens": 2754304,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 26016,
+        "reasoning_output_tokens": 5688,
+        "total_tokens": 2883706
+      },
+      "reported_output_includes_reasoning": true,
+      "first_request_usage": {
+        "input_tokens": 22819,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 131,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22950
+      },
+      "wall_seconds": 964.31,
+      "uncached_input_tokens": 103386
+    }
+  },
+  "independent_visual_review_overhead": {
+    "model": "gpt-6.2-astra",
+    "effort": "high",
+    "token_usage": {
+      "input_tokens": 474858,
+      "cached_input_tokens": 427136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3107,
+      "reasoning_output_tokens": 26,
+      "total_tokens": 477965
+    },
+    "scope": "Reference review plus twelve final images; not included in any production row. Coordinator usage and tool execution costs are not included."
+  },
+  "limitations": [
+    "One sample per effort, two art iterations each; no statistical optimum established.",
+    "Wall time includes tool calls, approvals, imports and render time. Medium started after low finished.",
+    "Initial dependency preparation error affected the first wave; fixed uniformly at c175ac0.",
+    "Cache hit conditions differ, including the first request; token totals are not currency charges.",
+    "Fixed views and static render quality only; no motion stability or cross-backend conclusion."
+  ]
+}

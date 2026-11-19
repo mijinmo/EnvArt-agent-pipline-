@@ -17,3 +17,5 @@
 实际执行两轮制作、两次 GPU 图形捕获，每次均重开场景并输出 overall、detail、transition，共六张 1600×1000 原图。两轮 GPU 排队均为 0 秒，渲染均成功，无重拍、无启动或 shader 故障。两轮各进行一次 headless 素材导入，随后另一次仅为 final 证据 PNG 生成 .import 文件；沙箱阻止个人编辑器设置写入，均未阻塞工程素材导入。环境探查发现系统 Python 没有 Pillow，制图实际使用已安装的 bundled Python。对比三个相机节点及 ProtectedWhitebox 引用逐字相同，白盒源场景含 17 个 StaticBody3D。
 
 全景能区分运行与锁定工位，桌下柜体及工作灯在 detail 视角更清楚。地坪压线和安全告示在近景仍有抢眼的地方，墙右侧和过门外仍是大片简单体面，后掠叶片在远景显得较细。项目本轮未做玩法和运动验收，三张最终图是固定相机下的视觉结果。
+
+交付整合：F5 默认打开 scenes/final.tscn；冻结起点仍可打开 scenes/start.tscn 后按 F6 查看。整合只改默认入口，不改已审阅场景和截图。

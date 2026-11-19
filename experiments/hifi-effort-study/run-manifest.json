@@ -7,5 +7,9 @@
     "run-b": "low",
     "run-c": "xhigh",
     "run-d": "medium"
-  }
+  },
+  "input_dependency_fix_commit": "c175ac0",
+  "previous_trials_runtime_confirmed_effort": "low",
+  "previous_trials_runtime_verified_from": "Local Codex threads metadata and Hi-Fi Rush turn_context, 2026-11-19",
+  "resource_scope": "Existing licensed assets, fixed CGWORLD references; no new asset packs"
 }

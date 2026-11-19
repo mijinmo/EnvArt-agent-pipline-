@@ -37,3 +37,5 @@
 共三次需返工的技术事件，包括一次成图后的技术重拍。早期路径与文件名过滤探测出现过空通配符、无匹配及缺失 Python 模块；改用实际目录与本机已有依赖。引擎导入的用户目录告警未阻断场景加载。两轮的场景、材质及截图分别保存。
 
 [CGWORLD 背景与灯光访谈](https://cgworld.jp/article/202306-hifirush02.html) · [共同主图 51](https://cgworld.jp/article/818ee60f0aedfa6eaff670b2e3567f517a8b9ccc.jpg) · [共同辅助图 60](https://cgworld.jp/article/11358812b6f69a3ef7162b4a164d34fcc25e2486.jpg) · [Godot Spatial Shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)
+
+交付整合：F5 默认打开 scenes/final.tscn；冻结起点仍可打开 scenes/start.tscn 后按 F6 查看。整合只改默认入口，不改已审阅场景和截图。
