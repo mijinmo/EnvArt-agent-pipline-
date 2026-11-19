@@ -1,0 +1,292 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="demo_controller_lab_tscn"]
+
+[ext_resource type="Script" path="res://review.gd" id="review_gd"]
+
+[ext_resource type="Texture2D" path="res://art/kaykit/dungeon_texture.png" id="art_kaykit_dungeon_texture_png"]
+
+[ext_resource type="Shader" path="res://art/materials/limestone.gdshader" id="art_materials_limestone_gdshader"]
+
+[ext_resource type="Shader" path="res://art/materials/sand.gdshader" id="art_materials_sand_gdshader"]
+
+[ext_resource type="Shader" path="res://art/materials/salt_sky.gdshader" id="art_materials_salt_sky_gdshader"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall.obj" id="art_kaykit_wall_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall_cracked.obj" id="art_kaykit_wall_cracked_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall_archedwindow_open.obj" id="art_kaykit_wall_archedwindow_open_obj"]
+
+[ext_resource type="Shader" path="res://art/materials/ink.gdshader" id="art_materials_ink_gdshader"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/table_long_tablecloth.obj" id="art_kaykit_table_long_tablecloth_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/crates_stacked.obj" id="art_kaykit_crates_stacked_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/keg.obj" id="art_kaykit_keg_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/bottle_A_labeled_green.obj" id="art_kaykit_bottle_A_labeled_green_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/plate.obj" id="art_kaykit_plate_obj"]
+
+[sub_resource type="StandardMaterial3D" id="PaintedAtlas"]
+albedo_texture = ExtResource("art_kaykit_dungeon_texture_png")
+roughness = 0.96
+metallic_specular = 0.1
+
+[sub_resource type="ShaderMaterial" id="limestone"]
+shader = ExtResource("art_materials_limestone_gdshader")
+shader_parameter/atlas = ExtResource("art_kaykit_dungeon_texture_png")
+
+[sub_resource type="ShaderMaterial" id="sand"]
+shader = ExtResource("art_materials_sand_gdshader")
+
+[sub_resource type="ShaderMaterial" id="salt_sky"]
+shader = ExtResource("art_materials_salt_sky_gdshader")
+
+[sub_resource type="Sky" id="SaltSky"]
+sky_material = SubResource("salt_sky")
+
+[sub_resource type="Environment" id="Day"]
+background_mode = 2
+sky = SubResource("SaltSky")
+ambient_light_source = 2
+ambient_light_color = Color(0.86667, 0.83529, 0.87843, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 1.1
+ssao_light_affect = 0.35
+
+[sub_resource type="QuadMesh" id="Screen"]
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ink"]
+shader = ExtResource("art_materials_ink_gdshader")
+render_priority = 120
+
+[node name="Saltfold" type="Node3D"]
+script = ExtResource("review_gd")
+
+[node name="BaseLab" parent="." instance=ExtResource("demo_controller_lab_tscn")]
+
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Day")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-42.000000, -120.000000, 0.000000)
+light_color = Color(1.00000, 0.94118, 0.82745, 1)
+light_energy = 1.02
+shadow_enabled = true
+directional_shadow_max_distance = 55
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("sand")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("limestone")
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="Boundary" type="Node3D" parent="Art"]
+
+
+[node name="wall" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -9.750000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_cracked" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -7.250000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_kaykit_wall_cracked_obj")
+material_override = SubResource("limestone")
+
+[node name="wall2" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -4.750000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall3" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -2.250000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall4" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(7.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.760000, 0.510000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall5" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(9.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.760000, 0.510000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall6" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-10.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-7.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_archedwindow_open_obj")
+material_override = SubResource("limestone")
+
+[node name="wall7" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-4.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open2" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-1.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_archedwindow_open_obj")
+material_override = SubResource("limestone")
+
+[node name="wall8" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(1.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall9" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(4.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open3" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(7.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_archedwindow_open_obj")
+material_override = SubResource("limestone")
+
+[node name="wall10" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_kaykit_wall_obj")
+material_override = SubResource("limestone")
+
+[node name="Print" type="Node3D" parent="Art"]
+
+
+[node name="Contour" type="MeshInstance3D" parent="Art/Print"]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Screen")
+material_override = SubResource("ink")
+custom_aabb = AABB(-2048,-2048,-2048,4096,4096,4096)
+cast_shadow = 0
+
+[node name="Receiving" type="Node3D" parent="Art"]
+
+
+[node name="table_long_tablecloth" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.820000, 0.000000, -4.560000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.580000, 0.910000, 0.760000)
+mesh = ExtResource("art_kaykit_table_long_tablecloth_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="crates_stacked" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.820000, 0.000000, -2.210000)
+rotation_degrees = Vector3(0.000000, -8.000000, 0.000000)
+scale = Vector3(0.670000, 0.670000, 0.670000)
+mesh = ExtResource("art_kaykit_crates_stacked_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="keg" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.970000, 0.000000, -7.000000)
+rotation_degrees = Vector3(0.000000, -92.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+mesh = ExtResource("art_kaykit_keg_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="bottle_A_labeled_green" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(9.000000, 0.910000, -4.000000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.480000, 0.480000, 0.480000)
+mesh = ExtResource("art_kaykit_bottle_A_labeled_green_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="plate" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.620000, 0.910000, -4.650000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+mesh = ExtResource("art_kaykit_plate_obj")
+material_override = SubResource("PaintedAtlas")
+
+[editable path="BaseLab"]
+

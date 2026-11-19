@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkbm068mtvsbb"
+path="res://.godot/imported/crates_stacked.obj-1769c6f3a1f37ae727c8bd6f7a477d40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crates_stacked.obj-1769c6f3a1f37ae727c8bd6f7a477d40.mesh"]
+
+source_file="res://art/kaykit/crates_stacked.obj"
+dest_files=["res://.godot/imported/crates_stacked.obj-1769c6f3a1f37ae727c8bd6f7a477d40.mesh", "res://.godot/imported/crates_stacked.obj-1769c6f3a1f37ae727c8bd6f7a477d40.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

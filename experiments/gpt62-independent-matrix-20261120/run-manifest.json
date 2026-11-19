@@ -92,7 +92,7 @@
       "effort": "high",
       "input_commit": "d78168b7407a0f073744e84c6c8d2fee6f66cb47",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "hifi",
@@ -120,7 +120,7 @@
       "effort": "xhigh",
       "input_commit": "793ba862f9cac5923addf718bcc261b0820b640c",
       "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "dredge",
@@ -140,6 +140,6 @@
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 16,
-  "completed_run_count": 10,
-  "collected_run_count": 10
+  "completed_run_count": 11,
+  "collected_run_count": 11
 }

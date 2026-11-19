@@ -1,0 +1,2421 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="demo_controller_lab_tscn"]
+
+[ext_resource type="Script" path="res://review.gd" id="review_gd"]
+
+[ext_resource type="Texture2D" path="res://art/kaykit/dungeon_texture.png" id="art_kaykit_dungeon_texture_png"]
+
+[ext_resource type="Shader" path="res://art/materials/cut_stone.gdshader" id="art_materials_limestone_gdshader"]
+
+[ext_resource type="Shader" path="res://art/materials/sand.gdshader" id="art_materials_sand_gdshader"]
+
+[ext_resource type="Shader" path="res://art/materials/salt_sky.gdshader" id="art_materials_salt_sky_gdshader"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall.obj" id="art_kaykit_wall_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall_cracked.obj" id="art_kaykit_wall_cracked_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/wall_archedwindow_open.obj" id="art_kaykit_wall_archedwindow_open_obj"]
+
+[ext_resource type="Shader" path="res://art/materials/ink.gdshader" id="art_materials_ink_gdshader"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/table_long_tablecloth.obj" id="art_kaykit_table_long_tablecloth_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/crates_stacked.obj" id="art_kaykit_crates_stacked_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/keg.obj" id="art_kaykit_keg_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/bottle_A_labeled_green.obj" id="art_kaykit_bottle_A_labeled_green_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/plate.obj" id="art_kaykit_plate_obj"]
+
+[ext_resource type="Texture2D" path="res://art/station/relay_enamel.svg" id="art_station_relay_enamel_svg"]
+
+[ext_resource type="Texture2D" path="res://art/station/spring_dial.svg" id="art_station_spring_dial_svg"]
+
+[ext_resource type="Texture2D" path="res://art/station/woven_fly.svg" id="art_station_woven_fly_svg"]
+
+[ext_resource type="Texture2D" path="res://art/station/waybill.svg" id="art_station_waybill_svg"]
+
+[ext_resource type="ArrayMesh" path="res://art/station/wall_dressed.obj" id="art_station_wall_dressed_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/station/wall_archedwindow_open_dressed.obj" id="art_station_wall_archedwindow_open_dressed_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/pillar.obj" id="art_kaykit_pillar_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/floor_tile_large.obj" id="art_kaykit_floor_tile_large_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/box_small.obj" id="art_kaykit_box_small_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/station/stitched_fly.obj" id="art_station_stitched_fly_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/station/pennant.obj" id="art_station_pennant_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/floor_wood_large.obj" id="art_kaykit_floor_wood_large_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/stool.obj" id="art_kaykit_stool_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/shelf_large.obj" id="art_kaykit_shelf_large_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/kaykit/barrel_large.obj" id="art_kaykit_barrel_large_obj"]
+
+[ext_resource type="ArrayMesh" path="res://art/station/salt_parcel.obj" id="art_station_salt_parcel_obj"]
+
+[sub_resource type="StandardMaterial3D" id="PaintedAtlas"]
+albedo_texture = ExtResource("art_kaykit_dungeon_texture_png")
+roughness = 0.96
+metallic_specular = 0.1
+
+[sub_resource type="ShaderMaterial" id="limestone"]
+shader = ExtResource("art_materials_limestone_gdshader")
+shader_parameter/atlas = ExtResource("art_kaykit_dungeon_texture_png")
+
+[sub_resource type="ShaderMaterial" id="sand"]
+shader = ExtResource("art_materials_sand_gdshader")
+
+[sub_resource type="ShaderMaterial" id="salt_sky"]
+shader = ExtResource("art_materials_salt_sky_gdshader")
+
+[sub_resource type="Sky" id="SaltSky"]
+sky_material = SubResource("salt_sky")
+
+[sub_resource type="Environment" id="Day"]
+background_mode = 2
+sky = SubResource("SaltSky")
+ambient_light_source = 2
+ambient_light_color = Color(0.86667, 0.83529, 0.87843, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 1.1
+ssao_light_affect = 0.35
+
+[sub_resource type="QuadMesh" id="Screen"]
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ink"]
+shader = ExtResource("art_materials_ink_gdshader")
+render_priority = 120
+
+[sub_resource type="StandardMaterial3D" id="Paint344843"]
+albedo_color = Color(0.20392, 0.28235, 0.26275, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paint527c73"]
+albedo_color = Color(0.32157, 0.48627, 0.45098, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Painte7d6a9"]
+albedo_color = Color(0.90588, 0.83922, 0.66275, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paintdfa74f"]
+albedo_color = Color(0.87451, 0.65490, 0.30980, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paintb95142"]
+albedo_color = Color(0.72549, 0.31765, 0.25882, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paint986950"]
+albedo_color = Color(0.59608, 0.41176, 0.31373, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paint514641"]
+albedo_color = Color(0.31765, 0.27451, 0.25490, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Paint47404b"]
+albedo_color = Color(0.27843, 0.25098, 0.29412, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Print_relay_enamel"]
+albedo_texture = ExtResource("art_station_relay_enamel_svg")
+roughness = 0.96
+metallic_specular = 0.13
+cull_mode = 2
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="Print_spring_dial"]
+albedo_texture = ExtResource("art_station_spring_dial_svg")
+roughness = 0.96
+metallic_specular = 0.13
+cull_mode = 2
+texture_filter = 4
+transparency = 2
+alpha_scissor_threshold = 0.48
+
+[sub_resource type="StandardMaterial3D" id="Print_woven_fly"]
+albedo_texture = ExtResource("art_station_woven_fly_svg")
+roughness = 0.96
+metallic_specular = 0.13
+cull_mode = 2
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="Print_waybill"]
+albedo_texture = ExtResource("art_station_waybill_svg")
+roughness = 0.96
+metallic_specular = 0.13
+cull_mode = 2
+texture_filter = 4
+
+[sub_resource type="BoxMesh" id="UnitBox"]
+
+
+[sub_resource type="CylinderMesh" id="Rod"]
+top_radius = 1
+bottom_radius = 1
+height = 1
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.095_0.035_16_None"]
+top_radius = 0.095
+bottom_radius = 0.095
+height = 0.035
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.056_0.024_8_None"]
+top_radius = 0.056
+bottom_radius = 0.056
+height = 0.024
+radial_segments = 8
+rings = 1
+
+[sub_resource type="QuadMesh" id="Placard"]
+size = Vector2(1,1)
+
+[sub_resource type="CylinderMesh" id="Round_0.43_0.17_48_None"]
+top_radius = 0.43
+bottom_radius = 0.43
+height = 0.17
+radial_segments = 48
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.38_0.035_48_None"]
+top_radius = 0.38
+bottom_radius = 0.38
+height = 0.035
+radial_segments = 48
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.313_0.024_40_None"]
+top_radius = 0.313
+bottom_radius = 0.313
+height = 0.024
+radial_segments = 40
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.17_0.02_32_None"]
+top_radius = 0.17
+bottom_radius = 0.17
+height = 0.02
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.04_0.14_16_None"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 0.14
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.064_0.075_16_None"]
+top_radius = 0.064
+bottom_radius = 0.064
+height = 0.075
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.11_0.14_8_None"]
+top_radius = 0.11
+bottom_radius = 0.11
+height = 0.14
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.293_0.15_48_None"]
+top_radius = 0.293
+bottom_radius = 0.293
+height = 0.15
+radial_segments = 48
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="Paintc69051"]
+albedo_color = Color(0.77647, 0.56471, 0.31765, 1)
+roughness = 0.94
+cull_mode = 2
+metallic_specular = 0.12
+
+[sub_resource type="CylinderMesh" id="Round_0.055_0.14_12_None"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 0.14
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.0242_0.05_12_None"]
+top_radius = 0.0242
+bottom_radius = 0.0242
+height = 0.05
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.077_0.14_12_None"]
+top_radius = 0.077
+bottom_radius = 0.077
+height = 0.14
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.03388_0.05_12_None"]
+top_radius = 0.03388
+bottom_radius = 0.03388
+height = 0.05
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.099_0.14_12_None"]
+top_radius = 0.099
+bottom_radius = 0.099
+height = 0.14
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.04356_0.05_12_None"]
+top_radius = 0.04356
+bottom_radius = 0.04356
+height = 0.05
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.095_0.5_20_None"]
+top_radius = 0.095
+bottom_radius = 0.095
+height = 0.5
+radial_segments = 20
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.098_0.025_16_None"]
+top_radius = 0.098
+bottom_radius = 0.098
+height = 0.025
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.05_0.012_20_None"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.012
+radial_segments = 20
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Round_0.065_0.081_16_None"]
+top_radius = 0.065
+bottom_radius = 0.065
+height = 0.081
+radial_segments = 16
+rings = 1
+
+[node name="Saltfold" type="Node3D"]
+script = ExtResource("review_gd")
+
+[node name="BaseLab" parent="." instance=ExtResource("demo_controller_lab_tscn")]
+
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Day")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-42.000000, -120.000000, 0.000000)
+light_color = Color(1.00000, 0.94118, 0.82745, 1)
+light_energy = 1.02
+shadow_enabled = true
+directional_shadow_max_distance = 55
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("sand")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("limestone")
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("limestone")
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="Boundary" type="Node3D" parent="Art"]
+
+
+[node name="wall" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -9.750000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_cracked" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -7.250000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall2" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -4.750000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall3" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.000000, 0.000000, -2.250000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.625000, 0.760000, 0.520000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall4" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(7.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.760000, 0.510000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall5" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(9.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.760000, 0.510000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall6" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-10.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-7.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_archedwindow_open_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall7" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-4.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open2" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(-1.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_archedwindow_open_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall8" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(1.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall9" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(4.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall_archedwindow_open3" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(7.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_archedwindow_open_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="wall10" type="MeshInstance3D" parent="Art/Boundary"]
+position = Vector3(10.500000, 0.000000, -12.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.600000)
+mesh = ExtResource("art_station_wall_dressed_obj")
+material_override = SubResource("limestone")
+
+[node name="Print" type="Node3D" parent="Art"]
+
+
+[node name="Contour" type="MeshInstance3D" parent="Art/Print"]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Screen")
+material_override = SubResource("ink")
+custom_aabb = AABB(-2048,-2048,-2048,4096,4096,4096)
+cast_shadow = 0
+
+[node name="Receiving" type="Node3D" parent="Art"]
+
+
+[node name="table_long_tablecloth" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.820000, 0.000000, -4.560000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.580000, 0.910000, 0.760000)
+mesh = ExtResource("art_kaykit_table_long_tablecloth_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="crates_stacked" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.820000, 0.000000, -2.210000)
+rotation_degrees = Vector3(0.000000, -8.000000, 0.000000)
+scale = Vector3(0.670000, 0.670000, 0.670000)
+mesh = ExtResource("art_kaykit_crates_stacked_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="keg" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.970000, 0.000000, -7.000000)
+rotation_degrees = Vector3(0.000000, -92.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+mesh = ExtResource("art_kaykit_keg_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="bottle_A_labeled_green" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(9.000000, 0.910000, -4.000000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.480000, 0.480000, 0.480000)
+mesh = ExtResource("art_kaykit_bottle_A_labeled_green_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="plate" type="MeshInstance3D" parent="Art/Receiving"]
+position = Vector3(8.620000, 0.910000, -4.650000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+mesh = ExtResource("art_kaykit_plate_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="Portal" type="Node3D" parent="Art"]
+
+
+[node name="pillar" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.466666, 0.650000, 0.430000)
+mesh = ExtResource("art_kaykit_pillar_obj")
+material_override = SubResource("limestone")
+
+[node name="InnerJamb" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 1.300000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 2.600000, 0.580000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="PatinatedCollar" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 0.240000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.115000, 0.660000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="PatinatedCollar2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 2.240000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.115000, 0.660000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="UprightCopper1" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0160000,0.0000000,0.0000000,0.0000000,1.8100000,0.0000000,0.0000000,0.0000000,0.0160000,-1.1600000,1.2550000,-3.6970000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="UprightCopper2" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0160000,0.0000000,0.0000000,0.0000000,1.8100000,0.0000000,0.0000000,0.0000000,0.0160000,-0.7400000,1.2550000,-3.6970000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="PlinthSkirt" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 0.085000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.170000, 0.700000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="SealRivet" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 1.420000, -3.688000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.095_0.035_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="SealCentre" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.950000, 1.420000, -3.660000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.056_0.024_8_None")
+material_override = SubResource("Paintb95142")
+
+[node name="pillar2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.466666, 0.650000, 0.430000)
+mesh = ExtResource("art_kaykit_pillar_obj")
+material_override = SubResource("limestone")
+
+[node name="InnerJamb2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 1.300000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 2.600000, 0.580000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="PatinatedCollar3" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 0.240000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.115000, 0.660000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="PatinatedCollar4" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 2.240000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.115000, 0.660000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="UprightCopper3" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0160000,0.0000000,0.0000000,0.0000000,1.8100000,0.0000000,0.0000000,0.0000000,0.0160000,0.7400000,1.2550000,-3.6970000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="UprightCopper4" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0160000,0.0000000,0.0000000,0.0000000,1.8100000,0.0000000,0.0000000,0.0000000,0.0160000,1.1600000,1.2550000,-3.6970000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="PlinthSkirt2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 0.085000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.170000, 0.700000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="SealRivet2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 1.420000, -3.688000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.095_0.035_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="SealCentre2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.950000, 1.420000, -3.660000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.056_0.024_8_None")
+material_override = SubResource("Paintb95142")
+
+[node name="HeaderRail" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 2.670000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(3.120000, 0.190000, 0.850000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="PorcelainCarrier" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 2.980000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.990000, 0.660000, 0.320000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="RouteEnamel" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 2.980000, -3.831000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.910000, 0.710000, 1.000000)
+mesh = SubResource("Placard")
+material_override = SubResource("Print_relay_enamel")
+
+[node name="ReturnEnamel" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 2.980000, -4.169000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(2.910000, 0.710000, 1.000000)
+mesh = SubResource("Placard")
+material_override = SubResource("Print_relay_enamel")
+
+[node name="WeatherLip" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 3.340000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(3.160000, 0.072000, 0.540000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paintdfa74f")
+
+[node name="SignalDisc" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 3.640000, -4.000000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.43_0.17_48_None")
+material_override = SubResource("Paint344843")
+
+[node name="EnamelRim" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 3.640000, -3.902000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.38_0.035_48_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="BrickInsert" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 3.640000, -3.879000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.313_0.024_40_None")
+material_override = SubResource("Paintb95142")
+
+[node name="SolarCore" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.000000, 3.670000, -3.857000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.17_0.02_32_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="LouverWing" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.590000, 3.690000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -9.000000)
+scale = Vector3(0.560000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="LouverWing2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.530000, 3.587000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -9.000000)
+scale = Vector3(0.440000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="LouverWing3" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-0.455000, 3.484000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -9.000000)
+scale = Vector3(0.290000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="LouverWing4" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.590000, 3.690000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.000000)
+scale = Vector3(0.560000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="LouverWing5" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.530000, 3.587000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.000000)
+scale = Vector3(0.440000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="LouverWing6" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(0.455000, 3.484000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.000000)
+scale = Vector3(0.290000, 0.073000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="CrownPin" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.390000, 3.420000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.04_0.14_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="CrownPin2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(1.390000, 3.420000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.04_0.14_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="ServiceFeed1" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0460000,0.0000000,0.0000000,0.0000000,2.4900000,0.0000000,0.0000000,0.0000000,0.0460000,-1.3700000,1.3250000,-4.1600000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintb95142")
+
+[node name="FeedClip" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 0.320000, -4.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="FeedClip2" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 1.100000, -4.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="FeedClip3" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 2.240000, -4.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="ServiceFeed2" type="MeshInstance3D" parent="Art/Portal"]
+transform = Transform3D(0.0460000,0.0000000,0.0000000,0.0000000,2.4900000,0.0000000,0.0000000,0.0000000,0.0460000,-1.3700000,1.3250000,-3.9600000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintb95142")
+
+[node name="FeedClip4" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 0.320000, -3.960000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="FeedClip5" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 1.100000, -3.960000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="FeedClip6" type="MeshInstance3D" parent="Art/Portal"]
+position = Vector3(-1.370000, 2.240000, -3.960000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.130000, 0.050000, 0.130000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="Waystones" type="Node3D" parent="Art"]
+
+
+[node name="floor_tile_large" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.000000, 0.004000, -4.830000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.440000, 0.110000, 0.380000)
+mesh = ExtResource("art_kaykit_floor_tile_large_obj")
+material_override = SubResource("limestone")
+
+[node name="floor_tile_large2" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.000000, 0.004000, -3.230000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.440000, 0.110000, 0.380000)
+mesh = ExtResource("art_kaykit_floor_tile_large_obj")
+material_override = SubResource("limestone")
+
+[node name="box_small" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(1.000000, 0.000000, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.400000, 1.500000)
+mesh = ExtResource("art_kaykit_box_small_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="FreightBand" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.570000, 0.200000, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 0.405000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="FreightBand2" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(1.430000, 0.200000, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 0.405000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="TransitSeal" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.246000, 0.272000, 0.810000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.008000, 0.096000, 0.430000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Painte7d6a9")
+
+[node name="CrateCode4" type="Label3D" parent="Art/Waystones"]
+position = Vector3(0.238000, 0.272000, 0.810000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+text = "S / 07"
+font_size = 88
+pixel_size = 0.0008181818181818182
+outline_size = 0
+modulate = Color(0.21961, 0.29804, 0.28235, 1)
+double_sided = false
+texture_filter = 4
+
+[node name="box_small2" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(1.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.900000, 1.500000)
+mesh = ExtResource("art_kaykit_box_small_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="FreightBand3" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.570000, 0.450000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 0.905000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="FreightBand4" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(1.430000, 0.450000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 0.905000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="TransitSeal2" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(0.246000, 0.612000, -1.190000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.008000, 0.216000, 0.430000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Painte7d6a9")
+
+[node name="CrateCode9" type="Label3D" parent="Art/Waystones"]
+position = Vector3(0.238000, 0.612000, -1.190000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+text = "S / 07"
+font_size = 88
+pixel_size = 0.0014772727272727272
+outline_size = 0
+modulate = Color(0.21961, 0.29804, 0.28235, 1)
+double_sided = false
+texture_filter = 4
+
+[node name="box_small3" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(3.000000, 0.000000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 1.400000, 1.500000)
+mesh = ExtResource("art_kaykit_box_small_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="FreightBand5" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(2.570000, 0.700000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 1.405000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="FreightBand6" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(3.430000, 0.700000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.087000, 1.405000, 1.503000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint527c73")
+
+[node name="TransitSeal3" type="MeshInstance3D" parent="Art/Waystones"]
+position = Vector3(2.246000, 0.952000, -3.190000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.008000, 0.336000, 0.430000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Painte7d6a9")
+
+[node name="CrateCode14" type="Label3D" parent="Art/Waystones"]
+position = Vector3(2.238000, 0.952000, -3.190000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+text = "S / 07"
+font_size = 88
+pixel_size = 0.0014772727272727272
+outline_size = 0
+modulate = Color(0.21961, 0.29804, 0.28235, 1)
+double_sided = false
+texture_filter = 4
+
+[node name="ShadeRig" type="Node3D" parent="Art"]
+
+
+[node name="SewnCottonFly" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = ExtResource("art_station_stitched_fly_obj")
+material_override = SubResource("Print_woven_fly")
+
+[node name="BronzeStanchion1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0450000,0.0000000,0.0000000,0.0000000,3.0100000,0.0000000,0.0000000,0.0000000,0.0450000,7.1800000,1.5050000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="Ferrule" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 0.130000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule2" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 2.760000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule3" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 2.895000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Foot" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 0.070000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.11_0.14_8_None")
+material_override = SubResource("Paint527c73")
+
+[node name="BronzeStanchion2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0450000,0.0000000,0.0000000,0.0000000,3.6700000,0.0000000,0.0000000,0.0000000,0.0450000,9.8100000,1.8350000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="Ferrule4" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 0.130000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule5" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 3.420000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule6" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 3.555000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Foot2" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 0.070000, -6.750000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.11_0.14_8_None")
+material_override = SubResource("Paint527c73")
+
+[node name="Rafter1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0095123,-0.0367902,0.0000000,2.6300000,0.6800000,0.0000000,-0.0000000,0.0000000,0.0380000,8.4950000,3.1200000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint986950")
+
+[node name="KneeBrace1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0243889,-0.0191359,0.0000000,0.5100000,0.6500000,0.0000000,-0.0000000,0.0000000,0.0310000,7.4350000,2.5950000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint527c73")
+
+[node name="BronzeStanchion3" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0450000,0.0000000,0.0000000,0.0000000,3.0100000,0.0000000,0.0000000,0.0000000,0.0450000,7.1800000,1.5050000,-2.1100000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="Ferrule7" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 0.130000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule8" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 2.760000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule9" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 2.895000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Foot3" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.180000, 0.070000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.11_0.14_8_None")
+material_override = SubResource("Paint527c73")
+
+[node name="BronzeStanchion4" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0450000,0.0000000,0.0000000,0.0000000,3.6700000,0.0000000,0.0000000,0.0000000,0.0450000,9.8100000,1.8350000,-2.1100000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="Ferrule10" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 0.130000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule11" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 3.420000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Ferrule12" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 3.555000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.064_0.075_16_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Foot4" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.810000, 0.070000, -2.110000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.11_0.14_8_None")
+material_override = SubResource("Paint527c73")
+
+[node name="Rafter2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0095123,-0.0367902,0.0000000,2.6300000,0.6800000,0.0000000,-0.0000000,0.0000000,0.0380000,8.4950000,3.1200000,-2.1100000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint986950")
+
+[node name="KneeBrace2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0243889,-0.0191359,0.0000000,0.5100000,0.6500000,0.0000000,-0.0000000,0.0000000,0.0310000,7.4350000,2.5950000,-2.1100000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint527c73")
+
+[node name="HemCord1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0188021,0.0027352,0.0000000,-0.0421875,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.7889063,-6.6050000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0188508,0.0023767,0.0000000,-0.0365625,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.7495313,-6.3150000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord3" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0188928,0.0020155,0.0000000,-0.0309375,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.7157813,-6.0250000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord4" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0189280,0.0016521,0.0000000,-0.0253125,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.6876562,-5.7350000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord5" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0189564,0.0012869,0.0000000,-0.0196875,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.6651562,-5.4450000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord6" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0189777,0.0009203,0.0000000,-0.0140625,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.6482813,-5.1550000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord7" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0189920,0.0005526,0.0000000,-0.0084375,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.6370312,-4.8650000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord8" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0189991,0.0001843,0.0000000,-0.0028125,0.2900000,0.0190000,0.0000000,0.0000000,7.1800000,2.6314062,-4.5750000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord9" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0189991,-0.0001843,0.0000000,0.0028125,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.6314062,-4.2850000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord10" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0189920,-0.0005526,0.0000000,0.0084375,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.6370312,-3.9950000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord11" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0189777,-0.0009203,0.0000000,0.0140625,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.6482813,-3.7050000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord12" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0189564,-0.0012869,0.0000000,0.0196875,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.6651562,-3.4150000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord13" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0189280,-0.0016521,0.0000000,0.0253125,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.6876562,-3.1250000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord14" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0188928,-0.0020155,0.0000000,0.0309375,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.7157813,-2.8350000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord15" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0188508,-0.0023767,0.0000000,0.0365625,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.7495313,-2.5450000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="HemCord16" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0188021,-0.0027352,0.0000000,0.0421875,0.2900000,0.0190000,-0.0000000,0.0000000,7.1800000,2.7889063,-2.2550000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WallPlate1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0000000,0.0510000,0.0000000,0.0000000,0.0000000,4.9000000,0.0510000,0.0000000,0.0000000,9.8100000,3.4700000,-4.4300000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="AwningEye1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="AwningEye2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-5.8220000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="AwningEye3" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-4.8940000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="AwningEye4" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-3.9660000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="AwningEye5" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-3.0380000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="AwningEye6" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0179378,-0.0159447,0.0000000,0.0800000,0.0900000,0.0000000,-0.0000000,0.0000000,0.0240000,9.8000000,3.5050000,-2.1100000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="Mast1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(0.0370000,0.0000000,0.0000000,0.0000000,0.8000000,0.0000000,0.0000000,0.0000000,0.0370000,9.8000000,3.8600000,-6.7500000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="SignalHalyard1" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0074905,0.0093751,0.0000000,-0.2911111,-0.2325926,0.5155556,0.0075983,0.0060709,0.0070293,9.6544444,4.1437037,-6.4922222)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard2" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0069960,0.0097497,0.0000000,-0.2911111,-0.2088889,0.5155556,0.0080061,0.0057448,0.0068483,9.3633333,3.9229630,-5.9766667)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard3" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0064408,0.0101250,0.0000000,-0.2911111,-0.1851852,0.5155556,0.0084146,0.0053528,0.0066740,9.0722222,3.7259259,-5.4611111)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard4" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0058209,0.0104937,0.0000000,-0.2911111,-0.1614815,0.5155556,0.0088156,0.0048901,0.0065094,8.7811111,3.5525926,-4.9455556)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard5" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0051335,0.0108465,0.0000000,-0.2911111,-0.1377778,0.5155556,0.0091991,0.0043538,0.0063578,8.4900000,3.4029630,-4.4300000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard6" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0117166,0.0025925,-0.2911111,-0.1140741,0.5155556,0.0105087,-0.0012517,0.0056569,8.1988889,3.2770370,-3.9144444)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard7" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0118198,0.0020719,-0.2911111,-0.0903704,0.5155556,0.0104871,-0.0010070,0.0057451,7.9077778,3.1748148,-3.3988889)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard8" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0119009,0.0015389,-0.2911111,-0.0666667,0.5155556,0.0104701,-0.0007519,0.0058148,7.6166667,3.0962963,-2.8833333)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalHalyard9" type="MeshInstance3D" parent="Art/ShadeRig"]
+transform = Transform3D(-0.0000000,0.0119585,0.0009965,-0.2911111,-0.0429630,0.5155556,0.0104580,-0.0004887,0.0058644,7.3255556,3.0414815,-2.3677778)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SignalPennant" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(9.328400, 3.895104, -5.914800)
+rotation_degrees = Vector3(0.000000, -60.000000, 0.000000)
+scale = Vector3(0.220000, 0.320000, 1.000000)
+mesh = ExtResource("art_station_pennant_obj")
+material_override = SubResource("Paintb95142")
+
+[node name="SignalPennant2" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(8.972080, 3.660662, -5.283760)
+rotation_degrees = Vector3(0.000000, -60.000000, 0.000000)
+scale = Vector3(0.220000, 0.440000, 1.000000)
+mesh = ExtResource("art_station_pennant_obj")
+material_override = SubResource("Painte7d6a9")
+
+[node name="SignalPennant3" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(8.615760, 3.461732, -4.652720)
+rotation_degrees = Vector3(0.000000, -60.000000, 0.000000)
+scale = Vector3(0.220000, 0.320000, 1.000000)
+mesh = ExtResource("art_station_pennant_obj")
+material_override = SubResource("Paint527c73")
+
+[node name="SignalPennant4" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(8.259440, 3.298314, -4.021680)
+rotation_degrees = Vector3(0.000000, -60.000000, 0.000000)
+scale = Vector3(0.220000, 0.440000, 1.000000)
+mesh = ExtResource("art_station_pennant_obj")
+material_override = SubResource("Paintdfa74f")
+
+[node name="SignalPennant5" type="MeshInstance3D" parent="Art/ShadeRig"]
+position = Vector3(7.903120, 3.170409, -3.390640)
+rotation_degrees = Vector3(0.000000, -60.000000, 0.000000)
+scale = Vector3(0.220000, 0.320000, 1.000000)
+mesh = ExtResource("art_station_pennant_obj")
+material_override = SubResource("Paintb95142")
+
+[node name="WeighHouse" type="Node3D" parent="Art"]
+
+
+[node name="floor_wood_large" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.800000, 0.012000, -5.950000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.460000, 0.110000, 0.580000)
+mesh = ExtResource("art_kaykit_floor_wood_large_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="floor_wood_large2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.800000, 0.012000, -3.630000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.460000, 0.110000, 0.580000)
+mesh = ExtResource("art_kaykit_floor_wood_large_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="floor_wood_large3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.800000, 0.012000, -1.990000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.460000, 0.110000, 0.240000)
+mesh = ExtResource("art_kaykit_floor_wood_large_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="stool" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(7.930000, 0.005000, -3.860000)
+rotation_degrees = Vector3(0.000000, -24.000000, 0.000000)
+scale = Vector3(0.950000, 1.000000, 0.950000)
+mesh = ExtResource("art_kaykit_stool_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="shelf_large" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.840000, 1.570000, -3.090000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.740000, 0.880000, 0.920000)
+mesh = ExtResource("art_kaykit_shelf_large_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="barrel_large" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(7.970000, 0.015000, -1.960000)
+rotation_degrees = Vector3(0.000000, 17.000000, 0.000000)
+scale = Vector3(0.360000, 0.390000, 0.360000)
+mesh = ExtResource("art_kaykit_barrel_large_obj")
+material_override = SubResource("PaintedAtlas")
+
+[node name="WallHanger1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0480000,-0.0000000,-1.2800000,0.0000000,0.0000000,0.0000000,0.0000000,0.0480000,9.2200000,2.5100000,-4.7900000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="Brace1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0167140,0.0272881,-0.0000000,-0.8000000,0.4900000,0.0000000,0.0000000,0.0000000,0.0320000,9.4200000,2.2650000,-4.7900000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint527c73")
+
+[node name="WallShoe" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.830000, 2.260000, -4.790000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.160000, 0.630000, 0.160000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="Shackle1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0250000,0.0000000,0.0000000,0.0000000,-0.2100000,0.0000000,0.0000000,0.0000000,0.0250000,8.5800000,2.4050000,-4.7900000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="BalanceCase" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.580000, 2.040000, -4.790000)
+rotation_degrees = Vector3(90.000000, -116.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.293_0.15_48_None")
+material_override = SubResource("Paint527c73")
+
+[node name="CalibratedFace" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.508995, 2.040000, -4.824631)
+rotation_degrees = Vector3(0.000000, -116.000000, 0.000000)
+scale = Vector3(0.560000, 0.560000, 1.000000)
+mesh = SubResource("Placard")
+material_override = SubResource("Print_spring_dial")
+
+[node name="ScaleSpindle1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0250000,0.0000000,0.0000000,0.0000000,-0.1100000,0.0000000,0.0000000,0.0000000,0.0250000,8.5800000,1.7150000,-4.7900000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintdfa74f")
+
+[node name="PanWire1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0070608,-0.0037609,0.0000000,0.2450166,-0.4600000,0.0496673,-0.0003568,0.0006698,0.0079639,8.7025083,1.4400000,-4.7651663)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="PanWire2" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0075275,0.0027086,0.0000000,-0.1655215,-0.4600000,0.1873570,0.0009693,0.0026938,0.0074702,8.4972393,1.4400000,-4.6963215)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="PanWire3" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0078832,0.0013623,0.0000000,-0.0794952,-0.4600000,-0.2370243,-0.0006168,-0.0035689,0.0071332,8.5402524,1.4400000,-4.9085122)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="plate" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.580000, 1.155000, -4.790000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.570000, 0.460000, 0.570000)
+mesh = ExtResource("art_kaykit_plate_obj")
+material_override = SubResource("Paintc69051")
+
+[node name="LedgerCover" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.660000, 0.933000, -5.480000)
+rotation_degrees = Vector3(0.000000, -14.000000, 0.000000)
+scale = Vector3(0.450000, 0.037000, 0.560000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint344843")
+
+[node name="WeighSlip" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.660000, 0.954000, -5.480000)
+rotation_degrees = Vector3(-90.000000, -14.000000, 0.000000)
+scale = Vector3(0.414000, 0.515000, 1.000000)
+mesh = SubResource("Placard")
+material_override = SubResource("Print_waybill")
+
+[node name="MarkingPencil1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0120000,0.0000000,0.1000000,0.0000000,0.2400000,0.0110769,0.0000000,-0.0046154,8.5100000,0.9700000,-5.2900000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paintb95142")
+
+[node name="BrassTestMass" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.760000, 0.980000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.055_0.14_12_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="MassHandle" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.760000, 1.073000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.0242_0.05_12_None")
+material_override = SubResource("Paint344843")
+
+[node name="BrassTestMass2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.920000, 0.980000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.077_0.14_12_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="MassHandle2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.920000, 1.073000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.03388_0.05_12_None")
+material_override = SubResource("Paint344843")
+
+[node name="BrassTestMass3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.080000, 0.980000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.099_0.14_12_None")
+material_override = SubResource("Paintdfa74f")
+
+[node name="MassHandle3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.080000, 1.073000, -4.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.04356_0.05_12_None")
+material_override = SubResource("Paint344843")
+
+[node name="WaxedParcel" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.650000, 0.023000, -2.980000)
+rotation_degrees = Vector3(0.000000, 8.000000, 0.000000)
+scale = Vector3(0.800000, 0.800000, 0.800000)
+mesh = ExtResource("art_station_salt_parcel_obj")
+material_override = SubResource("Paint527c73")
+
+[node name="WaxedTwine1" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094542,0.0016666,-0.0000000,-0.0063463,0.0360000,-0.0451562,-0.0012954,0.0073482,0.0060403,8.4160868,0.0570000,-3.1785781)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine2" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095957,0.0002885,-0.0000000,-0.0030061,0.1000000,-0.0213898,-0.0000603,0.0020062,0.0093878,8.4114106,0.1250000,-3.2118511)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine3" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095996,-0.0000868,0.0000000,0.0014474,0.1600000,0.0102988,-0.0000056,-0.0006166,0.0095802,8.4106313,0.2550000,-3.2173966)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine4" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095620,-0.0008534,0.0000000,0.0065690,0.0736000,0.0467407,-0.0004562,-0.0051116,0.0081131,8.4146394,0.3718000,-3.1888769)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine5" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0085696,-0.0043269,0.0035628,0.0128000,0.0253509,0.0095253,-0.0005386,-0.0010667,8.4197053,0.4150000,-3.1528312)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine6" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0096000,0.0000000,0.0521064,0.0000000,0.3707564,0.0095066,0.0000000,-0.0013361,8.4475400,0.4214000,-2.9547775)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine7" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0088219,0.0037861,0.0044535,-0.0136000,0.0316886,0.0095209,0.0004849,-0.0011300,8.4758199,0.4146000,-2.7535551)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine8" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095571,-0.0009062,0.0000000,0.0069030,-0.0728000,0.0491173,-0.0005053,0.0053288,0.0079692,8.4814982,0.3714000,-2.7131521)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine9" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095997,-0.0000700,0.0000000,0.0012247,-0.1680000,0.0087144,-0.0000036,0.0004973,0.0095871,8.4855621,0.2510000,-2.6842363)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine10" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095942,0.0003338,0.0000000,-0.0033402,-0.0960000,-0.0237664,-0.0000802,-0.0023043,0.0093190,8.4845043,0.1190000,-2.6917623)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine11" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094408,0.0017409,0.0000000,-0.0059009,-0.0320000,-0.0419874,-0.0013761,-0.0074622,0.0058806,8.4798838,0.0550000,-2.7246392)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine12" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094542,0.0016666,-0.0000000,-0.0063463,0.0360000,-0.0451562,-0.0012954,0.0073482,0.0060403,8.8201162,0.0570000,-3.2353608)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine13" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095957,0.0002885,-0.0000000,-0.0030061,0.1000000,-0.0213898,-0.0000603,0.0020062,0.0093878,8.8154400,0.1250000,-3.2686338)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine14" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095996,-0.0000868,0.0000000,0.0014474,0.1600000,0.0102988,-0.0000056,-0.0006166,0.0095802,8.8146606,0.2550000,-3.2741793)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine15" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0095620,-0.0008534,0.0000000,0.0065690,0.0736000,0.0467407,-0.0004562,-0.0051116,0.0081131,8.8186688,0.3718000,-3.2456595)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine16" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0085696,-0.0043269,0.0035628,0.0128000,0.0253509,0.0095253,-0.0005386,-0.0010667,8.8237347,0.4150000,-3.2096138)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine17" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0096000,0.0000000,0.0521064,0.0000000,0.3707564,0.0095066,0.0000000,-0.0013361,8.8515693,0.4214000,-3.0115602)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine18" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0088219,0.0037861,0.0044535,-0.0136000,0.0316886,0.0095209,0.0004849,-0.0011300,8.8798493,0.4146000,-2.8103377)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine19" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095571,-0.0009062,0.0000000,0.0069030,-0.0728000,0.0491173,-0.0005053,0.0053288,0.0079692,8.8855276,0.3714000,-2.7699348)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine20" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095997,-0.0000700,0.0000000,0.0012247,-0.1680000,0.0087144,-0.0000036,0.0004973,0.0095871,8.8895914,0.2510000,-2.7410189)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine21" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0095942,0.0003338,0.0000000,-0.0033402,-0.0960000,-0.0237664,-0.0000802,-0.0023043,0.0093190,8.8885337,0.1190000,-2.7485450)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine22" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094408,0.0017409,0.0000000,-0.0059009,-0.0320000,-0.0419874,-0.0013761,-0.0074622,0.0058806,8.8839132,0.0550000,-2.7814219)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedParcel2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.640000, 0.426000, -2.980000)
+rotation_degrees = Vector3(0.000000, -5.000000, 0.000000)
+scale = Vector3(0.700000, 0.700000, 0.700000)
+mesh = ExtResource("art_station_salt_parcel_obj")
+material_override = SubResource("Paintdfa74f")
+
+[node name="WaxedTwine23" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083493,-0.0009217,0.0000000,0.0034775,0.0315000,-0.0397482,0.0007207,0.0065283,0.0052366,8.4796583,0.4557500,-3.1953441)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine24" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083985,-0.0001581,0.0000000,0.0016472,0.0875000,-0.0188281,0.0000333,0.0017664,0.0082121,8.4822207,0.5152500,-3.2246323)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine25" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083999,0.0000476,-0.0000000,-0.0007931,0.1400000,0.0090654,0.0000031,-0.0005428,0.0083824,8.4826478,0.6290000,-3.2295136)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine26" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083869,0.0004688,-0.0000000,-0.0035995,0.0644000,0.0411428,0.0002521,-0.0045103,0.0070819,8.4804514,0.7312000,-3.2044095)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine27" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0075074,-0.0037681,-0.0019523,0.0112000,0.0223148,0.0083744,0.0002937,0.0005852,8.4776755,0.7690000,-3.1726807)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine28" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0084000,-0.0000000,-0.0285522,0.0000000,0.3263534,0.0083680,0.0000000,0.0007321,8.4624233,0.7746000,-2.9983466)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine29" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0077263,0.0032962,-0.0024404,-0.0119000,0.0278935,0.0083729,-0.0002644,0.0006197,8.4469270,0.7686500,-2.8212232)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine30" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083852,0.0004979,0.0000000,-0.0037826,-0.0637000,0.0432348,0.0002793,0.0047034,0.0069542,8.4438155,0.7308500,-2.7856591)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine31" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083999,0.0000383,0.0000000,-0.0006711,-0.1470000,0.0076707,0.0000020,0.0004377,0.0083886,8.4415887,0.6255000,-2.7602063)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine32" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083980,-0.0001830,0.0000000,0.0018303,-0.0840000,-0.0209201,0.0000442,-0.0020291,0.0081511,8.4421683,0.5100000,-2.7668310)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine33" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083445,-0.0009636,0.0000000,0.0032335,-0.0280000,-0.0369588,0.0007662,-0.0066352,0.0050938,8.4447002,0.4540000,-2.7957705)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine34" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083493,-0.0009217,0.0000000,0.0034775,0.0315000,-0.0397482,0.0007207,0.0065283,0.0052366,8.8352998,0.4557500,-3.1642295)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine35" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083985,-0.0001581,0.0000000,0.0016472,0.0875000,-0.0188281,0.0000333,0.0017664,0.0082121,8.8378622,0.5152500,-3.1935177)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine36" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083999,0.0000476,-0.0000000,-0.0007931,0.1400000,0.0090654,0.0000031,-0.0005428,0.0083824,8.8382893,0.6290000,-3.1983990)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine37" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0083869,0.0004688,-0.0000000,-0.0035995,0.0644000,0.0411428,0.0002521,-0.0045103,0.0070819,8.8360930,0.7312000,-3.1732949)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine38" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0075074,-0.0037681,-0.0019523,0.0112000,0.0223148,0.0083744,0.0002937,0.0005852,8.8333170,0.7690000,-3.1415661)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine39" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0084000,-0.0000000,-0.0285522,0.0000000,0.3263534,0.0083680,0.0000000,0.0007321,8.8180648,0.7746000,-2.9672320)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine40" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0077263,0.0032962,-0.0024404,-0.0119000,0.0278935,0.0083729,-0.0002644,0.0006197,8.8025685,0.7686500,-2.7901086)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine41" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083852,0.0004979,0.0000000,-0.0037826,-0.0637000,0.0432348,0.0002793,0.0047034,0.0069542,8.7994570,0.7308500,-2.7545445)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine42" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083999,0.0000383,0.0000000,-0.0006711,-0.1470000,0.0076707,0.0000020,0.0004377,0.0083886,8.7972302,0.6255000,-2.7290917)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine43" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083980,-0.0001830,0.0000000,0.0018303,-0.0840000,-0.0209201,0.0000442,-0.0020291,0.0081511,8.7978098,0.5100000,-2.7357164)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine44" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0083445,-0.0009636,0.0000000,0.0032335,-0.0280000,-0.0369588,0.0007662,-0.0066352,0.0050938,8.8003417,0.4540000,-2.7646559)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedParcel3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.660000, 0.025000, -5.270000)
+rotation_degrees = Vector3(0.000000, -8.000000, 0.000000)
+scale = Vector3(0.790000, 0.790000, 0.790000)
+mesh = ExtResource("art_station_salt_parcel_obj")
+material_override = SubResource("Paintb95142")
+
+[node name="WaxedTwine45" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0093360,-0.0016458,0.0000000,0.0062670,0.0355500,-0.0445918,0.0012792,0.0072564,0.0059648,8.4920102,0.0585750,-5.5221687)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine46" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094757,-0.0002849,0.0000000,0.0029686,0.0987500,-0.0211224,0.0000596,0.0019811,0.0092705,8.4966280,0.1257250,-5.5550258)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine47" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094796,0.0000858,-0.0000000,-0.0014293,0.1580000,0.0101701,0.0000055,-0.0006089,0.0094604,8.4973976,0.2541000,-5.5605020)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine48" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094425,0.0008428,-0.0000000,-0.0064869,0.0726800,0.0461564,0.0004505,-0.0050477,0.0080117,8.4934395,0.3694400,-5.5323388)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine49" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0084625,-0.0042728,-0.0035183,0.0126400,0.0250340,0.0094063,0.0005319,0.0010534,8.4884370,0.4121000,-5.4967436)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine50" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0094800,-0.0000000,-0.0514551,0.0000000,0.3661219,0.0093877,0.0000000,0.0013194,8.4609503,0.4184200,-5.3011657)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine51" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0087116,0.0037388,-0.0043979,-0.0134300,0.0312925,0.0094019,-0.0004789,0.0011158,8.4330238,0.4117050,-5.1024585)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine52" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094377,0.0008949,0.0000000,-0.0068167,-0.0718900,0.0485033,0.0004990,0.0052622,0.0078696,8.4274165,0.3690450,-5.0625606)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine53" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094797,0.0000691,0.0000000,-0.0012094,-0.1659000,0.0086054,0.0000036,0.0004911,0.0094673,8.4234035,0.2501500,-5.0340062)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine54" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094743,-0.0003296,0.0000000,0.0032984,-0.0948000,-0.0234694,0.0000792,-0.0022755,0.0092025,8.4244480,0.1198000,-5.0414382)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine55" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0093228,-0.0017192,0.0000000,0.0058272,-0.0316000,-0.0414625,0.0013589,-0.0073690,0.0058071,8.4290108,0.0566000,-5.0739041)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine56" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0093360,-0.0016458,0.0000000,0.0062670,0.0355500,-0.0445918,0.0012792,0.0072564,0.0059648,8.8909892,0.0585750,-5.4660959)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine57" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094757,-0.0002849,0.0000000,0.0029686,0.0987500,-0.0211224,0.0000596,0.0019811,0.0092705,8.8956070,0.1257250,-5.4989530)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine58" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094796,0.0000858,-0.0000000,-0.0014293,0.1580000,0.0101701,0.0000055,-0.0006089,0.0094604,8.8963766,0.2541000,-5.5044292)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine59" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0094425,0.0008428,-0.0000000,-0.0064869,0.0726800,0.0461564,0.0004505,-0.0050477,0.0080117,8.8924186,0.3694400,-5.4762660)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine60" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0084625,-0.0042728,-0.0035183,0.0126400,0.0250340,0.0094063,0.0005319,0.0010534,8.8874160,0.4121000,-5.4406708)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine61" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0094800,-0.0000000,-0.0514551,0.0000000,0.3661219,0.0093877,0.0000000,0.0013194,8.8599293,0.4184200,-5.2450928)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine62" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0087116,0.0037388,-0.0043979,-0.0134300,0.0312925,0.0094019,-0.0004789,0.0011158,8.8320028,0.4117050,-5.0463856)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine63" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094377,0.0008949,0.0000000,-0.0068167,-0.0718900,0.0485033,0.0004990,0.0052622,0.0078696,8.8263955,0.3690450,-5.0064877)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine64" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094797,0.0000691,0.0000000,-0.0012094,-0.1659000,0.0086054,0.0000036,0.0004911,0.0094673,8.8223825,0.2501500,-4.9779334)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine65" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0094743,-0.0003296,0.0000000,0.0032984,-0.0948000,-0.0234694,0.0000792,-0.0022755,0.0092025,8.8234270,0.1198000,-4.9853653)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine66" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0093228,-0.0017192,0.0000000,0.0058272,-0.0316000,-0.0414625,0.0013589,-0.0073690,0.0058071,8.8279898,0.0566000,-5.0178313)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedParcel4" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(8.580000, 1.213000, -4.790000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(0.390000, 0.390000, 0.390000)
+mesh = ExtResource("art_station_salt_parcel_obj")
+material_override = SubResource("Painte7d6a9")
+
+[node name="WaxedTwine67" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0045707,-0.0010054,0.0000000,0.0038602,0.0175500,-0.0218923,0.0007771,0.0035330,0.0029693,8.5014634,1.2295750,-4.9173068)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine68" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046767,-0.0001754,0.0000000,0.0018285,0.0487500,-0.0103700,0.0000365,0.0009724,0.0045777,8.5043078,1.2627250,-4.9334380)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine69" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046797,0.0000528,-0.0000000,-0.0008804,0.0780000,0.0049930,0.0000034,-0.0002989,0.0046704,8.5047819,1.3261000,-4.9361265)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine70" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046512,0.0005180,-0.0000000,-0.0039956,0.0358800,0.0226604,0.0002754,-0.0024727,0.0039638,8.5023438,1.3830400,-4.9222998)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine71" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0041730,-0.0021187,-0.0021671,0.0062400,0.0122904,0.0046232,0.0003291,0.0006481,8.4992625,1.4041000,-4.9048244)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine72" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0046800,-0.0000000,-0.0316943,0.0000000,0.1797471,0.0046089,0.0000000,0.0008127,8.4823318,1.4072200,-4.8088056)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine73" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0042969,0.0018544,-0.0027089,-0.0066300,0.0153630,0.0046198,-0.0002964,0.0006867,8.4651302,1.4039050,-4.7112506)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine74" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046476,0.0005499,0.0000000,-0.0041988,-0.0354900,0.0238127,0.0003049,0.0025771,0.0038946,8.4616763,1.3828450,-4.6916627)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine75" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046798,0.0000426,0.0000000,-0.0007450,-0.0819000,0.0042248,0.0000022,0.0002411,0.0046738,8.4592044,1.3241500,-4.6776440)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine76" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046756,-0.0002030,0.0000000,0.0020317,-0.0468000,-0.0115223,0.0000485,-0.0011168,0.0045445,8.4598478,1.2598000,-4.6812927)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine77" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0045608,-0.0010494,0.0000000,0.0035893,-0.0156000,-0.0203560,0.0008249,-0.0035851,0.0028929,8.4626583,1.2286000,-4.6972318)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine78" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0045707,-0.0010054,0.0000000,0.0038602,0.0175500,-0.0218923,0.0007771,0.0035330,0.0029693,8.6973417,1.2295750,-4.8827682)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine79" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046767,-0.0001754,0.0000000,0.0018285,0.0487500,-0.0103700,0.0000365,0.0009724,0.0045777,8.7001861,1.2627250,-4.8988993)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine80" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046797,0.0000528,-0.0000000,-0.0008804,0.0780000,0.0049930,0.0000034,-0.0002989,0.0046704,8.7006601,1.3261000,-4.9015879)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine81" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0046512,0.0005180,-0.0000000,-0.0039956,0.0358800,0.0226604,0.0002754,-0.0024727,0.0039638,8.6982221,1.3830400,-4.8877612)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine82" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0041730,-0.0021187,-0.0021671,0.0062400,0.0122904,0.0046232,0.0003291,0.0006481,8.6951407,1.4041000,-4.8702857)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine83" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(0.0000000,0.0046800,-0.0000000,-0.0316943,0.0000000,0.1797471,0.0046089,0.0000000,0.0008127,8.6782100,1.4072200,-4.7742670)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine84" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0000000,0.0042969,0.0018544,-0.0027089,-0.0066300,0.0153630,0.0046198,-0.0002964,0.0006867,8.6610084,1.4039050,-4.6767119)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine85" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046476,0.0005499,0.0000000,-0.0041988,-0.0354900,0.0238127,0.0003049,0.0025771,0.0038946,8.6575546,1.3828450,-4.6571241)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine86" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046798,0.0000426,0.0000000,-0.0007450,-0.0819000,0.0042248,0.0000022,0.0002411,0.0046738,8.6550827,1.3241500,-4.6431054)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine87" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0046756,-0.0002030,0.0000000,0.0020317,-0.0468000,-0.0115223,0.0000485,-0.0011168,0.0045445,8.6557261,1.2598000,-4.6467541)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="WaxedTwine88" type="MeshInstance3D" parent="Art/WeighHouse"]
+transform = Transform3D(-0.0045608,-0.0010494,0.0000000,0.0035893,-0.0156000,-0.0203560,0.0008249,-0.0035851,0.0028929,8.6585366,1.2286000,-4.6626932)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="SurveyRoll" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.590000, 1.720000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.095_0.5_20_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="RollTie" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.440000, 1.720000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="RollTie2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.720000, 1.720000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="HollowCore" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.334000, 1.720000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.05_0.012_20_None")
+material_override = SubResource("Paint986950")
+
+[node name="SurveyRoll2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.590000, 1.720000, -3.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.095_0.5_20_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="RollTie3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.440000, 1.720000, -3.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="RollTie4" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.720000, 1.720000, -3.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="HollowCore2" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.334000, 1.720000, -3.040000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.05_0.012_20_None")
+material_override = SubResource("Paint986950")
+
+[node name="SurveyRoll3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.590000, 1.884000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.095_0.5_20_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="RollTie5" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.440000, 1.884000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="RollTie6" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.720000, 1.884000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.098_0.025_16_None")
+material_override = SubResource("Paintb95142")
+
+[node name="HollowCore3" type="MeshInstance3D" parent="Art/WeighHouse"]
+position = Vector3(9.334000, 1.884000, -3.240000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.05_0.012_20_None")
+material_override = SubResource("Paint986950")
+
+[node name="BoundaryFurniture" type="Node3D" parent="Art"]
+
+
+[node name="WindowScreen1" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-8.0100000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen2" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-7.8400000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen3" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-7.6700000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen4" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-7.5000000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen5" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-7.3300000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen6" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-7.1600000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen7" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-6.9900000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="ScreenCrosspiece" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(-7.500000, 1.750000, -11.980000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.300000, 0.046000, 0.060000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint986950")
+
+[node name="WindowScreen8" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-2.0100000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen9" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-1.8400000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen10" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-1.6700000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen11" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-1.5000000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen12" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-1.3300000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen13" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-1.1600000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen14" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,-0.9900000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="ScreenCrosspiece2" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(-1.500000, 1.750000, -11.980000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.300000, 0.046000, 0.060000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint986950")
+
+[node name="WindowScreen15" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,6.9900000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen16" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,7.1600000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen17" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,7.3300000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen18" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,7.5000000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen19" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,7.6700000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen20" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,7.8400000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="WindowScreen21" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0180000,0.0000000,0.0000000,0.0000000,1.8800000,0.0000000,0.0000000,0.0000000,0.0180000,8.0100000,1.7800000,-11.9800000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint344843")
+
+[node name="ScreenCrosspiece3" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(7.500000, 1.750000, -11.980000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.300000, 0.046000, 0.060000)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Paint986950")
+
+[node name="Spacer" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.750000, -10.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="Spacer2" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.750000, -8.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="Spacer3" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.750000, -6.790000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="FeedLine1" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119441,0.0011567,0.0000000,-0.0276543,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.7361728,-10.7072222)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine2" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119685,0.0008693,0.0000000,-0.0207407,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.7119753,-10.4216667)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine3" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119860,0.0005804,0.0000000,-0.0138272,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.6946914,-10.1361111)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine4" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119965,0.0002904,0.0000000,-0.0069136,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.6843210,-9.8505556)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine5" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0120000,0.0000000,0.0000000,0.0000000,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.6808642,-9.5650000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine6" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119965,-0.0002904,0.0000000,0.0069136,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.6843210,-9.2794444)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine7" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119860,-0.0005804,0.0000000,0.0138272,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.6946914,-8.9938889)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine8" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119685,-0.0008693,0.0000000,0.0207407,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7119753,-8.7083333)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine9" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119441,-0.0011567,0.0000000,0.0276543,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7361728,-8.4227778)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine10" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119457,0.0011402,0.0000000,-0.0158025,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.7420988,-8.1972222)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine11" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119694,0.0008569,0.0000000,-0.0118519,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.7282716,-8.0316667)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine12" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119864,0.0005721,0.0000000,-0.0079012,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.7183951,-7.8661111)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine13" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119966,0.0002863,0.0000000,-0.0039506,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.7124691,-7.7005556)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine14" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0120000,0.0000000,0.0000000,0.0000000,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.7104938,-7.5350000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine15" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119966,-0.0002863,0.0000000,0.0039506,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7124691,-7.3694444)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine16" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119864,-0.0005721,0.0000000,0.0079012,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7183951,-7.2038889)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine17" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119694,-0.0008569,0.0000000,0.0118519,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7282716,-7.0383333)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine18" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119457,-0.0011402,0.0000000,0.0158025,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7420988,-6.8727778)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="Spacer4" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.850000, -10.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="Spacer5" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.850000, -8.280000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="Spacer6" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+position = Vector3(9.650000, 2.850000, -6.790000)
+rotation_degrees = Vector3(0.000000, 0.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Round_0.065_0.081_16_None")
+material_override = SubResource("Painte7d6a9")
+
+[node name="FeedLine19" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119441,0.0011567,0.0000000,-0.0276543,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.8361728,-10.7072222)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine20" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119685,0.0008693,0.0000000,-0.0207407,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.8119753,-10.4216667)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine21" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119860,0.0005804,0.0000000,-0.0138272,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.7946914,-10.1361111)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine22" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119965,0.0002904,0.0000000,-0.0069136,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.7843210,-9.8505556)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine23" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0120000,0.0000000,0.0000000,0.0000000,0.2855556,0.0120000,0.0000000,0.0000000,9.6200000,2.7808642,-9.5650000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine24" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119965,-0.0002904,0.0000000,0.0069136,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7843210,-9.2794444)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine25" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119860,-0.0005804,0.0000000,0.0138272,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.7946914,-8.9938889)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine26" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119685,-0.0008693,0.0000000,0.0207407,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8119753,-8.7083333)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine27" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119441,-0.0011567,0.0000000,0.0276543,0.2855556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8361728,-8.4227778)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine28" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119457,0.0011402,0.0000000,-0.0158025,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.8420988,-8.1972222)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine29" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119694,0.0008569,0.0000000,-0.0118519,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.8282716,-8.0316667)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine30" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119864,0.0005721,0.0000000,-0.0079012,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.8183951,-7.8661111)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine31" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(-0.0000000,0.0119966,0.0002863,0.0000000,-0.0039506,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.8124691,-7.7005556)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine32" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0120000,0.0000000,0.0000000,0.0000000,0.1655556,0.0120000,0.0000000,0.0000000,9.6200000,2.8104938,-7.5350000)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine33" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119966,-0.0002863,0.0000000,0.0039506,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8124691,-7.3694444)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine34" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119864,-0.0005721,0.0000000,0.0079012,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8183951,-7.2038889)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine35" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119694,-0.0008569,0.0000000,0.0118519,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8282716,-7.0383333)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[node name="FeedLine36" type="MeshInstance3D" parent="Art/BoundaryFurniture"]
+transform = Transform3D(0.0000000,0.0119457,-0.0011402,0.0000000,0.0158025,0.1655556,0.0120000,-0.0000000,0.0000000,9.6200000,2.8420988,-6.8727778)
+mesh = SubResource("Rod")
+material_override = SubResource("Paint514641")
+
+[editable path="BaseLab"]
+

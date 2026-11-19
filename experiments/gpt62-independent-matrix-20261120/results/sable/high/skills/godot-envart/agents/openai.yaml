@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Environment Art"
+  short_description: "Asset-first Godot environments with visual review"
+  default_prompt: "Use $godot-envart to create a coherent environment from my whitebox or visual references, then review actual in-engine images."
