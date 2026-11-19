@@ -1,0 +1,125 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Texture2D" path="res://art/final/textures/WindowGlass.png" id="e1"]
+[ext_resource type="PackedScene" path="res://art/kit/BoardBayB.glb" id="e2"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e1")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s2"]
+size = Vector2(1.43, 2.2)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.27059, 0.32549, 0.32157, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(1.73, 1.49, 0.11)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.20392, 0.29412, 0.30588, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(1.54, 1.33, 0.06)
+material = SubResource("s5")
+
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.44314, 0.42353, 0.34902, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(1.92, 0.084, 0.27)
+material = SubResource("s7")
+
+
+[sub_resource type="StandardMaterial3D" id="s9"]
+albedo_color = Color(0.3451, 0.38039, 0.36078, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(2.72, 0.073, 0.079)
+material = SubResource("s9")
+
+
+[sub_resource type="StandardMaterial3D" id="s11"]
+albedo_color = Color(0.62745, 0.58824, 0.45882, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s12"]
+size = Vector3(0.029, 0.157, 0.034)
+material = SubResource("s11")
+
+
+[sub_resource type="StandardMaterial3D" id="s13"]
+albedo_color = Color(0.3098, 0.35686, 0.33333, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s14"]
+size = Vector3(0.049, 0.17, 0.035)
+material = SubResource("s13")
+
+[node name="StoreFittings" type="Node3D"]
+
+[node name="WindowReflection" type="MeshInstance3D" parent="."]
+position = Vector3(-4.5, 2.02, -11.958)
+mesh = SubResource("s2")
+
+[node name="WindowReflection2" type="MeshInstance3D" parent="."]
+position = Vector3(1.5, 2.02, -11.958)
+mesh = SubResource("s2")
+
+[node name="ReceivingHatch" type="MeshInstance3D" parent="."]
+position = Vector3(4.43, 1.98, -11.8)
+mesh = SubResource("s4")
+
+[node name="ServiceRecess" type="MeshInstance3D" parent="."]
+position = Vector3(4.43, 1.98, -11.72)
+mesh = SubResource("s6")
+
+[node name="MovingShutter" parent="." instance=ExtResource("e2")]
+position = Vector3(4.86, 1.36, -11.7)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.31, 0.4, 0.55)
+
+[node name="HatchSill" type="MeshInstance3D" parent="."]
+position = Vector3(4.43, 1.278, -11.67)
+mesh = SubResource("s8")
+
+[node name="UpperTrack" type="MeshInstance3D" parent="."]
+position = Vector3(4.6, 2.75, -11.7)
+mesh = SubResource("s10")
+
+[node name="Grip" type="MeshInstance3D" parent="."]
+position = Vector3(4.49, 1.81, -11.616)
+mesh = SubResource("s12")
+
+[node name="Hanger" type="MeshInstance3D" parent="."]
+position = Vector3(4.33, 2.69, -11.63)
+mesh = SubResource("s14")
+
+[node name="Hanger2" type="MeshInstance3D" parent="."]
+position = Vector3(5.37, 2.69, -11.63)
+mesh = SubResource("s14")

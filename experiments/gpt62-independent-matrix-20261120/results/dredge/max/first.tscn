@@ -1,0 +1,197 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="PackedScene" path="res://whitebox.tscn" id="e1"]
+[ext_resource type="Texture2D" path="res://art/surfaces/QuaySetts.png" id="e2"]
+[ext_resource type="Texture2D" path="res://art/surfaces/SaltBoards.png" id="e3"]
+[ext_resource type="PackedScene" path="res://art/first/Gate.tscn" id="e4"]
+[ext_resource type="PackedScene" path="res://art/first/Weighhouse.tscn" id="e5"]
+[ext_resource type="PackedScene" path="res://art/first/ColdStore.tscn" id="e6"]
+[ext_resource type="PackedScene" path="res://art/first/LowCase.tscn" id="e7"]
+[ext_resource type="PackedScene" path="res://art/first/BoundCase.tscn" id="e8"]
+[ext_resource type="PackedScene" path="res://art/first/FreightCase.tscn" id="e9"]
+[ext_resource type="PackedScene" path="res://art/coast/OuterSound.glb" id="e10"]
+
+[sub_resource type="ProceduralSkyMaterial" id="s1"]
+sky_top_color = Color(0.39608, 0.52941, 0.58431, 1)
+sky_horizon_color = Color(0.82745, 0.73333, 0.62353, 1)
+ground_horizon_color = Color(0.71373, 0.67843, 0.63137, 1)
+ground_bottom_color = Color(0.43529, 0.48627, 0.50196, 1)
+sky_curve = 0.23
+sun_angle_max = 7
+sun_curve = 0.09
+
+
+[sub_resource type="Sky" id="s2"]
+sky_material = SubResource("s1")
+
+
+[sub_resource type="Environment" id="s3"]
+background_mode = 2
+sky = SubResource("s2")
+ambient_light_source = 2
+ambient_light_color = Color(0.79216, 0.83922, 0.86275, 1)
+ambient_light_energy = 0.62
+reflected_light_source = 2
+tonemap_mode = 2
+ssao_enabled = true
+ssao_intensity = 1.65
+ssao_radius = 0.55
+ssao_power = 1.4
+fog_enabled = true
+fog_light_color = Color(0.78431, 0.69412, 0.63137, 1)
+fog_density = 0.0028
+fog_sky_affect = 0.15
+
+
+[sub_resource type="StandardMaterial3D" id="s4"]
+albedo_color = Color(0.93333, 0.89804, 0.82745, 1)
+roughness = 0.92
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.39, 0.39, 0.39)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.54902, 0.50588, 0.44314, 1)
+roughness = 0.92
+metallic = 0
+albedo_texture = ExtResource("e3")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.51, 0.51, 0.51)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="StandardMaterial3D" id="s6"]
+albedo_color = Color(0.57255, 0.56078, 0.51373, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.64, 0.64, 0.64)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.32157, 0.48235, 0.50196, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(94, 0.12, 52)
+material = SubResource("s7")
+
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(54, 0.12, 58)
+material = SubResource("s7")
+
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(32, 0.12, 52)
+material = SubResource("s7")
+
+
+[node name="GullPoint" instance=ExtResource("e1")]
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("s3")
+
+[node name="Sun" parent="BaseLab" index="2"]
+rotation_degrees = Vector3(-34, -50, 0)
+light_color = Color(1, 0.86667, 0.68235, 1)
+light_energy = 1.2
+light_angular_distance = 0.32
+shadow_enabled = true
+shadow_bias = 0.025
+
+[node name="Mesh" parent="BaseLab/World/Floor" index="0"]
+material_override = SubResource("s4")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorRight" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/BackWall" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpLow" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpMid" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Ramp" index="0"]
+material_override = SubResource("s5")
+
+[node name="Mesh" parent="BaseLab/World/Landing" index="0"]
+material_override = SubResource("s5")
+
+[node name="Mesh" parent="BaseLab/World/Step1" index="0"]
+material_override = SubResource("s6")
+
+[node name="Mesh" parent="BaseLab/World/Step2" index="0"]
+material_override = SubResource("s6")
+
+[node name="Mesh" parent="BaseLab/World/Step3" index="0"]
+material_override = SubResource("s6")
+
+[node name="Mesh" parent="BaseLab/World/Step4" index="0"]
+material_override = SubResource("s6")
+
+[node name="WeighGate" parent="Art" instance=ExtResource("e4")]
+
+[node name="Weighhouse" parent="Art" instance=ExtResource("e5")]
+
+[node name="ColdStore" parent="Art" instance=ExtResource("e6")]
+
+[node name="ShippingDunnage" type="Node3D" parent="Art"]
+
+[node name="LowCase" parent="Art/ShippingDunnage" instance=ExtResource("e7")]
+position = Vector3(1, 0, 1)
+
+[node name="BoundCase" parent="Art/ShippingDunnage" instance=ExtResource("e8")]
+position = Vector3(1, 0, -1)
+
+[node name="FreightCase" parent="Art/ShippingDunnage" instance=ExtResource("e9")]
+position = Vector3(3, 0, -3)
+
+[node name="SoundBeyondTheQuay" type="Node3D" parent="Art"]
+
+[node name="Headlands" parent="Art/SoundBeyondTheQuay" instance=ExtResource("e10")]
+
+[node name="NorthWater" type="MeshInstance3D" parent="Art/SoundBeyondTheQuay"]
+position = Vector3(8, -1.72, -42)
+mesh = SubResource("s8")
+
+[node name="OuterWater" type="MeshInstance3D" parent="Art/SoundBeyondTheQuay"]
+position = Vector3(43, -1.72, 13)
+mesh = SubResource("s9")
+
+[node name="SouthWater" type="MeshInstance3D" parent="Art/SoundBeyondTheQuay"]
+position = Vector3(0, -1.72, 42)
+mesh = SubResource("s10")
+
+[editable path="BaseLab"]

@@ -1,0 +1,707 @@
+[gd_scene load_steps=71 format=3]
+
+[ext_resource type="PackedScene" path="res://art/kit/BoardRailBay.glb" id="e1"]
+[ext_resource type="Texture2D" path="res://art/surfaces/SawGrain.png" id="e2"]
+[ext_resource type="PackedScene" path="res://art/kit/SashBay.glb" id="e3"]
+[ext_resource type="PackedScene" path="res://art/kit/BoardBayB.glb" id="e4"]
+[ext_resource type="PackedScene" path="res://art/kit/LimeBay.glb" id="e5"]
+[ext_resource type="PackedScene" path="res://art/kit/ShedSheet.glb" id="e6"]
+[ext_resource type="Texture2D" path="res://art/surfaces/SaltBoards.png" id="e7"]
+[ext_resource type="PackedScene" path="res://art/kit/FloorBoards.glb" id="e8"]
+[ext_resource type="PackedScene" path="res://art/kit/TrestleTable.glb" id="e9"]
+[ext_resource type="PackedScene" path="res://art/kit/ButcherBlock.glb" id="e10"]
+[ext_resource type="PackedScene" path="res://art/kit/SilverCatch.glb" id="e11"]
+[ext_resource type="PackedScene" path="res://art/kit/Cleaver.glb" id="e12"]
+[ext_resource type="PackedScene" path="res://art/kit/LandingBox.glb" id="e13"]
+[ext_resource type="PackedScene" path="res://art/kit/BrineCask.glb" id="e14"]
+[ext_resource type="PackedScene" path="res://art/tackle/Crosscut.glb" id="e15"]
+[ext_resource type="PackedScene" path="res://art/tackle/SpringBalance.glb" id="e16"]
+[ext_resource type="PackedScene" path="res://art/kit/BracketShelf.glb" id="e17"]
+[ext_resource type="PackedScene" path="res://art/kit/EnamelTray.glb" id="e18"]
+[ext_resource type="PackedScene" path="res://art/kit/OpenMussel.glb" id="e19"]
+[ext_resource type="Texture2D" path="res://art/print/LandingsSlate.png" id="e20"]
+[ext_resource type="PackedScene" path="res://art/tackle/EnamelShade.glb" id="e21"]
+[ext_resource type="Texture2D" path="res://art/print/BoxStamp.png" id="e22"]
+[ext_resource type="PackedScene" path="res://art/tackle/RinsePail.glb" id="e23"]
+[ext_resource type="PackedScene" path="res://art/tackle/LaidLine.glb" id="e24"]
+[ext_resource type="PackedScene" path="res://art/tackle/DryingNet.glb" id="e25"]
+[ext_resource type="PackedScene" path="res://art/tackle/PotMarker.glb" id="e26"]
+[ext_resource type="PackedScene" path="res://art/kit/Oar.glb" id="e27"]
+[ext_resource type="PackedScene" path="res://art/kit/BottleBox.glb" id="e28"]
+[ext_resource type="Texture2D" path="res://art/print/WeighHouseEnamel.png" id="e29"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(0.37255, 0.39608, 0.3451, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(0.085, 0.18, 2.48)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.27843, 0.34902, 0.32549, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(0.025, 1.58, 0.99)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.4, 0.39216, 0.32157, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(1.98, 0.18, 0.075)
+material = SubResource("s5")
+
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.4, 0.31765, 0.2549, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(4.1, 0.13, 0.55)
+material = SubResource("s7")
+
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(0.54, 0.13, 10.04)
+material = SubResource("s7")
+
+
+[sub_resource type="StandardMaterial3D" id="s10"]
+albedo_color = Color(0.3451, 0.39216, 0.35294, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e7")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s11"]
+size = Vector3(0.33, 0.47, 2.35)
+material = SubResource("s10")
+
+
+[sub_resource type="StandardMaterial3D" id="s12"]
+albedo_color = Color(0.4549, 0.36078, 0.28627, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s13"]
+size = Vector3(0.16, 0.19, 7.14)
+material = SubResource("s12")
+
+
+[sub_resource type="StandardMaterial3D" id="s14"]
+albedo_color = Color(0.44314, 0.35686, 0.28235, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s15"]
+size = Vector3(0.125, 2.72606, 0.12)
+material = SubResource("s14")
+
+
+[sub_resource type="StandardMaterial3D" id="s16"]
+albedo_color = Color(0.4902, 0.40392, 0.30588, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s17"]
+size = Vector3(0.125, 2.00552, 0.14)
+material = SubResource("s16")
+
+
+[sub_resource type="BoxMesh" id="s18"]
+size = Vector3(0.14, 0.55, 0.23)
+material = SubResource("s12")
+
+
+[sub_resource type="BoxMesh" id="s19"]
+size = Vector3(0.08, 0.1, 7.1)
+material = SubResource("s7")
+
+
+[sub_resource type="StandardMaterial3D" id="s20"]
+albedo_color = Color(0.40392, 0.35294, 0.27059, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s21"]
+size = Vector3(0.09, 0.016, 7.6)
+material = SubResource("s20")
+
+
+[sub_resource type="BoxMesh" id="s22"]
+size = Vector3(0.095, 1.15, 0.095)
+material = SubResource("s7")
+
+
+[sub_resource type="BoxMesh" id="s23"]
+size = Vector3(0.067, 0.92439, 0.067)
+material = SubResource("s12")
+
+
+[sub_resource type="StandardMaterial3D" id="s24"]
+albedo_color = Color(0.45882, 0.42745, 0.33725, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s25"]
+size = Vector3(0.021, 0.513, 0.021)
+material = SubResource("s24")
+
+
+[sub_resource type="StandardMaterial3D" id="s26"]
+albedo_color = Color(0.36863, 0.28627, 0.23137, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s27"]
+size = Vector3(0.86, 1.07, 0.052)
+material = SubResource("s26")
+
+
+[sub_resource type="StandardMaterial3D" id="s28"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e20")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s29"]
+size = Vector2(0.8, 1.01)
+material = SubResource("s28")
+
+
+[sub_resource type="StandardMaterial3D" id="s30"]
+albedo_color = Color(0.29804, 0.30196, 0.27059, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s31"]
+size = Vector3(0.019, 0.46, 0.019)
+material = SubResource("s30")
+
+
+[sub_resource type="StandardMaterial3D" id="s32"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e22")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s33"]
+size = Vector2(0.36, 0.144)
+material = SubResource("s32")
+
+
+[sub_resource type="StandardMaterial3D" id="s34"]
+albedo_color = Color(0.46667, 0.37647, 0.26667, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s35"]
+size = Vector3(2.83, 0.125, 0.095)
+material = SubResource("s34")
+
+
+[sub_resource type="StandardMaterial3D" id="s36"]
+albedo_color = Color(0.63529, 0.54902, 0.41176, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s37"]
+size = Vector3(0.014, 0.38647, 0.014)
+material = SubResource("s36")
+
+
+[sub_resource type="BoxMesh" id="s38"]
+size = Vector3(0.014, 0.6603, 0.014)
+material = SubResource("s36")
+
+
+[sub_resource type="BoxMesh" id="s39"]
+size = Vector3(0.95, 0.43, 0.052)
+material = SubResource("s26")
+
+
+[sub_resource type="StandardMaterial3D" id="s40"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e29")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s41"]
+size = Vector2(0.89, 0.37)
+material = SubResource("s40")
+
+[node name="CoveredWeighHouse" type="Node3D"]
+
+[node name="CladEnclosure" type="Node3D" parent="."]
+
+[node name="CantileverRoof" type="Node3D" parent="."]
+
+[node name="WorkshopBay" parent="CladEnclosure" instance=ExtResource("e1")]
+position = Vector3(10, 0, -9.75)
+
+[node name="KickRail" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(9.733, 0.235, -9.75)
+mesh = SubResource("s2")
+
+[node name="WorkshopBay2" parent="CladEnclosure" instance=ExtResource("e3")]
+position = Vector3(10, 0, -7.25)
+
+[node name="WindowGlazing" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(10, 1.57, -7.25)
+mesh = SubResource("s4")
+
+[node name="KickRail2" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(9.733, 0.235, -7.25)
+mesh = SubResource("s2")
+
+[node name="WorkshopBay3" parent="CladEnclosure" instance=ExtResource("e4")]
+position = Vector3(10, 0, -4.75)
+
+[node name="KickRail3" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(9.733, 0.235, -4.75)
+mesh = SubResource("s2")
+
+[node name="WorkshopBay4" parent="CladEnclosure" instance=ExtResource("e5")]
+position = Vector3(10, 0, -2.25)
+
+[node name="KickRail4" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(9.733, 0.235, -2.25)
+mesh = SubResource("s2")
+
+[node name="ReturnBay" parent="CladEnclosure" instance=ExtResource("e5")]
+position = Vector3(7, 0, -1)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1, 0.8)
+
+[node name="ReturnRubRail" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(7, 0.235, -1.259)
+mesh = SubResource("s6")
+
+[node name="ReturnBay2" parent="CladEnclosure" instance=ExtResource("e1")]
+position = Vector3(9, 0, -1)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1, 0.8)
+
+[node name="ReturnRubRail2" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(9, 0.235, -1.259)
+mesh = SubResource("s6")
+
+[node name="EndCoping" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(8, 3.15, -1)
+mesh = SubResource("s8")
+
+[node name="LongWallCoping" type="MeshInstance3D" parent="CladEnclosure"]
+position = Vector3(10, 3.14, -6)
+mesh = SubResource("s9")
+
+[node name="StandingSeamBay" parent="CantileverRoof" instance=ExtResource("e6")]
+position = Vector3(8.84, 3.03, -7.191)
+scale = Vector3(1, 1, 0.942)
+
+[node name="RaisedBackboard" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(10.01, 3.37, -7.191)
+mesh = SubResource("s11")
+
+[node name="StandingSeamBay2" parent="CantileverRoof" instance=ExtResource("e6")]
+position = Vector3(8.84, 3.03, -4.841)
+scale = Vector3(1, 1, 0.942)
+
+[node name="RaisedBackboard2" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(10.01, 3.37, -4.841)
+mesh = SubResource("s11")
+
+[node name="StandingSeamBay3" parent="CantileverRoof" instance=ExtResource("e6")]
+position = Vector3(8.84, 3.03, -2.491)
+scale = Vector3(1, 1, 0.942)
+
+[node name="RaisedBackboard3" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(10.01, 3.37, -2.491)
+mesh = SubResource("s11")
+
+[node name="OuterPlate" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(7.57, 3.045, -4.84)
+mesh = SubResource("s13")
+
+[node name="Rafter" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.795, 3.365, -8.34)
+rotation_degrees = Vector3(78.36031, 90, 0)
+mesh = SubResource("s15")
+
+[node name="WallKnee" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.83, 2.705, -8.34)
+rotation_degrees = Vector3(68.03944, -90, 0)
+mesh = SubResource("s17")
+
+[node name="BearingCleat" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(9.69, 2.56, -8.34)
+mesh = SubResource("s18")
+
+[node name="Rafter2" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.795, 3.365, -6)
+rotation_degrees = Vector3(78.36031, 90, 0)
+mesh = SubResource("s15")
+
+[node name="WallKnee2" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.83, 2.705, -6)
+rotation_degrees = Vector3(68.03944, -90, 0)
+mesh = SubResource("s17")
+
+[node name="BearingCleat2" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(9.69, 2.56, -6)
+mesh = SubResource("s18")
+
+[node name="Rafter3" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.795, 3.365, -3.65)
+rotation_degrees = Vector3(78.36031, 90, 0)
+mesh = SubResource("s15")
+
+[node name="WallKnee3" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.83, 2.705, -3.65)
+rotation_degrees = Vector3(68.03944, -90, 0)
+mesh = SubResource("s17")
+
+[node name="BearingCleat3" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(9.69, 2.56, -3.65)
+mesh = SubResource("s18")
+
+[node name="Rafter4" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.795, 3.365, -1.35)
+rotation_degrees = Vector3(78.36031, 90, 0)
+mesh = SubResource("s15")
+
+[node name="WallKnee4" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.83, 2.705, -1.35)
+rotation_degrees = Vector3(68.03944, -90, 0)
+mesh = SubResource("s17")
+
+[node name="BearingCleat4" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(9.69, 2.56, -1.35)
+mesh = SubResource("s18")
+
+[node name="Purlin" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(8.24, 3.2554, -4.84)
+mesh = SubResource("s19")
+
+[node name="Purlin2" type="MeshInstance3D" parent="CantileverRoof"]
+position = Vector3(9.14, 3.4444, -4.84)
+mesh = SubResource("s19")
+
+[node name="WashDeck" type="Node3D" parent="."]
+
+[node name="DrainBoards" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(8.11, -0.058, -8.56)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards2" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(8.11, -0.058, -6.67)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards3" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(8.11, -0.058, -4.78)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards4" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(8.11, -0.058, -2.89)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards5" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(9.23, -0.058, -8.56)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards6" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(9.23, -0.058, -6.67)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards7" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(9.23, -0.058, -4.78)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="DrainBoards8" parent="WashDeck" instance=ExtResource("e8")]
+position = Vector3(9.23, -0.058, -2.89)
+scale = Vector3(0.934, 1, 0.891)
+
+[node name="ApronEdging" type="MeshInstance3D" parent="WashDeck"]
+position = Vector3(7.535, 0.003, -5.73)
+mesh = SubResource("s21")
+
+[node name="WeighAndCut" type="Node3D" parent="."]
+
+[node name="SortingTrestle" parent="WeighAndCut" instance=ExtResource("e9")]
+position = Vector3(8.89, 0.004, -4.65)
+
+[node name="MapleBlock" parent="WeighAndCut" instance=ExtResource("e10")]
+position = Vector3(8.81, 0.934, -5.18)
+rotation_degrees = Vector3(0, -6, 0)
+
+[node name="LandedFish" parent="WeighAndCut" instance=ExtResource("e11")]
+position = Vector3(8.95686, 1.0515, -5.13383)
+rotation_degrees = Vector3(0, -20, 90)
+
+[node name="DeckCleaver" parent="WeighAndCut" instance=ExtResource("e12")]
+position = Vector3(8.68, 0.992, -4.8)
+rotation_degrees = Vector3(0, -34, 0)
+
+[node name="ReceivingBox" parent="WeighAndCut" instance=ExtResource("e13")]
+position = Vector3(8.48, 0.004, -6.63)
+rotation_degrees = Vector3(0, -9, 0)
+
+[node name="SaltBarrel" parent="WeighAndCut" instance=ExtResource("e14")]
+position = Vector3(9.18, 0.004, -6.83)
+rotation_degrees = Vector3(0, -13, 0)
+
+[node name="Steak" parent="WeighAndCut" instance=ExtResource("e15")]
+position = Vector3(8.61, 0.989, -5.46)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(1.02, 1.02, 1.02)
+
+[node name="Steak2" parent="WeighAndCut" instance=ExtResource("e15")]
+position = Vector3(8.71, 0.989, -5.47)
+rotation_degrees = Vector3(0, -18, 0)
+scale = Vector3(0.72, 0.72, 0.72)
+
+[node name="HangerRail" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(9.165, 2.89, -3.91)
+rotation_degrees = Vector3(90, -90, 0)
+mesh = SubResource("s22")
+
+[node name="RailKnee" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(9.295, 2.62, -3.91)
+rotation_degrees = Vector3(58.71735, -90, 0)
+mesh = SubResource("s23")
+
+[node name="Suspension" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(8.66, 2.6435, -3.91)
+rotation_degrees = Vector3(180, 0, 0)
+mesh = SubResource("s25")
+
+[node name="CertifiedSpringBalance" parent="WeighAndCut" instance=ExtResource("e16")]
+position = Vector3(8.66, 2.02, -3.91)
+rotation_degrees = Vector3(0, -123, 0)
+
+[node name="WeighedMackerel" parent="WeighAndCut" instance=ExtResource("e11")]
+position = Vector3(8.6965, 1.22825, -3.82558)
+rotation_degrees = Vector3(0, -58, 90)
+scale = Vector3(0.62, 0.65, 0.7)
+
+[node name="WrappingShelf" parent="WeighAndCut" instance=ExtResource("e17")]
+position = Vector3(9.55, 1.1, -3.28)
+
+[node name="ShellTray" parent="WeighAndCut" instance=ExtResource("e18")]
+position = Vector3(9.54, 1.382, -3.04)
+rotation_degrees = Vector3(0, -8, 0)
+
+[node name="ShellSample" parent="WeighAndCut" instance=ExtResource("e19")]
+position = Vector3(9.502, 1.415, -3.11)
+
+[node name="ShellSample2" parent="WeighAndCut" instance=ExtResource("e19")]
+position = Vector3(9.58, 1.415, -3)
+rotation_degrees = Vector3(0, 49, 0)
+
+[node name="ShellSample3" parent="WeighAndCut" instance=ExtResource("e19")]
+position = Vector3(9.49, 1.415, -2.975)
+rotation_degrees = Vector3(0, 98, 0)
+
+[node name="ShellSample4" parent="WeighAndCut" instance=ExtResource("e19")]
+position = Vector3(9.586, 1.415, -3.088)
+rotation_degrees = Vector3(0, 147, 0)
+
+[node name="DailyLandingsFrame" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(9.72, 2.02, -5.62)
+rotation_degrees = Vector3(0, -90, 0)
+mesh = SubResource("s27")
+
+[node name="DailyLandings" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(9.692, 2.02, -5.62)
+rotation_degrees = Vector3(0, -90, 0)
+mesh = SubResource("s29")
+
+[node name="PendantLead" type="MeshInstance3D" parent="WeighAndCut"]
+position = Vector3(8.54, 2.97, -5.51)
+rotation_degrees = Vector3(180, 0, 0)
+mesh = SubResource("s31")
+
+[node name="BenchLamp" parent="WeighAndCut" instance=ExtResource("e21")]
+position = Vector3(8.54, 2.74, -5.51)
+
+[node name="WarmPool" type="OmniLight3D" parent="WeighAndCut"]
+position = Vector3(8.53, 2.39, -5.51)
+light_color = Color(1, 0.82353, 0.56471, 1)
+light_energy = 1.34
+omni_range = 3.15
+omni_attenuation = 1.45
+shadow_enabled = false
+
+[node name="IncomingLots" type="Node3D" parent="."]
+
+[node name="BoxedCatch" parent="IncomingLots" instance=ExtResource("e11")]
+position = Vector3(8.44957, 0.278, -6.60741)
+rotation_degrees = Vector3(0, -8, 90)
+scale = Vector3(0.64, 0.67, 0.82)
+
+[node name="BoxedCatch2" parent="IncomingLots" instance=ExtResource("e11")]
+position = Vector3(8.57957, 0.296, -6.59556)
+rotation_degrees = Vector3(0, 8, 90)
+scale = Vector3(0.64, 0.67, 0.82)
+
+[node name="BoxedCatch3" parent="IncomingLots" instance=ExtResource("e11")]
+position = Vector3(8.71011, 0.314, -6.57211)
+rotation_degrees = Vector3(0, -5, 90)
+scale = Vector3(0.64, 0.67, 0.82)
+
+[node name="BoxEnd" type="MeshInstance3D" parent="IncomingLots"]
+position = Vector3(8.424, 0.217, -7.025)
+rotation_degrees = Vector3(0, 171, 0)
+mesh = SubResource("s33")
+
+[node name="SpareBox" parent="IncomingLots" instance=ExtResource("e13")]
+position = Vector3(8.86, 0.012, -3.77)
+rotation_degrees = Vector3(0, 3, 0)
+scale = Vector3(0.86, 0.87, 1.1)
+
+[node name="WashPail" parent="IncomingLots" instance=ExtResource("e23")]
+position = Vector3(8.31, 0.012, -5.67)
+
+[node name="LineCoil" parent="IncomingLots" instance=ExtResource("e24")]
+position = Vector3(8.38, 0.015, -7.54)
+rotation_degrees = Vector3(0, 20, 0)
+
+[node name="NetLoft" type="Node3D" parent="."]
+
+[node name="HangingRail" type="MeshInstance3D" parent="NetLoft"]
+position = Vector3(8.29, 2.41, -1.27)
+mesh = SubResource("s35")
+
+[node name="RinsedMesh" parent="NetLoft" instance=ExtResource("e25")]
+position = Vector3(8.5, 2.41, -1.32)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="FloatLine" type="MeshInstance3D" parent="NetLoft"]
+position = Vector3(7.25, 2.22735, -1.355)
+rotation_degrees = Vector3(175.54785, 180, 0)
+mesh = SubResource("s37")
+
+[node name="Float" parent="NetLoft" instance=ExtResource("e26")]
+position = Vector3(7.25, 1.53, -1.37)
+rotation_degrees = Vector3(0, 15, -3)
+scale = Vector3(1.03, 1.03, 1.03)
+
+[node name="FloatLine2" type="MeshInstance3D" parent="NetLoft"]
+position = Vector3(7.05, 2.0908, -1.365)
+rotation_degrees = Vector3(175.6572, 180, 0)
+mesh = SubResource("s38")
+
+[node name="Float2" parent="NetLoft" instance=ExtResource("e26")]
+position = Vector3(7.05, 1.35, -1.39)
+rotation_degrees = Vector3(0, 15, 5)
+scale = Vector3(0.84, 0.84, 0.84)
+
+[node name="Oar" parent="NetLoft" instance=ExtResource("e27")]
+position = Vector3(6.71, 0.024, -1.51)
+rotation_degrees = Vector3(7, 16, -11)
+
+[node name="PackingBox" parent="NetLoft" instance=ExtResource("e13")]
+position = Vector3(9.17, 0.008, -1.99)
+rotation_degrees = Vector3(0, -4, 0)
+
+[node name="BottleCarrier" parent="NetLoft" instance=ExtResource("e28")]
+position = Vector3(9.15, 0.17, -1.97)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(0.75, 0.74, 0.82)
+
+[node name="BayNumberFrame" type="MeshInstance3D" parent="NetLoft"]
+position = Vector3(6.98, 2.88, -1.282)
+rotation_degrees = Vector3(0, 180, 0)
+mesh = SubResource("s39")
+
+[node name="BayNumber" type="MeshInstance3D" parent="NetLoft"]
+position = Vector3(6.98, 2.88, -1.31)
+rotation_degrees = Vector3(0, 180, 0)
+mesh = SubResource("s41")
+

@@ -1,0 +1,131 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="PackedScene" path="res://art/kit/BoardRailBay.glb" id="e1"]
+[ext_resource type="PackedScene" path="res://art/kit/BoardBayB.glb" id="e2"]
+[ext_resource type="PackedScene" path="res://art/kit/SashBay.glb" id="e3"]
+[ext_resource type="PackedScene" path="res://art/kit/LimeBay.glb" id="e4"]
+[ext_resource type="Texture2D" path="res://art/surfaces/SawGrain.png" id="e5"]
+[ext_resource type="PackedScene" path="res://art/kit/StoreRoof.glb" id="e6"]
+[ext_resource type="PackedScene" path="res://art/kit/Flue.glb" id="e7"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(0.30588, 0.37647, 0.36078, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(1.28, 2.13, 0.033)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.4549, 0.36078, 0.28627, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e5")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(24.1, 0.17, 0.6)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.38431, 0.41961, 0.39216, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(0.066, 4, 0.075)
+material = SubResource("s5")
+
+[node name="ColdStoreFrontage" type="Node3D"]
+
+[node name="QuaysideWall" type="Node3D" parent="."]
+
+[node name="StoreBay" parent="QuaysideWall" instance=ExtResource("e1")]
+position = Vector3(-10.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="StoreBay2" parent="QuaysideWall" instance=ExtResource("e2")]
+position = Vector3(-7.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="StoreBay3" parent="QuaysideWall" instance=ExtResource("e3")]
+position = Vector3(-4.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="DarkPane" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(-4.5, 2.02, -12)
+mesh = SubResource("s2")
+
+[node name="StoreBay4" parent="QuaysideWall" instance=ExtResource("e4")]
+position = Vector3(-1.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="StoreBay5" parent="QuaysideWall" instance=ExtResource("e3")]
+position = Vector3(1.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="DarkPane2" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(1.5, 2.02, -12)
+mesh = SubResource("s2")
+
+[node name="StoreBay6" parent="QuaysideWall" instance=ExtResource("e4")]
+position = Vector3(4.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="StoreBay7" parent="QuaysideWall" instance=ExtResource("e1")]
+position = Vector3(7.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="StoreBay8" parent="QuaysideWall" instance=ExtResource("e2")]
+position = Vector3(10.5, 0, -12)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1, 1.27707, 1.2)
+
+[node name="SeaWallCoping" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(0, 4.035, -12)
+mesh = SubResource("s4")
+
+[node name="StoreRoof" parent="QuaysideWall" instance=ExtResource("e6")]
+position = Vector3(-5.82, 4.06, -12.79)
+scale = Vector3(1.20435, 0.9, 1)
+
+[node name="StoreRoof2" parent="QuaysideWall" instance=ExtResource("e6")]
+position = Vector3(-0.13, 4.06, -12.79)
+scale = Vector3(1.26522, 0.99, 1)
+
+[node name="StoreRoof3" parent="QuaysideWall" instance=ExtResource("e6")]
+position = Vector3(5.09, 4.06, -12.79)
+scale = Vector3(1.02609, 1.08, 1)
+
+[node name="StoveFlue" parent="QuaysideWall" instance=ExtResource("e7")]
+position = Vector3(0.66, 4.91, -12.64)
+
+[node name="Drain" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(-7.55, 2, -11.71)
+mesh = SubResource("s6")
+
+[node name="Drain2" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(2.98, 2, -11.71)
+mesh = SubResource("s6")
+
+[node name="Drain3" type="MeshInstance3D" parent="QuaysideWall"]
+position = Vector3(7.06, 2, -11.71)
+mesh = SubResource("s6")
+

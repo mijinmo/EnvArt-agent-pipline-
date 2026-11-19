@@ -7498,6 +7498,431 @@
         ],
         "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
       }
+    },
+    "max": {
+      "game": "dredge",
+      "effort": "max",
+      "session_ids": [
+        "01a1f546-093a-76d1-b69f-b198caac6bdc"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "max",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 9741484,
+        "cached_input": 9543424,
+        "uncached_input": 198060,
+        "output": 74484,
+        "reasoning_output": 26378,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "e25e76cd88602a7cc8afdc362b4270de41678ea6",
+      "source_commits": [
+        "6b3f1fdbf75026e4fcf3c1ffc1ddd26b7fa584c8 Freeze neutral whitebox, references and production instructions",
+        "77a22562aa0840bca314d585c7b8cb9685c47772 Establish the Gull Point landing study from the three frozen references",
+        "fba9f723a342d581656676603e497db572d1ecce Audition full-length timber and limewash bays with working catch and sourced materials",
+        "7723d4ce21c61f3028c6c4dcfce967f8196c6e89 Build and freeze the first playable fish exchange and its three inspected views",
+        "e25e76cd88602a7cc8afdc362b4270de41678ea6 Revise the exchange lighting, clear the gate sign and finish the weighing bench"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "a74755dc21ebdb0b0e31227d11f3208b022fea40b2ca369714b5101c69e3b721",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1013799
+        },
+        "captures/first/props.png": {
+          "sha256": "b634bee8a96e1058fb23063699589d87d992c17571812df8f08cfa637651c068",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1032126
+        },
+        "captures/first/close.png": {
+          "sha256": "3abba79c9c22cd23bcb762ea6c3b56e5d8d55f299888c4ffb897d2e267185558",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 1062904
+        },
+        "captures/final/door.png": {
+          "sha256": "8e94df253d7466d329e22f8b01effbae92540493ca7f94961b706dce56745b3c",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 968153
+        },
+        "captures/final/props.png": {
+          "sha256": "bda599410b259974fabb5f389b83f016a4bf2652656dd922a40ea5b1cdaa44c1",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 970963
+        },
+        "captures/final/close.png": {
+          "sha256": "5ce3981760dd425b8f70b696d033e06b7f3b6aae4eb48aea2ee6ebb8abaaaaf3",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 988710
+        }
+      },
+      "protected_input_changes": [],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      },
+      "project_settings_check": {
+        "only_main_scene_change": true,
+        "main_scene": [
+          "run/main_scene=\"res://final.tscn\""
+        ],
+        "scope": "Exact line comparison excluding only run/main_scene; cache identity checked separately."
+      },
+      "base_lab_scene_override_check": {
+        "nonvisual_property_overrides": [],
+        "scope": "Static final.tscn inherited-node inspection only; unchanged base source separately hashed. Does not prove added-prop clearance or replace manual traversal."
+      },
+      "first_commit": "7723d4ce21c61f3028c6c4dcfce967f8196c6e89",
+      "first_dependency_changes": [],
+      "preexisting_resource_changes_after_first": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 78,
+      "view_image_blocks_with_literal_tool_name": 9,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed own-file reference/whitebox/sample/first/final image calls and public asset sources. No flagged peer/host art or solution reads and no further delegation observed in available records; untested tool surfaces remain outside absolute isolation claims.",
+      "technical_summary": "小样白色材质丢失已修复并重拍，原失败图补存；终版出图前修复小数语法。两轮三机位正常、首轮冻结；无窗口检查有系统 CA 提示，未手动通行验收。",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 6,
+      "coordinator_preflight_capture_log_count": 0,
+      "capture_logs_with_error_strings": [],
+      "collected_files": 230,
+      "collected_bytes": 16566524,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "3ee42e3fddfaf0aa76839b6bd7532ee979aaffad6c8335ff2a6bb86598293d02",
+        "ENVIRONMENT.md": "4ac1c828feeb545d6463fb0d4dda05b329b9611c7035458b931adab84e865a3c",
+        "README.md": "a55e26f901300cfd423e0bb31b876198cdcfc149c50d3fd7f6f902e7c7f162a0",
+        "REFERENCES.md": "1b5060590edd917eba2e0a82a4ecbf484f2db5f558c2eba1c87630807e80de18",
+        "RESEARCH.md": "f71abc33286e008597bbb6a2297b3d0ce2e53da2a2d20cbbefdef213ee048377",
+        "REVIEW.md": "33890961824e5c155d1c5391cbde15fc831c385cb452c00e725d9edc3fd864a0",
+        "art/coast/OuterSound.glb": "79b5b308744fa41a0d3d44526439e36bcc3bf5c23043c944339c4a772343f7ae",
+        "art/coast/OuterSound.glb.import": "d3a73984f6cb13a30c904ad0e7c5507fa72108192b26d2e47476f5914d1c49d6",
+        "art/final/BoundCase.tscn": "61c8544e659db36686370cea66575fdfca15aaf05363aa6be6cccfc7a6c68f93",
+        "art/final/ColdStore.tscn": "4c687ca321790054fad687305e86e180796b6784948439478be2f4b1a761a437",
+        "art/final/FreightCase.tscn": "ead996ae97d32196366ac3bcdad7f5206b56f30b0e620bc4a0926f7a82a384f3",
+        "art/final/Gate.tscn": "9cf4a9eb8d4b0ed290a9c9daa5b26e1be3699d4ec7d600c1de11118030c13c7c",
+        "art/final/GateIronwork.tscn": "9e994f7ca58ca336c6849b0d3452a6358a7c734c9d0b1c4118a2d30e4a271ace",
+        "art/final/LowCase.tscn": "594dd6a9dd538dee406be8dae707b65454db3df48b60865750c2ac830e00c54b",
+        "art/final/Packing.tscn": "98a664e87493fb23acbb1fbb304a3e07548bee6f46fada14d002f09b32d9ff7b",
+        "art/final/StoreFittings.tscn": "b2c8fdf97b3c80ace36ae0d0e745969bfaea38293a22e6b408da77a57cb04c3d",
+        "art/final/Weighhouse.tscn": "0c3d6a8f5562d78c5f584e9070d650906fbff669f3b6e9ec7a1b9d7c13d33660",
+        "art/final/models/BoardBayB.glb": "7430ca9b4372e24b859af74c63b4fb1e08528ca6125befb539c6ee3f4e992dc0",
+        "art/final/models/BoardBayB.glb.import": "12989dc88addd8a0c34b874e9848907caaadb617a5354c886690347ef502179d",
+        "art/final/models/BoardRailBay.glb": "72ac2f6ec4295a7072c30be2794a26f0bbbd9d6426d71c45f0ffe2ec9f329513",
+        "art/final/models/BoardRailBay.glb.import": "fec16dc29375dc6f66a0d7630be8cdfe5db0db692f5b3cf0282d49f7e6ec04b5",
+        "art/final/models/BoxIce.glb": "4d08547618de341a7794a53a91b5611bb0deaffd6d66861e4f610baa1fa8d4ed",
+        "art/final/models/BoxIce.glb.import": "ead160dfe2be69d929af8be6901284b398be4810d5aeef07566c145ac2c06759",
+        "art/final/models/CasePlanks.glb": "b06a15c54038937c9c0b1be328cd024e4f8a47cb0fe25aca4b0580aa54b42ead",
+        "art/final/models/CasePlanks.glb.import": "31dd65a484f8275d8700230084796520338a06ba4c62b9336626ea44a40c4ab4",
+        "art/final/models/DrainPlanks.glb": "e307bbd2e8bcde777904fc75ad040f80a5cee480a8bd7601b67b2d3f674312c0",
+        "art/final/models/DrainPlanks.glb.import": "a085ee31b77a76fcc99b753dc976a5c3d1948197543140dd55a5a817b294f77b",
+        "art/final/models/GableCap.glb": "bdaed9f9207c52a0ef30ea0b3f4977380946e51cf20567a6999a5da535bcc50e",
+        "art/final/models/GableCap.glb.import": "f02daa598ffcba051482e38c2eae95b150fbe431ea6a83c07f0b0888c6a22b85",
+        "art/final/models/GableVent.glb": "afa410383bebfa404cf99363f7bb9293d3f0dd1313e3a64817a1934ad3571f20",
+        "art/final/models/GableVent.glb.import": "46de9d075285d95a4a04f917d0152666a7e552a8c2e22bb7ad7489eb5de85fd5",
+        "art/final/models/GateLamp.glb": "5cdee8461a6a4f6aa7303029f89ea43b79cf8e5111230f324b1134648a808e3c",
+        "art/final/models/GateLamp.glb.import": "c1b9d49bb68bb630f31e9e9e290b543952ca5fc102327a1d123bf6173fdae91d",
+        "art/final/models/LimeBay.glb": "023b9a4c947c30391ae3afe6449b9bfac195d9d0af996cfed33eda41993a7383",
+        "art/final/models/LimeBay.glb.import": "a2bd4c892436d06a063808d0a0c7f2206d15425cf38d4f163c2e3ab26e7abe65",
+        "art/final/models/Mackerel.glb": "82e7f208fdcbde5de30c2c8881a8fda02438f783e95b85e973b768ae6219f0d6",
+        "art/final/models/Mackerel.glb.import": "cff2d2664a72632a47f28f055577eb9294f5d65ab07bdce78ef3434dfe6965a9",
+        "art/final/models/OpenWeighGate.glb": "051ec8e717ab15b177a4b74b69ac92c48296a7ddc0f08905769f0e5366ee6615",
+        "art/final/models/OpenWeighGate.glb.import": "98bff23ee5d679786e52816293bec35ae16b7af2bbc0793eacce85b1caa3d18e",
+        "art/final/models/OuterLight.glb": "b1de475a62f58de0a80c45b0f551e3a657a861ae2d7101ad6120a6b5eaf5e5bc",
+        "art/final/models/OuterLight.glb.import": "f3ce3f38c6923bcbfc84c0bf4b7a8ed4529f0006bd9ff35f98327fd4470c1c4e",
+        "art/final/models/OuterSound.glb": "720a8997f2084d310a11437a4fb1fe618a3310a41484cbbfad58f768968eb621",
+        "art/final/models/OuterSound.glb.import": "008e073648a2851ad493ad0d68ae0010f6b39acc2ce752a364fde95e22b66ecb",
+        "art/final/models/PackingCloth.glb": "d2d07c9da658ad07a27de94792ba7b3a12229eef5478d8f6e16f365413d927d5",
+        "art/final/models/PackingCloth.glb.import": "dc8ba064003d60834acb253f80557d9049276bafc76da49f14c821b1db2645e0",
+        "art/final/models/SaltBarrel.glb": "25c88d558c0397c4a82657c27b1ae47ac061f0788de6d491eebf9ba5864fdc2c",
+        "art/final/models/SaltBarrel.glb.import": "25d9191fd402f6b00bafa71fac8ad0abf3de93aa2569efe8858353242b523ce1",
+        "art/final/models/SashBay.glb": "89ad988d496a783580f703f15d739a450a9bbbdd6c215d0ddadf8224947644d9",
+        "art/final/models/SashBay.glb.import": "e2cb2f93aa39e62eebce8e9cdee9fa08c4027be4a9a74ee81cf2513e6c2dae79",
+        "art/final/models/ShedSheet.glb": "eaef766e24b581a546dbdb6a7fbef7fbc7606400c22d11f16690cde433d9b70d",
+        "art/final/models/ShedSheet.glb.import": "5225a9d16455814bbfd624169414a4afa3e1175edb704c80f53c95ca62a6962b",
+        "art/final/models/SlipsAndPencil.glb": "685267c587062613a6e992c197d62cd20101f87755712ea9e5a34f6826d171ce",
+        "art/final/models/SlipsAndPencil.glb.import": "6543b0ba0add993e4c83e917c12c126e672c469119c97f9c6e9cd7b5d7584433",
+        "art/final/models/SortingBench.glb": "68bf002c7ccf5186770600f7d9191df5ef550884995655a4e577c9680b0b6e00",
+        "art/final/models/SortingBench.glb.import": "436217202dfefee5ab785c48b55565759a1023c5e29cbe6977434d2f1782e9cd",
+        "art/final/models/StoreRoof.glb": "89b8e7e5fb2c624fdb6ba0d71dbc737cb55edd6ac154af3b7b5291e674786a7d",
+        "art/final/models/StoreRoof.glb.import": "372dc6750fb9019083146e89d8bed7c6eca6574169742b532db0ceacd485d046",
+        "art/final/textures/BrushedGrain.png": "a91bf53f31c68ee1657d4225f42ec205e19e6e9e7da998bab5831ac5ca9844fe",
+        "art/final/textures/BrushedGrain.png.import": "a47c7f2ea0132257835696f39706013a647877f68cd3092bd6e52bd4e18d3ae1",
+        "art/final/textures/EdgeGrain.png": "5f2b53b7b6aea6f035b68bae60501898948b4f964f5599cceb0ec85381f27cca",
+        "art/final/textures/EdgeGrain.png.import": "4b465d34d35435c4ba5ad90c8eb1719e861e0f5605847521bd6bf6ad7a454859",
+        "art/final/textures/LandingSlip.png": "c068e1070a13d06cd9a79468d2c7c2e50871b98294840f19ba60aec79a7ec4fb",
+        "art/final/textures/LandingSlip.png.import": "e43c534c9a6effe7edc10d2393b761c4c7bc76bb2bdd8e4fcefd6d5b2f20bdb9",
+        "art/final/textures/MackerelSkin.png": "c6d16d6122f48359c273f393d2416ecbf25be91f9b2743445a3e21f9c0bc4f10",
+        "art/final/textures/MackerelSkin.png.import": "a13362a28d11e1ea490efd41f9f8ec914a51b586399dbaa9e64023eeee4da47a",
+        "art/final/textures/PackingLinen.png": "2535db4da4ab94afd6ba12f39a5f11049e1671468fa44f201cd0a04c6a12e8bc",
+        "art/final/textures/PackingLinen.png.import": "a0a5444e025efa006ed2e450a0cfbd5fb56ccb17dad5166929eb2c0ff6077734",
+        "art/final/textures/SoundSky.png": "6a27b422f41cb6228d618c72affc52d9bfca30a77291471d01a13f6866e7ad89",
+        "art/final/textures/SoundSky.png.import": "5bf526361846dbb3c9bad7b49c6b053eb3a3edbefcb2c4f278e36d11f07b08a7",
+        "art/final/textures/TrestleBoards.png": "3d68c0f85120e7b0f2f7d2653e6df71c119d3f1c833b47e4dacfab8119831e66",
+        "art/final/textures/TrestleBoards.png.import": "0d904be9c813d0ed828bc0ed76db07aa0673d160941e90a28931de5bda0877cf",
+        "art/final/textures/WindowGlass.png": "7016e925aa8c70f26eed6eb63af5235c559325b68bac3f12bffc84629c0cc923",
+        "art/final/textures/WindowGlass.png.import": "00111a18b926a30cd116d817b829c5e26dd016b6a382c7657e4a0dcc60b3b1d3",
+        "art/first/BoundCase.tscn": "8917ac12a0b18d5eb4560bc45908f0ce68e7f87536ad2ed2cbec7a367a532c88",
+        "art/first/ColdStore.tscn": "04f0082670dfed37c3b5bd107196b8b23b8665ebc693087b7dbb065dbd11e429",
+        "art/first/FreightCase.tscn": "2f513722ee1613570bd266ae28f8235b0fefb44fc3769e89b8035853d664608f",
+        "art/first/Gate.tscn": "dd6087ebdcc6ce00a9d9d1a1dadf7390f49c8260d19fdc1bd9e16c47910d8209",
+        "art/first/LowCase.tscn": "127afa01b54143b79d0ebf8bef3e10c5546a9ea26dbfc3f5d47a5f02b692890f",
+        "art/first/Weighhouse.tscn": "a4e6cd2a54e4677996982058e40e018bb05faa933300fc54a42850c50b4f0683",
+        "art/kit/BoardBay.glb": "6857f9aae60ff611335c47510c11903ba78ce92db69f6b13beda96ebc89cd072",
+        "art/kit/BoardBay.glb.import": "a5141dd3c5b6a51516b41869ced66e3fe57a098e643a58160da5b01a7a2bda30",
+        "art/kit/BoardBayB.glb": "94e29093037c351048a4f98e3f40de647e637b40acb9227604c99f3106c69589",
+        "art/kit/BoardBayB.glb.import": "c493174721cc08f0310c4b98f3449afa5b4fae9837a62c01c83e39611da4168e",
+        "art/kit/BoardRailBay.glb": "4f71bcd69bc0ba80b920c601cd56a34629e5fea0fd55cc90a3493889a1ec8332",
+        "art/kit/BoardRailBay.glb.import": "efcd9f66a4b5a4a03e6c2b45772dd3bc48cb656d90da9f0ec2445797a310a0b6",
+        "art/kit/BottleBox.glb": "eb64fb2246fa08c272636e8db2aa2acd668b869cd1dd0cce75a2188ff372bf75",
+        "art/kit/BottleBox.glb.import": "1d6816a0f41930019bb84face6e2f3ecee0211f57f47a722cdabfd719e8ebb47",
+        "art/kit/BracketShelf.glb": "972e453cbfb6e1d7f2f5ff71f2ba1bf90a8549e39b58b4410ea1de4bfd5b9ebf",
+        "art/kit/BracketShelf.glb.import": "00c21a12acd970d0b9da6350a708f87a8f33cd48cd4bdc4ef5f7fa04d0905898",
+        "art/kit/BrineCask.glb": "6940cd9d509e4c3989061757f54a2bf4d0d75236c1cf940c822a488304fbf839",
+        "art/kit/BrineCask.glb.import": "7eb6c7316c5fe76874eb6dcac98d9cd4178e75690e6a6d4db06869cefd791229",
+        "art/kit/ButcherBlock.glb": "686dcc3b8852cdc972d5f80af619a20d338cc86ef7b93ed90d36410df042ad89",
+        "art/kit/ButcherBlock.glb.import": "94b7d0e343284c377319bc941de7458d3882f794e0750a848c660fcae040ffc1",
+        "art/kit/Cleaver.glb": "33f82dfb9be3a465f1c678268c8efb4153e605a773c81b15a3b6a643fd0021e5",
+        "art/kit/Cleaver.glb.import": "ec9c2bbb97998974cc0038bbaaf7d0fa23bb35e9e9ad5b72df8eb461790736dd",
+        "art/kit/EnamelTray.glb": "dc72842a783fcec779b5ba0e03022c34eb46f84119ad2d7e3670a2b9765a799e",
+        "art/kit/EnamelTray.glb.import": "fdb2b8cf095c35095981511fbdb1818bb743308d7ff08402ccdf10201cc46652",
+        "art/kit/FloorBoards.glb": "5bf5ad2591679fd5cffe57e9197054c57a8f80597d196c189278fdf178291022",
+        "art/kit/FloorBoards.glb.import": "965a44b219b48f8aed0a7740422aadfd453b978dbe3e13f6004816cfcd3765ed",
+        "art/kit/Flue.glb": "417616c58d7ed7c40563f3311769c0fd03a0d0817da074c07534e3f5b5addef9",
+        "art/kit/Flue.glb.import": "d16b9b3d833fb4eaaf9e01b3a4441ac3932750f0b406e5315af2b6e2c756f0ff",
+        "art/kit/GableCap.glb": "85f2b1c235f9895409b989e25484f6e5911f267227b7db118ef802cd10faa40d",
+        "art/kit/GableCap.glb.import": "f98e4541a2f4acab1db5225b8c2f8036aa7d69069fe052b992357db52cf56c91",
+        "art/kit/LandingBox.glb": "2543c7653c249a928279fc59fa3008592297f4c666e47ab2680a4e8806ead67b",
+        "art/kit/LandingBox.glb.import": "425d4bb48a2ae9b3279e83c4f4a90f0d800badee7ce0635111caaeba376acedb",
+        "art/kit/LimeBay.glb": "8ecbcdca6be3c7af4387cfa65ab27baf027e13831f443d44c708f1e89875352b",
+        "art/kit/LimeBay.glb.import": "03bebfc37de41fc08ca71305bbceb126d2380b642f0e36d68e26733971c969cb",
+        "art/kit/Oar.glb": "5012f3e4c138b62e2bd6a0eee803e43162f0af8ff2fb339fb91320e5ff684420",
+        "art/kit/Oar.glb.import": "ea20aa02193d6a2ead500a5f1751dcb24dd33a229957c711fd69ef80371c939a",
+        "art/kit/OpenMussel.glb": "8e672739bac9c960df1108540d0c1a926a501387fb186dfab28763df9cc1c2fe",
+        "art/kit/OpenMussel.glb.import": "aa862ee32aa77df2aa608dcb9d77635ca9deeacec2ee73763cc70b378caf67b5",
+        "art/kit/OpenWeighGate.glb": "a8748a36d37915a64b6d27d345f0317c996e76d3202e92c0abf6d22fdcb16571",
+        "art/kit/OpenWeighGate.glb.import": "9dc6be03bfe5a639c4215c6392684eaff3887f3528398d7ca3a9153f965d6db9",
+        "art/kit/SashBay.glb": "97f1f39e2ee112c2c96f18de2335dab26921fd7d1186221c6170a797e88491b8",
+        "art/kit/SashBay.glb.import": "7a114dbaf557d5fc6a1cdbca3ce5b6f066e1d8396ad6bf08e9a8a039e2a8792a",
+        "art/kit/ShedSheet.glb": "3f0275f16d4497c2dfbceb9026a75abf11f1ad6c2a922e600e7799b638fa11c7",
+        "art/kit/ShedSheet.glb.import": "e968640c2037bcab37b1276e5ab3d76cd43995101b993b14fe9b6dd75669d1b5",
+        "art/kit/SilverCatch.glb": "775844fc79c5b6af19cb859ee5d20f22efb33f6cc3c6c7446bbc21990af8dc24",
+        "art/kit/SilverCatch.glb.import": "63c44c407a3896d152683f6da4c7c77bb090a2e967db46c59dc28074ae7eab57",
+        "art/kit/StoreRoof.glb": "c9c19d4027601891323d250b849a77a6572ebd1bac9917591d4bf32b97652454",
+        "art/kit/StoreRoof.glb.import": "90a34fce7a093e4082bc123657003b92f3079153dceb7147651631c41df62056",
+        "art/kit/TrestleTable.glb": "9dee273e211e204dd86dc0c4be9e0a7f410a926afabb278f5c327c949f109d09",
+        "art/kit/TrestleTable.glb.import": "a199734defcab148e5b5bec51acfb198852b87258a84966e78fca42ae3601b7c",
+        "art/kit/WharfLight.glb": "2cbe6568655990c5ead5c89fc7b9a857fcf3de3cf1778a5a8296d38aef5c7696",
+        "art/kit/WharfLight.glb.import": "d8ff2306aabbf05a82d754107b334f1077b14ccc20e5300cea01cb85d9d4f5b8",
+        "art/licenses/Barlow-OFL.txt": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "art/licenses/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+        "art/licenses/Crimson-OFL.txt": "50fd67cddc097377a5c871e8452b778bc5aedfa3480a705cb27c5e3a078218df",
+        "art/licenses/food-Kenney.txt": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f",
+        "art/licenses/pirate-Kenney.txt": "5e99246a5a65fa3420a1a1c7a8616f096202c78866f73d7aacfe73c0aab0ca36",
+        "art/licenses/town-Kenney.txt": "fb8e4817197ef9f62215e95b4451a0f09c769c8e03e416e3a2ce108dfa6117e4",
+        "art/print/BoxStamp.png": "5823f19e721a36f93c764ba2ea052e4ff45c4937b7bdc77f5d85afa9a54607ae",
+        "art/print/BoxStamp.png.import": "49c1851ae4e0b6dd1a262ad7fa25d0c401b662d6fc8f8b58dc6fde7dfb52764e",
+        "art/print/ExchangeBoard.png": "f7dc580a518b6d9ed5b2370fde811f155eff891e28bd050d56e267feeb13c014",
+        "art/print/ExchangeBoard.png.import": "31ac72631631cf49f9feb6fa920051f2bb863239d35f57a72943b01c098b0e80",
+        "art/print/LandingsSlate.png": "849441d0b5752138c2cdaba3f75e7b24e1f1c32f16051c4d2d9265961d9405b3",
+        "art/print/LandingsSlate.png.import": "80e0ffc31ee12fe41abc552f0cbb5c007efcf5b1304bd7cac2cb68348cb2ef2f",
+        "art/print/WeighDial.png": "2b65b292e633716eaba0d128a26147430fdb27016bfc662d0d8e6b95668ecad3",
+        "art/print/WeighDial.png.import": "d2616a50ff96ed569c7d340676728bc858f530b55b7ca7f67ccd8fb62159fb83",
+        "art/print/WeighHouseEnamel.png": "b3b825cbb9a4c6b8833646ac36d39b7a19d60184682a8dd95ea55d6cb7df2c09",
+        "art/print/WeighHouseEnamel.png.import": "9fc6d171ebbcf3bb64cd1ea2305ea5a6ebfc94983ff5f765e6ed22e661ffc445",
+        "art/surfaces/QuaySetts.png": "138cbf3e3464a6953c4224e5163a3fac55871ce2546f80dcf9e6ac54bb55d21e",
+        "art/surfaces/QuaySetts.png.import": "fc80538182d94119aff24ecba43e38a71551b6df658c14f4a454a9e99014a274",
+        "art/surfaces/RedSeams.png": "d5f871135f7a6b06973986e35578756afaa62abb02e3108132edfe9526079345",
+        "art/surfaces/RedSeams.png.import": "6329b5bab76bbe90bf0a4d926ecb64b66d91008767ef4296810dc21d0e67204b",
+        "art/surfaces/SaltBoards.png": "6d05197c9ff7173ae305b67afd9888939f097d82a978a5c157974956f7f23f47",
+        "art/surfaces/SaltBoards.png.import": "5d150bd03507861119a9c79299cdda5b65492a9bff125927789d80d6775a3485",
+        "art/surfaces/SawGrain.png": "e581e521eacb7cde42255eb1424fc0950bc23b842732cb067f12fe20678545f2",
+        "art/surfaces/SawGrain.png.import": "04b7e88b91b6aad3d190f6716ddd4de423a345469cd41f002a1c9094fb694570",
+        "art/tackle/Crosscut.glb": "17465391e2ae8b9ee72b4e95db2d7f0fdbad8df7dba7a3221ab83717c15200fa",
+        "art/tackle/Crosscut.glb.import": "8d08713985fd2347fc0504333d034ce8c5335ad6aaa3bdcabaf0c8df264f8e6e",
+        "art/tackle/DryingNet.glb": "b589aca35dc478edd123def66f78f27bb5b608fd8e11f98da61b700c9b4bc8d9",
+        "art/tackle/DryingNet.glb.import": "088ccb251a2cbc183e0565192fc9ce4a361ee69224b658ada89105d8c8a08c8f",
+        "art/tackle/EnamelShade.glb": "cc608ebc134714947610d6eb0140a5c348f10c6cb716fbce35293f40a10720ff",
+        "art/tackle/EnamelShade.glb.import": "e289f396d8b5dbb40c0b54ec316c90ff55ddfb2da68cc8513f04befcf3c7b58d",
+        "art/tackle/LaidLine.glb": "27cf9cee92a1e33469ddf44f6547343fe42fe3e0b25c91cc032aaac655e7546a",
+        "art/tackle/LaidLine.glb.import": "1abb8808e880f102439416025d66bb3a15142ded2163623efa99a0f20bc1f1d9",
+        "art/tackle/PotMarker.glb": "26adaf7fe9cb8bd21f71356e09530dfdc4251a8b3fa8943f0c4164c703bfc024",
+        "art/tackle/PotMarker.glb.import": "395d49a35256ba81fa601beac866bf9e8c6e58de5d1fa84650796a2a92a1e9cd",
+        "art/tackle/RinsePail.glb": "22fec7b5a4010c3ffb7443882cff625372279b8c44d5443fdf5b08aac406e6e9",
+        "art/tackle/RinsePail.glb.import": "905583fb78f8641dba886597a17148d4bfb3c901601db384533b65e9fc223a36",
+        "art/tackle/SpringBalance.glb": "b0ddcc07bd370afdcbbe3570ccb08e89d20cb79e9a3581d3481e6869160cc3d9",
+        "art/tackle/SpringBalance.glb.import": "8f63fee83d8fd0cb906a4a5a8d7d98b1ef71632ef0a9be228dee0092529d6270",
+        "art/tackle/TyingRing.glb": "3e42a4d57715fc84841c141f3b1e6185ac3f3180cded703b0f8f6fc130cdc602",
+        "art/tackle/TyingRing.glb.import": "85f333c70926a9f503fbd8346087395b52b1b6ff7437b7467df6f5cca3dcc04a",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/boards/close.png": "bce7e6cc4a72a1dbf46882ad03d5a7fd59c9253acc7d647ab60ce7e27cba0522",
+        "captures/boards/door.png": "94f21e97461eabc0c987b5a152c6c0a45a368726994db930f23df9fc51159e43",
+        "captures/boards/props.png": "b02f7c2ecb161cbc0cd57b5a9a93ec3c824c8e64180ec436970569e711d80874",
+        "captures/final/close.png": "5ce3981760dd425b8f70b696d033e06b7f3b6aae4eb48aea2ee6ebb8abaaaaf3",
+        "captures/final/door.png": "8e94df253d7466d329e22f8b01effbae92540493ca7f94961b706dce56745b3c",
+        "captures/final/props.png": "bda599410b259974fabb5f389b83f016a4bf2652656dd922a40ea5b1cdaa44c1",
+        "captures/first/close.png": "3abba79c9c22cd23bcb762ea6c3b56e5d8d55f299888c4ffb897d2e267185558",
+        "captures/first/door.png": "a74755dc21ebdb0b0e31227d11f3208b022fea40b2ca369714b5101c69e3b721",
+        "captures/first/props.png": "b634bee8a96e1058fb23063699589d87d992c17571812df8f08cfa637651c068",
+        "captures/limewash/close.png": "eece39ecc0115587a4f590701253c7d0d1b142784705452f620f32509a7fc2fb",
+        "captures/limewash/door.png": "667144ac9fac55bda0d23f4c6c41b09d01367d67e4092e3dd5baef368d307c90",
+        "captures/limewash/props.png": "6e4759af350effafb01aaf6aae514c89df68d77970e3a82e7c2caf83e92806f7",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "05426d6af6a57aa1a6b557bd2e39ac0186a9f2722511b87bb081c141f72c1734",
+        "first.tscn": "b27650a074231176d5c89528ef170eb4e29597512f2f92a1187a9684b66a66e0",
+        "project.godot": "6be37400a289355085940616d155ffd65dc8df5a7d5439fa0daccc45d924acfe",
+        "references.json": "f23521c43af7572ca3dff655de1fa031f7ed90605993dc015f84fa33d693d6ec",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "c09a175cdfdae87837185bba98cb28ef6be64aa2807bfcec4b41488d678f2f18",
+        "sample_b.tscn": "f7909ac7cef50c0bee3b5c2faf8d1875401b354628d535ed4ab801e9d7d7af50",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "archived_scene_dependencies": [
+        {
+          "entry": "first.tscn",
+          "files_checked": 64,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        },
+        {
+          "entry": "final.tscn",
+          "files_checked": 76,
+          "missing": [],
+          "outside": [],
+          "optional_absent": [
+            "characters/mixamo_local/humanoid.scn"
+          ]
+        }
+      ],
+      "coordinator_supplemental_evidence": [
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-a/door.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/door.png",
+          "sha256": "045c62946f529fcb9bc30bea1d3801752325b8c7f41510a5427324cd3da79f5d"
+        },
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-a/props.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/props.png",
+          "sha256": "6a5af860477250411f4a200625b69f77ae5211a3ce6e4846517bafc27e511834"
+        },
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-a/close.png",
+          "archived_path": "captures/technical/sample-a-before-material-fix/close.png",
+          "sha256": "77b7580bc7c7567dd88d558613f9b64b184be0f6f870029cc0daf89165da7c7d"
+        },
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-b/door.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/door.png",
+          "sha256": "a0a57ab690c85fab6c898958459bba636b642e1a3f4aa630caf9c664bddeb9fa"
+        },
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-b/props.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/props.png",
+          "sha256": "2c9fde79f0cc6f21a48127a0a26b6b4fcca836ecfddf1e99b14f06fde9a1ce6a"
+        },
+        {
+          "source_private_relative_path": ".work/import-diagnosis/sample-b/close.png",
+          "archived_path": "captures/technical/sample-b-before-material-fix/close.png",
+          "sha256": "6570b9d01ad1595bb53c7f44502a40690a795bd690fc9311b7e75ffc09f7f987"
+        }
+      ],
+      "view_review_evidence": {
+        "references": "All three original frozen references at 2026-11-19T19:26:49.972Z, plus a JPEG preview of the pier wallpaper",
+        "whitebox": "All three same-size JPEG previews generated with thumbnail limit 1400x900 and JPEG quality 87, viewed at 19:27:59.462Z",
+        "samples": "Initial A/B props and close at 19:36:28.604Z; corrected boards/limewash all three originals at 19:38:51.856Z and 19:38:58.076Z",
+        "first_all_three": "2026-11-19T19:45:22.325Z",
+        "final_all_three": "2026-11-19T19:56:20.719Z"
+      },
+      "technical_repairs": [
+        "Before first art pass, corrected white material persistence by writing glTF baseColorFactor; rerendered both auditions in new directories. Original failed sample PNGs supplemented by coordinator from own private diagnostics.",
+        "Before final images, corrected missing leading zero in light energy numeric literal in Gate.tscn; reimported, then captured final once."
+      ],
+      "limitations": [
+        "Whitebox self-review used same-size lossy JPEG previews; preserved source PNGs remain unchanged. First and final art-pass self-review used original PNGs.",
+        "Separate direct headless entry/clearance checks reported macOS CA certificate access diagnostic; final graphics captures clean. No manual traversal acceptance."
+      ],
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "source_route": "Kenney Town / Pirate / Food 作者发布包 + Poly Haven 旧木板和石地漫反射；保留真实构件、重投 UV 与色值，补弹簧秤、鱼皮、渔网、收货单和分面远岸。",
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-max",
+      "stage_status": "collected and audited; visual comparison pending"
     }
   }
 }

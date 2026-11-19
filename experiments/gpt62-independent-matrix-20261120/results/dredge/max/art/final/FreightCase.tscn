@@ -1,0 +1,155 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://art/final/models/CasePlanks.glb" id="e1"]
+[ext_resource type="Texture2D" path="res://art/final/textures/BrushedGrain.png" id="e2"]
+[ext_resource type="Texture2D" path="res://art/print/BoxStamp.png" id="e3"]
+[ext_resource type="PackedScene" path="res://art/tackle/TyingRing.glb" id="e4"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(0.46275, 0.40392, 0.3098, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(0.135, 1.344, 0.012)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.43922, 0.38039, 0.28627, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e2")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(0.012, 1.344, 0.145)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.52941, 0.46275, 0.36471, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(0.073, 1.67983, 0.01)
+material = SubResource("s5")
+
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e3")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s8"]
+size = Vector2(0.53, 0.205)
+material = SubResource("s7")
+
+[sub_resource type="StandardMaterial3D" id="lining"]
+albedo_color = Color(0.38039, 0.36863, 0.32549, 1)
+roughness = 0.96
+
+[sub_resource type="BoxMesh" id="inside"]
+material = SubResource("lining")
+size = Vector3(1.411, 1.368, 1.411)
+
+[node name="FreightCase" type="Node3D"]
+
+[node name="SlattedCarcase" type="Node3D" parent="."]
+
+[node name="Lid" parent="SlattedCarcase" instance=ExtResource("e1")]
+position = Vector3(0, 1.34, 0)
+scale = Vector3(1.25, 0.95238, 0.70755)
+
+[node name="EndBoards" parent="SlattedCarcase" instance=ExtResource("e1")]
+position = Vector3(0, 0.7, -0.694)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.24167, 0.84127, 0.66038)
+
+[node name="SideBoards" parent="SlattedCarcase" instance=ExtResource("e1")]
+position = Vector3(-0.694, 0.7, 0)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.16667, 0.84127, 0.70283)
+
+[node name="EndBoards2" parent="SlattedCarcase" instance=ExtResource("e1")]
+position = Vector3(0, 0.7, 0.694)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1.24167, 0.84127, 0.66038)
+
+[node name="SideBoards2" parent="SlattedCarcase" instance=ExtResource("e1")]
+position = Vector3(0.694, 0.7, 0)
+rotation_degrees = Vector3(0, 0, -90)
+scale = Vector3(1.16667, 0.84127, 0.70283)
+
+[node name="NailedCorner" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(-0.65, 0.679, -0.744)
+mesh = SubResource("s2")
+
+[node name="NailedCorner2" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0.65, 0.679, -0.744)
+mesh = SubResource("s2")
+
+[node name="SideBatten" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(-0.744, 0.679, -0.66)
+mesh = SubResource("s4")
+
+[node name="SideBatten2" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(-0.744, 0.679, 0.66)
+mesh = SubResource("s4")
+
+[node name="NailedCorner3" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(-0.65, 0.679, 0.744)
+mesh = SubResource("s2")
+
+[node name="NailedCorner4" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0.65, 0.679, 0.744)
+mesh = SubResource("s2")
+
+[node name="SideBatten3" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0.744, 0.679, -0.66)
+mesh = SubResource("s4")
+
+[node name="SideBatten4" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0.744, 0.679, 0.66)
+mesh = SubResource("s4")
+
+[node name="EndBrace" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0, 0.6975, -0.744)
+rotation_degrees = Vector3(43.67339, 90, 0)
+mesh = SubResource("s6")
+
+[node name="EndBrace2" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0, 0.6975, 0.744)
+rotation_degrees = Vector3(43.67339, 90, 0)
+mesh = SubResource("s6")
+
+[node name="CoopStamp" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0, 0.812, 0.7505)
+mesh = SubResource("s8")
+
+[node name="RingHandle" parent="SlattedCarcase" instance=ExtResource("e4")]
+position = Vector3(-0.745, 0.742, 0)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.72, 0.72, 0.72)
+
+
+[node name="BoxLining" type="MeshInstance3D" parent="SlattedCarcase"]
+position = Vector3(0, 0.697, 0)
+mesh = SubResource("inside")

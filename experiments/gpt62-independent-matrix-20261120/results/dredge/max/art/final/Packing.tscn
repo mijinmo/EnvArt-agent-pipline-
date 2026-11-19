@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://art/final/models/PackingCloth.glb" id="e1"]
+[ext_resource type="PackedScene" path="res://art/final/models/SlipsAndPencil.glb" id="e2"]
+[ext_resource type="PackedScene" path="res://art/final/models/BoxIce.glb" id="e3"]
+[ext_resource type="Texture2D" path="res://art/final/textures/WindowGlass.png" id="e4"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(0.32549, 0.34902, 0.30588, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(2.23, 0.006, 7.56)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e4")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s4"]
+size = Vector2(1.22, 1.72)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s5"]
+albedo_color = Color(0.41176, 0.37255, 0.29412, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s6"]
+size = Vector3(0.029, 0.13023, 0.029)
+material = SubResource("s5")
+
+
+[sub_resource type="StandardMaterial3D" id="s7"]
+albedo_color = Color(0.38431, 0.41176, 0.35686, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s8"]
+size = Vector3(0.018, 0.028, 0.031)
+material = SubResource("s7")
+
+
+[sub_resource type="StandardMaterial3D" id="s9"]
+albedo_color = Color(0.40392, 0.30196, 0.28235, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s10"]
+size = Vector3(0.034, 0.052, 7.1)
+material = SubResource("s9")
+
+[node name="PackingAndFastenings" type="Node3D"]
+
+[node name="ApronCloth" parent="." instance=ExtResource("e1")]
+position = Vector3(8.38, 0.93, -4.43)
+
+[node name="Receipts" parent="." instance=ExtResource("e2")]
+position = Vector3(9.075, 0.935, -4.22)
+rotation_degrees = Vector3(0, -19, 0)
+
+[node name="CrushedIce" parent="." instance=ExtResource("e3")]
+position = Vector3(8.48, 0.191, -6.63)
+rotation_degrees = Vector3(0, -9, 0)
+
+[node name="DeckBedding" type="MeshInstance3D" parent="."]
+position = Vector3(8.665, -0.002, -5.726)
+mesh = SubResource("s2")
+
+[node name="SkyBehindSash" type="MeshInstance3D" parent="."]
+position = Vector3(9.97, 1.57, -7.25)
+rotation_degrees = Vector3(0, -90, 0)
+mesh = SubResource("s4")
+
+[node name="NetPeg" type="MeshInstance3D" parent="."]
+position = Vector3(7.67, 2.423, -1.34)
+rotation_degrees = Vector3(79.38034, 180, 0)
+mesh = SubResource("s6")
+
+[node name="NetPeg2" type="MeshInstance3D" parent="."]
+position = Vector3(9.33, 2.423, -1.34)
+rotation_degrees = Vector3(79.38034, 180, 0)
+mesh = SubResource("s6")
+
+[node name="BenchBolt" type="MeshInstance3D" parent="."]
+position = Vector3(8.375, 0.38, -5.98)
+rotation_degrees = Vector3(45, 0, 0)
+mesh = SubResource("s8")
+
+[node name="BenchBolt2" type="MeshInstance3D" parent="."]
+position = Vector3(8.375, 0.8, -5.98)
+rotation_degrees = Vector3(45, 0, 0)
+mesh = SubResource("s8")
+
+[node name="BenchBolt3" type="MeshInstance3D" parent="."]
+position = Vector3(8.375, 0.38, -3.32)
+rotation_degrees = Vector3(45, 0, 0)
+mesh = SubResource("s8")
+
+[node name="BenchBolt4" type="MeshInstance3D" parent="."]
+position = Vector3(8.375, 0.8, -3.32)
+rotation_degrees = Vector3(45, 0, 0)
+mesh = SubResource("s8")
+
+[node name="SheetDrip" type="MeshInstance3D" parent="."]
+position = Vector3(7.468, 3.079, -4.84)
+mesh = SubResource("s10")

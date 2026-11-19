@@ -1,0 +1,274 @@
+[gd_scene load_steps=30 format=3]
+
+[ext_resource type="PackedScene" path="res://art/final/GateIronwork.tscn" id="xIronwork"]
+[ext_resource type="PackedScene" path="res://art/final/models/OpenWeighGate.glb" id="e1"]
+[ext_resource type="PackedScene" path="res://art/final/models/GableCap.glb" id="e2"]
+[ext_resource type="Texture2D" path="res://art/final/textures/BrushedGrain.png" id="e3"]
+[ext_resource type="Texture2D" path="res://art/print/ExchangeBoard.png" id="e4"]
+[ext_resource type="PackedScene" path="res://art/tackle/TyingRing.glb" id="e5"]
+[ext_resource type="PackedScene" path="res://art/final/models/GateLamp.glb" id="e6"]
+[ext_resource type="PackedScene" path="res://art/tackle/PotMarker.glb" id="e7"]
+[ext_resource type="PackedScene" path="res://art/final/models/DrainPlanks.glb" id="e8"]
+
+[sub_resource type="StandardMaterial3D" id="s1"]
+albedo_color = Color(0.4, 0.31765, 0.2549, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e3")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s2"]
+size = Vector3(3.37, 0.19, 0.15)
+material = SubResource("s1")
+
+
+[sub_resource type="StandardMaterial3D" id="s3"]
+albedo_color = Color(0.4549, 0.36078, 0.28627, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e3")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s4"]
+size = Vector3(0.17, 0.38, 0.17)
+material = SubResource("s3")
+
+
+[sub_resource type="BoxMesh" id="s5"]
+size = Vector3(0.2, 0.2, 1.5)
+material = SubResource("s3")
+
+
+[sub_resource type="StandardMaterial3D" id="s6"]
+albedo_color = Color(0.43922, 0.44706, 0.41569, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s7"]
+size = Vector3(0.66, 0.34, 0.64)
+material = SubResource("s6")
+
+
+[sub_resource type="StandardMaterial3D" id="s8"]
+albedo_color = Color(0.2549, 0.3098, 0.30588, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s9"]
+size = Vector3(0.65, 0.09, 0.038)
+material = SubResource("s8")
+
+
+[sub_resource type="StandardMaterial3D" id="s10"]
+albedo_color = Color(0.32157, 0.37647, 0.35294, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s11"]
+size = Vector3(0.66, 0.064, 0.032)
+material = SubResource("s10")
+
+
+[sub_resource type="StandardMaterial3D" id="s12"]
+albedo_color = Color(0.36863, 0.28627, 0.23137, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e3")
+texture_filter = 5
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.7, 3, 0.7)
+uv1_triplanar_sharpness = 8
+
+
+[sub_resource type="BoxMesh" id="s13"]
+size = Vector3(3.03, 0.76, 0.052)
+material = SubResource("s12")
+
+
+[sub_resource type="StandardMaterial3D" id="s14"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.85
+metallic = 0
+albedo_texture = ExtResource("e4")
+texture_filter = 5
+
+
+[sub_resource type="QuadMesh" id="s15"]
+size = Vector2(2.97, 0.7)
+material = SubResource("s14")
+
+
+[sub_resource type="StandardMaterial3D" id="s16"]
+albedo_color = Color(0.2549, 0.29412, 0.28627, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="StandardMaterial3D" id="s19"]
+albedo_color = Color(0.72941, 0.60784, 0.41176, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="StandardMaterial3D" id="s21"]
+albedo_color = Color(0.65882, 0.55686, 0.40392, 1)
+roughness = 0.85
+metallic = 0
+
+
+[sub_resource type="BoxMesh" id="s22"]
+size = Vector3(0.012, 0.32615, 0.012)
+material = SubResource("s21")
+
+
+[sub_resource type="BoxMesh" id="s23"]
+size = Vector3(0.012, 0.5141, 0.012)
+material = SubResource("s21")
+
+[node name="WeighGate" type="Node3D"]
+
+[node name="TimberAndLime" type="Node3D" parent="."]
+
+[node name="OpenGate" parent="TimberAndLime" instance=ExtResource("e1")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="Portico" parent="TimberAndLime" instance=ExtResource("e2")]
+position = Vector3(0, 3, -4)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="WallPlate" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0, 2.9, -3.5)
+mesh = SubResource("s2")
+
+[node name="WallPlate2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0, 2.9, -4.5)
+mesh = SubResource("s2")
+
+[node name="ReturnKnee" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-1.17, 2.67, -3.58)
+mesh = SubResource("s4")
+
+[node name="ReturnKnee2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-1.17, 2.67, -4.42)
+mesh = SubResource("s4")
+
+[node name="RafterFoot" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-1.17, 2.97, -4)
+mesh = SubResource("s5")
+
+[node name="ReturnKnee3" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(1.17, 2.67, -3.58)
+mesh = SubResource("s4")
+
+[node name="ReturnKnee4" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(1.17, 2.67, -4.42)
+mesh = SubResource("s4")
+
+[node name="RafterFoot2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(1.17, 2.97, -4)
+mesh = SubResource("s5")
+
+[node name="SplashPlinth" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-0.96, 0.17, -4)
+mesh = SubResource("s7")
+
+[node name="PaintedSkirt" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-0.96, 0.38, -3.69)
+mesh = SubResource("s9")
+
+[node name="IronStrap" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-0.96, 0.71, -3.683)
+mesh = SubResource("s11")
+
+[node name="IronStrap2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-0.96, 2.29, -3.683)
+mesh = SubResource("s11")
+
+[node name="SplashPlinth2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0.96, 0.17, -4)
+mesh = SubResource("s7")
+
+[node name="PaintedSkirt2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0.96, 0.38, -3.69)
+mesh = SubResource("s9")
+
+[node name="IronStrap3" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0.96, 0.71, -3.683)
+mesh = SubResource("s11")
+
+[node name="IronStrap4" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0.96, 2.29, -3.683)
+mesh = SubResource("s11")
+
+[node name="TradeBoardFrame" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0, 2.68, -3.14)
+mesh = SubResource("s13")
+scale = Vector3(1, 0.87, 1)
+
+[node name="TradeBoard" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(0, 2.68, -3.112)
+mesh = SubResource("s15")
+scale = Vector3(1, 0.87, 1)
+
+[node name="DoorRing" parent="TimberAndLime" instance=ExtResource("e5")]
+position = Vector3(1.07, 1.07, -3.675)
+
+[node name="CagedEntryLight" parent="TimberAndLime" instance=ExtResource("e6")]
+position = Vector3(-1.44, 1.858, -3.43)
+rotation_degrees = Vector3(0, 18, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="EntryAmber" type="OmniLight3D" parent="TimberAndLime"]
+position = Vector3(-1.46, 2.04, -3.36)
+light_color = Color(1, 0.81961, 0.54902, 1)
+light_energy = 0.66
+omni_range = 1.94
+omni_attenuation = 1.45
+shadow_enabled = false
+
+[node name="MarkerLanyard" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-1.1, 1.287, -3.585)
+rotation_degrees = Vector3(178.24301, 0, 0)
+mesh = SubResource("s22")
+
+[node name="PotMark" parent="TimberAndLime" instance=ExtResource("e7")]
+position = Vector3(-1.1, 0.74, -3.58)
+rotation_degrees = Vector3(0, 0, -5)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="MarkerLanyard2" type="MeshInstance3D" parent="TimberAndLime"]
+position = Vector3(-0.91, 1.193, -3.605)
+rotation_degrees = Vector3(178.88544, 0, 0)
+mesh = SubResource("s23")
+
+[node name="PotMark2" parent="TimberAndLime" instance=ExtResource("e7")]
+position = Vector3(-0.91, 0.6, -3.6)
+rotation_degrees = Vector3(0, 0, -5)
+scale = Vector3(0.7, 0.7, 0.7)
+
+[node name="ApproachSill" parent="TimberAndLime" instance=ExtResource("e8")]
+position = Vector3(0, -0.059, -3.02)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1.02, 1, 1.13)
+
+[node name="ApproachSill2" parent="TimberAndLime" instance=ExtResource("e8")]
+position = Vector3(0, -0.059, -4.98)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(1.02, 1, 1.13)
+
+[node name="Ironwork" parent="TimberAndLime" instance=ExtResource("xIronwork")]
