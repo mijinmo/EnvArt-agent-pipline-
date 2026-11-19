@@ -1,0 +1,423 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e1"]
+[ext_resource type="Script" path="res://review.gd" id="e2"]
+[ext_resource type="Shader" path="res://art/distance.gdshader" id="e3"]
+[ext_resource type="Texture2D" path="res://art/prints/sand.png" id="e4"]
+[ext_resource type="Shader" path="res://art/ink.gdshader" id="e5"]
+[ext_resource type="PackedScene" path="res://art/models/AshlarBay.glb" id="e6"]
+[ext_resource type="Texture2D" path="res://art/prints/limestone.png" id="e8"]
+[ext_resource type="PackedScene" path="res://art/models/RoadArch.glb" id="e9"]
+[ext_resource type="PackedScene" path="res://art/models/RoadGateHardware.glb" id="e10"]
+[ext_resource type="PackedScene" path="res://art/models/RetensionedCord.glb" id="e11"]
+[ext_resource type="PackedScene" path="res://art/models/YardPavers.glb" id="e12"]
+[ext_resource type="PackedScene" path="res://art/models/CappedPlinthLow.glb" id="e13"]
+[ext_resource type="PackedScene" path="res://art/models/CappedPlinthMid.glb" id="e14"]
+[ext_resource type="PackedScene" path="res://art/models/CappedPlinthHigh.glb" id="e15"]
+[ext_resource type="PackedScene" path="res://art/models/LacedFrame.glb" id="e16"]
+[ext_resource type="PackedScene" path="res://art/models/StripedFly.glb" id="e17"]
+[ext_resource type="PackedScene" path="res://art/models/Trestle.glb" id="e18"]
+[ext_resource type="PackedScene" path="res://art/models/BeamBalance.glb" id="e19"]
+[ext_resource type="PackedScene" path="res://art/models/TiedSaltBag.glb" id="e20"]
+[ext_resource type="PackedScene" path="res://art/models/SealingLedger.glb" id="e21"]
+[ext_resource type="PackedScene" path="res://art/models/SampleFlask.glb" id="e22"]
+[ext_resource type="PackedScene" path="res://art/models/StopperedJar.glb" id="e23"]
+[ext_resource type="PackedScene" path="res://art/models/WeighHouseStandard.glb" id="e24"]
+[ext_resource type="PackedScene" path="res://art/models/ClerkStool.glb" id="e25"]
+[ext_resource type="PackedScene" path="res://art/models/Runner.glb" id="e26"]
+[ext_resource type="PackedScene" path="res://art/models/PortersBarrow.glb" id="e27"]
+[ext_resource type="PackedScene" path="res://art/models/CooperedCask.glb" id="e28"]
+[ext_resource type="PackedScene" path="res://art/models/Pallet.glb" id="e29"]
+[ext_resource type="PackedScene" path="res://art/models/SlattedCrate.glb" id="e30"]
+[ext_resource type="PackedScene" path="res://art/models/TransitTrunk.glb" id="e31"]
+[ext_resource type="PackedScene" path="res://art/models/OpenConsignment.glb" id="e32"]
+[ext_resource type="PackedScene" path="res://art/models/ReturnManifold.glb" id="e33"]
+[ext_resource type="PackedScene" path="res://art/models/CalibrationCase.glb" id="v_CalibrationCase"]
+[ext_resource type="PackedScene" path="res://art/models/BenchCloth.glb" id="v_BenchCloth"]
+[ext_resource type="PackedScene" path="res://art/models/CanvasBolts.glb" id="v_CanvasBolts"]
+[ext_resource type="PackedScene" path="res://art/models/DispatchTag.glb" id="v_DispatchTag"]
+[ext_resource type="PackedScene" path="res://art/models/GateStreamer.glb" id="v_GateStreamer"]
+
+[sub_resource type="ShaderMaterial" id="PaperSky"]
+shader = ExtResource("e3")
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("PaperSky")
+
+[sub_resource type="Environment" id="SunlitYard"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.80, 0.83, 0.96, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.52
+ssao_intensity = 0.9
+ssao_power = 1.1
+
+[sub_resource type="StandardMaterial3D" id="Sand"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.95
+albedo_texture = ExtResource("e4")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.28, 0.28, 0.28)
+
+[sub_resource type="ShaderMaterial" id="InkMat"]
+render_priority = 110
+shader = ExtResource("e5")
+
+[sub_resource type="QuadMesh" id="InkMesh"]
+size = Vector2(2, 2)
+material = SubResource("InkMat")
+
+[sub_resource type="StandardMaterial3D" id="Patina"]
+albedo_color = Color(0.08022, 0.171441, 0.14996, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="DockStone"]
+albedo_color = Color(0.775822, 0.508881, 0.313989, 1)
+roughness = 0.95
+albedo_texture = ExtResource("e8")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="SaltRoad" type="Node3D"]
+script = ExtResource("e2")
+
+[node name="BaseLab" parent="." instance=ExtResource("e1")]
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("SunlitYard")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-44, -59, 0)
+light_color = Color(1, 0.94, 0.84, 1)
+light_energy = 1.18
+shadow_enabled = true
+directional_shadow_max_distance = 50
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("Sand")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="InkContours" type="MeshInstance3D" parent="Art"]
+mesh = SubResource("InkMesh")
+cast_shadow = 0
+extra_cull_margin = 16384.0
+
+[node name="Masonry" type="Node3D" parent="Art"]
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+visible = false
+
+[node name="EastBay1" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -9.333333)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="EastBay2" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -6)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="EastBay3" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -2.666667)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="ReturnBay" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(8, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.8, 0.52)
+
+[node name="NorthBoundary1" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(-10, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="NorthBoundary2" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(-6, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="NorthBoundary3" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(-2, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="NorthBoundary4" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(2, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="NorthBoundary5" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(6, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="NorthBoundary6" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 0.5)
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("DockStone")
+
+[node name="Mesh" parent="BaseLab/World/SpawnPad"]
+material_override = SubResource("DockStone")
+
+[node name="MilestoneGate" type="Node3D" parent="Art"]
+
+[node name="CarvedPortal" parent="Art/MilestoneGate" instance=ExtResource("e9")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.73, 0.95, 0.27)
+
+[node name="EnamelAndCopper" parent="Art/MilestoneGate" instance=ExtResource("e10")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="SignalCord" parent="Art/MilestoneGate" instance=ExtResource("e11")]
+position = Vector3(0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Threshold0" parent="Art/MilestoneGate" instance=ExtResource("e12")]
+position = Vector3(0, -0.085, -5.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.78, 0.65, 0.388)
+
+[node name="Threshold1" parent="Art/MilestoneGate" instance=ExtResource("e12")]
+position = Vector3(0, -0.085, -4.05)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.78, 0.65, 0.388)
+visible = false
+
+[node name="Threshold2" parent="Art/MilestoneGate" instance=ExtResource("e12")]
+position = Vector3(0, -0.085, -2.5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.78, 0.65, 0.388)
+
+[node name="LoadingYard" type="Node3D" parent="Art"]
+
+[node name="LowCoping" parent="Art/LoadingYard" instance=ExtResource("e13")]
+position = Vector3(1, 0, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="MidCoping" parent="Art/LoadingYard" instance=ExtResource("e14")]
+position = Vector3(1, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="HighCoping" parent="Art/LoadingYard" instance=ExtResource("e15")]
+position = Vector3(3, 0, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Apron0" parent="Art/LoadingYard" instance=ExtResource("e12")]
+position = Vector3(8.77, -0.086, -8.87)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.64, 0.475)
+
+[node name="Apron1" parent="Art/LoadingYard" instance=ExtResource("e12")]
+position = Vector3(8.77, -0.086, -6.98)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.64, 0.475)
+
+[node name="Apron2" parent="Art/LoadingYard" instance=ExtResource("e12")]
+position = Vector3(8.77, -0.086, -5.09)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.64, 0.475)
+
+[node name="Apron3" parent="Art/LoadingYard" instance=ExtResource("e12")]
+position = Vector3(8.77, -0.086, -3.2)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.64, 0.475)
+
+[node name="Shade" type="Node3D" parent="Art"]
+
+[node name="BracedUprights" parent="Art/Shade" instance=ExtResource("e16")]
+position = Vector3(7.15, 0, -4.62)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1.125)
+
+[node name="VermilionCanvas" parent="Art/Shade" instance=ExtResource("e17")]
+position = Vector3(7.15, 0, -4.62)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1.125)
+
+[node name="WeighDesk" type="Node3D" parent="Art"]
+
+[node name="PlankTable" parent="Art/WeighDesk" instance=ExtResource("e18")]
+position = Vector3(8.95, 0.012, -4.55)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.55, 0.83, 0.75)
+
+[node name="CalibratedBeam" parent="Art/WeighDesk" instance=ExtResource("e19")]
+position = Vector3(8.85, 0.842, -4.41)
+rotation_degrees = Vector3(0, -113, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="AssayPortion" parent="Art/WeighDesk" instance=ExtResource("e20")]
+position = Vector3(8.675, 1.145, -3.955)
+rotation_degrees = Vector3(0, 20, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="WaybillAndSeal" parent="Art/WeighDesk" instance=ExtResource("e21")]
+position = Vector3(8.6, 0.844, -5.29)
+rotation_degrees = Vector3(0, -107, 0)
+scale = Vector3(1.17, 1.17, 1.17)
+
+[node name="SampleFlask" parent="Art/WeighDesk" instance=ExtResource("e22")]
+position = Vector3(9.08, 0.864, -3.28)
+rotation_degrees = Vector3(0, 22, 0)
+scale = Vector3(0.35, 0.35, 0.35)
+
+[node name="StopperedJar" parent="Art/WeighDesk" instance=ExtResource("e23")]
+position = Vector3(8.93, 0.864, -3.52)
+rotation_degrees = Vector3(0, 2, 0)
+scale = Vector3(0.28, 0.28, 0.28)
+
+[node name="WovenStandard" parent="Art/WeighDesk" instance=ExtResource("e24")]
+position = Vector3(9.6, 1.2, -5.77)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.79, 0.79, 0.79)
+
+[node name="PortersStool" parent="Art/WeighDesk" instance=ExtResource("e25")]
+position = Vector3(7.87, 0.019, -3.19)
+rotation_degrees = Vector3(0, -23, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+
+[node name="WovenRunner" parent="Art/WeighDesk" instance=ExtResource("e26")]
+position = Vector3(7.98, 0.014, -4.62)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(0.81, 1, 1.06)
+
+[node name="Consignments" type="Node3D" parent="Art"]
+
+[node name="ReceivingBarrow" parent="Art/Consignments" instance=ExtResource("e27")]
+position = Vector3(8.55, 0.01, -7.28)
+rotation_degrees = Vector3(0, 16, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="WeighedSack0" parent="Art/Consignments" instance=ExtResource("e20")]
+position = Vector3(8.39, 0.418, -7.51)
+rotation_degrees = Vector3(0, 25, 0)
+scale = Vector3(1.16, 1.16, 1.16)
+
+[node name="WeighedSack1" parent="Art/Consignments" instance=ExtResource("e20")]
+position = Vector3(8.74, 0.418, -7.22)
+rotation_degrees = Vector3(0, 73, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+
+[node name="WeighedSack2" parent="Art/Consignments" instance=ExtResource("e20")]
+position = Vector3(8.46, 0.418, -6.94)
+rotation_degrees = Vector3(0, 121, 0)
+scale = Vector3(0.81, 0.81, 0.81)
+
+[node name="SamplingCask" parent="Art/Consignments" instance=ExtResource("e28")]
+position = Vector3(9.21, 0.015, -8.53)
+rotation_degrees = Vector3(0, 30, 0)
+scale = Vector3(0.47, 0.47, 0.47)
+
+[node name="DispatchPallet" parent="Art/Consignments" instance=ExtResource("e29")]
+position = Vector3(8.83, 0.01, -2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.35, 1, 1.03)
+
+[node name="FramedCase" parent="Art/Consignments" instance=ExtResource("e30")]
+position = Vector3(9.03, 0.21, -2.47)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(0.61, 0.49, 0.39)
+
+[node name="TransitChest" parent="Art/Consignments" instance=ExtResource("e31")]
+position = Vector3(8.57, 0.21, -1.79)
+rotation_degrees = Vector3(0, -6, 0)
+scale = Vector3(0.59, 0.59, 0.59)
+
+[node name="TaggedSack" parent="Art/Consignments" instance=ExtResource("e20")]
+position = Vector3(9.19, 0.21, -1.72)
+rotation_degrees = Vector3(0, -19, 0)
+scale = Vector3(0.94, 0.94, 0.94)
+
+[node name="InChecking" parent="Art/Consignments" instance=ExtResource("e32")]
+position = Vector3(8.85, 0.025, -5.52)
+rotation_degrees = Vector3(0, 34, 0)
+scale = Vector3(0.41, 0.41, 0.41)
+
+[node name="WaterFeed" parent="Art/Consignments" instance=ExtResource("e33")]
+position = Vector3(8.6, 0.02, -1.34)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CalibratedMasses" parent="Art/WeighDesk" instance=ExtResource("v_CalibrationCase")]
+position = Vector3(9.07, 0.842, -5.53)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.26, 1.26, 1.26)
+
+[node name="CounterWrap" parent="Art/WeighDesk" instance=ExtResource("v_BenchCloth")]
+position = Vector3(8.95, 0.842, -3.42)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="ExportRolls" parent="Art/Consignments" instance=ExtResource("v_CanvasBolts")]
+position = Vector3(9.025, 0.947, -2.47)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(0.99, 0.99, 0.99)
+
+[node name="LotTicket" parent="Art/Consignments" instance=ExtResource("v_DispatchTag")]
+position = Vector3(8.568, 0.75, -2.41)
+rotation_degrees = Vector3(0, -92, 0)
+scale = Vector3(1.12, 1.12, 1.12)
+
+[node name="WindMarker" parent="Art/MilestoneGate" instance=ExtResource("v_GateStreamer")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[editable path="BaseLab"]

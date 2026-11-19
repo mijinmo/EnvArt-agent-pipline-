@@ -148,7 +148,7 @@
       "effort": "ultra",
       "input_commit": "4d036ee6ba523bc4a25539efe358b8f478c93dec",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "control",
@@ -162,7 +162,7 @@
       "effort": "ultra",
       "input_commit": "0502ed235dc16706faba74d2a8a4a834beccd9e7",
       "normalized_input_sha256": "1075d6cf933ff62d583701c7084c30a3c6b37c9b5e72c7b4fdf19198bd395e55",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "dredge",
@@ -196,6 +196,6 @@
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 24,
-  "completed_run_count": 16,
-  "collected_run_count": 16
+  "completed_run_count": 17,
+  "collected_run_count": 17
 }

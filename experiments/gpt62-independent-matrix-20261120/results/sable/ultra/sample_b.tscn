@@ -1,0 +1,123 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e1"]
+[ext_resource type="Script" path="res://review.gd" id="e2"]
+[ext_resource type="Shader" path="res://art/distance.gdshader" id="e3"]
+[ext_resource type="Texture2D" path="res://art/prints/sand.png" id="e4"]
+[ext_resource type="Shader" path="res://art/ink.gdshader" id="e5"]
+[ext_resource type="PackedScene" path="res://art/models/DressedAshlar.glb" id="e6"]
+[ext_resource type="PackedScene" path="res://art/models/Trestle.glb" id="e7"]
+[ext_resource type="PackedScene" path="res://art/models/CooperedCask.glb" id="e8"]
+[ext_resource type="PackedScene" path="res://art/models/SlattedCrate.glb" id="e9"]
+[ext_resource type="PackedScene" path="res://art/models/SampleFlask.glb" id="e10"]
+
+[sub_resource type="ShaderMaterial" id="PaperSky"]
+shader = ExtResource("e3")
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("PaperSky")
+
+[sub_resource type="Environment" id="SunlitYard"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.80, 0.83, 0.96, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.52
+ssao_intensity = 0.9
+ssao_power = 1.1
+
+[sub_resource type="StandardMaterial3D" id="Sand"]
+albedo_color = Color(1, 1, 1, 1)
+roughness = 0.95
+albedo_texture = ExtResource("e4")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.28, 0.28, 0.28)
+
+[sub_resource type="ShaderMaterial" id="InkMat"]
+render_priority = 110
+shader = ExtResource("e5")
+
+[sub_resource type="QuadMesh" id="InkMesh"]
+size = Vector2(2, 2)
+material = SubResource("InkMat")
+
+[node name="SaltRoad" type="Node3D"]
+script = ExtResource("e2")
+
+[node name="BaseLab" parent="." instance=ExtResource("e1")]
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("SunlitYard")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-44, -59, 0)
+light_color = Color(1, 0.94, 0.84, 1)
+light_energy = 1.18
+shadow_enabled = true
+directional_shadow_max_distance = 50
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("Sand")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="InkContours" type="MeshInstance3D" parent="Art"]
+mesh = SubResource("InkMesh")
+cast_shadow = 0
+extra_cull_margin = 16384.0
+
+[node name="Masonry" type="Node3D" parent="Art"]
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="EastBay1" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -9.333333)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="EastBay2" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -6)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="EastBay3" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(10, 0, -2.666667)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8334, 0.8, 0.5)
+
+[node name="ReturnBay" parent="Art/Masonry" instance=ExtResource("e6")]
+position = Vector3(8, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.8, 0.52)
+
+[node name="CounterSample" type="Node3D" parent="Art"]
+
+[node name="CheckingBench" parent="Art/CounterSample" instance=ExtResource("e7")]
+position = Vector3(9.03, 0, -4.64)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.55, 0.83, 0.65)
+
+[node name="SealedCask" parent="Art/CounterSample" instance=ExtResource("e8")]
+position = Vector3(8.88, 0, -6.7)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="SampleCrate" parent="Art/CounterSample" instance=ExtResource("e9")]
+position = Vector3(9.05, 0, -2.37)
+rotation_degrees = Vector3(0, -6, 0)
+scale = Vector3(0.58, 0.58, 0.58)
+
+[node name="LabelledSample" parent="Art/CounterSample" instance=ExtResource("e10")]
+position = Vector3(8.93, 0.83, -4.65)
+rotation_degrees = Vector3(0, 28, 0)
+scale = Vector3(0.47, 0.47, 0.47)
+
+[editable path="BaseLab"]
