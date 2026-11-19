@@ -85,14 +85,14 @@
       "effort": "low",
       "input_commit": "9ff6aa3beb99830579eff8560c30eb85b07df8f2",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "sable",
       "effort": "high",
       "input_commit": "d78168b7407a0f073744e84c6c8d2fee6f66cb47",
       "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
-      "status": "prepared"
+      "status": "running"
     },
     {
       "game": "hifi",
@@ -140,6 +140,6 @@
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 16,
-  "completed_run_count": 6,
-  "collected_run_count": 6
+  "completed_run_count": 7,
+  "collected_run_count": 7
 }

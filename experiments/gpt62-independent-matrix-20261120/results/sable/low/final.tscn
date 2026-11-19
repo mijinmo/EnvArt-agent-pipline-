@@ -1,0 +1,650 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://review.gd" id="e0"]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="e1"]
+[ext_resource type="Material" path="res://sand.tres" id="e2"]
+[ext_resource type="PackedScene" path="res://art/kaykit/wall.glb" id="e3"]
+[ext_resource type="PackedScene" path="res://art/kaykit/crates_stacked.glb" id="e4"]
+[ext_resource type="PackedScene" path="res://art/kaykit/barrel_large_decorated.glb" id="e5"]
+[ext_resource type="PackedScene" path="res://art/kaykit/wall_pillar.glb" id="e6"]
+[ext_resource type="PackedScene" path="res://art/kaykit/table_medium.glb" id="e7"]
+[ext_resource type="PackedScene" path="res://art/kaykit/bottle_A_labeled_green.glb" id="e8"]
+[ext_resource type="PackedScene" path="res://art/kaykit/barrel_small_stack.glb" id="e9"]
+[ext_resource type="PackedScene" path="res://art/kaykit/banner_patternA_red.glb" id="e10"]
+[ext_resource type="ArrayMesh" path="res://cloth.obj" id="e11"]
+[ext_resource type="Material" path="res://cloth.tres" id="e12"]
+[ext_resource type="Shader" path="res://art/masonry.gdshader" id="e13"]
+[ext_resource type="Texture2D" path="res://art/waybill.svg" id="e14"]
+
+[sub_resource type="StandardMaterial3D" id="Sand"]
+albedo_color = Color(0.85, 0.59, 0.32, 1)
+roughness = 0.93
+
+[sub_resource type="StandardMaterial3D" id="Patina"]
+albedo_color = Color(0.10, 0.28, 0.27, 1)
+roughness = 0.93
+
+[sub_resource type="StandardMaterial3D" id="Chalk"]
+albedo_color = Color(0.96, 0.82, 0.59, 1)
+roughness = 0.93
+
+[sub_resource type="StandardMaterial3D" id="Vermilion"]
+albedo_color = Color(0.82, 0.28, 0.19, 1)
+roughness = 0.93
+
+[sub_resource type="StandardMaterial3D" id="Brass"]
+albedo_color = Color(0.89, 0.62, 0.31, 1)
+roughness = 0.93
+
+[sub_resource type="BoxMesh" id="Unit"]
+size = Vector3(1,1,1)
+
+[sub_resource type="Environment" id="Day"]
+background_mode = 1
+background_color = Color(0.69,0.89,0.88,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.89,0.80,0.77,1)
+ambient_light_energy = 0.76
+
+[sub_resource type="ShaderMaterial" id="CutStone"]
+shader = ExtResource("e13")
+
+[sub_resource type="StandardMaterial3D" id="PrintedLinen"]
+albedo_texture = ExtResource("e14")
+roughness = 1.0
+cull_mode = 2
+
+[sub_resource type="QuadMesh" id="Chart"]
+size = Vector2(1.28,0.8)
+
+[sub_resource type="StandardMaterial3D" id="IndigoWeave"]
+albedo_color = Color(0.25, 0.36, 0.40, 1)
+roughness = 0.93
+
+[node name="SaltRoad" type="Node3D"]
+script = ExtResource("e0")
+
+[node name="BaseLab" parent="." instance=ExtResource("e1")]
+
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("Day")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-46,-58,0)
+light_energy = 0.95
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = ExtResource("e2")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("CutStone")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("Chalk")
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+visible = false
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="EastBay0" parent="Art" instance=ExtResource("e3")]
+position = Vector3(10.000000, 0.000000, -10.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="EastBay1" parent="Art" instance=ExtResource("e3")]
+position = Vector3(10.000000, 0.000000, -8.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="EastBay2" parent="Art" instance=ExtResource("e3")]
+position = Vector3(10.000000, 0.000000, -6.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="EastBay3" parent="Art" instance=ExtResource("e3")]
+position = Vector3(10.000000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="EastBay4" parent="Art" instance=ExtResource("e3")]
+position = Vector3(10.000000, 0.000000, -2.000000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="Return0" parent="Art" instance=ExtResource("e3")]
+position = Vector3(7.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="Return1" parent="Art" instance=ExtResource("e3")]
+position = Vector3(9.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.560000)
+
+[node name="TransitCases" parent="Art" instance=ExtResource("e4")]
+position = Vector3(8.960000, 0.000000, -6.000000)
+rotation_degrees = Vector3(0.000000, -65.000000, 0.000000)
+scale = Vector3(0.670000, 0.670000, 0.670000)
+
+[node name="WaterCask" parent="Art" instance=ExtResource("e5")]
+position = Vector3(8.830000, 0.000000, -2.550000)
+rotation_degrees = Vector3(0.000000, -80.000000, 0.000000)
+scale = Vector3(0.490000, 0.490000, 0.490000)
+
+[node name="GatePier-1" parent="Art" instance=ExtResource("e6")]
+position = Vector3(-0.950000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.175000, 0.680000, 0.550000)
+
+[node name="GatePier1" parent="Art" instance=ExtResource("e6")]
+position = Vector3(0.950000, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.175000, 0.680000, 0.550000)
+
+[node name="Lintel" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.000000, 2.550000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.680000, 0.500000, 0.670000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="Crown" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.000000, 2.830000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.860000, 0.090000, 0.780000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="EastCoping" type="MeshInstance3D" parent="Art"]
+position = Vector3(10.000000, 3.240000, -6.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.710000, 0.110000, 10.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="ReturnCoping" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.000000, 3.240000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(4.130000, 0.110000, 0.710000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="ManifestDesk" parent="Art" instance=ExtResource("e7")]
+position = Vector3(8.850000, 0.000000, -4.380000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.580000, 0.830000, 0.770000)
+
+[node name="SampleFlask" parent="Art" instance=ExtResource("e8")]
+position = Vector3(8.820000, 0.830000, -4.150000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.520000, 0.520000, 0.520000)
+
+[node name="SpareVessels" parent="Art" instance=ExtResource("e9")]
+position = Vector3(6.910000, 0.000000, -1.710000)
+rotation_degrees = Vector3(0.000000, -20.000000, 0.000000)
+scale = Vector3(0.650000, 0.650000, 0.650000)
+
+[node name="StationPennant" parent="Art" instance=ExtResource("e10")]
+position = Vector3(9.940000, 0.280000, -4.450000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.700000, 0.750000, 0.700000)
+
+[node name="CanopyMast0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 1.480000, -6.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.090000, 2.960000, 0.090000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="MastCollar0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 2.690000, -6.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.120000, 0.140000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="CanopyMast1" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 1.480000, -2.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.090000, 2.960000, 0.090000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="MastCollar1" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 2.690000, -2.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.120000, 0.140000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="FrontRail" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 2.900000, -4.450000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.110000, 0.110000, 4.960000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="StripedFly" type="MeshInstance3D" parent="Art"]
+mesh = ExtResource("e11")
+material_override = ExtResource("e12")
+
+[node name="GatewayLettering" type="Label3D" parent="Art"]
+position = Vector3(0.000000, 2.550000, -3.654000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+text = "VII   /   SALT ROAD"
+font_size = 64
+pixel_size = 0.0027
+outline_size = 0
+modulate = Color(1,0.88,0.63,1)
+
+[node name="GateFacing0" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.970000, 1.180000, -3.740000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.640000, 2.290000, 0.140000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="Rib00" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.970000, 0.170000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Rib01" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.970000, 1.870000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Rib02" type="MeshInstance3D" parent="Art"]
+position = Vector3(-0.970000, 2.130000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="GateFacing1" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.970000, 1.180000, -3.740000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.640000, 2.290000, 0.140000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="Rib10" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.970000, 0.170000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Rib11" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.970000, 1.870000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Rib12" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.970000, 2.130000, -3.690000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.060000, 0.150000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Waypost" type="MeshInstance3D" parent="Art"]
+position = Vector3(1.120000, 3.430000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.075000, 1.260000, 0.075000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="SignalTab" type="MeshInstance3D" parent="Art"]
+position = Vector3(1.380000, 3.840000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -6.000000)
+scale = Vector3(0.580000, 0.270000, 0.060000)
+mesh = SubResource("Unit")
+material_override = SubResource("Vermilion")
+
+[node name="SectorNumber" type="Label3D" parent="Art"]
+position = Vector3(-0.970000, 1.520000, -3.650000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+text = "07"
+font_size = 64
+pixel_size = 0.0035
+outline_size = 0
+modulate = Color(1,0.88,0.63,1)
+
+[node name="SurveyBoard" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.610000, 1.830000, -3.160000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.100000, 0.900000, 1.390000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="SaltRoute" type="MeshInstance3D" parent="Art"]
+position = Vector3(9.550000, 1.830000, -3.160000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("Chart")
+material_override = SubResource("PrintedLinen")
+
+[node name="DispatchSheet" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.580000, 0.844000, -4.620000)
+rotation_degrees = Vector3(-90.000000, -78.000000, 0.000000)
+scale = Vector3(0.600000, 0.600000, 0.600000)
+mesh = SubResource("Chart")
+material_override = SubResource("PrintedLinen")
+
+[node name="TallyWeight0" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.970000, 0.862000, -4.730000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.095000, 0.060000, 0.080000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="TallyWeight1" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.970000, 0.862000, -4.600000)
+rotation_degrees = Vector3(0.000000, 11.000000, 0.000000)
+scale = Vector3(0.095000, 0.060000, 0.080000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="TallyWeight2" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.970000, 0.862000, -4.470000)
+rotation_degrees = Vector3(0.000000, 22.000000, 0.000000)
+scale = Vector3(0.095000, 0.060000, 0.080000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="DispatchPlaque" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.247000, 0.735000, -4.380000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.035000, 0.160000, 0.850000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="TallyMark" type="Label3D" parent="Art"]
+position = Vector3(8.221000, 0.737000, -4.380000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+text = "VII   /   DISPATCH"
+font_size = 64
+pixel_size = 0.0012
+outline_size = 0
+modulate = Color(1,0.88,0.63,1)
+
+[node name="WeighingMat" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.060000, 0.008000, -4.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.170000, 0.014000, 2.450000)
+mesh = SubResource("Unit")
+material_override = SubResource("IndigoWeave")
+
+[node name="Selvedge0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.540000, 0.018000, -4.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.025000, 0.004000, 2.400000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="Selvedge1" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.580000, 0.018000, -4.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.025000, 0.004000, 2.400000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="WovenLozenge0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -5.650000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge1" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -5.450000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge2" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -5.250000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge3" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -5.050000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge4" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -4.850000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge5" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -4.650000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge6" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -4.450000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge7" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -4.250000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge8" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -4.050000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge9" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -3.850000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge10" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -3.650000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="WovenLozenge11" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.640000, 0.018000, -3.450000)
+rotation_degrees = Vector3(0.000000, 45.000000, 0.000000)
+scale = Vector3(0.058000, 0.005000, 0.058000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="BeamFoot0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 0.105000, -6.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.170000, 0.210000, 0.170000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="CrossTie0" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.730000, 3.050000, -6.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 7.400000)
+scale = Vector3(2.440000, 0.075000, 0.075000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="BeamFoot1" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.550000, 0.105000, -2.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.170000, 0.210000, 0.170000)
+mesh = SubResource("Unit")
+material_override = SubResource("Brass")
+
+[node name="CrossTie1" type="MeshInstance3D" parent="Art"]
+position = Vector3(8.730000, 3.050000, -2.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 7.400000)
+scale = Vector3(2.440000, 0.075000, 0.075000)
+mesh = SubResource("Unit")
+material_override = SubResource("Patina")
+
+[node name="Valance" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.540000, 2.800000, -4.450000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.026000, 0.180000, 4.850000)
+mesh = SubResource("Unit")
+material_override = SubResource("Vermilion")
+
+[node name="Braid0" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -6.720000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid1" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -6.347000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid2" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -5.974000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid3" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -5.601000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid4" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -5.228000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid5" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -4.855000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid6" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -4.482000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid7" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -4.109000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid8" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -3.736000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid9" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -3.363000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid10" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -2.990000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid11" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -2.617000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[node name="Braid12" type="MeshInstance3D" parent="Art"]
+position = Vector3(7.519000, 2.805000, -2.244000)
+rotation_degrees = Vector3(45.000000, 0.000000, 0.000000)
+scale = Vector3(0.013000, 0.071000, 0.071000)
+mesh = SubResource("Unit")
+material_override = SubResource("Chalk")
+
+[editable path="BaseLab"]

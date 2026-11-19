@@ -282,7 +282,13 @@
       "first_dependency_unresolved_explanation": "characters/mixamo_local/humanoid.scn is the unchanged optional character path guarded by ResourceLoader.exists in supplied infrastructure; absent in the neutral input too.",
       "stage_status": "collected and audited; visual comparison pending",
       "view_image_blocks_with_literal_tool_name": 3,
-      "preserved_history_ref": "refs/envart-trials/20261120/control-low"
+      "preserved_history_ref": "refs/envart-trials/20261120/control-low",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 5,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 1
     },
     "medium": {
       "game": "control",
@@ -595,7 +601,13 @@
       },
       "first_dependency_unresolved_explanation": "Unchanged optional Mixamo character path guarded by ResourceLoader.exists; absent in neutral input.",
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/control-medium"
+      "preserved_history_ref": "refs/envart-trials/20261120/control-medium",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 4,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 0
     }
   },
   "sable": {
@@ -852,7 +864,13 @@
       ],
       "stage_status": "collected and audited; visual comparison pending",
       "view_image_blocks_with_literal_tool_name": 7,
-      "preserved_history_ref": "refs/envart-trials/20261120/sable-medium"
+      "preserved_history_ref": "refs/envart-trials/20261120/sable-medium",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 7,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 0
     },
     "xhigh": {
       "game": "sable",
@@ -1148,7 +1166,247 @@
         "After final capture, changed only five small flags to separate two-sided material; kept pre-repair captures/technical/single-sided-flags and recaptured/viewed all three final images."
       ],
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/sable-xhigh"
+      "preserved_history_ref": "refs/envart-trials/20261120/sable-xhigh",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 5,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 0
+    },
+    "low": {
+      "game": "sable",
+      "effort": "low",
+      "session_ids": [
+        "01a1f50d-29fe-7fd0-9f1b-4545f6eb021f"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "low",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 1281123,
+        "cached_input": 1212544,
+        "uncached_input": 68579,
+        "output": 9941,
+        "reasoning_output": 334,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "5431281daa32de3fda08ae87e7dc9f08d5bec0dc",
+      "source_commits": [
+        "9ff6aa3beb99830579eff8560c30eb85b07df8f2 Freeze neutral whitebox, references and production instructions",
+        "a3995e2920a7cc1c2155c38e59769fa420916e31 Establish salt road station reference direction",
+        "1fdec0dfcc0273af0ef0a12693d23a2f27c9ed8c Audition two sandstone bays beside imported freight",
+        "23647f017cee24648b27262d506f31584d70863c Freeze first station assembly and three camera review",
+        "5431281daa32de3fda08ae87e7dc9f08d5bec0dc Complete dispatch desk revision and set final playable entry"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "86c9bd90cdd21523ecd0e331b373454ddd987689ddad1014b0968fc005f7c820",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 120363
+        },
+        "captures/first/props.png": {
+          "sha256": "042d17cf0ab7e3a0c4e30ee53ceec9a86d548182300bc89cecd3b23dc561949c",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 178769
+        },
+        "captures/first/close.png": {
+          "sha256": "a0b8b8713e8be55b783f4bb3086b20dc7bc135e6cb6f9e56aa32b00bff185654",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 240762
+        },
+        "captures/final/door.png": {
+          "sha256": "ffcd76b0f439ed1c62bbde4ade9279004948c2b7194f4cba51693b8ceb63e3d1",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 155457
+        },
+        "captures/final/props.png": {
+          "sha256": "5189194af65838d20670041c36a7220161b3ab347a06b0e4ce1c5d83fec45c2e",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 188904
+        },
+        "captures/final/close.png": {
+          "sha256": "d1348339ce1adcc8a1392e55a5294ce335937b779d3c92091cc39f997fbb578e",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 256104
+        }
+      },
+      "protected_input_changes": [],
+      "first_commit": "23647f017cee24648b27262d506f31584d70863c",
+      "first_dependency_changes": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 29,
+      "view_image_blocks_with_literal_tool_name": 4,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed tool inputs plus stored image helper calls; own package/public source paths only, no peer/host art or solution reads found. Untested tool surfaces do not support absolute isolation claims.",
+      "technical_summary": "两轮实图与输入冻结核对通过；未发现跨组访问",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 4,
+      "coordinator_preflight_capture_log_count": 0,
+      "capture_logs_with_error_strings": [],
+      "collected_files": 120,
+      "collected_bytes": 3512004,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "e89140d343d104f797bfe9e7ed754a179f511fc67848136c19f28197c87ee85e",
+        "ENVIRONMENT.md": "a689948173e7d8a45cfbfab773a3d7bc0526b5134b6f48f0c3d36f45b8edf7dd",
+        "README.md": "f96787a0e6fd60515af6f01c5f450b69dbdc40df04c7d179b11be838dca659da",
+        "REFERENCES.md": "ef7963e39ca5befeef3437f90bb5e02a8bc0e1fa190ca67a8a1c4d48861d89c0",
+        "RESEARCH.md": "f787c458dcab6bf4b9f46119a5689f78410e2d088da69ace0d282ee4760de4f2",
+        "REVIEW.md": "ac634fc188aa5aa4d1487ffde7a80e48939bebc6ea50f2c6fca08d4e942e6385",
+        "art/kaykit/LICENSE.txt": "c5f17abf619731f57f6bbff450f6484214605c13aa96bb75bbcfc70930941ff7",
+        "art/kaykit/banner_patternA_red.glb": "64243b0a8110bbc6e5a02f5c0acbe447dc7ea65319123319c402dd26486dad25",
+        "art/kaykit/banner_patternA_red.glb.import": "5b3471f27d8941a76639d91c246fa47f9943c2600a2a8be2ce038717f6937613",
+        "art/kaykit/banner_patternA_red_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/banner_patternA_red_dungeon_texture.png.import": "f9e8e308c4fac538500aff15503893c06ddaaadddd1acfea39fcc438b83bad95",
+        "art/kaykit/barrel_large_decorated.glb": "d3ad760d5005500a8755e5a816e574dd7e4227c5bb038685a3cb0ab2ad8bb6cb",
+        "art/kaykit/barrel_large_decorated.glb.import": "462fea09eb9512c87665a8ffd4b930add9c9232a0ce9b494ad16629d545e1df4",
+        "art/kaykit/barrel_large_decorated_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/barrel_large_decorated_dungeon_texture.png.import": "32a2acd3a532533a932e98c70f317eafa9e329120f64f0053e4025f4f29c66c4",
+        "art/kaykit/barrel_small_stack.glb": "c23dc73a11c5a57ed33cb8a9df99f2b2793517341c5d62c6e50b0150652e8e99",
+        "art/kaykit/barrel_small_stack.glb.import": "45b93c31db14c6daf487442371d7d34e52fd4d1da2cff09d22183c1290cb7a6f",
+        "art/kaykit/barrel_small_stack_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/barrel_small_stack_dungeon_texture.png.import": "83574e1fa9562457875c86b1c287e4dae4b4dcb34168d6d6a4eda798f05ffabe",
+        "art/kaykit/bottle_A_labeled_green.glb": "48cd6a367b14d305e78f575ac2d16a524bf9d371282cf7efb3270071a7ef02fd",
+        "art/kaykit/bottle_A_labeled_green.glb.import": "a76135fe516eabd12cc10ae4421a2902d465d47bce4bfad6ee3788aed3abcbb4",
+        "art/kaykit/bottle_A_labeled_green_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/bottle_A_labeled_green_dungeon_texture.png.import": "68cfaba2db2a0ac184bf3c77d4f09071ae309121e71ae2ce7d4af10de0ead6c9",
+        "art/kaykit/crates_stacked.glb": "43182b077ead9b033804300ef453b7402bdc979f00cfce2d7f0c91dcf6bb5d3c",
+        "art/kaykit/crates_stacked.glb.import": "8e09e6a1725b80bf5aff7e9226d6834a2f12e7ac9b33fa1d46e09998e4220342",
+        "art/kaykit/crates_stacked_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/crates_stacked_dungeon_texture.png.import": "7cb72999b9a2b5d25c2a38373f443eaa86c81605c53fdb448febc6b2b4374af8",
+        "art/kaykit/table_medium.glb": "9686a202ea2f825062dfab02d89cded25d7acc07847b88c1e39f0e09e085872a",
+        "art/kaykit/table_medium.glb.import": "5f9752e948aba78926da77fca6a6293324ffb4775ac30b497e6d55e5adab895e",
+        "art/kaykit/table_medium_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/table_medium_dungeon_texture.png.import": "bf07bda42a724f2bd14cd7e7e7096536fa04c3e1c46087d9abed4d0920a54bd6",
+        "art/kaykit/wall.glb": "5dccb6843813593ea51c8a31388dbfbfed444b9298937f4f8ee2286c6c91ce95",
+        "art/kaykit/wall.glb.import": "4fafad5ecb6879762610d516953fa7bfa6a4eeb50df44ba261e03903fde6ac08",
+        "art/kaykit/wall_cracked.glb": "395e063c9a4b31ab7b8330868f81e70d4d036d3c311fd5589e691476b9353b1d",
+        "art/kaykit/wall_cracked.glb.import": "597831f97d1aab4859c67bf8eada35d08f5f9339a8713a4c34ae7db6ec0caf5f",
+        "art/kaykit/wall_cracked_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/wall_cracked_dungeon_texture.png.import": "20c535535f29c8ca0e1819e1010781d79ea0dd95af3f1b4bf17d14c3ae83f5ce",
+        "art/kaykit/wall_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/wall_dungeon_texture.png.import": "c2b0ee1b68b44c5c13c44fbac1f1b94554dea0a16ffec8730c2ec444a060b604",
+        "art/kaykit/wall_pillar.glb": "805cb3dc689e1cad1fc04bcb4816a57ad66e498530528fb00709ee3a3e258210",
+        "art/kaykit/wall_pillar.glb.import": "c406daa31db3b501174319e511c6f15fea2693d98e0fa76049ff3a389e7d9f32",
+        "art/kaykit/wall_pillar_dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "art/kaykit/wall_pillar_dungeon_texture.png.import": "c2ee91abf6bf6eb1756b382aa4ea732ef07a6f56c89ddaaaa798e840d52b5dae",
+        "art/masonry.gdshader": "c4a65a7bd44770d3a8e2ea015e13a78f82bd7d2ea4b7460f2d1d46064edb2650",
+        "art/masonry.gdshader.uid": "b324a6edb50c17017d74ea3a401ebab227fc6dce20493d3868a1e9a640f9883b",
+        "art/waybill.svg": "a56a17888e11370a30f22cac94ec1da7b4f1b3423054b50009fea995e55010e2",
+        "art/waybill.svg.import": "c0d16a299cdbca21c91e0f8f3ae425945ce89a2a424ecd2257bd3179fac96121",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/final/close.png": "d1348339ce1adcc8a1392e55a5294ce335937b779d3c92091cc39f997fbb578e",
+        "captures/final/door.png": "ffcd76b0f439ed1c62bbde4ade9279004948c2b7194f4cba51693b8ceb63e3d1",
+        "captures/final/props.png": "5189194af65838d20670041c36a7220161b3ab347a06b0e4ce1c5d83fec45c2e",
+        "captures/first/close.png": "a0b8b8713e8be55b783f4bb3086b20dc7bc135e6cb6f9e56aa32b00bff185654",
+        "captures/first/door.png": "86c9bd90cdd21523ecd0e331b373454ddd987689ddad1014b0968fc005f7c820",
+        "captures/first/props.png": "042d17cf0ab7e3a0c4e30ee53ceec9a86d548182300bc89cecd3b23dc561949c",
+        "captures/sample-a/close.png": "4d95f887769e544e663bbf4652b660c1c8188d657630f6b9ecd645e1f501cc69",
+        "captures/sample-a/door.png": "b1ac1747b67596c33872c57b213645f30bf859979d37d9c7eca28393b1b7f299",
+        "captures/sample-a/props.png": "bd79a2c417711873d05eeb3269452f3cc3be6d113625482fac17ff4f2569669e",
+        "captures/sample-b/close.png": "c747c355e20b78e90352979bcf92616e4da74252ca8ea39f5cbb6f506de0485f",
+        "captures/sample-b/door.png": "46aff48b803d311117fd1063c40b2c93d3746f495a83a65a82622a1e913b41ed",
+        "captures/sample-b/props.png": "78dc3b15fd45dc16fdd1049b1364fff1c5ad382ca48eafea7bd466b02a04f1f9",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "cloth.gdshader": "44e5caf010ac209b002566b7845820e303c20d955064243eaa5533a1ac3362b7",
+        "cloth.gdshader.uid": "d6ad55bc6f8895809a7449b93f1f125f7b051e5ec9703940700cee41b1985f9e",
+        "cloth.obj": "3aad4d6a0dff1e5e43e70f710f60e57ed88d2cdf8bfe41450adeab1ebda56005",
+        "cloth.obj.import": "e13601a606cf704f0dbb197280bbd10a3453657532ecbabbbb6252b8f8e08fd7",
+        "cloth.tres": "9df75eb8340823614be2fe10dd0519e53b4aaad1ab33548307aa401f76394e52",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "2e6fc8f2c33deb25355f2783af9819d8140237e41f084ecc05325f903acf8a9a",
+        "first.tscn": "b512ed092b9efe6999f36dbfaa560db87760d6ef2a3a381817c0e3ccb129a412",
+        "project.godot": "ab6d86ae8d6e8c2e4525ca037e44d4f092f7fdfd2978d51bfe84b4902d2f3f6d",
+        "references.json": "fadecf8d00002a8491dc20f8f214bd74a954d2f7fe6e9236c9a9cee20a044ffc",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "f5c4b36d766bfe90234f0bbb68aa5a28098de34b7a44a27652115ca3746d708c",
+        "sample_b.tscn": "ae37d265a85049ef0b8c92926fbd2ac3cbb86e80830c6dff46397113fbd25445",
+        "sand.gdshader": "655c2a181599af06ba5d004cb84a9a80002730a35afbbb8c696fb7822a672ad0",
+        "sand.gdshader.uid": "5ede328ae808862efc8fed3aca6e4143d3c203e9d398bd60155d5e12e04e2930",
+        "sand.tres": "6dfb635121c75c195ff45f4f2a28582886a8254b7f3f72f06614661cc71567bc",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "view_review_evidence": {
+        "references": "all 3 frozen images",
+        "samples": "both props views at original size after preview",
+        "first": "all 3 through stored views helper",
+        "final": "all 3 through stored views helper"
+      },
+      "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
+      "stage_status": "collected and audited; visual comparison pending",
+      "preserved_history_ref": "refs/envart-trials/20261120/sable-low"
     }
   },
   "hifi": {
@@ -1519,7 +1777,13 @@
         "Final release terminal image only appeared in fragmented source UV islands. Rebuilt only screen surface and complete UV, kept pre-repair images under captures/technical/terminal-uv-before, recaptured all three final views."
       ],
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/hifi-xhigh"
+      "preserved_history_ref": "refs/envart-trials/20261120/hifi-xhigh",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 5,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 0
     },
     "high": {
       "game": "hifi",
@@ -1831,7 +2095,13 @@
         "Audition A wall was partly occluded by original whitebox. Producer explicitly acknowledged it could not establish the true paint appearance, but did not repair that audition before choosing B; this limits the asset comparison evidence."
       ],
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/hifi-high"
+      "preserved_history_ref": "refs/envart-trials/20261120/hifi-high",
+      "actual_render_backends": [
+        "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
+      ],
+      "successful_capture_log_count": 4,
+      "capture_logs_with_error_strings": [],
+      "coordinator_preflight_capture_log_count": 0
     }
   }
 }
