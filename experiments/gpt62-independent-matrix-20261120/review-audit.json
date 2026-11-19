@@ -82,5 +82,32 @@
     "linked_markdown_sha256": "5c7ef3b01f1b816d3b20f7020f3366a6eb2f9f81cb0b63a6c3e5a6e02d677b36",
     "review_input_manifest_sha256": "411a6e4ddfc12ba0160d6aaae2ddbefcb7d80a44c575924f8d8166fc2a189ee6",
     "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
+  },
+  "hifi": {
+    "sessions": [
+      "01a1f585-3f58-7271-97cd-685725cdc3e9"
+    ],
+    "actual_contexts": [
+      {
+        "model": "gpt-6.2-astra",
+        "effort": "xhigh",
+        "approval_policy": "never"
+      }
+    ],
+    "issues": [],
+    "required_image_count": 41,
+    "missing_declared_views": [],
+    "changed_input_files": [],
+    "tool_call_count": 17,
+    "access_flag_count": 0,
+    "review_sha256": "565c7cd843e4c30c1b013403bc748d391debe3e7cfc8328f0349ba31d2012ae5",
+    "manual_view_and_access_review": "completed",
+    "actual_image_coverage": "Inspected stored view/group helpers, every A-F first/final invocation and successful image-bearing tool outputs. Two reference originals, three whitebox originals and all 36 candidate original PNGs displayed from 2026-11-19T20:35:24.300Z to 20:38:05.069Z; no contact-sheet or downscaled substitute.",
+    "access_review": "All 17 recorded calls reviewed. Own instructions/images and report writes only; zero access flags, unchanged frozen inputs, no producer source/effort/usage reads, network tool calls or further delegation.",
+    "coordinator_crosscheck": "Viewed D/max final all three and first props; C/xhigh final all three; E/ultra final all three; B/high final close. Confirmed D's tool/transport scale and lighting, C's coherent exchange workflow with arm/screen overlap, B's color/type consistency and repeated dot texture. Coordinator check is not blind.",
+    "original_markdown_sha256": "f9f2378fadead152e50efaa8f0d9faaa3c0dfe5361625750e05c123ca52d834f",
+    "linked_markdown_sha256": "97cc86ef874d59991ced7c24c939adaab2021e7c34dbb78ffd389add175d1551",
+    "review_input_manifest_sha256": "35b22644ad7055bcae600b42dc29a6cc2a58466bba5e954cd5e3ca66cdf480b2",
+    "archive_link_adaptation": "Judgment prose unchanged; only image link targets and an archive notice adapted in REVIEW.md. REVIEW.original.md and review.json are byte-identical originals."
   }
 }

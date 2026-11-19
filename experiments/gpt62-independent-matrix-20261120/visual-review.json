@@ -429,5 +429,145 @@
       "lower_usage_alternative": "xhigh",
       "status": "Observed whole-run preference under single-producer isolation; xhigh is a lower-input third-tier alternative, not an equal-quality replacement. Hybrid approaches remain untested."
     }
+  },
+  "hifi": {
+    "preferred": [
+      "D"
+    ],
+    "tiers": [
+      [
+        "D"
+      ],
+      [
+        "C"
+      ],
+      [
+        "B",
+        "E"
+      ],
+      [
+        "A",
+        "F"
+      ]
+    ],
+    "summary": "整体首选 D，次选 C。D 在 door 能同时交代入口、绕开前景体块的进门方向和右后方亮起的工位。转到 props，台面、红色抽屉车、手推车与托盘沿墙排开，地面仍留有整片通路。close 里台钳的手柄、台上接管的部件和旁边的读数屏给这些位置各自的理由。D 的短板是部分箱面文字发软，门外大块墙地的材质变化较少。C 的机械臂交接台和漫画化板面更接近参考的图形语言，近看时臂身与诊断屏相叠。B 与 E 同层，分别以连贯的压力检测设备和紧凑的坐式控制台见长。A 与 F 同层，局部可读，门与工位之间的空间完成度较弱。",
+    "categories": {
+      "fidelity": {
+        "preferred": [
+          "C"
+        ],
+        "evidence": "C 的 door 用厚门柱、内缘绿灯、侧面读卡器和窄幅警示条围出开口，带折角的地面导向从前景体块旁通向门内，对应参考 02 的门框与通路关系。props 从梁下吊灯、带法兰的绿管读到墙脚加强板，再到橙色工位边界，层次接近参考 01。close 的机械臂外轮廓、面内斜线和 HOT SWAP! 海报把实体与平面图形接在一起。C 的灰地板更干净，门楣和工位白墙也比参考抢亮。E 的桌椅、护栏和阀轮同样贴近 01，门侧控制屏在 door 只露出一个窄面。"
+      },
+      "unity": {
+        "preferred": [
+          "B"
+        ],
+        "evidence": "B 的 door 用黄色 07 定位门头，门柱和箱边只取短段警示纹，青绿窄灯标出入口。props 循环管、阀轮、黄色滤件和工位界线沿用同一套颜色分工。close 的 2.84 BAR 屏、圆表与墙上泄压顺序图采用相容的字级、暗边和分面，读得出都属于这间设施。较弱处是大墙板、地面和泵壳都铺了近似的网点，材质差别变小。F 的蓝黄配色也很整齐，但大块平墙和座椅的简化程度与精排的说明牌有落差。"
+      },
+      "assets": {
+        "preferred": [
+          "D"
+        ],
+        "evidence": "D 的 close 有可辨的台钳丝杆手柄、成列挂放的扳手、带脚轮的抽屉柜。黄色卧罐有束带和托盘，立罐前能看见手推车的轮与托板。回到 props，小工具收在手边，大件落在台旁地面，长管由吊架托在上方，各级尺寸放在一起仍合理。door 前方体块也有带筋侧板和嵌入式顶盖。D 的小工具到 door 已难辨，近景工具背板略显斑杂。C 的转轴、线束和输送辊也经得起近看。F 的椅座、靠背与底座则难靠形体判断坐姿。"
+      },
+      "detail": {
+        "preferred": [
+          "C",
+          "D"
+        ],
+        "evidence": "C 的 close 可以从 RELEASE 操作屏顺着机械臂夹头看到辊道上的电芯，再看到右箱同类标签和上方锁定提示海报。props 的橙线把这串动作收在工位内。门外地板留有大块素面，检修口、板缝和排水格栅补在边上。近看时臂上电缆挡住诊断屏右下的一部分。D 的 close 借台钳、接软管的台上部件、读数屏和工具车表现检修，又用绑扎罐、手推车和托盘表现交接。props 从密集工具板过渡到稀疏走道，代价是看全景时最细的工具融成一排短线。"
+      },
+      "lighting": {
+        "preferred": [
+          "D"
+        ],
+        "evidence": "D 的 door 里圆吊灯下能看清黄箭头和门槛，左墙退入蓝影，门内仍有深度。右后方工位是第二个可辨的亮区。props 的墙面亮斑落在站牌、仪表和台面附近，前景 SERVICE LANE 已转暗。close 可见工具板上沿灯条、台下软管落影，暗底读数屏也没有首轮那样泛白。部分墙上光斑边缘较软，远景门楣白字仍亮。B 的泵身和阀轮也能从暗管中跳出，但终图的深色外壁与顶梁更容易并在一起。"
+      }
+    },
+    "candidates": {
+      "A": {
+        "note": "door 门头和橙纹门柱容易找，右侧两个原有体块的深色侧面几乎没有可读构造。props 左侧绑带包、红白小箱、台上绿模块与落地蓝模块有分组。close 的八角台面、外撇支脚和下圈支撑交代了台子的结构。相邻巨幅凸墙板反复出现，排线同样密地爬过墙、捆包和台腿，几种表面触感接近。",
+        "revision": "door 将首轮白黄墙板压成蓝灰，橙色体块换作暗壳，并在右门柱外添青灯。props 加了贴墙橙栏、货包底部垫条及地面短线。close 从 CELL / 02 字牌换成带 98% 容量、模块示意和交接状态的屏，台上物终于有了明确用途。全局排线提高漫画感，也吃掉了首轮墙块之间的明度差。"
+      },
+      "B": {
+        "note": "door 的门柱分出检修口、绿灯和通风槽，左后方卷帘标着滤件库。props 沿横管、阀轮、立管一直读到带表泵体，台边黄滤件接续这条视线。close 的开口壳体、台上滤芯与压表给出了装配关系。图示在近处有效，退到门口时远处深绿横管贴入阴影，细字也很快失去辨识度。",
+        "revision": "door 首轮左右近似的 ACCESS 面板分化成一侧读卡器、一侧线路表，前景体块多了侧盖和编号。props/close 中首轮落地的黄筒有了支座，台上整筒细化为有褶纹和端盖的滤芯，软管接起读数台与泵。屏底从浅灰转深，读数更清楚。整体压暗、叠加网点后，顶管的分段在远处弱于首轮。"
+      },
+      "C": {
+        "note": "door 的门冠支撑、门柱侧盖和转向箭头能把原本孤立的门安进建筑。props 的管道在角上向下折入表箱，吊灯下分出操作台和备货箱。close 中转轴的螺栓、顺臂走的线束、辊上的电芯与右侧带提手的电芯箱形成清楚的交接关系。臂身遮去主屏右下局部，橙臂与亮海报也同时争夺视线。",
+        "revision": "door 首轮箭头末端贴到前景体块，终图改成折向门口的通行带，并补出门楣上方支架。props 首轮角上短管末端在高处，终图弯下接入表箱，加了吊灯和墙脚格栅。close 从素色关节和标志页变成可见轴盖、电缆与 RELEASE 操作页。主屏收小，注意力转到夹头和工件，同时少了首轮大屏的远读面积。"
+      },
+      "D": {
+        "note": "door 的吊灯、门槛格栅和右后方被照亮的工具台分出入口与目的地。props 从工具板、红车过渡到靠墙的送货托盘，长管在头顶转角，黄色边线外有完整走道。close 能从带管的测试件找到读数屏，也能看清台钳与小件的相对尺度。远看工具板的细件变成纹理，前景箱侧的标识偏糊，左侧深蓝墙面变化有限。",
+        "revision": "door 把前景素色箱顶换成分段压板，左墙增加横窗。props 的顶管从横向直段改成有流向牌、向下转入风机外壳上方的弯头，墙面和地坪上的亮区更集中。close 将黄色筒件换成正面露出叶轮的青色部件，曲线屏由泛白改成深底，红柜的一层抽屉拉开。台上检修件和托盘库存更易区分，风机上半部与走道字样在终图更暗。"
+      },
+      "E": {
+        "note": "door 的厚框、内缘窄黄线与分段绿灯包住开口，地面箭头在前景体块左侧清楚可见。props 的曲面桌、座椅、双罐和矮栏在一小段墙内组成值守位，前沿虚线之外有留白。close 的橙色手轮与右侧海报上同形手轮相互解释。大表盘、屏与阀轮都挤在同一高度，门口远看时工位的层次少于 D。",
+        "revision": "first/close 左侧金属箱底和台面之间有明显空隙，final/close 箱底贴回桌面。椅子转出侧面，可看清座垫、靠背与落地支架。新增细管、按键和横放的滤件，大字白底抬头换成深绿铭牌。props 的 KEEP CLEAR 从虚线上移到线外，右墙尽头也收住了原先外露的网格。door 箭头缩短，与前景体块拉开。小字远读性随铭牌压暗有所下降。"
+      },
+      "F": {
+        "note": "door 的亮绿门灯、斜纹与黄色箭头在远处都容易分辨。props 左侧横筒与立管、中央台椅、右侧 DISPATCH 标牌读作三组。close 的 96% 屏和接线电芯说明台子可以检测。整片墙主要靠横向色带分层，椅背像厚直板，筒件端面与底座较简，门、墙与台子之间的受光差异也小。",
+        "revision": "door 增加墙肋和门后的分段面板，顶管的亮黄箍改深色，门标周围安静下来。props 增加向下的带表支管和右墙横管。close 里控制台旁多了接线电芯，墙上说明牌缩小，台沿由黄改青，物件与图示能相互核对。终图大块平墙因此更显空，最近一枚地面箭头的一端仍与前景体块轮廓相接。"
+      }
+    },
+    "visible_constraint_concerns": [
+      "共同 whitebox/door 的青色门框右边已有一高一低两块橙色几何，左边缘也有青块。六组 door 中，近处体块都遮住部分右后工位的下半部。以相同位置和轮廓作为原有测试体量的依据。A 的暗色包壳侧面进一步减弱了边缘可读性，C 的折线导向和 E 的短箭头则留出了视距。",
+      "F/final/door 最近的黄箭头一端碰到前景平台的投影轮廓，横向净空不好读。C/final/close 的机械臂、电缆与墙屏有明确的前后遮挡。C/final/props 的地面小字跨到板缝附近。这里能判断图形是否互相遮挡，无法从透视重叠推定实体穿插。",
+      "E/first/close 的金属箱有可见悬空间隙，终图已收回桌面。A/final/props 右边仍见外部网格和橙块，C、F 的 final/props 右端也见网格。白盒同机位已有这一开口，属于局部收边和室内感的观察。"
+    ],
+    "viewed_files": [
+      "references/01_production_work_area.jpg",
+      "references/02_production_threshold.jpg",
+      "whitebox/door.png",
+      "whitebox/props.png",
+      "whitebox/close.png",
+      "A/first/door.png",
+      "A/first/props.png",
+      "A/first/close.png",
+      "A/final/door.png",
+      "A/final/props.png",
+      "A/final/close.png",
+      "B/first/door.png",
+      "B/first/props.png",
+      "B/first/close.png",
+      "B/final/door.png",
+      "B/final/props.png",
+      "B/final/close.png",
+      "C/first/door.png",
+      "C/first/props.png",
+      "C/first/close.png",
+      "C/final/door.png",
+      "C/final/props.png",
+      "C/final/close.png",
+      "D/first/door.png",
+      "D/first/props.png",
+      "D/first/close.png",
+      "D/final/door.png",
+      "D/final/props.png",
+      "D/final/close.png",
+      "E/first/door.png",
+      "E/first/props.png",
+      "E/first/close.png",
+      "E/final/door.png",
+      "E/final/props.png",
+      "E/final/close.png",
+      "F/first/door.png",
+      "F/first/props.png",
+      "F/first/close.png",
+      "F/final/door.png",
+      "F/final/props.png",
+      "F/final/close.png"
+    ],
+    "limits": "依据为两张包内参考、三张共同白盒、六组各两轮三个固定机位的原图，共 41 张。参考 01 支持生产区分组、管梁、吊灯及明暗关系，02 补足门框、控制器和走道表面。02 的门较宽、顶棚在画外，两图都缺少手工检修流程近景，角色与 HUD 不计入环境。静帧只能说明所见轮廓与遮挡，无法实测门洞净宽 1.2 m、净高 2.3 m、顶棚约 4.5 m，或验证坡道、台阶、跳台及碰撞保留、实际可通行性、设备运行和视野外衔接。画面不能证明素材来源或许可。各组与原作在材质差异、磨损和明暗分块上仍有距离。本次为独立图像偏好，尚未获用户验收。",
+    "valueChoice": [
+      "C"
+    ],
+    "valueReason": "若兼顾参考画风与用量，选整体次选 C / xhigh：未缓存输入 157,792、输出 47,494，比 D / max 少约 32% 和 38%，缓存输入也较少。它在参考贴合类领先，但机械臂遮住部分屏幕。若优先三机位综合完成度、道具适配与光影，仍选 D / max；两者不是无损替代。",
+    "coordinator_pipeline_choice": {
+      "quality_effort": "max",
+      "reference_priority_effort": "xhigh",
+      "lower_usage_alternative": "xhigh",
+      "status": "Observed whole-run quality preference max; xhigh is a lower-usage second choice and reference-fidelity winner. Cross-run hybrid approaches remain untested."
+    }
   }
 }

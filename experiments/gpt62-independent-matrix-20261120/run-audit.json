@@ -5308,7 +5308,7 @@
         "Source transport-case skeleton did not display with single-root adaptation in audition; created static closed body/lid from source geometry for first production.",
         "Final release terminal image only appeared in fragmented source UV islands. Rebuilt only screen surface and complete UV, kept pre-repair images under captures/technical/terminal-uv-before, recaptured all three final views."
       ],
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-xhigh",
       "actual_render_backends": [
         "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
@@ -5667,7 +5667,7 @@
       "process_limitations": [
         "Audition A wall was partly occluded by original whitebox. Producer explicitly acknowledged it could not establish the true paint appearance, but did not repair that audition before choosing B; this limits the asset comparison evidence."
       ],
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-high",
       "actual_render_backends": [
         "Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)"
@@ -5944,7 +5944,7 @@
         "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-low",
       "view_review_evidence": {
         "references": "both frozen reference images",
@@ -6241,7 +6241,7 @@
         "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
       },
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-medium",
       "view_review_evidence": {
         "references": "both frozen references",
@@ -6719,7 +6719,7 @@
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "source_route": "Quaternius MegaKit / Essentials 免费 Standard 镜像；保留压筋、UV、法线与 ORM，补配图集并统一钢蓝/橙黄，原创管路、读数、交接单及印刷描线。",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-ultra",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "controlled_shader_comparison": {
         "scenes": [
           "sample_b_control.tscn",
@@ -7149,7 +7149,7 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "preserved_history_ref": "refs/envart-trials/20261120/hifi-max",
-      "stage_status": "collected and audited; visual comparison pending",
+      "stage_status": "collected and audited; visual comparison complete",
       "coordinator_supplemental_evidence": [
         {
           "source_relative_path": ".work/fit-check/sample-a/door.png",
