@@ -314,7 +314,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "medium": {
       "game": "control",
@@ -659,7 +666,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      }
     },
     "high": {
       "game": "control",
@@ -1120,7 +1134,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "xhigh": {
       "game": "control",
@@ -1641,7 +1662,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     }
   },
   "sable": {
@@ -1930,7 +1958,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      }
     },
     "xhigh": {
       "game": "sable",
@@ -2258,7 +2293,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      }
     },
     "low": {
       "game": "sable",
@@ -2518,7 +2560,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "high": {
       "game": "sable",
@@ -2821,7 +2870,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     }
   },
   "hifi": {
@@ -3224,7 +3280,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "high": {
       "game": "hifi",
@@ -3568,7 +3631,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "low": {
       "game": "hifi",
@@ -3831,7 +3901,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "medium": {
       "game": "hifi",
@@ -4113,7 +4190,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     }
   },
   "dredge": {
@@ -4409,7 +4493,14 @@
             "characters/mixamo_local/humanoid.scn"
           ]
         }
-      ]
+      ],
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "low": {
       "game": "dredge",
@@ -4659,7 +4750,14 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/dredge-low"
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-low",
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": false,
+        "godot_cache_identity_preserved": true
+      }
     },
     "xhigh": {
       "game": "dredge",
@@ -5045,7 +5143,14 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/dredge-xhigh"
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-xhigh",
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      }
     },
     "high": {
       "game": "dredge",
@@ -5414,7 +5519,14 @@
       ],
       "first_dependency_unresolved_explanation": "Unchanged optional character path guarded by ResourceLoader.exists; absent in neutral input.",
       "stage_status": "collected and audited; visual comparison pending",
-      "preserved_history_ref": "refs/envart-trials/20261120/dredge-high"
+      "preserved_history_ref": "refs/envart-trials/20261120/dredge-high",
+      "frozen_contract_check": {
+        "reference_image_changes": [],
+        "immutable_source_changes": [],
+        "brief_original_prefix_preserved": true,
+        "brief_delivery_appendix_added": true,
+        "godot_cache_identity_preserved": true
+      }
     }
   }
 }
