@@ -1,0 +1,694 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="controller_lab_tscn"]
+[ext_resource type="Script" path="res://review.gd" id="review_gd"]
+[ext_resource type="Texture2D" path="res://art/kit/Textures/colormap.png" id="colormap_png"]
+[ext_resource type="Shader" path="res://art/enamel.gdshader" id="enamel_gdshader"]
+[ext_resource type="ArrayMesh" path="res://art/kit/wall-pillar.obj" id="wall-pillar_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/wall.obj" id="wall_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/floor.obj" id="floor_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/floor-panel-straight.obj" id="floor-panel-straight_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/table-large.obj" id="table-large_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/computer-wide.obj" id="computer-wide_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/chair-armrest.obj" id="chair-armrest_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/container-flat-open.obj" id="container-flat-open_obj"]
+[ext_resource type="ArrayMesh" path="res://art/kit/container-tall.obj" id="container-tall_obj"]
+
+[sub_resource type="Environment" id="Room"]
+background_mode = 1
+background_color = Color(0.085,0.115,0.18,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.62,0.7,0.94,1)
+ambient_light_energy = 0.88
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.8
+ssao_intensity = 2
+
+[sub_resource type="ShaderMaterial" id="Enamel8d9ebd"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.55294,0.61961,0.74118,1)
+
+[sub_resource type="ShaderMaterial" id="Enamel798aa9"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.47451,0.54118,0.66275,1)
+
+[sub_resource type="StandardMaterial3D" id="Paint343a510"]
+albedo_color = Color(0.20392,0.22745,0.31765,1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="Unit"]
+size = Vector3(1,1,1)
+
+[sub_resource type="StandardMaterial3D" id="Paint272d430"]
+albedo_color = Color(0.15294,0.17647,0.26275,1)
+roughness = 0.82
+
+[sub_resource type="StandardMaterial3D" id="Paint20293a0"]
+albedo_color = Color(0.12549,0.16078,0.22745,1)
+roughness = 0.82
+
+[sub_resource type="StandardMaterial3D" id="Paintfff0bb1"]
+albedo_color = Color(1.00000,0.94118,0.73333,1)
+roughness = 0.82
+emission_enabled = true
+emission = Color(1.00000,0.94118,0.73333,1)
+emission_energy_multiplier = 1.1
+
+[sub_resource type="ShaderMaterial" id="Enamel8297a5"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.50980,0.59216,0.64706,1)
+
+[sub_resource type="ShaderMaterial" id="Enamel949faf"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.58039,0.62353,0.68627,1)
+
+[sub_resource type="ShaderMaterial" id="Enamel85b3bf"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.52157,0.70196,0.74902,1)
+
+[sub_resource type="ShaderMaterial" id="Enamel38869a"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.21961,0.52549,0.60392,1)
+
+[sub_resource type="ShaderMaterial" id="Enameldb9355"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.85882,0.57647,0.33333,1)
+
+[sub_resource type="ShaderMaterial" id="Enamel5297a6"]
+shader = ExtResource("enamel_gdshader")
+shader_parameter/palette = ExtResource("colormap_png")
+shader_parameter/paint = Color(0.32157,0.59216,0.65098,1)
+
+[node name="Receiving" type="Node3D"]
+script = ExtResource("review_gd")
+
+[node name="BaseLab" parent="." instance=ExtResource("controller_lab_tscn")]
+
+[node name="WorldEnvironment" parent="BaseLab" index="1"]
+environment = SubResource("Room")
+
+[node name="Sun" parent="BaseLab" index="2"]
+visible = false
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="Enclosure" type="Node3D" parent="Art"]
+
+[node name="wall-pillar_1" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9.96, 0, -10.1)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.02, 3.55, 1.75)
+mesh = ExtResource("wall-pillar_obj")
+material_override = SubResource("Enamel8d9ebd")
+
+[node name="wall_2" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9.96, 0, -8.08)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.02, 3.55, 1.75)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel8d9ebd")
+
+[node name="wall_3" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9.96, 0, -6.06)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.02, 3.55, 1.75)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel8d9ebd")
+
+[node name="wall_4" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9.96, 0, -4.04)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.02, 3.55, 1.75)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel8d9ebd")
+
+[node name="wall_5" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9.96, 0, -2.02)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(2.02, 3.55, 1.75)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel8d9ebd")
+
+[node name="wall_6" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(7, 0, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(2, 3.55, 1.8)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel798aa9")
+
+[node name="wall_7" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(9, 0, -1)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(2, 3.55, 1.8)
+mesh = ExtResource("wall_obj")
+material_override = SubResource("Enamel798aa9")
+
+[node name="Roof_8" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(2.9, 4.64, -5.5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(16, 0.28, 15)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint343a510")
+
+[node name="Crossbeam_9" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(3, 4.43, -10)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(15, 0.19, 0.16)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint272d430")
+
+[node name="Crossbeam_10" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(3, 4.43, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(15, 0.19, 0.16)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint272d430")
+
+[node name="Crossbeam_11" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(3, 4.43, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(15, 0.19, 0.16)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint272d430")
+
+[node name="Crossbeam_12" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(3, 4.43, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(15, 0.19, 0.16)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint272d430")
+
+[node name="Luminaire_13" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(7.8, 4.32, -4.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.65, 0.17, 0.43)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint20293a0")
+
+[node name="Diffuser_14" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(7.8, 4.22, -4.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.5, 0.03, 0.3)
+mesh = SubResource("Unit")
+material_override = SubResource("Paintfff0bb1")
+
+[node name="Downlight_15" type="SpotLight3D" parent="Art/Enclosure"]
+position = Vector3(7.8, 4.25, -4.6)
+rotation_degrees = Vector3(-83, 0, 0)
+scale = Vector3(1, 1, 1)
+light_energy = 3.7
+light_color = Color(1,0.88,0.7,1)
+spot_range = 11
+spot_angle = 53
+spot_attenuation = 0.6
+shadow_enabled = true
+
+[node name="Luminaire_16" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(0, 4.32, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.65, 0.17, 0.43)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint20293a0")
+
+[node name="Diffuser_17" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(0, 4.22, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.5, 0.03, 0.3)
+mesh = SubResource("Unit")
+material_override = SubResource("Paintfff0bb1")
+
+[node name="Downlight_18" type="SpotLight3D" parent="Art/Enclosure"]
+position = Vector3(0, 4.25, -3)
+rotation_degrees = Vector3(-83, 0, 0)
+scale = Vector3(1, 1, 1)
+light_energy = 3.7
+light_color = Color(1,0.88,0.7,1)
+spot_range = 11
+spot_angle = 53
+spot_attenuation = 0.6
+shadow_enabled = true
+
+[node name="Luminaire_19" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(6.5, 4.32, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.65, 0.17, 0.43)
+mesh = SubResource("Unit")
+material_override = SubResource("Paint20293a0")
+
+[node name="Diffuser_20" type="MeshInstance3D" parent="Art/Enclosure"]
+position = Vector3(6.5, 4.22, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.5, 0.03, 0.3)
+mesh = SubResource("Unit")
+material_override = SubResource("Paintfff0bb1")
+
+[node name="Downlight_21" type="SpotLight3D" parent="Art/Enclosure"]
+position = Vector3(6.5, 4.25, -9)
+rotation_degrees = Vector3(-83, 0, 0)
+scale = Vector3(1, 1, 1)
+light_energy = 3.7
+light_color = Color(1,0.88,0.7,1)
+spot_range = 11
+spot_angle = 53
+spot_attenuation = 0.6
+shadow_enabled = true
+
+[node name="Deck" type="Node3D" parent="Art"]
+
+[node name="floor_22" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_23" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_24" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_25" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_26" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_27" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_28" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-4, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_29" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_30" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_31" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_32" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_33" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_34" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_35" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(-2, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_36" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_37" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_38" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_39" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_40" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_41" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_42" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(0, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_43" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_44" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_45" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_46" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_47" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_48" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_49" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(2, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_50" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_51" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_52" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_53" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_54" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_55" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_56" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(4, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_57" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_58" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_59" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_60" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_61" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_62" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_63" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(6, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_64" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_65" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_66" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_67" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_68" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_69" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor-panel-straight_70" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(8, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor-panel-straight_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_71" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -11)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_72" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_73" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_74" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -5)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_75" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_76" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="floor_77" type="MeshInstance3D" parent="Art/Deck"]
+position = Vector3(10, -0.295, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.995, 1, 1.995)
+mesh = ExtResource("floor_obj")
+material_override = SubResource("Enamel8297a5")
+
+[node name="ReceivingDesk" type="Node3D" parent="Art"]
+
+[node name="table-large_78" type="MeshInstance3D" parent="Art/ReceivingDesk"]
+position = Vector3(8.98, 0, -4.5)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.68, 2.1, 1.18)
+mesh = ExtResource("table-large_obj")
+material_override = SubResource("Enamel949faf")
+
+[node name="computer-wide_79" type="MeshInstance3D" parent="Art/ReceivingDesk"]
+position = Vector3(9.01, 0.84, -4.75)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.55, 1.55, 1.55)
+mesh = ExtResource("computer-wide_obj")
+material_override = SubResource("Enamel85b3bf")
+
+[node name="chair-armrest_80" type="MeshInstance3D" parent="Art/ReceivingDesk"]
+position = Vector3(7.91, 0, -4.68)
+rotation_degrees = Vector3(0, 80, 0)
+scale = Vector3(1.58, 1.58, 1.58)
+mesh = ExtResource("chair-armrest_obj")
+material_override = SubResource("Enamel38869a")
+
+[node name="container-flat-open_81" type="MeshInstance3D" parent="Art/ReceivingDesk"]
+position = Vector3(9.04, 0, -6.58)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1.1, 1.1, 1.1)
+mesh = ExtResource("container-flat-open_obj")
+material_override = SubResource("Enameldb9355")
+
+[node name="container-tall_82" type="MeshInstance3D" parent="Art/ReceivingDesk"]
+position = Vector3(9.04, 0, -2.68)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.42, 1.42, 1.42)
+mesh = ExtResource("container-tall_obj")
+material_override = SubResource("Enamel5297a6")
+
+[editable path="BaseLab"]
