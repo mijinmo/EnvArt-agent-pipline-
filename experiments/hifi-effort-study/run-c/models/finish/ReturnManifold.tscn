@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/return_manifold.glb" id="asset"]
+[ext_resource type="Material" path="res://materials/finish/Manifold.tres" id="Machine"]
+
+[node name="ReturnManifold" instance=ExtResource("asset")]
+
+[node name="Mandrel_bends" parent="." index="0"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Pipe_unions" parent="." index="1"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Manifold_body" parent="." index="2"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Shutoff_handgrip" parent="." index="3"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Valve_stems" parent="." index="4"]
+surface_material_override/0 = ExtResource("Machine")

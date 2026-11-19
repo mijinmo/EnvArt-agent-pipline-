@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Locker.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/finish/Locker.tres" id="Parchment"]
+
+[node name="Lockers" instance=ExtResource("asset")]
+
+[node name="Prop_Locker" parent="." index="0"]
+surface_material_override/0 = ExtResource("Parchment")

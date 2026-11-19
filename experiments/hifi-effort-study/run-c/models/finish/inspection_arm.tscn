@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/inspection_arm.glb" id="mesh"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="enamel"]
+
+[node name="InspectionArm" instance=ExtResource("mesh")]
+
+[node name="Table_clamp" parent="." index="0"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Clamp_pad" parent="." index="1"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Shoulder_pedestal" parent="." index="2"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Forged_links" parent="." index="3"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Enamel_flash" parent="." index="4"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Pivot_housings" parent="." index="5"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Set_screws" parent="." index="6"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Pneumatic_line" parent="." index="7"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Dial_indicator_body" parent="." index="8"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Indicator_bezel" parent="." index="9"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Indicator_dial" parent="." index="10"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Gauge_needle" parent="." index="11"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Spring_probe" parent="." index="12"]
+surface_material_override/0 = ExtResource("enamel")

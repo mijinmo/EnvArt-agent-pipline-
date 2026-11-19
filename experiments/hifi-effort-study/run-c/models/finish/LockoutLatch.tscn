@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/lockout_latch.glb" id="asset"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="Machine"]
+
+[node name="LockoutLatch" instance=ExtResource("asset")]
+
+[node name="Jamb_casting" parent="." index="0"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Folded_hatch" parent="." index="1"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Flush_striker" parent="." index="2"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Captive_screws" parent="." index="3"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Latch_feet" parent="." index="4"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Pull_handle" parent="." index="5"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Kick_louvers" parent="." index="6"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Warning_badge" parent="." index="7"]
+surface_material_override/0 = ExtResource("Machine")

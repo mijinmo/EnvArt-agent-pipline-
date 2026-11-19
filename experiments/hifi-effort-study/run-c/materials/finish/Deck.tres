@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/finished_enamel.gdshader" id="sh"]
+[ext_resource type="Texture2D" path="res://paint/deck.png" id="paper"]
+
+[ext_resource type="Texture2D" path="res://paint/deck_markings.png" id="floor_print"]
+[ext_resource type="Texture2D" path="res://paint/deck_shadow.png" id="floor_shadow"]
+
+[resource]
+shader = ExtResource("sh")
+shader_parameter/coat = Color(0.83922,0.89020,0.89020,1)
+shader_parameter/surface_role = 1
+shader_parameter/local_light = 0.29
+shader_parameter/graphic_light = 0.8
+shader_parameter/hatch_strength = 0.09
+shader_parameter/artwork = ExtResource("paper")
+shader_parameter/fitment = 6
+shader_parameter/pressed_lines = 0
+shader_parameter/floor_print = ExtResource("floor_print")
+shader_parameter/floor_shadow = ExtResource("floor_shadow")

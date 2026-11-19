@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/isolation_tag.glb" id="mesh"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="enamel"]
+
+[node name="IsolationTag" instance=ExtResource("mesh")]
+
+[node name="Lanyard" parent="." index="0"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Lockout_tag" parent="." index="1"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Danger_stripe" parent="." index="2"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Padlock" parent="." index="3"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Tag_eyelet" parent="." index="4"]
+surface_material_override/0 = ExtResource("enamel")

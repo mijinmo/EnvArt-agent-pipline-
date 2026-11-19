@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/wire_guard.glb" id="asset"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="Machine"]
+
+[node name="WireGuard" instance=ExtResource("asset")]
+
+[node name="Guard_stays" parent="." index="0"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Guard_fixings" parent="." index="1"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Wire_guard" parent="." index="2"]
+surface_material_override/0 = ExtResource("Machine")
+
+[node name="Guard_hub" parent="." index="3"]
+surface_material_override/0 = ExtResource("Machine")

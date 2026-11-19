@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/Prop_Computer.gltf" id="asset"]
+[ext_resource type="Material" path="res://materials/finish/Computer.tres" id="Steel"]
+
+[ext_resource type="Material" path="res://materials/finish/Screen.tres" id="screen"]
+
+[node name="Terminal" instance=ExtResource("asset")]
+
+[node name="Prop_Computer" parent="." index="0"]
+surface_material_override/0 = ExtResource("screen")
+surface_material_override/1 = ExtResource("Steel")
+surface_material_override/2 = ExtResource("screen")

@@ -1,6 +1,6 @@
 # D1 双风机检修间 · run-c
 
-在 Godot 4.7.2 Forward+ 打开本目录的 project.godot。冻结输入在 scenes/start.tscn，第一轮在 scenes/pass01.tscn。evidence 中的 overall、detail、transition 分别是设备间全景、工作台近景与入口。截图均为 Godot Metal 实机输出，1600 × 1000。
+在 Godot 4.7.2 Forward+ 打开本目录的 project.godot。冻结输入在 scenes/start.tscn，第一轮在 scenes/pass01.tscn。按 F6 可单独运行当前场景，按 F5 默认打开 scenes/final.tscn。evidence 中的 overall、detail、transition 分别是设备间全景、工作台近景与入口。截图均为 Godot Metal 实机输出，1600 × 1000。
 
 ## 第一轮
 
@@ -13,3 +13,27 @@
 - 第一轮实机三图能辨出两台设备的状态、拆件与安全海报。全景中地板和前景箱仍近似整块填色。近景终端和工作台正面细节不足，门锁排线几乎均匀覆盖整个黄色面。第二轮选这三处修订。
 
 技术记录：制作一轮，重新打开后一次捕获三机位，共三张；共享 GPU 等待 0.0 秒。导入中 Godot 把名字结尾为 wheel 的阀轮识别为车辆节点，加载检查发现一条覆盖失效警告，改名后再导入。图形捕获零次失败。沙箱内 headless 编辑器打印了用户设置目录/证书访问告警，导入的工程资源已在已保存场景中加载。工具探测发现系统 Python 无 Pillow，改用已有的本机打包 Python。
+
+## 最终交付
+
+首轮快照为本地提交 `5b1776b`。最终场景为 [scenes/final.tscn](scenes/final.tscn)。[全景](evidence/final_overall.png)、[拆件工位近景](evidence/final_detail.png)、[门槛](evidence/final_transition.png) 与首轮三图使用同一捕获脚本和机位。
+
+- 对现有工作台加装机械测头、台夹、定位关节、气路、抽屉和检修格栅，用测头指向旁边的备用叶轮。A 机的护网与绿色灯带对应正常回路，B 机带隔离吊牌、红灯和「0 RPM」读数。右墙用双压力表及实际回风百叶补全设备关系。
+- 以原模型的 UV 法线图控制冲压板上的暗刻线和亮唇，补足前景箱的交叉筋、桶身沟槽及终端边缘。箱体与柜体分别增加包扎带、底色分段及局部印记。门柱的 A/B 回路标识与机壳灯色呼应。
+- 地面沿用起点的八片原装平台。根据场内静止物体的三角形沿固定斜向投影，绘制甲板投影、接触区与网点羽边三个通道，再叠加机座禁入盘、条纹和通道标线。编辑器中可调整 materials/finish/Deck.tres 的 cast_density；移动投影物体时需同步更新 paint/deck_shadow.png。Shader 的 pressed_lines 用于控制凹凸纹转为印线的强度，fitment 依据具体用途选择印记及分色，graphic_light 控制两种接触灯色的印刷光区。顶板增加接缝和原套件回风口。
+- 已实际核对最终三机位。前景箱、椅座与台架的落地阴影更明确，右侧台面的测量用途可读。近景里测头支架和海报重叠，门口机位里两个锁具仍然非常对称。主参考里横梁下更深的暗部、较大块的警示投光，在最终画面里仍显克制。地面投影针对当前静态摆位。
+- 通过 Godot 加载后逐项比较起点和最终的 17 个 StaticBody3D 和 17 个 BoxShape。名称路径、物体变换、可见网格边界、碰撞尺寸与变换、层及掩码均一致。三个相机的变换与 FOV 相等。scenes/service_whitebox.tscn 的局部材质覆盖用于门内侧与临近平台。起点场景和三张起点原图无变更。
+
+### 制作与故障计数
+
+共两轮美术制作、一次审图后的自主修订，外部反馈为零。Godot Metal Forward+ 共启动三次图形捕获，每次三个机位，共写出九张，交付六张不同轮次的成图。第三次只修复下述显示问题并覆盖最终图。三次 GPU 锁等待均为 0.0 秒，图形进程均正常退出。首次导入约为当地 15:42，首轮图在 15:50，最终美术图在 15:59，技术重拍在 16:02。完整运行时间及 token 按总试验的会话记录统计。
+
+| 需要返工的技术事件 | 处理 |
+| --- | --- |
+| 首轮加载时阀轮节点覆盖失效 | 避开 Godot 自动识别车辆节点的名称后缀并重新导入 |
+| 最终场景的一处小数缺少前导零，预检无法解析 | 修正格栅缩放的文本格式后重开通过 |
+| 最终第一次捕获中，终端读数被原厂 logo 的三角形裁断，回风铭牌顶部与壁饰穿插 | 给共面屏幕两块材质槽使用同一映射，将铭牌移到壁饰前；同机位重拍并看图核实 |
+
+共三次需返工的技术事件，包括一次成图后的技术重拍。早期路径与文件名过滤探测出现过空通配符、无匹配及缺失 Python 模块；改用实际目录与本机已有依赖。引擎导入的用户目录告警未阻断场景加载。两轮的场景、材质及截图分别保存。
+
+[CGWORLD 背景与灯光访谈](https://cgworld.jp/article/202306-hifirush02.html) · [共同主图 51](https://cgworld.jp/article/818ee60f0aedfa6eaff670b2e3567f517a8b9ccc.jpg) · [共同辅助图 60](https://cgworld.jp/article/11358812b6f69a3ef7162b4a164d34fcc25e2486.jpg) · [Godot Spatial Shader 文档](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html)

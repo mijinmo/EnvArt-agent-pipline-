@@ -1,0 +1,24 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/bench_drawers.glb" id="mesh"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="enamel"]
+
+[node name="BenchDrawers" instance=ExtResource("mesh")]
+
+[node name="Drawer_reveals" parent="." index="0"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Enamel_fronts" parent="." index="1"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Recessed_grips" parent="." index="2"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Index_holders" parent="." index="3"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Index_marks" parent="." index="4"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Vent_slots" parent="." index="5"]
+surface_material_override/0 = ExtResource("enamel")

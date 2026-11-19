@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/finished_enamel.gdshader" id="sh"]
+
+
+[resource]
+shader = ExtResource("sh")
+shader_parameter/coat = Color(0.97255,0.95686,0.94118,1)
+shader_parameter/surface_role = 0
+shader_parameter/local_light = 0.29
+shader_parameter/graphic_light = 0.58
+shader_parameter/hatch_strength = 0.18
+shader_parameter/fitment = 0
+shader_parameter/pressed_lines = 0

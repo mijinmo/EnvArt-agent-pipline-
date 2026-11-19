@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://models/pressure_station.glb" id="mesh"]
+[ext_resource type="Material" path="res://materials/finish/Machine.tres" id="enamel"]
+
+[node name="PressureStation" instance=ExtResource("mesh")]
+
+[node name="Gauge_box" parent="." index="0"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Face_seal" parent="." index="1"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Pressure_lines" parent="." index="2"]
+surface_material_override/0 = ExtResource("enamel")
+
+[node name="Unions" parent="." index="3"]
+surface_material_override/0 = ExtResource("enamel")
