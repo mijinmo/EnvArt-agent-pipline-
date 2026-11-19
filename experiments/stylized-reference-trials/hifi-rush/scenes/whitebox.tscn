@@ -1,0 +1,96 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="e0"]
+
+[sub_resource type="Environment" id="room"]
+background_mode = 1
+background_color = Color(0.1451,0.2,0.28627,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.65098,0.71765,0.82745,1)
+ambient_light_energy = 0.68
+reflected_light_source = 1
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 1.05
+
+[node name="ImpellerService" type="Node3D"]
+
+
+[node name="ProtectedWhitebox" instance=ExtResource("e0") parent="."]
+
+
+[node name="Views" type="Node3D" parent="."]
+
+
+[node name="Lighting" type="Node3D" parent="."]
+
+
+[node name="Shell" type="Node3D" parent="."]
+
+
+[node name="MachineRoom" type="Node3D" parent="."]
+
+
+[node name="Bench" type="Node3D" parent="."]
+
+
+[node name="Print" type="Node3D" parent="."]
+
+
+[node name="RoomAtmosphere" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("room")
+
+[node name="overall" type="Camera3D" parent="Views"]
+transform = Transform3D(0.700048,-0.002507851,-0.7140914,-0,0.9999938,-0.003511925,0.7140958,0.002458516,0.7000437,-2.45,2.05,-4.42)
+fov = 64
+current = true
+
+[node name="detail" type="Camera3D" parent="Views"]
+transform = Transform3D(0.8357055,0.01048839,-0.5490777,-0,0.9998176,0.01909836,0.5491779,-0.0159606,0.8355531,3.15,1.7,-6.85)
+fov = 59
+current = false
+
+[node name="transition" type="Camera3D" parent="Views"]
+transform = Transform3D(0.9764075,0.004053935,-0.2158982,-0,0.9998238,0.01877376,0.2159363,-0.01833084,0.9762354,-0.65,1.6,-1.1)
+fov = 66
+current = false
+
+[node name="DoorWash" type="OmniLight3D" parent="Lighting"]
+position = Vector3(0, 3.3, -4.7)
+light_color = Color(1.0,0.85882,0.67843,1)
+light_energy = 3.2
+omni_range = 7
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="BenchTask" type="OmniLight3D" parent="Lighting"]
+position = Vector3(5.35, 3.15, -9.35)
+light_color = Color(1.0,0.94902,0.81569,1)
+light_energy = 5.8
+omni_range = 7.5
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="MotorWash" type="OmniLight3D" parent="Lighting"]
+position = Vector3(0.65, 3.25, -8.9)
+light_color = Color(0.65098,0.89412,0.98824,1)
+light_energy = 5.3
+omni_range = 8.3
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="AisleFixture" type="OmniLight3D" parent="Lighting"]
+position = Vector3(7.4, 3.85, -5)
+light_color = Color(0.71765,0.91373,1.0,1)
+light_energy = 4.2
+omni_range = 8
+omni_attenuation = 0.85
+shadow_enabled = true
+
+[node name="InspectionRed" type="OmniLight3D" parent="Lighting"]
+position = Vector3(2.35, 3.05, -10.8)
+light_color = Color(1.0,0.31373,0.3451,1)
+light_energy = 1.55
+omni_range = 3.1
+omni_attenuation = 0.85
+shadow_enabled = false
