@@ -1,0 +1,952 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" path="res://baseline/source/grid.gdshader" id="5_grid"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Gate.gltf" id="r0"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/RakedBow.gltf" id="r1"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Fabric.gltf" id="r2"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/Rig.gltf" id="r3"]
+[ext_resource type="PackedScene" path="res://art/pass01/StratifiedBluffs.glb" id="r4"]
+[ext_resource type="PackedScene" path="res://art/pass01/HarborGate.gltf" id="r5"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/WallBand_Straight.gltf" id="r6"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Column_Pipes.gltf" id="r7"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_SatelliteDish.gltf" id="r8"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/EnamelBench.gltf" id="r9"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/Grindstone.gltf" id="r10"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/box-open.glb" id="r11"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Barrel2_Closed.gltf" id="r12"]
+[ext_resource type="PackedScene" path="res://art/pass01/WeatherCover.gltf" id="r13"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Crate4.gltf" id="r14"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bedroll-packed.glb" id="r15"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bucket.glb" id="r16"]
+[ext_resource type="PackedScene" path="res://baseline/assets/kenney/bottle.glb" id="r17"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Mug.gltf" id="r18"]
+[ext_resource type="PackedScene" path="res://baseline/assets/quaternius/Prop_Vent_Wide.gltf" id="r19"]
+[ext_resource type="Shader" path="res://baseline/shaders/round03/ink.gdshader" id="r20"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/ThresholdPaint.gltf" id="ThresholdPaint"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/SandMarks.gltf" id="SandMarks"]
+[ext_resource type="PackedScene" path="res://baseline/assets/round03/TealRack.gltf" id="WorkshopRacks"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/GateBadges.gltf" id="GateBadges"]
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/CanvasSeams.gltf" id="CanvasSeams"]
+[ext_resource type="Texture2D" path="res://baseline/assets/signs/depot.png" id="TexBenchDiagram"]
+[ext_resource type="Texture2D" path="res://art/pass01/TrailAtlas.png" id="TexIncomingRoute"]
+[ext_resource type="Texture2D" path="res://art/pass01/Windworks.png" id="TexGatePlate"]
+[ext_resource type="Texture2D" path="res://art/pass01/EastArrow.png" id="TexEastMarker"]
+
+[ext_resource type="PackedScene" path="res://baseline/assets/fitted/BowTies.gltf" id="BowTies"]
+
+[ext_resource type="Shader" path="res://art/pass01/TradeWinds.gdshader" id="TradeWinds"]
+[ext_resource type="Shader" path="res://art/pass01/SaltPan.gdshader" id="SaltPan"]
+[ext_resource type="Shader" path="res://art/pass01/CutBank.gdshader" id="CutBank"]
+[ext_resource type="PackedScene" path="res://art/pass01/FreightDerrick.glb" id="FreightDerrick"]
+[ext_resource type="PackedScene" path="res://art/pass01/StowageNet.glb" id="StowageNet"]
+[ext_resource type="PackedScene" path="res://art/pass01/RotorCradles.glb" id="RotorCradles"]
+[ext_resource type="PackedScene" path="res://art/pass01/ServiceMat.glb" id="ServiceMat"]
+[ext_resource type="PackedScene" path="res://art/pass01/HoistCargo.gltf" id="HoistCargo"]
+[ext_resource type="PackedScene" path="res://art/pass01/AlloyLid.gltf" id="AlloyLid"]
+[ext_resource type="Texture2D" path="res://art/pass01/Serial.png" id="Serial"]
+[ext_resource type="PackedScene" path="res://art/pass01/Vice.gltf" id="Vice"]
+[ext_resource type="PackedScene" path="res://art/pass01/Flange.gltf" id="Flange"]
+[ext_resource type="PackedScene" path="res://art/pass01/SeaFan.gltf" id="SeaFan"]
+[ext_resource type="PackedScene" path="res://art/pass01/Coupler.gltf" id="Coupler"]
+[ext_resource type="PackedScene" path="res://art/pass01/Cabinet.gltf" id="Cabinet"]
+[ext_resource type="Texture2D" path="res://art/pass01/Dynamometer.png" id="Dynamometer"]
+
+[sub_resource type="ShaderMaterial" id="Grid"]
+shader = ExtResource("SaltPan")
+
+[sub_resource type="ShaderMaterial" id="Stone"]
+shader = ExtResource("CutBank")
+
+[sub_resource type="StandardMaterial3D" id="Orange"]
+albedo_color = Color(0.64,0.42,0.32,1.0)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Teal"]
+albedo_color = Color(0.33,0.43,0.43,1.0)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(32, 0.5, 32)
+
+[sub_resource type="BoxMesh" id="BackWallMesh"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(24, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="OcclusionWallMesh"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxShape3D" id="OcclusionWallShape"]
+size = Vector3(0.5, 3, 10)
+
+[sub_resource type="BoxMesh" id="OcclusionReturnMesh"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxShape3D" id="OcclusionReturnShape"]
+size = Vector3(4, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="DoorLeftMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLeftShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorRightMesh"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorRightShape"]
+size = Vector3(0.7, 2.6, 0.6)
+
+[sub_resource type="BoxMesh" id="DoorLintelMesh"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="DoorLintelShape"]
+size = Vector3(2.6, 0.3, 0.6)
+
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(3, 0.3, 6.3249)
+
+[sub_resource type="BoxMesh" id="LandingMesh"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxShape3D" id="LandingShape"]
+size = Vector3(3, 2, 2)
+
+[sub_resource type="BoxMesh" id="Step1Mesh"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step1Shape"]
+size = Vector3(2, 0.2, 0.6)
+
+[sub_resource type="BoxMesh" id="Step2Mesh"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step2Shape"]
+size = Vector3(2, 0.4, 0.6)
+
+[sub_resource type="BoxMesh" id="Step3Mesh"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step3Shape"]
+size = Vector3(2, 0.6000000000000001, 0.6)
+
+[sub_resource type="BoxMesh" id="Step4Mesh"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="Step4Shape"]
+size = Vector3(2, 0.8, 0.6)
+
+[sub_resource type="BoxMesh" id="JumpLowMesh"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpLowShape"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpMidMesh"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpMidShape"]
+size = Vector3(1.5, 0.9, 1.5)
+
+[sub_resource type="BoxMesh" id="JumpHighMesh"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxShape3D" id="JumpHighShape"]
+size = Vector3(1.5, 1.4, 1.5)
+
+[sub_resource type="BoxMesh" id="SpawnPadMesh"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="BoxShape3D" id="SpawnPadShape"]
+size = Vector3(2, 0.02, 2)
+
+[sub_resource type="ShaderMaterial" id="TradeSky"]
+shader = ExtResource("TradeWinds")
+
+[sub_resource type="Sky" id="PaperSky"]
+sky_material = SubResource("TradeSky")
+[sub_resource type="Environment" id="sky"]
+background_mode = 2
+sky = SubResource("PaperSky")
+background_color = Color(0.62, 0.94, 0.94, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.89, 0.90, 0.97, 1)
+ambient_light_energy = 0.75
+reflected_light_source = 1
+
+[sub_resource type="ShaderMaterial" id="ink"]
+render_priority = 120
+shader = ExtResource("r20")
+
+[sub_resource type="QuadMesh" id="quad"]
+size = Vector2(2,2)
+material = SubResource("ink")
+
+[sub_resource type="StandardMaterial3D" id="PaintBenchDiagram"]
+albedo_texture = ExtResource("TexBenchDiagram")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelBenchDiagram"]
+size = Vector2(1.8,1.2)
+material = SubResource("PaintBenchDiagram")
+
+[sub_resource type="StandardMaterial3D" id="PaintIncomingRoute"]
+albedo_texture = ExtResource("TexIncomingRoute")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelIncomingRoute"]
+size = Vector2(2.05,1.06)
+material = SubResource("PaintIncomingRoute")
+
+[sub_resource type="StandardMaterial3D" id="PaintGatePlate"]
+albedo_texture = ExtResource("TexGatePlate")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelGatePlate"]
+size = Vector2(0.99,0.30)
+material = SubResource("PaintGatePlate")
+
+[sub_resource type="StandardMaterial3D" id="PaintEastMarker"]
+albedo_texture = ExtResource("TexEastMarker")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="PanelEastMarker"]
+size = Vector2(1.28,0.7)
+material = SubResource("PaintEastMarker")
+
+[sub_resource type="StandardMaterial3D" id="LabelSerial"]
+albedo_texture = ExtResource("Serial")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="TransitTag0"]
+size = Vector2(0.31, 0.145)
+material = SubResource("LabelSerial")
+
+[sub_resource type="QuadMesh" id="TransitTag1"]
+size = Vector2(0.31, 0.145)
+material = SubResource("LabelSerial")
+
+[sub_resource type="QuadMesh" id="TransitTag2"]
+size = Vector2(0.31, 0.145)
+material = SubResource("LabelSerial")
+
+[sub_resource type="StandardMaterial3D" id="Pd3b578"]
+albedo_color = Color(0.8274509803921568,0.7098039215686275,0.47058823529411764,1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="OchreNosing0"]
+size = Vector3(1.960000, 0.053000, 0.004000)
+material = SubResource("Pd3b578")
+
+[sub_resource type="BoxMesh" id="OchreNosing1"]
+size = Vector3(1.960000, 0.053000, 0.004000)
+material = SubResource("Pd3b578")
+
+[sub_resource type="BoxMesh" id="OchreNosing2"]
+size = Vector3(1.960000, 0.053000, 0.004000)
+material = SubResource("Pd3b578")
+
+[sub_resource type="BoxMesh" id="OchreNosing3"]
+size = Vector3(1.960000, 0.053000, 0.004000)
+material = SubResource("Pd3b578")
+
+[sub_resource type="StandardMaterial3D" id="LabelDynamometer"]
+albedo_texture = ExtResource("Dynamometer")
+roughness = 1.0
+
+[sub_resource type="QuadMesh" id="LoadGauge"]
+size = Vector2(0.205, 0.245)
+material = SubResource("LabelDynamometer")
+
+[sub_resource type="QuadMesh" id="Consignment"]
+size = Vector2(0.24, 0.11)
+material = SubResource("LabelSerial")
+
+[sub_resource type="StandardMaterial3D" id="P698781"]
+albedo_color = Color(0.4117647058823529,0.5294117647058824,0.5058823529411764,1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="GaugeMount"]
+size = Vector3(0.250000, 0.278000, 0.080000)
+material = SubResource("P698781")
+
+[sub_resource type="StandardMaterial3D" id="P547575"]
+albedo_color = Color(0.32941176470588235,0.4588235294117647,0.4588235294117647,1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="SignalPlateL"]
+size = Vector3(0.340000, 0.330000, 0.030000)
+material = SubResource("P547575")
+
+[sub_resource type="StandardMaterial3D" id="Pe4d6a5"]
+albedo_color = Color(0.8941176470588236,0.8392156862745098,0.6470588235294118,1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="StripeL0"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[sub_resource type="BoxMesh" id="StripeL1"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[sub_resource type="BoxMesh" id="StripeL2"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[sub_resource type="BoxMesh" id="SignalPlateR"]
+size = Vector3(0.340000, 0.330000, 0.030000)
+material = SubResource("P547575")
+
+[sub_resource type="BoxMesh" id="StripeR0"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[sub_resource type="BoxMesh" id="StripeR1"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[sub_resource type="BoxMesh" id="StripeR2"]
+size = Vector3(0.035000, 0.190000, 0.005000)
+material = SubResource("Pe4d6a5")
+
+[node name="Whitebox" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="World"]
+position = Vector3(0, -0.25, 0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Floor"]
+mesh = SubResource("FloorMesh")
+material_override = SubResource("Grid")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Floor"]
+shape = SubResource("FloorShape")
+
+[node name="BackWall" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2, -12)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/BackWall"]
+mesh = SubResource("BackWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="OcclusionWall" type="StaticBody3D" parent="World"]
+position = Vector3(10, 1.5, -6)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionWall"]
+mesh = SubResource("OcclusionWallMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionWall"]
+shape = SubResource("OcclusionWallShape")
+
+[node name="OcclusionReturn" type="StaticBody3D" parent="World"]
+position = Vector3(8, 1.5, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/OcclusionReturn"]
+mesh = SubResource("OcclusionReturnMesh")
+material_override = SubResource("Stone")
+
+[node name="Collision" type="CollisionShape3D" parent="World/OcclusionReturn"]
+shape = SubResource("OcclusionReturnShape")
+
+[node name="DoorLeft" type="StaticBody3D" parent="World"]
+position = Vector3(-0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLeft"]
+mesh = SubResource("DoorLeftMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLeft"]
+shape = SubResource("DoorLeftShape")
+
+[node name="DoorRight" type="StaticBody3D" parent="World"]
+position = Vector3(0.95, 1.3, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorRight"]
+mesh = SubResource("DoorRightMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorRight"]
+shape = SubResource("DoorRightShape")
+
+[node name="DoorLintel" type="StaticBody3D" parent="World"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/DoorLintel"]
+mesh = SubResource("DoorLintelMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/DoorLintel"]
+shape = SubResource("DoorLintelShape")
+
+[node name="Ramp" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Ramp"]
+mesh = SubResource("RampMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Ramp"]
+shape = SubResource("RampShape")
+
+[node name="Landing" type="StaticBody3D" parent="World"]
+position = Vector3(-6, 1, -7)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Landing"]
+mesh = SubResource("LandingMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Landing"]
+shape = SubResource("LandingShape")
+
+[node name="Step1" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.1, 2.0)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step1"]
+mesh = SubResource("Step1Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step1"]
+shape = SubResource("Step1Shape")
+
+[node name="Step2" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.2, 1.4)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step2"]
+mesh = SubResource("Step2Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step2"]
+shape = SubResource("Step2Shape")
+
+[node name="Step3" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.30000000000000004, 0.8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step3"]
+mesh = SubResource("Step3Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step3"]
+shape = SubResource("Step3Shape")
+
+[node name="Step4" type="StaticBody3D" parent="World"]
+position = Vector3(5, 0.4, 0.20000000000000018)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/Step4"]
+mesh = SubResource("Step4Mesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/Step4"]
+shape = SubResource("Step4Shape")
+
+[node name="JumpLow" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.2, 1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpLow"]
+visible = false
+mesh = SubResource("JumpLowMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpLow"]
+shape = SubResource("JumpLowShape")
+
+[node name="JumpMid" type="StaticBody3D" parent="World"]
+position = Vector3(1, 0.45, -1)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpMid"]
+visible = false
+mesh = SubResource("JumpMidMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpMid"]
+shape = SubResource("JumpMidShape")
+
+[node name="JumpHigh" type="StaticBody3D" parent="World"]
+position = Vector3(3, 0.7, -3)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/JumpHigh"]
+visible = false
+mesh = SubResource("JumpHighMesh")
+material_override = SubResource("Orange")
+
+[node name="Collision" type="CollisionShape3D" parent="World/JumpHigh"]
+shape = SubResource("JumpHighShape")
+
+[node name="SpawnPad" type="StaticBody3D" parent="World"]
+position = Vector3(0, 0.01, 8)
+rotation_degrees = Vector3(0, 0, 0)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="World/SpawnPad"]
+mesh = SubResource("SpawnPadMesh")
+material_override = SubResource("Teal")
+
+[node name="Collision" type="CollisionShape3D" parent="World/SpawnPad"]
+shape = SubResource("SpawnPadShape")
+
+[node name="Gate" instance=ExtResource("r0") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="CanopyBows" instance=ExtResource("r1") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Fabric" instance=ExtResource("r2") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Rig" instance=ExtResource("r3") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="DistantBluffs" instance=ExtResource("r4") parent="."]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="GateFrame" instance=ExtResource("r5") parent="."]
+position = Vector3(0.000000, 0.000000, -3.970000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.535000, 0.520000, 1.540000)
+
+[node name="ServiceWall0" instance=ExtResource("r6") parent="."]
+position = Vector3(2.650000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall1" instance=ExtResource("r6") parent="."]
+position = Vector3(5.680000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="ServiceWall2" instance=ExtResource("r6") parent="."]
+position = Vector3(8.710000, 0.000000, -13.030000)
+rotation_degrees = Vector3(0,90,0)
+scale = Vector3(0.7,1.12,0.76)
+
+[node name="Riser" instance=ExtResource("r7") parent="."]
+position = Vector3(9.450000, 0.000000, -9.900000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="RelayDish" instance=ExtResource("r8") parent="."]
+position = Vector3(8.100000, 3.650000, -12.050000)
+rotation_degrees = Vector3(0.000000, -23.000000, 0.000000)
+scale = Vector3(0.570000, 0.570000, 0.570000)
+
+[node name="Desk" instance=ExtResource("r9") parent="."]
+position = Vector3(5.720000, 0.000000, -10.310000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.860000, 0.860000, 0.860000)
+
+[node name="Grinder" instance=ExtResource("r10") parent="."]
+position = Vector3(4.450000, 0.000000, -9.330000)
+rotation_degrees = Vector3(0.000000, 36.000000, 0.000000)
+scale = Vector3(3.400000, 3.400000, 3.400000)
+
+[node name="UnderBench" instance=ExtResource("r11") parent="."]
+position = Vector3(5.850000, 0.000000, -10.020000)
+rotation_degrees = Vector3(0.000000, 16.000000, 0.000000)
+scale = Vector3(1.650000, 1.650000, 1.650000)
+
+[node name="Barrel" instance=ExtResource("r12") parent="."]
+position = Vector3(7.780000, 0.000000, -9.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 0.750000, 0.750000)
+
+[node name="Crate" instance=ExtResource("r13") parent="."]
+position = Vector3(8.680000, 0.000000, -10.350000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(0.650000, 0.650000, 0.650000)
+
+[node name="PartsBox" instance=ExtResource("r14") parent="."]
+position = Vector3(3.530000, 0.308000, -10.930000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.550000, 0.550000, 0.550000)
+
+[node name="SupplyRoll" instance=ExtResource("r15") parent="."]
+position = Vector3(3.940000, 0.000000, -8.640000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(2.700000, 2.700000, 2.700000)
+
+[node name="Pail" instance=ExtResource("r16") parent="."]
+position = Vector3(4.890000, 0.000000, -9.700000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.800000, 1.800000, 1.800000)
+
+[node name="Vessel" instance=ExtResource("r17") parent="."]
+position = Vector3(5.600000, 0.809000, -10.360000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.300000, 2.300000, 2.300000)
+
+[node name="Mug" instance=ExtResource("r18") parent="."]
+position = Vector3(6.090000, 0.809000, -10.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="WallVent" instance=ExtResource("r19") parent="."]
+position = Vector3(7.050000, 2.930000, -11.390000)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.680000, 0.680000, 0.680000)
+
+[node name="overall" type="Camera3D" parent="."]
+transform = Transform3D(0.8308917, 0.0271638, -0.5557708, -0.0000000, 0.9988077, 0.0488177, 0.5564342, -0.0405622, 0.8299010, -4.1000000, 2.6500000, 3.2500000)
+fov = 63
+current = true
+
+[node name="detail" type="Camera3D" parent="."]
+transform = Transform3D(0.8530935, 0.0415961, -0.5200974, -0.0000000, 0.9968171, 0.0797230, 0.5217581, -0.0680111, 0.8503781, 3.3600000, 1.8700000, -5.6000000)
+fov = 60
+current = false
+
+[node name="transition" type="Camera3D" parent="."]
+transform = Transform3D(0.9293326, 0.0035743, -0.3692264, -0.0000000, 0.9999531, 0.0096801, 0.3692438, -0.0089960, 0.9292890, -0.3200000, 1.7100000, -2.0800000)
+fov = 71
+current = false
+
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("sky")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-49.000000, -47.000000, 0.000000)
+light_color = Color(1.0, 0.957, 0.88, 1)
+light_energy = 1.0
+shadow_enabled = true
+directional_shadow_max_distance = 55.0
+
+[node name="Ink" type="MeshInstance3D" parent="."]
+mesh = SubResource("quad")
+extra_cull_margin = 16384.0
+cast_shadow = 0
+
+[node name="ThresholdPaint" parent="." instance=ExtResource("ThresholdPaint")]
+
+[node name="SandMarks" parent="." instance=ExtResource("SandMarks")]
+
+[node name="WorkshopRacks" parent="." instance=ExtResource("WorkshopRacks")]
+
+[node name="GateBadges" parent="." instance=ExtResource("GateBadges")]
+
+[node name="CanvasSeams" parent="." instance=ExtResource("CanvasSeams")]
+
+[node name="BenchDiagram" type="MeshInstance3D" parent="."]
+position = Vector3(5.460000, 2.890000, -11.390000)
+mesh = SubResource("PanelBenchDiagram")
+
+[node name="IncomingRoute" type="MeshInstance3D" parent="."]
+position = Vector3(-0.090000, 1.650000, -11.700000)
+mesh = SubResource("PanelIncomingRoute")
+
+[node name="GatePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.000000, 2.500000, -3.555000)
+mesh = SubResource("PanelGatePlate")
+
+[node name="EastMarker" type="MeshInstance3D" parent="."]
+position = Vector3(8.180000, 1.650000, -0.732000)
+mesh = SubResource("PanelEastMarker")
+
+[node name="BowTies" parent="." instance=ExtResource("BowTies")]
+
+[node name="FreightWay" type="Node3D" parent="."]
+
+[node name="Workshop" type="Node3D" parent="."]
+
+[node name="SkyRig" type="Node3D" parent="."]
+
+[node name="FreightDerrick" parent="SkyRig" instance=ExtResource("FreightDerrick")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="StowageNet" parent="SkyRig" instance=ExtResource("StowageNet")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="RotorCradles" parent="Workshop" instance=ExtResource("RotorCradles")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="ServiceMat" parent="Workshop" instance=ExtResource("ServiceMat")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="ShortDeck" parent="FreightWay" instance=ExtResource("HoistCargo")]
+position = Vector3(1.000000, -0.000700, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.956023, 0.266312, 1.000000)
+
+[node name="FlushLid0" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(1.000000, 0.400500, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.374500, 1.000000, 0.374500)
+
+[node name="TransitTag0" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(1.240000, 0.216000, 1.753000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("TransitTag0")
+
+[node name="DispatchCase" parent="FreightWay" instance=ExtResource("HoistCargo")]
+position = Vector3(1.000000, -0.000700, -1.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.956023, 0.599201, 1.000000)
+
+[node name="FlushLid1" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(1.000000, 0.900500, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.374500, 1.000000, 0.374500)
+
+[node name="TransitTag1" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(1.240000, 0.486000, -0.247000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("TransitTag1")
+
+[node name="MotorCase" parent="FreightWay" instance=ExtResource("HoistCargo")]
+position = Vector3(3.000000, -0.000700, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.956023, 0.932091, 1.000000)
+
+[node name="FlushLid2" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(3.000000, 1.400500, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.374500, 1.000000, 0.374500)
+
+[node name="TransitTag2" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(3.240000, 0.756000, -2.247000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("TransitTag2")
+
+[node name="SteelTread0" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(5.000000, 0.201000, 2.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.499000, 1.000000, 0.149500)
+
+[node name="OchreNosing0" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(5.000000, 0.160000, 2.300500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("OchreNosing0")
+
+[node name="SteelTread1" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(5.000000, 0.401000, 1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.499000, 1.000000, 0.149500)
+
+[node name="OchreNosing1" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(5.000000, 0.360000, 1.700500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("OchreNosing1")
+
+[node name="SteelTread2" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(5.000000, 0.601000, 0.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.499000, 1.000000, 0.149500)
+
+[node name="OchreNosing2" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(5.000000, 0.560000, 1.100500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("OchreNosing2")
+
+[node name="SteelTread3" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(5.000000, 0.801000, 0.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.499000, 1.000000, 0.149500)
+
+[node name="OchreNosing3" type="MeshInstance3D" parent="FreightWay"]
+position = Vector3(5.000000, 0.760000, 0.500500)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("OchreNosing3")
+
+[node name="InclinedDeck0" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 1.960908, -5.855220)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck1" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 1.673141, -4.991919)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck2" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 1.385374, -4.128617)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck3" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 1.097606, -3.265315)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck4" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 0.809839, -2.402013)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck5" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 0.522072, -1.538711)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="InclinedDeck6" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 0.234304, -0.675410)
+rotation_degrees = Vector3(18.434950, 0.000000, 0.000000)
+scale = Vector3(0.749000, 1.000000, 0.226000)
+
+[node name="LandingDeck" parent="FreightWay" instance=ExtResource("AlloyLid")]
+position = Vector3(-6.000000, 2.001000, -7.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.750000, 1.000000, 0.500000)
+
+[node name="BenchVise" parent="Workshop" instance=ExtResource("Vice")]
+position = Vector3(5.150000, 0.821000, -10.270000)
+rotation_degrees = Vector3(0.000000, -16.000000, 0.000000)
+scale = Vector3(0.760000, 0.760000, 0.760000)
+
+[node name="ReplacementRotor" parent="Workshop" instance=ExtResource("Flange")]
+position = Vector3(6.400000, 1.093000, -10.310000)
+rotation_degrees = Vector3(64.000000, -9.000000, 0.000000)
+scale = Vector3(0.450000, 0.450000, 0.450000)
+
+[node name="LiftMotor" parent="Workshop" instance=ExtResource("SeaFan")]
+position = Vector3(7.660000, 0.910000, -8.650000)
+rotation_degrees = Vector3(75.000000, -15.000000, 0.000000)
+scale = Vector3(0.920000, 0.920000, 0.920000)
+
+[node name="SpareSleeves" parent="Workshop" instance=ExtResource("Coupler")]
+position = Vector3(8.620000, 0.010000, -9.310000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.380000, 0.380000, 0.380000)
+
+[node name="Shelf" parent="Workshop" instance=ExtResource("Cabinet")]
+position = Vector3(2.560000, 0.000000, -11.050000)
+rotation_degrees = Vector3(0.000000, -3.000000, 0.000000)
+scale = Vector3(0.920000, 0.920000, 0.920000)
+
+[node name="ReserveRotor" parent="Workshop" instance=ExtResource("Flange")]
+position = Vector3(2.550000, 1.120000, -11.060000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.360000, 0.360000, 0.360000)
+
+[node name="LoadGauge" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(1.119000, 1.682000, -3.529000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("LoadGauge")
+
+[node name="Consignment" type="MeshInstance3D" parent="Workshop"]
+position = Vector3(7.644000, 0.324000, -8.265000)
+rotation_degrees = Vector3(0.000000, -4.000000, 0.000000)
+mesh = SubResource("Consignment")
+
+[node name="GaugeMount" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(1.119000, 1.682000, -3.572000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("GaugeMount")
+
+[node name="SignalPlateL" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(-0.955000, 0.680000, -3.567000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("SignalPlateL")
+
+[node name="StripeL0" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(-1.049000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeL0")
+
+[node name="StripeL1" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(-0.955000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeL1")
+
+[node name="StripeL2" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(-0.861000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeL2")
+
+[node name="SignalPlateR" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(0.955000, 0.680000, -3.567000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+mesh = SubResource("SignalPlateR")
+
+[node name="StripeR0" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(0.861000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeR0")
+
+[node name="StripeR1" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(0.955000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeR1")
+
+[node name="StripeR2" type="MeshInstance3D" parent="SkyRig"]
+position = Vector3(1.049000, 0.681000, -3.547000)
+rotation_degrees = Vector3(0.000000, 0.000000, -28.000000)
+mesh = SubResource("StripeR2")
