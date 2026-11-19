@@ -17,3 +17,18 @@
 计划交付：16 个可编辑工程、白盒/首轮/最终同机位实图、素材来源和许可、匿名评审与隔离记录、按游戏和能力类别筛选的 HTML。进度与产物以实际保存的清单为准。
 
 [HTML 分类与同机位对比](../../docs/gpt62-independent-matrix.html) · [输入与运行清单](run-manifest.json) · [隔离预检](ISOLATION.md)。四游戏参考共 11 张已实际查看并冻结，只归档来源与哈希，私有参考原图不再分发。每个游戏四组归一化输入哈希一致；唯一归一化字段是用于分离 Godot 用户缓存的 config/name。
+
+## 打开与重新拍图
+
+收集后的工程在 `results/<游戏>/<effort>/project.godot`，用 Godot 4.7.2 标准版导入，F5 打开 final.tscn。源场景与资产不依赖当时临时目录。first.tscn 和原白盒均保留；控制方式见各工程 README。
+
+各工程内的 render.py 是当次隔离试跑的队列客户端，收集后不会自动启动协调服务。普通本机复看可直接调用已安装的 Godot：
+
+```sh
+# 在要复看的单个结果工程目录内执行，输出使用未存在的新目录。
+godot --headless --path . --editor --import --quit
+godot --path . --rendering-driver metal --audio-driver Dummy \
+  --script res://capture.gd -- final.tscn /absolute/path/to/new-evidence
+```
+
+Windows/Linux 换用对应图形后端；跨平台画面尚未验证。不要重跑 builder 覆盖保存场景，不要覆盖现有首轮/终图。`.work/frozen-references` 是当时私有参考缓存，未归档；公开来源、准确图片 URL 与哈希保存在 REFERENCES.md / references.json。

@@ -283,5 +283,261 @@
       "first_dependency_unresolved_explanation": "characters/mixamo_local/humanoid.scn is the unchanged optional character path guarded by ResourceLoader.exists in supplied infrastructure; absent in the neutral input too.",
       "stage_status": "collected and audited; visual comparison pending"
     }
+  },
+  "sable": {
+    "medium": {
+      "game": "sable",
+      "effort": "medium",
+      "session_ids": [
+        "01a1f4ee-1714-7570-ad92-21d8d5aeaac5"
+      ],
+      "actual_contexts": [
+        {
+          "model": "gpt-6.2-astra",
+          "effort": "medium",
+          "approval_policy": "never"
+        }
+      ],
+      "usage": {
+        "input": 3164051,
+        "cached_input": 3053952,
+        "uncached_input": 110099,
+        "output": 16865,
+        "reasoning_output": 1660,
+        "reasoning_included_in_output": true
+      },
+      "source_head": "1fc81afaecc2246908236b954e6099a48a2267e1",
+      "source_commits": [
+        "14bfe34254e292a5f234132f9e4671b7ba3872d5 Freeze neutral whitebox, references and production instructions",
+        "786983e2553cd348422435be3aafe14261eee6c7 定下盐路驿站的参考与空间方向",
+        "fa33c823764d4ddc9d97929560efe2c138c66e36 对照裂纹陶土与浅色石墙的实物小样",
+        "8062687269b038ceafce4d94fbecbb2e8fa01fac 冻结盐路门楼与称货棚首轮及三机位诊断",
+        "1fc81afaecc2246908236b954e6099a48a2267e1 交付修订后的盐路第七站与三机位终图"
+      ],
+      "working_status": "",
+      "normalized_input_sha256": "531458ee5c371244dfef5943ab426788c33a929bced72c32c6827157cf4ee069",
+      "capture_evidence": {
+        "captures/first/door.png": {
+          "sha256": "f2425022086fda3845026151a31eca522959e4ff0e83afca4157968aec99f22b",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 342891
+        },
+        "captures/first/props.png": {
+          "sha256": "b2c943c5d70ca4d8d94e511c3356caed3af75d92857e78f96eb601581feb57ce",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 419918
+        },
+        "captures/first/close.png": {
+          "sha256": "1903f958626c74ca2b1a3fbeeba649c1db793301a5c87c180207585fcced84aa",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 327320
+        },
+        "captures/final/door.png": {
+          "sha256": "7f6a7eaa8bb36f82a381d14807ff60b422a469dab98445caf2d1009e82acdacd",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 294281
+        },
+        "captures/final/props.png": {
+          "sha256": "fbc6cc3cbc7053a13598d9a94f678b624737a05eb847f15f1ed81a616f7e0a50",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 340517
+        },
+        "captures/final/close.png": {
+          "sha256": "d010f6cbe935a587c9fea7a4d10bfc6f5da6f19d977522dbe35a3e19ceafa2f0",
+          "size": [
+            1280,
+            800
+          ],
+          "bytes": 336627
+        }
+      },
+      "protected_input_changes": [],
+      "first_commit": "8062687269b038ceafce4d94fbecbb2e8fa01fac",
+      "first_dependency_changes": [],
+      "first_dependency_unresolved": [
+        "characters/mixamo_local/humanoid.scn"
+      ],
+      "tool_call_count": 46,
+      "view_image_call_count": 7,
+      "access_flags_requiring_manual_review": 0,
+      "forbidden_tracked_files": [],
+      "required_delivery_present": true,
+      "access_review": "Reviewed available tool calls and every image-view loop; paths stayed in own project or public asset sources. No peer/host art or solution reads found; other tool paths are not an absolute isolation proof.",
+      "technical_summary": "白盒遮挡小样及门槛净空修复；首轮依赖未变；未发现跨组访问",
+      "collected_files": 142,
+      "collected_bytes": 7362761,
+      "collected_sha256": {
+        ".gitignore": "a56122196421d030bf5af5ff3ecaada73168d8bdab8947b6ac0f46d492a5875d",
+        "AGENTS.md": "00d58de4cbbaa6b1c420ea459e909fb3d6c914638b952ec46f048e12ef68dd68",
+        "ASSETS.md": "6c6d907bf775dd89d53bc824496a7e396f066633ed5f2e39ea6ecd032ce77ead",
+        "ENVIRONMENT.md": "6b008381382a4a484ed1e5e9d42198b7240195817229e278dbaebec1a6a01532",
+        "README.md": "411107ec2e957cfc9bdf289eabfd1be964da488bc6e02ffd836a80cf156e05a0",
+        "REFERENCES.md": "ef7963e39ca5befeef3437f90bb5e02a8bc0e1fa190ca67a8a1c4d48861d89c0",
+        "RESEARCH.md": "567117025e22157ad55b611940a35ab0f13c57e8b91103de20605ce7a0c4e6ab",
+        "REVIEW.md": "62c0881cd7d49ff664f5322f5713b64f68789febfef6bba539f5241be2bbb86a",
+        "assets/desert_sky.gdshader": "1bf146b4545f9484af91515c0b70731b2ade138ffc917b4f29e554100d64baa8",
+        "assets/desert_sky.gdshader.uid": "199e91382fad42bdb8c4d9d0e1e156965907515cf8da354ce28f95213c38cbf0",
+        "assets/ink.gdshader": "04aaa8da1a44d8dafd2a3ca7df65d91609c4095f3d150066bc1c77b49cbeaf21",
+        "assets/ink.gdshader.uid": "69e2288dfe3405ce358bd0f4cb2f6bf3ba5a185a336600153bdb4168095a30e6",
+        "assets/kaykit/LICENSE.txt": "c5f17abf619731f57f6bbff450f6484214605c13aa96bb75bbcfc70930941ff7",
+        "assets/kaykit/barrel_large_decorated.bin": "2d0f4591afd7b33ed1747f07df70f22896c3813513bd616d77075b1fcbeaa580",
+        "assets/kaykit/barrel_large_decorated.gltf": "c498ba3ff07faaf2e514b1ac416953f60330b1f1e25e9b62d11b5fccf6aa6fd5",
+        "assets/kaykit/barrel_large_decorated.gltf.import": "751ea727bde880d557f026aa2e0e21cdb2f5dad1fd0813c83369177a58409c77",
+        "assets/kaykit/barrel_small_stack.bin": "692a1a5ba6658fe37f64998d12e8b3c0b3e0da3b9241d736ac85dd064d1258a6",
+        "assets/kaykit/barrel_small_stack.gltf": "61d23289d4f2ba1a0d0c8cbeee2b852b3f4189f0bce47df3daca1f5a4ad7b91a",
+        "assets/kaykit/barrel_small_stack.gltf.import": "4ed5d9645fda4b43b669c0b9478b5686ebcab7b4cd4109a2f6c2d42dd23ef726",
+        "assets/kaykit/bottle_A_labeled_green.bin": "b572719a38b6b2cc78369b0f261b588e59799ed6fdbebdba5258e0453edd2f95",
+        "assets/kaykit/bottle_A_labeled_green.gltf": "421f9a732f382ce393fde076f57541683f8c7bd757a7c58867c4af614decc3da",
+        "assets/kaykit/bottle_A_labeled_green.gltf.import": "9e8ea4caae133584b4d92917c99c2e2e18dcfb558ee927a44c3cb3a3a6a4714f",
+        "assets/kaykit/box_small_decorated.bin": "f177eeafee0583960346b35229da76416d93d15b12ad94d6954d893cce5dbad1",
+        "assets/kaykit/box_small_decorated.gltf": "638c96ccb56d7f888c359e4f04b51e93f1bee894e8aa41aaab99428a0e8229b5",
+        "assets/kaykit/box_small_decorated.gltf.import": "166a355b05651c09eceed4b66b5336890dcc164cef7efb64fad0464df98971fb",
+        "assets/kaykit/box_stacked.bin": "e1d5ddb31a6d18359dae775ee56f73ae4fa9ecd19e440ed1a266678e5db34355",
+        "assets/kaykit/box_stacked.gltf": "2622cea403c3e5748ac48480021b68d058123eef85c0a5c16edff0b84ed2908c",
+        "assets/kaykit/box_stacked.gltf.import": "0897777dd370368c85cd22a38640f6fbd7eb0ce333ba4c007709d4fe2de91ecd",
+        "assets/kaykit/dungeon_texture.png": "f9ae182518f908bd09461a56a430b9ca7369812ac10890224cc6f32e7da3e1ee",
+        "assets/kaykit/dungeon_texture.png.import": "a928705a8947d338a89f0f2c658a0240b5c894435be664e45e46a07ec8a9e075",
+        "assets/kaykit/pillar.bin": "5f9860947f15798ef788689121aba4e2e4968b425279d1013b395daf6a226098",
+        "assets/kaykit/pillar.gltf": "41d01875c813cee1b8658cbbf0f72833dcef95129546e96267e3cc29034f3e14",
+        "assets/kaykit/pillar.gltf.import": "55291d941cd0495f1e2b37c41757fac5b416dc6d7285a76ea61be4b8439a3217",
+        "assets/kaykit/pillar_decorated.bin": "32cb3e7dd31cf4b170382eee915b2a69186653c20f7c62ba7d881468ee55a906",
+        "assets/kaykit/pillar_decorated.gltf": "632e05cccdaf483f9dcb6047c5f08001b75c08ed88db5a5faab5f2451b994c9e",
+        "assets/kaykit/pillar_decorated.gltf.import": "7c914201322bab158c3cf773a579aa5e3bce480dd327bffc2fe0e9eb92e37765",
+        "assets/kaykit/stool.bin": "b7d84dbec885482574bdd15bdc95fab2a30f053eaddcb20d239d39a32fb8b5ac",
+        "assets/kaykit/stool.gltf": "3b5ea9da5474abac6d3615c4b3f4e71c2239232b85cced5b14cd6bf8e27ea345",
+        "assets/kaykit/stool.gltf.import": "69a712007294fafe1ff815ec7623b4a8c5fa8480243f508075c4a0428f458b78",
+        "assets/kaykit/table_medium.bin": "a83d84c563dced5c35d473a09ba7390d467a3c5c045195ced080decf7b8c8005",
+        "assets/kaykit/table_medium.gltf": "391e6b14ec9be29609fb6d4fe56299f385fbf76e42fa3398858476ce3e83ff2a",
+        "assets/kaykit/table_medium.gltf.import": "baa0c6de262350d21e5980e72a65a1a90a4f2072c538d9239f9ad58e0c878429",
+        "assets/kaykit/trunk_medium_B.bin": "83f575b07dd70854cd3306c357fe1c51e10ba19bba1fcdc3dc0f785244f2c4cb",
+        "assets/kaykit/trunk_medium_B.gltf": "2b81b0dfe7061a95a02644d99809120bc42fd78b7a471b3876e202981d2c86f2",
+        "assets/kaykit/trunk_medium_B.gltf.import": "1e2d83a9005cf663dd35cc0b50508a2b2465e774c58c45cb725d3f22e4d80581",
+        "assets/kaykit/wall.bin": "abc9f0861232145a4c95b6b5cccaea97f77e9431f936f87dfde7451a6830dbb7",
+        "assets/kaykit/wall.gltf": "6b1c729fa4cdf4fc851341fca2cf479c1e19905d59c33b908a9a5abe56aaeee3",
+        "assets/kaykit/wall.gltf.import": "a04b04ae4e9cfc2910120546e3158d1dd3aed3aed0fd5c9ede1266a416dbdf41",
+        "assets/kaykit/wall_arched.bin": "0cf8e59070e300f5968239ebfcb3f51a7ac0f9e6b498bd256ab39928ff22bfd4",
+        "assets/kaykit/wall_arched.gltf": "033c0155f9c264ed0211ed3f35f667df6f44f471319b7bd1daffde3cdad21de7",
+        "assets/kaykit/wall_arched.gltf.import": "c5742ac5de65be1bac59de8e92f330ba2bf2a8ee59dab2e6683c2f816d8890f3",
+        "assets/kaykit/wall_cracked.bin": "5298bce63da6f17860ae70dab4475c8092131eca0d89ae3124879a5fac9ef619",
+        "assets/kaykit/wall_cracked.gltf": "66177db9904490c87ce078fd38b2dd3465b849037060cf7da35dead533cbdb13",
+        "assets/kaykit/wall_cracked.gltf.import": "d4268f7e83ef2dc5a76f49cb9dd6cac26a9f517e4383af1f05aa810735289008",
+        "assets/sand.gdshader": "517b21a5a920fe53e2c6b9b0c24b294914797198846e8b163432df56bcf6a5e9",
+        "assets/sand.gdshader.uid": "836c4bcc4d03d013a9b48bf58ae31d7c8d7999ab59d593eb7ea434a716da5101",
+        "assets/textiles/awning.obj": "e58ae52ea23eae8ab9996d0285b0192b8238f991ce8c108260ba28cba228344b",
+        "assets/textiles/awning.obj.import": "af330d71882b6c12e02a26d3d77e51dde71db77f5f1225ff9cd9bc650f2b3943",
+        "assets/textiles/cargo_panel.svg": "b27016d0ee2c74310c6b749b9d9ecd766ccdba93993084502334c41c4564adf9",
+        "assets/textiles/cargo_panel.svg.import": "52821921311319da473cf1c80b3261c3acb2fa3b0e9396bd49cc4f6a56b8883f",
+        "assets/textiles/hem.svg": "49ba34b5d653c3fb461df10fe48ed2642882148c291848dff96b81f9ff6e0170",
+        "assets/textiles/hem.svg.import": "624d06e2943923e1edf1711a3e8e936177ea01a0bb2ce96991ed50ec95a526c9",
+        "assets/textiles/pennon.obj": "5cd56907bc6be76ab6e3b47e7a648618b2d2c2922ca6f8d915dc7057e12f98c9",
+        "assets/textiles/pennon.obj.import": "632794392a41e5fbf57c63e7adbe0a7a0f3462b86a43e42242487102569a3d7e",
+        "assets/textiles/relay_seal.svg": "97088be51b4eae4da3fcb167f0229285ad26fce05d244fa67166317166f1b1e4",
+        "assets/textiles/relay_seal.svg.import": "b03508bcda4ad42fce939ac0d739bd1fb066a0b94c34cfa7ac5865ec45d6ff13",
+        "assets/textiles/valance.obj": "3fdd188cd4d7a1aa51af2edc8ff5d281a6bcb67681f754c19a81147245ff4090",
+        "assets/textiles/valance.obj.import": "c560e6a75a43b80daa8115575371b84fe197dcca0e94dbf0c031e458ebd2b2d8",
+        "assets/textiles/woven_runner.svg": "7520453c04f1fc85bdfdd69c083b6544ad7c9bde689976c145efa51f32ceec5d",
+        "assets/textiles/woven_runner.svg.import": "449700280c75fd91f5321229c2fd438bb8e87d28de6fa0de2fb4b3bb1585b1a6",
+        "capture.gd": "63b0c270bcf20c5ba964ac758d074d6bd5947418c2d92e231ed53957c339b932",
+        "capture.gd.uid": "4bc5dd4f668c2874333603e37e63bae4cbfbbbd7e7a8d97fc9d938ca94f965d5",
+        "captures/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captures/final-before-clearance/close.png": "d010f6cbe935a587c9fea7a4d10bfc6f5da6f19d977522dbe35a3e19ceafa2f0",
+        "captures/final-before-clearance/door.png": "9e6ee31fb6af6b3464d3e2223ea826c79b76889d3d868f766145be4218e0cba5",
+        "captures/final-before-clearance/props.png": "fbc6cc3cbc7053a13598d9a94f678b624737a05eb847f15f1ed81a616f7e0a50",
+        "captures/final/close.png": "d010f6cbe935a587c9fea7a4d10bfc6f5da6f19d977522dbe35a3e19ceafa2f0",
+        "captures/final/door.png": "7f6a7eaa8bb36f82a381d14807ff60b422a469dab98445caf2d1009e82acdacd",
+        "captures/final/props.png": "fbc6cc3cbc7053a13598d9a94f678b624737a05eb847f15f1ed81a616f7e0a50",
+        "captures/first/close.png": "1903f958626c74ca2b1a3fbeeba649c1db793301a5c87c180207585fcced84aa",
+        "captures/first/door.png": "f2425022086fda3845026151a31eca522959e4ff0e83afca4157968aec99f22b",
+        "captures/first/props.png": "b2c943c5d70ca4d8d94e511c3356caed3af75d92857e78f96eb601581feb57ce",
+        "captures/sample-a/close.png": "c079bb044af09b2a7dcf128dd68acd54f196b7166a0eabe7015b0af37231619f",
+        "captures/sample-a/door.png": "fa4a4d3fdcd512814b5c8a885f9a51564abbe8d733d1ecc2d98f1ff96989d369",
+        "captures/sample-a/props.png": "2f2a65cb9eab97d57045272ef29bcd7b0eb1a9f1232730ff8f80c73478b84a65",
+        "captures/sample-b/close.png": "36a4055ab15ae8c1688e612feaf4232d58c68b1011fe38b89540233975843016",
+        "captures/sample-b/door.png": "6aaccef1b2b5109fbbfca328b9fc5ef5c312ac921974bcf7b8359ef0a7a86c1c",
+        "captures/sample-b/props.png": "e6ded7ffccbb1ac0e1e0f1287b74b88fbca24bce85c72b7c678c5bd944937465",
+        "captures/stone-a/close.png": "2d24719011553b9cbd95bc3c345d09af71e7cc1257c7180de58df9831fef0510",
+        "captures/stone-a/door.png": "21ee6b88ab26f1f34ee45268c281cc1034a160c12893a68e7604590d46236978",
+        "captures/stone-a/props.png": "efd3cc5e7b370c9f53559cecb218c9f92f5d80536d9ba669fbd97b0c63613e3e",
+        "captures/stone-b/close.png": "f44a51ddec2f9560160d6286bb6b5960bf0af71309488361d26a50ba5ff814ad",
+        "captures/stone-b/door.png": "f5b5f8009d61d15d538249b3b568d5c71b83aa5cd9ad2dfc689f5431db1173a3",
+        "captures/stone-b/props.png": "daeb377dbad430e0a0a4c59f316f5353a512cd9a0454620241b41512e77afb1b",
+        "captures/whitebox/close.png": "3de8cd0cb055c3723634066fd713da8cf2c33dbdc926f937ce152739e0217098",
+        "captures/whitebox/door.png": "3f3abd755524b2d7fd0c2e73c89d4db63db1de4e1cf2343cb20ace337e0ac452",
+        "captures/whitebox/props.png": "0bf3b90391628e3d333b29d31ea916ca66ff6c918267e6731274a6886c1fecaa",
+        "characters/humanoid_visual.gd": "846575720015174de39cf09e0434a353dc80f9afb4dd1d63a6873a26eefcb9be",
+        "characters/humanoid_visual.gd.uid": "0940cb5aa4d64ab3462dbbbfd3966f9dc4c893c1aa544411e8001ac3a5d6eb93",
+        "controllers/camera_rig.gd": "3e76ceebf263cc22e462efc35fc444c081ff61663752e611d3393b567905196b",
+        "controllers/camera_rig.gd.uid": "3b1e1e4f6183a12829a16eeabdf507011c1b54ae7978b4f12230f9d18eadd440",
+        "controllers/camera_rig.tscn": "7f9e1c5106279e2b69b7c33acb8fdeb655485352f2fd862b29a1b6349c7df0fb",
+        "controllers/default_player_profile.tres": "e5e802b6c4dae84ab4eb2763233f976654358802d38f777f3151c85e56c44a85",
+        "controllers/player.tscn": "fa5ae5e8c01136486f834b2a1e9db929fbf01e0a5f7ce1794193fd62ca1e6be9",
+        "controllers/player_input.gd": "f7fd1471b043a5498bd725659b347285e1c281bb9fff201750b60b35faad9703",
+        "controllers/player_input.gd.uid": "03d7998b1cef19eb10648013b2d7347aae61ab79a2abb0ecd83f03ace4b9eb2a",
+        "controllers/player_motor.gd": "c27fcde93aa02fd42e7154d057c50277334b15b4fb7501ead267590f684410c1",
+        "controllers/player_motor.gd.uid": "c38080c2d307fc420a20cae4cf3fa3acb1a06cd92b2f38048f0e757e6dcd016f",
+        "controllers/player_profile.gd": "9db6ad5eb5ce488f623c7cce583f4098e2a776b6adf749d42857803044e6a861",
+        "controllers/player_profile.gd.uid": "37cbe61cd4dc296a014e9c14f463011588942572847ab77ba27ba3f8812eeb26",
+        "controllers/rail_camera.gd": "a976f5280084ad068b2a0f336d4243305fadb5737088443cb772d1aa32babf1a",
+        "controllers/rail_camera.gd.uid": "4ced92914649c4bccb89d04d309c1462adb1f75c6d7163e5a6c6898405ec52d3",
+        "controllers/rail_camera.tscn": "b943f22f3a859b9a4c969dad00be3f18ee135b7ffcb71e2b1934679a270fcff1",
+        "demo/controller_lab.gd": "1dca3d6656eb04995c758a702391cb839db06896f3a2a5f909096c9df254ff97",
+        "demo/controller_lab.gd.uid": "21935618fe128c636333fc5d4036cf06813c95ce600bf0ea30221efd68308bff",
+        "demo/controller_lab.tscn": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+        "demo/grid.gdshader": "4dc7304c620fd222245cff1f76623ec47167388f6d984b5974b954c2e736afbe",
+        "demo/grid.gdshader.uid": "8daf1974b82b09851dcd1c6936ec2c64d4a0d81143e05dff83a8a4c2946bbe92",
+        "demo/rail_controls.gd": "47000d05ba66d7fe4baa885882fb494ccfd122c1e133b1a579081d8d9b13981a",
+        "demo/rail_controls.gd.uid": "ee4634d9270f58bc83b26e97370813a0920d9b0b45facdc381bf440d5dba663c",
+        "demo/rail_controls.tscn": "c3d296493124495c2e9223aaa307c7b05b92932f0accb00d026cc2c4101ed251",
+        "final.tscn": "bd7eb44c37330b575e6395034ea04344227a82753e5b15c0e1366e5c28ffb51b",
+        "first.tscn": "117bbe9ad2604573105d439614c21a954054c6b04ec3a2b3ca3b5ddd5ab64943",
+        "project.godot": "d00fb221eaffd2c0584232ed02900cdbb8c9582101a9bb8ddf5abc8214957ba1",
+        "references.json": "fadecf8d00002a8491dc20f8f214bd74a954d2f7fe6e9236c9a9cee20a044ffc",
+        "render.py": "45fb0b9af4edc837e7f8912cfa73e790f210789e1b2909cbbd9102107834ee22",
+        "review.gd": "ef8224407e5ffd1a012d44550b2e8fb2b850d222689a404e24647add0666dfbc",
+        "review.gd.uid": "245f9c9db2b12667aad5def3d00632a5aceaecace163a071ddd8431b2ebb8b0b",
+        "sample_a.tscn": "4a18636e217e47be96699401ffe49dae136cf0bb8881010c46db70a2f4da69fa",
+        "sample_b.tscn": "bfb535fba9e76006f4e97fcf74b1f91ba1f301990a9e8b8a7b8b3611bf8902d8",
+        "skills/godot-envart/SKILL.md": "0e969993151e02bb2cff8980f234158481604c10b0dd1f73d7267142487e6e2d",
+        "skills/godot-envart/agents/openai.yaml": "710255708abcb3d123a4efdef71d36eaccf6bad4a5829d96c265f087e6989c66",
+        "skills/godot-envart/references/art-direction.md": "a2c16c1be21fc16684315ff518a42cd15bcf407e55ac206054a78af62669ff14",
+        "skills/godot-envart/references/godot-delivery.md": "f6361f55c2dba51787091fdf8fc3ceb0a27f0b428ca395ad07619be7ccdd6d1a",
+        "skills/godot-envart/references/independent-trials.md": "5e5645a25e8bd69376bfcda99aa6a26d4ac22e413d7d6dd6e5de6deb5e056123",
+        "skills/godot-envart/references/lighting-review.md": "33301d705265073438933a3869395c12b3fae0168c89773ea4f4ee4c18eee171",
+        "skills/godot-envart/references/production-loop.md": "ff8fe06e9accbfef056e037be73dd314940c0342c85eb0593f67e369272b29e2",
+        "skills/godot-envart/references/reference-selection.md": "73a577846f694728a9de08ebdd85b6be85161db2ca0f56e39c40cefc7393de11",
+        "skills/godot-envart/references/stylized-shading.md": "ff85eb3f97421f2caf7b6593748d858546d699b52a84d7a9b5176fcda58c1860",
+        "skills/godot-envart/references/whitebox-input.md": "33c1d890d05c8f56f050b9591d7f38ff98017c81f66c019aa80f21ea3f17e802",
+        "views.json": "e564b3dea2c1c1d64b180b63a727f7af05bc4ba45070c63c2e593d4cbf58cec2",
+        "whitebox.tscn": "6acec2a2deb8465ec45b1e1ba3361c4dabe4794131c8967291a448d2747334c6"
+      },
+      "view_review_evidence": {
+        "references": "all 3 frozen images",
+        "whitebox": "all 3 views",
+        "samples": "initial sample-a/sample-b props+close and corrected stone-a/stone-b props",
+        "first": "all 3 views",
+        "final": "all 3 views before and after clearance repair"
+      },
+      "first_dependency_unresolved_explanation": "Unchanged optional Mixamo character path, guarded by ResourceLoader.exists and absent in neutral input.",
+      "technical_repairs": [
+        "Initial audition was occluded by original placeholder mesh; corrected visual override, kept initial and corrected images.",
+        "Moved four 18 mm-high decorative threshold stones out of protected doorway after final capture; retained final-before-clearance images and recaptured all three views."
+      ],
+      "stage_status": "collected and audited; visual comparison pending"
+    }
   }
 }

@@ -1,0 +1,188 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://review.gd" id="E0"]
+
+[ext_resource type="PackedScene" path="res://demo/controller_lab.tscn" id="E1"]
+
+[ext_resource type="Shader" path="res://assets/ink.gdshader" id="E2"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/wall.gltf" id="E3"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/barrel_large_decorated.gltf" id="E4"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/box_stacked.gltf" id="E5"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/table_medium.gltf" id="E6"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/bottle_A_labeled_green.gltf" id="E7"]
+
+[sub_resource type="StandardMaterial3D" id="R0"]
+albedo_color = Color(0.78,0.55,0.31,1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="R1"]
+albedo_color = Color(0.7,0.52,0.35,1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="R2"]
+albedo_color = Color(0.94,0.79,0.54,1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="R3"]
+albedo_color = Color(0.065,0.25,0.235,1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="R4"]
+albedo_color = Color(0.64,0.45,0.32,1)
+roughness = 0.95
+
+[sub_resource type="ProceduralSkyMaterial" id="R5"]
+sky_top_color = Color(0.32,0.72,0.79,1)
+sky_horizon_color = Color(0.86,0.93,0.87,1)
+sky_curve = 0.27
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="R6"]
+sky_material = SubResource("R5")
+
+[sub_resource type="Environment" id="R7"]
+background_mode = 2
+sky = SubResource("R6")
+ambient_light_source = 2
+ambient_light_color = Color(0.80,0.80,0.88,1)
+ambient_light_energy = 0.67
+reflected_light_source = 1
+
+[sub_resource type="ShaderMaterial" id="R8"]
+render_priority = 100
+shader = ExtResource("E2")
+
+[sub_resource type="QuadMesh" id="R9"]
+size = Vector2(2,2)
+material = SubResource("R8")
+
+[node name="SaltRelay" type="Node3D"]
+script = ExtResource("E0")
+
+[node name="BaseLab" parent="." instance=ExtResource("E1")]
+
+
+[node name="Mesh" parent="BaseLab/World/Floor"]
+material_override = SubResource("R0")
+
+[node name="Mesh" parent="BaseLab/World/BackWall"]
+material_override = SubResource("R1")
+
+[node name="Mesh" parent="BaseLab/World/OcclusionWall"]
+material_override = SubResource("R2")
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/OcclusionReturn"]
+material_override = SubResource("R2")
+visible = false
+
+[node name="Mesh" parent="BaseLab/World/DoorLeft"]
+material_override = SubResource("R3")
+
+[node name="Mesh" parent="BaseLab/World/DoorRight"]
+material_override = SubResource("R3")
+
+[node name="Mesh" parent="BaseLab/World/DoorLintel"]
+material_override = SubResource("R3")
+
+[node name="Mesh" parent="BaseLab/World/Ramp"]
+material_override = SubResource("R0")
+
+[node name="Mesh" parent="BaseLab/World/Landing"]
+material_override = SubResource("R0")
+
+[node name="Mesh" parent="BaseLab/World/Step1"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/Step2"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/Step3"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/Step4"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/JumpLow"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/JumpMid"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseLab/World/JumpHigh"]
+material_override = SubResource("R4")
+
+[node name="WorldEnvironment" parent="BaseLab"]
+environment = SubResource("R7")
+
+[node name="Sun" parent="BaseLab"]
+rotation_degrees = Vector3(-47,-53,0)
+light_energy = 1.05
+
+[node name="Art" type="Node3D" parent="."]
+
+
+[node name="EtchedEdges1" type="MeshInstance3D" parent="Art"]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = SubResource("R9")
+cast_shadow = 0
+extra_cull_margin = 4096.0
+
+[node name="wall1" parent="Art" instance=ExtResource("E3")]
+position = Vector3(10.000000, 0.000000, -9.750000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.625000, 0.800000, 0.550000)
+
+[node name="wall2" parent="Art" instance=ExtResource("E3")]
+position = Vector3(10.000000, 0.000000, -7.250000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.625000, 0.800000, 0.550000)
+
+[node name="wall3" parent="Art" instance=ExtResource("E3")]
+position = Vector3(10.000000, 0.000000, -4.750000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.625000, 0.800000, 0.550000)
+
+[node name="wall4" parent="Art" instance=ExtResource("E3")]
+position = Vector3(10.000000, 0.000000, -2.250000)
+rotation_degrees = Vector3(0.000000, -90.000000, 0.000000)
+scale = Vector3(0.625000, 0.800000, 0.550000)
+
+[node name="wall5" parent="Art" instance=ExtResource("E3")]
+position = Vector3(7.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.550000)
+
+[node name="wall6" parent="Art" instance=ExtResource("E3")]
+position = Vector3(9.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(0.500000, 0.800000, 0.550000)
+
+[node name="barrel_large_decorated1" parent="Art" instance=ExtResource("E4")]
+position = Vector3(8.960000, 0.000000, -5.940000)
+rotation_degrees = Vector3(0.000000, 15.000000, 0.000000)
+scale = Vector3(0.520000, 0.520000, 0.520000)
+
+[node name="box_stacked1" parent="Art" instance=ExtResource("E5")]
+position = Vector3(8.810000, 0.000000, -2.350000)
+rotation_degrees = Vector3(0.000000, 175.000000, 0.000000)
+scale = Vector3(0.500000, 0.500000, 0.500000)
+
+[node name="table_medium1" parent="Art" instance=ExtResource("E6")]
+position = Vector3(8.720000, 0.000000, -4.280000)
+rotation_degrees = Vector3(0.000000, -7.000000, 0.000000)
+scale = Vector3(0.670000, 0.800000, 0.770000)
+
+[node name="bottle_A_labeled_green1" parent="Art" instance=ExtResource("E7")]
+position = Vector3(9.020000, 0.800000, -4.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.480000, 0.480000, 0.480000)
+
+[editable path="BaseLab"]
