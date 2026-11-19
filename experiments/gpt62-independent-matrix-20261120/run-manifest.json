@@ -176,7 +176,7 @@
       "effort": "ultra",
       "input_commit": "2e1bccf479fd9f5b0f35a670e8929bcbf09fda5e",
       "normalized_input_sha256": "c8dbf93b8b802841172019e4bbafcc82be8b5dd179db0bef70bad0ccb0c9393c",
-      "status": "running"
+      "status": "completed"
     },
     {
       "game": "control",
@@ -196,6 +196,6 @@
   "scope_correction": "Updated CLI model cache lists six efforts. max/ultra added after first sixteen were scheduled; identical per-game inputs and two passes, no further agent delegation for any effort.",
   "planned_run_count": 24,
   "prepared_run_count": 24,
-  "completed_run_count": 21,
-  "collected_run_count": 21
+  "completed_run_count": 22,
+  "collected_run_count": 22
 }
