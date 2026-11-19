@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "check_count": 41,
+  "html_sha256": "8c75359b452640716078ea70f402708c64881d0d82e0fd9652e115519a024e8b",
+  "method": "Offline local HTML in real headless Chrome using CDP pipe; no external reference loading required.",
+  "viewports": {
+    "desktop": [
+      1440,
+      1800
+    ],
+    "mobile": [
+      390,
+      1200
+    ]
+  },
+  "formal_images_decoded": 144,
+  "manual_screenshot_review": "Completed: desktop overview, revealed pipeline/cost table, mobile overview and mobile gallery. Text and images legible; no clipping or document-level horizontal overflow. Temporary QA screenshots are not committed.",
+  "checks": [
+    {
+      "name": "all production audits and blind reviews complete",
+      "value": true
+    },
+    {
+      "name": "producer documents hidden before reveal",
+      "value": true
+    },
+    {
+      "name": "four game selectors",
+      "value": true
+    },
+    {
+      "name": "six anonymous cards",
+      "value": true
+    },
+    {
+      "name": "game switch",
+      "value": true
+    },
+    {
+      "name": "paired close views",
+      "value": true
+    },
+    {
+      "name": "populated pipeline recommendations",
+      "value": true
+    },
+    {
+      "name": "paired revision notes",
+      "value": true
+    },
+    {
+      "name": "all material routes documented",
+      "value": true
+    },
+    {
+      "name": "reveal costs",
+      "value": true
+    },
+    {
+      "name": "image dialog",
+      "value": true
+    },
+    {
+      "name": "close dialog",
+      "value": true
+    },
+    {
+      "name": "category selection",
+      "value": true
+    },
+    {
+      "name": "pipeline hidden for visual comparison",
+      "value": true
+    },
+    {
+      "name": "参考贴合 populated for all four games",
+      "value": true
+    },
+    {
+      "name": "内部统一 populated for all four games",
+      "value": true
+    },
+    {
+      "name": "素材适配 populated for all four games",
+      "value": true
+    },
+    {
+      "name": "功能 / 叙事细节 populated for all four games",
+      "value": true
+    },
+    {
+      "name": "光影 / 空间层次 populated for all four games",
+      "value": true
+    },
+    {
+      "name": "Control review detail",
+      "value": true
+    },
+    {
+      "name": "Control common whitebox decodes",
+      "value": true
+    },
+    {
+      "name": "Control 门洞 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Control 工作区 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Control 近看 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Sable review detail",
+      "value": true
+    },
+    {
+      "name": "Sable common whitebox decodes",
+      "value": true
+    },
+    {
+      "name": "Sable 门洞 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Sable 工作区 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Sable 近看 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Hi-Fi RUSH review detail",
+      "value": true
+    },
+    {
+      "name": "Hi-Fi RUSH common whitebox decodes",
+      "value": true
+    },
+    {
+      "name": "Hi-Fi RUSH 门洞 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Hi-Fi RUSH 工作区 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "Hi-Fi RUSH 近看 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "DREDGE review detail",
+      "value": true
+    },
+    {
+      "name": "DREDGE common whitebox decodes",
+      "value": true
+    },
+    {
+      "name": "DREDGE 门洞 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "DREDGE 工作区 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "DREDGE 近看 all twelve images decode",
+      "value": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "mobile revealed report has no horizontal overflow",
+      "value": true
+    }
+  ],
+  "local_report_links_checked": 267,
+  "local_link_issues": []
+}

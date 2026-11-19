@@ -1,0 +1,34 @@
+{
+  "control": {
+    "A": "medium",
+    "B": "ultra",
+    "C": "xhigh",
+    "D": "low",
+    "E": "high",
+    "F": "max"
+  },
+  "sable": {
+    "A": "max",
+    "B": "low",
+    "C": "xhigh",
+    "D": "high",
+    "E": "medium",
+    "F": "ultra"
+  },
+  "hifi": {
+    "A": "low",
+    "B": "high",
+    "C": "xhigh",
+    "D": "max",
+    "E": "ultra",
+    "F": "medium"
+  },
+  "dredge": {
+    "A": "medium",
+    "B": "high",
+    "C": "xhigh",
+    "D": "max",
+    "E": "ultra",
+    "F": "low"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "run_count": 24,
+  "games": [
+    "control",
+    "sable",
+    "hifi",
+    "dredge"
+  ],
+  "efforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+    "ultra"
+  ],
+  "checked_original_archive_files": 5258,
+  "checked_original_archive_bytes": 550953389,
+  "checked_supplemental_files": 28,
+  "checked_formal_captures": 144,
+  "blind_review_count": 4,
+  "issues": [],
+  "scope": "Archive byte fidelity, frozen inputs, actual runtime parameters, independent history, static dependencies and review audit completion. No new engine, manual traversal or cross-platform test. Browser interactions checked separately."
+}

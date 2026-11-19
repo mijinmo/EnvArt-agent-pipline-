@@ -1,5 +1,5 @@
 {
-  "status": "production processes complete; review pending",
+  "status": "completed",
   "model": "gpt-6.2-astra",
   "engine": "4.7.2.stable.official.ed1daf0bf",
   "backend": "Metal Forward+",
@@ -197,5 +197,7 @@
   "planned_run_count": 24,
   "prepared_run_count": 24,
   "completed_run_count": 24,
-  "collected_run_count": 24
+  "collected_run_count": 24,
+  "audited_run_count": 24,
+  "completed_blind_review_count": 4
 }

@@ -142,7 +142,7 @@
       "status": "Observed whole-run choices from one sample each; any combined-stage effort pipeline is untested."
     }
   },
-  "summary": "整体优选与分类强项来自独立匿名评审；揭示档位后再看素材路线与实际用量。每档只有一次样本，结论用于本次局部方案筛选，尚未经过用户美术验收。",
+  "summary": "整体优选与五类强项来自四份独立匿名图像评审；揭示档位后再看整套素材路线与用量。每档仅一个样本，独立找材的偶然性无法与 effort 因果分离；这是本次局部的候选筛选，尚未经用户美术验收。",
   "dredge": {
     "preferred": [
       "C"
@@ -569,5 +569,57 @@
       "lower_usage_alternative": "xhigh",
       "status": "Observed whole-run quality preference max; xhigh is a lower-usage second choice and reference-fidelity winner. Cross-run hybrid approaches remain untested."
     }
-  }
+  },
+  "pipeline": [
+    {
+      "step": "Control · 实测整套方案",
+      "decision": "综合和参考贴合优先 ultra：Poly Haven 办公/放映模型与 PBR 表面，先建立收件—检片—暂存关系，再用真实家具的磨损和冷暖工作灯补近景。",
+      "evidence": "整体 ultra > max > xhigh；ultra 用量也低于 max。max 的器具适配、xhigh 的声音档案视觉统一可作专项参考，但拼到 ultra 中尚未验证。ultra 高窗偏平、柜侧过暗仍需后续解决。"
+    },
+    {
+      "step": "Sable · 实测整套方案",
+      "decision": "综合优先 max：KayKit 构件/货具、砂岩与沙地表面重配色，围绕称重、登记、运输和取水组织局部。参考画风优先 xhigh；接受整体次选时可考虑用量更少的 ultra。",
+      "evidence": "max 内部统一与叙事细节领先，xhigh 参考贴合领先，ultra 道具适配领先，high 光影领先。max 棚沿遮住地图；ultra 前杆挡旗。把这些组的长处合并属于待验证方案。"
+    },
+    {
+      "step": "Hi-Fi RUSH · 实测整套方案",
+      "decision": "综合质量优先 max：Kenney 折板/管件和 tevy 工具台/运输件，分开送达与在检状态，以软管、台钳、读数和灯光说明动作。参考贴合与用量取舍优先整体次选 xhigh 的 Quaternius / Kenney 机械臂交接路线。",
+      "evidence": "max 道具适配与光影领先；xhigh 参考贴合领先，未缓存输入和输出约少 32% / 38%；high 内部统一领先。max 工具背板颗粒较细碎，xhigh 机械臂遮屏。跨组混合材质、机械臂和灯光尚未试做。"
+    },
+    {
+      "step": "DREDGE · 实测整套方案",
+      "decision": "综合优先 xhigh：Kenney Town / Pirate / Food 与石面色图适配，改造鱼体并把秤台、切分、装箱和起重组合起来。建筑与远岸贴近参考优先 max。",
+      "evidence": "xhigh 同时是本次质量和用量选择；max 建筑/岸线更统一，ultra 局部工作灯更有层次。xhigh 亮海报和密石缝仍抢眼；照搬其他组灯光或远景尚未经组合验证。"
+    },
+    {
+      "step": "1 · 冻结比较输入",
+      "decision": "同一游戏固定空间意图、白盒、参考图、机位和两轮预算；素材由每组独立寻找。继续采用独立目录、历史、缓存及受限读取。",
+      "evidence": "本轮六组/游戏的归一化输入哈希一致，首轮依赖未被终版覆盖；shell/渲染隔离预检通过，实际调用未发现横读。图片工具跨路径拒绝未单独证实，不能宣传为完整虚拟机隔离。"
+    },
+    {
+      "step": "2 · 先检验实际免费资产",
+      "decision": "先下载可交付版本，检查网格、UV、材质、尺度和许可，再决定主建筑表面与主要道具。优先同系列模型，缺口用拆件、重配色和少量专用网格补齐。",
+      "evidence": "各候选卡列出实际来源路线，ASSETS.md 保留免费范围与适配；几组使用第三方历史镜像，作者原包字节一致性未验证。素材种类多或下载多本身不算获胜依据。"
+    },
+    {
+      "step": "3 · 整墙小样先过可见性检查",
+      "decision": "把候选材质铺满真实墙长，配真实道具并查看三个正式机位；遮挡、白材质、错误轴向未排除时，不据此淘汰方案。",
+      "evidence": "Sable ultra、DREDGE max/xhigh 等修复小样后再选材；Hi-Fi high、DREDGE ultra 存在遮挡未修复就选材的过程缺口。修复前证据单列保存，不能把所有组都记为完整遵循。"
+    },
+    {
+      "step": "4 · 围绕工序组织近景",
+      "decision": "先让待处理物、操作工具、输出/运输物形成能读懂的关系，再补标签、磨损、布料和小件；保留前景活动空间与疏密差异。",
+      "evidence": "Sable max 的称重—登记—取水、DREDGE xhigh 的称重—切分—装箱在盲评细节类优先。大型招牌、棚沿、石缝也会抢焦点；这些是静态画面观察，不证明交互已实现。"
+    },
+    {
+      "step": "5 · shader 单独作对照",
+      "decision": "需要线条或网点时，固定几何、材质和灯光，仅改变效果开关；比较物体分离收益、重复纹理强化和远近线宽。",
+      "evidence": "Sable ultra、Hi-Fi ultra 有经场景差异核对的小样开关图，能看到轮廓分离变化，也仍保留重复砖缝、发白台面等问题。首轮/终版同时改了布局与资产，不能用它们独证 shader 收益。"
+    },
+    {
+      "step": "6 · 两轮后按目标筛选",
+      "decision": "冻结首轮后做一次自主美术修订；技术补救保留前后图并重拍三机位。最终按五类别盲评，再查看实际 token 组成；跨组组合先标为待验证方案。",
+      "evidence": "24 组均保留两轮三机位，四次独立图像盲评与制作记录分离。每档仅一个样本、每游戏一个模型评审；独立找材的偶然性无法与 effort 因果分离。不存在已证明的通用最高档最优结论。"
+    }
+  ]
 }

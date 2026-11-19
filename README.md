@@ -2,9 +2,11 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-**最新结果入口：[环境美术成果总览 HTML](docs/multi-style-effort-study.html)。** 汇总 Control、Sable、Hi-Fi Rush、DREDGE 四档 effort 的 16 份两轮结果，可同步切换机位、起点/首轮/终图，并在同页浏览 13 类历史案例。实机图使用仓库相对路径，离线浏览无需打开 Godot；原作参考图需联网。
+**最新结果入口：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。** 24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
 
-**2026-11-20 新电脑与 GPT-6.2 已验证可用。用户已授权 [四游戏 × 六档 effort 的 24 组从白盒独立制作比较](experiments/gpt62-independent-matrix-20261120/README.md)，输入与文件隔离已冻结，正式制作中；[HTML 对比页](docs/gpt62-independent-matrix.html) 将逐批收录实图。** [Control 单组预检](experiments/independent-control-20261120/README.md) 不计入正式排名。 原 MacBook 的停止运行约定仍保留。[迁移与接续说明](docs/new-machine-handoff.md) 记录当前接续状态、保存场景和 skill 安装方式。新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 是本轮的执行依据，正式 24 组结果尚未完成。当前四档是既有成品局部的续作；三游戏访问检查发现共享 Git 元数据和中性临时工具接触，未发现直接读取其他组美术内容，但不能称为严格隔离。见 [检查范围与边界](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
+**2026-11-20 已在新电脑实际完成 GPT-6.2 Astra 全六档试跑。** [正式协议、工程与审计](experiments/gpt62-independent-matrix-20261120/README.md) 保留一致输入、独立历史和受限读取的证据及限制；[Control 单组预检](experiments/independent-control-20261120/README.md) 不计排名。原 MacBook 的停止运行约定仍保留，远程接续见 [Termius / CLI 说明](docs/new-machine-handoff.md)。本轮按新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 执行，但小样、自查方式等仍有已披露的遵循缺口，不代表质量验收。
+
+[旧轮次成果总览](docs/multi-style-effort-study.html) 保留四档 16 份既有成品续作和 13 类历史案例。旧轮次不能称为从白盒独立制作；其共享 Git 元数据与中性工具接触的范围见 [旧访问检查](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
 
 当前入口为 **三方向真实素材对比样板**：晴日货运庭院、灰烬庭院、Facility 07。三者沿用同一测试场与观察机位，分别装配门洞、坡道、墙边道具、完整地面和外围远景。原始玩法碰撞不变，新增道具使用简化碰撞。跳台和台阶仍是测试几何，尚未完成全场正式关卡美术。
 
