@@ -1,0 +1,145 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="e0"]
+[ext_resource type="PackedScene" path="res://art/models/Paving1.glb" id="e1"]
+[ext_resource type="PackedScene" path="res://art/models/Paving2.glb" id="e2"]
+[ext_resource type="PackedScene" path="res://art/models/Paving0.glb" id="e3"]
+[ext_resource type="PackedScene" path="res://art/models/merchant-house.glb" id="e4"]
+[ext_resource type="PackedScene" path="res://art/models/market-roof.glb" id="e5"]
+[ext_resource type="PackedScene" path="res://art/models/market-stall-counter.glb" id="e6"]
+[ext_resource type="PackedScene" path="res://art/models/room-divider-shelf.glb" id="e7"]
+[ext_resource type="PackedScene" path="res://art/models/tea-set.glb" id="e8"]
+[ext_resource type="PackedScene" path="res://art/models/water-jug.glb" id="e9"]
+[ext_resource type="PackedScene" path="res://art/models/InkBottle.glb" id="e10"]
+
+[sub_resource type="ProceduralSkyMaterial" id="DaySky"]
+sky_top_color = Color(0.22,0.50,0.72,1)
+sky_horizon_color = Color(0.72,0.83,0.86,1)
+ground_horizon_color = Color(0.71,0.79,0.82,1)
+ground_bottom_color = Color(0.44,0.51,0.56,1)
+sun_angle_max = 6.0
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("DaySky")
+
+[sub_resource type="Environment" id="Daylight"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.77,0.82,0.95,1)
+ambient_light_energy = 0.77
+ambient_light_sky_contribution = 0.28
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 1.6
+
+[sub_resource type="BoxShape3D" id="Shape3"]
+size = Vector3(12.00000, 0.25000, 12.00000)
+
+[node name="KilnfrontStudy" type="Node3D"]
+
+[node name="Daylight" parent="." type="WorldEnvironment"]
+environment = SubResource("Daylight")
+
+[node name="Sun" parent="." type="DirectionalLight3D"]
+rotation_degrees = Vector3(-46.00000, -31.00000, 0.00000)
+light_color = Color(1,0.901,0.766,1)
+light_energy = 1.22
+shadow_enabled = true
+light_angular_distance = 0.65
+
+[node name="Inspection" parent="." instance=ExtResource("e0")]
+
+
+[node name="StreetCollision" parent="." type="StaticBody3D"]
+position = Vector3(0.00000, -0.12500, 0.00000)
+
+
+[node name="Collision" parent="StreetCollision" type="CollisionShape3D"]
+shape = SubResource("Shape3")
+
+[node name="StoneLane" parent="." type="Node3D"]
+
+
+[node name="Flags" parent="StoneLane" instance=ExtResource("e1")]
+position = Vector3(-4.00000, -0.11500, -4.00000)
+
+
+[node name="Flags2" parent="StoneLane" instance=ExtResource("e2")]
+position = Vector3(-4.00000, -0.11500, 0.00000)
+rotation_degrees = Vector3(0.00000, 180.00000, 0.00000)
+
+
+[node name="Flags3" parent="StoneLane" instance=ExtResource("e3")]
+position = Vector3(-4.00000, -0.11500, 4.00000)
+
+
+[node name="Flags4" parent="StoneLane" instance=ExtResource("e2")]
+position = Vector3(0.00000, -0.11500, -4.00000)
+rotation_degrees = Vector3(0.00000, 180.00000, 0.00000)
+
+
+[node name="Flags5" parent="StoneLane" instance=ExtResource("e3")]
+position = Vector3(0.00000, -0.11500, 0.00000)
+
+
+[node name="Flags6" parent="StoneLane" instance=ExtResource("e1")]
+position = Vector3(0.00000, -0.11500, 4.00000)
+rotation_degrees = Vector3(0.00000, 180.00000, 0.00000)
+
+
+[node name="Flags7" parent="StoneLane" instance=ExtResource("e3")]
+position = Vector3(4.00000, -0.11500, -4.00000)
+
+
+[node name="Flags8" parent="StoneLane" instance=ExtResource("e1")]
+position = Vector3(4.00000, -0.11500, 0.00000)
+rotation_degrees = Vector3(0.00000, 180.00000, 0.00000)
+
+
+[node name="Flags9" parent="StoneLane" instance=ExtResource("e2")]
+position = Vector3(4.00000, -0.11500, 4.00000)
+
+
+[node name="Shop" parent="." type="Node3D"]
+
+
+[node name="Machiya" parent="Shop" instance=ExtResource("e4")]
+position = Vector3(0.00000, 0.06000, -5.60000)
+scale = Vector3(1.45000, 1.26000, 0.89000)
+
+
+[node name="ForecourtCanopy" parent="Shop" instance=ExtResource("e5")]
+position = Vector3(-0.52000, 0.12000, -2.68000)
+scale = Vector3(1.26000, 1.14000, 0.88000)
+
+
+[node name="Merchandise" parent="." type="Node3D"]
+
+
+[node name="SalesCounter" parent="Merchandise" instance=ExtResource("e6")]
+position = Vector3(0.02000, 0.13000, -1.96000)
+scale = Vector3(2.05000, 1.07000, 1.12000)
+
+
+[node name="BackShelf" parent="Merchandise" instance=ExtResource("e7")]
+position = Vector3(-0.39000, 0.37000, -3.02000)
+scale = Vector3(2.06000, 1.45000, 1.39000)
+
+
+[node name="ServingTea" parent="Merchandise" instance=ExtResource("e8")]
+position = Vector3(0.83000, 1.07200, -1.89000)
+rotation_degrees = Vector3(0.00000, -9.00000, 0.00000)
+scale = Vector3(1.04000, 1.04000, 1.04000)
+
+
+[node name="TallGlaze" parent="Merchandise" instance=ExtResource("e9")]
+position = Vector3(-1.15000, 1.07200, -2.01000)
+scale = Vector3(0.65000, 0.93000, 0.65000)
+
+
+[node name="VioletGlaze" parent="Merchandise" instance=ExtResource("e10")]
+position = Vector3(-0.83000, 1.07200, -1.90000)
+scale = Vector3(0.61000, 0.55000, 0.61000)
+
