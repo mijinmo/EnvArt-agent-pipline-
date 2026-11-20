@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3]
+[ext_resource type="Shader" path="res://materials/weathered_stone.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/rock_boulder_dry_Diffuse.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/rock_boulder_dry_nor_gl.jpg" id="3"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/rock_color = ExtResource("2")
+shader_parameter/rock_normal = ExtResource("3")
+shader_parameter/hue = Color(0.48, 0.405, 0.33, 1)
+shader_parameter/moss_amount = 0.28

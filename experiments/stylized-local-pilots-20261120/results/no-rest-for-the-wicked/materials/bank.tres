@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3]
+[ext_resource type="Shader" path="res://materials/bank.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/forest_ground_04_Diffuse.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/forest_ground_04_nor_gl.jpg" id="3"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/soil = ExtResource("2")
+shader_parameter/grit = ExtResource("3")

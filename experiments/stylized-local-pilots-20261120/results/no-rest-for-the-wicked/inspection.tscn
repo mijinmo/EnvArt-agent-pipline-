@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="PackedScene" path="res://controllers/player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://controllers/camera_rig.tscn" id="2"]
+[ext_resource type="Script" path="res://controllers/player_input.gd" id="3"]
+[ext_resource type="Script" path="res://inspection.gd" id="4"]
+[node name="Inspection" type="Node3D"]
+script = ExtResource("4")
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector3(0, 0.05, 3)
+[node name="CameraRig" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2")]
+target = NodePath("../Player")
+initial_mode = 2
+[node name="PlayerInput" type="Node" parent="." node_paths=PackedStringArray("player", "cameras")]
+script = ExtResource("3")
+player = NodePath("../Player")
+cameras = NodePath("../CameraRig")
