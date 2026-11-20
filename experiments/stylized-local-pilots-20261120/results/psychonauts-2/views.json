@@ -1,0 +1,5 @@
+[
+  {"name":"overall","position":[2.05,2.10,4.76],"target":[-0.10,1.85,-2.76],"fov":49},
+  {"name":"close","position":[2.38,1.79,0.54],"target":[1.14,1.51,-1.73],"fov":48},
+  {"name":"transition","position":[-3.74,1.65,2.42],"target":[-0.03,1.64,-2.67],"fov":54}
+]
