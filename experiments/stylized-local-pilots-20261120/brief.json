@@ -1,0 +1,95 @@
+{
+  "updated": "2026-11-20",
+  "status": "reference_selection; production_not_started",
+  "user_decision": "同意首批 Sea of Thieves / Psychonauts 2 / No Rest for the Wicked；追加一个纯二次元方向，例如原神。本轮选用 Genshin Impact。",
+  "scope": "每个游戏先做一个可编辑代表性局部，用整体/近景/过渡实机图校准后再集中细化；先从 Sea of Thieves 开始。",
+  "matrix": "本次未设定新的六档 effort 矩阵。实际模型、effort、资源与耗时在制作启动时记录，不填推测值。",
+  "constraints": [
+    "主要可见建筑和 props 先检索、下载、检查适用素材及许可，再装配。",
+    "建筑、地面/门槛、功能道具、表面和光照共同构成初稿。",
+    "候选之间独立 Git 历史与临时目录；制作输入只含本候选参考、brief 和共同用户要求，禁止横读其他候选成果。",
+    "新方向的首个可判断实机局部用于审美校准，最终美术验收属于用户。"
+  ],
+  "games": [
+    {
+      "id": "sea-of-thieves",
+      "name": "盗贼之海",
+      "slice_proposal": "Port Merrick 酒馆地窖：石拱门、储藏架、桶箱与绳索/灯具",
+      "spatial_type": "室内",
+      "focus": "厚实夸张形体、绘制感表面、素材族统一与冷暖层次",
+      "reference_status": "已查看原作者地窖图；制作前按该局部冻结输入",
+      "source": "https://www.joachimcoppens.com/work/sea-of-thieves-port-merrick",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/61031b1f9ff42a0bb713c097/6670af32-bdb6-45cd-9814-a9cc832fcde3/Shot_TavernCellar.jpg"
+    },
+    {
+      "id": "psychonauts-2",
+      "name": "意航员 2",
+      "slice_proposal": "Otto 工坊柜台、仪器与后侧货架",
+      "spatial_type": "室内",
+      "focus": "非对称、夸张比例、怪诞复古造型与道具叙事",
+      "reference_status": "已查看官方工坊截图；补同区域整体/地面证据后冻结",
+      "source": "https://www.doublefine.com/games/psychonauts-2",
+      "image_url": "https://assets.doublefine.com/images/screenshots/Psychonauts-2/Psychonauts2-screenshots-20210417-4k-004.jpg"
+    },
+    {
+      "id": "no-rest-for-the-wicked",
+      "name": "恶意不息",
+      "slice_proposal": "林地短石桥与残破桥头",
+      "spatial_type": "室外",
+      "focus": "绘画感表面、雕塑感轮廓、地形植被层次与光色；保留适合参考的俯视距离",
+      "reference_status": "已查看官方商店桥景；近景材质证据仍需补充",
+      "source": "https://store.steampowered.com/app/1371980/No_Rest_for_the_Wicked/",
+      "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/1163c9191d2261d845aa96cbc011ed6490182ae8/ss_1163c9191d2261d845aa96cbc011ed6490182ae8.1920x1080.jpg?t=1792498726"
+    },
+    {
+      "id": "genshin-impact",
+      "name": "原神",
+      "slice_proposal": "稻妻·离岛店铺街角：一间商铺门面/柜台、相邻道具组与一小段石板路",
+      "spatial_type": "室外街道，檐下半开放",
+      "focus": "纯二次元环境方向：清楚的轮廓与色块、绘制感材质、受控细节密度、木构与道具的一致表达",
+      "implementation_hypotheses": [
+        "先用可读的日间光照检验木构、石材、布料与植被；夜景仅补充灯光关系。",
+        "模型比例、贴图笔触和色块、植物团簇与光照共同形成表达；是否需要分段明暗/描边要经实机材质小样比较。",
+        "原神环境材质与角色卡通渲染分开分析，不预设全场统一两段阴影或描边。"
+      ],
+      "reference_status": "已查看三张实机来源图；店铺细节图可作为有限主参考，两张活动街景仅补充；完整一致的参考组尚未冻结",
+      "references": [
+        {
+          "id": "genshin-ritou-market-wide",
+          "source_page": "https://www.hoyolab.com/article/34203305",
+          "image_url": "https://upload-os-bbs.hoyolab.com/upload/2024/10/13/126805707/2370aa3bdd5197efa96ae6893825aece_6387942757230076242.png",
+          "sha256": "0cff8d86beccc4256fb6f6d40d898685e2606507852a8bbb7e57287b6a636974",
+          "inspected": true,
+          "context": "玩家分享的原神环境截图；可见节庆布置，具体活动/版本与是否改动未核实",
+          "role": "supplemental mood",
+          "supports": "木构、摊位、石板路的色块与细节尺度；日间/灯笼亮起时的色温关系",
+          "limits": "不能把人物旗帜及节庆灯串认定为常驻环境，也不能凭检索摘要确定该街道就是离岛。"
+        },
+        {
+          "id": "genshin-ritou-market-near",
+          "source_page": "https://www.hoyolab.com/article/34203305",
+          "image_url": "https://upload-os-bbs.hoyolab.com/upload/2024/10/13/126805707/c8ad7e9cf4ac2dda098a9540f3762be7_1623761261444900813.png",
+          "sha256": "2b3e2fe55f8a41d323f8f657a0145ee7ff0a2ef6ed6475eec4210e065fa338be",
+          "inspected": true,
+          "context": "玩家分享的原神环境截图；可见节庆布置，具体活动/版本与是否改动未核实",
+          "role": "supplemental mood",
+          "supports": "木构、摊位、石板路的色块与细节尺度；日间/灯笼亮起时的色温关系",
+          "limits": "不能把人物旗帜及节庆灯串认定为常驻环境，也不能凭检索摘要确定该街道就是离岛。"
+        },
+        {
+          "id": "genshin-ritou-vahid",
+          "source_page": "https://protogamer.ru/guides/986-torgovec-iz-inadzumy-genshin-impact",
+          "image_url": "https://protogamer.ru/images/guides/01/08/986-torgovec-iz-inadzumy-genshin-impact.jpg",
+          "sha256": "8ecce010e55f26944e7f6bcc17a3c9e945dda189b76d7f20dfb34fc5184cfff1",
+          "inspected": true,
+          "context": "攻略所示离岛 Vahid 店铺对话实机图",
+          "role": "primary environment — bounded detail",
+          "supports": "深檐木柱与石柱脚、柜台/货架/器皿的支承关系、门窗、石板路和小植栽",
+          "limits": "角色遮住部分地面；檐下较暗；屋顶全貌和侧面动线不可见，不能单图冻结整段街角。"
+        }
+      ]
+    }
+  ],
+  "next": "按首个局部冻结对应参考和空间范围，检索并检查主要资产后制作方向初稿；其余游戏继续补足各自参考，不互相混用建筑/材质证据。",
+  "evidence": "当前只有参考筛选，没有新的 Godot 场景、实机初稿或用户美术验收。参考图片版权归原权利方，不视为可交付游戏资产许可。"
+}
