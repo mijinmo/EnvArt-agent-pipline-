@@ -4,7 +4,9 @@
 
 **接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意，质量与额度收益尚未实测；这次同步不自动启动下一轮制作。
 
-**最新结果入口：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。** 24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
+**最新局部：[盗贼之海 / 意航员 2 / 恶意不息 / 原神 HTML 对比](docs/stylized-local-pilots.html)。** 四组 GPT-6.2 Astra / high 已完成素材小样、可编辑初稿与看图自查，归档 54 张阶段图；恶意不息额外做了一次反馈辅助修订。可切换三机位、阶段与五种比较类别；[工程、操作与审计](experiments/stylized-local-pilots-20261120/README.md)。这是不同风格的方向验证，尚待用户美术校准，没有自动重跑六档矩阵。
+
+此前结果：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
 
 **2026-11-20 已在 Mac mini 实际完成 GPT-6.2 Astra 全六档试跑。** [正式协议、工程与审计](experiments/gpt62-independent-matrix-20261120/README.md) 保留一致输入、独立历史和受限读取的证据及限制；[Control 单组预检](experiments/independent-control-20261120/README.md) 不计排名。原 MacBook 的停止运行约定仍保留，远程接续见 [Termius / CLI 说明](docs/new-machine-handoff.md)。本轮按当时的 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 执行，但小样、自查方式等仍有已披露的遵循缺口，不代表质量验收，也没有验证随后新增的审美校准/接手流程。
 

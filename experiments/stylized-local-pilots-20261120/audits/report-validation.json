@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-20",
+  "browser": "Google Chrome headless, isolated temporary profile",
+  "target": "private preview HTTP report",
+  "checks_passed": 59,
+  "checks": [
+    {
+      "name": "four game selectors",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves tab",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves reference",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/sample/overall",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/sample/close",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/sample/transition",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/draft/overall",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/draft/close",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/draft/transition",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/selected/overall",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/selected/close",
+      "value": true
+    },
+    {
+      "name": "sea-of-thieves/selected/transition",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2 tab",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2 reference",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/sample/overall",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/sample/close",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/sample/transition",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/draft/overall",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/draft/close",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/draft/transition",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/selected/overall",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/selected/close",
+      "value": true
+    },
+    {
+      "name": "psychonauts-2/selected/transition",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked tab",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked reference",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/sample/overall",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/sample/close",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/sample/transition",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/draft/overall",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/draft/close",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/draft/transition",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/before_revision/overall",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/before_revision/close",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/before_revision/transition",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/selected/overall",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/selected/close",
+      "value": true
+    },
+    {
+      "name": "no-rest-for-the-wicked/selected/transition",
+      "value": true
+    },
+    {
+      "name": "genshin-impact tab",
+      "value": true
+    },
+    {
+      "name": "genshin-impact reference",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/sample/overall",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/sample/close",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/sample/transition",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/draft/overall",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/draft/close",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/draft/transition",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/selected/overall",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/selected/close",
+      "value": true
+    },
+    {
+      "name": "genshin-impact/selected/transition",
+      "value": true
+    },
+    {
+      "name": "five comparison categories",
+      "value": true
+    },
+    {
+      "name": "worker usage rows",
+      "value": true
+    },
+    {
+      "name": "pipeline observations",
+      "value": true
+    },
+    {
+      "name": "fidelity rows",
+      "value": true
+    },
+    {
+      "name": "unity rows",
+      "value": true
+    },
+    {
+      "name": "assets rows",
+      "value": true
+    },
+    {
+      "name": "detail rows",
+      "value": true
+    },
+    {
+      "name": "lighting rows",
+      "value": true
+    },
+    {
+      "name": "enlarged screenshot",
+      "value": true
+    },
+    {
+      "name": "dialog closes",
+      "value": true
+    },
+    {
+      "name": "mobile width",
+      "value": true
+    }
+  ],
+  "desktop_review": "1440×1200 screenshot visually inspected",
+  "mobile_review": "390×1000 screenshot visually inspected; no horizontal page overflow",
+  "service_checks": [
+    {
+      "url": "http://127.0.0.1:18762/docs/stylized-local-pilots.html",
+      "status": 200,
+      "bytes": 36092,
+      "content_type": "text/html"
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/stylized-local-pilots.html",
+      "status": 200,
+      "bytes": 36092,
+      "content_type": "text/html"
+    },
+    {
+      "url": "http://100.96.75.54:8081/references/stylized-local-pilots-20261120/genshin-impact.jpg",
+      "status": 200,
+      "bytes": 75810,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "http://100.96.75.54:8081/experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/overall.png",
+      "status": 200,
+      "bytes": 1037911,
+      "content_type": "image/png"
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/gpt62-independent-matrix.html",
+      "status": 200,
+      "bytes": 111894,
+      "content_type": "text/html"
+    }
+  ],
+  "rejected_private_paths": [
+    "AGENTS.md",
+    ".git/config",
+    ".codex/",
+    "project.godot",
+    "docs/ directory listing"
+  ],
+  "private_paths_status": 404,
+  "image_export": "43 original-byte images used in report; no project or session logs exported",
+  "remote_limit": "Checked from hosting machine via Tailscale IP; new report not yet separately confirmed in user MacBook browser."
+}

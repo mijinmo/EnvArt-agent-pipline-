@@ -1,0 +1,198 @@
+{
+  "date": "2026-11-20",
+  "status": "four_drafts_complete; user_art_acceptance_pending",
+  "scope": "Four different games, one Astra/high producer each; not an effort comparison.",
+  "isolation": {
+    "input": "Fresh contexts and independent Git repositories, only own references and neutral infrastructure; no prior finished art.",
+    "shell": "Minimal-read custom policy, own temporary root writable, peer roots and host repository excluded; host plugins, memories and agent delegation disabled.",
+    "renderer": "Serial native sandbox, own project and Godot appdata only; network denied.",
+    "observed": "Available function/tool call records inspected; no observed peer result or host conversation read.",
+    "limits": "Path scan plus manual call review is not proof against every tool or indirect access. Image tools also rely on declared scope and observed calls. No cross-agent B handoff tested."
+  },
+  "usage_note": "CLI turn usage only. Input includes cached input; output includes reasoning. Elapsed includes render queue and downloads. Coordinator, audit and report work excluded; cannot convert to subscription quota.",
+  "games": [
+    {
+      "game": "sea-of-thieves",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "initial_head": "cd21162fb9f3c8637cedc08d91a452d423671a5e",
+      "history_ref": "refs/envart-local-pilots/20261120/sea-of-thieves",
+      "producer_minutes": 17.87,
+      "usage": {
+        "input_tokens": 3302189,
+        "cached_input_tokens": 3182720,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 33632,
+        "reasoning_output_tokens": 7025
+      },
+      "uncached_input_tokens": 119469,
+      "tool_calls_inspected": 46,
+      "image_tool_calls": 6,
+      "observed_cross_read_flags": 0,
+      "capture_helper_and_infrastructure_unchanged": true,
+      "views_frozen_since_first_draft": true,
+      "resource_paths_checked": 57,
+      "archive_files_hash_verified": 216,
+      "capture_files": 15,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/reviewed",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710"
+        }
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ]
+    },
+    {
+      "game": "psychonauts-2",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "initial_head": "67a1351194cd3e08d01db313cdc6fe3d31e1f941",
+      "history_ref": "refs/envart-local-pilots/20261120/psychonauts-2",
+      "producer_minutes": 19.0,
+      "usage": {
+        "input_tokens": 5230823,
+        "cached_input_tokens": 5092608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 36681,
+        "reasoning_output_tokens": 5533
+      },
+      "uncached_input_tokens": 138215,
+      "tool_calls_inspected": 63,
+      "image_tool_calls": 13,
+      "observed_cross_read_flags": 0,
+      "capture_helper_and_infrastructure_unchanged": true,
+      "views_frozen_since_first_draft": true,
+      "resource_paths_checked": 69,
+      "archive_files_hash_verified": 191,
+      "capture_files": 12,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/final",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710"
+        }
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ]
+    },
+    {
+      "game": "no-rest-for-the-wicked",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "initial_head": "a87bde11351fdd3f89acb7e6045ab7fc6dcbeedc",
+      "history_ref": "refs/envart-local-pilots/20261120/no-rest-for-the-wicked-revised",
+      "producer_minutes": 15.82,
+      "usage": {
+        "input_tokens": 2878987,
+        "cached_input_tokens": 2769152,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 31662,
+        "reasoning_output_tokens": 6054
+      },
+      "uncached_input_tokens": 109835,
+      "tool_calls_inspected": 61,
+      "image_tool_calls": 10,
+      "observed_cross_read_flags": 0,
+      "capture_helper_and_infrastructure_unchanged": true,
+      "views_frozen_since_first_draft": true,
+      "resource_paths_checked": 160,
+      "archive_files_hash_verified": 241,
+      "capture_files": 15,
+      "selected_render": [
+        {
+          "scene": "revised.tscn",
+          "directory": "captures/revised",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710"
+        },
+        {
+          "scene": "revised.tscn",
+          "directory": "captures/revised",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710"
+        }
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "revision": {
+        "kind": "coordinator-feedback-assisted self-revision",
+        "head": "36bc65ef08b1e826529a20b5c5fdaab04039525d",
+        "minutes": 7.03,
+        "usage": {
+          "input_tokens": 5178531,
+          "cached_input_tokens": 5026048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 44018,
+          "reasoning_output_tokens": 10488
+        },
+        "uncached_input_tokens": 152483,
+        "preserved_preexisting_files": 218
+      }
+    },
+    {
+      "game": "genshin-impact",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "initial_head": "f6a074043769ceee6dc31a5cb75e0eed0e7c729e",
+      "history_ref": "refs/envart-local-pilots/20261120/genshin-impact",
+      "producer_minutes": 15.19,
+      "usage": {
+        "input_tokens": 4354678,
+        "cached_input_tokens": 4224384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 30301,
+        "reasoning_output_tokens": 4944
+      },
+      "uncached_input_tokens": 130294,
+      "tool_calls_inspected": 54,
+      "image_tool_calls": 15,
+      "observed_cross_read_flags": 0,
+      "capture_helper_and_infrastructure_unchanged": true,
+      "views_frozen_since_first_draft": true,
+      "resource_paths_checked": 61,
+      "archive_files_hash_verified": 185,
+      "capture_files": 12,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/final",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710"
+        }
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ]
+    }
+  ],
+  "known_limits": [
+    "No user aesthetic acceptance. Actual sources were supplemented independently, so reference discovery was part of production.",
+    "Wicked received one coordinator-feedback-assisted revision in the same producer session; other games only producer self-checks. Work is not equalized.",
+    "An initial coordinator Sea neutral capture preceded Godot import and had class-cache errors; later import/captures clean. This failed neutral image is not archived art evidence.",
+    "Psych first audition had a numeric parse error; corrected material-study and selected final render logs clean.",
+    "Wicked viewed the material-study close view; the other two study images were captured but no direct image-call evidence of viewing both at that stage. All three full-draft and selected views were viewed.",
+    "Earlier screenshots are frozen. Earlier editable resource states for Sea/Psych/Genshin require their stage Git revisions, not just opening old scene names against current shared materials.",
+    "Genshin upstream Feudal Japan Castle Town pack labels all 179 files AI-used (Claude Fable 5.1) and CC0; downloaded geometry is not represented as human-authored.",
+    "Single trials do not establish the best pipeline or effort; cached token totals are not quota estimates."
+  ]
+}

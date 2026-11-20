@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-20",
-  "status": "production_running; first_direction_drafts",
+  "status": "four_direction_drafts_completed; awaiting_user_calibration",
   "user_decision": "同意首批 Sea of Thieves / Psychonauts 2 / No Rest for the Wicked；追加一个纯二次元方向，例如原神。本轮选用 Genshin Impact。",
   "scope": "每个游戏先做一个可编辑代表性局部，用整体/近景/过渡实机图校准后再集中细化；先从 Sea of Thieves 开始。",
   "matrix": "本次未设定新的六档 effort 矩阵。实际模型、effort、资源与耗时在制作启动时记录，不填推测值。",
@@ -90,14 +90,19 @@
       ]
     }
   ],
-  "next": "完成素材检索、小样和代表性初稿，协调者实际查看三机位图后更新本记录。",
-  "evidence": "已准备四份各自独立输入并启动制作；尚无方向初稿或用户美术验收。",
+  "next": "以已交付四组实图校准艺术方向；未自动扩展 effort 矩阵或整场。",
+  "evidence": "四个独立可编辑工程及阶段图已归档；协调者逐张检查了四组当前三机位及恶意不息修订前后。尚无用户美术验收。",
   "execution": {
     "authorized": "用户：你直接开始跑呗，不用等我指令",
     "requested_model": "gpt-6.2-astra",
     "requested_effort": "high",
     "scope": "每个游戏一个方向初稿；至多三个制作进程同时运行，GPU串行。不是 effort 排名。",
     "isolation": "新上下文、各自独立 Git 和临时目录；shell采用定制文件读取白名单，禁用插件/浏览器/多代理能力；图形引擎使用限定本组路径的原生 sandbox。图像工具仍需遵守提示边界，最终审计实际调用。",
-    "started_at": 1795185375.017733
-  }
+    "started_at": 1795185375.017733,
+    "observed_model": "gpt-6.2-astra",
+    "observed_effort": "high",
+    "additional_revision": "恶意不息同一制作会话接受一次协调者具体图像反馈，另存 revised.tscn；不是 B 接手或新的独立样本。"
+  },
+  "report": "../../docs/stylized-local-pilots.html",
+  "audit": "audits/execution-summary.json"
 }

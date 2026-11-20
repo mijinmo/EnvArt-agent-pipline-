@@ -1,0 +1,300 @@
+{
+  "games": {
+    "sea-of-thieves": {
+      "delivery_status": "初稿已检查 · 待审美校准",
+      "pass_label": "方向初稿 · 自查修正",
+      "captures": {
+        "overall": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/overall.png",
+        "close": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/close.png",
+        "transition": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/transition.png"
+      },
+      "findings": [
+        "桶架、门、分装桌、绳索与箱桶形成完整地窖局部，木、石、金属已有区分。",
+        "四个彩头桶仍是规则二乘二排列，石墙切角与地砖缝偏重复，离原作的自然起伏还有距离。",
+        "暖灯与冷石墙关系可读；梁下硬影和偏亮木顶使入口至深处的层次较短。"
+      ],
+      "next": "先核对这种夸张比例与材质方向，再集中处理桶架疏密、石块轮廓及灯光层次。",
+      "asset_notes": [
+        "KayKit Dungeon Remastered 免费 CC0 包：墙、门、地板、架板、箱桶。",
+        "从实际模型提取石块并重排，重做木石表面、金属色及桶头图记；补充绳索、账单和挂件。",
+        "保留原样小样、材质适配小样、初稿和自查修正图。"
+      ],
+      "validation": "已查看三张修正后实机图；源资产许可已检查。独立历史与初稿资源均保存。",
+      "stages": {
+        "sample": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/audition/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/audition/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/audition/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/draft/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/draft/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/draft/transition.png"
+          }
+        },
+        "selected": {
+          "label": "自查修正",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/transition.png"
+          }
+        }
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/project.godot"
+        },
+        {
+          "label": "素材与许可",
+          "url": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/ASSETS.md"
+        },
+        {
+          "label": "操作说明",
+          "url": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/README.md"
+        }
+      ],
+      "reference_note": "原作者发布的 Port Merrick 地窖图；本次局部重新布置，构图并非逐像素复刻。",
+      "category_notes": {
+        "fidelity": "石门、木架、彩头桶与冷暖关系已建立；几何更硬、更规整，缺少原作边缘和轮廓的自然变化。",
+        "unity": "主体来自同一素材族，木石金属区分清楚；新增细木纹与原低面数切角的精度仍不完全一致。",
+        "assets": "实际下载 KayKit 免费包并看图试装，保留原物轮廓、提取石块重排、重做表面，主要建筑与道具已有素材依据。",
+        "detail": "装桶、分装、登记和搬运分组可读；四个横桶的规则阵列及相似箱态仍偏机械。",
+        "lighting": "暖灯/冷墙可区分，修复了明显颗粒与灯具遮挡；木顶受暖光面积偏大，梁底硬影和纵深过渡尚弱。"
+      }
+    },
+    "psychonauts-2": {
+      "delivery_status": "初稿已检查 · 待审美校准",
+      "pass_label": "方向初稿 · 自查修正",
+      "captures": {
+        "overall": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/overall.png",
+        "close": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/close.png",
+        "transition": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/transition.png"
+      },
+      "findings": [
+        "弯曲仪器、倾斜展框、青绿屏幕与暖黄衬底已形成清楚的复古工坊方向，表盘、接线和工作灯能近看。",
+        "柜台和后墙仍较直、较齐，主参考里的夸张比例与非对称程度尚未充分出现。",
+        "后场被中央设备封住，缺少参考的楼梯与纵深；收音机重复、展盒亮度接近，使主次变化偏少。"
+      ],
+      "next": "优先处理柜台/后架的非对称比例和纵深，再调整展品差异与亮度层级。",
+      "asset_notes": [
+        "Kenney Furniture / Space 免费 CC0 包提供主要柜体、墙地、屏幕、管件与展品。",
+        "保留资产基础形体，适配材质与比例；补制表盘、电极、折臂灯和主题仪器。",
+        "已保留材质小样、初稿和连接/落地/纹理噪点的修正证据。"
+      ],
+      "validation": "三张最终实机图已查看，柜脚与接线修复可见；素材及字体来源许可已记录。",
+      "stages": {
+        "sample": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/material-study/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/material-study/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/material-study/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/draft/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/draft/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/draft/transition.png"
+          }
+        },
+        "selected": {
+          "label": "自查修正",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/transition.png"
+          }
+        }
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/project.godot"
+        },
+        {
+          "label": "素材与许可",
+          "url": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/ASSETS.md"
+        },
+        {
+          "label": "操作说明",
+          "url": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/README.md"
+        }
+      ],
+      "reference_note": "Double Fine 官方 Otto 工坊截图；局部采用柜台、陈列框与仪器关系，原图角色和背景纵深不作已完成内容。",
+      "category_notes": {
+        "fidelity": "青绿屏幕、黄衬展盒和复古仪器已建立方向；柜台偏直，中央设备封住后场，非对称造型与深度不足。",
+        "unity": "木、黄铜、搪瓷及屏幕有一致分工；部分展品仍明显是简单低面数外形，与精细表头的尺度不一。",
+        "assets": "Kenney 家具/太空包承担主体装配，经过朝向、尺度、材质和屏幕 UV 适配；独特仪器补制比重较高。",
+        "detail": "表针、电极、接线、蓝图、工作灯与抽屉能近看；收音机与展盒重复，物品状态变化有限。",
+        "lighting": "暖黄陈列和冷青屏幕分得开；多个展盒亮度相近，前台与后墙过渡偏硬，空间层级不及参考。"
+      }
+    },
+    "no-rest-for-the-wicked": {
+      "delivery_status": "限定修订已复核 · 待审美校准",
+      "pass_label": "协调反馈辅助修订",
+      "captures": {
+        "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/overall.png",
+        "close": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/close.png",
+        "transition": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/transition.png"
+      },
+      "findings": [
+        "同机位对照中，桥头暖光与暗水、暗岸的分区更清楚，连续亮带已被打断，桥边植物留出了空隙。",
+        "近景浅石仍偏亮，水纹略柔，叶影细碎；残柱和植物的块面语言仍不够接近原作。",
+        "保留原场景和全部美术依赖，修订资源另存；这是基于明确图像问题的一次辅助修订，不是新独立样本。"
+      ],
+      "next": "优先判断当前光色方向，再处理石块轮廓、植物大形和近景高光；暂不继续增加细碎道具。",
+      "asset_notes": [
+        "Paul Wortmann Stone bridge 2（CC0）作为真实桥体。",
+        "Poly Haven 免费 CC0 岩石、蕨类、树桩、灯、桶、梯和锤；自制局部地形及补缺构件。",
+        "已保存桥体小样、初稿和颜色/遮挡技术修复证据。"
+      ],
+      "validation": "三张修订图已与修订前三图同机位复核；218 个原有文件字节一致，包含原场景、素材与旧图。",
+      "stages": {
+        "sample": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/study/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/study/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/study/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/draft/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/draft/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/draft/transition.png"
+          }
+        },
+        "before_revision": {
+          "label": "修订前（技术修复后）",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/repair/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/repair/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/repair/transition.png"
+          }
+        },
+        "selected": {
+          "label": "定向修订",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/transition.png"
+          }
+        }
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/project.godot"
+        },
+        {
+          "label": "素材与许可",
+          "url": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/ASSETS.md"
+        },
+        {
+          "label": "操作说明",
+          "url": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/README.md"
+        }
+      ],
+      "reference_note": "游戏官方商店的石桥环境图；角色/战斗高光与远景雾不直接当作稳定照明依据。",
+      "category_notes": {
+        "fidelity": "林桥、残柱、秋色和俯视关系可读；原作的厚重笔触、破损轮廓与远近大形仍未充分复现。",
+        "unity": "扫描岩石/蕨类与自制树草已在色调上协调，细碎扫描纹理和硬三角阔叶之间仍有落差。",
+        "assets": "真实 CC0 双拱桥体与独立下载的工具、岩石、蕨类作基础；地形和缺口构件另制。小样后适配表面与桥面。",
+        "detail": "修石锤、桶、梯与灯旗交代用途，修订增加了桥边空隙；远岸树形重复，残柱砌层偏整齐。",
+        "lighting": "定向修订明显减轻全屏灰黄覆盖，暖桥头和暗水形成焦点；近景石面仍偏亮，树影仍碎。"
+      }
+    },
+    "genshin-impact": {
+      "delivery_status": "初稿已检查 · 待审美校准",
+      "pass_label": "方向初稿 · 自查修正",
+      "captures": {
+        "overall": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/overall.png",
+        "close": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/close.png",
+        "transition": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/transition.png"
+      },
+      "reference_image": "https://img.gamewith.net/img/original_ae97249c1702c53e44d859213d2a93aa.jpg",
+      "reference_source": "https://gamewith.net/genshin-impact/article/show/29531",
+      "reference_note": "补查的 Vahid 同店门面图；人物遮挡台阶、屋脊不全。另用店内对话图判断柜架；活动街景仅补充色彩。",
+      "findings": [
+        "灰青屋檐、靛蓝帘布、深木格门和青紫陶器形成统一门面；接待茶具与左侧装箱台有用途分工。",
+        "屋顶和亮石路占幅较大，檐下较平，缺少参考深檐里的暗部和纵深；石板重复也较明显。",
+        "台布穿插、树枝遮字和招牌缺字已修复；近看陶壶与植物仍有折面，背架货品的高低与间距变化有限。"
+      ],
+      "next": "先校准门面比例与檐下层次，再统一近景器皿/叶片精度，减少石路与陈列的重复。",
+      "asset_notes": [
+        "实际下载 3DAssets.dev Feudal Japan Castle Town 的房屋、前檐、柜架、铺地和器具，网站声明 CC0。",
+        "该资产包页面同时注明 179/179 文件使用 AI（Claude Fable 5.1）；属于已发布的下载资产，不标为人工制作库。",
+        "适配开间、UV、木纹与器皿表面；补制帘布、招牌、部分陶器、枫树和远岸。图案与“潮見屋”店名为本稿设计。"
+      ],
+      "validation": "最终三机位已逐张检查；12 张阶段原图、独立 Git 历史和素材许可均已归档。",
+      "stages": {
+        "sample": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/audition/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/audition/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/audition/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/draft/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/draft/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/draft/transition.png"
+          }
+        },
+        "selected": {
+          "label": "自查修正",
+          "captures": {
+            "overall": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/overall.png",
+            "close": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/close.png",
+            "transition": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/transition.png"
+          }
+        }
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/project.godot"
+        },
+        {
+          "label": "素材与许可",
+          "url": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/ASSETS.md"
+        },
+        {
+          "label": "操作说明",
+          "url": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/README.md"
+        },
+        {
+          "label": "资产包来源与 AI 标注",
+          "url": "https://3dassets.dev/packs/feudal-japan-castle-town"
+        }
+      ],
+      "category_notes": {
+        "fidelity": "门面开间、檐下柜架、陶器与靛蓝布已建立方向；整体更明亮、更整齐，屋檐暗部与门面纵深偏浅。",
+        "unity": "青灰瓦、暗木、靛蓝织物与青紫陶釉协调；陶器/植物折面和较细布纹之间仍有精度落差。",
+        "assets": "实际下载 CC0 日式建筑器具后适配 UV 与开间；上游包明确使用 AI 制作，必须与人工制作素材路线区分。",
+        "detail": "收货台、装箱填料、试茶托盘、货签和植物形成用途关系；背架货品较少，石板与器皿排列重复。",
+        "lighting": "亮街面与檐下冷色可分，但暗部偏浅、格门偏亮；纸灯与柜台的主次关系还可加强。"
+      }
+    }
+  },
+  "review": "当前评价来自协调者对实机图的检查，不是用户美术验收。恶意不息额外做了一次明确反馈辅助修订，其工作量不与其他三个初稿直接视为相同。",
+  "pipeline_findings": [
+    "四组都有主建筑和道具的实际下载与引擎小样；素材族能较快建立统一底子，但不会自动带来原作比例、轮廓和空间层次。",
+    "自查确实修掉了缺色、穿插、遮挡和接线问题；四组仍留下规整重复与纵深不足，说明技术修复不能替代审美校准。",
+    "恶意不息的一次具体反馈改善了水面与光色，但未解决石块/植物大形；可继续验证“先方向初稿 → 图像反馈 → 有限修订”，不能据此宣称它已是最优管线。"
+  ]
+}
