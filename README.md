@@ -2,9 +2,11 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-**最新结果入口：[环境美术成果总览 HTML](docs/multi-style-effort-study.html)。** 汇总 Control、Sable、Hi-Fi Rush、DREDGE 四档 effort 的 16 份两轮结果，可同步切换机位、起点/首轮/终图，并在同页浏览 13 类历史案例。实机图使用仓库相对路径，离线浏览无需打开 Godot；原作参考图需联网。
+**接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意，质量与额度收益尚未实测。
 
-**本 MacBook 的后续运行已停止，下一轮转到新电脑。** [迁移与接续说明](docs/new-machine-handoff.md) 说明如何带走本地 Git 提交、打开保存场景和安装 skill。新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 已整理，尚未实际试跑。当前四档是既有成品局部的续作；三游戏访问检查发现共享 Git 元数据和中性临时工具接触，未发现直接读取其他组美术内容，但不能称为严格隔离。见 [检查范围与边界](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
+**本机历史结果入口：[环境美术成果总览 HTML](docs/multi-style-effort-study.html)。** 汇总 Control、Sable、Hi-Fi Rush、DREDGE 四档 effort 的 16 份两轮结果，可同步切换机位、起点/首轮/终图，并在同页浏览 13 类历史案例。实机图使用仓库相对路径，离线浏览无需打开 Godot；原作参考图需联网。这是本机旧轮次归档，不包含 Mac mini 的 24 组独立矩阵。
+
+**当前 MacBook 继续停止 Godot 运行；后续制作在 Mac mini 接续。** 用户已在 Mac mini 跑过独立矩阵，本次只更新校准与交接规则，不自动重跑。旧四档是既有成品局部的续作，三游戏访问检查发现共享 Git 元数据和中性工具接触，未发现直接读取其他组美术内容，但不能称为严格隔离。见 [旧轮次检查范围](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
 
 当前入口为 **三方向真实素材对比样板**：晴日货运庭院、灰烬庭院、Facility 07。三者沿用同一测试场与观察机位，分别装配门洞、坡道、墙边道具、完整地面和外围远景。原始玩法碰撞不变，新增道具使用简化碰撞。跳台和台阶仍是测试几何，尚未完成全场正式关卡美术。
 
@@ -180,6 +182,8 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 
 | 文档 | 内容 |
 | --- | --- |
+| [项目审美要求](docs/art-direction-memory.md) | 跨机器传递用户偏好、范围和认可状态 |
+| [跨机器接续](docs/new-machine-handoff.md) | 当前任务状态、文档职责、A/B 分工与恢复提示 |
 | [三方向 HTML 对比](docs/direction-comparison.html) | 真实素材重做、同机位图片切换、试玩和编辑方法 |
 | [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |

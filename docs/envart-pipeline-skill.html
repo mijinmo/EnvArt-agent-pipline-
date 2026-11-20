@@ -1,13 +1,30 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EnvArt 管线 · 完整工作流改造</title><style>
 :root{color-scheme:dark}body{margin:0;background:#182126;color:#e5e9e7;font:16px/1.8 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:36px 24px 70px}h1{font-size:38px;line-height:1.3}h2{color:#d3bc8b;font-size:23px;margin-top:34px}a{color:#a4d4df}code{background:#293b40;padding:3px 6px;overflow-wrap:anywhere}.note{padding:14px 20px;border-left:3px solid #d3bc8b;background:#253338}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#253338;padding:15px 20px;border-radius:8px}.card h3{color:#d3bc8b;margin:0;font-size:18px}.card p{font-size:14px;margin-bottom:0}img{display:block;width:100%;border-radius:7px}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0}figcaption{font-size:13px;color:#afc2c5;margin-top:6px}@media(max-width:700px){.flow,.gallery{grid-template-columns:1fr}h1{font-size:30px}}
 table{border-collapse:collapse;width:100%;margin:20px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #425156;padding:12px}th{color:#d3bc8b}.scroll{overflow:auto}.route{padding:18px;border:1px solid #69898a;border-radius:8px}.tag{font-size:13px;color:#afc2c5}nav a{margin-right:16px}li{margin:8px 0}</style></head><body><main>
-<p class="tag">GODOT ENVART · 2026-11-18 · WORKFLOW REVISION 2</p><h1>从参考发现到可编辑场景的完整管线</h1>
-<p>把原先“看参考 → 找素材 → 装配 → 看图修改”的经验流程，改成有明确输入、阶段产出、决策依据和返工路径的环境美术工作流。Agent 执行这套协议，Godot 场景和实机图提供结果；本次改造没有增加通用调度器或自动生成服务。</p>
-<p class="note">本轮已更新 skill、配套执行说明与 Control 案例交接。没有制作新美术或运行新模型；组织方式已落地，质量收益仍待下一次真实制作验证。指定的流程复刻基线仍是 <code>7119a84</code>、<code>b81f512</code>，后续已停止的写实方向不因此重启。</p>
-<p class="note">后续试跑已完成：<a href="control-astra-v2-trial.html">GPT-6.2 astra · Control 局部实机对照与评价</a>。下文保留管线改造时的设计说明和当时状态；一次续作试跑不证明普适效果。</p><nav><a href="#flow">阶段与产出</a><a href="#reference">参考规则</a><a href="#returns">返工路径</a><a href="#records">内容归属</a><a href="#resume">Control 接续</a></nav>
-<p class="note">2026-11-19 补充：<a href="multi-style-effort-study.html">四游戏 effort 与历史成果总览</a>已归档。新增<a href="../skills/godot-envart/references/independent-trials.md">独立试跑规则</a>，区分成品续作与白盒独立制作，要求各组独立 Git 历史、临时目录和输入边界。规则尚未实跑；本 MacBook 停止后续引擎运行，见<a href="new-machine-handoff.md">新电脑接续说明</a>。</p>
-<h2 id="flow">七个阶段，按证据接续</h2>
-<p>阶段是工作责任，不是七次用户确认。简单修订直接进入对应阶段并复用仍有效的决策；只有目标、空间或许可等关键条件缺失时，才向用户集中询问。</p><div class="flow"><section class="card"><h3>01 · 明确任务</h3><p>读白盒和已有成果，确定室内/室外、局部范围、观看距离、围护及保护项。</p><p><strong>产出：</strong>任务入口：做哪里、不能改什么、用哪个场景。</p></section><section class="card"><h3>02 · 寻找并筛选参考</h3><p>按场景类型和空间用途搜索；实际检查图像是否能说明环境，标出遮挡、特效与来源。</p><p><strong>产出：</strong>参考集：主参考、氛围补充、拒绝原因与缺失视角。</p></section><section class="card"><h3>03 · 建立美术方向</h3><p>从参考提炼形体、表面、材质、疏密、活动和光照关系；区分用户要求、观察与实现假设。</p><p><strong>产出：</strong>视觉 brief：选材和制作要遵循的少量关键特征。</p></section><section class="card"><h3>04 · 选材与组合小样</h3><p>查实际免费内容和许可，检查导入，比较主体建筑/表面与相邻 props 的实机小样。</p><p><strong>产出：</strong>素材决策：选中/适配/拒绝、原因、来源与小样图。</p></section><section class="card"><h3>05 · 局部制作</h3><p>先空间、地面和可用灯光，再活动道具组、表面衔接、光影与远近层次；按区域和共享资源修改。</p><p><strong>产出：</strong>可编辑局部：保存场景、改动范围、资源与候选版本。</p></section><section class="card"><h3>06 · 实机评审与返工</h3><p>重开场景，以固定机位看参考贴合、内部一致、细节用途、光影；必要时看邻近角度。</p><p><strong>产出：</strong>新轮次截图、证据对应的问题、返回阶段和复核结果。</p></section><section class="card"><h3>07 · 交付与复用</h3><p>交付工程、对比图、来源与打开方式，更新入口；保留资产适配经验和有范围的用户反馈。</p><p><strong>产出：</strong>可接续交付；用户接受、未完成范围与扩展授权分别记录。</p></section></div><p class="route">任务 → 合格参考 → 视觉方向 → 素材小样 → 局部场景 → 实机评审 → 交付<br>评审不合格时，按原因回到参考、方向、选材或制作。用户反馈继续进入任务约束与问题记录。</p>
+<p class="tag">GODOT ENVART · 2026-11-20 · WORKFLOW REVISION 3</p>
+<h1>带着明确的审美目标制作，再用实机图校准</h1>
+<p>当前流程把用户已确认的审美要求带入参考、选材与制作；第一个能判断方向的局部出图后，校准剩余分歧，再集中细化。需要独立接手时，分工明确为：<strong>A 制作初稿，B 诊断并修改，主 agent 复核；用户最终验收。</strong></p>
+<p class="note">用户已同意这次流程调整；校准与新 agent 接手的实际质量、Codex 额度收益尚未验证。本次只更新规则和文档，不启动本 MacBook 的 Godot，不自动重跑完整 effort 矩阵。</p>
+<p>新主 agent 从<a href="art-direction-memory.md">项目审美要求与验收依据</a>和<a href="new-machine-handoff.md">跨机器交接说明</a>恢复目标，再读<a href="../skills/godot-envart/SKILL.md">仓库 skill</a>及当前任务 brief。已有用户要求不需要重问；不能仅靠流程说明猜测用户的审美尺度。</p>
+<nav><a href="#calibration">何时与用户校准</a><a href="#roles">A / B / 主 agent 分工</a><a href="#flow">完整流程</a><a href="#reference">参考筛选</a><a href="#returns">返工路径</a><a href="#records">文档归属</a><a href="#resume">接续入口</a></nav>
+<h2 id="calibration">第一个实机局部完成后，细节打磨之前</h2>
+<p>方向初稿已经有代表性建筑、地面、主要道具、材质处理和基本照明，能看出它们是否合拍。主 agent 先排除白材质、错误导入、意外遮挡等技术问题，再展示整体、近景和过渡机位。通常一个主方案即可；只有具体取舍难以判断时，才补一个局部变体。</p>
+<div class="scroll"><table><tr><th>校准要弄清什么</th><th>主 agent 怎样处理</th></tr>
+<tr><td>画面中值得保留的特点</td><td>记录对应区域与理由，避免下一轮连同优点一起改掉。</td></tr>
+<tr><td>最影响观感的一两处问题</td><td>区分用户意见与实现假设，优先诊断主造型、空间、材质和光影。</td></tr>
+<tr><td>继续细化还是调整方向</td><td>方向成立就自主细化；主要资产或视觉关系不成立时，返回选材或美术方向。</td></tr></table></div>
+<p>这是一处关键的审美意见采集，不是每轮审批。方向已明确时复用决定继续工作；关键分歧未获回复时保持未决，只推进不依赖该选择的任务。没有回复不能算认可。</p>
+<p>反馈写入当前任务的 brief/review，保留“用户原话 → 实现解释 → 新图验证”的区别。例如用户指出混凝土像灰模，如何控制颗粒、粗糙度和灯光仍是实现假设；用户指出漫画感不足，也不能直接等同于必须增加某个 outline 算法。</p>
+<h2 id="roles">谁制作、谁修改、谁复核</h2>
+<div class="scroll"><table><tr><th>角色</th><th>明确职责</th><th>交付</th></tr>
+<tr><td><strong>A：制作 agent</strong></td><td>找素材、适配和装配，完成方向初稿；常规细化也可继续由 A 完成。</td><td>可编辑场景、实际素材与许可、固定机位图。</td></tr>
+<tr><td><strong>B：接手修改 agent</strong></td><td>授权接手后，先看参考、用户要求与初稿图，独立诊断；再读工程，完成定向修改。</td><td>保留初稿，输出新版场景和同机位图，说明目标与未解决问题。</td></tr>
+<tr><td><strong>主 agent：协调与复核</strong></td><td>准备审美交接，向用户收集关键意见；比较修改前后，检查改善与退步，选择较好版本。</td><td>简洁的前后证据、当前 brief 和下一步。B 的自评不替代这一步。</td></tr>
+<tr><td><strong>用户：方向与验收</strong></td><td>决定审美取舍和最终是否满意。</td><td>明确意见；不承担查导入错误或定位模型故障。</td></tr></table></div>
+<p class="route"><strong>A 做初稿 → 用户在必要处校准 → B 接手改稿（或 A 常规细化）→ 主 agent 对比实图复核 → 用户验收。</strong><br>一次接手默认聚焦最多三个主要视觉问题、做一轮修改。没有改善就保留更好的旧版并记录原因，不无限增加 agent 或 effort。</p>
+<p>同一候选的 A→B 是明确的继承输入。各候选之间仍隔离；所有角色都保留用户要求。若专门比较 A 自改与 B 接手，两路应共享同一初稿、参考、校准意见和修改额度，结果标明是辅助修订。</p>
+<h2 id="flow">完整流程，按证据接续</h2>
+<p>阶段表示工作责任。简单修订直接进入对应阶段并复用有效决策；新方向在代表性实机初稿之后校准真正未决的审美取舍。</p><div class="flow"><section class="card"><h3>01 · 明确任务</h3><p>读白盒和已有成果，确定室内/室外、局部范围、观看距离、围护及保护项。</p><p><strong>产出：</strong>任务入口：做哪里、不能改什么、用哪个场景。</p></section><section class="card"><h3>02 · 寻找并筛选参考</h3><p>按场景类型和空间用途搜索；实际检查图像是否能说明环境，标出遮挡、特效与来源。</p><p><strong>产出：</strong>参考集：主参考、氛围补充、拒绝原因与缺失视角。</p></section><section class="card"><h3>03 · 建立美术方向</h3><p>从参考提炼形体、表面、材质、疏密、活动和光照关系；区分用户要求、观察与实现假设。</p><p><strong>产出：</strong>视觉 brief：选材和制作要遵循的少量关键特征。</p></section><section class="card"><h3>04 · 选材与组合小样</h3><p>查实际免费内容和许可，检查导入，比较主体建筑/表面与相邻 props 的实机小样。</p><p><strong>产出：</strong>素材决策：选中/适配/拒绝、原因、来源与小样图。</p></section><section class="card"><h3>05 · 方向初稿、校准与细化</h3><p>先完成能判断方向的空间、地面、主要道具、材质与灯光；按需与用户校准，再处理活动细节、表面衔接和远近层次。</p><p><strong>产出：</strong>可编辑局部与校准 brief：保存初稿、用户决定、修改目标和新版本。</p></section><section class="card"><h3>06 · 实机评审与返工</h3><p>重开场景，以固定机位看参考贴合、内部一致、细节用途、光影；必要时看邻近角度。</p><p><strong>产出：</strong>新轮次截图、证据对应的问题、返回阶段和复核结果。</p></section><section class="card"><h3>07 · 交付与复用</h3><p>交付工程、对比图、来源与打开方式，更新入口；保留资产适配经验和有范围的用户反馈。</p><p><strong>产出：</strong>可接续交付；用户接受、未完成范围与扩展授权分别记录。</p></section></div><p class="route">任务与已知要求 → 合格参考 → 视觉方向 → 素材小样 → 方向初稿 → 按需校准 → 细化 → 实机复核 → 交付<br>评审不合格时，按原因回到参考、方向、选材或制作。用户反馈继续进入任务约束与问题记录。</p>
 <h2 id="reference">参考图本身也要筛选</h2>
 <p>Agent 自行找图时，优先找能够看清建筑、地面、主要材质、道具关系和空间衔接的实机画面、漫游帧或环境作者拆解。搜索词包含地点、室内/室外和活动类型，而不是只搜游戏名与壁纸。参考不足时先补图，不从遮挡中猜出施工要求。</p>
 <div class="scroll"><table><tr><th>参考角色</th><th>能支持什么</th><th>处理</th></tr><tr><td>环境主参考</td><td>具体空间、形体、材质尺度、道具密度或稳定照明可辨认</td><td>关联到 brief 和后续素材/实机判断；按需要补整体、近景、过渡视角。</td></tr><tr><td>氛围补充</td><td>角色宣发、战斗画面、概念图或强后期可以表达色调与情绪</td><td>明确适用范围，不能单独决定墙体结构、房间连接或常驻灯光。</td></tr><tr><td>当前任务不适用</td><td>环境被遮挡、景深过重、图片太小、空间类型错误、来源/身份无法确认</td><td>替换。只记录影响决策的淘汰理由，不整理所有搜索结果。</td></tr></table></div>
@@ -24,18 +41,16 @@ table{border-collapse:collapse;width:100%;margin:20px 0}th,td{text-align:left;ve
 <tr><td>保存后材质丢失、导入错误</td><td>05 技术修复</td><td>修持久化并重新出图，不因此改艺术目标。</td></tr></table></div>
 <p>每轮处理少数关键问题，明确预期画面改善。失败的候选和旧版都保留；没有改善时换方法或回退，避免长时间叠加无效细节。只检查导入、加载、出图和直接受影响的保护项。</p>
 <h2 id="records">内容归属与阶段交接</h2><div class="scroll"><table><tr><th>已有载体</th><th>负责什么</th><th>更新时机</th></tr>
-<tr><td>ENVIRONMENT / brief</td><td>当前阶段、范围、参考、方向、保护内容、下一步及文件索引</td><td>开始、改变前提、切阶段与交付时；小案例内嵌 brief 即可。</td></tr>
+<tr><td>项目审美要求文档</td><td>跨轮次的用户要求、范围与认可状态；不混入 agent 排名</td><td>用户新增或改变可复用要求时。</td></tr><tr><td>ENVIRONMENT / brief</td><td>当前阶段、范围、参考、校准意见、保留项、修改目标、A/B 分工、下一步与文件索引</td><td>开始、收到反馈、切阶段与交付时；复用现有记录。</td></tr>
 <tr><td>asset manifest</td><td>来源、许可、实际文件、候选取舍、适配与小样证据</td><td>候选产生实质决定时，不复制场景变换。</td></tr>
 <tr><td>review</td><td>画面问题、影响区域/资源、返回路径、修改与新图复核</td><td>实际看图后；修改完成、看图确认和用户接受分开。</td></tr>
 <tr><td>原生场景与资源</td><td>真实对象、材质、灯光、相机，以及手工编辑内容</td><td>按局部保存；构建脚本不能覆盖未知手工修改。</td></tr>
 <tr><td>captures / freeze</td><td>场景版本、相关资源、机位和渲染条件对应的不可覆盖证据</td><td>视觉内容变更后出新图；仅改文字可复用旧图。</td></tr>
 <tr><td>HTML 对比</td><td>给人查看画面、改动与局限</td><td>从当前记录发布，不另造一份独立判断。</td></tr></table></div>
 <p>复核状态：发现问题 → 修改中 → 待出图 → 待看图 → 视觉复核完成。用户接受另记；延期不是解决。已存在但没有历史小样的阶段，标“证据缺失”，不能为了迁移流程补写成已通过。</p>
-<h2>Agent 分工与模型</h2><p>默认一个 Agent 依次承担艺术判断、制作与评审责任。需要且已授权时才委派独立任务，交接明确的区域、保护项、输入和输出，避免共享场景互相覆盖。看图时先形成观察，再看作者自评；用户约束始终提供。</p>
-<p>GPT‑6.2 可以作为后续可用模型选项，实际使用时记录模型与 skill 版本。检验它是否能挑出更合适的参考/素材、发现主要问题并改善实机图，而非因模型新就认定能力更好。UI 操作仅用于确有需要的资产站点或编辑器工作。当前没有运行 6.2 对照试验。</p>
-<h2 id="resume">Control 案例如何接续</h2><p>现有 <code>detail-01</code> 场景和截图保持不变。此次迁移标出旧参考的战斗遮挡风险，把下一步从直接修改墙地面调整为：先补足该室内方向的环境主参考，再确认视觉 brief、做墙地面和邻接家具小样，随后才进入新一轮局部生产。</p>
-<p>这不是重跑全部步骤：门洞净空、白盒保护、已核实素材来源等继续复用；主参考不足所影响的建筑表面推断需重核。案例入口见 <a href="../experiments/whitebox-lighting-study/ENVIRONMENT.md">ENVIRONMENT.md</a>，问题状态见 <a href="../experiments/whitebox-lighting-study/review.json">review.json</a>。</p>
-<h2>执行入口与依据</h2><p><a href="../skills/godot-envart/SKILL.md">完整 skill</a> · <a href="../skills/godot-envart/references/production-loop.md">阶段、记录与返工协议</a> · <a href="../skills/godot-envart/references/reference-selection.md">参考图检索筛选</a> · <a href="../skills/godot-envart/references/art-direction.md">美术方向与装配判断</a> · <a href="rea-video-envart-research.md">rea-video 代码调研依据</a></p>
+<h2>模型与额度</h2><p>模型与 effort 是任务参数，不是艺术质量证明。已有多轮 GPT‑6.2 astra 案例；本机历史四档试验属于成熟局部续作，Mac mini 后续矩阵则从白盒独立制作，不能把终图差异只归因于机器或模型。</p><p>用户关心实际 Codex 使用额度。token 和缓存统计只说明相应记录范围内的工作量，不直接换算额度；协调与评审如果未统计，应明确说明。新 agent 接手是否值得，先以有限的同输入比较验证，不默认把六档扩成多轮接力。</p>
+<h2 id="resume">当前接续与历史案例</h2><p>当前接续看<a href="new-machine-handoff.md">跨机器交接说明</a>与制作机上正在工作的任务记录。本页不指定恢复某个历史 Control 场景，也不自动安排新一轮运行。</p><p>历史成果可浏览<a href="multi-style-effort-study.html">本机四游戏与早期成果总览</a>、<a href="control-astra-v2-trial.html">Control 新管线案例</a>。它们保留当时的实验条件和局限；用户指定的流程提炼基线仍为 <code>7119a84</code>、<code>b81f512</code>。已停止的写实实验不因此重启。</p>
+<h2>执行入口与依据</h2><p><a href="../skills/godot-envart/SKILL.md">完整 skill</a> · <a href="art-direction-memory.md">项目审美要求</a> · <a href="../skills/godot-envart/references/aesthetic-calibration.md">校准与接手修改</a> · <a href="../skills/godot-envart/references/production-loop.md">阶段、记录与返工协议</a> · <a href="../skills/godot-envart/references/reference-selection.md">参考图检索筛选</a> · <a href="../skills/godot-envart/references/art-direction.md">美术方向与装配判断</a> · <a href="rea-video-envart-research.md">rea-video 代码调研依据</a></p>
 <p>借鉴 rea-video 的分层输入、证据来源区分、复核回写后重做计划、制作单位与观察单位分离、可重用且可失效的经验。环境管线保留自己的白盒、可编辑三维场景和多机位约束，不移植其分类投票或视频生成路由。</p>
 <div class="gallery"><figure><img loading="lazy" src="images/directions/ashen/door.png" alt="既有基线：灰烬庭院入口"><figcaption>既有基线示例；不是本次流程改造后的新产出。</figcaption></figure><figure><img loading="lazy" src="images/directions/facility/props.png" alt="既有基线：设施工作区"><figcaption>保留完整地面、活动道具组和素材统一的产出目标。</figcaption></figure></div>
 <p><a href="direction-comparison.html">既有基线对比</a> · <a href="envart-skill-trial.html">旧版 skill 独立试跑（不代表新版已验证）</a> · <a href="../README.md">项目说明</a></p>
