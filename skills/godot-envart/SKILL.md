@@ -13,9 +13,9 @@ Read the assigned task entry (such as `ENVIRONMENT.md`), current scene and permi
 
 The working loop is:
 
-**Scope → reference selection → art direction → asset auditions → local production → engine review → delivery and scoped reuse.**
+**Scope → reference selection → art direction → asset auditions → local direction draft → user calibration when needed → refinement → engine review → delivery and scoped reuse.**
 
-These are decisions and artifacts, not seven approval requests. Advance autonomously within the user's authorized scope. When evidence fails, return to the responsible stage instead of endlessly decorating an unsuitable scene. One agent can perform every role; no orchestration platform or multiple agents is required.
+These are decisions and artifacts, not a sequence of approval requests. Reuse established user decisions and advance autonomously within the authorized scope. When evidence fails, return to the responsible stage instead of endlessly decorating an unsuitable scene. One agent can perform every role; no orchestration platform or multiple agents is required.
 
 ## 1. Establish the job
 
@@ -37,6 +37,8 @@ Read [art-direction.md](references/art-direction.md) for reference interpretatio
 
 Keep user requirements, image observations and implementation hypotheses distinct. Separate permanent environment from characters, UI, combat effects and post-processing. Internal consistency and reference fidelity are separate judgments. Do not silently substitute retro, low-poly or generic realism for the chosen target.
 
+Recover the project's recorded aesthetic requirements and acceptance history from permitted inputs. Carry applicable user decisions into the brief with their scope; a new coordinator must not rely on unstated conversation memory. Do not turn an agent's preferred candidate into user approval. For a new direction, unresolved taste or a substantial style change, read [aesthetic-calibration.md](references/aesthetic-calibration.md).
+
 ## 4. Audition an asset family
 
 Search suitable local/catalogue assets and external sources for the visible architecture and representative props. Cached convenience does not establish suitability. Verify actual downloadable/free contents, commercial-use and redistribution conditions; record sources, authors, chosen files and adaptations, and retain licenses. Use bounded download retries and move to a viable alternative rather than spending the task on one file.
@@ -51,6 +53,8 @@ Plan region/node ownership and dependencies before editing. Reuse the current sa
 
 Establish architecture, ground, thresholds, boundaries and a working light rig early. Build activity-based prop groups with believable supports, scale and access; finish surface transitions and selective wear, then refine light and depth. Evaluate materials under actual lighting throughout production. Procedural work fills suitable gaps such as distribution or background terrain; it does not bypass main-asset selection.
 
+Make the first local draft representative enough to judge form, material and lighting together. Where direction still needs user calibration, present that saved-engine draft before spending the allowance on decorative detail. Follow [aesthetic-calibration.md](references/aesthetic-calibration.md) to capture useful feedback, preserve settled decisions and translate it into visible revision targets. Known technical defects remain the agent's responsibility.
+
 Work by region/shared resource, not independently per screenshot. Preserve module proportions and texture density. Vary function, state and grouping rather than grid-repeating boxes. When resizing vegetation, reassess coverage as well as blade scale. For a lighting-focused iteration read [lighting-review.md](references/lighting-review.md).
 
 When a distinctive reference calls for stylized rendering, a dedicated shader is an allowed production tool. Use [stylized-shading.md](references/stylized-shading.md) to identify the visual mechanism, audition it on real assets, preserve material roles and compare against a fair same-scene control. Shader work supplements suitable geometry and dressing; it does not replace their selection.
@@ -60,6 +64,8 @@ When a distinctive reference calls for stylized rendering, a dedicated shader is
 Save and reopen the scene before capture. Use stable overall, transition and close views as relevant, plus a nearby angle when contact, geometry or traversal visibility is uncertain. Freeze submitted passes and write new images to a new directory. Generated illustrations and retouched screenshots cannot prove an editable 3D result.
 
 Look at the images before inheriting prior agent conclusions. Review reference fidelity, asset-family consistency, detail/activity, and lighting; keep technical validity and user acceptance separate. Identify the few largest visual failures, record evidence and affected regions/cameras, and choose a return path using [production-loop.md](references/production-loop.md). Mark edits as awaiting visual review until new images have actually been inspected. If a revision adds complexity without improving the target, retain the better pass and change approach.
+
+When a fresh-agent revision is authorized, use the A/B/coordinator handoff in [aesthetic-calibration.md](references/aesthetic-calibration.md): A makes the draft, B independently diagnoses then edits, and the coordinator compares the saved before/after evidence. Share the calibrated user requirements throughout. Independent review must influence the next edit when improvement is the task; a final ranking alone does not revise the scene.
 
 Only validate importing, loading, actual rendering and constraints directly affected by the change. Do not create controllers, general regression suites, review UI or benchmarks for an art task. Consult [godot-delivery.md](references/godot-delivery.md) for concrete assembly/capture traps.
 

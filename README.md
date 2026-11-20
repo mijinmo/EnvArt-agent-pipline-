@@ -2,9 +2,11 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
+**接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意，质量与额度收益尚未实测；这次同步不自动启动下一轮制作。
+
 **最新结果入口：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。** 24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
 
-**2026-11-20 已在新电脑实际完成 GPT-6.2 Astra 全六档试跑。** [正式协议、工程与审计](experiments/gpt62-independent-matrix-20261120/README.md) 保留一致输入、独立历史和受限读取的证据及限制；[Control 单组预检](experiments/independent-control-20261120/README.md) 不计排名。原 MacBook 的停止运行约定仍保留，远程接续见 [Termius / CLI 说明](docs/new-machine-handoff.md)。本轮按新版 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 执行，但小样、自查方式等仍有已披露的遵循缺口，不代表质量验收。
+**2026-11-20 已在 Mac mini 实际完成 GPT-6.2 Astra 全六档试跑。** [正式协议、工程与审计](experiments/gpt62-independent-matrix-20261120/README.md) 保留一致输入、独立历史和受限读取的证据及限制；[Control 单组预检](experiments/independent-control-20261120/README.md) 不计排名。原 MacBook 的停止运行约定仍保留，远程接续见 [Termius / CLI 说明](docs/new-machine-handoff.md)。本轮按当时的 [独立试跑规则](skills/godot-envart/references/independent-trials.md) 执行，但小样、自查方式等仍有已披露的遵循缺口，不代表质量验收，也没有验证随后新增的审美校准/接手流程。
 
 [旧轮次成果总览](docs/multi-style-effort-study.html) 保留四档 16 份既有成品续作和 13 类历史案例。旧轮次不能称为从白盒独立制作；其共享 Git 元数据与中性工具接触的范围见 [旧访问检查](experiments/multi-style-effort-study/ISOLATION-AUDIT.md)。
 
@@ -182,6 +184,8 @@ GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot
 
 | 文档 | 内容 |
 | --- | --- |
+| [项目审美要求](docs/art-direction-memory.md) | 跨机器传递用户偏好、范围和认可状态 |
+| [跨机器接续](docs/new-machine-handoff.md) | 当前任务状态、文档职责、A/B 分工与恢复提示 |
 | [三方向 HTML 对比](docs/direction-comparison.html) | 真实素材重做、同机位图片切换、试玩和编辑方法 |
 | [EnvArt 首轮 HTML 案例](docs/envart-case-study.html) | 同机位对比、场景使用、素材来源和人形角色安装 |
 | [管线目标与基础约定](docs/pipeline-foundation.md) | 输入语义、设计保护、资产策略、模块边界和实施阶段 |

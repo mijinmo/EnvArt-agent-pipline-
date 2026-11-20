@@ -10,7 +10,9 @@ Use for new jobs, resuming a case, or deciding where a failed visual pass should
 | References | Search/select exact images for the target area; inspect environment visibility and provenance | Qualified reference set with roles, observations, gaps and rejected choices | Environment evidence supports the intended study. Replace character/effect-dominated images or missing views before extracting architectural requirements. |
 | Direction | Interpret reference relationships under whitebox constraints | Compact brief with visual anchors, activity/light intent, tolerable adaptations and uncertainties | There is a concrete basis for choosing assets. Resolve conflicting anchors or revise an unsupported inference. |
 | Auditions | Search families, check actual license/files, import, adapt and render representative combinations | Candidate decisions in the manifest, source assets, small engine samples | Main form, surface scale and neighboring props work together. Reject unsuitable assets early; escalate a style/scope change to the user rather than silently lowering the target. |
-| Production | Chosen family and brief; architecture/ground, activity groups, materials, light and depth | Saved editable local scene; focused change note and current resource links | The slice can be assessed across its intended views. Missing main content remains unfinished, not hidden by a crop. |
+| Production / direction draft | Chosen family and brief; representative architecture/ground, major props, materials and basic light | Saved editable draft and fixed-view engine images | The visual direction can be judged as a whole. Fix technical presentation defects before asking about taste. |
+| User calibration, when needed | Draft, qualified references, established user requirements and remaining ambiguity | Scoped user decisions and observable revision targets in the existing brief | Direction is sufficiently clear to refine. Reuse existing decisions; keep consequential unanswered preferences pending. |
+| Production / refinement | Calibrated or already-established brief; bounded asset, composition, material and light revisions | New saved pass and concise changes, preserving the draft | The requested visual problems have new evidence for review; route unsuitable main assets back to auditions. |
 | Review | Reopened scene, fixed cameras, reference set, user constraints | New frozen captures and evidence-linked issues/verdict | Visible deficiencies are resolved or explicitly left open. Route each failure to its cause; no automatic acceptance from a technical check. |
 | Delivery / reuse | Reviewed working pass, provenance, remaining gaps | Human comparison, compact agent entry, scene/version links, scoped lessons | User can inspect/edit the result and resume it. User acceptance and authorization to expand are explicit, distinct from agent review. |
 
@@ -18,9 +20,11 @@ Lighting is part of direction, auditions and production, with a dedicated review
 
 ## Roles, without requiring more agents
 
-A single agent normally switches between art direction (reference interpretation and family choices), production (bounded scene edits) and review (image-based diagnosis). User decisions set the target and acceptance. Keeping these responsibilities distinct prevents the author from treating completed effort as proof of quality.
+A single agent can switch between art direction (reference interpretation and family choices), production (bounded scene edits) and review (image-based diagnosis). User decisions set the target and acceptance. Recover the project's recorded aesthetic requirements when starting or transferring a job; a procedural skill alone does not carry the user's taste.
 
 If separate agents are explicitly authorized, hand off only the relevant brief, scene/region, protected content, candidate/raw assets and evidence paths. Require findings and editable output to return to the same task records. A reviewer should see images and constraints before the author's self-score; user feedback must never be hidden. Parallel output is not permission to overwrite shared scenes. Model choice is a run detail, not an architectural dependency; use available models and record the actual choice rather than a guessed marketing name.
+
+For calibration and fresh-agent editing use [aesthetic-calibration.md](aesthetic-calibration.md): A produces, B independently diagnoses then edits, and the coordinator reviews the before/after result. Calibrate the representative draft before costly detail work when the direction remains uncertain; established directions do not need repeated approval. Do not leave useful independent review as a final ranking when the authorized task is to improve the scene.
 
 ## Keep a small set of authoritative records
 
@@ -29,7 +33,7 @@ Reuse existing names; the following are responsibilities, not a mandatory new sc
 | Record | Authority and minimum useful contents | Not its job |
 | --- | --- | --- |
 | `ENVIRONMENT.md` or existing job entry | Current scope/stage; source and working scene; protected ownership; brief/reference links; selected pass; next action and affected views | Copy every object transform, all history or the entire issue list |
-| Reference/brief section in the entry (separate file only if needed) | Exact images/sources and evidence roles; observed anchors; user constraints; open hypotheses | Assert hidden geometry or permanent lights from obscured promotional shots |
+| Reference/brief section in the entry (separate file only if needed) | Exact images/sources and evidence roles; observed anchors; scoped user constraints/calibration, retained features, open hypotheses and visible revision targets | Assert hidden geometry or permanent lights; treat proposed interpretations as user decisions |
 | Existing asset manifest | Actual sources/files/license; representative dimensions/variants; selected/rejected/adapt decisions and sample evidence | Treat a download as visual acceptance; generate a duplicate scene graph |
 | Existing review record | Issue, evidence/region, impact, proposed action, affected resources/views, status; changes and new proof when they exist | Convert agent suggestions into user requirements or issue scores into approval |
 | Saved scene and resources | Actual geometry, transforms, materials, light and cameras; explicit authored/manual ownership | Be silently rebuilt from stale code after manual edits |
