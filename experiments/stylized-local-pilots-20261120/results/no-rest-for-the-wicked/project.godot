@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EnvArt_32419b1471bd"
-run/main_scene="res://draft.tscn"
+run/main_scene="res://revised.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [display]

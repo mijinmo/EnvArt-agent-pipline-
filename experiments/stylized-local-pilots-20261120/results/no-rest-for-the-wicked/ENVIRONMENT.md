@@ -35,4 +35,4 @@ Python /Library/Developer/CommandLineTools/usr/bin/python3；Blender /Applicatio
 
 ## 本局部交付状态
 
-代表性初稿与明确缺陷修复已提交。当前 F5 场景为 [draft.tscn](draft.tscn)，[修复后三机位](captures/repair/) 与 [初稿原图](captures/draft/) 均已保留。状态为 `awaiting_user_calibration`，详见 [REVIEW.md](REVIEW.md)。
+当前 F5 入口是 [revised.tscn](revised.tscn)，冻结初稿仍可从 [draft.tscn](draft.tscn) 打开。根据本组实图反馈，本次限定修订处理了连续浅金水带、均匀灰黄覆盖与桥头焦点不足。总览与过渡图中北端残柱、木桶、灯旗已有连贯暖光，水岸保持较暗。近看浅石偏亮、水纹偏柔，远岸仍有碎影。状态为 `awaiting_user_calibration`。[修订前三机位](captures/repair/) · [修订后三机位](captures/revised/) · [初稿原图](captures/draft/) · [自查记录](REVIEW.md)
