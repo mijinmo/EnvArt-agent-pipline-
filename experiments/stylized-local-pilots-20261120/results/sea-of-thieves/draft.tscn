@@ -1,0 +1,745 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="R1"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/ashlar_west.gltf" id="R2"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/ashlar_east.gltf" id="R3"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/strapped_door.gltf" id="R4"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/floor_tile_large.gltf" id="R5"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/floor_wood_large.gltf" id="R6"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/shelf_large.gltf" id="R7"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/keg.gltf" id="R8"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/barrel_large.gltf" id="R9"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/braced_case.gltf" id="R10"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/rack_upright.gltf" id="R11"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/ship_lantern.gltf" id="R12"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/bonded_stores_sign.gltf" id="R13"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/keg_herring.gltf" id="R14"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/barrel_small_stack.gltf" id="R15"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/smoked_bottle_A_labeled_green.gltf" id="R16"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/smoked_bottle_C_brown.gltf" id="R17"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/open_measure.gltf" id="R18"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/tasting_cup.gltf" id="R19"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/barrel_small.gltf" id="R20"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/tally_table.gltf" id="R21"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/cargo_tally.gltf" id="R22"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/stool.gltf" id="R23"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/laid_hemp.gltf" id="R24"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/worn_sill.gltf" id="R25"]
+
+[ext_resource type="PackedScene" path="res://assets/painted/keys_on_peg.gltf" id="R26"]
+
+[sub_resource type="Environment" id="CellarAir"]
+background_mode = 1
+background_color = Color(0.08, 0.10, 0.16, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.52, 0.61, 0.89, 1)
+ambient_light_energy = 0.39
+tonemap_mode = 2
+tonemap_white = 3.5
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 2.2
+glow_enabled = true
+glow_intensity = 0.35
+
+[sub_resource type="BoxShape3D" id="WalkingSurfaceShape"]
+size = Vector3(10, 0.25, 10.1)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(6.4, 3.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="DoorWallShape"]
+size = Vector3(4, 3.8, 0.85)
+
+[sub_resource type="BoxShape3D" id="WestWallShape"]
+size = Vector3(0.8, 3.8, 9.9)
+
+[sub_resource type="BoxShape3D" id="EastWallShape"]
+size = Vector3(0.8, 3.8, 6.6)
+
+[sub_resource type="BoxShape3D" id="EntryWallShape"]
+size = Vector3(9.6, 3.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="RacksShape"]
+size = Vector3(5.44, 3.5, 0.86)
+
+[sub_resource type="BoxShape3D" id="TallyTableShape"]
+size = Vector3(1.67, 0.88, 0.82)
+
+[sub_resource type="BoxShape3D" id="BenchStoolShape"]
+size = Vector3(0.57, 0.42, 0.56)
+
+[sub_resource type="BoxShape3D" id="LandedCargoShape"]
+size = Vector3(1.58, 1.34, 2.42)
+
+[sub_resource type="BoxShape3D" id="TallTunShape"]
+size = Vector3(0.99, 1.24, 0.99)
+
+[sub_resource type="BoxShape3D" id="LineChestShape"]
+size = Vector3(1.23, 1, 0.98)
+
+[sub_resource type="BoxShape3D" id="SpareCasksShape"]
+size = Vector3(1.02, 1.24, 1.9)
+
+[node name="MerrickCellar" type="Node3D"]
+
+
+[node name="Inspection" parent="." instance=ExtResource("R1")]
+
+
+[node name="Masonry" type="Node3D" parent="."]
+
+
+[node name="Deckhead" type="Node3D" parent="."]
+
+
+[node name="Stores" type="Node3D" parent="."]
+
+
+[node name="Handling" type="Node3D" parent="."]
+
+
+[node name="Lighting" type="Node3D" parent="."]
+
+
+[node name="Contact" type="Node3D" parent="."]
+
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("CellarAir")
+
+[node name="Wall1" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-3.05, -0.04, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="WallCracked1" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(0.15, -0.04, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="WallDoorway1" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(3.165, -0.04, -2.385)
+rotation_degrees = Vector3(0, -45, 0)
+scale = Vector3(1, 0.96, 0.85)
+
+[node name="Wall2" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-4.66, -0.04, -2.15)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="WallCracked2" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(-4.66, -0.04, 1.15)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall3" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-4.66, -0.04, 4.45)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall4" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(4.58, -0.04, 0.68)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall5" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(4.58, -0.04, 3.98)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall6" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-3.05, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="Wall7" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(0.15, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="Wall8" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(3.35, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="FloorTileLarge1" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, -2.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge1" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge2" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, 0.88)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge2" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge3" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, 4.08)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge3" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge4" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, -2.32)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge4" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge5" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, 0.88)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge5" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge6" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, 4.08)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge6" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge7" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, -2.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge7" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge8" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, 0.88)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge8" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge9" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, 4.08)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge9" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="WalkingSurface" type="StaticBody3D" parent="Contact"]
+position = Vector3(0, -0.125, 0.65)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/WalkingSurface"]
+shape = SubResource("WalkingSurfaceShape")
+
+[node name="BackWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(-1.45, 1.86, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="DoorWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(3.165, 1.86, -2.385)
+rotation_degrees = Vector3(0, -45, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/DoorWall"]
+shape = SubResource("DoorWallShape")
+
+[node name="WestWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(-4.66, 1.86, 1.14)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/WestWall"]
+shape = SubResource("WestWallShape")
+
+[node name="EastWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(4.58, 1.86, 2.35)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/EastWall"]
+shape = SubResource("EastWallShape")
+
+[node name="EntryWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(0, 1.86, 5.65)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/EntryWall"]
+shape = SubResource("EntryWallShape")
+
+[node name="CargoLantern" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-1.52, 2.40, -1.75)
+light_color = Color(1.0, 0.73, 0.43, 1)
+light_energy = 4.6
+omni_range = 7.5
+omni_attenuation = 1.20
+shadow_enabled = true
+light_size = 0.0
+
+[node name="CoolStairLight" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-2.8, 2.9, 2.3)
+light_color = Color(0.38, 0.60, 0.96, 1)
+light_energy = 3.4
+omni_range = 8
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="DoorBounce" type="OmniLight3D" parent="Lighting"]
+position = Vector3(3.2, 1.5, -0.28)
+light_color = Color(0.88, 0.58, 0.39, 1)
+light_energy = 1.1
+omni_range = 4.4
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="ReflectedLamplight" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-0.3, 0.95, -0.6)
+light_color = Color(1, 0.69, 0.50, 1)
+light_energy = 0.65
+omni_range = 4
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="ShelfLarge1" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-2.77, 1.08, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge2" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-2.77, 2.27, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge3" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-0.12, 1.08, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge4" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-0.12, 2.27, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="Keg1" parent="Stores" instance=ExtResource("R8")]
+position = Vector3(-0.56, 1.18, -2.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.47, 0.47, 0.47)
+
+[node name="BarrelLarge1" parent="Stores" instance=ExtResource("R9")]
+position = Vector3(0.47, 0.014, -2.75)
+rotation_degrees = Vector3(0, -16, 0)
+scale = Vector3(0.57, 0.57, 0.57)
+
+[node name="BracedCase1" parent="Stores" instance=ExtResource("R10")]
+position = Vector3(-2.63, 0.005, -2.66)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(0.69, 0.6, 0.64)
+
+[node name="RackUpright1" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-4.03, 0.005, -2.61)
+rotation_degrees = Vector3(0.652183, 136.975, 0)
+scale = Vector3(0.85, 1.23467, 0.954545)
+
+[node name="RackUpright2" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-4.03, 0.005, -3.28)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.6, 1.25514, 0.818182)
+
+[node name="RackUpright3" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-1.445, 0.005, -2.61)
+rotation_degrees = Vector3(0.620634, -140.194, 0)
+scale = Vector3(0.85, 1.23466, 0.954545)
+
+[node name="RackUpright4" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-1.445, 0.005, -3.28)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.6, 1.25514, 0.818182)
+
+[node name="RackUpright5" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(1.19, 0.005, -2.61)
+rotation_degrees = Vector3(0.556025, 149.036, 0)
+scale = Vector3(0.85, 1.23465, 0.954545)
+
+[node name="RackUpright6" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(1.19, 0.005, -3.28)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.6, 1.25514, 0.818182)
+
+[node name="RackUpright7" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-4.17, 3.59, -2.58)
+rotation_degrees = Vector3(90, 90, 0)
+scale = Vector3(1.1, 1.89726, 1.09091)
+
+[node name="RackUpright8" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-4.17, 3.59, -3.26)
+rotation_degrees = Vector3(90, 90, 0)
+scale = Vector3(1.1, 1.89726, 1.09091)
+
+[node name="RackUpright9" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-4.02, 2.98, -2.64)
+rotation_degrees = Vector3(46.6366, 180, 0)
+scale = Vector3(0.65, 0.254372, 0.636364)
+
+[node name="RackUpright10" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(1.17, 2.98, -2.64)
+rotation_degrees = Vector3(46.6366, 180, 0)
+scale = Vector3(0.65, 0.254372, 0.636364)
+
+[node name="RackUpright11" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.36, 3.67, -1.96)
+rotation_degrees = Vector3(90, 90, 0)
+scale = Vector3(1.4, 2.96233, 1.5)
+
+[node name="RackUpright12" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.22, 2.97, -1.96)
+rotation_degrees = Vector3(46.3532, 90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="RackUpright13" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(4.15, 2.97, -1.96)
+rotation_degrees = Vector3(46.3532, -90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="RackUpright14" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.36, 3.67, 1.64)
+rotation_degrees = Vector3(90, 90, 0)
+scale = Vector3(1.4, 2.96233, 1.5)
+
+[node name="RackUpright15" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.22, 2.97, 1.64)
+rotation_degrees = Vector3(46.3532, 90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="RackUpright16" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(4.15, 2.97, 1.64)
+rotation_degrees = Vector3(46.3532, -90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="RackUpright17" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.36, 3.67, 4.06)
+rotation_degrees = Vector3(90, 90, 0)
+scale = Vector3(1.4, 2.96233, 1.5)
+
+[node name="RackUpright18" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(-4.22, 2.97, 4.06)
+rotation_degrees = Vector3(46.3532, 90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="RackUpright19" parent="Deckhead" instance=ExtResource("R11")]
+position = Vector3(4.15, 2.97, 4.06)
+rotation_degrees = Vector3(46.3532, -90, 0)
+scale = Vector3(0.8, 0.307629, 1.04545)
+
+[node name="StoresLantern" parent="Lighting" instance=ExtResource("R12")]
+position = Vector3(-1.53, 2.48, -1.96)
+rotation_degrees = Vector3(0, -7, 0)
+scale = Vector3(1.09, 1.09, 1.09)
+
+[node name="CooperageBoard" parent="Stores" instance=ExtResource("R13")]
+position = Vector3(-2.73, 3.25, -2.60)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(1.05, 1.05, 1.05)
+
+[node name="RackUpright20" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-3.62, 3.41, -2.60)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.175, 0.0821918, 0.159091)
+
+[node name="RackUpright21" parent="Stores" instance=ExtResource("R11")]
+position = Vector3(-1.84, 3.41, -2.60)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.175, 0.0821918, 0.159091)
+
+[node name="BrineCask" parent="Stores" instance=ExtResource("R14")]
+position = Vector3(0.46, 1.18, -2.98)
+rotation_degrees = Vector3(0, -6, 0)
+scale = Vector3(0.445, 0.445, 0.445)
+
+[node name="UpperBlueCask" parent="Stores" instance=ExtResource("R14")]
+position = Vector3(-0.79, 2.37, -2.98)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(0.515, 0.515, 0.515)
+
+[node name="UpperRedCask" parent="Stores" instance=ExtResource("R8")]
+position = Vector3(0.3, 2.37, -2.99)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(0.51, 0.51, 0.51)
+
+[node name="BracedCase2" parent="Stores" instance=ExtResource("R10")]
+position = Vector3(-3.37, 2.37, -2.99)
+rotation_degrees = Vector3(0, 3, 0)
+scale = Vector3(0.58, 0.44, 0.52)
+
+[node name="BracedCase3" parent="Stores" instance=ExtResource("R10")]
+position = Vector3(-2.42, 2.37, -3)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(0.57, 0.43, 0.5)
+
+[node name="BarrelSmallStack1" parent="Stores" instance=ExtResource("R15")]
+position = Vector3(-3.63, 1.18, -2.98)
+rotation_degrees = Vector3(0, 2, 0)
+scale = Vector3(0.52, 0.52, 0.52)
+
+[node name="BottleALabeledGreen1" parent="Stores" instance=ExtResource("R16")]
+position = Vector3(-2.83, 1.18, -3.06)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(0.57, 0.57, 0.57)
+
+[node name="BottleCBrown1" parent="Stores" instance=ExtResource("R17")]
+position = Vector3(-2.51, 1.18, -3.11)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(0.53, 0.53, 0.53)
+
+[node name="BottleALabeledGreen2" parent="Stores" instance=ExtResource("R16")]
+position = Vector3(-2.68, 1.18, -2.78)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(0.42, 0.42, 0.42)
+
+[node name="BottleCBrown2" parent="Stores" instance=ExtResource("R17")]
+position = Vector3(-2.22, 1.18, -3.09)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.53, 0.53, 0.53)
+
+[node name="MeasuringJug1" parent="Stores" instance=ExtResource("R18")]
+position = Vector3(-1.99, 1.18, -2.79)
+rotation_degrees = Vector3(0, -33, 0)
+scale = Vector3(1.02, 1.02, 1.02)
+
+[node name="TastingCup1" parent="Stores" instance=ExtResource("R19")]
+position = Vector3(-2.21, 1.18, -2.73)
+rotation_degrees = Vector3(0, 25, 0)
+scale = Vector3(1.17, 1.17, 1.17)
+
+[node name="KegHerring3" parent="Stores" instance=ExtResource("R14")]
+position = Vector3(-3.63, 0.003, -2.85)
+rotation_degrees = Vector3(0, 9, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="BracedCase4" parent="Stores" instance=ExtResource("R10")]
+position = Vector3(-1.84, 0.006, -2.95)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(0.43, 0.57, 0.48)
+
+[node name="BarrelSmall1" parent="Stores" instance=ExtResource("R20")]
+position = Vector3(-0.74, 0.007, -2.88)
+rotation_degrees = Vector3(0, -11, 0)
+scale = Vector3(0.85, 0.85, 0.85)
+
+[node name="BarrelSmall2" parent="Stores" instance=ExtResource("R20")]
+position = Vector3(-0.04, 0.006, -2.95)
+rotation_degrees = Vector3(0, 4, 0)
+scale = Vector3(0.66, 0.66, 0.66)
+
+[node name="TallyBench" parent="Handling" instance=ExtResource("R21")]
+position = Vector3(0.77, 0.002, -1.64)
+rotation_degrees = Vector3(0, -7, 0)
+scale = Vector3(1.68, 0.89, 0.82)
+
+[node name="Measure" parent="Handling" instance=ExtResource("R18")]
+position = Vector3(0.41, 0.896, -1.69)
+rotation_degrees = Vector3(0, 18, 0)
+scale = Vector3(1.24, 1.24, 1.24)
+
+[node name="MeasureCup" parent="Handling" instance=ExtResource("R19")]
+position = Vector3(0.79, 0.897, -1.53)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(1.22, 1.22, 1.22)
+
+[node name="Receipts" parent="Handling" instance=ExtResource("R22")]
+position = Vector3(1.24, 0.895, -1.57)
+rotation_degrees = Vector3(0, 14, 0)
+scale = Vector3(1.16, 1.16, 1.16)
+
+[node name="BottleOfSample" parent="Handling" instance=ExtResource("R17")]
+position = Vector3(0.99, 0.896, -1.91)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="TastersStool" parent="Handling" instance=ExtResource("R23")]
+position = Vector3(1.38, 0.008, -0.95)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.88, 0.88, 0.88)
+
+[node name="RopeCase" parent="Handling" instance=ExtResource("R10")]
+position = Vector3(-3.15, 0.002, -1.67)
+rotation_degrees = Vector3(0, -11, 0)
+scale = Vector3(0.91, 0.49, 0.62)
+
+[node name="RopeOnIncomingCase" parent="Handling" instance=ExtResource("R24")]
+position = Vector3(-3.11, 0.742, -1.66)
+rotation_degrees = Vector3(0, 13, 0)
+scale = Vector3(1.05, 1.05, 1.05)
+
+[node name="LandedCase" parent="Handling" instance=ExtResource("R10")]
+position = Vector3(-3.81, 0.003, -0.59)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(0.59, 0.55, 0.58)
+
+[node name="TopCase" parent="Handling" instance=ExtResource("R10")]
+position = Vector3(-3.82, 0.83, -0.59)
+rotation_degrees = Vector3(0, -5, 0)
+scale = Vector3(0.47, 0.37, 0.49)
+
+[node name="TallShippingCask" parent="Handling" instance=ExtResource("R9")]
+position = Vector3(-2.25, 0.005, -1.72)
+rotation_degrees = Vector3(0, 17, 0)
+scale = Vector3(0.62, 0.62, 0.62)
+
+[node name="SmallShippingCask" parent="Handling" instance=ExtResource("R20")]
+position = Vector3(-3.74, 0.004, 0.36)
+rotation_degrees = Vector3(0, -21, 0)
+scale = Vector3(0.78, 0.78, 0.78)
+
+[node name="LinesChest" parent="Handling" instance=ExtResource("R10")]
+position = Vector3(-2.96, 0.005, 1.56)
+rotation_degrees = Vector3(0, 9, 0)
+scale = Vector3(0.82, 0.66, 0.65)
+
+[node name="ReserveCoil" parent="Handling" instance=ExtResource("R24")]
+position = Vector3(-2.97, 1.003, 1.54)
+rotation_degrees = Vector3(0, -35, 0)
+scale = Vector3(1.15, 1.15, 1.15)
+
+[node name="EmptyTun" parent="Handling" instance=ExtResource("R9")]
+position = Vector3(3.7, 0.006, 0.77)
+rotation_degrees = Vector3(0, 18, 0)
+scale = Vector3(0.6, 0.6, 0.6)
+
+[node name="WaitingBarrel" parent="Handling" instance=ExtResource("R20")]
+position = Vector3(3.78, 0.005, 1.63)
+rotation_degrees = Vector3(0, -10, 0)
+scale = Vector3(0.7, 0.7, 0.7)
+
+[node name="RackUpright22" parent="Handling" instance=ExtResource("R11")]
+position = Vector3(3.61, 0.006, 2.12)
+rotation_degrees = Vector3(15.8235, 91.1935, 0)
+scale = Vector3(0.95, 0.602986, 0.454545)
+
+[node name="RackUpright23" parent="Handling" instance=ExtResource("R11")]
+position = Vector3(3.61, 0.006, 2.315)
+rotation_degrees = Vector3(14.5913, 90.5968, 0)
+scale = Vector3(0.95, 0.652553, 0.454545)
+
+[node name="RackUpright24" parent="Handling" instance=ExtResource("R11")]
+position = Vector3(3.61, 0.006, 2.51)
+rotation_degrees = Vector3(13.5349, 90, 0)
+scale = Vector3(0.95, 0.702383, 0.454545)
+
+[node name="RackUpright25" parent="Handling" instance=ExtResource("R11")]
+position = Vector3(3.61, 0.006, 2.705)
+rotation_degrees = Vector3(15.8211, 89.4032, 0)
+scale = Vector3(0.95, 0.602979, 0.454545)
+
+[node name="DoorThreshold" parent="Masonry" instance=ExtResource("R25")]
+position = Vector3(2.84, 0.002, -2.06)
+rotation_degrees = Vector3(0, -45, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="CellarKeys" parent="Stores" instance=ExtResource("R26")]
+position = Vector3(1.47, 2.07, -3.22)
+rotation_degrees = Vector3(0, 3, 0)
+scale = Vector3(0.41, 0.41, 0.41)
+
+[node name="Racks" type="StaticBody3D" parent="Contact"]
+position = Vector3(-1.45, 1.74, -2.98)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/Racks"]
+shape = SubResource("RacksShape")
+
+[node name="TallyTable" type="StaticBody3D" parent="Contact"]
+position = Vector3(0.77, 0.44, -1.64)
+rotation_degrees = Vector3(0, -7, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/TallyTable"]
+shape = SubResource("TallyTableShape")
+
+[node name="BenchStool" type="StaticBody3D" parent="Contact"]
+position = Vector3(1.38, 0.21, -0.95)
+rotation_degrees = Vector3(0, 12, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/BenchStool"]
+shape = SubResource("BenchStoolShape")
+
+[node name="LandedCargo" type="StaticBody3D" parent="Contact"]
+position = Vector3(-3.37, 0.67, -1.35)
+rotation_degrees = Vector3(0, -2, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/LandedCargo"]
+shape = SubResource("LandedCargoShape")
+
+[node name="TallTun" type="StaticBody3D" parent="Contact"]
+position = Vector3(-2.25, 0.62, -1.72)
+rotation_degrees = Vector3(0, 17, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/TallTun"]
+shape = SubResource("TallTunShape")
+
+[node name="LineChest" type="StaticBody3D" parent="Contact"]
+position = Vector3(-2.96, 0.5, 1.56)
+rotation_degrees = Vector3(0, 9, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/LineChest"]
+shape = SubResource("LineChestShape")
+
+[node name="SpareCasks" type="StaticBody3D" parent="Contact"]
+position = Vector3(3.71, 0.62, 1.1)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/SpareCasks"]
+shape = SubResource("SpareCasksShape")

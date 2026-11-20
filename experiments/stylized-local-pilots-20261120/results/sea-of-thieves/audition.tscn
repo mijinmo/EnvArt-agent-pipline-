@@ -1,0 +1,338 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="R1"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/wall.gltf" id="R2"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/wall_cracked.gltf" id="R3"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/wall_doorway.gltf" id="R4"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/floor_tile_large.gltf" id="R5"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/floor_wood_large.gltf" id="R6"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/shelf_large.gltf" id="R7"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/keg.gltf" id="R8"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/barrel_large.gltf" id="R9"]
+
+[ext_resource type="PackedScene" path="res://assets/kaykit/box_large.gltf" id="R10"]
+
+[sub_resource type="Environment" id="CellarAir"]
+background_mode = 1
+background_color = Color(0.08, 0.10, 0.16, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.62, 0.68, 0.88, 1)
+ambient_light_energy = 0.46
+tonemap_mode = 2
+tonemap_white = 3.5
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 2.2
+glow_enabled = true
+glow_intensity = 0.35
+
+[sub_resource type="BoxShape3D" id="WalkingSurfaceShape"]
+size = Vector3(10, 0.25, 10.1)
+
+[sub_resource type="BoxShape3D" id="BackWallShape"]
+size = Vector3(6.4, 3.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="DoorWallShape"]
+size = Vector3(4, 3.8, 0.85)
+
+[sub_resource type="BoxShape3D" id="WestWallShape"]
+size = Vector3(0.8, 3.8, 9.9)
+
+[sub_resource type="BoxShape3D" id="EastWallShape"]
+size = Vector3(0.8, 3.8, 6.6)
+
+[sub_resource type="BoxShape3D" id="EntryWallShape"]
+size = Vector3(9.6, 3.8, 0.8)
+
+[node name="MerrickCellar" type="Node3D"]
+
+
+[node name="Inspection" parent="." instance=ExtResource("R1")]
+
+
+[node name="Masonry" type="Node3D" parent="."]
+
+
+[node name="Deckhead" type="Node3D" parent="."]
+
+
+[node name="Stores" type="Node3D" parent="."]
+
+
+[node name="Handling" type="Node3D" parent="."]
+
+
+[node name="Lighting" type="Node3D" parent="."]
+
+
+[node name="Contact" type="Node3D" parent="."]
+
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("CellarAir")
+
+[node name="Wall1" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-3.05, -0.04, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="WallCracked1" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(0.15, -0.04, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="WallDoorway1" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(3.165, -0.04, -2.385)
+rotation_degrees = Vector3(0, -45, 0)
+scale = Vector3(1, 0.96, 0.85)
+
+[node name="Wall2" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-4.66, -0.04, -2.15)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="WallCracked2" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(-4.66, -0.04, 1.15)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall3" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-4.66, -0.04, 4.45)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall4" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(4.58, -0.04, 0.68)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall5" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(4.58, -0.04, 3.98)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.825, 0.96, 0.8)
+
+[node name="Wall6" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(-3.05, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="Wall7" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(0.15, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="Wall8" parent="Masonry" instance=ExtResource("R2")]
+position = Vector3(3.35, -0.04, 5.65)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.96, 0.8)
+
+[node name="FloorTileLarge1" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, -2.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge1" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge2" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, 0.88)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge2" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge3" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-3.2, -0.04, 4.08)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge3" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(-3.2, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge4" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, -2.32)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge4" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge5" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, 0.88)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge5" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge6" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(0, -0.04, 4.08)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge6" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(0, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge7" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, -2.32)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge7" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, -2.32)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge8" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, 0.88)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge8" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, 0.88)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="FloorTileLarge9" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(3.2, -0.04, 4.08)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="FloorWoodLarge9" parent="Deckhead" instance=ExtResource("R6")]
+position = Vector3(3.2, 3.85, 4.08)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.8, 1, 0.8)
+
+[node name="WalkingSurface" type="StaticBody3D" parent="Contact"]
+position = Vector3(0, -0.125, 0.65)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/WalkingSurface"]
+shape = SubResource("WalkingSurfaceShape")
+
+[node name="BackWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(-1.45, 1.86, -3.8)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/BackWall"]
+shape = SubResource("BackWallShape")
+
+[node name="DoorWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(3.165, 1.86, -2.385)
+rotation_degrees = Vector3(0, -45, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/DoorWall"]
+shape = SubResource("DoorWallShape")
+
+[node name="WestWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(-4.66, 1.86, 1.14)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/WestWall"]
+shape = SubResource("WestWallShape")
+
+[node name="EastWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(4.58, 1.86, 2.35)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/EastWall"]
+shape = SubResource("EastWallShape")
+
+[node name="EntryWall" type="StaticBody3D" parent="Contact"]
+position = Vector3(0, 1.86, 5.65)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Contact/EntryWall"]
+shape = SubResource("EntryWallShape")
+
+[node name="CargoLantern" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-1.2, 2.52, -1.85)
+light_color = Color(1.0, 0.73, 0.43, 1)
+light_energy = 5.4
+omni_range = 7.5
+omni_attenuation = 1.20
+shadow_enabled = true
+light_size = 0.13
+
+[node name="CoolStairLight" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-2.8, 2.9, 2.3)
+light_color = Color(0.38, 0.60, 0.96, 1)
+light_energy = 3.4
+omni_range = 8
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="DoorBounce" type="OmniLight3D" parent="Lighting"]
+position = Vector3(3.2, 1.5, -0.28)
+light_color = Color(0.88, 0.58, 0.39, 1)
+light_energy = 1.1
+omni_range = 4.4
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="ReflectedLamplight" type="OmniLight3D" parent="Lighting"]
+position = Vector3(-0.3, 0.95, -0.6)
+light_color = Color(1, 0.69, 0.50, 1)
+light_energy = 0.65
+omni_range = 4
+omni_attenuation = 1.20
+shadow_enabled = false
+light_size = 0.13
+
+[node name="ShelfLarge1" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-2.77, 1.08, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge2" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-2.77, 2.18, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge3" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-0.12, 1.08, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="ShelfLarge4" parent="Stores" instance=ExtResource("R7")]
+position = Vector3(-0.12, 2.18, -3.45)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.33, 1, 1.78)
+
+[node name="Keg1" parent="Stores" instance=ExtResource("R8")]
+position = Vector3(-0.56, 1.18, -2.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.47, 0.47, 0.47)
+
+[node name="BarrelLarge1" parent="Stores" instance=ExtResource("R9")]
+position = Vector3(0.47, 0.014, -2.75)
+rotation_degrees = Vector3(0, -16, 0)
+scale = Vector3(0.57, 0.57, 0.57)
+
+[node name="BoxLarge1" parent="Stores" instance=ExtResource("R10")]
+position = Vector3(-2.63, 0.005, -2.66)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(0.69, 0.6, 0.64)
