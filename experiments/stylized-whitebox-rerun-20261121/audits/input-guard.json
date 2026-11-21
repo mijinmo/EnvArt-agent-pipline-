@@ -1,0 +1,16 @@
+{
+  "original_17_body_baseline_passed": true,
+  "negative_cases": [
+    {
+      "case": "missing_original_instance",
+      "exit_code": 2,
+      "rejected": true
+    },
+    {
+      "case": "moved_original_instance",
+      "exit_code": 2,
+      "rejected": true
+    }
+  ],
+  "note": "Only coordinator-created temporary copies were changed; producer input is untouched."
+}
