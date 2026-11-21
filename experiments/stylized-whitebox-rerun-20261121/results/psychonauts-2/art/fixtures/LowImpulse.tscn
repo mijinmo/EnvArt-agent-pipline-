@@ -1,0 +1,201 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_1.obj" id="1"]
+
+[ext_resource type="Shader" path="res://art/surfaces/lacquer.gdshader" id="2"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="3"]
+
+[ext_resource type="PackedScene" path="res://art/models/metalTile.glb" id="4"]
+
+[ext_resource type="Texture2D" path="res://art/marks/impulse_mat.svg" id="5"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_3.obj" id="6"]
+
+[ext_resource type="Font" path="res://art/type/BarlowCondensed-SemiBold.ttf" id="7"]
+
+[sub_resource type="ShaderMaterial" id="Finish_rubber"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.188235, 0.219608, 0.207843, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_teal"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.270588, 0.596078, 0.533333, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_ink"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.156863, 0.223529, 0.219608, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_brass"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.788235, 0.592157, 0.329412, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="StandardMaterial3D" id="Print_impulse_mat"]
+albedo_texture = ExtResource("5")
+texture_filter = 5
+transparency = 1
+shading_mode = 1
+roughness = 0.75
+
+[sub_resource type="QuadMesh" id="PrintSurface"]
+
+
+[sub_resource type="ShaderMaterial" id="Finish_deep"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.133333, 0.290196, 0.282353, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[node name="ImpulseLow" type="Node3D"]
+
+
+[node name="RubberFoot" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.067, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.47, 1.47, 0.134)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_rubber")
+
+[node name="CastBody" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.2, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.493, 1.493, 0.285)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_teal")
+
+[node name="ShoulderGasket" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.313, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.5, 1.5, 0.09)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_ink")
+
+[node name="RolledEdge" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.359, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.495, 1.495, 0.046)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="RecessedTreadFrame" parent="." instance=ExtResource("4")]
+position = Vector3(0, 0.38, 0)
+scale = Vector3(1.496, 0.25, 1.496)
+
+[node name="FrictionPad" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.393, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(0.997, 0.997, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_impulse_mat")
+
+[node name="Face0" type="Node3D" parent="."]
+
+
+[node name="MakerStrip" type="MeshInstance3D" parent="Face0"]
+position = Vector3(0, 0.196, 0.744)
+scale = Vector3(1.05, 0.15, 0.025)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_deep")
+
+[node name="Series" type="Label3D" parent="Face0"]
+position = Vector3(0, 0.196, 0.762)
+font = ExtResource("7")
+pixel_size = 0.00072
+font_size = 128
+outline_size = 0
+text = "PULSE   /   I"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="Face90" type="Node3D" parent="."]
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="MakerStrip" type="MeshInstance3D" parent="Face90"]
+position = Vector3(0, 0.196, 0.744)
+scale = Vector3(1.05, 0.15, 0.025)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_deep")
+
+[node name="Series" type="Label3D" parent="Face90"]
+position = Vector3(0, 0.196, 0.762)
+font = ExtResource("7")
+pixel_size = 0.00072
+font_size = 128
+outline_size = 0
+text = "PULSE   /   I"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="Face180" type="Node3D" parent="."]
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="MakerStrip" type="MeshInstance3D" parent="Face180"]
+position = Vector3(0, 0.196, 0.744)
+scale = Vector3(1.05, 0.15, 0.025)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_deep")
+
+[node name="Series" type="Label3D" parent="Face180"]
+position = Vector3(0, 0.196, 0.762)
+font = ExtResource("7")
+pixel_size = 0.00072
+font_size = 128
+outline_size = 0
+text = "PULSE   /   I"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="Face270" type="Node3D" parent="."]
+rotation_degrees = Vector3(0, 270, 0)
+
+[node name="MakerStrip" type="MeshInstance3D" parent="Face270"]
+position = Vector3(0, 0.196, 0.744)
+scale = Vector3(1.05, 0.15, 0.025)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_deep")
+
+[node name="Series" type="Label3D" parent="Face270"]
+position = Vector3(0, 0.196, 0.762)
+font = ExtResource("7")
+pixel_size = 0.00072
+font_size = 128
+outline_size = 0
+text = "PULSE   /   I"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5

@@ -1,0 +1,161 @@
+[gd_scene format=3]
+
+[ext_resource type="Shader" path="res://art/surfaces/lacquer.gdshader" id="1"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="2"]
+
+[sub_resource type="BoxMesh" id="Box"]
+
+
+[sub_resource type="ShaderMaterial" id="Finish_petrol"]
+shader = ExtResource("1")
+shader_parameter/grain = ExtResource("2")
+shader_parameter/pigment = Color(0.156863, 0.407843, 0.384314, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_brass"]
+shader = ExtResource("1")
+shader_parameter/grain = ExtResource("2")
+shader_parameter/pigment = Color(0.788235, 0.592157, 0.329412, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="ShaderMaterial" id="Finish_ink"]
+shader = ExtResource("1")
+shader_parameter/grain = ExtResource("2")
+shader_parameter/pigment = Color(0.156863, 0.223529, 0.219608, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[node name="ServiceStairs" type="Node3D"]
+
+
+[node name="Tread0" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.191, 2)
+scale = Vector3(1.997, 0.018, 0.596)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_petrol")
+
+[node name="Nosing0" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.172, 2.3)
+scale = Vector3(2.001, 0.054, 0.033)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="Grip00" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.201, 2.092)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip01" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.201, 2.154)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip02" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.201, 2.216)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Tread1" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.391, 1.4)
+scale = Vector3(1.997, 0.018, 0.596)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_petrol")
+
+[node name="Nosing1" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.372, 1.7)
+scale = Vector3(2.001, 0.054, 0.033)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="Grip10" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.401, 1.492)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip11" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.401, 1.554)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip12" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.401, 1.616)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Tread2" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.591, 0.8)
+scale = Vector3(1.997, 0.018, 0.596)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_petrol")
+
+[node name="Nosing2" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.572, 1.1)
+scale = Vector3(2.001, 0.054, 0.033)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="Grip20" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.601, 0.892)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip21" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.601, 0.954)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip22" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.601, 1.016)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Tread3" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.791, 0.2)
+scale = Vector3(1.997, 0.018, 0.596)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_petrol")
+
+[node name="Nosing3" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.772, 0.5)
+scale = Vector3(2.001, 0.054, 0.033)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="Grip30" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.801, 0.292)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip31" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.801, 0.354)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")
+
+[node name="Grip32" type="MeshInstance3D" parent="."]
+position = Vector3(5, 0.801, 0.416)
+scale = Vector3(1.77, 0.001, 0.014)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_ink")

@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://art/models/televisionVintage.glb" id="1"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/screen_rim.obj" id="2"]
+
+[ext_resource type="Texture2D" path="res://art/marks/scope.svg" id="3"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/fin.obj" id="4"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/wing.obj" id="5"]
+
+[sub_resource type="StandardMaterial3D" id="Finish_mint"]
+albedo_color = Color(0.580392, 0.796078, 0.666667, 1)
+roughness = 0.67
+metallic = 0.09
+
+[sub_resource type="StandardMaterial3D" id="Print_scope"]
+albedo_texture = ExtResource("3")
+texture_filter = 5
+transparency = 1
+shading_mode = 0
+roughness = 0.75
+
+[sub_resource type="QuadMesh" id="PrintSurface"]
+
+
+[sub_resource type="StandardMaterial3D" id="Finish_petrol"]
+albedo_color = Color(0.156863, 0.407843, 0.384314, 1)
+roughness = 0.33
+metallic = 0.09
+
+[sub_resource type="CylinderMesh" id="Spun100"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="StandardMaterial3D" id="Finish_brass"]
+albedo_color = Color(0.788235, 0.592157, 0.329412, 1)
+roughness = 0.33
+metallic = 0.42
+
+[node name="FieldOscilloscope" type="Node3D"]
+
+
+[node name="VintageReceiver" parent="." instance=ExtResource("1")]
+scale = Vector3(1.24, 1.24, 1.24)
+
+[node name="EnamelBezel" type="MeshInstance3D" parent="."]
+position = Vector3(-0.09, 0.414, 0.414)
+scale = Vector3(0.92, 0.66, 0.115)
+mesh = ExtResource("2")
+material_override = SubResource("Finish_mint")
+
+[node name="SignalTrace" type="MeshInstance3D" parent="."]
+position = Vector3(-0.09, 0.414, 0.458)
+scale = Vector3(0.826, 0.552, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_scope")
+
+[node name="TopFin" type="MeshInstance3D" parent="."]
+position = Vector3(0.18, 0.835, 0.17)
+scale = Vector3(0.38, 0.34, 0.37)
+mesh = ExtResource("4")
+material_override = SubResource("Finish_mint")
+
+[node name="HeelFin" type="MeshInstance3D" parent="."]
+position = Vector3(0.3, 0.065, -0.01)
+scale = Vector3(0.28, 0.15, 0.53)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_petrol")
+
+[node name="GainDial0" type="MeshInstance3D" parent="."]
+position = Vector3(0.476, 0.28, 0.452)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.133, 0.065, 0.133)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="GainDial1" type="MeshInstance3D" parent="."]
+position = Vector3(0.476, 0.51, 0.452)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.133, 0.065, 0.133)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")

@@ -1,0 +1,171 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="1"]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="2"]
+
+[ext_resource type="Shader" path="res://art/surfaces/workshop_floor.gdshader" id="3"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="4"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/CalibrationEntrance.tscn" id="5"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/WorkAndExhibition.tscn" id="6"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/RearElevation.tscn" id="7"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/InclineStation.tscn" id="8"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/ServicePartition.tscn" id="9"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/ServiceStairs.tscn" id="10"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/LowImpulse.tscn" id="11"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/MiddleImpulse.tscn" id="12"]
+
+[ext_resource type="PackedScene" path="res://art/fixtures/HighImpulse.tscn" id="13"]
+
+[sub_resource type="Environment" id="Studio"]
+background_mode = 1
+background_color = Color(0.184314, 0.254902, 0.262745, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.772549, 0.831373, 0.815686, 1)
+ambient_light_energy = 0.44
+reflected_light_source = 1
+tonemap_mode = 2
+tonemap_white = 4
+ssao_enabled = true
+ssao_radius = 0.65
+ssao_intensity = 1.35
+
+[sub_resource type="ShaderMaterial" id="InlaidFloor"]
+shader = ExtResource("3")
+shader_parameter/wear = ExtResource("4")
+
+[sub_resource type="PlaneMesh" id="FloorSkin"]
+size = Vector2(18.95, 14.65)
+
+[sub_resource type="StandardMaterial3D" id="Finish_steel"]
+albedo_color = Color(0.411765, 0.494118, 0.454902, 1)
+roughness = 0.33
+metallic = 0.42
+
+[sub_resource type="StandardMaterial3D" id="Finish_deep"]
+albedo_color = Color(0.133333, 0.290196, 0.282353, 1)
+roughness = 0.67
+metallic = 0.09
+
+[sub_resource type="StandardMaterial3D" id="Finish_petrol"]
+albedo_color = Color(0.156863, 0.407843, 0.384314, 1)
+roughness = 0.33
+metallic = 0.09
+
+[sub_resource type="StandardMaterial3D" id="Finish_wood"]
+albedo_color = Color(0.52549, 0.317647, 0.231373, 1)
+roughness = 0.67
+metallic = 0.09
+
+[node name="ResonanceInstrumentWorks" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("1")]
+
+
+[node name="Inspection" parent="." instance=ExtResource("2")]
+
+
+[node name="RoomLight" type="WorldEnvironment" parent="."]
+environment = SubResource("Studio")
+
+[node name="BroadWindow" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-48, 26, 0)
+light_color = Color(1, 0.878431, 0.741176, 1)
+light_energy = 1.03
+shadow_enabled = true
+light_angular_distance = 1.15
+directional_shadow_max_distance = 48
+
+[node name="CoolReturn" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-28, -140, 0)
+light_color = Color(0.619608, 0.819608, 0.772549, 1)
+light_energy = 0.24
+
+[node name="InlaidCalibrationFloor" type="MeshInstance3D" parent="."]
+position = Vector3(0.775, 0.003, -4.475)
+mesh = SubResource("FloorSkin")
+material_override = SubResource("InlaidFloor")
+
+[node name="CalibrationEntrance" parent="." instance=ExtResource("5")]
+position = Vector3(0, 0, -4)
+
+[node name="WorkAndExhibition" parent="." instance=ExtResource("6")]
+
+
+[node name="RearElevation" parent="." instance=ExtResource("7")]
+
+
+[node name="InclineStation" parent="." instance=ExtResource("8")]
+
+
+[node name="ServicePartition" parent="." instance=ExtResource("9")]
+position = Vector3(8, 0, -1)
+
+[node name="ServiceStairs" parent="." instance=ExtResource("10")]
+
+
+[node name="LowImpulse" parent="." instance=ExtResource("11")]
+position = Vector3(1, 0, 1)
+
+[node name="MiddleImpulse" parent="." instance=ExtResource("12")]
+position = Vector3(1, 0, -1)
+
+[node name="HighImpulse" parent="." instance=ExtResource("13")]
+position = Vector3(3, 0, -3)
+
+[node name="Mesh" parent="BaseWhitebox/World/BackWall" index="0"]
+material_override = SubResource("Finish_steel")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionWall" index="0"]
+material_override = SubResource("Finish_deep")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionReturn" index="0"]
+material_override = SubResource("Finish_deep")
+
+[node name="Mesh" parent="BaseWhitebox/World/Ramp" index="0"]
+material_override = SubResource("Finish_petrol")
+
+[node name="Mesh" parent="BaseWhitebox/World/Landing" index="0"]
+material_override = SubResource("Finish_deep")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step1" index="0"]
+material_override = SubResource("Finish_wood")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step2" index="0"]
+material_override = SubResource("Finish_wood")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step3" index="0"]
+material_override = SubResource("Finish_wood")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step4" index="0"]
+material_override = SubResource("Finish_wood")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpLow" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpMid" index="0"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpHigh" index="0"]
+visible = false
+
+[editable path="BaseWhitebox"]

@@ -1,0 +1,316 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://art/marks/incline_runner.svg" id="1"]
+
+[ext_resource type="Shader" path="res://art/surfaces/lacquer.gdshader" id="2"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="3"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_table.jpg" id="4"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_2.obj" id="5"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_0.obj" id="6"]
+
+[ext_resource type="Texture2D" path="res://art/marks/impulse_mat.svg" id="7"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_3.obj" id="8"]
+
+[ext_resource type="PackedScene" path="res://art/models/consoleScreen.glb" id="9"]
+
+[ext_resource type="Texture2D" path="res://art/marks/harmonics.svg" id="10"]
+
+[ext_resource type="PackedScene" path="res://art/models/satelliteDishAntenna.glb" id="11"]
+
+[sub_resource type="StandardMaterial3D" id="Print_incline_runner"]
+albedo_texture = ExtResource("1")
+texture_filter = 5
+transparency = 1
+shading_mode = 1
+roughness = 0.75
+
+[sub_resource type="QuadMesh" id="PrintSurface"]
+
+
+[sub_resource type="BoxMesh" id="Box"]
+
+
+[sub_resource type="ShaderMaterial" id="Finish_brass"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.788235, 0.592157, 0.329412, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="ShaderMaterial" id="Finish_deep"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.133333, 0.290196, 0.282353, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="CylinderMesh" id="Spun100"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="ShaderMaterial" id="Finish_petrol"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.156863, 0.407843, 0.384314, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_walnut"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.313725, 0.211765, 0.184314, 1)
+shader_parameter/timber = true
+shader_parameter/frequency = 0.52
+shader_parameter/contrast = 2
+shader_parameter/gloss = 0.54
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_ink"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.156863, 0.223529, 0.219608, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Print_impulse_mat"]
+albedo_texture = ExtResource("7")
+texture_filter = 5
+transparency = 1
+shading_mode = 1
+roughness = 0.75
+
+[sub_resource type="CylinderMesh" id="Spun83"]
+top_radius = 0.415
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="StandardMaterial3D" id="Print_harmonics"]
+albedo_texture = ExtResource("10")
+texture_filter = 5
+transparency = 1
+shading_mode = 0
+roughness = 0.75
+
+[sub_resource type="CylinderMesh" id="Spun70"]
+top_radius = 0.35
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[node name="InclineStation" type="Node3D"]
+
+
+[node name="InclinedDeck" type="Node3D" parent="."]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.43495, 0, 0)
+
+[node name="RibbedRubber" type="MeshInstance3D" parent="InclinedDeck"]
+position = Vector3(0, 0.152, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(2.65, 6.28, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_incline_runner")
+
+[node name="EdgeStrip-1" type="MeshInstance3D" parent="InclinedDeck"]
+position = Vector3(-1.43, 0.148, 0)
+scale = Vector3(0.082, 0.009, 6.31)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="SideChannel-1" type="MeshInstance3D" parent="InclinedDeck"]
+position = Vector3(-1.501, -0.03, 0)
+scale = Vector3(0.035, 0.13, 6.31)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")
+
+[node name="EdgeStrip1" type="MeshInstance3D" parent="InclinedDeck"]
+position = Vector3(1.43, 0.148, 0)
+scale = Vector3(0.082, 0.009, 6.31)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="SideChannel1" type="MeshInstance3D" parent="InclinedDeck"]
+position = Vector3(1.501, -0.03, 0)
+scale = Vector3(0.035, 0.13, 6.31)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")
+
+[node name="Pedestal0-7.25" type="MeshInstance3D" parent="."]
+position = Vector3(-7.25, 0.263333, -2.3)
+scale = Vector3(0.14, 0.426667, 0.14)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="Base0-7.25" type="MeshInstance3D" parent="."]
+position = Vector3(-7.25, 0.05, -2.3)
+scale = Vector3(0.35, 0.1, 0.35)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="Pedestal1-7.25" type="MeshInstance3D" parent="."]
+position = Vector3(-7.25, 0.696667, -4.9)
+scale = Vector3(0.14, 1.293333, 0.14)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="Base1-7.25" type="MeshInstance3D" parent="."]
+position = Vector3(-7.25, 0.05, -4.9)
+scale = Vector3(0.35, 0.1, 0.35)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="CrossBrace-7.25" type="MeshInstance3D" parent="."]
+position = Vector3(-7.25, 0.72, -3.63)
+rotation_degrees = Vector3(66.635656, 180, 0)
+scale = Vector3(0.085, 2.723307, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Pedestal0-4.75" type="MeshInstance3D" parent="."]
+position = Vector3(-4.75, 0.263333, -2.3)
+scale = Vector3(0.14, 0.426667, 0.14)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="Base0-4.75" type="MeshInstance3D" parent="."]
+position = Vector3(-4.75, 0.05, -2.3)
+scale = Vector3(0.35, 0.1, 0.35)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="Pedestal1-4.75" type="MeshInstance3D" parent="."]
+position = Vector3(-4.75, 0.696667, -4.9)
+scale = Vector3(0.14, 1.293333, 0.14)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="Base1-4.75" type="MeshInstance3D" parent="."]
+position = Vector3(-4.75, 0.05, -4.9)
+scale = Vector3(0.35, 0.1, 0.35)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="CrossBrace-4.75" type="MeshInstance3D" parent="."]
+position = Vector3(-4.75, 0.72, -3.63)
+rotation_degrees = Vector3(66.635656, 180, 0)
+scale = Vector3(0.085, 2.723307, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="LandingFoot" type="MeshInstance3D" parent="."]
+position = Vector3(-6, 0.165, -7)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(3.02, 2.02, 0.31)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_ink")
+
+[node name="PlatformPanel0" type="MeshInstance3D" parent="."]
+position = Vector3(-6.95, 1, -5.99)
+scale = Vector3(0.83, 1.35, 0.042)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_petrol")
+
+[node name="PlatformPanel1" type="MeshInstance3D" parent="."]
+position = Vector3(-6, 1, -5.99)
+scale = Vector3(0.83, 1.35, 0.042)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_petrol")
+
+[node name="PlatformPanel2" type="MeshInstance3D" parent="."]
+position = Vector3(-5.05, 1, -5.99)
+scale = Vector3(0.83, 1.35, 0.042)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_petrol")
+
+[node name="LandingRail-7.43" type="MeshInstance3D" parent="."]
+position = Vector3(-7.43, 1.994, -7)
+scale = Vector3(0.082, 0.013, 2)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="LandingRail-4.57" type="MeshInstance3D" parent="."]
+position = Vector3(-4.57, 1.994, -7)
+scale = Vector3(0.082, 0.013, 2)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="PlatformMat" type="MeshInstance3D" parent="."]
+position = Vector3(-6, 2.002, -7)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(1.6, 1.6, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_impulse_mat")
+
+[node name="ControlFoot" type="MeshInstance3D" parent="."]
+position = Vector3(-4.78, 0.12, -8.65)
+scale = Vector3(0.91, 0.24, 0.91)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_ink")
+
+[node name="ControlPedestal" type="MeshInstance3D" parent="."]
+position = Vector3(-4.78, 1.04, -8.65)
+scale = Vector3(0.49, 1.85, 0.49)
+mesh = SubResource("Spun83")
+material_override = SubResource("Finish_petrol")
+
+[node name="ControlBracket" type="MeshInstance3D" parent="."]
+position = Vector3(-4.78, 1.96, -8.65)
+scale = Vector3(1.02, 0.16, 0.58)
+mesh = ExtResource("8")
+material_override = SubResource("Finish_brass")
+
+[node name="TuningHead" type="Node3D" parent="."]
+position = Vector3(-4.78, 2.04, -8.65)
+rotation_degrees = Vector3(0, -6, 0)
+
+[node name="ReceiverColumn" parent="TuningHead" instance=ExtResource("9")]
+scale = Vector3(0.97, 0.97, 0.97)
+
+[node name="PhaseTrace" type="MeshInstance3D" parent="TuningHead"]
+position = Vector3(0, 1.07, -0.086)
+scale = Vector3(0.85, 0.49, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_harmonics")
+
+[node name="AntennaFoot" type="MeshInstance3D" parent="."]
+position = Vector3(-7.37, 0.1, -9.39)
+scale = Vector3(1.26, 0.2, 1.26)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_ink")
+
+[node name="DishPillar" type="MeshInstance3D" parent="."]
+position = Vector3(-7.37, 1.25, -9.39)
+scale = Vector3(0.46, 2.31, 0.46)
+mesh = SubResource("Spun70")
+material_override = SubResource("Finish_petrol")
+
+[node name="DishCollar" type="MeshInstance3D" parent="."]
+position = Vector3(-7.37, 2.36, -9.39)
+scale = Vector3(0.66, 0.18, 0.66)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="ReceptionDish" parent="." instance=ExtResource("11")]
+position = Vector3(-7.37, 2.44, -9.39)
+rotation_degrees = Vector3(0, 28, -2)
+scale = Vector3(1.4, 1.4, 1.4)

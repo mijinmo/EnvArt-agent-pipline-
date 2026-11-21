@@ -1,0 +1,594 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_0.obj" id="1"]
+
+[ext_resource type="Shader" path="res://art/surfaces/lacquer.gdshader" id="2"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="3"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/shoulder.obj" id="4"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_3.obj" id="5"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_1.obj" id="6"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_table.jpg" id="7"]
+
+[ext_resource type="Texture2D" path="res://art/marks/needle.svg" id="8"]
+
+[ext_resource type="Font" path="res://art/type/BarlowCondensed-SemiBold.ttf" id="9"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/fin.obj" id="10"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/wing.obj" id="11"]
+
+[ext_resource type="Font" path="res://art/type/Lobster-Regular.ttf" id="12"]
+
+[ext_resource type="Texture2D" path="res://art/marks/orbital.svg" id="13"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/spark.obj" id="14"]
+
+[sub_resource type="ShaderMaterial" id="Finish_deep"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.133333, 0.290196, 0.282353, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_petrol"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.156863, 0.407843, 0.384314, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_ink"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.156863, 0.223529, 0.219608, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_brass"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.788235, 0.592157, 0.329412, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="ShaderMaterial" id="Finish_teal"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.270588, 0.596078, 0.533333, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_mint"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.580392, 0.796078, 0.666667, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="CylinderMesh" id="Spun100"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="ShaderMaterial" id="Finish_walnut"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("7")
+shader_parameter/pigment = Color(0.313725, 0.211765, 0.184314, 1)
+shader_parameter/timber = true
+shader_parameter/frequency = 0.52
+shader_parameter/contrast = 2
+shader_parameter/gloss = 0.54
+shader_parameter/metal = 0.1
+
+[sub_resource type="SphereMesh" id="Porcelain"]
+radial_segments = 40
+rings = 20
+
+[sub_resource type="StandardMaterial3D" id="Finish_amber"]
+albedo_color = Color(0.964706, 0.74902, 0.407843, 1)
+roughness = 0.67
+metallic = 0.09
+emission_enabled = true
+emission = Color(0.964706, 0.74902, 0.407843, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Finish_phosphor"]
+albedo_color = Color(0.631373, 0.937255, 0.741176, 1)
+roughness = 0.67
+metallic = 0.09
+emission_enabled = true
+emission = Color(0.631373, 0.937255, 0.741176, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Print_needle"]
+albedo_texture = ExtResource("8")
+texture_filter = 5
+transparency = 1
+shading_mode = 0
+roughness = 0.75
+
+[sub_resource type="QuadMesh" id="PrintSurface"]
+
+
+[sub_resource type="ShaderMaterial" id="Finish_cream"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.956863, 0.866667, 0.643137, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Print_orbital"]
+albedo_texture = ExtResource("13")
+texture_filter = 5
+transparency = 1
+shading_mode = 0
+roughness = 0.75
+
+[sub_resource type="ShaderMaterial" id="Finish_gold"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.898039, 0.701961, 0.411765, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="BoxMesh" id="Box"]
+
+
+[node name="CalibrationEntrance" type="Node3D"]
+
+
+[node name="WestPylon" type="Node3D" parent="."]
+
+
+[node name="IronSpine" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 1.29, 0)
+scale = Vector3(0.695, 2.58, 0.58)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_deep")
+
+[node name="CastShoulder" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-1.035, 1.39, 0)
+scale = Vector3(0.84, 2.65, 0.67)
+mesh = ExtResource("4")
+material_override = SubResource("Finish_petrol")
+
+[node name="Plinth" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.995, 0.13, 0)
+scale = Vector3(0.79, 0.26, 0.78)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_ink")
+
+[node name="FootTrim" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.995, 0.28, 0.005)
+scale = Vector3(0.79, 0.068, 0.73)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_brass")
+
+[node name="EnamelFace" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 0.99, 0.319)
+scale = Vector3(0.58, 1.31, 0.095)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_teal")
+
+[node name="ReflectedFace" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 1.36, -0.322)
+scale = Vector3(0.55, 2.02, 0.087)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_teal")
+
+[node name="Fluting0" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-1.125, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="Fluting1" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="Fluting2" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.775, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="JambTrim" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.625, 1.35, 0.005)
+scale = Vector3(0.047, 2.03, 0.64)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet12" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-1.18, 0.45, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet13" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.72, 0.45, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet14" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-1.18, 1.56, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet15" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.72, 1.56, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="PilotHousing" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 1.95, 0.345)
+scale = Vector3(0.47, 0.69, 0.15)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_walnut")
+
+[node name="LensRing0" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 1.8, 0.416)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.205, 0.037, 0.205)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="PilotGlass0" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 1.8, 0.456)
+scale = Vector3(0.16, 0.16, 0.073)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_amber")
+
+[node name="LensRing1" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 2.07, 0.416)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.205, 0.037, 0.205)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="PilotGlass1" type="MeshInstance3D" parent="WestPylon"]
+position = Vector3(-0.95, 2.07, 0.456)
+scale = Vector3(0.16, 0.16, 0.073)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_phosphor")
+
+[node name="EastPylon" type="Node3D" parent="."]
+
+
+[node name="IronSpine" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.95, 1.29, 0)
+scale = Vector3(0.695, 2.58, 0.58)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_deep")
+
+[node name="CastShoulder" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(1.035, 1.39, 0)
+scale = Vector3(0.84, 2.65, 0.67)
+mesh = ExtResource("4")
+material_override = SubResource("Finish_petrol")
+
+[node name="Plinth" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.995, 0.13, 0)
+scale = Vector3(0.79, 0.26, 0.78)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_ink")
+
+[node name="FootTrim" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.995, 0.28, 0.005)
+scale = Vector3(0.79, 0.068, 0.73)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_brass")
+
+[node name="EnamelFace" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.95, 0.99, 0.319)
+scale = Vector3(0.58, 1.31, 0.095)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_teal")
+
+[node name="ReflectedFace" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.95, 1.36, -0.322)
+scale = Vector3(0.55, 2.02, 0.087)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_teal")
+
+[node name="Fluting0" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.775, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="Fluting1" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.95, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="Fluting2" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(1.125, 0.92, 0.378)
+scale = Vector3(0.03, 0.85, 0.041)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_mint")
+
+[node name="JambTrim" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.625, 1.35, 0.005)
+scale = Vector3(0.047, 2.03, 0.64)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet32" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.72, 0.45, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet33" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(1.18, 0.45, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet34" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.72, 1.56, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet35" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(1.18, 1.56, 0.377)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.041, 0.022, 0.041)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="GaugeFoot" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.975, 2.02, 0.35)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.671, 0.115, 0.671)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_ink")
+
+[node name="BrassBezel" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.975, 2.02, 0.415)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.61, 0.1, 0.61)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Needle" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.975, 2.02, 0.47)
+scale = Vector3(0.5429, 0.5429, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_needle")
+
+[node name="LegendMount" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(0.95, 1.64, 0.4)
+scale = Vector3(0.49, 0.143, 0.042)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_cream")
+
+[node name="ScaleLegend" type="Label3D" parent="EastPylon"]
+position = Vector3(0.95, 1.64, 0.427)
+font = ExtResource("9")
+pixel_size = 0.00064
+font_size = 128
+outline_size = 0
+text = "AMPLITUDE"
+modulate = Color(0.156863, 0.223529, 0.219608, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="SideWing" type="MeshInstance3D" parent="EastPylon"]
+position = Vector3(1.36, 2.46, -0.03)
+scale = Vector3(0.38, 0.76, 0.42)
+mesh = ExtResource("10")
+material_override = SubResource("Finish_petrol")
+
+[node name="HeaderBeam" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.5, 0)
+scale = Vector3(2.67, 0.38, 0.68)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_walnut")
+
+[node name="LintelInsert" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.5, 0.338)
+scale = Vector3(2.36, 0.18, 0.051)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_brass")
+
+[node name="EntryLegend" type="Label3D" parent="."]
+position = Vector3(0, 2.5, 0.376)
+font = ExtResource("9")
+pixel_size = 0.00102
+font_size = 128
+outline_size = 0
+text = "C A L I B R A T I O N"
+modulate = Color(0.156863, 0.223529, 0.219608, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="SpeedLine0" type="MeshInstance3D" parent="."]
+position = Vector3(-1.47, 2.91, -0.06)
+scale = Vector3(0.82, 0.115, 0.36)
+mesh = ExtResource("11")
+material_override = SubResource("Finish_teal")
+
+[node name="SpeedLine1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.514, 3.04, -0.06)
+scale = Vector3(0.94, 0.115, 0.36)
+mesh = ExtResource("11")
+material_override = SubResource("Finish_brass")
+
+[node name="SpeedLine2" type="MeshInstance3D" parent="."]
+position = Vector3(-1.558, 3.17, -0.06)
+scale = Vector3(1.06, 0.115, 0.36)
+mesh = ExtResource("11")
+material_override = SubResource("Finish_teal")
+
+[node name="SignRail" type="MeshInstance3D" parent="."]
+position = Vector3(-0.1, 3.013, 0)
+rotation_degrees = Vector3(0, 0, -3)
+scale = Vector3(3.3, 0.94, 0.47)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="RolledBrassBand" type="MeshInstance3D" parent="."]
+position = Vector3(-0.1, 3.025, 0.238)
+rotation_degrees = Vector3(0, 0, -3)
+scale = Vector3(3.23, 0.9, 0.075)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_brass")
+
+[node name="PorcelainSign" type="MeshInstance3D" parent="."]
+position = Vector3(-0.1, 3.025, 0.282)
+rotation_degrees = Vector3(0, 0, -3)
+scale = Vector3(3.12, 0.792, 0.058)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_petrol")
+
+[node name="ShopName" type="Label3D" parent="."]
+position = Vector3(-0.1, 3.08, 0.319)
+rotation_degrees = Vector3(0, 0, -3)
+font = ExtResource("12")
+pixel_size = 0.00436
+font_size = 128
+outline_size = 0
+text = "Resonance"
+modulate = Color(0.952941, 0.894118, 0.745098, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="ShopTrade" type="Label3D" parent="."]
+position = Vector3(-0.1, 2.79, 0.323)
+rotation_degrees = Vector3(0, 0, -3)
+font = ExtResource("9")
+pixel_size = 0.0007
+font_size = 128
+outline_size = 0
+text = "I N S T R U M E N T   W O R K S"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="ReverseSign" type="Label3D" parent="."]
+position = Vector3(-0.07, 3.028, -0.242)
+rotation_degrees = Vector3(0, 180, 3)
+font = ExtResource("9")
+pixel_size = 0.0016
+font_size = 128
+outline_size = 0
+text = "INSTRUMENT  WORKS"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="StampRim" type="MeshInstance3D" parent="."]
+position = Vector3(-1.35, 3.57, 0.22)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.68, 0.085, 0.68)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="StampField" type="MeshInstance3D" parent="."]
+position = Vector3(-1.35, 3.57, 0.27)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.5916, 0.045, 0.5916)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_deep")
+
+[node name="AtomicSeal" type="MeshInstance3D" parent="."]
+position = Vector3(-1.35, 3.57, 0.297)
+scale = Vector3(0.4624, 0.4624, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_orbital")
+
+[node name="Flare" type="MeshInstance3D" parent="."]
+position = Vector3(1.36, 3.39, 0.12)
+rotation_degrees = Vector3(0, 0, -12)
+scale = Vector3(0.42, 0.55, 0.07)
+mesh = ExtResource("14")
+material_override = SubResource("Finish_gold")
+
+[node name="PilotBounce" type="OmniLight3D" parent="."]
+position = Vector3(-0.88, 2.1, 0.71)
+light_color = Color(0.678431, 0.882353, 0.698039, 1)
+light_energy = 0.72
+omni_range = 2.8
+omni_attenuation = 1.2
+shadow_enabled = false
+light_size = 0.28
+
+[node name="ThresholdInlay" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.004, 0)
+scale = Vector3(1.25, 0.003, 0.62)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_brass")
+
+[node name="ThresholdGroove0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.006, -0.22)
+scale = Vector3(1.19, 0.001, 0.024)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")
+
+[node name="ThresholdGroove1" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.006, -0.07)
+scale = Vector3(1.19, 0.001, 0.024)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")
+
+[node name="ThresholdGroove2" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.006, 0.08)
+scale = Vector3(1.19, 0.001, 0.024)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")
+
+[node name="ThresholdGroove3" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.006, 0.23)
+scale = Vector3(1.19, 0.001, 0.024)
+mesh = SubResource("Box")
+material_override = SubResource("Finish_deep")

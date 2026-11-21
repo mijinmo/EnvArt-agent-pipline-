@@ -1,0 +1,946 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_3.obj" id="1"]
+
+[ext_resource type="Shader" path="res://art/surfaces/lacquer.gdshader" id="2"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/wood_table.jpg" id="3"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/worn_floor.jpg" id="4"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_0.obj" id="5"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/wing.obj" id="6"]
+
+[ext_resource type="Font" path="res://art/type/BarlowCondensed-SemiBold.ttf" id="7"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_2.obj" id="8"]
+
+[ext_resource type="Texture2D" path="res://art/marks/coil_drawing.svg" id="9"]
+
+[ext_resource type="PackedScene" path="res://art/models/bookcaseOpen.glb" id="10"]
+
+[ext_resource type="PackedScene" path="res://art/models/radio.glb" id="11"]
+
+[ext_resource type="PackedScene" path="res://art/models/televisionAntenna.glb" id="12"]
+
+[ext_resource type="PackedScene" path="res://art/models/pipeStraight.glb" id="13"]
+
+[sub_resource type="ShaderMaterial" id="Finish_walnut"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("3")
+shader_parameter/pigment = Color(0.313725, 0.211765, 0.184314, 1)
+shader_parameter/timber = true
+shader_parameter/frequency = 0.52
+shader_parameter/contrast = 2
+shader_parameter/gloss = 0.54
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_sage"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.470588, 0.521569, 0.423529, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_brass"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.788235, 0.592157, 0.329412, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="ShaderMaterial" id="Finish_deep"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.133333, 0.290196, 0.282353, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_petrol"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.156863, 0.407843, 0.384314, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="CylinderMesh" id="Spun100"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="ShaderMaterial" id="Finish_gold"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.898039, 0.701961, 0.411765, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="ShaderMaterial" id="Finish_ink"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.156863, 0.223529, 0.219608, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_teal"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.270588, 0.596078, 0.533333, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.1
+
+[sub_resource type="ShaderMaterial" id="Finish_steel"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.411765, 0.494118, 0.454902, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.31
+shader_parameter/metal = 0.46
+
+[sub_resource type="SphereMesh" id="Porcelain"]
+radial_segments = 40
+rings = 20
+
+[sub_resource type="StandardMaterial3D" id="Finish_phosphor"]
+albedo_color = Color(0.631373, 0.937255, 0.741176, 1)
+roughness = 0.67
+metallic = 0.09
+emission_enabled = true
+emission = Color(0.631373, 0.937255, 0.741176, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="ShaderMaterial" id="Finish_cream"]
+shader = ExtResource("2")
+shader_parameter/grain = ExtResource("4")
+shader_parameter/pigment = Color(0.956863, 0.866667, 0.643137, 1)
+shader_parameter/timber = false
+shader_parameter/frequency = 0.84
+shader_parameter/contrast = 1.6
+shader_parameter/gloss = 0.65
+shader_parameter/metal = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Print_coil_drawing"]
+albedo_texture = ExtResource("9")
+texture_filter = 5
+transparency = 1
+shading_mode = 1
+roughness = 0.75
+
+[sub_resource type="QuadMesh" id="PrintSurface"]
+
+
+[sub_resource type="CylinderMesh" id="Spun46"]
+top_radius = 0.23
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="StandardMaterial3D" id="Finish_warm"]
+albedo_color = Color(1, 0.87451, 0.556863, 1)
+roughness = 0.67
+metallic = 0.09
+emission_enabled = true
+emission = Color(1, 0.87451, 0.556863, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="CylinderMesh" id="Spun45"]
+top_radius = 0.225
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[node name="RearWorkshopElevation" type="Node3D"]
+
+
+[node name="ServiceWall" type="Node3D" parent="."]
+position = Vector3(0, 0, -11.68)
+
+[node name="LowerWainscot" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 1.08, 0)
+scale = Vector3(18.4, 2.16, 0.13)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_walnut")
+
+[node name="PlasterUpper" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 3.19, -0.035)
+scale = Vector3(18.4, 3.07, 0.13)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_sage")
+
+[node name="DadoRail" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 1.76, 0.09)
+scale = Vector3(18.42, 0.14, 0.19)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="RoofFrieze" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 4.7, -0.01)
+scale = Vector3(18.67, 0.58, 0.39)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_deep")
+
+[node name="ShelfRoof" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 4.94, 0.5)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(18.7, 1.48, 0.22)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_petrol")
+
+[node name="EaveFace" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 4.87, 1.23)
+scale = Vector3(18.6, 0.24, 0.11)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_walnut")
+
+[node name="EaveLip" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 4.97, 1.23)
+scale = Vector3(18.66, 0.073, 0.145)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="WallStile0" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(-8.15, 2.31, 0.08)
+scale = Vector3(0.22, 4.58, 0.25)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="EaveKnee0" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(-8.15, 4.37, 0.56)
+rotation_degrees = Vector3(48.144957, 0, 0)
+scale = Vector3(0.115, 1.288875, 0.115)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="WallStile1" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(-3.1, 2.31, 0.08)
+scale = Vector3(0.22, 4.58, 0.25)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="EaveKnee1" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(-3.1, 4.37, 0.56)
+rotation_degrees = Vector3(48.144957, 0, 0)
+scale = Vector3(0.115, 1.288875, 0.115)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="WallStile2" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(2.2, 2.31, 0.08)
+scale = Vector3(0.22, 4.58, 0.25)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="EaveKnee2" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(2.2, 4.37, 0.56)
+rotation_degrees = Vector3(48.144957, 0, 0)
+scale = Vector3(0.115, 1.288875, 0.115)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="WallStile3" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(8.9, 2.31, 0.08)
+scale = Vector3(0.22, 4.58, 0.25)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="EaveKnee3" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(8.9, 4.37, 0.56)
+rotation_degrees = Vector3(48.144957, 0, 0)
+scale = Vector3(0.115, 1.288875, 0.115)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="ServiceSill" type="MeshInstance3D" parent="ServiceWall"]
+position = Vector3(0.49, 0.17, 0.13)
+scale = Vector3(18.36, 0.22, 0.3)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_deep")
+
+[node name="RightReturn" type="Node3D" parent="."]
+position = Vector3(9.68, 0, -6.2)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="Lining" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(0, 1.64, 0)
+scale = Vector3(9.6, 3.22, 0.18)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_sage")
+
+[node name="Panelling" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(0, 0.73, 0.12)
+scale = Vector3(9.58, 1.46, 0.12)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_petrol")
+
+[node name="Tray" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(0, 3.23, 0.36)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(9.7, 0.95, 0.22)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_walnut")
+
+[node name="Lip" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(0, 3.23, 0.84)
+scale = Vector3(9.71, 0.19, 0.065)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="Standard0" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(-3.97, 1.74, 0.156)
+scale = Vector3(0.19, 2.84, 0.19)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="Bracket0" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(-3.97, 2.95, 0.475)
+rotation_degrees = Vector3(47.726311, 0, 0)
+scale = Vector3(0.085, 0.743303, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_gold")
+
+[node name="Standard1" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(-1.45, 1.74, 0.156)
+scale = Vector3(0.19, 2.84, 0.19)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="Bracket1" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(-1.45, 2.95, 0.475)
+rotation_degrees = Vector3(47.726311, 0, 0)
+scale = Vector3(0.085, 0.743303, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_gold")
+
+[node name="Standard2" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(2.11, 1.74, 0.156)
+scale = Vector3(0.19, 2.84, 0.19)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="Bracket2" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(2.11, 2.95, 0.475)
+rotation_degrees = Vector3(47.726311, 0, 0)
+scale = Vector3(0.085, 0.743303, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_gold")
+
+[node name="Standard3" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(4.16, 1.74, 0.156)
+scale = Vector3(0.19, 2.84, 0.19)
+mesh = ExtResource("5")
+material_override = SubResource("Finish_deep")
+
+[node name="Bracket3" type="MeshInstance3D" parent="RightReturn"]
+position = Vector3(4.16, 2.95, 0.475)
+rotation_degrees = Vector3(47.726311, 0, 0)
+scale = Vector3(0.085, 0.743303, 0.085)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_gold")
+
+[node name="PhaseDistributor" type="Node3D" parent="."]
+position = Vector3(-5.44, 2.85, -11.36)
+
+[node name="DrumLayer0" type="MeshInstance3D" parent="PhaseDistributor"]
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(3.11, 0.28, 3.11)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_deep")
+
+[node name="DrumLayer1" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.16)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(2.96, 0.1, 2.96)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="DrumLayer2" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.24)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(2.81, 0.15, 2.81)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="DrumLayer3" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.32)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(2.58, 0.12, 2.58)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_ink")
+
+[node name="DrumLayer4" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.4)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(2.31, 0.11, 2.31)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_teal")
+
+[node name="DrumLayer5" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.47)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1.94, 0.065, 1.94)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="DrumLayer6" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.51)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1.82, 0.06, 1.82)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_deep")
+
+[node name="Rivet39" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(1.33, 0, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet40" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(1.22876, 0.508969, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet41" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.940452, 0.940452, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet42" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.508969, 1.22876, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet43" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 1.33, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet44" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.508969, 1.22876, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet45" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.940452, 0.940452, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet46" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.22876, 0.508969, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet47" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.33, 0, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet48" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.22876, -0.508969, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet49" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.940452, -0.940452, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet50" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.508969, -1.22876, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet51" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0, -1.33, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet52" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.508969, -1.22876, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet53" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.940452, -0.940452, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Rivet54" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(1.22876, -0.508969, 0.382)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.079, 0.022, 0.079)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="TurbineVane0" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.61, 0, 0.59)
+rotation_degrees = Vector3(0, 0, 27)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane1" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.467287, 0.3921, 0.59)
+rotation_degrees = Vector3(0, 0, 67)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane2" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.105925, 0.600733, 0.59)
+rotation_degrees = Vector3(0, 0, 107)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane3" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.305, 0.528275, 0.59)
+rotation_degrees = Vector3(0, 0, 147)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane4" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.573212, 0.208632, 0.59)
+rotation_degrees = Vector3(0, 0, 187)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane5" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.573212, -0.208632, 0.59)
+rotation_degrees = Vector3(0, 0, 227)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane6" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-0.305, -0.528275, 0.59)
+rotation_degrees = Vector3(0, 0, 267)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane7" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.105925, -0.600733, 0.59)
+rotation_degrees = Vector3(0, 0, 307)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="TurbineVane8" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0.467287, -0.3921, 0.59)
+rotation_degrees = Vector3(0, 0, 347)
+scale = Vector3(0.53, 0.25, 0.075)
+mesh = ExtResource("6")
+material_override = SubResource("Finish_steel")
+
+[node name="CeramicHub" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.651)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.64, 0.28, 0.64)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Lens" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, 0, 0.807)
+scale = Vector3(0.47, 0.47, 0.18)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_phosphor")
+
+[node name="CopperFeed0" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.05, -0.795, 0.28)
+scale = Vector3(0.16, 3.75, 0.16)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Elbow0" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.92, 1.2, 0.28)
+rotation_degrees = Vector3(47.29061, 90, 0)
+scale = Vector3(0.158, 0.353836, 0.158)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Inlet0" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.285, 1.32, 0.245)
+rotation_degrees = Vector3(90, 93.964655, 0)
+scale = Vector3(0.156, 1.012423, 0.156)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="PipeUnion00" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.05, -1.96, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="PipeUnion01" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.05, -0.42, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="PipeUnion02" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.05, 0.65, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="CopperFeed1" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.39, -0.695, 0.28)
+scale = Vector3(0.16, 3.95, 0.16)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Elbow1" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.26, 1.4, 0.28)
+rotation_degrees = Vector3(47.29061, 90, 0)
+scale = Vector3(0.158, 0.353836, 0.158)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Inlet1" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-1.455, 1.52, 0.245)
+rotation_degrees = Vector3(90, 92.968234, 0)
+scale = Vector3(0.156, 1.351814, 0.156)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="PipeUnion10" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.39, -1.96, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="PipeUnion11" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.39, -0.42, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="PipeUnion12" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(-2.39, 0.65, 0.28)
+scale = Vector3(0.211, 0.115, 0.211)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_petrol")
+
+[node name="Serial" type="MeshInstance3D" parent="PhaseDistributor"]
+position = Vector3(0, -1.7, 0.15)
+scale = Vector3(1.7, 0.24, 0.075)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_cream")
+
+[node name="SerialText" type="Label3D" parent="PhaseDistributor"]
+position = Vector3(0, -1.7, 0.193)
+font = ExtResource("7")
+pixel_size = 0.0011
+font_size = 128
+outline_size = 0
+text = "FIELD  DISTRIBUTOR"
+modulate = Color(0.133333, 0.290196, 0.282353, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="DraftingBoard" type="Node3D" parent="."]
+position = Vector3(-0.44, 2.68, -11.46)
+rotation_degrees = Vector3(0, 0, 1.4)
+
+[node name="TimberFrame" type="MeshInstance3D" parent="DraftingBoard"]
+scale = Vector3(4.42, 2.64, 0.16)
+mesh = ExtResource("8")
+material_override = SubResource("Finish_walnut")
+
+[node name="BrassLiner" type="MeshInstance3D" parent="DraftingBoard"]
+position = Vector3(0, 0, 0.09)
+scale = Vector3(4.34, 2.56, 0.045)
+mesh = ExtResource("8")
+material_override = SubResource("Finish_brass")
+
+[node name="ExplodedCoil" type="MeshInstance3D" parent="DraftingBoard"]
+position = Vector3(0, 0, 0.119)
+scale = Vector3(4.21, 2.36, 1)
+mesh = SubResource("PrintSurface")
+material_override = SubResource("Print_coil_drawing")
+
+[node name="DrawingTitle" type="Label3D" parent="DraftingBoard"]
+position = Vector3(0.71, -0.93, 0.126)
+font = ExtResource("7")
+pixel_size = 0.00112
+font_size = 128
+outline_size = 0
+text = "FIG. 12    /    FIELD COIL"
+modulate = Color(0.956863, 0.866667, 0.643137, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
+
+[node name="PartsLibrary" type="Node3D" parent="."]
+position = Vector3(3.51, 0, -10.81)
+
+[node name="OpenShelving" parent="PartsLibrary" instance=ExtResource("10")]
+scale = Vector3(1.38, 1.38, 1.38)
+
+[node name="RadioChassis" parent="PartsLibrary" instance=ExtResource("11")]
+position = Vector3(0, 0.449, 0.02)
+scale = Vector3(0.62, 0.62, 0.62)
+
+[node name="StockCase" type="MeshInstance3D" parent="PartsLibrary"]
+position = Vector3(0.12, 1.412, 0.015)
+rotation_degrees = Vector3(0, 0, -3)
+scale = Vector3(0.63, 0.27, 0.33)
+mesh = ExtResource("8")
+material_override = SubResource("Finish_teal")
+
+[node name="AerialParts" parent="PartsLibrary" instance=ExtResource("12")]
+position = Vector3(-0.12, 2.105, 0)
+scale = Vector3(0.68, 0.68, 0.68)
+
+[node name="BoxedSet" parent="PartsLibrary" instance=ExtResource("11")]
+position = Vector3(-0.13, 3.036, 0)
+scale = Vector3(0.72, 0.72, 0.72)
+
+[node name="LampBack-3.27" type="MeshInstance3D" parent="."]
+position = Vector3(-3.27, 4.01, -11.37)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.57, 0.12, 0.57)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="LampArm-3.27" type="MeshInstance3D" parent="."]
+position = Vector3(-3.27, 4.105, -11.14)
+rotation_degrees = Vector3(67.557247, 0, 0)
+scale = Vector3(0.09, 0.497695, 0.09)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_steel")
+
+[node name="Canopy-3.27" type="MeshInstance3D" parent="."]
+position = Vector3(-3.27, 4.22, -10.92)
+scale = Vector3(0.59, 0.22, 0.59)
+mesh = SubResource("Spun46")
+material_override = SubResource("Finish_petrol")
+
+[node name="MilkGlass-3.27" type="MeshInstance3D" parent="."]
+position = Vector3(-3.27, 4.09, -10.92)
+scale = Vector3(0.44, 0.24, 0.44)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_warm")
+
+[node name="Pool-3.27" type="OmniLight3D" parent="."]
+position = Vector3(-3.27, 3.89, -10.7)
+light_color = Color(1, 0.866667, 0.627451, 1)
+light_energy = 2.8
+omni_range = 5.6
+omni_attenuation = 1.2
+shadow_enabled = true
+light_size = 0.28
+
+[node name="LampBack1.78" type="MeshInstance3D" parent="."]
+position = Vector3(1.78, 4, -11.36)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(0.57, 0.12, 0.57)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="LampArm1.78" type="MeshInstance3D" parent="."]
+position = Vector3(1.78, 4.095, -11.13)
+rotation_degrees = Vector3(67.557247, 0, 0)
+scale = Vector3(0.09, 0.497695, 0.09)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_steel")
+
+[node name="Canopy1.78" type="MeshInstance3D" parent="."]
+position = Vector3(1.78, 4.21, -10.91)
+scale = Vector3(0.59, 0.22, 0.59)
+mesh = SubResource("Spun46")
+material_override = SubResource("Finish_petrol")
+
+[node name="MilkGlass1.78" type="MeshInstance3D" parent="."]
+position = Vector3(1.78, 4.08, -10.91)
+scale = Vector3(0.44, 0.24, 0.44)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_warm")
+
+[node name="Pool1.78" type="OmniLight3D" parent="."]
+position = Vector3(1.78, 3.88, -10.69)
+light_color = Color(1, 0.866667, 0.627451, 1)
+light_energy = 2.8
+omni_range = 5.6
+omni_attenuation = 1.2
+shadow_enabled = true
+light_size = 0.28
+
+[node name="InclineCanopy" type="Node3D" parent="."]
+position = Vector3(-8.33, 0, -7.94)
+rotation_degrees = Vector3(0, 90, 0)
+
+[node name="CantileverShell" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(0, 4.62, 0)
+rotation_degrees = Vector3(-90, 0, 0)
+scale = Vector3(7.46, 1.1, 0.27)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_petrol")
+
+[node name="ShadowFascia" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(0, 4.54, 0.48)
+scale = Vector3(7.35, 0.28, 0.13)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_deep")
+
+[node name="FoldedLip" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(0, 4.68, 0.52)
+scale = Vector3(7.42, 0.073, 0.14)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_brass")
+
+[node name="Upright0" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-2.54, 2.225, -0.44)
+scale = Vector3(0.13, 4.21, 0.13)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_deep")
+
+[node name="Foot0" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-2.54, 0.1, -0.44)
+scale = Vector3(0.33, 0.2, 0.33)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="Knee0" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-2.54, 4.065, -0.04)
+rotation_degrees = Vector3(44.64413, 0, 0)
+scale = Vector3(0.12, 1.138464, 0.12)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Upright1" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(2.96, 2.225, -0.44)
+scale = Vector3(0.13, 4.21, 0.13)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_deep")
+
+[node name="Foot1" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(2.96, 0.1, -0.44)
+scale = Vector3(0.33, 0.2, 0.33)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_walnut")
+
+[node name="Knee1" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(2.96, 4.065, -0.04)
+rotation_degrees = Vector3(44.64413, 0, 0)
+scale = Vector3(0.12, 1.138464, 0.12)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="UtilityFeed" parent="InclineCanopy" instance=ExtResource("13")]
+position = Vector3(0, 4.26, -0.05)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.155, 0.155, 3.007)
+
+[node name="Coupling0" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-2.78, 4.337, -0.05)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.22, 0.12, 0.22)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Coupling1" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-0.96, 4.337, -0.05)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.22, 0.12, 0.22)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Coupling2" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(1.29, 4.337, -0.05)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.22, 0.12, 0.22)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="Coupling3" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(2.82, 4.337, -0.05)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.22, 0.12, 0.22)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="LampDrop" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-0.42, 4.04, -0.05)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(0.07, 0.56, 0.07)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="InspectionShade" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-0.42, 3.69, -0.05)
+scale = Vector3(0.64, 0.25, 0.64)
+mesh = SubResource("Spun45")
+material_override = SubResource("Finish_teal")
+
+[node name="InspectionGlass" type="MeshInstance3D" parent="InclineCanopy"]
+position = Vector3(-0.42, 3.565, -0.05)
+scale = Vector3(0.55, 0.11, 0.55)
+mesh = SubResource("Porcelain")
+material_override = SubResource("Finish_warm")
+
+[node name="InspectionPool" type="OmniLight3D" parent="InclineCanopy"]
+position = Vector3(-0.42, 3.3, -0.02)
+light_color = Color(1, 0.898039, 0.72549, 1)
+light_energy = 1.4
+omni_range = 4.8
+omni_attenuation = 1.2
+shadow_enabled = false
+light_size = 0.28

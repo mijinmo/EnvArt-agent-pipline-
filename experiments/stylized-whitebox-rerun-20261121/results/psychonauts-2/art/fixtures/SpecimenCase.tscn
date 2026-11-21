@@ -1,0 +1,106 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_2.obj" id="1"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/display_rim.obj" id="2"]
+
+[ext_resource type="ArrayMesh" path="res://art/fixtures/forms/pressing_3.obj" id="3"]
+
+[ext_resource type="PackedScene" path="res://art/models/spaceCraft1.glb" id="4"]
+
+[ext_resource type="Font" path="res://art/type/BarlowCondensed-SemiBold.ttf" id="5"]
+
+[sub_resource type="StandardMaterial3D" id="Finish_walnut"]
+albedo_color = Color(0.313725, 0.211765, 0.184314, 1)
+roughness = 0.67
+metallic = 0.09
+
+[sub_resource type="StandardMaterial3D" id="Finish_amber"]
+albedo_color = Color(0.964706, 0.74902, 0.407843, 1)
+roughness = 0.67
+metallic = 0.09
+emission_enabled = true
+emission = Color(0.964706, 0.74902, 0.407843, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Finish_wood"]
+albedo_color = Color(0.52549, 0.317647, 0.231373, 1)
+roughness = 0.67
+metallic = 0.09
+
+[sub_resource type="StandardMaterial3D" id="Finish_petrol"]
+albedo_color = Color(0.156863, 0.407843, 0.384314, 1)
+roughness = 0.33
+metallic = 0.09
+
+[sub_resource type="CylinderMesh" id="Spun100"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1
+radial_segments = 48
+
+[sub_resource type="StandardMaterial3D" id="Finish_brass"]
+albedo_color = Color(0.788235, 0.592157, 0.329412, 1)
+roughness = 0.33
+metallic = 0.42
+
+[sub_resource type="StandardMaterial3D" id="Finish_cream"]
+albedo_color = Color(0.956863, 0.866667, 0.643137, 1)
+roughness = 0.67
+metallic = 0.09
+
+[node name="SpecimenCabinet" type="Node3D"]
+
+
+[node name="BentWoodShell" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, -0.11)
+scale = Vector3(1.6, 1.13, 0.31)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_walnut")
+
+[node name="Reflector" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.054)
+scale = Vector3(1.49, 1.02, 0.04)
+mesh = ExtResource("1")
+material_override = SubResource("Finish_amber")
+
+[node name="MouldedLip" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.22)
+scale = Vector3(1.64, 1.16, 0.35)
+mesh = ExtResource("2")
+material_override = SubResource("Finish_wood")
+
+[node name="VelvetRest" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.38, 0.19)
+scale = Vector3(0.63, 0.07, 0.36)
+mesh = ExtResource("3")
+material_override = SubResource("Finish_petrol")
+
+[node name="ExhibitPin" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.285, 0.22)
+scale = Vector3(0.045, 0.19, 0.045)
+mesh = SubResource("Spun100")
+material_override = SubResource("Finish_brass")
+
+[node name="ScalePrototype" parent="." instance=ExtResource("4")]
+position = Vector3(0, -0.18, 0.23)
+rotation_degrees = Vector3(15, -20, 8)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="CataloguePlate" type="MeshInstance3D" parent="."]
+position = Vector3(0.43, -0.41, 0.25)
+scale = Vector3(0.31, 0.096, 0.04)
+mesh = ExtResource("3")
+material_override = SubResource("Finish_cream")
+
+[node name="Part" type="Label3D" parent="."]
+position = Vector3(0.43, -0.405, 0.273)
+font = ExtResource("5")
+pixel_size = 0.00049
+font_size = 128
+outline_size = 0
+text = "FIG. 04"
+modulate = Color(0.156863, 0.223529, 0.219608, 1)
+double_sided = false
+alpha_cut = 0
+texture_filter = 5
