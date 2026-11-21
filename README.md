@@ -4,6 +4,8 @@
 
 **2026-11-22 当前横向 2.5D 探索：Silver Pines。** 用户指定新参考并解除本任务旧白盒继承要求；在 `explore/sideview-2p5d` 完成渡口办公室可试玩初稿。Godot 4.7.2 打开 `experiments/silver-pines-study-20261122/project/project.godot`，F5；A / D 或方向键移动，Space跳跃。[工程、参考、素材及复拍说明](experiments/silver-pines-study-20261122/ENVIRONMENT.md)。9项局部控制器检查通过，美术尚待用户校准。此前[山谷驿站](docs/sideview-2p5d-study.html)留档。既有 main 已推送至 `c737e6c`，主工程入口保持原状。
 
+[Silver Pines 原作参考 / 当前实机 / 跳跃关键帧对照](docs/silver-pines-study.html) · 既有 Tailscale 私人预览：[直接打开](http://100.96.75.54:8081/docs/silver-pines-study.html)。
+
 **Godot AI MCP 接入（2026-11-21）：** 新增固定版 4.4.2 安装器与项目级 Codex 配置，辅助实时场景、材质/灯光编辑和图像反馈。制作机拉取后运行 `python3 tools/setup_godot_ai.py --prewarm`，具体工程选择、插件启用、截图区分及独立试跑边界见 [配置与使用说明](docs/godot-ai-mcp.md)。用户随后授权的 [SIGNALIS 单局部试跑](docs/signalis-mcp-study.html) 已跑通素材试装、审美校准、MCP 编辑与三机位实图反馈；本轮进程已关闭，相对质量与额度收益尚无对照验证。
 
 **接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意；SIGNALIS 已实践校准与自改，独立接手和额度收益尚未验证。

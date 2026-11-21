@@ -54,6 +54,8 @@
 
 ## 打开、操作与复拍
 
+图像对照：[HTML](../../docs/silver-pines-study.html)；已有私人服务：[Tailscale预览](http://100.96.75.54:8081/docs/silver-pines-study.html)。参考图、当前四机位、修订前与移动关键帧可切换；页面不运行游戏。
+
 Godot 4.7.2 导入本目录 `project/project.godot`，F5。A / D 或左 / 右方向键移动，Space 跳跃。玩法为 X/Y 平面，底层 `CharacterBody3D` 与三维道具碰撞，Z 固定为1.4；无攻击、交互或进入建筑内部功能。本轮室外范围不包含办公室内部。
 
 ```sh
