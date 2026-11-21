@@ -1,0 +1,6 @@
+Tevy model library — CC0-1.0
+Source: https://tevy.dev/models.json and https://tevy.dev/docs
+Each selected catalog entry explicitly declares CC0-1.0.
+Public-domain dedication: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
+Model source URLs, original and decoded hashes: ../../../assets.json
+Geometry and textures adapted only for Godot-compatible import.

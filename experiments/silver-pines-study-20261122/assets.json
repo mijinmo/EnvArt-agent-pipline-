@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "black-steel-street-bollard",
+    "name": "Black Steel Street Bollard",
+    "source": "https://tevy.dev/models/black-steel-street-bollard",
+    "download": "https://tevy.dev/models/black-steel-street-bollard/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "bb076dbf3595bcf5c34639b688121b2dd8515839b3832d13b1e88942199ea29e",
+    "adapted_sha256": "15ea2602a1fc8b4bd44307247016fe1fda76d771a1965d3a9fc3a2abefd2416a",
+    "dimensions": {
+      "x": 0.19,
+      "y": 1.012,
+      "z": 0.19
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "park-bench",
+    "name": "Park Bench",
+    "source": "https://tevy.dev/models/park-bench",
+    "download": "https://tevy.dev/models/park-bench/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "9525b92636291def968243fb78f9d13ae18597b4835006c6d0b7056591e49787",
+    "adapted_sha256": "35b189ce2b3bfd3bd39e5cb76237dd60f8f367a48974f76618bbecacccc190b2",
+    "dimensions": {
+      "x": 1.8,
+      "y": 0.918,
+      "z": 0.684
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "red-cottage",
+    "name": "Falu Red Cottage",
+    "source": "https://tevy.dev/models/red-cottage",
+    "download": "https://tevy.dev/models/red-cottage/v2/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "d497aab37944c6aa103beade4cae9371af5c6ecf327c264c3029fc9b9fb61fc5",
+    "adapted_sha256": "6dc5c5e749b8198d17994076851a9a5b12e3534061533db737f4ca615a968496",
+    "dimensions": {
+      "x": 9.65,
+      "y": 7.412,
+      "z": 8.815
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "red-wooden-house-gable-wall",
+    "name": "Red Wooden House Gable Wall",
+    "source": "https://tevy.dev/models/red-wooden-house-gable-wall",
+    "download": "https://tevy.dev/models/red-wooden-house-gable-wall/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "22fce2cacc3558104ce728fe6bca1906714ac2f2144ba099de251092bd0055d9",
+    "adapted_sha256": "171c4bae971fbe5a7d51341f7064db8f1e41e0ec6172041a44e3c0fcdf708c5e",
+    "dimensions": {
+      "x": 4.4,
+      "y": 1.813,
+      "z": 0.295
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "red-wooden-house-porch-deck",
+    "name": "Red Wooden House Porch Deck",
+    "source": "https://tevy.dev/models/red-wooden-house-porch-deck",
+    "download": "https://tevy.dev/models/red-wooden-house-porch-deck/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "dfcbeb780f8e8005b03b598f6f3ac100b2ac9b0f655376dd49d0a64cbcc0fd47",
+    "adapted_sha256": "0994abafbf8c9afb8a53f5dcbe8e812d91797a2764046eabaef781e4ae85a6d5",
+    "dimensions": {
+      "x": 2,
+      "y": 0.42,
+      "z": 2.455
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "red-wooden-house-roof-section",
+    "name": "Red Wooden House Roof Section",
+    "source": "https://tevy.dev/models/red-wooden-house-roof-section",
+    "download": "https://tevy.dev/models/red-wooden-house-roof-section/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "ae673ec932a20131e18cf6a93dd4eca24752b56fd2bdca9a7e4e24f1103067c6",
+    "adapted_sha256": "b7a7d62fe698f367dd2b6a7ddf982099711cc72c52e8ae644ba9d9e5b1b5e438",
+    "dimensions": {
+      "x": 2.06,
+      "y": 2.351,
+      "z": 4.85
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "temporary-mesh-fence-panel",
+    "name": "Temporary Mesh Fence Panel",
+    "source": "https://tevy.dev/models/temporary-mesh-fence-panel",
+    "download": "https://tevy.dev/models/temporary-mesh-fence-panel/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "71f1dcf7cc824d8badf27f26f1e7edb038730fb42ffbde7e54db0b39ca2f1d15",
+    "adapted_sha256": "f4d0c0a8aea9a36e20fc0094b1f48a9ed59d958da9814396f0d984b09991b79b",
+    "dimensions": {
+      "x": 3.72,
+      "y": 2.138,
+      "z": 0.7
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "traffic-light",
+    "name": "Traffic Light",
+    "source": "https://tevy.dev/models/traffic-light",
+    "download": "https://tevy.dev/models/traffic-light/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "55137e75d784fb2cbc1b24832da86472a5f3f9b117de7ee2b9cf2926fc762397",
+    "adapted_sha256": "8583504baccd5286c0cdbe2716b075cbfa6399b22ed7be699a5ea11f723849ab",
+    "dimensions": {
+      "x": 0.58,
+      "y": 3.512,
+      "z": 0.726
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "utility-pole",
+    "name": "Wooden Utility Pole",
+    "source": "https://tevy.dev/models/utility-pole",
+    "download": "https://tevy.dev/models/utility-pole/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "5f2892c97e2dcc0fd75fccdcae9fe1bf8bcda444ed771c112fdf655824c6c262",
+    "adapted_sha256": "81a45ba6adc6ed147aa2b03265ab90630d6a620a703fbe1d24fdb39b6a4331e8",
+    "dimensions": {
+      "x": 2,
+      "y": 9.545,
+      "z": 3.923
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "wooden-crate",
+    "name": "Wooden Crate",
+    "source": "https://tevy.dev/models/wooden-crate",
+    "download": "https://tevy.dev/models/wooden-crate/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "fa5b82e8c4f52dd7436fcc3b900ecfd2ce23df1a2b357c5e7fa6fa0b809df554",
+    "adapted_sha256": "a92e27b0c585c2560a29192942a3c6a548897d701c909bd250fc4077a9b89ae3",
+    "dimensions": {
+      "x": 0.603,
+      "y": 0.603,
+      "z": 0.602
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "wooden-jetty",
+    "name": "Wooden Lake Jetty",
+    "source": "https://tevy.dev/models/wooden-jetty",
+    "download": "https://tevy.dev/models/wooden-jetty/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "c29f8df1ad7739fdcfb25a380e8f3e935766560d4a19f234ff9889e51e47e5d8",
+    "adapted_sha256": "3d1057130600d9be7ffbf0d40d7acce309dde15376543d116327c0b3f340af20",
+    "dimensions": {
+      "x": 1.905,
+      "y": 2.163,
+      "z": 9.883
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "nordic-house-wall",
+    "name": "Nordic House Wall",
+    "source": "https://tevy.dev/models/nordic-house-wall",
+    "download": "https://tevy.dev/models/nordic-house-wall/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "a06ee8c7cf8278036cd01e847aa782f926a0a9af134eb47a5633da18640de4dc",
+    "adapted_sha256": "533ee83ae3ad2168f7701198040898197a6148679aaac9f3943378be5e6d74cb",
+    "dimensions": {
+      "x": 2,
+      "y": 2.8,
+      "z": 0.238
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "nordic-house-wall-door",
+    "name": "Nordic House Door Wall",
+    "source": "https://tevy.dev/models/nordic-house-wall-door",
+    "download": "https://tevy.dev/models/nordic-house-wall-door/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "760cee8a12089a4688a31504a52f03bc02c2f3f20dc8b03c4cb59a60fc431067",
+    "adapted_sha256": "8c4f425bc559cb4e2519392d05e0d0dfc456b00a0557d876fb9c9ba4f0f89958",
+    "dimensions": {
+      "x": 2,
+      "y": 2.8,
+      "z": 0.29
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "nordic-house-wall-half",
+    "name": "Nordic House Half Wall",
+    "source": "https://tevy.dev/models/nordic-house-wall-half",
+    "download": "https://tevy.dev/models/nordic-house-wall-half/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "1a58368fa9ebc09e689767c3d26d720adbebaf3128a8763762a2a39dd1af30a5",
+    "adapted_sha256": "81f073b4d843f4553b3254d99ab572885cadee1b610f77ff7c2a2027eff6717b",
+    "dimensions": {
+      "x": 1,
+      "y": 2.8,
+      "z": 0.238
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "nordic-house-wall-window",
+    "name": "Nordic House Window Wall",
+    "source": "https://tevy.dev/models/nordic-house-wall-window",
+    "download": "https://tevy.dev/models/nordic-house-wall-window/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "49ef771dcc1b98e811f8e28325d86fb980a7f2df1969e58a43bd5dbd2161e15f",
+    "adapted_sha256": "71bdd72837e5d882dd046953d35f92d6f3a788d73586c18c981914e4d69242d0",
+    "dimensions": {
+      "x": 2,
+      "y": 2.8,
+      "z": 0.34
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  }
+]
