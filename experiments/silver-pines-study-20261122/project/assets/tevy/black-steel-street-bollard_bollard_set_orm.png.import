@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxojiag8dbxwo"
-path="res://.godot/imported/black-steel-street-bollard_bollard_set_orm.png-da17c7727a25c18b45267387191b5896.ctex"
+path.s3tc="res://.godot/imported/black-steel-street-bollard_bollard_set_orm.png-da17c7727a25c18b45267387191b5896.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "4288f87bcd0ad0b51c5379de8220a1c4"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tevy/black-steel-street-bollard_bollard_set_orm.png"
-dest_files=["res://.godot/imported/black-steel-street-bollard_bollard_set_orm.png-da17c7727a25c18b45267387191b5896.ctex"]
+dest_files=["res://.godot/imported/black-steel-street-bollard_bollard_set_orm.png-da17c7727a25c18b45267387191b5896.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -1,40 +1,34 @@
 [gd_scene format=4]
 
-[ext_resource type="PackedScene" path="res://assets/tevy/red-cottage.glb" id="1_lqcfm"]
-[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_color.png" id="2_h0d2s"]
-[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_orm.png" id="3_fh3fo"]
-[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_normal.png" id="4_kvehl"]
-[ext_resource type="PackedScene" path="res://assets/tevy/temporary-mesh-fence-panel.glb" id="5_gxri1"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_color.png" id="6_ugrgv"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_orm.png" id="7_8xxj8"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_normal.png" id="8_76i0k"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_color.png" id="9_k4uh1"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_orm.png" id="10_ctk64"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_normal.png" id="11_xtlwm"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_color.png" id="12_6uu8m"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_orm.png" id="13_qsk6f"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_normal.png" id="14_0b60j"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_color.png" id="15_g7gx3"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_orm.png" id="16_d428t"]
-[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_normal.png" id="17_lrpu4"]
-[ext_resource type="PackedScene" path="res://assets/tevy/wooden-jetty.glb" id="18_tjgbg"]
-[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_color.png" id="19_j0dhp"]
-[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_orm.png" id="20_nimgj"]
-[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_normal.png" id="21_esqqt"]
-[ext_resource type="PackedScene" path="res://assets/tevy/park-bench.glb" id="22_jkefa"]
-[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_color.png" id="23_l8o13"]
-[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_orm.png" id="24_wlxi5"]
-[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_normal.png" id="25_citx7"]
-[ext_resource type="PackedScene" path="res://assets/tevy/utility-pole.glb" id="26_s7dfk"]
-[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_color.png" id="27_xd0aa"]
-[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_orm.png" id="28_hp8rk"]
-[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_normal.png" id="29_hnunc"]
-[ext_resource type="PackedScene" path="res://assets/tevy/traffic-light.glb" id="30_odpj2"]
-[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_color.png" id="31_des0d"]
-[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_orm.png" id="32_jeoau"]
-[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_normal.png" id="33_corbo"]
+[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_color.png" id="1_5xfd8"]
+[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_orm.png" id="2_ph26h"]
+[ext_resource type="Texture2D" path="res://assets/tevy/red-cottage_red-cottage0_normal.png" id="3_d4hpb"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_color.png" id="4_e74xn"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_orm.png" id="5_tj42l"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_galv_site-hoarding-kit_normal.png" id="6_uu14r"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_color.png" id="7_lqcfm"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_orm.png" id="8_h0d2s"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_steel_site-hoarding-kit_normal.png" id="9_fh3fo"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_color.png" id="10_kvehl"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_orm.png" id="11_gxri1"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_rubber_site-hoarding-kit_normal.png" id="12_ugrgv"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_color.png" id="13_8xxj8"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_orm.png" id="14_76i0k"]
+[ext_resource type="Texture2D" path="res://assets/tevy/temporary-mesh-fence-panel_mesh_site-hoarding-kit_normal.png" id="15_k4uh1"]
+[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_color.png" id="16_ctk64"]
+[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_orm.png" id="17_xtlwm"]
+[ext_resource type="Texture2D" path="res://assets/tevy/wooden-jetty_jetty0_normal.png" id="18_6uu8m"]
+[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_color.png" id="19_qsk6f"]
+[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_orm.png" id="20_0b60j"]
+[ext_resource type="Texture2D" path="res://assets/tevy/park-bench_park_bench_normal.png" id="21_g7gx3"]
+[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_color.png" id="22_d428t"]
+[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_orm.png" id="23_lrpu4"]
+[ext_resource type="Texture2D" path="res://assets/tevy/utility-pole_pole0_normal.png" id="24_tjgbg"]
+[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_color.png" id="25_j0dhp"]
+[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_orm.png" id="26_nimgj"]
+[ext_resource type="Texture2D" path="res://assets/tevy/traffic-light_traffic_light_normal.png" id="27_esqqt"]
 
-[sub_resource type="Environment" id="Environment_6efn1"]
+[sub_resource type="Environment" id="Environment_jkefa"]
 background_mode = 1
 background_color = Color(0.49411765, 0.6862745, 0.7019608, 1)
 ambient_light_source = 2
@@ -50,16 +44,16 @@ glow_intensity = 0.25
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxsgu"]
 resource_name = "red-cottage_0"
 cull_mode = 2
-albedo_texture = ExtResource("2_h0d2s")
+albedo_texture = ExtResource("1_5xfd8")
 metallic = 1.0
-metallic_texture = ExtResource("3_fh3fo")
+metallic_texture = ExtResource("2_ph26h")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("3_fh3fo")
+roughness_texture = ExtResource("2_ph26h")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("4_kvehl")
+normal_texture = ExtResource("3_d4hpb")
 ao_enabled = true
-ao_texture = ExtResource("3_fh3fo")
+ao_texture = ExtResource("2_ph26h")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_45xlv"]
@@ -98,40 +92,40 @@ shadow_mesh = SubResource("ArrayMesh_45xlv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n175x"]
 resource_name = "galv_site-hoarding-kit"
-albedo_texture = ExtResource("6_ugrgv")
+albedo_texture = ExtResource("4_e74xn")
 metallic = 1.0
-metallic_texture = ExtResource("7_8xxj8")
+metallic_texture = ExtResource("5_tj42l")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("7_8xxj8")
+roughness_texture = ExtResource("5_tj42l")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("8_76i0k")
+normal_texture = ExtResource("6_uu14r")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqghe"]
 resource_name = "steel_site-hoarding-kit"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("9_k4uh1")
+albedo_texture = ExtResource("7_lqcfm")
 metallic = 1.0
-metallic_texture = ExtResource("10_ctk64")
+metallic_texture = ExtResource("8_h0d2s")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("10_ctk64")
+roughness_texture = ExtResource("8_h0d2s")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("11_xtlwm")
+normal_texture = ExtResource("9_fh3fo")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqqyf"]
 resource_name = "rubber_site-hoarding-kit"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("12_6uu8m")
+albedo_texture = ExtResource("10_kvehl")
 metallic = 1.0
-metallic_texture = ExtResource("13_qsk6f")
+metallic_texture = ExtResource("11_gxri1")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("13_qsk6f")
+roughness_texture = ExtResource("11_gxri1")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("14_0b60j")
+normal_texture = ExtResource("12_ugrgv")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_762ob"]
@@ -139,14 +133,14 @@ resource_name = "mesh_site-hoarding-kit"
 transparency = 4
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("15_g7gx3")
+albedo_texture = ExtResource("13_8xxj8")
 metallic = 1.0
-metallic_texture = ExtResource("16_d428t")
+metallic_texture = ExtResource("14_76i0k")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("16_d428t")
+roughness_texture = ExtResource("14_76i0k")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("17_lrpu4")
+normal_texture = ExtResource("15_k4uh1")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yssyk"]
@@ -256,16 +250,16 @@ shadow_mesh = SubResource("ArrayMesh_yssyk")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upy40"]
 resource_name = "jetty_wood_0"
 cull_mode = 2
-albedo_texture = ExtResource("19_j0dhp")
+albedo_texture = ExtResource("16_ctk64")
 metallic = 1.0
-metallic_texture = ExtResource("20_nimgj")
+metallic_texture = ExtResource("17_xtlwm")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("20_nimgj")
+roughness_texture = ExtResource("17_xtlwm")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("21_esqqt")
+normal_texture = ExtResource("18_6uu8m")
 ao_enabled = true
-ao_texture = ExtResource("20_nimgj")
+ao_texture = ExtResource("17_xtlwm")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_umsj5"]
@@ -304,14 +298,14 @@ shadow_mesh = SubResource("ArrayMesh_umsj5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo7ia"]
 resource_name = "park_bench"
-albedo_texture = ExtResource("23_l8o13")
+albedo_texture = ExtResource("19_qsk6f")
 metallic = 1.0
-metallic_texture = ExtResource("24_wlxi5")
+metallic_texture = ExtResource("20_0b60j")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("24_wlxi5")
+roughness_texture = ExtResource("20_0b60j")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("25_citx7")
+normal_texture = ExtResource("21_g7gx3")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rpcms"]
@@ -351,16 +345,16 @@ shadow_mesh = SubResource("ArrayMesh_rpcms")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwjgv"]
 resource_name = "utility_pole_0"
 cull_mode = 2
-albedo_texture = ExtResource("27_xd0aa")
+albedo_texture = ExtResource("22_d428t")
 metallic = 1.0
-metallic_texture = ExtResource("28_hp8rk")
+metallic_texture = ExtResource("23_lrpu4")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("28_hp8rk")
+roughness_texture = ExtResource("23_lrpu4")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("29_hnunc")
+normal_texture = ExtResource("24_tjgbg")
 ao_enabled = true
-ao_texture = ExtResource("28_hp8rk")
+ao_texture = ExtResource("23_lrpu4")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5i3ga"]
@@ -554,14 +548,14 @@ shadow_mesh = SubResource("ArrayMesh_rf01e")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ltsp"]
 resource_name = "traffic_light"
-albedo_texture = ExtResource("31_des0d")
+albedo_texture = ExtResource("25_j0dhp")
 metallic = 1.0
-metallic_texture = ExtResource("32_jeoau")
+metallic_texture = ExtResource("26_nimgj")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("32_jeoau")
+roughness_texture = ExtResource("26_nimgj")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("33_corbo")
+normal_texture = ExtResource("27_esqqt")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_y82du"]
@@ -598,36 +592,36 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y82du")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2341"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8o13"]
 albedo_color = Color(0.4, 0.42352942, 0.41568628, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_ub3hs"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_wlxi5"]
 size = Vector2(40, 30)
 
-[node name="AssetAudition" type="Node3D" unique_id=590295318]
+[node name="AssetAudition" type="Node3D" unique_id=931636430]
 
-[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=880163974]
-environment = SubResource("Environment_6efn1")
+[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=749743009]
+environment = SubResource("Environment_jkefa")
 
-[node name="LateAfternoon" type="DirectionalLight3D" parent="." unique_id=905406101]
+[node name="LateAfternoon" type="DirectionalLight3D" parent="." unique_id=358714980]
 transform = Transform3D(0.8480481, 0.31147873, -0.4287137, 0, 0.809017, 0.58778524, 0.52991927, -0.49847016, 0.68608534, 0, 0, 0)
 light_color = Color(1, 0.89411765, 0.70980394, 1)
 light_energy = 1.55
 shadow_enabled = true
 
-[node name="red-cottage" type="Node3D" parent="." unique_id=1572137580]
+[node name="red-cottage" type="Node3D" parent="." unique_id=341862873]
 
-[node name="red-cottage" type="Node3D" parent="red-cottage" unique_id=1256415707 instance=ExtResource("1_lqcfm")]
+[node name="red-cottage" type="Node3D" parent="red-cottage" unique_id=1256415707]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20032549, -0.7925)
 
 [node name="red-cottage_lod0" type="MeshInstance3D" parent="red-cottage/red-cottage" unique_id=1196990436]
 transform = Transform3D(4.825, 0, 0, 0, 4.825, 0, 0, 0, 4.825, 0, 3.5061495, 0.7924999)
 mesh = SubResource("ArrayMesh_y873c")
 
-[node name="temporary-mesh-fence-panel" type="Node3D" parent="." unique_id=2043336588]
+[node name="temporary-mesh-fence-panel" type="Node3D" parent="." unique_id=539451358]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
 
-[node name="temporary-mesh-fence-panel" type="Node3D" parent="temporary-mesh-fence-panel" unique_id=1691388604 instance=ExtResource("5_gxri1")]
+[node name="temporary-mesh-fence-panel" type="Node3D" parent="temporary-mesh-fence-panel" unique_id=1691388604]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6280365e-05, 0)
 
 [node name="mesh_fence_panel" type="Node3D" parent="temporary-mesh-fence-panel/temporary-mesh-fence-panel" unique_id=1871377283]
@@ -636,30 +630,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6280365e-05, 0)
 transform = Transform3D(1.86, 0, 0, 0, 1.86, 0, 0, 0, 1.86, 0, 1.0690349, 0)
 mesh = SubResource("ArrayMesh_2rdlg")
 
-[node name="wooden-jetty" type="Node3D" parent="." unique_id=1631634617]
+[node name="wooden-jetty" type="Node3D" parent="." unique_id=791689902]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
-[node name="wooden-jetty" type="Node3D" parent="wooden-jetty" unique_id=1663314321 instance=ExtResource("18_tjgbg")]
+[node name="wooden-jetty" type="Node3D" parent="wooden-jetty" unique_id=1663314321]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10095304, 1.0023909, 3.992755)
 
 [node name="wooden-jetty_lod0" type="MeshInstance3D" parent="wooden-jetty/wooden-jetty" unique_id=1617743038]
 transform = Transform3D(4.941745, 0, 0, 0, 4.941745, 0, 0, 0, 4.941745, 0.10095304, 0.078648865, -3.9927547)
 mesh = SubResource("ArrayMesh_ryxl4")
 
-[node name="park-bench" type="Node3D" parent="." unique_id=716164970]
+[node name="park-bench" type="Node3D" parent="." unique_id=103248215]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
 
-[node name="park-bench2" type="Node3D" parent="park-bench" unique_id=427984595 instance=ExtResource("22_jkefa")]
+[node name="park-bench2" type="Node3D" parent="park-bench" unique_id=427984595]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013749361, 0.034192294)
 
 [node name="park-bench" type="MeshInstance3D" parent="park-bench/park-bench2" unique_id=623606238]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.44532835, -0.03419228)
 mesh = SubResource("ArrayMesh_atbjc")
 
-[node name="utility-pole" type="Node3D" parent="." unique_id=878880843]
+[node name="utility-pole" type="Node3D" parent="." unique_id=1419662741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -1)
 
-[node name="utility-pole" type="Node3D" parent="utility-pole" unique_id=2091493789 instance=ExtResource("26_s7dfk")]
+[node name="utility-pole" type="Node3D" parent="utility-pole" unique_id=2091493789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010438561, 0.40045166, 1.7708018)
 
 [node name="utility-pole_lod0" type="MeshInstance3D" parent="utility-pole/utility-pole" unique_id=757728091]
@@ -687,10 +681,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8604386, 8.724, 0.11965)
 transform = Transform3D(0.067499995, 0, 0, 0, 0.067499995, 0, 0, 0, 0.067499995, 0, -0.0315, 0)
 mesh = SubResource("ArrayMesh_ei2jm")
 
-[node name="traffic-light" type="Node3D" parent="." unique_id=536969515]
+[node name="traffic-light" type="Node3D" parent="." unique_id=1433419480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -1)
 
-[node name="traffic-light2" type="Node3D" parent="traffic-light" unique_id=1009208351 instance=ExtResource("30_odpj2")]
+[node name="traffic-light2" type="Node3D" parent="traffic-light" unique_id=1009208351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.22300002)
 
 [node name="lamp_amber" type="MeshInstance3D" parent="traffic-light/traffic-light2" unique_id=1486334838]
@@ -709,6 +703,6 @@ mesh = SubResource("ArrayMesh_lisba")
 transform = Transform3D(1.756, 0, 0, 0, 1.756, 0, 0, 0, 1.756, 0, 1.756, 0.22300002)
 mesh = SubResource("ArrayMesh_q3cqd")
 
-[node name="@MeshInstance3D@2" type="MeshInstance3D" parent="." unique_id=1469505445]
-material_override = SubResource("StandardMaterial3D_w2341")
-mesh = SubResource("PlaneMesh_ub3hs")
+[node name="@MeshInstance3D@2" type="MeshInstance3D" parent="." unique_id=698733427]
+material_override = SubResource("StandardMaterial3D_l8o13")
+mesh = SubResource("PlaneMesh_wlxi5")

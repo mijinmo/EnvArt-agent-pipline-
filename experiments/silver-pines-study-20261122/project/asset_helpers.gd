@@ -21,9 +21,12 @@ func bounds(n: Node3D, transform := Transform3D.IDENTITY) -> AABB:
 func add_asset(path: String, parent: Node3D, label: String, pos: Vector3, height: float = 0.0, angle: float = 0.0, fit := Vector3.ZERO) -> Node3D:
 	var n := Node3D.new()
 	n.name = label
-	parent.add_child(n)
+	parent.add_child(n, true)
 	n.owner = root
 	var item = load(path).instantiate()
+	# Localize imported nodes before assigning their ownership to the saved scene.
+	# Retaining the PackedScene link AND serializing its children creates duplicates.
+	item.scene_file_path = ""
 	n.add_child(item)
 	item.owner = root
 	var box := bounds(item)

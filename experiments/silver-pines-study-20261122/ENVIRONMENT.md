@@ -39,10 +39,12 @@
 ## 当前交付与检查
 
 - 工程：`project/project.godot`；可直接编辑的保存场景：`project/ferry_office.tscn`。建筑、道具、背景、天气与玩家分组；17份来源记录包含试听淘汰整栋和当前模块/道具/树木，不等同于17份均在最终场景使用。
-- 实际 Godot 4.7.2 / macOS Metal Forward+ 出图：`captures/final/{hero,entrance,shore,structure}.png`。最终目录名表示本轮交付快照，**不表示用户美术验收**。已逐张查看当前四机位；未修图。
-- `captures/draft-01` / `draft-02` 为早期正交机位；`draft-03` / `draft-04` / `final` 为相同透视机位，可用于材质与气氛修订对比。当前3D环境为透视相机、固定横向玩法平面，不是全场景像素滤镜。
-- `validation/player-01/checks.json` 的9项实际输入/物理检查全部通过：落在栈道、右移、行走动画、木箱阻挡、跳跃升高0.88米、跳过后落地、锁定纵深、镜头跟随、左移与转身。同次运行的 idle / walk / jump / land 是关键帧，不是视频。
-- 素材导入、保存重开和游戏渲染成功。退出时 Metal Forward+ 打印资源/RID未释放警告与错误行；正常运行及检查完成，进程退出。**该退出清理问题未定位，不能写成零错误验证**；没有为此扩大引擎回归。其他平台后端未验证。
+- 实际 Godot 4.7.2 / macOS Metal Forward+ 出图：`captures/selected/{hero,entrance,shore,structure}.png`。该目录表示本轮交付快照，**不表示用户美术验收**。已逐张查看当前四机位；未修图。
+- `captures/draft-01` / `draft-02` 为早期正交机位；`draft-03` / `draft-04` / `final` / `selected` 为相同透视机位，可用于材质与气氛修订对比。当前3D环境为透视相机、固定横向玩法平面，不是全场景像素滤镜。
+- `validation/player-02/checks.json` 的9项实际输入/物理检查全部通过：落在栈道、右移、行走动画、木箱阻挡、跳跃升高0.88米、跳过后落地、锁定纵深、镜头跟随、左移与转身。同次运行的 idle / walk / jump / land 是关键帧，不是视频。
+- 素材导入、保存重开和游戏渲染成功。最终导入、游戏出图与控制器检查日志未见 ERROR / WARNING；其他平台后端未验证。
+
+保存修正：阶段2检查发现导入模型仍保留 PackedScene 实例关系，同时把所有子节点改为根场景所有，造成重复实例、编辑器对话框错误和退出RID泄漏。现先清空导入根节点的 `scene_file_path` 将其本地化，再保存可编辑子节点。重开编辑器导入、重拍四机位及重跑9项输入检查后，上述错误均消失。`captures/final` 与 `player-01` 是修正前留档；当前使用 `selected` 与 `player-02`。纹理3D压缩/mipmap设置亦随编辑器实际导入保存。
 
 ### 观察到的进展和差距
 

@@ -1,0 +1,56 @@
+Godot 4.7.2 / macOS Metal Forward+
+Current: captures/selected and validation/player-02
+
+build-localized.log
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SAVED ferry_office.tscn — modules, background, weather and player
+
+capture-localized.log
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)
+
+CAPTURE hero
+CAPTURE entrance
+CAPTURE shore
+CAPTURE structure
+
+player-02.log
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M4 (Apple9)
+
+lands_on_boardwalk: true 0.99003899097443
+right_input_moves: true 3.60000061988831
+walk_animation: true 1
+crate_blocks_walking: true 5.27978992462158
+jump_lifts_player: true 0.88194411993027
+lands_beyond_crate: true (8.42907, 0.990806, 1.4)
+depth_locked: true 1.39999997615814
+camera_tracks_player: true 4.02153968811035
+left_input_and_facing: true -0.67500114440918
+
+import-localized.log
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (2 steps)
+[   0% ] update_scripts_classes |
+[  33% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[  33% ] loading_editor_layout | Reopening scenes...
+[  50% ] loading_editor_layout | Loading central editor layout...
+[  66% ] loading_editor_layout | Loading plugin window layout...
+[  83% ] loading_editor_layout | Editor layout ready.
+[ DONE ] loading_editor_layout

@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca6fkwj0iqvyn"
-path="res://.godot/imported/park-bench_park_bench_color.png-09b7b79a8a53dfd4ea7026dccbe56f92.ctex"
+path.s3tc="res://.godot/imported/park-bench_park_bench_color.png-09b7b79a8a53dfd4ea7026dccbe56f92.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "a870670193e99245f25a82ab760f21ba"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tevy/park-bench_park_bench_color.png"
-dest_files=["res://.godot/imported/park-bench_park_bench_color.png-09b7b79a8a53dfd4ea7026dccbe56f92.ctex"]
+dest_files=["res://.godot/imported/park-bench_park_bench_color.png-09b7b79a8a53dfd4ea7026dccbe56f92.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

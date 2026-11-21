@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt4vrgp7q07q"
-path="res://.godot/imported/traffic-light_traffic_light_color.png-0c8774a8f7899c863235c01fffb99bc5.ctex"
+path.s3tc="res://.godot/imported/traffic-light_traffic_light_color.png-0c8774a8f7899c863235c01fffb99bc5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "c0563eba5ae3533d4dfaf64803e4bd0e"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tevy/traffic-light_traffic_light_color.png"
-dest_files=["res://.godot/imported/traffic-light_traffic_light_color.png-0c8774a8f7899c863235c01fffb99bc5.ctex"]
+dest_files=["res://.godot/imported/traffic-light_traffic_light_color.png-0c8774a8f7899c863235c01fffb99bc5.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

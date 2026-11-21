@@ -1,0 +1,42 @@
+{
+  "all_pass": true,
+  "checks": {
+    "camera_tracks_player": {
+      "observed": 4.02153968811035,
+      "pass": true
+    },
+    "crate_blocks_walking": {
+      "observed": 5.27978992462158,
+      "pass": true
+    },
+    "depth_locked": {
+      "observed": 1.39999997615814,
+      "pass": true
+    },
+    "jump_lifts_player": {
+      "observed": 0.881944119930267,
+      "pass": true
+    },
+    "lands_beyond_crate": {
+      "observed": "(8.42907, 0.990806, 1.4)",
+      "pass": true
+    },
+    "lands_on_boardwalk": {
+      "observed": 0.990038990974426,
+      "pass": true
+    },
+    "left_input_and_facing": {
+      "observed": -0.67500114440918,
+      "pass": true
+    },
+    "right_input_moves": {
+      "observed": 3.60000061988831,
+      "pass": true
+    },
+    "walk_animation": {
+      "observed": 1,
+      "pass": true
+    }
+  },
+  "engine": "4.7.2-stable (official)"
+}

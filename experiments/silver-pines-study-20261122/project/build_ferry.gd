@@ -26,7 +26,7 @@ func mesh(parent: Node3D, label: String, shape: Mesh, pos: Vector3, mat: Materia
 	n.mesh = shape
 	n.position = pos
 	n.material_override = mat
-	parent.add_child(n)
+	parent.add_child(n, true)
 	return n
 
 func box(parent: Node3D,label: String,pos: Vector3,size: Vector3,mat: Material) -> MeshInstance3D:
@@ -48,7 +48,7 @@ func collision(parent: Node3D,label: String,pos: Vector3,size: Vector3) -> void:
 	var n := StaticBody3D.new()
 	n.name = label
 	n.position = pos
-	parent.add_child(n)
+	parent.add_child(n, true)
 	var s := CollisionShape3D.new()
 	s.shape = BoxShape3D.new()
 	s.shape.size = size
@@ -97,7 +97,7 @@ func text3(parent: Node3D,label: String,words: String,pos: Vector3,size: int,col
 	t.no_depth_test=false
 	t.shaded=true
 	t.position=pos
-	parent.add_child(t)
+	parent.add_child(t, true)
 
 func light(parent: Node3D,label: String,pos: Vector3,color: Color,energy: float,radius: float) -> void:
 	var n := OmniLight3D.new()

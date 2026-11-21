@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8as3h1bc0br3"
-path="res://.godot/imported/nordic-house-wall-window_house-wall-kit0_color.png-ed36c13058b1a92bf2e48e93a9579466.ctex"
+path.s3tc="res://.godot/imported/nordic-house-wall-window_house-wall-kit0_color.png-ed36c13058b1a92bf2e48e93a9579466.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "e5ac8efedc407f49a96e2785facce154"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tevy/nordic-house-wall-window_house-wall-kit0_color.png"
-dest_files=["res://.godot/imported/nordic-house-wall-window_house-wall-kit0_color.png-ed36c13058b1a92bf2e48e93a9579466.ctex"]
+dest_files=["res://.godot/imported/nordic-house-wall-window_house-wall-kit0_color.png-ed36c13058b1a92bf2e48e93a9579466.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
