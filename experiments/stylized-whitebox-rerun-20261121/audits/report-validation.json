@@ -454,7 +454,7 @@
     "UI and whitebox/traversal checks do not establish user art acceptance."
   ],
   "initial_report_sha256": "ba387b299aa1ca84936ce92d07002c78765875f8800ecc0c85934651e8b404cd",
-  "report_sha256": "8860bd402e4c1cf96befbac7073684ec6a97cc847afb57bab804a2c617d9ae89",
+  "report_sha256": "1fe5fef433bb7320d04ec7562b52cd98fcae908cdff211de9b8735f8ef36cc63",
   "enclosure_review_update": {
     "date": "2026-11-21",
     "change": "Two indoor drafts marked production-incomplete; spatial completeness category added. No scene, asset or capture modifications.",
@@ -501,5 +501,13 @@
     "category_screenshot_viewed": true,
     "scene_rerender_required": false,
     "reason": "Reassessment and documentation only; original images unchanged."
-  }
+  },
+  "content_updates": [
+    {
+      "date": "2026-11-22",
+      "change": "Recorded user endorsement of close-up results and pipeline effectiveness; indoor enclosure issues remain open.",
+      "previous_report_sha256": "8860bd402e4c1cf96befbac7073684ec6a97cc847afb57bab804a2c617d9ae89",
+      "validation_scope": "Text/JSON feedback update only; renderer, image paths and interaction code unchanged. No engine or repeated MCP validation requested."
+    }
+  ]
 }
