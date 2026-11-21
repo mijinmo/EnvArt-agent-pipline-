@@ -22,3 +22,5 @@
 - 2026-11-21 用户否定上一批盗贼之海 / 意航员 2 / 恶意不息 / 原神：输入错误地只保留单块地板，遗漏原白盒。旧图和工程留档，不能算原白盒管线验证。用户已要求重跑，当前任务为 `experiments/stylized-whitebox-rerun-20261121/brief.json`，保持原 `demo/controller_lab.tscn` 的17个物理构件、碰撞、门洞/坡道/台阶/跳台及通路，禁止用“中性输入”名义删除。本轮四方向 Astra/high 已完成，入口 `docs/stylized-whitebox-rerun.html`；原17构件和每组10项必要通行检查通过，但美术差距仍在，尚待用户校准。不得凭技术通过宣称美术达标，不自动扩展六档矩阵。
 - Godot AI MCP 是可选编辑与反馈工具，配置和使用见 `docs/godot-ai-mcp.md`。首次使用先核对工程完整路径并选择精确 editor session；编辑器预览不替代同机位游戏实图。共享 MCP 后端不构成独立候选隔离，当前 MacBook 禁止启动 Godot 的约定仍有效。
 - 2026-11-21 用户新指令授权原 MacBook 进行一次 SIGNALIS 局部 MCP 流程验证，记录在 `experiments/signalis-mcp-study/ENVIRONMENT.md`。仅此任务恢复 Godot 运行；不自动恢复其他制作或矩阵，完成后关闭本任务进程。
+
+- 2026-11-22 用户授权新分支探索，并明确选择“横向视角的2.5D场景”；当前分支 `explore/sideview-2p5d` 的任务为 `experiments/sideview-2p5d-study-20261122/ENVIRONMENT.md`。现有 main 已推送至 `c737e6c`。单局部方向初稿和实机对照已完成，原17构件、10项必要通行和侧视跟随通过；题材/美术尚待用户校准，不自动扩展矩阵或宣称完成全场。

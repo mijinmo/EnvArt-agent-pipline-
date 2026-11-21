@@ -2,6 +2,8 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
+**2026-11-22 横向 2.5D 新方向：** 在 `explore/sideview-2p5d` 分支完成“山谷驿站”局部方向初稿。[看实机对照与横移关键帧](docs/sideview-2p5d-study.html)，[工程、操作及复拍说明](experiments/sideview-2p5d-study-20261122/ENVIRONMENT.md)。原17构件与10项必要通行检查通过，角色为占位，美术方向尚待用户校准。既有 main 已推送至 `c737e6c`，主工程入口保持原状。
+
 **Godot AI MCP 接入（2026-11-21）：** 新增固定版 4.4.2 安装器与项目级 Codex 配置，辅助实时场景、材质/灯光编辑和图像反馈。制作机拉取后运行 `python3 tools/setup_godot_ai.py --prewarm`，具体工程选择、插件启用、截图区分及独立试跑边界见 [配置与使用说明](docs/godot-ai-mcp.md)。用户随后授权的 [SIGNALIS 单局部试跑](docs/signalis-mcp-study.html) 已跑通素材试装、审美校准、MCP 编辑与三机位实图反馈；本轮进程已关闭，相对质量与额度收益尚无对照验证。
 
 **接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意；SIGNALIS 已实践校准与自改，独立接手和额度收益尚未验证。

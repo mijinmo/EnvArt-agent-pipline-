@@ -67,3 +67,5 @@ godot --path . --rendering-driver metal --script res://capture_motion.gd -- ../c
 实机后端为 macOS Metal Forward+。其他平台选择自身驱动，尚未验证外观一致性。资产清单位于 `project/assets/*/manifest.json`，原作者许可证同目录；这些是已下载并检查的免费子集，不是作者完整付费包。本轮没有重新购买或下载付费内容。
 
 Git：现有 main 已通过本机已认证的 SSH 身份推送至 `c737e6c`；未改全局凭据。当前新方向仅在独立分支。
+
+报告：[同机位与横移关键帧](../../docs/sideview-2p5d-study.html)。私人入口：<http://100.96.75.54:8081/docs/sideview-2p5d-study.html>。已完成17项页面交互/图片/宽度检查、13项HTTP与白名单检查；桌面和手机截图已查看。本机通过 Tailscale 地址确认响应，尚未收到用户在 MacBook 的新页面打开确认。

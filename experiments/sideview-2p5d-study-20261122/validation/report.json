@@ -1,0 +1,167 @@
+{
+  "ui": [
+    {
+      "name": "whitebox/overall",
+      "value": true
+    },
+    {
+      "name": "whitebox/close",
+      "value": true
+    },
+    {
+      "name": "whitebox/transition",
+      "value": true
+    },
+    {
+      "name": "whitebox/structure",
+      "value": true
+    },
+    {
+      "name": "draft/overall",
+      "value": true
+    },
+    {
+      "name": "draft/close",
+      "value": true
+    },
+    {
+      "name": "draft/transition",
+      "value": true
+    },
+    {
+      "name": "draft/structure",
+      "value": true
+    },
+    {
+      "name": "selected/overall",
+      "value": true
+    },
+    {
+      "name": "selected/close",
+      "value": true
+    },
+    {
+      "name": "selected/transition",
+      "value": true
+    },
+    {
+      "name": "selected/structure",
+      "value": true
+    },
+    {
+      "name": "motion/left",
+      "value": true
+    },
+    {
+      "name": "motion/middle",
+      "value": true
+    },
+    {
+      "name": "motion/right",
+      "value": true
+    },
+    {
+      "name": "desktop no overflow",
+      "value": true
+    },
+    {
+      "name": "mobile no overflow",
+      "value": true
+    }
+  ],
+  "http": [
+    {
+      "url": "http://127.0.0.1:18762/docs/sideview-2p5d-study.html",
+      "status": 200,
+      "bytes": 10972,
+      "content_type": "text/html",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/sideview-2p5d-study.html",
+      "status": 200,
+      "bytes": 10972,
+      "content_type": "text/html",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/",
+      "status": 200,
+      "bytes": 792,
+      "content_type": "text/html",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/stylized-local-pilots.html",
+      "status": 200,
+      "bytes": 36733,
+      "content_type": "text/html",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/gpt62-independent-matrix.html",
+      "status": 200,
+      "bytes": 111894,
+      "content_type": "text/html",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/experiments/sideview-2p5d-study-20261122/captures/selected/overall.png",
+      "status": 200,
+      "bytes": 1238375,
+      "content_type": "image/png",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/experiments/sideview-2p5d-study-20261122/captures/motion/right.png",
+      "status": 200,
+      "bytes": 1352011,
+      "content_type": "image/png",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/AGENTS.md",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/.codex/config.toml",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/.git/config",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/project.godot",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/docs/",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    },
+    {
+      "url": "http://100.96.75.54:8081/%2e%2e/AGENTS.md",
+      "status": 404,
+      "bytes": 447,
+      "content_type": "text/html;charset=utf-8",
+      "passed": true
+    }
+  ],
+  "desktop_and_mobile_images_reviewed": true,
+  "remote_browser_confirmed_by_user": false
+}
