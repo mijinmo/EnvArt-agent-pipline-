@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "check": "door direction -1.0",
+      "passed": true,
+      "position": [
+        0.0,
+        0.000312499701976776,
+        -6.06499528884888
+      ]
+    },
+    {
+      "check": "door direction 1.0",
+      "passed": true,
+      "position": [
+        -0.0142698679119349,
+        0.000910879520233721,
+        -1.86875116825104
+      ]
+    },
+    {
+      "check": "ramp to landing",
+      "passed": true,
+      "position": [
+        -6.0,
+        2.00030469894409,
+        -6.60030317306519
+      ]
+    },
+    {
+      "check": "JumpLow original top remains usable",
+      "passed": true,
+      "position": [
+        1.0,
+        0.400173634290695,
+        1.0
+      ]
+    },
+    {
+      "check": "JumpMid original top remains usable",
+      "passed": true,
+      "position": [
+        1.0,
+        0.900173604488373,
+        -1.0
+      ]
+    },
+    {
+      "check": "JumpHigh original top remains usable",
+      "passed": true,
+      "position": [
+        3.0,
+        1.40017354488373,
+        -3.0
+      ]
+    },
+    {
+      "check": "Step1 original top remains usable",
+      "passed": true,
+      "position": [
+        5.0,
+        0.200195252895355,
+        2.0
+      ]
+    },
+    {
+      "check": "Step2 original top remains usable",
+      "passed": true,
+      "position": [
+        5.0,
+        0.400195240974426,
+        1.39999997615814
+      ]
+    },
+    {
+      "check": "Step3 original top remains usable",
+      "passed": true,
+      "position": [
+        5.0,
+        0.600195169448853,
+        0.800000011920929
+      ]
+    },
+    {
+      "check": "Step4 original top remains usable",
+      "passed": true,
+      "position": [
+        5.0,
+        0.800195217132568,
+        0.200000002980232
+      ]
+    }
+  ],
+  "passed": true,
+  "game": "sea-of-thieves",
+  "scene": "draft.tscn",
+  "head": "29760d93d82fd44f577d71821a6d1bbe44b6ad78"
+}

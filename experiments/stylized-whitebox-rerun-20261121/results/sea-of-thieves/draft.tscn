@@ -1,0 +1,2329 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="R1"]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="R2"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/open_arch.gltf" id="R3"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/wall.gltf" id="R4"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/wall_scaffold.gltf" id="R5"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/wall_window_closed.gltf" id="R6"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/wall_cracked.gltf" id="R7"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/flag_course_0.gltf" id="R8"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/flag_course_1.gltf" id="R9"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/flag_course_2.gltf" id="R10"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/flag_course_3.gltf" id="R11"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/shelves.gltf" id="R12"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/barrel_small_stack.gltf" id="R13"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/barrel_large.gltf" id="R14"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/box_small.gltf" id="R15"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/cut_arch.gltf" id="R16"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/adzed_oak_2.gltf" id="R17"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/adzed_oak_1.gltf" id="R18"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/jambs.gltf" id="R19"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/adzed_oak_0.gltf" id="R20"]
+
+[ext_resource type="Texture2D" path="res://art/marks/brine_cellar.svg" id="R21"]
+
+[ext_resource type="Texture2D" path="res://art/marks/sounder_tide.svg" id="R22"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/keyring_hanging.gltf" id="R23"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/box_large.gltf" id="R24"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/barrel_small.gltf" id="R25"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/trunk_medium_B.gltf" id="R26"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/bottle_A_labeled_green.gltf" id="R27"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/bottle_B_brown.gltf" id="R28"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/bottle_C_green.gltf" id="R29"]
+
+[ext_resource type="PackedScene" path="res://art/cellar/table_medium.gltf" id="R30"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/coil.gltf" id="R31"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/stool.gltf" id="R32"]
+
+[ext_resource type="Texture2D" path="res://art/marks/sounder_umber.svg" id="R33"]
+
+[ext_resource type="PackedScene" path="res://art/fittings/ships_lantern.gltf" id="R34"]
+
+[ext_resource type="Texture2D" path="res://art/marks/bonded_store_flag.svg" id="R35"]
+
+[sub_resource type="Environment" id="CellarAir"]
+background_mode = 1
+background_color = Color(0.12, 0.155, 0.20, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.65, 0.68, 0.83, 1)
+ambient_light_energy = 0.43
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.7
+ssao_intensity = 1.35
+glow_enabled = true
+glow_intensity = 0.14
+
+[sub_resource type="StandardMaterial3D" id="Mortar"]
+albedo_color = Color(0.075, 0.071, 0.081, 1)
+roughness = 0.82
+
+[sub_resource type="StandardMaterial3D" id="SmokedOak"]
+albedo_color = Color(0.255, 0.146, 0.105, 1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="UnitBox"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="BlacksmithIron"]
+albedo_color = Color(0.184, 0.178, 0.17, 1)
+roughness = 0.57
+
+[sub_resource type="StandardMaterial3D" id="Ink_brine_cellar"]
+transparency = 4
+alpha_scissor_threshold = 0.4
+cull_mode = 2
+roughness = 0.91
+albedo_texture = ExtResource("R21")
+
+[sub_resource type="QuadMesh" id="Face_brine_cellar6"]
+size = Vector2(2.28, 0.355)
+material = SubResource("Ink_brine_cellar")
+
+[sub_resource type="StandardMaterial3D" id="Ink_sounder_tide"]
+transparency = 4
+alpha_scissor_threshold = 0.4
+cull_mode = 2
+roughness = 0.91
+albedo_texture = ExtResource("R22")
+
+[sub_resource type="QuadMesh" id="Face_sounder_tide8"]
+size = Vector2(0.38, 0.38)
+material = SubResource("Ink_sounder_tide")
+
+[sub_resource type="CylinderMesh" id="Turned9"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned10"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned11"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned12"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned13"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned14"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned15"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned16"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned17"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned18"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned19"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned20"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.004
+radial_segments = 12
+rings = 0
+
+[sub_resource type="QuadMesh" id="Face_sounder_tide21"]
+size = Vector2(0.39, 0.39)
+material = SubResource("Ink_sounder_tide")
+
+[sub_resource type="StandardMaterial3D" id="Ink_sounder_umber"]
+transparency = 4
+alpha_scissor_threshold = 0.4
+cull_mode = 2
+roughness = 0.91
+albedo_texture = ExtResource("R33")
+
+[sub_resource type="QuadMesh" id="Face_sounder_umber23"]
+size = Vector2(0.38, 0.38)
+material = SubResource("Ink_sounder_umber")
+
+[sub_resource type="QuadMesh" id="Face_sounder_tide24"]
+size = Vector2(0.54, 0.54)
+material = SubResource("Ink_sounder_tide")
+
+[sub_resource type="QuadMesh" id="Face_sounder_umber25"]
+size = Vector2(0.53, 0.53)
+material = SubResource("Ink_sounder_umber")
+
+[sub_resource type="CylinderMesh" id="Turned26"]
+top_radius = 0.21
+bottom_radius = 0.21
+height = 0.16
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Hemp"]
+albedo_color = Color(0.49, 0.346, 0.209, 1)
+roughness = 0.82
+
+[sub_resource type="CylinderMesh" id="Turned28"]
+top_radius = 0.023
+bottom_radius = 0.023
+height = 1.8900000000000006
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned29"]
+top_radius = 0.023
+bottom_radius = 0.023
+height = 1.8900000000000006
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned30"]
+top_radius = 0.205
+bottom_radius = 0.205
+height = 0.21
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned31"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.3400000000000003
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned32"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.3599999999999999
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned33"]
+top_radius = 0.017
+bottom_radius = 0.017
+height = 0.7600000000000002
+radial_segments = 12
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Ink_bonded_store_flag"]
+transparency = 4
+alpha_scissor_threshold = 0.4
+cull_mode = 2
+roughness = 0.91
+albedo_texture = ExtResource("R35")
+
+[sub_resource type="QuadMesh" id="Face_bonded_store_flag35"]
+size = Vector2(1.3, 1.96)
+material = SubResource("Ink_bonded_store_flag")
+
+[sub_resource type="QuadMesh" id="Face_sounder_umber36"]
+size = Vector2(0.54, 0.54)
+material = SubResource("Ink_sounder_umber")
+
+[sub_resource type="StandardMaterial3D" id="TapBronze"]
+albedo_color = Color(0.49, 0.31, 0.145, 1)
+roughness = 0.44
+
+[sub_resource type="CylinderMesh" id="Turned38"]
+top_radius = 0.069
+bottom_radius = 0.069
+height = 0.075
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned39"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.13
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned40"]
+top_radius = 0.026
+bottom_radius = 0.026
+height = 0.093
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderMesh" id="Turned41"]
+top_radius = 0.024
+bottom_radius = 0.024
+height = 0.087
+radial_segments = 12
+rings = 0
+
+[node name="TideCellar" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("R1")]
+
+
+[node name="Inspection" parent="." instance=ExtResource("R2")]
+
+
+[node name="Masonry" type="Node3D" parent="."]
+
+
+[node name="Paving" type="Node3D" parent="."]
+
+
+[node name="Cooperage" type="Node3D" parent="."]
+
+
+[node name="LightRig" type="Node3D" parent="."]
+
+
+[node name="Warehouse" type="Node3D" parent="."]
+
+
+[node name="LoadingWay" type="Node3D" parent="."]
+
+
+[node name="Signage" type="Node3D" parent="."]
+
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("CellarAir")
+
+[node name="HatchLight" type="DirectionalLight3D" parent="LightRig"]
+rotation_degrees = Vector3(-54, 20, -15)
+light_color = Color(0.73,0.84,1,1)
+light_energy = 0.50
+shadow_enabled = true
+light_angular_distance = 0.0
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel"]
+visible = false
+
+[node name="OpenArch1" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.72, 0.88, 0.83)
+
+[node name="Wall1" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(-8, 0, -11.56)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold1" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-4, 0, -11.56)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallWindowClosed1" parent="Masonry" instance=ExtResource("R6")]
+position = Vector3(0, 0, -11.56)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallCracked1" parent="Masonry" instance=ExtResource("R7")]
+position = Vector3(4, 0, -11.56)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold2" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(8, 0, -11.56)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold3" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(10, 0, -9)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 0.78, 0.62)
+
+[node name="Wall2" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(10, 0, -5)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 0.78, 0.62)
+
+[node name="WallCracked2" parent="Masonry" instance=ExtResource("R7")]
+position = Vector3(10, 0, -2)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.54, 0.78, 0.62)
+
+[node name="WallScaffold4" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(8, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.78, 0.65)
+
+[node name="PavingBed1" type="MeshInstance3D" parent="Paving"]
+position = Vector3(1, 0.0005, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(18, 0.001, 14)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Mortar")
+
+[node name="FlagCourse01" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse11" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-7, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse02" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse12" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-7, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse03" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse13" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-7, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse04" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse21" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-5, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse31" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-5, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse22" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-5, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse32" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-5, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse23" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-5, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse33" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-5, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse24" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-5, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse05" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse14" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-3, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse06" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse15" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-3, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse07" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse16" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(-3, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse08" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse25" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-1, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse34" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-1, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse26" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-1, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse35" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-1, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse27" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-1, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse36" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(-1, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse28" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(-1, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse09" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse17" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(1, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse010" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse18" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(1, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse011" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse19" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(1, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse012" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse29" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(3, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse37" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(3, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse210" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(3, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse38" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(3, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse211" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(3, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse39" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(3, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse212" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(3, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse013" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse110" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(5, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse014" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse111" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(5, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse015" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse112" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(5, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse016" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse213" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(7, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse310" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(7, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse214" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(7, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse311" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(7, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse215" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(7, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse312" parent="Paving" instance=ExtResource("R11")]
+position = Vector3(7, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse216" parent="Paving" instance=ExtResource("R10")]
+position = Vector3(7, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse017" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.0019, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse113" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(9, 0.0019, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse018" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.0019, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse114" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(9, 0.0019, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse019" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.0019, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse115" parent="Paving" instance=ExtResource("R9")]
+position = Vector3(9, 0.0019, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="FlagCourse020" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.0019, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.012, 0.5)
+
+[node name="Shelves1" parent="Cooperage" instance=ExtResource("R12")]
+position = Vector3(3.05, 0, -6.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.34, 0.83, 1.7)
+
+[node name="BarrelSmallStack1" parent="Cooperage" instance=ExtResource("R13")]
+position = Vector3(3.35, 0, -5.35)
+rotation_degrees = Vector3(0, 9, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="BarrelLarge1" parent="Cooperage" instance=ExtResource("R14")]
+position = Vector3(1.98, 0, -5.18)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(0.65, 0.65, 0.65)
+
+[node name="BoxSmall1" parent="Cooperage" instance=ExtResource("R15")]
+position = Vector3(3.2, 1, -5.81)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.64, 0.72)
+
+[node name="EntryLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(-1.28, 2.03, -2.66)
+light_color = Color(1, 0.72, 0.42, 1)
+light_energy = 2.75
+omni_range = 6.5
+omni_attenuation = 1.15
+light_size = 0.0
+shadow_enabled = true
+
+[node name="CaskLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(4.32, 2.44, -5.13)
+light_color = Color(1, 0.72, 0.43, 1)
+light_energy = 3.1
+omni_range = 6.3
+omni_attenuation = 1.15
+light_size = 0.0
+shadow_enabled = true
+
+[node name="RearLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(-3.94, 2.8, -8.26)
+light_color = Color(1, 0.71, 0.44, 1)
+light_energy = 2.1
+omni_range = 7
+omni_attenuation = 1.15
+light_size = 0.0
+shadow_enabled = true
+
+[node name="Cut_Arch1" parent="Masonry" instance=ExtResource("R16")]
+position = Vector3(0, 0, -3.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="JambStile1" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-1.365, 1.65, -4.1)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.3, 0.185, 0.38)
+
+[node name="JambStile2" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(1.365, 1.65, -4.1)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.3, 0.185, 0.38)
+
+[node name="Jambs1" parent="Masonry" instance=ExtResource("R19")]
+position = Vector3(0, 0, -3.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="Bressummer1" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.61, 0.3, 0.63)
+
+[node name="TransomInfill1" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-0.516, 2.68339, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.366776, 0.173, 0.27)
+
+[node name="TransomInfill2" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-0.344, 2.76141, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.522824, 0.173, 0.27)
+
+[node name="TransomInfill3" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-0.172, 2.7986, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.59719, 0.173, 0.27)
+
+[node name="TransomInfill4" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 2.81, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.62, 0.173, 0.27)
+
+[node name="TransomInfill5" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(0.172, 2.7986, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.59719, 0.173, 0.27)
+
+[node name="TransomInfill6" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0.344, 2.76141, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.522824, 0.173, 0.27)
+
+[node name="TransomInfill7" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(0.516, 2.68339, -4)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(0.366776, 0.173, 0.27)
+
+[node name="PaintedHeader1" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 3.355, -3.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.47, 0.38, 0.2)
+
+[node name="Brine_Cellar1" type="MeshInstance3D" parent="Signage"]
+position = Vector3(0, 3.354, -3.488)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_brine_cellar6")
+
+[node name="Sounder_Tide1" type="MeshInstance3D" parent="Signage"]
+position = Vector3(0, 2.76, -3.825)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_tide8")
+
+[node name="KeyringHanging1" parent="Masonry" instance=ExtResource("R23")]
+position = Vector3(1.1, 1.72, -3.53)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.3, 0.3, 0.3)
+
+[node name="Mesh" parent="BaseWhitebox/World/Ramp"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Landing"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step1"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step2"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step3"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step4"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpLow"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpMid"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpHigh"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionReturn"]
+visible = false
+
+[node name="CargoLow1" parent="LoadingWay" instance=ExtResource("R24")]
+position = Vector3(1, 0.004, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.978, 0.226667, 0.978)
+
+[node name="HatchCover1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(1, 0.365, 0.4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover2" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(1, 0.365, 0.7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover3" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(1, 0.365, 1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover4" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(1, 0.365, 1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover5" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(1, 0.365, 1.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="ClenchBolt1" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(0.367, 0.398, 0.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned9")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt2" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(0.367, 0.398, 1.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned10")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt3" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(1.633, 0.398, 0.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned11")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt4" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(1.633, 0.398, 1.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned12")
+material_override = SubResource("BlacksmithIron")
+
+[node name="CargoMiddle1" parent="LoadingWay" instance=ExtResource("R24")]
+position = Vector3(1, 0.004, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.978, 0.56, 0.978)
+
+[node name="HatchCover6" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(1, 0.865, -1.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover7" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(1, 0.865, -1.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover8" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(1, 0.865, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover9" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(1, 0.865, -0.7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover10" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(1, 0.865, -0.4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="ClenchBolt5" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(0.367, 0.898, -1.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned13")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt6" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(0.367, 0.898, -0.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned14")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt7" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(1.633, 0.898, -1.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned15")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt8" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(1.633, 0.898, -0.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned16")
+material_override = SubResource("BlacksmithIron")
+
+[node name="CargoHigh1" parent="LoadingWay" instance=ExtResource("R24")]
+position = Vector3(3, 0.004, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.978, 0.893333, 0.978)
+
+[node name="HatchCover11" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(3, 1.365, -3.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover12" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(3, 1.365, -3.3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover13" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(3, 1.365, -3)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover14" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(3, 1.365, -2.7)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="HatchCover15" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(3, 1.365, -2.4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.49, 0.07, 0.302)
+
+[node name="ClenchBolt9" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(2.367, 1.398, -3.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned17")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt10" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(2.367, 1.398, -2.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned18")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt11" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(3.633, 1.398, -3.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned19")
+material_override = SubResource("BlacksmithIron")
+
+[node name="ClenchBolt12" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(3.633, 1.398, -2.43)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned20")
+material_override = SubResource("BlacksmithIron")
+
+[node name="Sounder_Tide2" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(3, 0.672, -2.256)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_tide21")
+
+[node name="StepTread1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.16, 1.85)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="StepTread2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5, 0.16, 2.15)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="Riser1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.06, 2.254)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.98, 0.12, 0.085)
+
+[node name="StepCheek1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(4.06, 0.1, 2)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.2, 0.12)
+
+[node name="StepCheek2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5.94, 0.1, 2)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.2, 0.12)
+
+[node name="StepTread3" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(5, 0.36, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="StepTread4" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.36, 1.55)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="Riser2" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.16, 1.654)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.98, 0.32, 0.085)
+
+[node name="StepCheek3" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(4.06, 0.2, 1.4)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.4, 0.12)
+
+[node name="StepCheek4" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(5.94, 0.2, 1.4)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.4, 0.12)
+
+[node name="StepTread5" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(5, 0.56, 0.65)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="StepTread6" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5, 0.56, 0.95)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="Riser3" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5, 0.26, 1.054)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.98, 0.52, 0.085)
+
+[node name="StepCheek5" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(4.06, 0.3, 0.8)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.6, 0.12)
+
+[node name="StepCheek6" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5.94, 0.3, 0.8)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.6, 0.12)
+
+[node name="StepTread7" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.76, 0.05)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="StepTread8" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(5, 0.76, 0.35)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2, 0.08, 0.303)
+
+[node name="Riser4" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(5, 0.36, 0.454)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.98, 0.72, 0.085)
+
+[node name="StepCheek7" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(4.06, 0.4, 0.2)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.8, 0.12)
+
+[node name="StepCheek8" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(5.94, 0.4, 0.2)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.59, 0.8, 0.12)
+
+[node name="Incline" type="Node3D" parent="LoadingWay"]
+position = Vector3(-6, 0.85, -3)
+rotation_degrees = Vector3(18.435, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="LoadingBoard1" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, -3.0187)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard2" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, -2.73121)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard3" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, -2.44371)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard4" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, -2.15622)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard5" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, -1.86872)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard6" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, -1.58123)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard7" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, -1.29373)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard8" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, -1.00623)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard9" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, -0.718739)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard10" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, -0.431243)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard11" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, -0.143748)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard12" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, 0.143748)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard13" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, 0.431243)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard14" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, 0.718739)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard15" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, 1.00623)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard16" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, 0.094, 1.29373)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard17" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, 1.58123)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard18" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, 1.86872)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard19" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, 2.15622)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard20" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, 2.44371)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard21" parent="LoadingWay/Incline" instance=ExtResource("R18")]
+position = Vector3(0, 0.094, 2.73121)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="LoadingBoard22" parent="LoadingWay/Incline" instance=ExtResource("R17")]
+position = Vector3(0, 0.094, 3.0187)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.997, 0.112, 0.289495)
+
+[node name="Stringer1" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(-1.32, -0.046, 0)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(6.322, 0.265, 0.19)
+
+[node name="Stringer2" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(0, -0.046, 0)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(6.322, 0.265, 0.19)
+
+[node name="Stringer3" parent="LoadingWay/Incline" instance=ExtResource("R20")]
+position = Vector3(1.32, -0.046, 0)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(6.322, 0.265, 0.19)
+
+[node name="TrestleLeg1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-7.35, 0.86, -5.7)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.72, 0.18, 0.2)
+
+[node name="TrestleLeg2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-7.35, 0.51, -3.6)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.02, 0.18, 0.2)
+
+[node name="TrestleLeg3" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-7.35, 0.9, -6.15)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.8, 0.18, 0.2)
+
+[node name="TrestleLeg4" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-7.35, 0.9, -7.83)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.8, 0.18, 0.2)
+
+[node name="SwayBrace1" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-7.35, 0.95, -6.96)
+rotation_degrees = Vector3(0, -90, 44.6569)
+scale = Vector3(2.36178, 0.15, 0.13)
+
+[node name="RakingBrace1" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-7.35, 0.58, -4.645)
+rotation_degrees = Vector3(0, -90, 23.1642)
+scale = Vector3(2.18625, 0.13, 0.12)
+
+[node name="TrestleLeg5" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.65, 0.86, -5.7)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.72, 0.18, 0.2)
+
+[node name="TrestleLeg6" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-4.65, 0.51, -3.6)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.02, 0.18, 0.2)
+
+[node name="TrestleLeg7" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-4.65, 0.9, -6.15)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.8, 0.18, 0.2)
+
+[node name="TrestleLeg8" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.65, 0.9, -7.83)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(1.8, 0.18, 0.2)
+
+[node name="SwayBrace2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.65, 0.95, -6.96)
+rotation_degrees = Vector3(0, -90, 44.6569)
+scale = Vector3(2.36178, 0.15, 0.13)
+
+[node name="RakingBrace2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.65, 0.58, -4.645)
+rotation_degrees = Vector3(0, -90, 23.1642)
+scale = Vector3(2.18625, 0.13, 0.12)
+
+[node name="LandingDeck1" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-6, 1.93, -7.875)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck2" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-6, 1.93, -7.625)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck3" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-6, 1.93, -7.375)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck4" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-6, 1.93, -7.125)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck5" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-6, 1.93, -6.875)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck6" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-6, 1.93, -6.625)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck7" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-6, 1.93, -6.375)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="LandingDeck8" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-6, 1.93, -6.125)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(3, 0.14, 0.253)
+
+[node name="DeckBearer1" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-7.33, 1.78, -7)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2, 0.22, 0.24)
+
+[node name="DeckBearer2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.67, 1.78, -7)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2, 0.22, 0.24)
+
+[node name="RearStorePost1" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-8, 2.03, -8.9)
+rotation_degrees = Vector3(0, 0, 89.5)
+scale = Vector3(4.06, 0.27, 0.29)
+
+[node name="ShedRafter1" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-8, 4.03, -10.31)
+rotation_degrees = Vector3(0, 90, 4)
+scale = Vector3(3.47, 0.25, 0.25)
+
+[node name="KneeBrace1" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-7.675, 3.61, -8.9)
+rotation_degrees = Vector3(0, -0, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="RearStorePost2" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-3.94, 2.03, -8.9)
+rotation_degrees = Vector3(0, 0, 89.5)
+scale = Vector3(4.06, 0.27, 0.29)
+
+[node name="ShedRafter2" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-3.94, 4.03, -10.31)
+rotation_degrees = Vector3(0, 90, 4)
+scale = Vector3(3.47, 0.25, 0.25)
+
+[node name="KneeBrace2" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-4.265, 3.61, -8.9)
+rotation_degrees = Vector3(0, -180, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="KneeBrace3" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-3.615, 3.61, -8.9)
+rotation_degrees = Vector3(0, -0, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="RearStorePost3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(0.12, 2.03, -8.9)
+rotation_degrees = Vector3(0, 0, 89.5)
+scale = Vector3(4.06, 0.27, 0.29)
+
+[node name="ShedRafter3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(0.12, 4.03, -10.31)
+rotation_degrees = Vector3(0, 90, 4)
+scale = Vector3(3.47, 0.25, 0.25)
+
+[node name="KneeBrace4" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-0.205, 3.61, -8.9)
+rotation_degrees = Vector3(0, -180, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="KneeBrace5" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(0.445, 3.61, -8.9)
+rotation_degrees = Vector3(0, -0, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="RearStorePost4" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(4.18, 2.03, -8.9)
+rotation_degrees = Vector3(0, 0, 89.5)
+scale = Vector3(4.06, 0.27, 0.29)
+
+[node name="ShedRafter4" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(4.18, 4.03, -10.31)
+rotation_degrees = Vector3(0, 90, 4)
+scale = Vector3(3.47, 0.25, 0.25)
+
+[node name="KneeBrace6" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(3.855, 3.61, -8.9)
+rotation_degrees = Vector3(0, -180, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="KneeBrace7" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(4.505, 3.61, -8.9)
+rotation_degrees = Vector3(0, -0, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="RearStorePost5" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(8.72, 2.03, -8.9)
+rotation_degrees = Vector3(0, 0, 89.5)
+scale = Vector3(4.06, 0.27, 0.29)
+
+[node name="ShedRafter5" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(8.72, 4.03, -10.31)
+rotation_degrees = Vector3(0, 90, 4)
+scale = Vector3(3.47, 0.25, 0.25)
+
+[node name="KneeBrace8" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(8.395, 3.61, -8.9)
+rotation_degrees = Vector3(0, -180, 45.4374)
+scale = Vector3(0.926337, 0.17, 0.21)
+
+[node name="EaveBeam1" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-5.91, 3.98, -8.9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.23, 0.25, 0.28)
+
+[node name="SoffitPlank1" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.16, -8.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank2" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.17998, -8.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.19996, -9.35)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank4" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-5.91, 4.21994, -9.72)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank5" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.23992, -10.09)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank6" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-5.91, 4.2599, -10.46)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank7" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.27988, -10.83)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank8" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-5.91, 4.29986, -11.2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank9" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-5.91, 4.31984, -11.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="EaveBeam2" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-1.73, 3.98, -8.9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.23, 0.25, 0.28)
+
+[node name="SoffitPlank10" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-1.73, 4.16, -8.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank11" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(-1.73, 4.17998, -8.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank12" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-1.73, 4.19996, -9.35)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank13" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-1.73, 4.21994, -9.72)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank14" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-1.73, 4.23992, -10.09)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank15" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-1.73, 4.2599, -10.46)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank16" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-1.73, 4.27988, -10.83)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank17" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-1.73, 4.29986, -11.2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank18" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(-1.73, 4.31984, -11.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="EaveBeam3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(2.45, 3.98, -8.9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.23, 0.25, 0.28)
+
+[node name="SoffitPlank19" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(2.45, 4.16, -8.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank20" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(2.45, 4.17998, -8.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank21" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(2.45, 4.19996, -9.35)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank22" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(2.45, 4.21994, -9.72)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank23" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(2.45, 4.23992, -10.09)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank24" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(2.45, 4.2599, -10.46)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank25" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(2.45, 4.27988, -10.83)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank26" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(2.45, 4.29986, -11.2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank27" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(2.45, 4.31984, -11.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="EaveBeam4" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(6.63, 3.98, -8.9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.23, 0.25, 0.28)
+
+[node name="SoffitPlank28" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(6.63, 4.16, -8.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank29" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(6.63, 4.17998, -8.98)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank30" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(6.63, 4.19996, -9.35)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank31" parent="Warehouse" instance=ExtResource("R18")]
+position = Vector3(6.63, 4.21994, -9.72)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank32" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(6.63, 4.23992, -10.09)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank33" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(6.63, 4.2599, -10.46)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank34" parent="Warehouse" instance=ExtResource("R20")]
+position = Vector3(6.63, 4.27988, -10.83)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank35" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(6.63, 4.29986, -11.2)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="SoffitPlank36" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(6.63, 4.31984, -11.57)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.21, 0.105, 0.376)
+
+[node name="BondStorePost1" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(1.54, 1.72, -6.56)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.44, 0.195, 0.24)
+
+[node name="BackPost1" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(1.54, 1.73, -8.52)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.46, 0.18, 0.2)
+
+[node name="RoofTie1" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(1.54, 3.5, -7.5)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.43, 0.21, 0.2)
+
+[node name="BondStorePost2" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(4.33, 1.72, -6.56)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.44, 0.195, 0.24)
+
+[node name="BackPost2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(4.33, 1.73, -8.52)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.46, 0.18, 0.2)
+
+[node name="RoofTie2" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(4.33, 3.5, -7.5)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.43, 0.21, 0.2)
+
+[node name="BondStorePost3" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(6.87, 1.72, -6.56)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.44, 0.195, 0.24)
+
+[node name="BackPost3" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(6.87, 1.73, -8.52)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.46, 0.18, 0.2)
+
+[node name="RoofTie3" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(6.87, 3.5, -7.5)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.43, 0.21, 0.2)
+
+[node name="ShelfHead1" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(2.94, 3.4, -6.53)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.23, 0.22)
+
+[node name="LoftBoard1" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(2.94, 3.62, -6.44)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="LoftBoard2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(2.94, 3.62, -6.84)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="LoftBoard3" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(2.94, 3.62, -7.24)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="LoftBoard4" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(2.94, 3.62, -7.64)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="LoftBoard5" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(2.94, 3.62, -8.04)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="LoftBoard6" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(2.94, 3.62, -8.44)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.81, 0.11, 0.406)
+
+[node name="ShelfHead2" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(5.6, 3.4, -6.53)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.23, 0.22)
+
+[node name="LoftBoard7" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 3.62, -6.44)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="LoftBoard8" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(5.6, 3.62, -6.84)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="LoftBoard9" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 3.62, -7.24)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="LoftBoard10" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(5.6, 3.62, -7.64)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="LoftBoard11" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(5.6, 3.62, -8.04)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="LoftBoard12" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 3.62, -8.44)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.52, 0.11, 0.406)
+
+[node name="RackShelf1" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(5.6, 0.94, -6.33)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackShelf2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 0.94, -6.063)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackShelf3" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 0.94, -5.796)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackShelf4" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 2.185, -6.33)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackShelf5" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 2.185, -6.063)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackShelf6" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(5.6, 2.185, -5.796)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.4, 0.12, 0.27)
+
+[node name="RackStanchion1" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(1.76, 1.36, -6.16)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(2.72, 0.15, 0.16)
+
+[node name="RackStanchion2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(4.3, 1.36, -6.16)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(2.72, 0.15, 0.16)
+
+[node name="BarrelSmallStack2" parent="Cooperage" instance=ExtResource("R13")]
+position = Vector3(2.76, 2.245, -5.78)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(0.59, 0.59, 0.59)
+
+[node name="BarrelSmall1" parent="Cooperage" instance=ExtResource("R25")]
+position = Vector3(3.67, 2.245, -5.82)
+rotation_degrees = Vector3(0, 15, 0)
+scale = Vector3(0.52, 0.52, 0.52)
+
+[node name="TrunkMediumB1" parent="Cooperage" instance=ExtResource("R26")]
+position = Vector3(4.96, 1, -6.09)
+rotation_degrees = Vector3(0, -8, 0)
+scale = Vector3(0.77, 0.77, 0.77)
+
+[node name="BottleALabeledGreen1" parent="Cooperage" instance=ExtResource("R27")]
+position = Vector3(5.64, 1, -6.07)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.56, 0.56, 0.56)
+
+[node name="BottleBBrown1" parent="Cooperage" instance=ExtResource("R28")]
+position = Vector3(5.99, 1, -5.98585)
+rotation_degrees = Vector3(0, 37, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="BottleCGreen1" parent="Cooperage" instance=ExtResource("R29")]
+position = Vector3(6.25, 1, -5.97907)
+rotation_degrees = Vector3(0, 74, 0)
+scale = Vector3(0.46, 0.46, 0.46)
+
+[node name="BottleALabeledGreen2" parent="Cooperage" instance=ExtResource("R27")]
+position = Vector3(6.45, 1, -6.05589)
+rotation_degrees = Vector3(0, 111, 0)
+scale = Vector3(0.59, 0.59, 0.59)
+
+[node name="BoxSmall2" parent="Cooperage" instance=ExtResource("R15")]
+position = Vector3(5.2, 2.245, -6.07)
+rotation_degrees = Vector3(0, -3, 0)
+scale = Vector3(0.94, 0.63, 0.78)
+
+[node name="BarrelSmall2" parent="Cooperage" instance=ExtResource("R25")]
+position = Vector3(6.12, 2.245, -6.02)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.64, 0.64, 0.64)
+
+[node name="BarrelSmallStack3" parent="Cooperage" instance=ExtResource("R13")]
+position = Vector3(5.62, 0.005, -6.03)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(0.87, 0.87, 0.87)
+
+[node name="TableMedium1" parent="Cooperage" instance=ExtResource("R30")]
+position = Vector3(6.95, 0.005, -4.15)
+rotation_degrees = Vector3(0, -7, 0)
+scale = Vector3(1.06, 0.86, 0.62)
+
+[node name="BottleCGreen2" parent="Cooperage" instance=ExtResource("R29")]
+position = Vector3(6.36, 0.865, -4.22)
+rotation_degrees = Vector3(0, 8, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="BottleALabeledGreen3" parent="Cooperage" instance=ExtResource("R27")]
+position = Vector3(6.64, 0.865, -4.37)
+rotation_degrees = Vector3(0, 8, 0)
+scale = Vector3(0.51, 0.51, 0.51)
+
+[node name="BottleBBrown2" parent="Cooperage" instance=ExtResource("R28")]
+position = Vector3(6.8, 0.865, -4.29)
+rotation_degrees = Vector3(0, 8, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="Coil1" parent="Cooperage" instance=ExtResource("R31")]
+position = Vector3(7.41, 0.868, -4.05)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.79, 0.79, 0.79)
+
+[node name="Stool1" parent="Cooperage" instance=ExtResource("R32")]
+position = Vector3(6.78, 0.005, -3.14)
+rotation_degrees = Vector3(0, 16, 0)
+scale = Vector3(1.02, 1.02, 1.02)
+
+[node name="BarrelLarge2" parent="Cooperage" instance=ExtResource("R14")]
+position = Vector3(8.51, 0.005, -4.55)
+rotation_degrees = Vector3(0, 9, 0)
+scale = Vector3(0.64, 0.64, 0.64)
+
+[node name="Sounder_Umber1" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(2.5, 2.51, -5.49)
+rotation_degrees = Vector3(0, -4, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_umber23")
+
+[node name="Sounder_Tide3" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(5.24, 0.395, -5.6)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_tide24")
+
+[node name="Sounder_Umber2" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(6.01, 0.395, -5.59)
+rotation_degrees = Vector3(0, -2, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_umber25")
+
+[node name="BarrelSmallStack4" parent="Warehouse" instance=ExtResource("R13")]
+position = Vector3(-1.89, 0.005, -10.15)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(0.98, 0.98, 0.98)
+
+[node name="BarrelSmallStack5" parent="Warehouse" instance=ExtResource("R13")]
+position = Vector3(0.24, 0.005, -10.61)
+rotation_degrees = Vector3(0, 8, 0)
+scale = Vector3(0.91, 0.91, 0.91)
+
+[node name="BarrelSmallStack6" parent="Warehouse" instance=ExtResource("R13")]
+position = Vector3(-4.42, 0.005, -10.45)
+rotation_degrees = Vector3(0, 6, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+
+[node name="BarrelSmallStack7" parent="Warehouse" instance=ExtResource("R13")]
+position = Vector3(7.32, 0.005, -10.26)
+rotation_degrees = Vector3(0, -5, 0)
+scale = Vector3(1.02, 1.02, 1.02)
+
+[node name="BoxLarge1" parent="Warehouse" instance=ExtResource("R24")]
+position = Vector3(-6.77, 0.005, -10.39)
+rotation_degrees = Vector3(0, -10, 0)
+scale = Vector3(0.87, 0.59, 0.73)
+
+[node name="TrunkMediumB2" parent="Warehouse" instance=ExtResource("R26")]
+position = Vector3(-6.67, 0.89, -10.27)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(0.66, 0.66, 0.66)
+
+[node name="BarrelLarge3" parent="Warehouse" instance=ExtResource("R14")]
+position = Vector3(-5.41, 0.005, -9.65)
+rotation_degrees = Vector3(0, 12, 0)
+scale = Vector3(0.7, 0.7, 0.7)
+
+[node name="HoistStandard1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-7.83, 2.43, -7.61)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(4.86, 0.27, 0.3)
+
+[node name="HoistFoot1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-7.83, 0.26, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.48, 0.51, 0.48)
+
+[node name="IronDog1" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-7.83, 1.03, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.3, 0.102, 0.33)
+mesh = SubResource("UnitBox")
+material_override = SubResource("BlacksmithIron")
+
+[node name="IronDog2" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-7.83, 3.63, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.3, 0.102, 0.33)
+mesh = SubResource("UnitBox")
+material_override = SubResource("BlacksmithIron")
+
+[node name="HoistStandard2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.16, 2.43, -7.61)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(4.86, 0.27, 0.3)
+
+[node name="HoistFoot2" parent="LoadingWay" instance=ExtResource("R18")]
+position = Vector3(-4.16, 0.26, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.48, 0.51, 0.48)
+
+[node name="IronDog3" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-4.16, 1.03, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.3, 0.102, 0.33)
+mesh = SubResource("UnitBox")
+material_override = SubResource("BlacksmithIron")
+
+[node name="IronDog4" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-4.16, 3.63, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.3, 0.102, 0.33)
+mesh = SubResource("UnitBox")
+material_override = SubResource("BlacksmithIron")
+
+[node name="HoistGantry1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-6.19, 4.82, -7.61)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(4.92, 0.34, 0.35)
+
+[node name="HoistKnee1" parent="LoadingWay" instance=ExtResource("R20")]
+position = Vector3(-7.48, 4.345, -7.61)
+rotation_degrees = Vector3(0, -0, 44.5878)
+scale = Vector3(0.982904, 0.21, 0.2)
+
+[node name="HoistKnee2" parent="LoadingWay" instance=ExtResource("R17")]
+position = Vector3(-4.51, 4.345, -7.61)
+rotation_degrees = Vector3(0, -180, 44.5878)
+scale = Vector3(0.982904, 0.21, 0.2)
+
+[node name="Sheave1" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-8.21, 4.43, -7.62)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned26")
+material_override = SubResource("BlacksmithIron")
+
+[node name="HempLine1" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-8.37, 3.495, -7.62)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned28")
+material_override = SubResource("Hemp")
+
+[node name="HempLine2" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-8.05, 3.495, -7.62)
+rotation_degrees = Vector3(180, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned29")
+material_override = SubResource("Hemp")
+
+[node name="LowerBlock1" type="MeshInstance3D" parent="LoadingWay"]
+position = Vector3(-8.21, 2.54, -7.62)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned30")
+material_override = SubResource("SmokedOak")
+
+[node name="LampArm1" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-1.3, 2.98, -3.53)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.95, 0.095, 0.105)
+
+[node name="LampKnee1" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(-1.3, 2.79, -3.59)
+rotation_degrees = Vector3(0, -90, 25.8664)
+scale = Vector3(0.733485, 0.065, 0.075)
+
+[node name="HempLine3" type="MeshInstance3D" parent="Masonry"]
+position = Vector3(-1.3, 2.81, -3.12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned31")
+material_override = SubResource("Hemp")
+
+[node name="Ships_Lantern1" parent="Masonry" instance=ExtResource("R34")]
+position = Vector3(-1.3, 2.28, -3.12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="LampArm2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(4.34, 3.38, -6.01)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.95, 0.095, 0.105)
+
+[node name="LampKnee2" parent="Cooperage" instance=ExtResource("R20")]
+position = Vector3(4.34, 3.19, -6.07)
+rotation_degrees = Vector3(0, -90, 25.8664)
+scale = Vector3(0.733485, 0.065, 0.075)
+
+[node name="HempLine4" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(4.34, 3.2, -5.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned32")
+material_override = SubResource("Hemp")
+
+[node name="Ships_Lantern2" parent="Cooperage" instance=ExtResource("R34")]
+position = Vector3(4.34, 2.66, -5.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="LampArm3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-3.94, 3.92, -8.96)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.95, 0.095, 0.105)
+
+[node name="LampKnee3" parent="Warehouse" instance=ExtResource("R17")]
+position = Vector3(-3.94, 3.73, -9.02)
+rotation_degrees = Vector3(0, -90, 25.8664)
+scale = Vector3(0.733485, 0.065, 0.075)
+
+[node name="HempLine5" type="MeshInstance3D" parent="Warehouse"]
+position = Vector3(-3.94, 3.54, -8.55)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned33")
+material_override = SubResource("Hemp")
+
+[node name="Ships_Lantern3" parent="Warehouse" instance=ExtResource("R34")]
+position = Vector3(-3.94, 2.8, -8.55)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="EnsignStaff1" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(8.02, 2.89, -0.49)
+rotation_degrees = Vector3(0, 0, -2)
+scale = Vector3(1.59, 0.088, 0.1)
+
+[node name="Peg1" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(7.5, 2.83, -0.62)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.35, 0.12, 0.13)
+
+[node name="Peg2" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(8.54, 2.83, -0.62)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.35, 0.12, 0.13)
+
+[node name="Bonded_Store_Flag1" type="MeshInstance3D" parent="Signage"]
+position = Vector3(8.03, 1.96, -0.475)
+rotation_degrees = Vector3(0, 0, -2)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_bonded_store_flag35")
+
+[node name="Sounder_Umber3" type="MeshInstance3D" parent="Signage"]
+position = Vector3(4.34, 3.21, -6.371)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Face_sounder_umber36")
+
+[node name="Coil2" parent="LoadingWay" instance=ExtResource("R31")]
+position = Vector3(-7.72, 0.006, -5.9)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.67, 0.67, 0.67)
+
+[node name="PassagePlate1" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(-1.25, 3.29, -5.1)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.54, 0.21, 0.2)
+
+[node name="RearDoorPost1" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(-1.25, 1.64, -6.28)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.28, 0.21, 0.2)
+
+[node name="EntryKnee1" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(-1.25, 2.97, -6.045)
+rotation_degrees = Vector3(0, -90, 45.6031)
+scale = Vector3(0.671789, 0.145, 0.14)
+
+[node name="PassagePlate2" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(1.25, 3.29, -5.1)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(2.54, 0.21, 0.2)
+
+[node name="RearDoorPost2" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(1.25, 1.64, -6.28)
+rotation_degrees = Vector3(0, 0, 90)
+scale = Vector3(3.28, 0.21, 0.2)
+
+[node name="EntryKnee2" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(1.25, 2.97, -6.045)
+rotation_degrees = Vector3(0, -90, 45.6031)
+scale = Vector3(0.671789, 0.145, 0.14)
+
+[node name="EntryRoof1" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0, 3.47, -4.12)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof2" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0, 3.47, -4.467)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof3" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0, 3.47, -4.814)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof4" parent="Masonry" instance=ExtResource("R20")]
+position = Vector3(0, 3.47, -5.161)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof5" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 3.47, -5.508)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof6" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(0, 3.47, -5.855)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="EntryRoof7" parent="Masonry" instance=ExtResource("R17")]
+position = Vector3(0, 3.47, -6.202)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.73, 0.13, 0.351)
+
+[node name="CaskChock1" parent="Cooperage" instance=ExtResource("R18")]
+position = Vector3(2.69, 0.072, -5.37)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(0.19, 0.14, 0.6)
+
+[node name="CaskChock2" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(4.02, 0.072, -5.37)
+rotation_degrees = Vector3(0, 7, 0)
+scale = Vector3(0.19, 0.14, 0.6)
+
+[node name="SpigotBoss1" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(3.03, 0.36, -4.93)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned38")
+material_override = SubResource("TapBronze")
+
+[node name="TapNose1" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(3.03, 0.36, -4.85)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned39")
+material_override = SubResource("BlacksmithIron")
+
+[node name="TapBend1" type="MeshInstance3D" parent="Cooperage"]
+position = Vector3(3.03, 0.32, -4.794)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned40")
+material_override = SubResource("BlacksmithIron")
+
+[node name="TapHandle1" parent="Cooperage" instance=ExtResource("R17")]
+position = Vector3(3.03, 0.426, -4.84)
+rotation_degrees = Vector3(0, -14, 0)
+scale = Vector3(0.14, 0.028, 0.04)
+
+[node name="ThresholdBoard1" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 0.0026, -4.21)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.205, 0.002, 0.208)
+
+[node name="ThresholdBoard2" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 0.0026, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.205, 0.002, 0.208)
+
+[node name="ThresholdBoard3" parent="Masonry" instance=ExtResource("R18")]
+position = Vector3(0, 0.0026, -3.79)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.205, 0.002, 0.208)
+
+[node name="KeyHook1" type="MeshInstance3D" parent="Masonry"]
+position = Vector3(1.1, 1.72, -3.551)
+rotation_degrees = Vector3(90, 0, 0)
+scale = Vector3(1, 1, 1)
+mesh = SubResource("Turned41")
+material_override = SubResource("BlacksmithIron")
+
+[editable path="BaseWhitebox"]

@@ -1,0 +1,527 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="R1"]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="R2"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/open_arch.gltf" id="R3"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/wall.gltf" id="R4"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/wall_scaffold.gltf" id="R5"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/wall_window_closed.gltf" id="R6"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/wall_cracked.gltf" id="R7"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/floor_tile_large.gltf" id="R8"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/shelves.gltf" id="R9"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/barrel_small_stack.gltf" id="R10"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/barrel_large.gltf" id="R11"]
+
+[ext_resource type="PackedScene" path="res://art/kaykit/box_small.gltf" id="R12"]
+
+[sub_resource type="Environment" id="CellarAir"]
+background_mode = 1
+background_color = Color(0.12, 0.155, 0.20, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.65, 0.68, 0.83, 1)
+ambient_light_energy = 0.68
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.7
+ssao_intensity = 2.2
+glow_enabled = true
+glow_intensity = 0.35
+
+[sub_resource type="StandardMaterial3D" id="Mortar"]
+albedo_color = Color(0.075, 0.071, 0.081, 1)
+roughness = 0.82
+
+[sub_resource type="StandardMaterial3D" id="SmokedOak"]
+albedo_color = Color(0.255, 0.146, 0.105, 1)
+roughness = 0.82
+
+[sub_resource type="BoxMesh" id="UnitBox"]
+size = Vector3(1, 1, 1)
+
+[node name="TideCellar" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("R1")]
+
+
+[node name="Inspection" parent="." instance=ExtResource("R2")]
+
+
+[node name="Masonry" type="Node3D" parent="."]
+
+
+[node name="Paving" type="Node3D" parent="."]
+
+
+[node name="Cooperage" type="Node3D" parent="."]
+
+
+[node name="LightRig" type="Node3D" parent="."]
+
+
+[node name="Warehouse" type="Node3D" parent="."]
+
+
+[node name="LoadingWay" type="Node3D" parent="."]
+
+
+[node name="Signage" type="Node3D" parent="."]
+
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("CellarAir")
+
+[node name="HatchLight" type="DirectionalLight3D" parent="LightRig"]
+rotation_degrees = Vector3(-54, 20, -15)
+light_color = Color(0.73,0.84,1,1)
+light_energy = 0.83
+shadow_enabled = true
+light_angular_distance = 2.0
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel"]
+visible = false
+
+[node name="OpenArch1" parent="Masonry" instance=ExtResource("R3")]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.72, 1.12, 0.83)
+
+[node name="Lintel1" type="MeshInstance3D" parent="Masonry"]
+position = Vector3(0, 2.45, -4)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(2.56, 0.3, 0.62)
+mesh = SubResource("UnitBox")
+material_override = SubResource("SmokedOak")
+
+[node name="Wall1" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(-8, 0, -11.96)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold1" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(-4, 0, -11.96)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallWindowClosed1" parent="Masonry" instance=ExtResource("R6")]
+position = Vector3(0, 0, -11.96)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallCracked1" parent="Masonry" instance=ExtResource("R7")]
+position = Vector3(4, 0, -11.96)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold2" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(8, 0, -11.96)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1.12, 0.65)
+
+[node name="WallScaffold3" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(10, 0, -9)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 0.78, 0.62)
+
+[node name="Wall2" parent="Masonry" instance=ExtResource("R4")]
+position = Vector3(10, 0, -5)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(1, 0.78, 0.62)
+
+[node name="WallCracked2" parent="Masonry" instance=ExtResource("R7")]
+position = Vector3(10, 0, -2)
+rotation_degrees = Vector3(0, -90, 0)
+scale = Vector3(0.54, 0.78, 0.62)
+
+[node name="WallScaffold4" parent="Masonry" instance=ExtResource("R5")]
+position = Vector3(8, 0, -1)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 0.78, 0.65)
+
+[node name="PavingBed1" type="MeshInstance3D" parent="Paving"]
+position = Vector3(1, 0.0005, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(18, 0.001, 14)
+mesh = SubResource("UnitBox")
+material_override = SubResource("Mortar")
+
+[node name="FloorTileLarge1" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -10.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge2" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -8.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge3" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -6.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge4" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -4.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge5" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -2.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge6" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, -0.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge7" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-7, 0.004, 1.25)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge8" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge9" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -8.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge10" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -6.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge11" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -4.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge12" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -2.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge13" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, -0.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge14" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-5, 0.004, 1.25)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge15" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -10.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge16" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge17" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -6.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge18" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge19" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -2.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge20" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, -0.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge21" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-3, 0.004, 1.25)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge22" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -10.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge23" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -8.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge24" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -6.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge25" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -4.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge26" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -2.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge27" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge28" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(-1, 0.004, 1.25)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge29" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -10.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge30" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -8.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge31" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -6.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge32" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -4.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge33" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -2.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge34" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, -0.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge35" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(1, 0.004, 1.25)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge36" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -10.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge37" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -8.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge38" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -6.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge39" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -4.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge40" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge41" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, -0.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge42" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(3, 0.004, 1.25)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge43" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -10.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge44" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -8.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge45" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -6.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge46" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge47" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge48" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, -0.75)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge49" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(5, 0.004, 1.25)
+rotation_degrees = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge50" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -10.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge51" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -8.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge52" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -6.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge53" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -4.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge54" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -2.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge55" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, -0.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge56" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(7, 0.004, 1.25)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge57" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -10.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge58" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -8.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge59" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -6.75)
+rotation_degrees = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge60" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -4.75)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge61" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -2.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge62" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, -0.75)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="FloorTileLarge63" parent="Paving" instance=ExtResource("R8")]
+position = Vector3(9, 0.004, 1.25)
+rotation_degrees = Vector3(0, 270, 0)
+scale = Vector3(0.5, 0.022, 0.5)
+
+[node name="Shelves1" parent="Cooperage" instance=ExtResource("R9")]
+position = Vector3(3.05, 0, -6.6)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1.34, 0.83, 1.7)
+
+[node name="BarrelSmallStack1" parent="Cooperage" instance=ExtResource("R10")]
+position = Vector3(3.35, 0, -5.35)
+rotation_degrees = Vector3(0, 9, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="BarrelLarge1" parent="Cooperage" instance=ExtResource("R11")]
+position = Vector3(1.98, 0, -5.18)
+rotation_degrees = Vector3(0, -12, 0)
+scale = Vector3(0.65, 0.65, 0.65)
+
+[node name="BoxSmall1" parent="Cooperage" instance=ExtResource("R12")]
+position = Vector3(3.2, 1, -5.81)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.8, 0.64, 0.72)
+
+[node name="EntryLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(-1.65, 2.32, -3.28)
+light_color = Color(1, 0.65, 0.3, 1)
+light_energy = 6.0
+omni_range = 6.5
+omni_attenuation = 1.15
+light_size = 0.22
+shadow_enabled = true
+
+[node name="CaskLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(3.4, 2.33, -5.1)
+light_color = Color(1, 0.64, 0.3, 1)
+light_energy = 5.2
+omni_range = 6.3
+omni_attenuation = 1.15
+light_size = 0.22
+shadow_enabled = true
+
+[node name="RearLight1" type="OmniLight3D" parent="LightRig"]
+position = Vector3(-3.1, 2.1, -9.4)
+light_color = Color(0.52, 0.75, 1, 1)
+light_energy = 2.1
+omni_range = 7
+omni_attenuation = 1.15
+light_size = 0.22
+shadow_enabled = true
+
+[editable path="BaseWhitebox"]
