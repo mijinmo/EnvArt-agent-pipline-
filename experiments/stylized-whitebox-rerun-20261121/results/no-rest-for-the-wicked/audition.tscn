@@ -1,0 +1,231 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="r0"]
+[ext_resource type="Shader" path="res://art/materials/trail.gdshader" id="r1"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_Diffuse.jpg" id="r2"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_nor_gl.jpg" id="r3"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_Rough.jpg" id="r4"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_Diffuse.jpg" id="r5"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_nor_gl.jpg" id="r6"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_Rough.jpg" id="r7"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_Diffuse.jpg" id="r8"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_nor_gl.jpg" id="r9"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_Rough.jpg" id="r10"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_Diffuse.jpg" id="r11"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_nor_gl.jpg" id="r12"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_Rough.jpg" id="r13"]
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="r14"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/gate.gltf" id="r15"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/parapet.gltf" id="r16"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/endwall.gltf" id="r17"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/parapet_short.gltf" id="r18"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_table_02/wooden_table_02.gltf" id="r19"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_lantern_01/wooden_lantern_01.gltf" id="r20"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_bucket_01/wooden_bucket_01.gltf" id="r21"]
+[ext_resource type="PackedScene" path="res://art/models/wine_barrel_01/wine_barrel_01.gltf" id="r22"]
+[ext_resource type="PackedScene" path="res://art/models/tree_small_02/tree.gltf" id="r23"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder1.gltf" id="r24"]
+[ext_resource type="PackedScene" path="res://art/models/fern_02/fernB.gltf" id="r25"]
+
+[sub_resource type="ShaderMaterial" id="Road"]
+shader = ExtResource("r1")
+shader_parameter/paving = ExtResource("r2")
+shader_parameter/paving_normal = ExtResource("r3")
+shader_parameter/paving_rough = ExtResource("r4")
+shader_parameter/litter = ExtResource("r5")
+shader_parameter/litter_normal = ExtResource("r6")
+shader_parameter/litter_rough = ExtResource("r7")
+
+[sub_resource type="StandardMaterial3D" id="medieval_blocks_03"]
+albedo_color = Color(0.75, 0.73, 0.66, 1)
+albedo_texture = ExtResource("r8")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("r9")
+roughness_texture = ExtResource("r10")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.390000, 0.390000, 0.390000)
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="mossy_sandstone"]
+albedo_color = Color(0.86, 0.80, 0.69, 1)
+albedo_texture = ExtResource("r11")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("r12")
+roughness_texture = ExtResource("r13")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.740000, 0.740000, 0.740000)
+texture_filter = 4
+
+[sub_resource type="Environment" id="LateSun"]
+background_mode = 1
+background_color = Color(0.66, 0.51, 0.36, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.63, 0.69, 0.83, 1)
+ambient_light_energy = 0.76
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.85
+ssao_intensity = 1.25
+fog_enabled = true
+fog_light_color = Color(0.73, 0.55, 0.37, 1)
+fog_light_energy = 0.78
+fog_density = 0.009
+
+[node name="AlderPost" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("r0")]
+
+
+[node name="Mesh" parent="BaseWhitebox/World/Floor"]
+material_override = SubResource("Road")
+
+[node name="Mesh" parent="BaseWhitebox/World/BackWall"]
+material_override = SubResource("medieval_blocks_03")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionWall"]
+material_override = SubResource("medieval_blocks_03")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionReturn"]
+material_override = SubResource("medieval_blocks_03")
+
+[node name="Mesh" parent="BaseWhitebox/World/Ramp"]
+material_override = SubResource("medieval_blocks_03")
+
+[node name="Mesh" parent="BaseWhitebox/World/Landing"]
+material_override = SubResource("medieval_blocks_03")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpHigh"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpMid"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpLow"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step1"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step2"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step3"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step4"]
+material_override = SubResource("mossy_sandstone")
+
+[node name="Inspection" parent="." instance=ExtResource("r14")]
+
+
+[node name="WoodlandAir" type="WorldEnvironment" parent="."]
+environment = SubResource("LateSun")
+
+[node name="LowAutumnSun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-37, -42, 0)
+light_color = Color(1, 0.83, 0.61, 1)
+light_energy = 2.0
+shadow_enabled = true
+light_angular_distance = 0.7
+
+[node name="Waygate" type="Node3D" parent="."]
+
+
+[node name="Rampart" type="Node3D" parent="."]
+
+
+[node name="Boardwalk" type="Node3D" parent="."]
+
+
+[node name="Wheelwright" type="Node3D" parent="."]
+
+
+[node name="Woodland" type="Node3D" parent="."]
+
+
+[node name="gate1" parent="Waygate" instance=ExtResource("r15")]
+position = Vector3(0.000000, -0.370000, -4.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.314375, 0.586103, 0.438582)
+
+[node name="parapet1" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(10.000000, -0.090000, -6.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.294078, 0.406578, 0.677490)
+
+[node name="endwall1" parent="Rampart" instance=ExtResource("r17")]
+position = Vector3(8.000000, -0.090000, -1.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.274534, 0.408024, 0.545192)
+
+[node name="parapet2" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(-8.000000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321525, 0.528552, 0.539833)
+
+[node name="endwall2" parent="Rampart" instance=ExtResource("r17")]
+position = Vector3(-1.600000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321597, 0.536334, 0.647752)
+
+[node name="parapet3" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(4.400000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321525, 0.528552, 0.485850)
+
+[node name="parapet_short1" parent="Rampart" instance=ExtResource("r18")]
+position = Vector3(10.000000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321597, 0.528729, 0.539794)
+
+[node name="wooden_table_021" parent="Wheelwright" instance=ExtResource("r19")]
+position = Vector3(6.350000, 0.000000, -5.550000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(1.480937, 1.038093, 1.133105)
+
+[node name="wooden_lantern_011" parent="Wheelwright" instance=ExtResource("r20")]
+position = Vector3(6.850000, 0.830000, -5.460000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="wooden_bucket_011" parent="Wheelwright" instance=ExtResource("r21")]
+position = Vector3(5.480000, 0.000000, -5.320000)
+rotation_degrees = Vector3(0.000000, -21.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="wine_barrel_011" parent="Wheelwright" instance=ExtResource("r22")]
+position = Vector3(7.650000, 0.000000, -6.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="tree1" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-3.250000, -0.040000, -8.500000)
+rotation_degrees = Vector3(0.000000, 121.000000, 0.000000)
+scale = Vector3(1.380000, 1.380000, 1.380000)
+
+[node name="boulder11" parent="Waygate" instance=ExtResource("r24")]
+position = Vector3(-1.940000, -0.150000, -4.170000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.536281, 0.679026, 0.391830)
+
+[node name="fernB1" parent="Waygate" instance=ExtResource("r25")]
+position = Vector3(-1.650000, 0.000000, -3.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.850000, 0.850000, 0.850000)
+
+[editable path="BaseWhitebox"]

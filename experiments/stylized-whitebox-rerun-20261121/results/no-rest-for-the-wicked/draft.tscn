@@ -1,0 +1,2381 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="r0"]
+[ext_resource type="Shader" path="res://art/materials/trail.gdshader" id="r1"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_Diffuse.jpg" id="r2"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_nor_gl.jpg" id="r3"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_cobblestone_Rough.jpg" id="r4"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_Diffuse.jpg" id="r5"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_nor_gl.jpg" id="r6"]
+[ext_resource type="Texture2D" path="res://art/surfaces/forest_floor_Rough.jpg" id="r7"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_Diffuse.jpg" id="r8"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_nor_gl.jpg" id="r9"]
+[ext_resource type="Texture2D" path="res://art/surfaces/medieval_blocks_03_Rough.jpg" id="r10"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_Diffuse.jpg" id="r11"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_nor_gl.jpg" id="r12"]
+[ext_resource type="Texture2D" path="res://art/surfaces/mossy_sandstone_Rough.jpg" id="r13"]
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="r14"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/gate.gltf" id="r15"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/parapet.gltf" id="r16"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/endwall.gltf" id="r17"]
+[ext_resource type="PackedScene" path="res://art/models/modular_fort_01/parapet_short.gltf" id="r18"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_table_02/wooden_table_02.gltf" id="r19"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_lantern_01/wooden_lantern_01.gltf" id="r20"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_bucket_01/wooden_bucket_01.gltf" id="r21"]
+[ext_resource type="PackedScene" path="res://art/models/wine_barrel_01/wine_barrel_01.gltf" id="r22"]
+[ext_resource type="PackedScene" path="res://art/models/tree_small_02/tree.gltf" id="r23"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder1.gltf" id="r24"]
+[ext_resource type="PackedScene" path="res://art/models/fern_02/fernB.gltf" id="r25"]
+[ext_resource type="Texture2D" path="res://art/craft/distant_wood.jpg" id="r26"]
+[ext_resource type="Texture2D" path="res://art/surfaces/lichen_rock_Diffuse.jpg" id="r27"]
+[ext_resource type="Texture2D" path="res://art/surfaces/lichen_rock_nor_gl.jpg" id="r28"]
+[ext_resource type="Texture2D" path="res://art/surfaces/lichen_rock_Rough.jpg" id="r29"]
+[ext_resource type="Texture2D" path="res://art/surfaces/weathered_planks_Diffuse.jpg" id="r30"]
+[ext_resource type="Texture2D" path="res://art/surfaces/weathered_planks_nor_gl.jpg" id="r31"]
+[ext_resource type="Texture2D" path="res://art/surfaces/weathered_planks_Rough.jpg" id="r32"]
+[ext_resource type="Texture2D" path="res://art/craft/waypost_standard.jpg" id="r33"]
+[ext_resource type="Texture2D" path="res://art/craft/madder_canvas.jpg" id="r34"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ashlar_0.obj" id="r35"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ashlar_3.obj" id="r36"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ashlar_1.obj" id="r37"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ashlar_2.obj" id="r38"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ashlar_4.obj" id="r39"]
+[ext_resource type="ArrayMesh" path="res://art/craft/arch_stone.obj" id="r40"]
+[ext_resource type="ArrayMesh" path="res://art/craft/sunwheel.obj" id="r41"]
+[ext_resource type="ArrayMesh" path="res://art/craft/forked_standard.obj" id="r42"]
+[ext_resource type="PackedScene" path="res://art/models/modular_wooden_pier/boards.gltf" id="r43"]
+[ext_resource type="ArrayMesh" path="res://art/craft/ridge_canvas.obj" id="r44"]
+[ext_resource type="PackedScene" path="res://art/models/wooden_hammer_01/wooden_hammer_01.gltf" id="r45"]
+[ext_resource type="PackedScene" path="res://art/models/handsaw_wood/handsaw_wood.gltf" id="r46"]
+[ext_resource type="PackedScene" path="res://art/models/fern_02/fernA.gltf" id="r47"]
+[ext_resource type="PackedScene" path="res://art/models/shrub_03/shrub.gltf" id="r48"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder2.gltf" id="r49"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder3.gltf" id="r50"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder4.gltf" id="r51"]
+[ext_resource type="PackedScene" path="res://art/models/rock_moss_set_01/boulder5.gltf" id="r52"]
+[ext_resource type="Texture2D" path="res://art/craft/dry_lichen.jpg" id="r53"]
+[ext_resource type="ArrayMesh" path="res://art/craft/fallen_leaves.obj" id="r54"]
+
+[sub_resource type="ShaderMaterial" id="Road"]
+shader = ExtResource("r1")
+shader_parameter/paving = ExtResource("r2")
+shader_parameter/paving_normal = ExtResource("r3")
+shader_parameter/paving_rough = ExtResource("r4")
+shader_parameter/litter = ExtResource("r5")
+shader_parameter/litter_normal = ExtResource("r6")
+shader_parameter/litter_rough = ExtResource("r7")
+
+[sub_resource type="StandardMaterial3D" id="medieval_blocks_03"]
+albedo_color = Color(0.75, 0.73, 0.66, 1)
+albedo_texture = ExtResource("r8")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("r9")
+roughness_texture = ExtResource("r10")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.390000, 0.390000, 0.390000)
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="mossy_sandstone"]
+albedo_color = Color(0.86, 0.80, 0.69, 1)
+albedo_texture = ExtResource("r11")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("r12")
+roughness_texture = ExtResource("r13")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.740000, 0.740000, 0.740000)
+texture_filter = 4
+
+[sub_resource type="PanoramaSkyMaterial" id="DistantForest"]
+panorama = ExtResource("r26")
+energy_multiplier = 0.87
+
+[sub_resource type="Sky" id="AutumnSky"]
+sky_material = SubResource("DistantForest")
+
+[sub_resource type="Environment" id="LateSun"]
+background_mode = 2
+sky = SubResource("AutumnSky")
+sky_rotation = Vector3(0, 1.6, 0)
+background_color = Color(0.66, 0.51, 0.36, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.64, 0.70, 0.81, 1)
+ambient_light_energy = 0.75
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.85
+ssao_intensity = 1.25
+fog_enabled = true
+fog_light_color = Color(0.60, 0.57, 0.54, 1)
+fog_light_energy = 0.78
+fog_density = 0.008
+fog_sky_affect = 0.15
+
+[sub_resource type="StandardMaterial3D" id="lichen_rock"]
+albedo_color = Color(0.75, 0.76, 0.72, 1)
+albedo_texture = ExtResource("r53")
+normal_enabled = true
+normal_scale = 0.46
+normal_texture = ExtResource("r28")
+roughness_texture = ExtResource("r29")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.530000, 0.530000, 0.530000)
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="weathered_planks"]
+albedo_color = Color(0.58, 0.48, 0.37, 1)
+albedo_texture = ExtResource("r30")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("r31")
+roughness_texture = ExtResource("r32")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.490000, 0.490000, 0.490000)
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="HammeredBronze"]
+albedo_color = Color(0.60, 0.38, 0.13, 1)
+metallic = 0.48
+roughness = 0.46
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="DarkIron"]
+albedo_color = Color(0.22, 0.21, 0.16, 1)
+metallic = 0.48
+roughness = 0.82
+
+[sub_resource type="StandardMaterial3D" id="Flax"]
+albedo_color = Color(0.58, 0.44, 0.28, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="PatinatedCopper"]
+albedo_color = Color(0.23, 0.33, 0.28, 1)
+metallic = 0.37
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="waypost_standard"]
+albedo_texture = ExtResource("r33")
+cull_mode = 2
+roughness = 0.96
+texture_filter = 4
+
+[sub_resource type="StandardMaterial3D" id="madder_canvas"]
+albedo_texture = ExtResource("r34")
+cull_mode = 2
+roughness = 0.96
+texture_filter = 4
+
+[sub_resource type="CylinderMesh" id="RoundTimber"]
+top_radius = 0.5
+bottom_radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 0
+
+[sub_resource type="TorusMesh" id="TyreRing"]
+inner_radius = 0.87
+outer_radius = 1.0
+rings = 40
+ring_segments = 8
+
+[sub_resource type="TorusMesh" id="FelloeRing"]
+inner_radius = 0.87
+outer_radius = 1.0
+rings = 40
+ring_segments = 8
+
+[sub_resource type="StandardMaterial3D" id="CandleWick"]
+albedo_color = Color(1.0, 0.76, 0.27, 1)
+emission_enabled = true
+emission = Color(1, 0.41, 0.065, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="StandardMaterial3D" id="FallenOchre"]
+albedo_color = Color(0.67, 0.37, 0.09, 1)
+roughness = 0.91
+cull_mode = 2
+
+[node name="AlderPost" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("r0")]
+
+
+[node name="Mesh" parent="BaseWhitebox/World/Floor"]
+material_override = SubResource("Road")
+
+[node name="Mesh" parent="BaseWhitebox/World/BackWall"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionWall"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionReturn"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Ramp"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Landing"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpHigh"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpMid"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpLow"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step1"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step2"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step3"]
+visible = false
+
+[node name="Mesh" parent="BaseWhitebox/World/Step4"]
+visible = false
+
+[node name="Inspection" parent="." instance=ExtResource("r14")]
+
+
+[node name="WoodlandAir" type="WorldEnvironment" parent="."]
+environment = SubResource("LateSun")
+
+[node name="LowAutumnSun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-33, 4, 0)
+light_color = Color(1, 0.86, 0.67, 1)
+light_energy = 1.56
+shadow_enabled = true
+light_angular_distance = 0.22
+
+[node name="Waygate" type="Node3D" parent="."]
+
+
+[node name="Rampart" type="Node3D" parent="."]
+
+
+[node name="Boardwalk" type="Node3D" parent="."]
+
+
+[node name="Wheelwright" type="Node3D" parent="."]
+
+
+[node name="Woodland" type="Node3D" parent="."]
+
+
+[node name="parapet1" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(10.000000, -0.090000, -6.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.294078, 0.406578, 0.677490)
+
+[node name="endwall1" parent="Rampart" instance=ExtResource("r17")]
+position = Vector3(8.000000, -0.090000, -1.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.274534, 0.408024, 0.545192)
+
+[node name="parapet2" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(-8.000000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321525, 0.528552, 0.539833)
+
+[node name="endwall2" parent="Rampart" instance=ExtResource("r17")]
+position = Vector3(-1.600000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321597, 0.536334, 0.647752)
+
+[node name="parapet3" parent="Rampart" instance=ExtResource("r16")]
+position = Vector3(4.400000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321525, 0.528552, 0.485850)
+
+[node name="parapet_short1" parent="Rampart" instance=ExtResource("r18")]
+position = Vector3(10.000000, -0.090000, -12.000000)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(0.321597, 0.528729, 0.539794)
+
+[node name="wooden_table_021" parent="Wheelwright" instance=ExtResource("r19")]
+position = Vector3(6.350000, 0.000000, -5.550000)
+rotation_degrees = Vector3(0.000000, -10.000000, 0.000000)
+scale = Vector3(1.480937, 1.038093, 1.133105)
+
+[node name="wooden_lantern_011" parent="Wheelwright" instance=ExtResource("r20")]
+position = Vector3(6.850000, 0.830000, -5.460000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="wooden_bucket_011" parent="Wheelwright" instance=ExtResource("r21")]
+position = Vector3(5.480000, 0.000000, -5.320000)
+rotation_degrees = Vector3(0.000000, -21.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="wine_barrel_011" parent="Wheelwright" instance=ExtResource("r22")]
+position = Vector3(7.650000, 0.000000, -6.050000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="tree1" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-3.250000, -0.040000, -8.500000)
+rotation_degrees = Vector3(0.000000, 121.000000, 0.000000)
+scale = Vector3(1.520000, 1.520000, 1.520000)
+
+[node name="boulder11" parent="Waygate" instance=ExtResource("r24")]
+position = Vector3(-1.940000, -0.150000, -4.170000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.536281, 0.679026, 0.391830)
+
+[node name="fernB1" parent="Waygate" instance=ExtResource("r25")]
+position = Vector3(-1.650000, 0.000000, -3.550000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.850000, 0.850000, 0.850000)
+
+[node name="JambCourse1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.077556, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.930000, 0.346000, 0.880000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.992486, 0.350000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.760000, 0.416000, 0.720000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.007860, 0.770000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.790000, 0.346000, 0.720000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse4" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.981876, 1.120000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.740000, 0.396000, 0.720000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse5" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.002735, 1.520000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.780000, 0.336000, 0.720000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse6" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.981876, 1.860000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.740000, 0.316000, 0.720000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse7" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.059108, 2.180000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.890000, 0.116000, 0.880000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="BrokenShoulder1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.520000, 0.000000, -4.080000)
+rotation_degrees = Vector3(0.000000, -7.000000, 0.000000)
+scale = Vector3(0.690000, 0.290000, 0.770000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="BrokenShoulder2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.550000, 0.280000, -4.080000)
+rotation_degrees = Vector3(0.000000, -7.000000, 0.000000)
+scale = Vector3(0.570000, 0.290000, 0.700000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="BrokenShoulder3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.580000, 0.560000, -4.080000)
+rotation_degrees = Vector3(0.000000, -7.000000, 0.000000)
+scale = Vector3(0.450000, 0.290000, 0.630000)
+mesh = ExtResource("r38")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse8" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.075404, 0.000000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.930000, 0.346000, 0.880000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse9" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.989050, 0.350000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.760000, 0.416000, 0.720000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse10" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.002501, 0.770000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.790000, 0.346000, 0.720000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse11" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.977217, 1.120000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.740000, 0.396000, 0.720000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse12" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.997444, 1.520000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.780000, 0.336000, 0.720000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse13" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.982497, 1.860000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.740000, 0.316000, 0.720000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="JambCourse14" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.054633, 2.180000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.890000, 0.116000, 0.880000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="BrokenShoulder4" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.520000, 0.000000, -4.080000)
+rotation_degrees = Vector3(0.000000, 7.000000, 0.000000)
+scale = Vector3(0.690000, 0.290000, 0.770000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="BrokenShoulder5" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.550000, 0.280000, -4.080000)
+rotation_degrees = Vector3(0.000000, 7.000000, 0.000000)
+scale = Vector3(0.570000, 0.290000, 0.700000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="SingleLintel1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.300000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.910000, 0.270000, 0.830000)
+mesh = ExtResource("r39")
+material_override = SubResource("mossy_sandstone")
+
+[node name="RelievingVoussoir1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.128396, 2.581081, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -75.635013)
+scale = Vector3(0.220379, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.036980, 2.755866, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -50.872693)
+scale = Vector3(0.252910, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.861555, 2.909111, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -32.938968)
+scale = Vector3(0.299779, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir4" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.616331, 3.028402, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -19.839045)
+scale = Vector3(0.343592, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir5" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.321175, 3.104076, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -9.360625)
+scale = Vector3(0.373601, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir6" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 3.130000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, -0.000000)
+scale = Vector3(0.384188, 0.460000, 0.840000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir7" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.321175, 3.104076, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 9.360625)
+scale = Vector3(0.373601, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir8" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.616331, 3.028402, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 19.839045)
+scale = Vector3(0.343592, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir9" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.861555, 2.909111, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 32.938968)
+scale = Vector3(0.299779, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir10" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.036980, 2.755866, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 50.872693)
+scale = Vector3(0.252910, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RelievingVoussoir11" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.128396, 2.581081, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 75.635013)
+scale = Vector3(0.220379, 0.380000, 0.750000)
+mesh = ExtResource("r40")
+material_override = SubResource("lichen_rock")
+
+[node name="RecessedTympanum1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.500000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.320000, 0.260000, 0.490000)
+mesh = ExtResource("r38")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="RecessedTympanum2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.750000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.990000, 0.180000, 0.490000)
+mesh = ExtResource("r39")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="RecessedTympanum3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.920000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.580000, 0.150000, 0.490000)
+mesh = ExtResource("r35")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="RecessedTympanum4" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 3.060000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.170000, 0.120000, 0.490000)
+mesh = ExtResource("r38")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="RecessedTympanum5" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 3.170000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.770000, 0.100000, 0.490000)
+mesh = ExtResource("r39")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="SealBacking1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.890000, -4.301500)
+rotation_degrees = Vector3(90.000000, 180.000000, 0.000000)
+scale = Vector3(0.660000, 0.055000, 0.660000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("PatinatedCopper")
+
+[node name="SunAndSpokes1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.890000, -4.333000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(0.280000, 0.280000, 0.250000)
+mesh = ExtResource("r41")
+material_override = SubResource("HammeredBronze")
+
+[node name="SealBacking2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.890000, -3.698500)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.660000, 0.055000, 0.660000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("PatinatedCopper")
+
+[node name="SunAndSpokes2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.000000, 2.890000, -3.667000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.280000, 0.280000, 0.250000)
+mesh = ExtResource("r41")
+material_override = SubResource("HammeredBronze")
+
+[node name="PennantRail1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.100000, 2.370000, -3.510000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(0.058000, 0.840000, 0.058000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("HammeredBronze")
+
+[node name="WallPin1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.440000, 2.370000, -3.755000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.044000, 0.490000, 0.044000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="WallPin2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.750000, 2.370000, -3.755000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.044000, 0.490000, 0.044000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="InnStandard1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.100000, 2.340000, -3.510000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.660000, 1.400000, 0.860000)
+mesh = ExtResource("r42")
+material_override = SubResource("waypost_standard")
+
+[node name="PennantRail2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.100000, 2.370000, -4.490000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(0.058000, 0.840000, 0.058000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("HammeredBronze")
+
+[node name="WallPin3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.440000, 2.370000, -4.245000)
+rotation_degrees = Vector3(90.000000, 180.000000, 0.000000)
+scale = Vector3(0.044000, 0.490000, 0.044000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="WallPin4" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.750000, 2.370000, -4.245000)
+rotation_degrees = Vector3(90.000000, 180.000000, 0.000000)
+scale = Vector3(0.044000, 0.490000, 0.044000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="InnStandard2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-1.100000, 2.340000, -4.490000)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(0.660000, 1.400000, 0.860000)
+mesh = ExtResource("r42")
+material_override = SubResource("waypost_standard")
+
+[node name="WeatheredFoot1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(1.000000, 0.000000, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.485000, 0.214000, 1.470000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(1.000000, 0.184000, 1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.216000, 1.500000)
+mesh = ExtResource("r38")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(1.000000, 0.000000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.485000, 0.710000, 1.470000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(1.000000, 0.680000, -1.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.220000, 1.500000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(3.000000, 0.000000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.485000, 1.210000, 1.470000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(3.000000, 1.180000, -3.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 0.220000, 1.500000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.000000, 2.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.980000, 0.122000, 0.588000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.092000, 2.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.000000, 0.108000, 0.600000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot5" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.000000, 1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.980000, 0.214000, 0.588000)
+mesh = ExtResource("r36")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap5" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.184000, 1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.000000, 0.216000, 0.600000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot6" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.000000, 0.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.980000, 0.410000, 0.588000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap6" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.380000, 0.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.000000, 0.220000, 0.600000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="WeatheredFoot7" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.000000, 0.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.980000, 0.610000, 0.588000)
+mesh = ExtResource("r35")
+material_override = SubResource("lichen_rock")
+
+[node name="TreadCap7" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(5.000000, 0.580000, 0.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.000000, 0.220000, 0.600000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="SlopePlanks1" parent="Boardwalk" instance=ExtResource("r43")]
+position = Vector3(-6.000000, 1.592598, -4.974811)
+rotation_degrees = Vector3(18.434949, 0.000000, 0.000000)
+scale = Vector3(1.188650, 0.877469, 0.957048)
+
+[node name="SlopePlanks2" parent="Boardwalk" instance=ExtResource("r43")]
+position = Vector3(-6.000000, 0.925895, -2.974702)
+rotation_degrees = Vector3(18.434949, 0.000000, 0.000000)
+scale = Vector3(1.188650, 0.877469, 0.957048)
+
+[node name="SlopePlanks3" parent="Boardwalk" instance=ExtResource("r43")]
+position = Vector3(-6.000000, 0.259192, -0.974593)
+rotation_degrees = Vector3(18.434949, 0.000000, 0.000000)
+scale = Vector3(1.188650, 0.877469, 0.957048)
+
+[node name="LandingPlanks1" parent="Boardwalk" instance=ExtResource("r43")]
+position = Vector3(-6.000000, 1.930000, -7.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.188650, 0.877469, 0.907886)
+
+[node name="LandingAbutment1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-6.000000, 0.000000, -7.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(2.960000, 1.940000, 1.930000)
+mesh = ExtResource("r37")
+material_override = SubResource("medieval_blocks_03")
+
+[node name="DeckStringer1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.320000, 0.890000, -3.100000)
+rotation_degrees = Vector3(71.902743, 180.000000, 0.000000)
+scale = Vector3(0.250000, 6.438509, 0.250000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Trestle1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.320000, 0.313333, -2.150000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.200000, 0.606667, 0.200000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Brace1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.320000, 0.278333, -1.795000)
+rotation_degrees = Vector3(57.251180, 180.000000, 0.000000)
+scale = Vector3(0.120000, 0.844183, 0.120000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Trestle2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.320000, 0.756667, -4.810000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.200000, 1.493333, 0.200000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Brace2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.320000, 0.721667, -4.455000)
+rotation_degrees = Vector3(27.858063, 180.000000, 0.000000)
+scale = Vector3(0.120000, 1.519422, 0.120000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="DeckStringer2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-4.680000, 0.890000, -3.100000)
+rotation_degrees = Vector3(71.902743, 180.000000, 0.000000)
+scale = Vector3(0.250000, 6.438509, 0.250000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Trestle3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-4.680000, 0.313333, -2.150000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.200000, 0.606667, 0.200000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Brace3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-4.680000, 0.278333, -1.795000)
+rotation_degrees = Vector3(57.251180, 180.000000, 0.000000)
+scale = Vector3(0.120000, 0.844183, 0.120000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Trestle4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-4.680000, 0.756667, -4.810000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.200000, 1.493333, 0.200000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Brace4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-4.680000, 0.721667, -4.455000)
+rotation_degrees = Vector3(27.858063, 180.000000, 0.000000)
+scale = Vector3(0.120000, 1.519422, 0.120000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="RoughStake1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 0.610000, -1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.150000, 1.220000, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Lashing1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 0.995000, -1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.030000, -1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.065000, -1.400000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="RoughStake2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.010000, -3.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.150000, 2.020000, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Lashing4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.795000, -3.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing5" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.830000, -3.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing6" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.865000, -3.800000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="RoughStake3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.370000, -6.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.150000, 2.740000, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Lashing7" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.515000, -6.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing8" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.550000, -6.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing9" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.585000, -6.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="RoughStake4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.370000, -7.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.150000, 2.740000, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Lashing10" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.515000, -7.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing11" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.550000, -7.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Lashing12" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.585000, -7.850000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.174000, 0.030000, 0.174000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail1" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.074167, -1.600000)
+rotation_degrees = Vector3(83.110163, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.402910, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail2" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.133888, -2.000000)
+rotation_degrees = Vector3(79.919693, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.406271, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail3" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.224721, -2.400000)
+rotation_degrees = Vector3(74.549514, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.414998, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail4" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.358055, -2.800000)
+rotation_degrees = Vector3(68.680664, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.429383, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail5" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.533888, -3.200000)
+rotation_degrees = Vector3(63.946262, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.445245, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail6" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.740833, -3.600000)
+rotation_degrees = Vector3(61.372817, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.455708, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail7" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.868333, -4.000000)
+rotation_degrees = Vector3(84.762524, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.401677, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail8" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.916388, -4.400000)
+rotation_degrees = Vector3(81.547370, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.404393, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail9" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 1.995555, -4.800000)
+rotation_degrees = Vector3(76.113364, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.412043, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail10" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.117221, -5.200000)
+rotation_degrees = Vector3(70.145051, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.425281, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail11" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.281388, -5.600000)
+rotation_degrees = Vector3(65.310459, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.440245, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail12" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.476667, -6.000000)
+rotation_degrees = Vector3(62.676109, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.450235, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail13" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.537500, -6.337500)
+rotation_degrees = Vector3(107.175904, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.287837, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail14" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.463888, -6.612500)
+rotation_degrees = Vector3(102.749638, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.281952, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail15" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.421388, -6.887500)
+rotation_degrees = Vector3(94.734469, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.275942, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail16" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.421388, -7.162500)
+rotation_degrees = Vector3(85.265531, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.275942, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail17" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.463888, -7.437500)
+rotation_degrees = Vector3(77.250362, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.281952, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="HempRail18" type="MeshInstance3D" parent="Boardwalk"]
+position = Vector3(-7.620000, 2.537500, -7.712500)
+rotation_degrees = Vector3(72.824096, 180.000000, 0.000000)
+scale = Vector3(0.037000, 0.287837, 0.037000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="RepairAwning1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 0.000000, -6.420000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = ExtResource("r44")
+material_override = SubResource("madder_canvas")
+
+[node name="AwningStandard1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 1.977500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.955000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 3.802500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="AwningStandard2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 1.977500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.955000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 3.802500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="AwningStandard3" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(4.630000, 1.527500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.055000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule3" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(4.630000, 2.902500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="AwningStandard4" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(4.630000, 1.527500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.055000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule4" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(4.630000, 2.902500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="AwningStandard5" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(8.330000, 1.527500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.055000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule5" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(8.330000, 2.902500, -8.370000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="AwningStandard6" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(8.330000, 1.527500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.115000, 3.055000, 0.115000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Ferrule6" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(8.330000, 2.902500, -4.470000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.140000, 0.125000, 0.140000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("Flax")
+
+[node name="Ridgepole1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(6.480000, 3.870000, -6.420000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.119000, 4.180000, 0.119000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="FrontRafter1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(5.555000, 3.400000, -4.470000)
+rotation_degrees = Vector3(115.942295, -90.000000, 0.000000)
+scale = Vector3(0.094000, 2.057304, 0.094000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="FrontRafter2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.405000, 3.400000, -4.470000)
+rotation_degrees = Vector3(115.942295, 90.000000, 0.000000)
+scale = Vector3(0.094000, 2.057304, 0.094000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="wooden_hammer_011" parent="Wheelwright" instance=ExtResource("r45")]
+position = Vector3(6.070000, 0.850000, -5.600000)
+rotation_degrees = Vector3(87.000000, 27.000000, 11.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="handsaw_wood1" parent="Wheelwright" instance=ExtResource("r46")]
+position = Vector3(6.270000, 0.850000, -5.560000)
+rotation_degrees = Vector3(0.000000, 82.000000, 90.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Tyre1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.530000, 0.690000, -0.610000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.690000, 1.080000, 0.690000)
+mesh = SubResource("TyreRing")
+material_override = SubResource("DarkIron")
+
+[node name="Felloe1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.530000, 0.690000, -0.597000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.669300, 1.320000, 0.669300)
+mesh = SubResource("FelloeRing")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.840500, 0.690000, -0.610000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.798901, 0.845250, -0.610000)
+rotation_degrees = Vector3(60.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke3" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.685250, 0.958901, -0.610000)
+rotation_degrees = Vector3(30.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke4" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.530000, 1.000500, -0.610000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke5" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.374750, 0.958901, -0.610000)
+rotation_degrees = Vector3(30.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke6" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.261099, 0.845250, -0.610000)
+rotation_degrees = Vector3(60.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke7" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.219500, 0.690000, -0.610000)
+rotation_degrees = Vector3(90.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke8" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.261099, 0.534750, -0.610000)
+rotation_degrees = Vector3(120.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke9" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.374750, 0.421099, -0.610000)
+rotation_degrees = Vector3(150.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke10" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.530000, 0.379500, -0.610000)
+rotation_degrees = Vector3(180.000000, 0.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke11" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.685250, 0.421099, -0.610000)
+rotation_degrees = Vector3(150.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke12" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.798901, 0.534750, -0.610000)
+rotation_degrees = Vector3(120.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.621000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Hub1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.530000, 0.690000, -0.586000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.186300, 0.212000, 0.186300)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Tyre2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.450000, 0.580000, -7.480000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.580000, 1.080000, 0.580000)
+mesh = SubResource("TyreRing")
+material_override = SubResource("DarkIron")
+
+[node name="Felloe2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.450000, 0.580000, -7.467000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.562600, 1.320000, 0.562600)
+mesh = SubResource("FelloeRing")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke13" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.711000, 0.580000, -7.480000)
+rotation_degrees = Vector3(90.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke14" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.676033, 0.710500, -7.480000)
+rotation_degrees = Vector3(60.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke15" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.580500, 0.806033, -7.480000)
+rotation_degrees = Vector3(30.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke16" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.450000, 0.841000, -7.480000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke17" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.319500, 0.806033, -7.480000)
+rotation_degrees = Vector3(30.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke18" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.223967, 0.710500, -7.480000)
+rotation_degrees = Vector3(60.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke19" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.189000, 0.580000, -7.480000)
+rotation_degrees = Vector3(90.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke20" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.223967, 0.449500, -7.480000)
+rotation_degrees = Vector3(120.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke21" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.319500, 0.353967, -7.480000)
+rotation_degrees = Vector3(150.000000, -90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke22" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.450000, 0.319000, -7.480000)
+rotation_degrees = Vector3(180.000000, 0.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke23" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.580500, 0.353967, -7.480000)
+rotation_degrees = Vector3(150.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Spoke24" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.676033, 0.449500, -7.480000)
+rotation_degrees = Vector3(120.000000, 90.000000, 0.000000)
+scale = Vector3(0.043000, 0.522000, 0.043000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="Hub2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(7.450000, 0.580000, -7.456000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.156600, 0.212000, 0.156600)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="WaterPail1" parent="Wheelwright" instance=ExtResource("r21")]
+position = Vector3(8.490000, 0.000000, -0.390000)
+rotation_degrees = Vector3(0.000000, 51.000000, 0.000000)
+scale = Vector3(1.080000, 1.080000, 1.080000)
+
+[node name="AxleStock1" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(9.055000, 0.105000, -0.460000)
+rotation_degrees = Vector3(90.400507, 88.397739, 0.000000)
+scale = Vector3(0.150000, 1.430594, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="AxleStock2" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(9.140000, 0.105000, -0.380000)
+rotation_degrees = Vector3(90.449097, 80.980678, 0.000000)
+scale = Vector3(0.150000, 1.275813, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="AxleStock3" type="MeshInstance3D" parent="Wheelwright"]
+position = Vector3(9.225000, 0.105000, -0.300000)
+rotation_degrees = Vector3(90.499118, 71.722890, 0.000000)
+scale = Vector3(0.150000, 1.147955, 0.150000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("weathered_planks")
+
+[node name="tree2" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-8.600000, -0.050000, -7.950000)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(1.564800, 1.630000, 1.727800)
+
+[node name="tree3" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-7.550000, -0.050000, -10.300000)
+rotation_degrees = Vector3(0.000000, 171.000000, 0.000000)
+scale = Vector3(1.219200, 1.270000, 1.346200)
+
+[node name="tree4" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-2.000000, -0.050000, -11.300000)
+rotation_degrees = Vector3(0.000000, 244.000000, 0.000000)
+scale = Vector3(1.113600, 1.160000, 1.229600)
+
+[node name="tree5" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(3.400000, -0.050000, -10.200000)
+rotation_degrees = Vector3(0.000000, 301.000000, 0.000000)
+scale = Vector3(1.420800, 1.480000, 1.568800)
+
+[node name="tree6" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(7.900000, -0.050000, -10.900000)
+rotation_degrees = Vector3(0.000000, 20.000000, 0.000000)
+scale = Vector3(1.776000, 1.850000, 1.961000)
+
+[node name="tree7" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(10.900000, -0.050000, -4.500000)
+rotation_degrees = Vector3(0.000000, 41.000000, 0.000000)
+scale = Vector3(1.411200, 1.470000, 1.558200)
+
+[node name="tree8" parent="Woodland" instance=ExtResource("r23")]
+position = Vector3(-10.650000, -0.050000, -11.750000)
+rotation_degrees = Vector3(0.000000, 109.000000, 0.000000)
+scale = Vector3(1.401600, 1.460000, 1.547600)
+
+[node name="boulder12" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-2.000000, -0.180000, -4.100000)
+rotation_degrees = Vector3(0.000000, 75.000000, 0.000000)
+scale = Vector3(0.636834, 0.590480, 0.498693)
+
+[node name="fernB2" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-2.153519, -0.018000, -4.921321)
+rotation_degrees = Vector3(0.000000, 72.000000, 0.000000)
+scale = Vector3(0.702238, 0.702238, 0.702238)
+
+[node name="fernA1" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-2.149891, -0.018000, -3.301211)
+rotation_degrees = Vector3(0.000000, 62.000000, 0.000000)
+scale = Vector3(0.892451, 0.892451, 0.892451)
+
+[node name="shrub1" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-1.659476, -0.018000, -5.038000)
+rotation_degrees = Vector3(0.000000, 23.000000, 0.000000)
+scale = Vector3(1.098958, 1.098958, 1.098958)
+
+[node name="fernB3" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-2.303785, -0.018000, -5.009320)
+rotation_degrees = Vector3(0.000000, 355.000000, 0.000000)
+scale = Vector3(1.106553, 1.106553, 1.106553)
+
+[node name="fernA2" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-2.722849, -0.018000, -4.383132)
+rotation_degrees = Vector3(0.000000, 268.000000, 0.000000)
+scale = Vector3(1.108264, 1.108264, 1.108264)
+
+[node name="shrub2" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-2.464672, -0.018000, -4.906270)
+rotation_degrees = Vector3(0.000000, 88.000000, 0.000000)
+scale = Vector3(0.892123, 0.892123, 0.892123)
+
+[node name="fernB4" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-2.773684, -0.018000, -4.249962)
+rotation_degrees = Vector3(0.000000, 30.000000, 0.000000)
+scale = Vector3(0.678395, 0.678395, 0.678395)
+
+[node name="fernA3" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-1.708370, -0.018000, -3.009291)
+rotation_degrees = Vector3(0.000000, 209.000000, 0.000000)
+scale = Vector3(0.703847, 0.703847, 0.703847)
+
+[node name="shrub3" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-1.235702, -0.018000, -4.749006)
+rotation_degrees = Vector3(0.000000, 311.000000, 0.000000)
+scale = Vector3(1.321364, 1.321364, 1.321364)
+
+[node name="fernB5" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-2.745551, -0.018000, -4.432930)
+rotation_degrees = Vector3(0.000000, 13.000000, 0.000000)
+scale = Vector3(0.955751, 0.955751, 0.955751)
+
+[node name="boulder21" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(-4.300000, -0.180000, -8.650000)
+rotation_degrees = Vector3(0.000000, 332.000000, 0.000000)
+scale = Vector3(0.769193, 1.262606, 0.737808)
+
+[node name="boulder31" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(-4.982195, -0.180000, -8.455062)
+rotation_degrees = Vector3(0.000000, 213.000000, 0.000000)
+scale = Vector3(0.745868, 1.137821, 0.891601)
+
+[node name="boulder41" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-2.904317, -0.180000, -8.393817)
+rotation_degrees = Vector3(0.000000, 266.000000, 0.000000)
+scale = Vector3(0.518394, 0.369396, 0.661828)
+
+[node name="fernB6" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-4.237099, -0.018000, -10.218714)
+rotation_degrees = Vector3(0.000000, 107.000000, 0.000000)
+scale = Vector3(1.103864, 1.103864, 1.103864)
+
+[node name="fernA4" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-3.420683, -0.018000, -8.509534)
+rotation_degrees = Vector3(0.000000, 238.000000, 0.000000)
+scale = Vector3(0.957643, 0.957643, 0.957643)
+
+[node name="shrub4" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-5.737325, -0.018000, -9.483738)
+rotation_degrees = Vector3(0.000000, 134.000000, 0.000000)
+scale = Vector3(0.942340, 0.942340, 0.942340)
+
+[node name="fernB7" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-4.934509, -0.018000, -7.739900)
+rotation_degrees = Vector3(0.000000, 174.000000, 0.000000)
+scale = Vector3(0.660935, 0.660935, 0.660935)
+
+[node name="fernA5" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-4.278885, -0.018000, -7.020649)
+rotation_degrees = Vector3(0.000000, 123.000000, 0.000000)
+scale = Vector3(1.181583, 1.181583, 1.181583)
+
+[node name="shrub5" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-4.697253, -0.018000, -9.725671)
+rotation_degrees = Vector3(0.000000, 351.000000, 0.000000)
+scale = Vector3(0.965186, 0.965186, 0.965186)
+
+[node name="fernB8" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-5.042132, -0.018000, -7.426250)
+rotation_degrees = Vector3(0.000000, 212.000000, 0.000000)
+scale = Vector3(1.271316, 1.271316, 1.271316)
+
+[node name="fernA6" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-5.477388, -0.018000, -8.177870)
+rotation_degrees = Vector3(0.000000, 121.000000, 0.000000)
+scale = Vector3(1.182785, 1.182785, 1.182785)
+
+[node name="shrub6" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-5.650348, -0.018000, -8.872328)
+rotation_degrees = Vector3(0.000000, 135.000000, 0.000000)
+scale = Vector3(0.657714, 0.657714, 0.657714)
+
+[node name="fernB9" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-5.694007, -0.018000, -7.902240)
+rotation_degrees = Vector3(0.000000, 33.000000, 0.000000)
+scale = Vector3(0.710483, 0.710483, 0.710483)
+
+[node name="boulder32" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(-8.150000, -0.180000, -6.000000)
+rotation_degrees = Vector3(0.000000, 227.000000, 0.000000)
+scale = Vector3(0.563175, 0.869668, 0.673211)
+
+[node name="boulder42" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-8.546554, -0.180000, -6.113583)
+rotation_degrees = Vector3(0.000000, 128.000000, 0.000000)
+scale = Vector3(0.429762, 0.432460, 0.548673)
+
+[node name="boulder51" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(-8.255512, -0.180000, -6.818225)
+rotation_degrees = Vector3(0.000000, 325.000000, 0.000000)
+scale = Vector3(0.352854, 0.433934, 0.252112)
+
+[node name="fernB10" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-7.388544, -0.018000, -6.284281)
+rotation_degrees = Vector3(0.000000, 188.000000, 0.000000)
+scale = Vector3(1.152479, 1.152479, 1.152479)
+
+[node name="fernA7" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-7.237548, -0.018000, -5.863002)
+rotation_degrees = Vector3(0.000000, 8.000000, 0.000000)
+scale = Vector3(1.277212, 1.277212, 1.277212)
+
+[node name="shrub7" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-7.462670, -0.018000, -6.555780)
+rotation_degrees = Vector3(0.000000, 121.000000, 0.000000)
+scale = Vector3(0.837373, 0.837373, 0.837373)
+
+[node name="fernB11" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.984180, -0.018000, -6.154753)
+rotation_degrees = Vector3(0.000000, 11.000000, 0.000000)
+scale = Vector3(1.318324, 1.318324, 1.318324)
+
+[node name="fernA8" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-7.482056, -0.018000, -5.501246)
+rotation_degrees = Vector3(0.000000, 183.000000, 0.000000)
+scale = Vector3(0.846769, 0.846769, 0.846769)
+
+[node name="shrub8" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-8.337436, -0.018000, -7.016750)
+rotation_degrees = Vector3(0.000000, 357.000000, 0.000000)
+scale = Vector3(0.721331, 0.721331, 0.721331)
+
+[node name="fernB12" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.529348, -0.018000, -5.095779)
+rotation_degrees = Vector3(0.000000, 308.000000, 0.000000)
+scale = Vector3(0.965349, 0.965349, 0.965349)
+
+[node name="fernA9" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-8.811134, -0.018000, -5.791067)
+rotation_degrees = Vector3(0.000000, 7.000000, 0.000000)
+scale = Vector3(1.059108, 1.059108, 1.059108)
+
+[node name="shrub9" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-8.701467, -0.018000, -6.141718)
+rotation_degrees = Vector3(0.000000, 172.000000, 0.000000)
+scale = Vector3(1.336258, 1.336258, 1.336258)
+
+[node name="fernB13" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-7.487418, -0.018000, -6.719929)
+rotation_degrees = Vector3(0.000000, 248.000000, 0.000000)
+scale = Vector3(0.983380, 0.983380, 0.983380)
+
+[node name="boulder43" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-8.780000, -0.180000, -9.600000)
+rotation_degrees = Vector3(0.000000, 269.000000, 0.000000)
+scale = Vector3(0.803711, 0.643393, 1.026089)
+
+[node name="boulder52" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(-8.954522, -0.180000, -9.032217)
+rotation_degrees = Vector3(0.000000, 238.000000, 0.000000)
+scale = Vector3(0.724527, 0.812559, 0.517671)
+
+[node name="boulder13" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-9.549840, -0.180000, -8.695185)
+rotation_degrees = Vector3(0.000000, 105.000000, 0.000000)
+scale = Vector3(0.412668, 0.341248, 0.323153)
+
+[node name="fernB14" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-9.364106, -0.018000, -8.366707)
+rotation_degrees = Vector3(0.000000, 217.000000, 0.000000)
+scale = Vector3(0.657078, 0.657078, 0.657078)
+
+[node name="fernA10" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-8.116804, -0.018000, -10.314513)
+rotation_degrees = Vector3(0.000000, 84.000000, 0.000000)
+scale = Vector3(0.941235, 0.941235, 0.941235)
+
+[node name="shrub10" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-10.198704, -0.018000, -9.370394)
+rotation_degrees = Vector3(0.000000, 289.000000, 0.000000)
+scale = Vector3(0.967270, 0.967270, 0.967270)
+
+[node name="fernB15" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.364544, -0.018000, -10.355134)
+rotation_degrees = Vector3(0.000000, 90.000000, 0.000000)
+scale = Vector3(1.099979, 1.099979, 1.099979)
+
+[node name="fernA11" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-9.912531, -0.018000, -9.507856)
+rotation_degrees = Vector3(0.000000, 210.000000, 0.000000)
+scale = Vector3(1.166225, 1.166225, 1.166225)
+
+[node name="shrub11" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-9.538307, -0.018000, -10.181940)
+rotation_degrees = Vector3(0.000000, 210.000000, 0.000000)
+scale = Vector3(0.922216, 0.922216, 0.922216)
+
+[node name="fernB16" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-9.805500, -0.018000, -10.027554)
+rotation_degrees = Vector3(0.000000, 16.000000, 0.000000)
+scale = Vector3(1.262725, 1.262725, 1.262725)
+
+[node name="fernA12" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-8.238658, -0.018000, -10.456796)
+rotation_degrees = Vector3(0.000000, 241.000000, 0.000000)
+scale = Vector3(1.221269, 1.221269, 1.221269)
+
+[node name="shrub12" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-8.492083, -0.018000, -10.317658)
+rotation_degrees = Vector3(0.000000, 160.000000, 0.000000)
+scale = Vector3(0.846567, 0.846567, 0.846567)
+
+[node name="fernB17" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-10.149739, -0.018000, -9.304772)
+rotation_degrees = Vector3(0.000000, 180.000000, 0.000000)
+scale = Vector3(1.332310, 1.332310, 1.332310)
+
+[node name="boulder53" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(0.500000, -0.180000, -10.750000)
+rotation_degrees = Vector3(0.000000, 192.000000, 0.000000)
+scale = Vector3(0.940945, 1.224319, 0.672299)
+
+[node name="boulder14" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(0.852982, -0.180000, -10.272255)
+rotation_degrees = Vector3(0.000000, 305.000000, 0.000000)
+scale = Vector3(0.588435, 0.500103, 0.460793)
+
+[node name="boulder22" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(-0.503191, -0.180000, -11.386358)
+rotation_degrees = Vector3(0.000000, 222.000000, 0.000000)
+scale = Vector3(0.347747, 0.451112, 0.333558)
+
+[node name="fernB18" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(0.729340, -0.018000, -9.681420)
+rotation_degrees = Vector3(0.000000, 274.000000, 0.000000)
+scale = Vector3(1.106645, 1.106645, 1.106645)
+
+[node name="fernA13" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(1.529525, -0.018000, -11.270776)
+rotation_degrees = Vector3(0.000000, 318.000000, 0.000000)
+scale = Vector3(1.305911, 1.305911, 1.305911)
+
+[node name="shrub13" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-0.537509, -0.018000, -10.756483)
+rotation_degrees = Vector3(0.000000, 15.000000, 0.000000)
+scale = Vector3(1.041952, 1.041952, 1.041952)
+
+[node name="fernB19" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(1.471256, -0.018000, -10.457444)
+rotation_degrees = Vector3(0.000000, 126.000000, 0.000000)
+scale = Vector3(1.387001, 1.387001, 1.387001)
+
+[node name="fernA14" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(1.254047, -0.018000, -10.301193)
+rotation_degrees = Vector3(0.000000, 197.000000, 0.000000)
+scale = Vector3(0.998871, 0.998871, 0.998871)
+
+[node name="shrub14" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-0.274712, -0.018000, -11.992189)
+rotation_degrees = Vector3(0.000000, 22.000000, 0.000000)
+scale = Vector3(0.975331, 0.975331, 0.975331)
+
+[node name="fernB20" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(1.339157, -0.018000, -10.874954)
+rotation_degrees = Vector3(0.000000, 101.000000, 0.000000)
+scale = Vector3(1.170840, 1.170840, 1.170840)
+
+[node name="fernA15" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-0.707096, -0.018000, -10.375384)
+rotation_degrees = Vector3(0.000000, 82.000000, 0.000000)
+scale = Vector3(1.379042, 1.379042, 1.379042)
+
+[node name="shrub15" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(1.312747, -0.018000, -11.167336)
+rotation_degrees = Vector3(0.000000, 22.000000, 0.000000)
+scale = Vector3(1.131696, 1.131696, 1.131696)
+
+[node name="fernB21" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(0.501382, -0.018000, -11.873235)
+rotation_degrees = Vector3(0.000000, 319.000000, 0.000000)
+scale = Vector3(1.277946, 1.277946, 1.277946)
+
+[node name="boulder15" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(4.550000, -0.180000, -10.500000)
+rotation_degrees = Vector3(0.000000, 68.000000, 0.000000)
+scale = Vector3(0.696272, 0.628782, 0.545238)
+
+[node name="boulder23" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(4.009743, -0.180000, -10.531940)
+rotation_degrees = Vector3(0.000000, 69.000000, 0.000000)
+scale = Vector3(0.451785, 0.760615, 0.433351)
+
+[node name="boulder33" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(3.641666, -0.180000, -9.911341)
+rotation_degrees = Vector3(0.000000, 161.000000, 0.000000)
+scale = Vector3(0.398998, 0.473620, 0.476957)
+
+[node name="fernB22" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(3.601190, -0.018000, -11.385414)
+rotation_degrees = Vector3(0.000000, 353.000000, 0.000000)
+scale = Vector3(1.066869, 1.066869, 1.066869)
+
+[node name="fernA16" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(5.634818, -0.018000, -10.302640)
+rotation_degrees = Vector3(0.000000, 350.000000, 0.000000)
+scale = Vector3(0.733449, 0.733449, 0.733449)
+
+[node name="shrub16" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(5.217496, -0.018000, -10.652267)
+rotation_degrees = Vector3(0.000000, 1.000000, 0.000000)
+scale = Vector3(0.964111, 0.964111, 0.964111)
+
+[node name="fernB23" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(3.710476, -0.018000, -10.148346)
+rotation_degrees = Vector3(0.000000, 114.000000, 0.000000)
+scale = Vector3(0.927072, 0.927072, 0.927072)
+
+[node name="fernA17" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(3.454969, -0.018000, -10.630881)
+rotation_degrees = Vector3(0.000000, 107.000000, 0.000000)
+scale = Vector3(0.665695, 0.665695, 0.665695)
+
+[node name="shrub17" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(5.747806, -0.018000, -10.432886)
+rotation_degrees = Vector3(0.000000, 73.000000, 0.000000)
+scale = Vector3(0.662346, 0.662346, 0.662346)
+
+[node name="fernB24" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(3.912532, -0.018000, -10.667746)
+rotation_degrees = Vector3(0.000000, 110.000000, 0.000000)
+scale = Vector3(0.957191, 0.957191, 0.957191)
+
+[node name="fernA18" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(3.842325, -0.018000, -9.705549)
+rotation_degrees = Vector3(0.000000, 302.000000, 0.000000)
+scale = Vector3(0.672408, 0.672408, 0.672408)
+
+[node name="shrub18" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(4.081989, -0.018000, -11.586937)
+rotation_degrees = Vector3(0.000000, 126.000000, 0.000000)
+scale = Vector3(1.287034, 1.287034, 1.287034)
+
+[node name="fernB25" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(3.974143, -0.018000, -9.356458)
+rotation_degrees = Vector3(0.000000, 156.000000, 0.000000)
+scale = Vector3(1.291156, 1.291156, 1.291156)
+
+[node name="boulder24" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(8.650000, -0.180000, -9.240000)
+rotation_degrees = Vector3(0.000000, 215.000000, 0.000000)
+scale = Vector3(0.447205, 0.771548, 0.428958)
+
+[node name="boulder34" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(8.811150, -0.180000, -8.860280)
+rotation_degrees = Vector3(0.000000, 200.000000, 0.000000)
+scale = Vector3(0.433644, 0.552991, 0.518372)
+
+[node name="boulder44" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(9.175347, -0.180000, -8.603890)
+rotation_degrees = Vector3(0.000000, 308.000000, 0.000000)
+scale = Vector3(0.301392, 0.303984, 0.384783)
+
+[node name="fernB26" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.429236, -0.018000, -9.545777)
+rotation_degrees = Vector3(0.000000, 304.000000, 0.000000)
+scale = Vector3(1.302566, 1.302566, 1.302566)
+
+[node name="fernA19" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(9.630679, -0.018000, -9.265445)
+rotation_degrees = Vector3(0.000000, 52.000000, 0.000000)
+scale = Vector3(0.713989, 0.713989, 0.713989)
+
+[node name="shrub19" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(9.568089, -0.018000, -9.537738)
+rotation_degrees = Vector3(0.000000, 52.000000, 0.000000)
+scale = Vector3(1.054051, 1.054051, 1.054051)
+
+[node name="fernB27" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(7.940469, -0.018000, -9.516701)
+rotation_degrees = Vector3(0.000000, 63.000000, 0.000000)
+scale = Vector3(0.780256, 0.780256, 0.780256)
+
+[node name="fernA20" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(8.534536, -0.018000, -9.768279)
+rotation_degrees = Vector3(0.000000, 308.000000, 0.000000)
+scale = Vector3(0.726514, 0.726514, 0.726514)
+
+[node name="shrub20" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(9.277648, -0.018000, -9.033224)
+rotation_degrees = Vector3(0.000000, 188.000000, 0.000000)
+scale = Vector3(0.991893, 0.991893, 0.991893)
+
+[node name="fernB28" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(8.801833, -0.018000, -9.842767)
+rotation_degrees = Vector3(0.000000, 249.000000, 0.000000)
+scale = Vector3(1.062517, 1.062517, 1.062517)
+
+[node name="fernA21" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(8.765229, -0.018000, -9.877897)
+rotation_degrees = Vector3(0.000000, 157.000000, 0.000000)
+scale = Vector3(1.069449, 1.069449, 1.069449)
+
+[node name="shrub21" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(8.232244, -0.018000, -8.661911)
+rotation_degrees = Vector3(0.000000, 210.000000, 0.000000)
+scale = Vector3(1.096251, 1.096251, 1.096251)
+
+[node name="fernB29" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.037105, -0.018000, -8.865255)
+rotation_degrees = Vector3(0.000000, 115.000000, 0.000000)
+scale = Vector3(0.723896, 0.723896, 0.723896)
+
+[node name="boulder35" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(9.350000, -0.180000, -2.700000)
+rotation_degrees = Vector3(0.000000, 253.000000, 0.000000)
+scale = Vector3(0.477572, 0.599561, 0.570883)
+
+[node name="boulder45" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(9.234823, -0.180000, -3.030294)
+rotation_degrees = Vector3(0.000000, 336.000000, 0.000000)
+scale = Vector3(0.364438, 0.349380, 0.465274)
+
+[node name="boulder54" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(9.566523, -0.180000, -3.365250)
+rotation_degrees = Vector3(0.000000, 73.000000, 0.000000)
+scale = Vector3(0.299220, 0.234132, 0.213791)
+
+[node name="fernB30" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(8.948264, -0.018000, -2.418250)
+rotation_degrees = Vector3(0.000000, 168.000000, 0.000000)
+scale = Vector3(0.865382, 0.865382, 0.865382)
+
+[node name="fernA22" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(9.879343, -0.018000, -2.060114)
+rotation_degrees = Vector3(0.000000, 100.000000, 0.000000)
+scale = Vector3(1.178119, 1.178119, 1.178119)
+
+[node name="shrub22" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(9.652839, -0.018000, -3.365033)
+rotation_degrees = Vector3(0.000000, 166.000000, 0.000000)
+scale = Vector3(1.385917, 1.385917, 1.385917)
+
+[node name="fernB31" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.014181, -0.018000, -2.302539)
+rotation_degrees = Vector3(0.000000, 355.000000, 0.000000)
+scale = Vector3(1.256174, 1.256174, 1.256174)
+
+[node name="fernA23" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(8.833675, -0.018000, -2.762599)
+rotation_degrees = Vector3(0.000000, 57.000000, 0.000000)
+scale = Vector3(0.726971, 0.726971, 0.726971)
+
+[node name="shrub23" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(9.474259, -0.018000, -1.985909)
+rotation_degrees = Vector3(0.000000, 297.000000, 0.000000)
+scale = Vector3(1.018918, 1.018918, 1.018918)
+
+[node name="fernB32" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(8.867032, -0.018000, -2.084311)
+rotation_degrees = Vector3(0.000000, 231.000000, 0.000000)
+scale = Vector3(1.188119, 1.188119, 1.188119)
+
+[node name="fernA24" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(9.272852, -0.018000, -3.121755)
+rotation_degrees = Vector3(0.000000, 129.000000, 0.000000)
+scale = Vector3(0.658726, 0.658726, 0.658726)
+
+[node name="shrub24" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(8.990501, -0.018000, -2.380050)
+rotation_degrees = Vector3(0.000000, 92.000000, 0.000000)
+scale = Vector3(1.278528, 1.278528, 1.278528)
+
+[node name="fernB33" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.878675, -0.018000, -3.023158)
+rotation_degrees = Vector3(0.000000, 32.000000, 0.000000)
+scale = Vector3(1.127915, 1.127915, 1.127915)
+
+[node name="boulder46" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(10.440000, -0.180000, -2.240000)
+rotation_degrees = Vector3(0.000000, 189.000000, 0.000000)
+scale = Vector3(0.647434, 0.537750, 0.826572)
+
+[node name="boulder55" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(10.555150, -0.180000, -2.704438)
+rotation_degrees = Vector3(0.000000, 268.000000, 0.000000)
+scale = Vector3(0.583647, 0.657280, 0.417012)
+
+[node name="boulder16" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(9.842210, -0.180000, -1.492674)
+rotation_degrees = Vector3(0.000000, 49.000000, 0.000000)
+scale = Vector3(0.332427, 0.426119, 0.260318)
+
+[node name="fernB34" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.435602, -0.018000, -2.089242)
+rotation_degrees = Vector3(0.000000, 257.000000, 0.000000)
+scale = Vector3(0.738708, 0.738708, 0.738708)
+
+[node name="fernA25" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(10.273861, -0.018000, -1.584052)
+rotation_degrees = Vector3(0.000000, 163.000000, 0.000000)
+scale = Vector3(1.178346, 1.178346, 1.178346)
+
+[node name="shrub25" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(9.606904, -0.018000, -2.440256)
+rotation_degrees = Vector3(0.000000, 338.000000, 0.000000)
+scale = Vector3(0.853715, 0.853715, 0.853715)
+
+[node name="fernB35" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.826284, -0.018000, -2.505566)
+rotation_degrees = Vector3(0.000000, 178.000000, 0.000000)
+scale = Vector3(0.701286, 0.701286, 0.701286)
+
+[node name="fernA26" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(10.025524, -0.018000, -3.027043)
+rotation_degrees = Vector3(0.000000, 307.000000, 0.000000)
+scale = Vector3(1.319600, 1.319600, 1.319600)
+
+[node name="shrub26" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(10.052594, -0.018000, -1.784153)
+rotation_degrees = Vector3(0.000000, 264.000000, 0.000000)
+scale = Vector3(1.278423, 1.278423, 1.278423)
+
+[node name="fernB36" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.923150, -0.018000, -1.594433)
+rotation_degrees = Vector3(0.000000, 50.000000, 0.000000)
+scale = Vector3(0.798761, 0.798761, 0.798761)
+
+[node name="fernA27" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(10.152000, -0.018000, -1.675004)
+rotation_degrees = Vector3(0.000000, 141.000000, 0.000000)
+scale = Vector3(1.251804, 1.251804, 1.251804)
+
+[node name="shrub27" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(10.751069, -0.018000, -1.725872)
+rotation_degrees = Vector3(0.000000, 166.000000, 0.000000)
+scale = Vector3(0.879963, 0.879963, 0.879963)
+
+[node name="fernB37" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(9.342644, -0.018000, -1.931447)
+rotation_degrees = Vector3(0.000000, 183.000000, 0.000000)
+scale = Vector3(0.744682, 0.744682, 0.744682)
+
+[node name="boulder56" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(-8.400000, -0.180000, -1.760000)
+rotation_degrees = Vector3(0.000000, 73.000000, 0.000000)
+scale = Vector3(0.554112, 0.585459, 0.395910)
+
+[node name="boulder17" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-8.731672, -0.180000, -1.871148)
+rotation_degrees = Vector3(0.000000, 249.000000, 0.000000)
+scale = Vector3(0.346523, 0.429460, 0.271356)
+
+[node name="boulder25" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(-7.917666, -0.180000, -2.266748)
+rotation_degrees = Vector3(0.000000, 229.000000, 0.000000)
+scale = Vector3(0.204784, 0.270631, 0.196429)
+
+[node name="fernB38" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-7.745053, -0.018000, -1.914575)
+rotation_degrees = Vector3(0.000000, 216.000000, 0.000000)
+scale = Vector3(0.712523, 0.712523, 0.712523)
+
+[node name="fernA28" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-8.577699, -0.018000, -2.207825)
+rotation_degrees = Vector3(0.000000, 267.000000, 0.000000)
+scale = Vector3(1.375347, 1.375347, 1.375347)
+
+[node name="shrub28" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-7.633291, -0.018000, -2.116631)
+rotation_degrees = Vector3(0.000000, 19.000000, 0.000000)
+scale = Vector3(0.798571, 0.798571, 0.798571)
+
+[node name="fernB39" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.775873, -0.018000, -1.155740)
+rotation_degrees = Vector3(0.000000, 176.000000, 0.000000)
+scale = Vector3(1.376877, 1.376877, 1.376877)
+
+[node name="fernA29" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-8.063960, -0.018000, -0.952858)
+rotation_degrees = Vector3(0.000000, 145.000000, 0.000000)
+scale = Vector3(1.358470, 1.358470, 1.358470)
+
+[node name="shrub29" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-8.260003, -0.018000, -1.307421)
+rotation_degrees = Vector3(0.000000, 283.000000, 0.000000)
+scale = Vector3(1.175493, 1.175493, 1.175493)
+
+[node name="fernB40" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.254984, -0.018000, -2.512796)
+rotation_degrees = Vector3(0.000000, 310.000000, 0.000000)
+scale = Vector3(0.964090, 0.964090, 0.964090)
+
+[node name="fernA30" parent="Woodland" instance=ExtResource("r47")]
+position = Vector3(-7.841101, -0.018000, -1.531599)
+rotation_degrees = Vector3(0.000000, 119.000000, 0.000000)
+scale = Vector3(0.690600, 0.690600, 0.690600)
+
+[node name="shrub30" parent="Woodland" instance=ExtResource("r48")]
+position = Vector3(-7.982236, -0.018000, -1.953647)
+rotation_degrees = Vector3(0.000000, 78.000000, 0.000000)
+scale = Vector3(0.706846, 0.706846, 0.706846)
+
+[node name="fernB41" parent="Woodland" instance=ExtResource("r25")]
+position = Vector3(-8.986013, -0.018000, -1.822357)
+rotation_degrees = Vector3(0.000000, 17.000000, 0.000000)
+scale = Vector3(0.877989, 0.877989, 0.877989)
+
+[node name="Talus1" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-7.685165, -0.064354, -1.589941)
+rotation_degrees = Vector3(0.000000, 199.000000, 0.000000)
+scale = Vector3(0.219930, 0.190216, 0.112371)
+
+[node name="Talus2" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(11.814220, -0.023883, -1.986947)
+rotation_degrees = Vector3(0.000000, 219.000000, 0.000000)
+scale = Vector3(0.068779, 0.082379, 0.043046)
+
+[node name="Talus3" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(-7.661047, -0.052022, -10.798386)
+rotation_degrees = Vector3(0.000000, 306.000000, 0.000000)
+scale = Vector3(0.188664, 0.205919, 0.147150)
+
+[node name="Talus4" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-9.382799, -0.027911, -1.437836)
+rotation_degrees = Vector3(0.000000, 297.000000, 0.000000)
+scale = Vector3(0.100316, 0.068706, 0.083563)
+
+[node name="Talus5" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(10.293877, -0.023360, -2.031265)
+rotation_degrees = Vector3(0.000000, 60.000000, 0.000000)
+scale = Vector3(0.098296, 0.084354, 0.045824)
+
+[node name="Talus6" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(11.817647, -0.021585, -1.404738)
+rotation_degrees = Vector3(0.000000, 297.000000, 0.000000)
+scale = Vector3(0.073768, 0.063801, 0.037691)
+
+[node name="Talus7" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(1.912785, -0.060165, -10.986402)
+rotation_degrees = Vector3(0.000000, 291.000000, 0.000000)
+scale = Vector3(0.173267, 0.207527, 0.108439)
+
+[node name="Talus8" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(8.884827, -0.043481, -3.259355)
+rotation_degrees = Vector3(0.000000, 27.000000, 0.000000)
+scale = Vector3(0.157690, 0.172112, 0.122992)
+
+[node name="Talus9" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-4.462277, -0.017563, -7.009728)
+rotation_degrees = Vector3(0.000000, 75.000000, 0.000000)
+scale = Vector3(0.063125, 0.043234, 0.052583)
+
+[node name="Talus10" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(0.674888, -0.058301, -12.687610)
+rotation_degrees = Vector3(0.000000, 30.000000, 0.000000)
+scale = Vector3(0.245322, 0.210527, 0.114366)
+
+[node name="Talus11" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-7.475162, -0.034194, -9.331795)
+rotation_degrees = Vector3(0.000000, 157.000000, 0.000000)
+scale = Vector3(0.116856, 0.101068, 0.059706)
+
+[node name="Talus12" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(9.375785, -0.028197, -3.014521)
+rotation_degrees = Vector3(0.000000, 304.000000, 0.000000)
+scale = Vector3(0.081204, 0.097260, 0.050822)
+
+[node name="Talus13" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(8.457447, -0.024626, -2.912520)
+rotation_degrees = Vector3(0.000000, 161.000000, 0.000000)
+scale = Vector3(0.089308, 0.097476, 0.069656)
+
+[node name="Talus14" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(-2.152546, -0.029112, -2.689359)
+rotation_degrees = Vector3(0.000000, 61.000000, 0.000000)
+scale = Vector3(0.104632, 0.071662, 0.087159)
+
+[node name="Talus15" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(-1.213969, -0.062121, -2.670212)
+rotation_degrees = Vector3(0.000000, 91.000000, 0.000000)
+scale = Vector3(0.261396, 0.224321, 0.121859)
+
+[node name="Talus16" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-1.050836, -0.054366, -9.654474)
+rotation_degrees = Vector3(0.000000, 339.000000, 0.000000)
+scale = Vector3(0.185796, 0.160694, 0.094930)
+
+[node name="Talus17" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(-3.172499, -0.047559, -4.117885)
+rotation_degrees = Vector3(0.000000, 26.000000, 0.000000)
+scale = Vector3(0.136962, 0.164043, 0.085718)
+
+[node name="Talus18" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(8.359012, -0.040735, -8.298847)
+rotation_degrees = Vector3(0.000000, 225.000000, 0.000000)
+scale = Vector3(0.147731, 0.161243, 0.115224)
+
+[node name="Talus19" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(1.476760, -0.051543, -11.760643)
+rotation_degrees = Vector3(0.000000, 95.000000, 0.000000)
+scale = Vector3(0.185255, 0.126880, 0.154318)
+
+[node name="Talus20" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(6.011996, -0.060539, -10.263384)
+rotation_degrees = Vector3(0.000000, 298.000000, 0.000000)
+scale = Vector3(0.254739, 0.218608, 0.118756)
+
+[node name="Talus21" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(10.301025, -0.054320, -2.959944)
+rotation_degrees = Vector3(0.000000, 2.000000, 0.000000)
+scale = Vector3(0.185638, 0.160558, 0.094850)
+
+[node name="Talus22" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(4.936441, -0.054675, -11.880058)
+rotation_degrees = Vector3(0.000000, 323.000000, 0.000000)
+scale = Vector3(0.157456, 0.188589, 0.098544)
+
+[node name="Talus23" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(4.045714, -0.023257, -8.802889)
+rotation_degrees = Vector3(0.000000, 12.000000, 0.000000)
+scale = Vector3(0.084346, 0.092060, 0.065786)
+
+[node name="Talus24" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(10.007185, -0.024968, -1.776087)
+rotation_degrees = Vector3(0.000000, 260.000000, 0.000000)
+scale = Vector3(0.089741, 0.061463, 0.074755)
+
+[node name="Talus25" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(8.449212, -0.030194, -2.206677)
+rotation_degrees = Vector3(0.000000, 150.000000, 0.000000)
+scale = Vector3(0.127054, 0.109034, 0.059231)
+
+[node name="Talus26" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(3.815233, -0.031459, -11.342136)
+rotation_degrees = Vector3(0.000000, 91.000000, 0.000000)
+scale = Vector3(0.107511, 0.092986, 0.054932)
+
+[node name="Talus27" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(-9.343628, -0.028950, -6.714416)
+rotation_degrees = Vector3(0.000000, 250.000000, 0.000000)
+scale = Vector3(0.083371, 0.099856, 0.052178)
+
+[node name="Talus28" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(9.608512, -0.043697, -9.080708)
+rotation_degrees = Vector3(0.000000, 342.000000, 0.000000)
+scale = Vector3(0.158473, 0.172966, 0.123602)
+
+[node name="Talus29" parent="Woodland" instance=ExtResource("r51")]
+position = Vector3(5.490216, -0.039467, -9.175148)
+rotation_degrees = Vector3(0.000000, 259.000000, 0.000000)
+scale = Vector3(0.141851, 0.097153, 0.118163)
+
+[node name="Talus30" parent="Woodland" instance=ExtResource("r52")]
+position = Vector3(0.240711, -0.047868, -12.008117)
+rotation_degrees = Vector3(0.000000, 212.000000, 0.000000)
+scale = Vector3(0.201422, 0.172854, 0.093901)
+
+[node name="Talus31" parent="Woodland" instance=ExtResource("r24")]
+position = Vector3(-8.387447, -0.027018, -0.812899)
+rotation_degrees = Vector3(0.000000, 196.000000, 0.000000)
+scale = Vector3(0.092332, 0.079858, 0.047176)
+
+[node name="Talus32" parent="Woodland" instance=ExtResource("r49")]
+position = Vector3(8.617971, -0.018941, -3.188177)
+rotation_degrees = Vector3(0.000000, 109.000000, 0.000000)
+scale = Vector3(0.054548, 0.065333, 0.034139)
+
+[node name="Talus33" parent="Woodland" instance=ExtResource("r50")]
+position = Vector3(9.468521, -0.037228, -9.671026)
+rotation_degrees = Vector3(0.000000, 256.000000, 0.000000)
+scale = Vector3(0.135013, 0.147361, 0.105304)
+
+[node name="Mesh" parent="BaseWhitebox/World/SpawnPad"]
+material_override = SubResource("lichen_rock")
+
+[node name="SillFlag1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(-0.400000, -0.066000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.390000, 0.068000, 0.950000)
+mesh = ExtResource("r39")
+material_override = SubResource("lichen_rock")
+
+[node name="SillFlag2" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.020000, -0.066000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.430000, 0.068000, 0.950000)
+mesh = ExtResource("r37")
+material_override = SubResource("lichen_rock")
+
+[node name="SillFlag3" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(0.423000, -0.066000, -4.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.350000, 0.068000, 0.950000)
+mesh = ExtResource("r38")
+material_override = SubResource("lichen_rock")
+
+[node name="LampBracket1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.090000, 1.810000, -3.540000)
+rotation_degrees = Vector3(90.000000, 0.000000, 0.000000)
+scale = Vector3(0.036000, 0.320000, 0.036000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="HangingStaple1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.090000, 1.760000, -3.380000)
+rotation_degrees = Vector3(180.000000, 0.000000, 0.000000)
+scale = Vector3(0.028000, 0.080000, 0.028000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("DarkIron")
+
+[node name="Waylamp1" parent="Waygate" instance=ExtResource("r20")]
+position = Vector3(1.090000, 1.200000, -3.380000)
+rotation_degrees = Vector3(0.000000, -13.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Candle1" type="MeshInstance3D" parent="Waygate"]
+position = Vector3(1.090000, 1.360000, -3.380000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.041000, 0.220000, 0.041000)
+mesh = SubResource("RoundTimber")
+material_override = SubResource("CandleWick")
+
+[node name="LanternLight" type="OmniLight3D" parent="Waygate"]
+position = Vector3(1.09, 1.44, -3.34)
+light_color = Color(1, 0.64, 0.28, 1)
+light_energy = 0.55
+omni_range = 1.25
+
+[node name="DriftedLeaves1" type="MeshInstance3D" parent="Woodland"]
+position = Vector3(0.000000, 0.000000, 0.000000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+mesh = ExtResource("r54")
+material_override = SubResource("FallenOchre")
+
+[editable path="BaseWhitebox"]

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpcwmrokhyluq"
+path="res://.godot/imported/ashlar_0.obj-fe629f24fa1b0cb11a0263d3748a4594.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ashlar_0.obj-fe629f24fa1b0cb11a0263d3748a4594.mesh"]
+
+source_file="res://art/craft/ashlar_0.obj"
+dest_files=["res://.godot/imported/ashlar_0.obj-fe629f24fa1b0cb11a0263d3748a4594.mesh", "res://.godot/imported/ashlar_0.obj-fe629f24fa1b0cb11a0263d3748a4594.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
