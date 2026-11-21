@@ -18,3 +18,4 @@
 - 需要且已授权接手修改时，A 负责初稿，B 先独立看图诊断再修改，主 agent 负责同机位前后复核，用户负责最终美术验收。先限定一次交接、一轮定向修改；不因有此规则自动启动 agent 或完整档位矩阵。
 - 独立试跑须按 `skills/godot-envart/references/independent-trials.md` 准备干净输入，各候选使用独立 Git 历史与临时目录，禁止横读其他候选成果；适用的用户审美要求必须共享。同一候选已声明的 A→B 交接允许继承，标为辅助修订，不冒充从白盒独立制作。2026-11-20 新增校准/接手流程的收益尚未验证。
 - Godot AI MCP 是可选编辑与反馈工具，配置和使用见 `docs/godot-ai-mcp.md`。首次使用先核对工程完整路径并选择精确 editor session；编辑器预览不替代同机位游戏实图。共享 MCP 后端不构成独立候选隔离，当前 MacBook 禁止启动 Godot 的约定仍有效。
+- 2026-11-21 用户新指令授权本机进行一次 SIGNALIS 局部 MCP 流程验证，记录在 `experiments/signalis-mcp-study/ENVIRONMENT.md`。仅此任务恢复 Godot 运行；不自动恢复其他制作或矩阵，完成后关闭本任务进程。

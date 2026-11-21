@@ -1,0 +1,144 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/WallAstra_Straight_Flat.gltf" id="1_glylt"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/ShortWall_MetalPlates_Straight.gltf" id="2_aay5k"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/Door_Frame_Square.gltf" id="3_8e1ka"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/Prop_Computer.gltf" id="4_yuke4"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi_props/Prop_Desk_Medium.gltf" id="5_cnbpw"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi_props/Prop_Chair.gltf" id="6_kss35"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi_props/Prop_Locker.gltf" id="7_kmlwj"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi_props/Prop_Shelves_ThinTall.gltf" id="8_ugouq"]
+[ext_resource type="PackedScene" path="res://assets/crt/monitor.glb" id="9_yjpad"]
+[ext_resource type="PackedScene" path="res://assets/old-computer/keyboard.glb" id="10_ofgit"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/Prop_Light_Wide.gltf" id="11_ay14s"]
+[ext_resource type="PackedScene" path="res://assets/quaternius_scifi/Platform_DarkPlates.gltf" id="12_htpvw"]
+
+[sub_resource type="Environment" id="Environment_pbsaf"]
+background_mode = 1
+background_color = Color(0.16, 0.17, 0.19, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.8, 0.85, 1, 1)
+ambient_light_energy = 0.65
+
+[node name="AssetAudition" type="Node3D" unique_id=1401084112]
+
+[node name="WallAstra_Straight_Flat2" type="Node3D" parent="." unique_id=2102431330 instance=ExtResource("1_glylt")]
+transform = Transform3D(0.59999985, 0, 0, 0, 0.59999985, 0, 0, 0, 0.59999985, 1.2299998, 1.5389217e-07, 0)
+
+[node name="@Label3D@2" type="Label3D" parent="." unique_id=1143823609]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -0.3, 1.5)
+pixel_size = 0.004
+text = "WallAstra_Straight_Flat"
+font_size = 30
+
+[node name="ShortWall_MetalPlates_Straight2" type="Node3D" parent="." unique_id=462330919 instance=ExtResource("2_aay5k")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.9999967, -0.0011106324, 0)
+
+[node name="@Label3D@3" type="Label3D" parent="." unique_id=203339690]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 3.8, -0.3, 1.5)
+pixel_size = 0.004
+text = "ShortWall_MetalPlates_Straight"
+font_size = 30
+
+[node name="Door_Frame_Square2" type="Node3D" parent="." unique_id=53628760 instance=ExtResource("3_8e1ka")]
+transform = Transform3D(0.47871462, 0, 0, 0, 0.47871462, 0, 0, 0, 0.47871462, 7.6, 0.006426845, 0)
+
+[node name="@Label3D@4" type="Label3D" parent="." unique_id=513403082]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 7.6, -0.3, 1.5)
+pixel_size = 0.004
+text = "Door_Frame_Square"
+font_size = 30
+
+[node name="Prop_Computer2" type="Node3D" parent="." unique_id=126343479 instance=ExtResource("4_yuke4")]
+transform = Transform3D(1.5068222, 0, 0, 0, 1.5068222, 0, 0, 0, 1.5068222, 11.4, 0.0017957108, -0.097942136)
+
+[node name="@Label3D@5" type="Label3D" parent="." unique_id=1794104315]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 11.4, -0.3, 1.5)
+pixel_size = 0.004
+text = "Prop_Computer"
+font_size = 30
+
+[node name="Prop_Desk_Medium2" type="Node3D" parent="." unique_id=1407120498 instance=ExtResource("5_cnbpw")]
+transform = Transform3D(0.84414345, 0, 0, 0, 0.84414345, 0, 0, 0, 0.84414345, 0, 6.9755345e-08, -3.9878104)
+
+[node name="@Label3D@6" type="Label3D" parent="." unique_id=248016430]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -0.3, -2.5)
+pixel_size = 0.004
+text = "Prop_Desk_Medium"
+font_size = 30
+
+[node name="Prop_Chair2" type="Node3D" parent="." unique_id=1729037213 instance=ExtResource("6_kss35")]
+transform = Transform3D(1.4618555, 0, 0, 0, 1.4618555, 0, 0, 0, 1.4618555, 3.8, 0.019500168, -4.1051245)
+
+[node name="@Label3D@7" type="Label3D" parent="." unique_id=2024931021]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 3.8, -0.3, -2.5)
+pixel_size = 0.004
+text = "Prop_Chair"
+font_size = 30
+
+[node name="Prop_Locker2" type="Node3D" parent="." unique_id=139588790 instance=ExtResource("7_kmlwj")]
+transform = Transform3D(0.8993777, 0, 0, 0, 0.8993777, 0, 0, 0, 0.8993777, 7.6, 0, -4.01622)
+
+[node name="@Label3D@8" type="Label3D" parent="." unique_id=216524166]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 7.6, -0.3, -2.5)
+pixel_size = 0.004
+text = "Prop_Locker"
+font_size = 30
+
+[node name="Prop_Shelves_ThinTall2" type="Node3D" parent="." unique_id=1345730610 instance=ExtResource("8_ugouq")]
+transform = Transform3D(0.89888287, 0, 0, 0, 0.89888287, 0, 0, 0, 0.89888287, 11.4, -0.0012929881, -4)
+
+[node name="@Label3D@9" type="Label3D" parent="." unique_id=1049317550]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 11.4, -0.3, -2.5)
+pixel_size = 0.004
+text = "Prop_Shelves_ThinTall"
+font_size = 30
+
+[node name="monitor" type="Node3D" parent="." unique_id=150811793 instance=ExtResource("9_yjpad")]
+transform = Transform3D(3.0364573, 0, 0, 0, 3.0364573, 0, 0, 0, 3.0364573, -0.05073526, 0.8583834, -8.016776)
+
+[node name="@Label3D@10" type="Label3D" parent="." unique_id=1155284943]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -0.3, -6.5)
+pixel_size = 0.004
+text = "monitor"
+font_size = 30
+
+[node name="keyboard" type="Node3D" parent="." unique_id=7799129 instance=ExtResource("10_ofgit")]
+transform = Transform3D(0.009763539, 0, 0, 0, 0.009763539, 0, 0, 0, 0.009763539, 3.8292906, 1.1895652, -7.7949657)
+
+[node name="@Label3D@11" type="Label3D" parent="." unique_id=1556198336]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 3.8, -0.3, -6.5)
+pixel_size = 0.004
+text = "keyboard"
+font_size = 30
+
+[node name="Prop_Light_Wide2" type="Node3D" parent="." unique_id=1295096756 instance=ExtResource("11_ay14s")]
+transform = Transform3D(1.8178453, 0, 0, 0, 1.8178453, 0, 0, 0, 1.8178453, 8.8, 0.26845962, -8)
+
+[node name="@Label3D@12" type="Label3D" parent="." unique_id=1750826656]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 7.6, -0.3, -6.5)
+pixel_size = 0.004
+text = "Prop_Light_Wide"
+font_size = 30
+
+[node name="Platform_DarkPlates2" type="Node3D" parent="." unique_id=454442111 instance=ExtResource("12_htpvw")]
+transform = Transform3D(0.59999967, 0, 0, 0, 0.59999967, 0, 0, 0, 0.59999967, 11.4, 0, -8)
+
+[node name="@Label3D@13" type="Label3D" parent="." unique_id=1872050064]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 11.4, -0.3, -6.5)
+pixel_size = 0.004
+text = "Platform_DarkPlates"
+font_size = 30
+
+[node name="@WorldEnvironment@14" type="WorldEnvironment" parent="." unique_id=202870870]
+environment = SubResource("Environment_pbsaf")
+
+[node name="@DirectionalLight3D@15" type="DirectionalLight3D" parent="." unique_id=299775541]
+transform = Transform3D(0.90630776, 0.34618863, -0.24240388, 0, 0.57357645, 0.81915206, 0.42261827, -0.74240386, 0.5198368, 0, 0, 0)
+light_energy = 1.8
+
+[node name="@Camera3D@16" type="Camera3D" parent="." unique_id=318886747]
+transform = Transform3D(0.9995521, -0.018377883, 0.02361909, 0, 0.78923106, 0.61409634, -0.02992671, -0.61382127, 0.78887755, 6, 13, 13)
+projection = 1
+current = true
+size = 18.0

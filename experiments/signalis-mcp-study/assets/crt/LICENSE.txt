@@ -1,0 +1,5 @@
+CRT Monitor by Jarlan Perez
+Source: https://poly.pizza/m/8jVB0zIXKCv
+License: Creative Commons Attribution 3.0
+https://creativecommons.org/licenses/by/3.0/
+Original source geometry retained. Scene overrides change scale, placement and material appearance.

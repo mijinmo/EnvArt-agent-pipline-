@@ -1,0 +1,5 @@
+Old computer by Poly by Google
+Source: https://poly.pizza/m/9Qc5EtYmJry
+License: Creative Commons Attribution 3.0
+https://creativecommons.org/licenses/by/3.0/
+Original source geometry retained. Scene overrides change scale, placement and material appearance.

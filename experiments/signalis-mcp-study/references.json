@@ -1,0 +1,101 @@
+[
+  {
+    "id": "steam-0",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_a2603694154878b8260c1dd498a06168cad012a4.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "supplement",
+    "supports": "Ward architecture and equipment; combat flash is not baseline lighting",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-1",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_9d602346170b19121e4baec94f5fab54cc43637c.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-2",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_dc87789ecfa2f83dd58ac778866fbf7fdc1ec99a.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-3",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_bb676746c44db01c2bd7ca78616032984f958106.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-4",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_4ec0c13288054a99bc3987680a914ccda834e7f6.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-5",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_f7eb1a1944c4c9d3142bedb800ad3a43a6f82a60.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "supplement",
+    "supports": "Door recess, painted stripe and threshold; dark/partly combat occluded",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-6",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_947db45ff0fb6da0e2d9031f0f71a32b740ed612.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-7",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_dcf8d44a07289d9b8ca9d1e9b9ae2a002dd76f6e.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "primary",
+    "supports": "Equipment-room layout, CRT silhouettes, peripheral density and localized colored illumination",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-8",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_c7fcc30c5e2cd2ddf44bc01b2d43964abba72076.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "detail",
+    "supports": "Electrical panel material, switches and emissive status lights",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-9",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_5338061a9fa31755789e0a7698fadc2d4ab29b94.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  },
+  {
+    "id": "steam-10",
+    "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_af2cb31dc253d739c3ce2f6930be5d339e199be2.1920x1080.jpg?t=1773697315",
+    "source": "https://store.steampowered.com/app/1262350/SIGNALIS/",
+    "context": "official store gameplay screenshot; release/build not independently established",
+    "role": "rejected",
+    "supports": "Wrong spatial type, character/UI focus or weaker environment evidence",
+    "redistribution": "Source links only; game media not included as production assets"
+  }
+]

@@ -10,6 +10,10 @@
 - 当前 MacBook 不启动 Godot。后续制作在 Mac mini 按接续任务的范围进行；拉取文档本身不启动新试验、不自动重跑六档矩阵、不扩展全场。
 - 2026-11-21 新增可选 Godot AI 4.4.2 MCP 接入。本机已安装插件文件和项目级客户端配置，未启用编辑器联动；Mac mini 需运行仓库安装器，不能假定 git pull 会同步本机 MCP 配置。安装、启用和最小实图检查见 [Godot AI MCP](godot-ai-mcp.md)。这不是新的制作轮次，收益尚未验证。
 
+## 本次运行例外（2026-11-21）
+
+用户随后要求先跑通一次流程，选 SIGNALIS 新参考。本机开展单局部验证，见 [当前任务记录](../experiments/signalis-mcp-study/ENVIRONMENT.md)；不是重新开放其他本机制作或六档矩阵。原白盒与旧场景保留，MCP 效果按真实运行结果更新。
+
 ## Mac mini 拉取后先做什么
 
 先保留 Mac mini 上已有场景、未提交修改与试验记录，检查所在分支。对于跟踪 `origin/main`、工作区已妥善保存的 checkout，可执行：
