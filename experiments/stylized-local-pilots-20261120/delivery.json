@@ -1,7 +1,7 @@
 {
   "games": {
     "sea-of-thieves": {
-      "delivery_status": "初稿已检查 · 待审美校准",
+      "delivery_status": "输入不合规 · 用户要求重跑",
       "pass_label": "方向初稿 · 自查修正",
       "captures": {
         "overall": "../experiments/stylized-local-pilots-20261120/results/sea-of-thieves/captures/reviewed/overall.png",
@@ -70,7 +70,7 @@
       }
     },
     "psychonauts-2": {
-      "delivery_status": "初稿已检查 · 待审美校准",
+      "delivery_status": "输入不合规 · 用户要求重跑",
       "pass_label": "方向初稿 · 自查修正",
       "captures": {
         "overall": "../experiments/stylized-local-pilots-20261120/results/psychonauts-2/captures/final/overall.png",
@@ -139,7 +139,7 @@
       }
     },
     "no-rest-for-the-wicked": {
-      "delivery_status": "限定修订已复核 · 待审美校准",
+      "delivery_status": "输入不合规 · 用户要求重跑",
       "pass_label": "协调反馈辅助修订",
       "captures": {
         "overall": "../experiments/stylized-local-pilots-20261120/results/no-rest-for-the-wicked/captures/revised/overall.png",
@@ -216,7 +216,7 @@
       }
     },
     "genshin-impact": {
-      "delivery_status": "初稿已检查 · 待审美校准",
+      "delivery_status": "输入不合规 · 用户要求重跑",
       "pass_label": "方向初稿 · 自查修正",
       "captures": {
         "overall": "../experiments/stylized-local-pilots-20261120/results/genshin-impact/captures/final/overall.png",
@@ -296,5 +296,6 @@
     "四组都有主建筑和道具的实际下载与引擎小样；素材族能较快建立统一底子，但不会自动带来原作比例、轮廓和空间层次。",
     "自查确实修掉了缺色、穿插、遮挡和接线问题；四组仍留下规整重复与纵深不足，说明技术修复不能替代审美校准。",
     "恶意不息的一次具体反馈改善了水面与光色，但未解决石块/植物大形；可继续验证“先方向初稿 → 图像反馈 → 有限修订”，不能据此宣称它已是最优管线。"
-  ]
+  ],
+  "rejection": "本批已被用户否定：制作输入错误地替换成单块地板，遗漏了原白盒门洞、坡道、台阶和跳台。历史图保留；本批不能用于白盒管线验收。正在按原始17构件白盒重新制作。"
 }

@@ -17,7 +17,7 @@
 
 用户明确“你直接开始跑呗，不用等我指令”后，四份独立输入已完成局部制作，实际均为 GPT-6.2 Astra / high，最多三个制作进程、串行 Godot 渲染。四个可编辑工程与 54 张阶段图见 [本轮工程说明](../experiments/stylized-local-pilots-20261120/README.md)，[HTML 分类对比](stylized-local-pilots.html) 可看参考、三机位与修复前后。恶意不息额外接受一次具体反馈辅助修订，原稿及资源保留；未做 B 接手试验。制作进程均已结束。
 
-当前是 `awaiting_user_calibration`：协调者已逐张看四组交付图，但尚无用户美术验收。实际参考由各组独立补全，不是同游戏固定输入的 effort 对照，不自动扩展六档矩阵。下一步使用已有实图校准，不重新从白盒启动。原神素材包来源页面明确标注 AI 制作；各组仍有形体重复或纵深不足，不能将技术通过等同于风格达标。独立历史保存在 `refs/envart-local-pilots/20261120/*`，实际隔离证据及局限见 [审计](../experiments/stylized-local-pilots-20261120/audits/execution-summary.json)。
+2026-11-21 用户指出上一批忽略原白盒并要求重跑。核实原四组输入只包含单块地板，原门洞、坡道、台阶与跳台丢失；这是协调输入错误，本批标为 `rejected_by_user; wrong_whitebox_input`。旧工程和图像保留追溯，不继续作为合规候选细化。当前任务为 [原白盒重跑 brief](../experiments/stylized-whitebox-rerun-20261121/brief.json)：四个相同游戏各一组 Astra/high，从原始17构件白盒独立制作，碰撞与机位冻结，继续目录/历史隔离。原白盒输入已实际导入、三机位出图并查看；没有扩展六档矩阵。
 
 私人浏览入口为 `http://100.96.75.54:8081/docs/stylized-local-pilots.html`，与旧 24 组报告共用已有 Tailscale 服务；只托管报告与图片，工程和会话日志不在浏览目录。
 

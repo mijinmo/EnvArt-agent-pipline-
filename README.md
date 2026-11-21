@@ -6,7 +6,7 @@
 
 **接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意；SIGNALIS 已实践校准与自改，独立接手和额度收益尚未验证。
 
-**最新局部：[盗贼之海 / 意航员 2 / 恶意不息 / 原神 HTML 对比](docs/stylized-local-pilots.html)。** 四组 GPT-6.2 Astra / high 已完成素材小样、可编辑初稿与看图自查，归档 54 张阶段图；恶意不息额外做了一次反馈辅助修订。可切换三机位、阶段与五种比较类别；[工程、操作与审计](experiments/stylized-local-pilots-20261120/README.md)。这是不同风格的方向验证，尚待用户美术校准，没有自动重跑六档矩阵。
+**2026-11-21 正在按原白盒重跑四个新方向。** 用户指出上一批忽略原场景；已确认输入被错误替换成单块地板。[旧四方向 HTML](docs/stylized-local-pilots.html) 保留并标为输入不合规。当前 [重跑任务](experiments/stylized-whitebox-rerun-20261121/brief.json) 完整保留原白盒17个物理构件、门洞、坡道、台阶、跳台和固定机位；四组仍使用 Astra/high，未扩展六档矩阵。
 
 此前结果：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
 

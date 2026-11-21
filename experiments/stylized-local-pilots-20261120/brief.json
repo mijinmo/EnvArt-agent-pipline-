@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-20",
-  "status": "four_direction_drafts_completed; awaiting_user_calibration",
+  "status": "rejected_by_user; wrong_whitebox_input",
   "user_decision": "同意首批 Sea of Thieves / Psychonauts 2 / No Rest for the Wicked；追加一个纯二次元方向，例如原神。本轮选用 Genshin Impact。",
   "scope": "每个游戏先做一个可编辑代表性局部，用整体/近景/过渡实机图校准后再集中细化；先从 Sea of Thieves 开始。",
   "matrix": "本次未设定新的六档 effort 矩阵。实际模型、effort、资源与耗时在制作启动时记录，不填推测值。",
@@ -90,7 +90,7 @@
       ]
     }
   ],
-  "next": "以已交付四组实图校准艺术方向；未自动扩展 effort 矩阵或整场。",
+  "next": "保留为错误输入的历史案例；在 stylized-whitebox-rerun-20261121 用原白盒重新制作。",
   "evidence": "四个独立可编辑工程及阶段图已归档；协调者逐张检查了四组当前三机位及恶意不息修订前后。尚无用户美术验收。",
   "execution": {
     "authorized": "用户：你直接开始跑呗，不用等我指令",
@@ -104,5 +104,6 @@
     "additional_revision": "恶意不息同一制作会话接受一次协调者具体图像反馈，另存 revised.tscn；不是 B 接手或新的独立样本。"
   },
   "report": "../../docs/stylized-local-pilots.html",
-  "audit": "audits/execution-summary.json"
+  "audit": "audits/execution-summary.json",
+  "user_feedback_20261121": "上一批产出完全忽略了我之前的白盒场景，肯定不对，建议重新跑"
 }

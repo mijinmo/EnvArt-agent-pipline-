@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-21",
+  "status": "inputs_frozen; production_ready",
+  "user_feedback": "上一批产出完全忽略了我之前的白盒场景，肯定不对，建议重新跑",
+  "scope": "重跑上一批四个方向，每游戏一组 Astra/high；完整原白盒，不启动六档矩阵。",
+  "source": "GodotProject/envart-pipline/demo/controller_lab.tscn",
+  "source_sha256": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+  "whitebox_sha256": "a309dc9fa677d83b490c0223b8cdb62bba718db7ef1b7b812c4a7ebe43373d26",
+  "protected_bodies": 17,
+  "reviewed_input_views": [
+    "overall",
+    "close",
+    "transition"
+  ],
+  "games": [
+    {
+      "id": "sea-of-thieves",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "input_commit": "83870a42dbf3e6b0442688a94cff554257c82452"
+    },
+    {
+      "id": "psychonauts-2",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "input_commit": "9cfce72d46af2e7eb69592d11e0b389fec4cf739"
+    },
+    {
+      "id": "no-rest-for-the-wicked",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "input_commit": "3c377f6c9aa1f42720187a89a86aaad966deae9d"
+    },
+    {
+      "id": "genshin-impact",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "input_commit": "71a1acf9ab34916152684ca7cf77737c9de22d13"
+    }
+  ],
+  "isolation": "独立Git/临时目录/新上下文及受限读取，制作组不使用共享MCP；主协调端使用MCP核对自己的工程。",
+  "acceptance": "尚未制作，不代表用户美术验收。"
+}

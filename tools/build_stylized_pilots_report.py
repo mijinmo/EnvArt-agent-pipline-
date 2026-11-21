@@ -18,6 +18,7 @@ for item in brief['games']:
                   **delivery.get('games', {}).get(item['id'], {})})
 data = json.dumps({'games': games, 'updated': brief['updated'],
                    'status': brief['status'], 'review': delivery.get('review', ''),
+                   'rejection': delivery.get('rejection', ''),
                    'pipeline_findings': delivery.get('pipeline_findings', []),
                    'usage': audit.get('games', [])}, ensure_ascii=False).replace('</', '<\\/')
 page = r'''<!doctype html>
@@ -29,6 +30,7 @@ page = r'''<!doctype html>
 <div class="eyebrow">ENVIRONMENT ART / LOCAL PILOTS</div>
 <h1>四种风格，先把局部做完整</h1>
 <p class="intro">从参考、素材小样到可编辑的 Godot 初稿。把原作与同一局部的整体、近景、过渡放在一起看，比较造型、材质、道具关系和光影。当前为方向验证，尚待用户美术验收。</p>
+<p id="rejection" role="status" hidden style="border:1px solid #b66d61;background:#331f23;padding:18px;border-radius:10px;color:#ffccc2"></p>
 <div class="stats"><span class="pill">4 个独立案例</span><span class="pill">GPT-6.2 Astra · high</span><span class="pill">Godot 4.7.2 · Metal Forward+</span><span class="pill">各自独立目录 / Git</span><span class="pill">实机截图 · 可点击放大</span></div>
 <nav class="tabs" id="tabs" aria-label="游戏方向"></nav>
 <section id="case"></section>
@@ -43,6 +45,7 @@ let selected=location.hash.slice(1)||DATA.games[0].id, view='overall', stage='se
 const labels={overall:'整体',close:'近景',transition:'过渡'};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=arr=>(arr||[]).map(x=>`<li>${esc(x)}</li>`).join('');
+if(DATA.rejection){const warning=document.getElementById('rejection');warning.hidden=false;warning.textContent=DATA.rejection;document.querySelector('.intro').textContent='历史批次：错误输入的结果保留作追溯，不作为原白盒上的有效产出。';}
 function show(){
  const g=DATA.games.find(x=>x.id===selected)||DATA.games[0];selected=g.id;
  document.getElementById('tabs').innerHTML=DATA.games.map(x=>`<button data-game="${esc(x.id)}" aria-selected="${x.id===g.id}">${esc(x.name)}</button>`).join('');

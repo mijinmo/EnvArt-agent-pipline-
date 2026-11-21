@@ -1,6 +1,8 @@
 # 四个新风格局部 · 2026-11-20
 
-四个代表性局部已完成素材发现、Godot 小样、完整初稿与看图自查；均为 **GPT-6.2 Astra / high**，运行记录已确认。用户授权直接开始制作，当前仍是 `awaiting_user_calibration`，尚未获得用户美术验收。
+**2026-11-21 用户已否定本批并要求重跑。** 协调者准备输入时错误地只给了单块12×12米地板，遗漏原白盒的门洞、坡道、台阶和跳台。因此本批不是原白盒上的有效产出，不能用于白盒管线验收。工程与实图保留追溯；[新任务](../stylized-whitebox-rerun-20261121/brief.json) 从原始17构件白盒重新制作。
+
+以下为历史制作记录：四个局部完成过素材发现、Godot 小样、初稿与看图自查，实际模型均为 **GPT-6.2 Astra / high**。技术检查不能弥补输入错误。
 
 [HTML 分类与阶段对比](../../docs/stylized-local-pilots.html) · [任务范围](brief.json) · [协调者图像检查](delivery.json) · [执行与隔离审计](audits/execution-summary.json)
 
