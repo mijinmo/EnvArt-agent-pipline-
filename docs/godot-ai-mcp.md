@@ -25,6 +25,12 @@ Godot AI 为 MIT 许可；安装包保留原 LICENSE。插件与 Python 服务�
 
 ## Mac mini 配置
 
+2026-11-21 Mac mini 已合并远端 `b9c9fac`，安装 uv 0.13.9 与固定 Godot AI 4.4.2，项目 `.codex/config.toml` 使用用户本地 `~/.local/bin/uvx`，未创建全局 Codex MCP 条目。插件安装在主工程 `addons/godot_ai/`；主工程的 `project.godot` 没有加入未安装插件时会断裂的依赖。
+
+已在原白盒检查副本中验证握手、47 项工具发现（项目配置选用22项）、精确会话选择、17构件场景树、启动及 `source=game` 的1280×800实际截图；原图已查看。首次启动返回的短等待窗口曾早于 helper 就绪，后续状态和截图均成功。桥/服务遥测关闭，编辑器的遥测偏好也已持久化为false。检查编辑器已关闭。当前聊天未热加载原生Godot工具，实际使用同一配置的临时Python MCP SDK客户端，不声称所有代理已自动获得MCP。证据见 [本机接入检查](../experiments/stylized-whitebox-rerun-20261121/audits/mcp-setup.json)。
+
+本次四方向白盒重跑仍用各自受限的文件/渲染入口；共享 MCP 仅归主协调端，避免向独立制作组暴露其他工程会话。
+
 先按 [跨机器接续说明](new-machine-handoff.md) 保存现有修改并拉取最新代码。不要把制作机任务换回本机旧场景。
 
 1. 确认 `uv --version` 至少为 **0.9.25**，`codex` 可用。未安装时按 [uv 官方安装说明](https://docs.astral.sh/uv/getting-started/installation/) 安装。配置脚本自身只需要 Python 3.9+；uv 为 MCP 选择 Python `>=3.11,<3.15`。

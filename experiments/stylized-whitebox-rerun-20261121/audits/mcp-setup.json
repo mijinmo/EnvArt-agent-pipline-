@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-21",
+  "machine": "Mac mini",
+  "upstream_commit": "b9c9fac",
+  "merge_commit": "5d242c6",
+  "uv_version": "0.13.9",
+  "godot_version": "4.7.2-stable (official)",
+  "plugin_version": "4.4.2",
+  "backend_version": "4.4.2",
+  "transport": "authenticated stdio attach; project-scoped configuration",
+  "tool_count": 47,
+  "enabled_tool_count": 22,
+  "native_tools_hot_loaded_in_current_chat": false,
+  "verification_client": "Temporary Python MCP SDK client using same project config",
+  "observed": [
+    "initialize",
+    "tools/list",
+    "session_manage(list)",
+    "session_activate exact id",
+    "editor_state",
+    "scene_get_hierarchy with 17 original bodies",
+    "project_run custom whitebox scene",
+    "editor_screenshot source=game",
+    "project_manage stop"
+  ],
+  "game_capture": {
+    "width": 1280,
+    "height": 800,
+    "source": "game",
+    "stale_frame": false,
+    "visually_inspected": true,
+    "sha256": "ef5c1469ee3589c5123115aa856e16c67734524f064bceb73544863bb56c3db4"
+  },
+  "helper_live_after_startup": true,
+  "telemetry": "disabled in bridge/server env and persisted editor preference",
+  "project_file_changed_in_main_project": false,
+  "producer_access": "Shared MCP is coordinator-only, not exposed to independent producers.",
+  "limits": [
+    "Initial project_run readiness window expired before helper handshake; subsequent editor_state and game screenshot succeeded.",
+    "MCP connection does not establish art quality or native-tool availability in this existing chat.",
+    "No global Codex MCP entry was created."
+  ]
+}

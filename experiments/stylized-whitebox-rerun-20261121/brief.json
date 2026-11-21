@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "inputs_frozen; production_ready",
+  "status": "production_running",
   "user_feedback": "上一批产出完全忽略了我之前的白盒场景，肯定不对，建议重新跑",
   "scope": "重跑上一批四个方向，每游戏一组 Astra/high；完整原白盒，不启动六档矩阵。",
   "source": "GodotProject/envart-pipline/demo/controller_lab.tscn",
@@ -39,5 +39,5 @@
     }
   ],
   "isolation": "独立Git/临时目录/新上下文及受限读取，制作组不使用共享MCP；主协调端使用MCP核对自己的工程。",
-  "acceptance": "尚未制作，不代表用户美术验收。"
+  "acceptance": "原白盒输入已核对；四方向制作进行中，尚无成品验收。"
 }
