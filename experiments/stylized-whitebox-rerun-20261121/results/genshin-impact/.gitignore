@@ -1,0 +1,5 @@
+.godot/
+.work/
+.DS_Store
+*.zip
+__pycache__/

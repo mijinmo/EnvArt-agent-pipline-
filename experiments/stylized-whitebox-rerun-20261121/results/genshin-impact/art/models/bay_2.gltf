@@ -1,0 +1,137 @@
+{
+  "asset": {
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "indigo_noren"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "DyedHemp",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 448,
+      "type": "VEC3",
+      "min": [
+        -0.33,
+        -0.61,
+        -0.017201632921268698
+      ],
+      "max": [
+        0.350004543390165,
+        0.0,
+        0.10863426946926483
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 448,
+      "type": "VEC3",
+      "min": [
+        -0.5964007114170143,
+        -0.07987639697785287,
+        0.7911099508253846
+      ],
+      "max": [
+        0.47479659204890945,
+        0.21511095512633363,
+        0.9996047671184379
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 448,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 672,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 5376
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5376,
+      "byteLength": 5376
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 10752,
+      "byteLength": 3584
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14336,
+      "byteLength": 2688
+    }
+  ],
+  "images": [
+    {
+      "uri": "../surfaces/indigo_bay2.jpg"
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 17024,
+      "uri": "indigo_noren.bin"
+    }
+  ]
+}

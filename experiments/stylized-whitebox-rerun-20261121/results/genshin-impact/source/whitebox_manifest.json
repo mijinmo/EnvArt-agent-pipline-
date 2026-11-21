@@ -1,0 +1,138 @@
+{
+  "source": "GodotProject/envart-pipline/demo/controller_lab.tscn",
+  "source_sha256": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+  "whitebox_sha256": "a309dc9fa677d83b490c0223b8cdb62bba718db7ef1b7b812c4a7ebe43373d26",
+  "extraction": "Exact original body, mesh and shape blocks. Removed UI, controllers, labels and light rig only; no transform or shape edits.",
+  "static_bodies": [
+    {
+      "name": "Floor",
+      "position": "Vector3(0, -0.25, 0)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "BackWall",
+      "position": "Vector3(0, 2, -12)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "OcclusionWall",
+      "position": "Vector3(10, 1.5, -6)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "OcclusionReturn",
+      "position": "Vector3(8, 1.5, -1)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "DoorLeft",
+      "position": "Vector3(-0.95, 1.3, -4)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "DoorRight",
+      "position": "Vector3(0.95, 1.3, -4)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "DoorLintel",
+      "position": "Vector3(0, 2.45, -4)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Ramp",
+      "position": "Vector3(-6, 0.85, -3)",
+      "rotation_degrees": "Vector3(18.43495, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Landing",
+      "position": "Vector3(-6, 1, -7)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Step1",
+      "position": "Vector3(5, 0.1, 2.0)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Step2",
+      "position": "Vector3(5, 0.2, 1.4)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Step3",
+      "position": "Vector3(5, 0.30000000000000004, 0.8)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "Step4",
+      "position": "Vector3(5, 0.4, 0.20000000000000018)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "JumpLow",
+      "position": "Vector3(1, 0.2, 1)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "JumpMid",
+      "position": "Vector3(1, 0.45, -1)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "JumpHigh",
+      "position": "Vector3(3, 0.7, -3)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    },
+    {
+      "name": "SpawnPad",
+      "position": "Vector3(0, 0.01, 8)",
+      "rotation_degrees": "Vector3(0, 0, 0)",
+      "collision_layer": "1",
+      "collision_mask": "2"
+    }
+  ],
+  "clearance": {
+    "door_width_m": 1.2,
+    "door_height_m": 2.3,
+    "ramp_width_m": 3,
+    "ramp_slope_degrees": 18.43495,
+    "floor_extent_m": [
+      32,
+      32
+    ]
+  },
+  "scope": "All 17 original bodies, their world transforms, shapes, layers and masks remain. Visual dressing must preserve routes, jump/step access and door clearance."
+}

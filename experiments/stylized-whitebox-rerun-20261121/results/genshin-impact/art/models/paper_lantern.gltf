@@ -1,0 +1,287 @@
+{
+  "asset": {
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "paper_lantern"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 3,
+            "NORMAL": 4,
+            "TEXCOORD_0": 5
+          },
+          "indices": 6,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 7,
+            "NORMAL": 8
+          },
+          "indices": 9,
+          "material": 2
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Lacquer",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.05284162552287903,
+          0.03155139140022645,
+          0.0370285141619602,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      }
+    },
+    {
+      "name": "Paper",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    },
+    {
+      "name": "Tassel",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.29321614913237454,
+          0.08241420588845923,
+          0.04614884242235095,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      }
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 608,
+      "type": "VEC3",
+      "min": [
+        -0.12,
+        0,
+        -0.12
+      ],
+      "max": [
+        0.12,
+        0.84,
+        0.12
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 608,
+      "type": "VEC3",
+      "min": [
+        -0.9961946980917458,
+        -0.7962974186506632,
+        -0.9961946980917458
+      ],
+      "max": [
+        0.9961946980917457,
+        0.8937433576504928,
+        0.9961946980917455
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5125,
+      "count": 912,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1296,
+      "type": "VEC3",
+      "min": [
+        -0.201,
+        0.06,
+        -0.201
+      ],
+      "max": [
+        0.201,
+        0.623,
+        0.201
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 1296,
+      "type": "VEC3",
+      "min": [
+        -0.9961946980917457,
+        -0.7346432975328501,
+        -0.9961946980917457
+      ],
+      "max": [
+        0.9961946980917455,
+        0.7924843934458201,
+        0.9961946980917457
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 1296,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5125,
+      "count": 1944,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 64,
+      "type": "VEC3",
+      "min": [
+        -0.017871783092764597,
+        -0.16114743909369456,
+        -0.017954181846716034
+      ],
+      "max": [
+        0.036972551455312586,
+        0.022417572924366597,
+        0.030951394582985632
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 64,
+      "type": "VEC3",
+      "min": [
+        -0.9236608555366892,
+        -0.29896044929638793,
+        -0.9232344941197839
+      ],
+      "max": [
+        0.9167365065965615,
+        0.16584774543879768,
+        0.9211396476449745
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5125,
+      "count": 96,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 7296
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7296,
+      "byteLength": 7296
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14592,
+      "byteLength": 3648
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18240,
+      "byteLength": 15552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 33792,
+      "byteLength": 15552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 49344,
+      "byteLength": 10368
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 59712,
+      "byteLength": 7776
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 67488,
+      "byteLength": 768
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 68256,
+      "byteLength": 768
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 69024,
+      "byteLength": 384
+    }
+  ],
+  "images": [
+    {
+      "uri": "../surfaces/lantern_paper.jpg"
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 69408,
+      "uri": "paper_lantern.bin"
+    }
+  ]
+}

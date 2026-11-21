@@ -1,0 +1,220 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="E0"]
+
+[ext_resource type="PackedScene" path="res://inspection.tscn" id="E1"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/paving.jpg" id="E2"]
+
+[ext_resource type="Texture2D" path="res://art/surfaces/cedar.jpg" id="E3"]
+
+[ext_resource type="PackedScene" path="res://art/models/machiya.glb" id="E4"]
+
+[ext_resource type="PackedScene" path="res://art/models/gate_roof.glb" id="E5"]
+
+[ext_resource type="PackedScene" path="res://art/models/ceramic_vase_01.glb" id="E6"]
+
+[ext_resource type="PackedScene" path="res://art/models/ceramic_vase_03.glb" id="E7"]
+
+[ext_resource type="PackedScene" path="res://art/models/wooden_bowl_02.glb" id="E8"]
+
+[ext_resource type="PackedScene" path="res://art/models/wicker_basket_01.glb" id="E9"]
+
+[sub_resource type="StandardMaterial3D" id="R0"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+roughness = 0.88
+albedo_texture = ExtResource("E2")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.330000, 0.330000, 0.330000)
+
+
+[sub_resource type="StandardMaterial3D" id="R1"]
+albedo_color = Color(0.70588, 0.68627, 0.64314, 1)
+roughness = 0.88
+
+
+[sub_resource type="StandardMaterial3D" id="R2"]
+albedo_color = Color(0.75686, 0.71765, 0.65098, 1)
+roughness = 0.88
+
+
+[sub_resource type="StandardMaterial3D" id="R3"]
+albedo_color = Color(0.93725, 0.87451, 0.85098, 1)
+roughness = 0.88
+albedo_texture = ExtResource("E3")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.630000, 0.630000, 0.630000)
+
+
+[sub_resource type="StandardMaterial3D" id="R4"]
+albedo_color = Color(0.76471, 0.67451, 0.6549, 1)
+roughness = 0.88
+albedo_texture = ExtResource("E3")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.520000, 0.520000, 0.520000)
+
+
+[sub_resource type="StandardMaterial3D" id="R5"]
+albedo_color = Color(0.75686, 0.76078, 0.78431, 1)
+roughness = 0.88
+albedo_texture = ExtResource("E2")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv1_scale = Vector3(0.410000, 0.410000, 0.410000)
+
+
+[sub_resource type="ProceduralSkyMaterial" id="R6"]
+sky_top_color = Color(0.32549, 0.52941, 0.72549, 1)
+sky_horizon_color = Color(0.75294, 0.86275, 0.89412, 1)
+ground_horizon_color = Color(0.75294, 0.86275, 0.89412, 1)
+ground_bottom_color = Color(0.53725, 0.60392, 0.65098, 1)
+sun_angle_max = 5.0
+
+[sub_resource type="Sky" id="R7"]
+sky_material = SubResource("R6")
+
+[sub_resource type="Environment" id="R8"]
+background_mode = 2
+sky = SubResource("R7")
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.87451, 0.93725, 1)
+ambient_light_energy = 0.85
+ambient_light_sky_contribution = 0.18
+ssao_enabled = true
+ssao_radius = 0.6
+ssao_intensity = 1.45
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="R9"]
+size = Vector3(18.400000, 0.060000, 14.400000)
+material = SubResource("R0")
+
+[sub_resource type="BoxMesh" id="R10"]
+size = Vector3(4.760000, 0.960000, 0.800000)
+material = SubResource("R3")
+
+[sub_resource type="BoxMesh" id="R11"]
+size = Vector3(4.980000, 0.080000, 0.980000)
+material = SubResource("R4")
+
+[node name="ShiomiPottery" type="Node3D"]
+
+
+[node name="BaseWhitebox" parent="." instance=ExtResource("E0")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Inspection" parent="." instance=ExtResource("E1")]
+position = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.000000, 1.000000, 1.000000)
+
+[node name="Mesh" parent="BaseWhitebox/World/Floor" index="0"]
+material_override = SubResource("R1")
+
+[node name="Mesh" parent="BaseWhitebox/World/BackWall" index="0"]
+material_override = SubResource("R2")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionWall" index="0"]
+material_override = SubResource("R2")
+
+[node name="Mesh" parent="BaseWhitebox/World/OcclusionReturn" index="0"]
+material_override = SubResource("R2")
+
+[node name="Mesh" parent="BaseWhitebox/World/Ramp" index="0"]
+material_override = SubResource("R0")
+
+[node name="Mesh" parent="BaseWhitebox/World/Landing" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorRight" index="0"]
+material_override = SubResource("R3")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLeft" index="0"]
+material_override = SubResource("R3")
+
+[node name="Mesh" parent="BaseWhitebox/World/DoorLintel" index="0"]
+material_override = SubResource("R4")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpLow" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpMid" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/JumpHigh" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step1" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step2" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step3" index="0"]
+material_override = SubResource("R5")
+
+[node name="Mesh" parent="BaseWhitebox/World/Step4" index="0"]
+material_override = SubResource("R5")
+
+[node name="AutumnDay" type="WorldEnvironment" parent="."]
+environment = SubResource("R8")
+
+[node name="AfternoonSun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-48, 32, 0)
+light_color = Color(1.0, 0.91765, 0.83529, 1)
+light_energy = 1.15
+shadow_enabled = true
+light_angular_distance = 0.7
+directional_shadow_max_distance = 40.0
+
+[node name="Lane" type="Node3D" parent="."]
+
+
+[node name="FlagstoneCourt" type="MeshInstance3D" parent="Lane"]
+position = Vector3(0.800000, -0.028000, -4.500000)
+mesh = SubResource("R9")
+
+[node name="Shop" type="Node3D" parent="."]
+
+
+[node name="MerchantHouse" parent="Shop" instance=ExtResource("E4")]
+position = Vector3(5.850000, 0.000000, -8.200000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.700000, 0.840000, 0.680000)
+
+[node name="CoveredPassage" parent="Lane" instance=ExtResource("E5")]
+position = Vector3(0.000000, 1.890000, -3.950000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.304000, 0.312000, 0.244000)
+
+[node name="CounterBody" type="MeshInstance3D" parent="Shop"]
+position = Vector3(4.400000, 0.480000, -5.570000)
+mesh = SubResource("R10")
+
+[node name="CounterTop" type="MeshInstance3D" parent="Shop"]
+position = Vector3(4.400000, 1.000000, -5.570000)
+mesh = SubResource("R11")
+
+[node name="SeaGlaze" parent="Shop" instance=ExtResource("E6")]
+position = Vector3(2.420000, 1.040000, -5.540000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.150000, 1.150000, 1.150000)
+
+[node name="Bottle" parent="Shop" instance=ExtResource("E7")]
+position = Vector3(2.780000, 1.040000, -5.500000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(0.910000, 0.910000, 0.910000)
+
+[node name="Bowl" parent="Shop" instance=ExtResource("E8")]
+position = Vector3(3.210000, 1.040000, -5.340000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.700000, 1.700000, 1.700000)
+
+[node name="Delivery" parent="Shop" instance=ExtResource("E9")]
+position = Vector3(6.050000, 1.040000, -5.540000)
+rotation_degrees = Vector3(0.000000, 0.000000, 0.000000)
+scale = Vector3(1.500000, 1.500000, 1.500000)
+[editable path="BaseWhitebox"]
