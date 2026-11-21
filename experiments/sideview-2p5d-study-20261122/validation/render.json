@@ -1,0 +1,22 @@
+{
+  "engine": "4.7.2",
+  "backend": "Metal Forward+",
+  "whitebox_source_sha256": "a309dc9fa677d83b490c0223b8cdb62bba718db7ef1b7b812c4a7ebe43373d26",
+  "logs_clean": {
+    "import-final": true,
+    "selected-capture": true,
+    "motion": true,
+    "whitebox-capture": true
+  },
+  "reviewed_selected_views": [
+    "overall",
+    "close",
+    "transition",
+    "structure"
+  ],
+  "reviewed_motion": [
+    "left",
+    "right"
+  ],
+  "scope": "Direction draft; not user art acceptance"
+}

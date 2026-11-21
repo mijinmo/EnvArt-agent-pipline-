@@ -1,0 +1,26 @@
+{
+  "evidence": [
+    {
+      "camera_x": -7.0,
+      "frame": 0,
+      "height": 0.0799999982118607,
+      "name": "left",
+      "player_x": -7.0
+    },
+    {
+      "camera_x": -0.485836863517761,
+      "frame": 105,
+      "height": 0.000312499701976776,
+      "name": "middle",
+      "player_x": 0.489994883537292
+    },
+    {
+      "camera_x": 7.34406518936157,
+      "frame": 210,
+      "height": 0.000312499701976776,
+      "name": "right",
+      "player_x": 8.36498546600342
+    }
+  ],
+  "passed": true
+}

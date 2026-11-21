@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://source/whitebox.tscn" id="1_fexfj"]
+
+[sub_resource type="Environment" id="Environment_i70um"]
+background_mode = 1
+background_color = Color(0.49411765, 0.6862745, 0.7019608, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.654902, 0.78431374, 0.81960785, 1)
+ambient_light_energy = 0.55
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 1.2
+ssao_intensity = 1.2
+glow_enabled = true
+glow_intensity = 0.25
+
+[node name="WhiteboxBaseline" type="Node3D" unique_id=755637981]
+
+[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=1359481067]
+environment = SubResource("Environment_i70um")
+
+[node name="LateAfternoon" type="DirectionalLight3D" parent="." unique_id=832980578]
+transform = Transform3D(0.8480481, 0.31147873, -0.4287137, 0, 0.809017, 0.58778524, 0.52991927, -0.49847016, 0.68608534, 0, 0, 0)
+light_color = Color(1, 0.89411765, 0.70980394, 1)
+light_energy = 1.55
+shadow_enabled = true
+
+[node name="Whitebox" type="Node3D" parent="." unique_id=1082905636 instance=ExtResource("1_fexfj")]
