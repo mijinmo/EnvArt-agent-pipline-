@@ -23,6 +23,8 @@ Identify the input scene, one reviewable slice, spatial type, expected player/vi
 
 Resolve indoor/outdoor/semi-open intent, intended enclosure, openings and allowed shell additions before architecture or light-rig decisions. A missing whitebox roof does not imply outdoors. Read [whitebox-input.md](references/whitebox-input.md) when preparing that handoff. Reuse established answers; ask only for consequential missing decisions while continuing independent work.
 
+Carry spatial completeness into the actual task brief: outdoor views need their visible background/depth and ground-to-distance transition; interiors need continuous intended walls, ceiling and readable space beyond the foreground. A local slice limits production area, not these visible relationships. Do not downgrade required enclosure to an optional canopy to keep a high inspection camera unobstructed. A cutaway requires an explicit presentation decision and cannot substitute for the intact playable interior.
+
 ## 2. Find and qualify references
 
 Use [reference-selection.md](references/reference-selection.md) when finding or replacing references. Even user-provided imagery needs a statement of what it can establish; keep the user's intended direction while supplementing missing evidence.
@@ -64,6 +66,8 @@ When a distinctive reference calls for stylized rendering, a dedicated shader is
 Save and reopen the scene before capture. Use stable overall, transition and close views as relevant, plus a nearby angle when contact, geometry or traversal visibility is uncertain. Freeze submitted passes and write new images to a new directory. Generated illustrations and retouched screenshots cannot prove an editable 3D result.
 
 Look at the images before inheriting prior agent conclusions. Review reference fidelity, asset-family consistency, detail/activity, and lighting; keep technical validity and user acceptance separate. Identify the few largest visual failures, record evidence and affected regions/cameras, and choose a return path using [production-loop.md](references/production-loop.md). Mark edits as awaiting visual review until new images have actually been inspected. If a revision adds complexity without improving the target, retain the better pass and change approach.
+
+First check required spatial completeness against the brief. Missing interior walls/ceiling, exposed void or unfinished visible background is an open production requirement, not merely a style preference awaiting calibration. Do not label such a result a complete local slice because protected whitebox geometry and traversal pass. Retain structural inspection views; when they sit outside the intended room, add stable interior views of the intact saved scene instead of removing the enclosure.
 
 When a fresh-agent revision is authorized, use the A/B/coordinator handoff in [aesthetic-calibration.md](references/aesthetic-calibration.md): A makes the draft, B independently diagnoses then edits, and the coordinator compares the saved before/after evidence. Share the calibrated user requirements throughout. Independent review must influence the next edit when improvement is the task; a final ranking alone does not revise the scene.
 

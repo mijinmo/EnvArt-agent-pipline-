@@ -74,6 +74,7 @@ user acceptance: separately recorded, unknown until expressed
 | --- | --- |
 | Cannot tell what the target environment actually looks like | Reference stage: find an unobscured view; do not invent detail from characters or combat effects. |
 | Wrong spatial type or misleading reference interpretation | Scope/direction: resolve enclosure and anchors before further construction. |
+| Missing visible background, interior walls or ceiling; slice floats in a void | Scope/production: restore the required spatial envelope and depth before treating the local draft as complete. A cutaway or passed collision check is not a waiver. |
 | Architecture/tree/furniture silhouette is fundamentally wrong | Auditions: replace or deliberately adapt the asset; color grading and more clutter will not fix it. |
 | Material looks tiled, flat or inconsistent with its neighbors | Auditions or production: test the source at full surface scale and readable light; distinguish material choice, mapping and illumination. |
 | Props feel sparse, repetitive or unrelated | Production: revise activity, support and density rhythm; return to sourcing if the required object roles are absent. |

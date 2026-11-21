@@ -6,7 +6,7 @@
 
 **接续入口（2026-11-20）：先读 [项目审美要求与验收依据](docs/art-direction-memory.md) 和 [跨机器交接说明](docs/new-machine-handoff.md)，再使用仓库内的 [godot-envart skill](skills/godot-envart/SKILL.md)。** 新流程在代表性实机初稿后校准审美，再集中细化；A 制作、B 在授权接手时修改、主 agent 复核，最终由用户验收。[图文流程说明](docs/envart-pipeline-skill.html#calibration) 已同步。此调整已获用户同意；SIGNALIS 已实践校准与自改，独立接手和额度收益尚未验证。
 
-**2026-11-21 原白盒四方向重跑已完成。** 上一批误用单块地板的[旧报告](docs/stylized-local-pilots.html)已标为输入不合规。本轮保留原17个物理构件、门洞/坡道/踏面与碰撞；四组各10项通行检查通过，共63张阶段图。[新HTML](docs/stylized-whitebox-rerun.html)可切原白盒/原作参考与各制作阶段，[工程和复查说明](experiments/stylized-whitebox-rerun-20261121/README.md)记录剩余美术差距。四组均为Astra/high，未扩展六档矩阵，尚待用户美术校准。
+**2026-11-21 原白盒四方向重跑已完成。** 上一批误用单块地板的[旧报告](docs/stylized-local-pilots.html)已标为输入不合规。本轮保留原17个物理构件、门洞/坡道/踏面与碰撞；四组各10项通行检查通过，共63张阶段图。[新HTML](docs/stylized-whitebox-rerun.html)可切原白盒/原作参考与各制作阶段，[工程和复查说明](experiments/stylized-whitebox-rerun-20261121/README.md)记录剩余美术差距。四组均为Astra/high，未扩展六档矩阵。用户随后指出两个室内方向缺背景/围护；已核查为任务下发、制作及主审遗漏，盗贼之海/意航员2改标“围护缺失、待修复”，不能仅算审美待校准。
 
 此前结果：[GPT-6.2 四游戏 × 六档独立制作 HTML](docs/gpt62-independent-matrix.html)。24 个可编辑工程、144 张两轮三机位实图、四份独立盲评全部完成。可隐藏/揭示 effort，按参考贴合、内部统一、素材适配、功能细节、光影层次比较，并查看素材路线、实际用量与管线取舍。每档仅一次样本，结论是本次局部的优选候选，仍待用户美术验收。
 
