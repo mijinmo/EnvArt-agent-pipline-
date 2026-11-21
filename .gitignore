@@ -15,6 +15,15 @@ Desktop.ini
 /.artifacts/
 /tmp/
 *.log
+__pycache__/
+*.py[cod]
+
+# Machine-local MCP configuration and reproducible editor tooling.
+**/.codex/config.toml
+**/.codex/config.toml.envart-backup
+**/addons/godot_ai/
+**/addons/.godot_ai_update/
+**/addons/.godot-ai-stage-*/
 
 # Blender backup files. Keep original .blend files and authored assets tracked.
 *.blend[0-9]
