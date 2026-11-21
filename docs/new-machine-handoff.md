@@ -17,7 +17,7 @@
 
 用户明确“你直接开始跑呗，不用等我指令”后，四份独立输入已完成局部制作，实际均为 GPT-6.2 Astra / high，最多三个制作进程、串行 Godot 渲染。四个可编辑工程与 54 张阶段图见 [本轮工程说明](../experiments/stylized-local-pilots-20261120/README.md)，[HTML 分类对比](stylized-local-pilots.html) 可看参考、三机位与修复前后。恶意不息额外接受一次具体反馈辅助修订，原稿及资源保留；未做 B 接手试验。制作进程均已结束。
 
-2026-11-21 用户指出上一批忽略原白盒并要求重跑。核实原四组输入只包含单块地板，原门洞、坡道、台阶与跳台丢失；这是协调输入错误，本批标为 `rejected_by_user; wrong_whitebox_input`。旧工程和图像保留追溯，不继续作为合规候选细化。当前任务为 [原白盒重跑 brief](../experiments/stylized-whitebox-rerun-20261121/brief.json)：四个相同游戏各一组 Astra/high，从原始17构件白盒独立制作，碰撞与机位冻结，继续目录/历史隔离。四组重跑已完成：共63张阶段图，原17构件及各10项通行检查通过，协调者已逐张查看当前交付的三机位。[新HTML](stylized-whitebox-rerun.html)默认对照原白盒，[工程说明](../experiments/stylized-whitebox-rerun-20261121/README.md)记录素材、归档与剩余美术差距。没有扩展六档矩阵，尚待用户美术校准。
+2026-11-21 用户指出上一批忽略原白盒并要求重跑。核实原四组输入只包含单块地板，原门洞、坡道、台阶与跳台丢失；这是协调输入错误，本批标为 `rejected_by_user; wrong_whitebox_input`。旧工程和图像保留追溯，不继续作为合规候选细化。当前任务为 [原白盒重跑 brief](../experiments/stylized-whitebox-rerun-20261121/brief.json)：四个相同游戏各一组 Astra/high，从原始17构件白盒独立制作，碰撞与机位冻结，继续目录/历史隔离。四组重跑已完成：共63张阶段图，原17构件及各10项通行检查通过，协调者已逐张查看当前交付的三机位。[新HTML](stylized-whitebox-rerun.html)默认对照原白盒，[工程说明](../experiments/stylized-whitebox-rerun-20261121/README.md)记录素材、归档与剩余美术差距。没有扩展六档矩阵，尚待用户美术校准。 用户随后指出两个室内稿远景/围护缺失；核查为输入降级、剖视制作和主审遗漏。盗贼之海/意航员2现标为制作未完成，围墙、天花板与纵深待修复；本次仅更正规则/报告，原工程未修改。
 
 本次私人浏览入口为 `http://100.96.75.54:8081/docs/stylized-whitebox-rerun.html`，与旧 24 组报告共用已有 Tailscale 服务；只托管报告与图片，工程和会话日志不在浏览目录。
 

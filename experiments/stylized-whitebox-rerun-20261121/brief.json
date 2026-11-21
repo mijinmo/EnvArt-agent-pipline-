@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "four_drafts_complete; awaiting_user_art_calibration",
+  "status": "drafts_archived; indoor_enclosure_incomplete; revision_required",
   "user_feedback": "上一批产出完全忽略了我之前的白盒场景，肯定不对，建议重新跑",
   "scope": "重跑上一批四个方向，每游戏一组 Astra/high；完整原白盒，不启动六档矩阵。",
   "source": "GodotProject/envart-pipline/demo/controller_lab.tscn",
@@ -98,7 +98,7 @@
     }
   ],
   "isolation": "独立Git/临时目录/新上下文及受限读取，制作组不使用共享MCP；主协调端使用MCP核对自己的工程。",
-  "acceptance": "四组均保留17个原构件；各10项必要通行检查通过，实际三机位已查看。美术仍有明确差距，未获用户验收。",
+  "acceptance": "17构件和通行技术检查仍成立；2026-11-21用户指出两个室内方向缺少背景/围护。盗贼之海与意航员2的完整室内要求未完成，必须先补围墙、天花板与纵深，不能只等待审美校准。",
   "title": "在原白盒上，重跑四种风格",
   "intro": "这轮保留原测试场的17个物理构件：门洞、坡道、平台、台阶、跳台及碰撞。左侧可切原白盒和原作参考，右侧查看同机位素材小样与制作阶段。原作提供美术方向，原白盒决定空间布局。",
   "scope_note": "本轮重跑上一批四个方向，各一组 Astra/high；完整原白盒与固定相机相同，参考和素材发现各自独立。没有六档effort对照。共享MCP由主协调端使用，独立制作组只用受限文件和渲染入口。原作图片归原权利方，仅作参考。",
@@ -107,5 +107,24 @@
     "close": "../experiments/stylized-whitebox-rerun-20261121/inputs/common/captures/whitebox/close.png",
     "transition": "../experiments/stylized-whitebox-rerun-20261121/inputs/common/captures/whitebox/transition.png"
   },
-  "updated": "2026-11-21"
+  "updated": "2026-11-21",
+  "enclosure_followup": {
+    "date": "2026-11-21",
+    "user_feedback": [
+      "盗贼之海和脑航员的远景怎么全没了，这个我印象里是明确在管线里有要求的呀，帮我检查一下是哪里的问题",
+      "如果是因为室内的原因，也应该做好围墙和天花板的填充"
+    ],
+    "scope": "核查已完成；已修正规则和报告，场景围护尚未补建。后续修订仅针对两个室内局部，保留已归档初稿，不重跑其他组或effort矩阵。",
+    "affected_games": [
+      "sea-of-thieves",
+      "psychonauts-2"
+    ],
+    "requirements": [
+      "保留原17物理构件、碰撞、门洞/坡道/踏面与必需游戏视线。",
+      "室内补连续围墙、天花板、真实开口和后侧纵深；不能把短棚或纯色背景当作完整室内。",
+      "既有高机位保留作结构对照；新增适当室内固定机位，在同机位拍修订前后。正式可试玩场景围护完整，剖视须单独标注，不代替验收。",
+      "围护完成后重新调实际室内光照并看图；技术检查与空间完整性分别记录。"
+    ],
+    "diagnosis": "现有规则已要求围护/纵深；协调输入却把地窖顶棚降为可选，并让高机位优先。两个制作组选择剖开场景，协调验收看到缺失后仍只列一般不足。"
+  }
 }

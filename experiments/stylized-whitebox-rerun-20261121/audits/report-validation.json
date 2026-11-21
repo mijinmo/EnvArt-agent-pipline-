@@ -2,7 +2,6 @@
   "date": "2026-11-21",
   "status": "passed",
   "report": "docs/stylized-whitebox-rerun.html",
-  "report_sha256": "ba387b299aa1ca84936ce92d07002c78765875f8800ecc0c85934651e8b404cd",
   "url": "http://100.96.75.54:8081/docs/stylized-whitebox-rerun.html",
   "ui_checks_passed": 84,
   "ui_checks": [
@@ -453,5 +452,54 @@
   "limits": [
     "Tailnet URL verified from host; user has not yet confirmed this new report on MacBook.",
     "UI and whitebox/traversal checks do not establish user art acceptance."
-  ]
+  ],
+  "initial_report_sha256": "ba387b299aa1ca84936ce92d07002c78765875f8800ecc0c85934651e8b404cd",
+  "report_sha256": "8860bd402e4c1cf96befbac7073684ec6a97cc847afb57bab804a2c617d9ae89",
+  "enclosure_review_update": {
+    "date": "2026-11-21",
+    "change": "Two indoor drafts marked production-incomplete; spatial completeness category added. No scene, asset or capture modifications.",
+    "ui_checks": [
+      {
+        "name": "six categories, space first",
+        "value": true
+      },
+      {
+        "name": "all four spatial assessments present",
+        "value": true
+      },
+      {
+        "name": "sea-of-thieves remains incomplete",
+        "value": true
+      },
+      {
+        "name": "sea-of-thieves images still readable",
+        "value": true
+      },
+      {
+        "name": "psychonauts-2 remains incomplete",
+        "value": true
+      },
+      {
+        "name": "psychonauts-2 images still readable",
+        "value": true
+      },
+      {
+        "name": "category switching preserves spatial findings",
+        "value": true
+      },
+      {
+        "name": "mobile width",
+        "value": true
+      }
+    ],
+    "http_check": {
+      "url": "http://100.96.75.54:8081/docs/stylized-whitebox-rerun.html",
+      "status": 200,
+      "contains_updated_findings": true,
+      "sha256": "3c8e19be981080db0f8f08a071af7f378a32e70eed3c42a93b0d76690136db87"
+    },
+    "category_screenshot_viewed": true,
+    "scene_rerender_required": false,
+    "reason": "Reassessment and documentation only; original images unchanged."
+  }
 }

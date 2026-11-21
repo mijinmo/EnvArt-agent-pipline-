@@ -77,8 +77,8 @@ function show(){
  document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;show()});
  document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{document.getElementById('large').src=b.dataset.zoom;document.getElementById('lightbox-label').textContent=b.dataset.label;document.getElementById('lightbox').showModal()});
 }
-const categories={fidelity:'参考贴合',unity:'风格统一',assets:'素材适配',detail:'道具与疏密',lighting:'光影层次'};
-let category='fidelity';
+const categories={...(DATA.games.some(g=>g.category_notes?.space)?{space:'空间完整性'}:{}),fidelity:'参考贴合',unity:'风格统一',assets:'素材适配',detail:'道具与疏密',lighting:'光影层次'};
+let category=Object.keys(categories)[0];
 function summary(){
  document.getElementById('categories').innerHTML=Object.entries(categories).map(([k,n])=>`<button data-category="${k}" class="${category===k?'active':''}">${n}</button>`).join('');
  document.getElementById('summary').innerHTML=DATA.games.map(g=>`<tr><td>${esc(g.name)}</td><td>${esc(g.slice_proposal)}</td><td>${esc((g.category_notes||{})[category]||'待实图检查')}</td><td>${esc(g.delivery_status||'制作中')}</td></tr>`).join('');
