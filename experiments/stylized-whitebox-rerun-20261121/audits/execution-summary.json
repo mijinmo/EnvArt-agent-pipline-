@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-21",
+  "status": "four_original_whitebox_drafts_complete; user_art_acceptance_pending",
+  "scope": "Four games, one fresh Astra/high producer each; not an effort or MCP benefit comparison.",
+  "source_sha256": "c22e1470f5728633a7b5df91bea6d438a3e1a441322152872a1a79da0b869123",
+  "whitebox_sha256": "a309dc9fa677d83b490c0223b8cdb62bba718db7ef1b7b812c4a7ebe43373d26",
+  "isolation": {
+    "input": "Fresh contexts and independent Git repositories. Exact original whitebox and neutral inspection/capture code; own references, no finished peer art.",
+    "shell": "Minimal-read policy, own temporary root writable. Host repository, peer projects, global agent sessions, plugins, memories and delegation excluded.",
+    "renderer": "Serial native sandbox permits own project and appdata, network denied. Shared MCP never exposed to producers.",
+    "observed": "No peer/host path flags in inspected available tool calls. Stored image-view helper invocations were also reviewed.",
+    "limits": "Literal path scans and call inspection do not prove isolation against all indirect reads or every tool. No B handoff experiment."
+  },
+  "usage_note": "CLI turn usage only; input includes cached input, output includes reasoning. Elapsed includes downloads/render waiting, excludes coordinator review/report work. Not subscription quota.",
+  "games": [
+    {
+      "game": "sea-of-thieves",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "head": "29760d93d82fd44f577d71821a6d1bbe44b6ad78",
+      "input_commit": "83870a42dbf3e6b0442688a94cff554257c82452",
+      "history_ref": "refs/envart-whitebox-reruns/20261121/sea-of-thieves",
+      "producer_minutes": 15.7,
+      "usage": {
+        "input_tokens": 3735605,
+        "cached_input_tokens": 3610368,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 33859,
+        "reasoning_output_tokens": 7038
+      },
+      "uncached_input_tokens": 125237,
+      "tool_calls_inspected": 50,
+      "literal_image_function_mentions": 2,
+      "image_view_note": "Function mention counts exclude calls through stored JS view helpers; stage calls were inspected separately.",
+      "producer_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "observed_cross_read_flags": 0,
+      "frozen_files_verified": 30,
+      "source_and_capture_helpers_unchanged": true,
+      "views_frozen": true,
+      "resource_paths_checked": 56,
+      "archive_files_hash_verified": 223,
+      "capture_files": 15,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/final",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710",
+          "whitebox_log_sha256": "23dc4e692f3487ba3f57d7c6b3aa7b7ded718f723ce0a8d08490e2bfec291446",
+          "protected_bodies": 17
+        }
+      ],
+      "protected_routes_passed": 10,
+      "route_report": "sea-of-thieves-routes.json",
+      "resolved_earlier_render_error_logs": 0
+    },
+    {
+      "game": "psychonauts-2",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "head": "b903f754bf3c100ba246afc182d35bd6531d8de0",
+      "input_commit": "9cfce72d46af2e7eb69592d11e0b389fec4cf739",
+      "history_ref": "refs/envart-whitebox-reruns/20261121/psychonauts-2",
+      "producer_minutes": 18.54,
+      "usage": {
+        "input_tokens": 5502564,
+        "cached_input_tokens": 5357440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 37754,
+        "reasoning_output_tokens": 8080
+      },
+      "uncached_input_tokens": 145124,
+      "tool_calls_inspected": 60,
+      "literal_image_function_mentions": 4,
+      "image_view_note": "Function mention counts exclude calls through stored JS view helpers; stage calls were inspected separately.",
+      "producer_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "observed_cross_read_flags": 0,
+      "frozen_files_verified": 30,
+      "source_and_capture_helpers_unchanged": true,
+      "views_frozen": true,
+      "resource_paths_checked": 60,
+      "archive_files_hash_verified": 158,
+      "capture_files": 15,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/selected",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710",
+          "whitebox_log_sha256": "23dc4e692f3487ba3f57d7c6b3aa7b7ded718f723ce0a8d08490e2bfec291446",
+          "protected_bodies": 17
+        }
+      ],
+      "protected_routes_passed": 10,
+      "route_report": "psychonauts-2-routes.json",
+      "resolved_earlier_render_error_logs": 1
+    },
+    {
+      "game": "no-rest-for-the-wicked",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "head": "0603d38cf7a3c93e6c2286e88ad6b6ff12367ff6",
+      "input_commit": "3c377f6c9aa1f42720187a89a86aaad966deae9d",
+      "history_ref": "refs/envart-whitebox-reruns/20261121/no-rest-for-the-wicked",
+      "producer_minutes": 14.47,
+      "usage": {
+        "input_tokens": 2955096,
+        "cached_input_tokens": 2834176,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 28498,
+        "reasoning_output_tokens": 4766
+      },
+      "uncached_input_tokens": 120920,
+      "tool_calls_inspected": 39,
+      "literal_image_function_mentions": 4,
+      "image_view_note": "Function mention counts exclude calls through stored JS view helpers; stage calls were inspected separately.",
+      "producer_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "observed_cross_read_flags": 0,
+      "frozen_files_verified": 30,
+      "source_and_capture_helpers_unchanged": true,
+      "views_frozen": true,
+      "resource_paths_checked": 66,
+      "archive_files_hash_verified": 305,
+      "capture_files": 15,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/final",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710",
+          "whitebox_log_sha256": "23dc4e692f3487ba3f57d7c6b3aa7b7ded718f723ce0a8d08490e2bfec291446",
+          "protected_bodies": 17
+        }
+      ],
+      "protected_routes_passed": 10,
+      "route_report": "no-rest-for-the-wicked-routes.json",
+      "resolved_earlier_render_error_logs": 0
+    },
+    {
+      "game": "genshin-impact",
+      "model_observed": "gpt-6.2-astra",
+      "effort_observed": "high",
+      "head": "c7411de2691f79742b48d481a599518147636332",
+      "input_commit": "71a1acf9ab34916152684ca7cf77737c9de22d13",
+      "history_ref": "refs/envart-whitebox-reruns/20261121/genshin-impact",
+      "producer_minutes": 19.38,
+      "usage": {
+        "input_tokens": 6455976,
+        "cached_input_tokens": 6292480,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 37004,
+        "reasoning_output_tokens": 7144
+      },
+      "uncached_input_tokens": 163496,
+      "tool_calls_inspected": 67,
+      "literal_image_function_mentions": 8,
+      "image_view_note": "Function mention counts exclude calls through stored JS view helpers; stage calls were inspected separately.",
+      "producer_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "coordinator_selected_images_viewed": [
+        "overall",
+        "close",
+        "transition"
+      ],
+      "observed_cross_read_flags": 0,
+      "frozen_files_verified": 30,
+      "source_and_capture_helpers_unchanged": true,
+      "views_frozen": true,
+      "resource_paths_checked": 39,
+      "archive_files_hash_verified": 177,
+      "capture_files": 18,
+      "selected_render": [
+        {
+          "scene": "draft.tscn",
+          "directory": "captures/delivery",
+          "exit_code": 0,
+          "errors": 0,
+          "log_sha256": "6aa9a81b92e514939040a32e60792d816b033d7a22bb5fb3b48ce0086b117710",
+          "whitebox_log_sha256": "23dc4e692f3487ba3f57d7c6b3aa7b7ded718f723ce0a8d08490e2bfec291446",
+          "protected_bodies": 17
+        }
+      ],
+      "protected_routes_passed": 10,
+      "route_report": "genshin-impact-routes.json",
+      "resolved_earlier_render_error_logs": 0
+    }
+  ]
+}

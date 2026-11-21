@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "production_running",
+  "status": "four_drafts_complete; awaiting_user_art_calibration",
   "user_feedback": "上一批产出完全忽略了我之前的白盒场景，肯定不对，建议重新跑",
   "scope": "重跑上一批四个方向，每游戏一组 Astra/high；完整原白盒，不启动六档矩阵。",
   "source": "GodotProject/envart-pipline/demo/controller_lab.tscn",
@@ -17,27 +17,95 @@
       "id": "sea-of-thieves",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "input_commit": "83870a42dbf3e6b0442688a94cff554257c82452"
+      "input_commit": "83870a42dbf3e6b0442688a94cff554257c82452",
+      "name": "盗贼之海",
+      "focus": "厚实夸张形体、绘制感表面、素材族统一与冷暖层次",
+      "reference_status": "已查看原作者地窖图；制作前按该局部冻结输入",
+      "source": "https://www.joachimcoppens.com/work/sea-of-thieves-port-merrick",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/61031b1f9ff42a0bb713c097/6670af32-bdb6-45cd-9814-a9cc832fcde3/Shot_TavernCellar.jpg",
+      "slice_proposal": "酒馆地窖：原门洞、卸货踏台与坡道仓储通路"
     },
     {
       "id": "psychonauts-2",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "input_commit": "9cfce72d46af2e7eb69592d11e0b389fec4cf739"
+      "input_commit": "9cfce72d46af2e7eb69592d11e0b389fec4cf739",
+      "name": "意航员 2",
+      "focus": "非对称、夸张比例、怪诞复古造型与道具叙事",
+      "reference_status": "已查看官方工坊截图；补同区域整体/地面证据后冻结",
+      "source": "https://www.doublefine.com/games/psychonauts-2",
+      "image_url": "https://assets.doublefine.com/images/screenshots/Psychonauts-2/Psychonauts2-screenshots-20210417-4k-004.jpg",
+      "slice_proposal": "复古工坊：原门侧设备、跳台与高位工作平台"
     },
     {
       "id": "no-rest-for-the-wicked",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "input_commit": "3c377f6c9aa1f42720187a89a86aaad966deae9d"
+      "input_commit": "3c377f6c9aa1f42720187a89a86aaad966deae9d",
+      "name": "恶意不息",
+      "focus": "绘画感表面、雕塑感轮廓、地形植被层次与光色；保留适合参考的俯视距离",
+      "reference_status": "已查看官方商店桥景；近景材质证据仍需补充",
+      "source": "https://store.steampowered.com/app/1371980/No_Rest_for_the_Wicked/",
+      "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/1163c9191d2261d845aa96cbc011ed6490182ae8/ss_1163c9191d2261d845aa96cbc011ed6490182ae8.1920x1080.jpg?t=1792498726",
+      "slice_proposal": "林地遗迹：原残门、石台与斜坡驿站通路"
     },
     {
       "id": "genshin-impact",
       "model": "gpt-6.2-astra",
       "effort": "high",
-      "input_commit": "71a1acf9ab34916152684ca7cf77737c9de22d13"
+      "input_commit": "71a1acf9ab34916152684ca7cf77737c9de22d13",
+      "name": "原神",
+      "focus": "纯二次元环境方向：清楚的轮廓与色块、绘制感材质、受控细节密度、木构与道具的一致表达",
+      "reference_status": "已查看三张实机来源图；店铺细节图可作为有限主参考，两张活动街景仅补充；完整一致的参考组尚未冻结",
+      "references": [
+        {
+          "id": "genshin-ritou-market-wide",
+          "source_page": "https://www.hoyolab.com/article/34203305",
+          "image_url": "https://upload-os-bbs.hoyolab.com/upload/2024/10/13/126805707/2370aa3bdd5197efa96ae6893825aece_6387942757230076242.png",
+          "sha256": "0cff8d86beccc4256fb6f6d40d898685e2606507852a8bbb7e57287b6a636974",
+          "inspected": true,
+          "context": "玩家分享的原神环境截图；可见节庆布置，具体活动/版本与是否改动未核实",
+          "role": "supplemental mood",
+          "supports": "木构、摊位、石板路的色块与细节尺度；日间/灯笼亮起时的色温关系",
+          "limits": "不能把人物旗帜及节庆灯串认定为常驻环境，也不能凭检索摘要确定该街道就是离岛。"
+        },
+        {
+          "id": "genshin-ritou-market-near",
+          "source_page": "https://www.hoyolab.com/article/34203305",
+          "image_url": "https://upload-os-bbs.hoyolab.com/upload/2024/10/13/126805707/c8ad7e9cf4ac2dda098a9540f3762be7_1623761261444900813.png",
+          "sha256": "2b3e2fe55f8a41d323f8f657a0145ee7ff0a2ef6ed6475eec4210e065fa338be",
+          "inspected": true,
+          "context": "玩家分享的原神环境截图；可见节庆布置，具体活动/版本与是否改动未核实",
+          "role": "supplemental mood",
+          "supports": "木构、摊位、石板路的色块与细节尺度；日间/灯笼亮起时的色温关系",
+          "limits": "不能把人物旗帜及节庆灯串认定为常驻环境，也不能凭检索摘要确定该街道就是离岛。"
+        },
+        {
+          "id": "genshin-ritou-vahid",
+          "source_page": "https://protogamer.ru/guides/986-torgovec-iz-inadzumy-genshin-impact",
+          "image_url": "https://protogamer.ru/images/guides/01/08/986-torgovec-iz-inadzumy-genshin-impact.jpg",
+          "sha256": "8ecce010e55f26944e7f6bcc17a3c9e945dda189b76d7f20dfb34fc5184cfff1",
+          "inspected": true,
+          "context": "攻略所示离岛 Vahid 店铺对话实机图",
+          "role": "primary environment — bounded detail",
+          "supports": "深檐木柱与石柱脚、柜台/货架/器皿的支承关系、门窗、石板路和小植栽",
+          "limits": "角色遮住部分地面；檐下较暗；屋顶全貌和侧面动线不可见，不能单图冻结整段街角。"
+        }
+      ],
+      "slice_proposal": "稻妻街巷：原通行门、店铺道具区与上层坡道",
+      "image_url": "https://img.gamewith.net/img/original_ae97249c1702c53e44d859213d2a93aa.jpg",
+      "source": "https://gamewith.net/genshin-impact/article/show/29531"
     }
   ],
   "isolation": "独立Git/临时目录/新上下文及受限读取，制作组不使用共享MCP；主协调端使用MCP核对自己的工程。",
-  "acceptance": "原白盒输入已核对；四方向制作进行中，尚无成品验收。"
+  "acceptance": "四组均保留17个原构件；各10项必要通行检查通过，实际三机位已查看。美术仍有明确差距，未获用户验收。",
+  "title": "在原白盒上，重跑四种风格",
+  "intro": "这轮保留原测试场的17个物理构件：门洞、坡道、平台、台阶、跳台及碰撞。左侧可切原白盒和原作参考，右侧查看同机位素材小样与制作阶段。原作提供美术方向，原白盒决定空间布局。",
+  "scope_note": "本轮重跑上一批四个方向，各一组 Astra/high；完整原白盒与固定相机相同，参考和素材发现各自独立。没有六档effort对照。共享MCP由主协调端使用，独立制作组只用受限文件和渲染入口。原作图片归原权利方，仅作参考。",
+  "whitebox_captures": {
+    "overall": "../experiments/stylized-whitebox-rerun-20261121/inputs/common/captures/whitebox/overall.png",
+    "close": "../experiments/stylized-whitebox-rerun-20261121/inputs/common/captures/whitebox/close.png",
+    "transition": "../experiments/stylized-whitebox-rerun-20261121/inputs/common/captures/whitebox/transition.png"
+  },
+  "updated": "2026-11-21"
 }

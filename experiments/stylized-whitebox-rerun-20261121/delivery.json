@@ -1,0 +1,343 @@
+{
+  "games": {
+    "sea-of-thieves": {
+      "delivery_status": "已重跑 · 待用户美术校准",
+      "reference_note": "Port Merrick 原作者地窖图；本稿是把该风格适配到既定白盒的假设，不是原关卡复刻。",
+      "next": "在原结构上优先校准木石比例、轮廓变化和室内暗部；减少重复桶端与铺石节奏，再决定扩展。",
+      "validation": "原17构件、变换及碰撞保持；门洞双向、坡道和踏面10项检查通过。此结果不代表美术达标。",
+      "findings": [
+        "原门洞、左坡道、四级台阶和三个跳台位置清楚；跳台装配为货箱，坡道装配为卸货木板路。外围仍显示未制作的网格和后墙端部。",
+        "门柱、灯、钥匙、木桶端标和取样器具可近看，右侧桶架形成储藏与分装关系；原折墙遮住部分工作台。",
+        "木梁、铺石和桶阵列较规整；与参考相比缺少厚重歪斜的轮廓、手绘大色面及地窖包围感。亮度较平均，近景灯罩仍偏亮。"
+      ],
+      "asset_notes": [
+        "KayKit Dungeon Remastered 1.0 免费 CC0 包；选用建筑、地面、箱桶网格和随包色图，实际文件与许可已归档。",
+        "对素材做枢轴、尺寸、门板去除和材质适配；招牌、灯具细节与功能道具补缺。所有新增装配围绕原17个物理构件。"
+      ],
+      "category_notes": {
+        "fidelity": "仓储与暖灯语义成立，几何过于整齐，原作地窖包围感和厚重手绘木作不足。",
+        "unity": "同一素材族和冷石暖木较统一；木面密纹与较平的石面仍有密度落差。",
+        "assets": "真实下载建筑/铺石/箱桶；围绕原门、坡和踏台适配，没有换成一块新地板。",
+        "detail": "桶架、钥匙、取样龙头和起吊架可读；重复桶端较多，右工位部分被原墙遮挡。",
+        "lighting": "门口灯光可定位，冷暖分区存在；整体偏均匀，室内深度和暗部包围不足。"
+      },
+      "pass_label": "当前交付",
+      "capture_note": "Godot 4.7.2 · 固定1280×800 · 未后期修改",
+      "stages": {
+        "audition": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/audition/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/audition/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/audition/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/draft/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/draft/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/draft/transition.png"
+          }
+        },
+        "reviewed": {
+          "label": "自查修复",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/reviewed/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/reviewed/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/reviewed/transition.png"
+          }
+        },
+        "selected": {
+          "label": "当前交付",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/transition.png"
+          }
+        }
+      },
+      "captures": {
+        "overall": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/overall.png",
+        "close": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/close.png",
+        "transition": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/captures/final/transition.png"
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/project.godot"
+        },
+        {
+          "label": "操作与阶段记录",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/README.md"
+        },
+        {
+          "label": "素材许可",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/ASSETS.md"
+        },
+        {
+          "label": "制作组自查",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/sea-of-thieves/REVIEW.md"
+        }
+      ]
+    },
+    "psychonauts-2": {
+      "delivery_status": "已重跑 · 待用户美术校准",
+      "reference_note": "Double Fine 官方工坊截图；额外器材参考见 RESEARCH。原作的夸张歪斜程度仍未达到。",
+      "next": "在保持净空的前提下，先对门侧仪器和展框做比例/倾斜校准，并建立更明确的局部主光和暗背景。",
+      "validation": "原17构件、变换及碰撞保持；门洞双向、坡道和踏面10项检查通过。此结果不代表美术达标。",
+      "findings": [
+        "原门被装配成校准入口，跳台保持原踏面并成为仪器基座，坡道连向高位接收设备；原折墙和外围网格保留可辨。",
+        "示波器、指针表、展件与木框有实际细节，青绿/赭橙配色较统一；固定近景能看清面板、支架与材料交接。",
+        "整体更像整齐的复古仪器展厅。与原作相比，非对称、歪斜比例、器件堆叠和磨耗不足；大块地面与均匀光照削弱怪诞氛围。"
+      ],
+      "asset_notes": [
+        "Kenney Space Kit 与 Furniture Pack 免费 CC0 网格承担舱体、仪器、管件及家具；Poly Haven 免费1K表面用于木与地面。",
+        "Lobster / Barlow Condensed 字体按 OFL 随包保留；仪表刻度、印花、示波线和压边构件为本次补缺制作。",
+        "首次小样有场景语法错误，已修复；最终图与最终结构/通行检查均重新通过，错误未计为有效交付。"
+      ],
+      "category_notes": {
+        "fidelity": "复古工坊主题可读，但更接近规整展厅；未达到参考的怪诞比例与扭曲形体。",
+        "unity": "青绿、赭橙、暖木与黄白灯较一致，图形语汇清楚；低模外壳仍偏简单。",
+        "assets": "下载舱段、家具和仪器网格后重设枢轴/配色；门、坡、台面与原白盒对应。",
+        "detail": "示波线、指针表、展框与小型样机可近看；台面摆放较整齐，使用痕迹和线缆不足。",
+        "lighting": "仪器可读，后墙形成连续背景；整体和地面偏亮，主次与戏剧性不足。"
+      },
+      "pass_label": "当前交付",
+      "capture_note": "Godot 4.7.2 · 固定1280×800 · 未后期修改",
+      "stages": {
+        "audition": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/material-study/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/material-study/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/material-study/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/draft/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/draft/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/draft/transition.png"
+          }
+        },
+        "reviewed": {
+          "label": "自查修复",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/reviewed/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/reviewed/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/reviewed/transition.png"
+          }
+        },
+        "selected": {
+          "label": "当前交付",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/transition.png"
+          }
+        }
+      },
+      "captures": {
+        "overall": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/overall.png",
+        "close": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/close.png",
+        "transition": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/captures/selected/transition.png"
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/project.godot"
+        },
+        {
+          "label": "操作与阶段记录",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/README.md"
+        },
+        {
+          "label": "素材许可",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/ASSETS.md"
+        },
+        {
+          "label": "制作组自查",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/psychonauts-2/REVIEW.md"
+        }
+      ]
+    },
+    "no-rest-for-the-wicked": {
+      "delivery_status": "已重跑 · 待用户美术校准",
+      "reference_note": "官方商店林地桥景；本稿把林地驿站语义适配到白盒，没有保留原作视角或复刻原桥。",
+      "next": "先统一背景与前景的造型/明暗关系，降低地表叶片噪声，再校准石材大色面和原作的光色反差。",
+      "validation": "原17构件、变换及碰撞保持；门洞双向、坡道和踏面10项检查通过。此结果不代表美术达标。",
+      "findings": [
+        "灰绿石门、原石台、原台阶和木板坡道关系明确；红篷下形成修轮工作位，门侧驿旗和灯提供尺度。",
+        "真实石墙、木栈桥、桌、锤、锯、桶与植被素材参与装配；过渡角度能读出坡面、绳栏、支撑和平台。",
+        "摄影森林背景与前景场地的尺度/空间不连续，落叶和草地细节偏杂。石块规整、光色偏平，未达到参考的绘画感和雕塑感。"
+      ],
+      "asset_notes": [
+        "Poly Haven 实际免费 CC0 1K 模型/贴图：要塞墙、栈桥、石草、树、木桌与工具等；逐项作者与文件见 ASSETS。",
+        "门套按原1.2m×2.3m净空补做；红篷、驿旗、秋叶与修轮部件补缺。摄影森林作为背景，其视差限制已记录。"
+      ],
+      "category_notes": {
+        "fidelity": "林地驿站意图成立；摄影背景、硬叶片和规则石块与原作绘画式雕塑质感有明显距离。",
+        "unity": "树、石、地面与摄影背景的细节频率不一致；当前四稿中应优先解决这种素材风格冲突。",
+        "assets": "实际免费扫描素材参与建筑和功能道具；白盒门/坡/石台保持，门套按净空适配。",
+        "detail": "修轮桌、锤锯、桶、车轮和红篷有功能关系；桌面被原墙部分遮挡，叶片噪声抢注意力。",
+        "lighting": "暖秋林氛围可辨，但前场铺满环境亮度，缺少原作深暗部和聚焦光；远景衔接突兀。"
+      },
+      "pass_label": "当前交付",
+      "capture_note": "Godot 4.7.2 · 固定1280×800 · 未后期修改",
+      "stages": {
+        "audition": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/audition/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/audition/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/audition/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/draft/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/draft/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/draft/transition.png"
+          }
+        },
+        "reviewed": {
+          "label": "自查修复",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/reviewed/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/reviewed/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/reviewed/transition.png"
+          }
+        },
+        "selected": {
+          "label": "当前交付",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/transition.png"
+          }
+        }
+      },
+      "captures": {
+        "overall": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/overall.png",
+        "close": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/close.png",
+        "transition": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/captures/final/transition.png"
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/project.godot"
+        },
+        {
+          "label": "操作与阶段记录",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/README.md"
+        },
+        {
+          "label": "素材许可",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/ASSETS.md"
+        },
+        {
+          "label": "制作组自查",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/no-rest-for-the-wicked/REVIEW.md"
+        }
+      ]
+    },
+    "genshin-impact": {
+      "delivery_status": "已重跑 · 待用户美术校准",
+      "reference_note": "离岛 Vahid 店铺实机图为有限主参考；活动街景仅补色彩，不当作常驻离岛的完整布局证据。",
+      "next": "先校准木石表面的绘制感与光色，再围绕原踏台功能补结构细节；保持门洞/坡道净空，不通过移动白盒改善构图。",
+      "validation": "原17构件及碰撞保持；门洞双向、坡道和踏面10项检查通过。最终采用 captures/delivery，final目录为未采用的树形试修。",
+      "pass_label": "当前交付",
+      "capture_note": "Godot 4.7.2 · 固定1280×800 · 未后期修改",
+      "findings": [
+        "原门、坡道、石台与四级台阶保持原位；灰青瓦、深木柱、布帘、纸灯与檐下器物形成店铺方向。原折墙仍遮住柜台下半部，外场与出生区未制作。",
+        "自查修正了白叶、布纹碎点和石面噪声。随后一次树形试修出现拉长三角面，制作组自行退回网格并调整位置，当前交付图已消除该异常；该失败阶段仍可切换查看。",
+        "暖灰石路、红枫和蓝紫布帘可辨，但整体偏灰、照明偏平。深木纹与简单光滑屋面不够统一，三个踏台仍像贴材质的规整方块，尚未达到原神的二次元环境完成度。"
+      ],
+      "asset_notes": [
+        "Grab3D Japanese House 实际免费完整 CC0 GLB用于铺面和门顶；Poly Haven 免费器皿、筐、碗与路面/木板贴图按实物尺寸适配。",
+        "柜架、布帘图案、灯、树与花草等补缺和处理方式见 ASSETS；两张活动街景的位置/版本限制保留在参考记录中。"
+      ],
+      "category_notes": {
+        "fidelity": "店铺木构、蓝紫门帘和红枫提示稻妻方向；色彩偏灰、材质处理与原神手绘式明暗仍有距离。",
+        "unity": "瓦/木/器物的形体尺度基本可读；深木纹、光滑瓦面、叶片和石面细节频率不统一。",
+        "assets": "完整下载木屋及真实器皿模型，再适配原门/墙/坡；没有使用付费完整版宣传图代替交付文件。",
+        "detail": "纸灯、器皿、招幌、门边花盆和落叶可读；原折墙遮挡柜台，台面功能组合与踏台细化不足。",
+        "lighting": "树影和檐下阴影存在，整体仍偏平灰；色块主次与原作的清透感尚未建立。"
+      },
+      "stages": {
+        "audition": {
+          "label": "素材小样",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/audition/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/audition/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/audition/transition.png"
+          }
+        },
+        "draft": {
+          "label": "初稿",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/draft/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/draft/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/draft/transition.png"
+          }
+        },
+        "reviewed": {
+          "label": "自查修复",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/reviewed/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/reviewed/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/reviewed/transition.png"
+          }
+        },
+        "tree_issue": {
+          "label": "树形试修（有缺陷）",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/final/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/final/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/final/transition.png"
+          }
+        },
+        "selected": {
+          "label": "当前交付",
+          "captures": {
+            "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/overall.png",
+            "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/close.png",
+            "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/transition.png"
+          }
+        }
+      },
+      "captures": {
+        "overall": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/overall.png",
+        "close": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/close.png",
+        "transition": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/captures/delivery/transition.png"
+      },
+      "links": [
+        {
+          "label": "可编辑工程",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/project.godot"
+        },
+        {
+          "label": "操作与阶段记录",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/README.md"
+        },
+        {
+          "label": "素材许可",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/ASSETS.md"
+        },
+        {
+          "label": "制作组自查",
+          "url": "../experiments/stylized-whitebox-rerun-20261121/results/genshin-impact/REVIEW.md"
+        }
+      ]
+    }
+  },
+  "review": "协调者已逐张查看当前交付的三机位实图；白盒约束与美术差距分别记录。该轮没有用户艺术验收，也没有多effort对照。",
+  "pipeline_findings": [
+    "先验证输入才开工：从原 controller_lab.tscn 精确提取17个物理构件、核对哈希并查看三机位，避免把一块地板当作原白盒。",
+    "正式图同时检查结构和实际画面：冻结源文件/机位，在保存场景中核对碰撞，再复查门洞、坡道和落脚面；仍需人工识别视觉遮挡及美术缺陷。",
+    "素材和结构合规没有自动带来目标风格：四组仍有规整几何、平光或素材风格冲突。原神一次树形试修只在看图后暴露破面，说明工具成功不够。共享MCP只在协调端验证，本轮不用于MCP或effort排名。"
+  ]
+}
