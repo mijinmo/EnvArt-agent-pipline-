@@ -223,5 +223,35 @@
       "z": 0.34
     },
     "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "dead-spruce",
+    "name": "Dead Spruce Snag",
+    "source": "https://tevy.dev/models/dead-spruce",
+    "download": "https://tevy.dev/models/dead-spruce/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "6a9011d7046b0a8475aaf7c0a651b223c20f80514d5813f181a45165579b017b",
+    "adapted_sha256": "a592abfd51f97a1d2ae5f29178c858b8a5588b8d33b68f48a14269ada2831daa",
+    "dimensions": {
+      "x": 4.589,
+      "y": 12.603,
+      "z": 3.999
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
+  },
+  {
+    "slug": "norway-spruce",
+    "name": "Norway Spruce",
+    "source": "https://tevy.dev/models/norway-spruce",
+    "download": "https://tevy.dev/models/norway-spruce/v1/lod0.glb",
+    "license": "CC0-1.0",
+    "source_sha256": "63d364cdec9bbcef366c25ed0397d17f3cff57d3e62cf8aff2ce06fc987fbbf7",
+    "adapted_sha256": "a5716c9c0f1010f821bc326ca6686baddd9209a72c49217cce09a4eac945c066",
+    "dimensions": {
+      "x": 9.99,
+      "y": 20.595,
+      "z": 9.077
+    },
+    "adaptation": "Decoded meshopt and quantized geometry; transcoded KTX2 to PNG. Original geometry, UVs and PBR atlas retained."
   }
 ]

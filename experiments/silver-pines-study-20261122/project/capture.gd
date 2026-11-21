@@ -15,8 +15,8 @@ func capture() -> void:
 	var scene = load("res://" + args[0]).instantiate()
 	root.add_child(scene)
 	await process_frame
-	scene.set_process(false)
-	scene.set_physics_process(false)
+	for i in range(20): await physics_frame
+	scene.process_mode = Node.PROCESS_MODE_DISABLED
 	var camera := Camera3D.new()
 	root.add_child(camera)
 	camera.make_current()
@@ -27,8 +27,14 @@ func capture() -> void:
 		camera.position = Vector3(view.position[0],view.position[1],view.position[2])
 		camera.look_at(Vector3(view.target[0],view.target[1],view.target[2]))
 		camera.fov = view.fov
+		if view.has("size"):
+			camera.projection = Camera3D.PROJECTION_ORTHOGONAL
+			camera.size = view.size
 		for i in range(35): await process_frame
 		RenderingServer.force_draw()
 		assert(root.get_texture().get_image().save_png(output.path_join(view.name+".png")) == OK)
 		print("CAPTURE ", view.name)
+	scene.queue_free()
+	camera.queue_free()
+	for i in range(4): await process_frame
 	quit()

@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c51qi84uekwv8"
-valid=false
+uid="uid://b44ghe2la43g0"
+path="res://.godot/imported/norway-spruce.glb-8255787b283ec10028f5714236aa7c0d.scn"
 
 [deps]
 
-source_file="res://assets/tevy/house.glb"
+source_file="res://assets/tevy/norway-spruce.glb"
+dest_files=["res://.godot/imported/norway-spruce.glb-8255787b283ec10028f5714236aa7c0d.scn"]
 
 [params]
 

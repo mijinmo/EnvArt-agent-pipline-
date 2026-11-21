@@ -1,1 +1,59 @@
-[{"name":"audition","position":[14,9,21],"target":[0,2.5,1],"fov":48}]
+[
+  {
+    "name": "hero",
+    "position": [
+      0,
+      4,
+      22
+    ],
+    "target": [
+      0,
+      2.95,
+      0
+    ],
+    "fov": 22.2
+  },
+  {
+    "name": "entrance",
+    "position": [
+      0,
+      3.1,
+      18
+    ],
+    "target": [
+      0,
+      2.8,
+      0
+    ],
+    "fov": 18.8
+  },
+  {
+    "name": "shore",
+    "position": [
+      8,
+      4.1,
+      21
+    ],
+    "target": [
+      8,
+      2.6,
+      -1
+    ],
+    "fov": 22.5
+  },
+  {
+    "name": "structure",
+    "position": [
+      16,
+      12,
+      17
+    ],
+    "target": [
+      0,
+      2,
+      -2
+    ],
+    "fov": 50,
+    "size": 18
+  }
+]

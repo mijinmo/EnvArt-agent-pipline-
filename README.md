@@ -2,7 +2,7 @@
 
 面向关卡设计师的环境美术 Agent 管线：输入白盒、设计约束与美术参考，优先复用可商用素材，必要时通过 Blender 适配或制作，再在 Godot 中装配和验证场景。
 
-**2026-11-22 横向 2.5D 新方向：** 在 `explore/sideview-2p5d` 分支完成“山谷驿站”局部方向初稿。[看实机对照与横移关键帧](docs/sideview-2p5d-study.html)，[工程、操作及复拍说明](experiments/sideview-2p5d-study-20261122/ENVIRONMENT.md)。原17构件与10项必要通行检查通过，角色为占位，美术方向尚待用户校准。既有 main 已推送至 `c737e6c`，主工程入口保持原状。
+**2026-11-22 当前横向 2.5D 探索：Silver Pines。** 用户指定新参考并解除本任务旧白盒继承要求；在 `explore/sideview-2p5d` 完成渡口办公室可试玩初稿。Godot 4.7.2 打开 `experiments/silver-pines-study-20261122/project/project.godot`，F5；A / D 或方向键移动，Space跳跃。[工程、参考、素材及复拍说明](experiments/silver-pines-study-20261122/ENVIRONMENT.md)。9项局部控制器检查通过，美术尚待用户校准。此前[山谷驿站](docs/sideview-2p5d-study.html)留档。既有 main 已推送至 `c737e6c`，主工程入口保持原状。
 
 **Godot AI MCP 接入（2026-11-21）：** 新增固定版 4.4.2 安装器与项目级 Codex 配置，辅助实时场景、材质/灯光编辑和图像反馈。制作机拉取后运行 `python3 tools/setup_godot_ai.py --prewarm`，具体工程选择、插件启用、截图区分及独立试跑边界见 [配置与使用说明](docs/godot-ai-mcp.md)。用户随后授权的 [SIGNALIS 单局部试跑](docs/signalis-mcp-study.html) 已跑通素材试装、审美校准、MCP 编辑与三机位实图反馈；本轮进程已关闭，相对质量与额度收益尚无对照验证。
 

@@ -1,6 +1,6 @@
 # Silver Pines · 渡口办公室局部
 
-状态：制作中，尚未经过用户美术验收。分支 `explore/sideview-2p5d`，起点 `f9b7888`。本任务替代此前明亮山谷驿站作为当前横版探索；旧稿完整保留。
+状态：可试玩局部初稿已完成，尚未经过用户美术验收。分支 `explore/sideview-2p5d`，起点 `f9b7888`；素材试听提交 `e3dba12`。本任务替代此前明亮山谷驿站作为当前横版探索；旧稿完整保留。
 
 ## 本次用户决定
 
@@ -34,6 +34,33 @@
 
 完整提示词见 `project/art/PROMPT.txt`。六帧仅满足站立/行走/跳跃局部试用，尚非完整角色动画生产管线。
 
+同样使用内置 ImageGen 补制 `project/art/aged-clapboard.png`，完整提示词为 `project/art/CLAPBOARD-PROMPT.txt`。用于真实建筑模块原红木材区域的世界坐标贴图，保留窗、门、屋顶和构件几何。图像为材质来源，不是场景效果图；模型原板条仍有细小几何痕迹，不能声称完全重做横搭木板结构。纹理按1.8米重复，接缝、钉孔和漆面微细节在近景可见；相同磨损仍有重复。
+
 ## 当前交付与检查
 
-待填：保存场景、真实机位、操作方式、必要控制器检查、已看图差距。第一阶段素材试听图：`captures/audition/audition.png`，明亮照明用于看清模型；不代表目标天气与配色。
+- 工程：`project/project.godot`；可直接编辑的保存场景：`project/ferry_office.tscn`。建筑、道具、背景、天气与玩家分组；17份来源记录包含试听淘汰整栋和当前模块/道具/树木，不等同于17份均在最终场景使用。
+- 实际 Godot 4.7.2 / macOS Metal Forward+ 出图：`captures/final/{hero,entrance,shore,structure}.png`。最终目录名表示本轮交付快照，**不表示用户美术验收**。已逐张查看当前四机位；未修图。
+- `captures/draft-01` / `draft-02` 为早期正交机位；`draft-03` / `draft-04` / `final` 为相同透视机位，可用于材质与气氛修订对比。当前3D环境为透视相机、固定横向玩法平面，不是全场景像素滤镜。
+- `validation/player-01/checks.json` 的9项实际输入/物理检查全部通过：落在栈道、右移、行走动画、木箱阻挡、跳跃升高0.88米、跳过后落地、锁定纵深、镜头跟随、左移与转身。同次运行的 idle / walk / jump / land 是关键帧，不是视频。
+- 素材导入、保存重开和游戏渲染成功。退出时 Metal Forward+ 打印资源/RID未释放警告与错误行；正常运行及检查完成，进程退出。**该退出清理问题未定位，不能写成零错误验证**；没有为此扩大引擎回归。其他平台后端未验证。
+
+### 观察到的进展和差距
+
+首稿透明处理遗漏导致围网像白板、树叶卡片可见，现已修正；近景整体被雾冲灰，现把雾移到远处；玻璃原白色实心效果已改为暗窗。过强的硬阴影出现条带瑕疵，阴天主光改为无硬阴影，门灯仍有阴影，SSAO保留接触。
+
+当前建立了参考的灰绿横木板、中央三角门廊、两翼窗格、暖灯、墨线人物与冷山林，室外前后层连续存在。**仍是较简化复现**：门窗及檐口不够精细，缺少原图的复杂装饰/旗帜和临时杂物；围网为方格而非原图菱形网；远山轮廓和雾层较平，湿地块状变化偏大，木板磨损有重复。不能称为达到原作精度。下一步先由用户看局部校准，再决定是否继续集中细化；不自动扩展关卡或矩阵。
+
+## 打开、操作与复拍
+
+Godot 4.7.2 导入本目录 `project/project.godot`，F5。A / D 或左 / 右方向键移动，Space 跳跃。玩法为 X/Y 平面，底层 `CharacterBody3D` 与三维道具碰撞，Z 固定为1.4；无攻击、交互或进入建筑内部功能。本轮室外范围不包含办公室内部。
+
+```sh
+godot --path experiments/silver-pines-study-20261122/project --editor
+# 必须换成新的绝对输出目录；脚本拒绝覆盖已有证据。
+godot --path experiments/silver-pines-study-20261122/project --rendering-driver metal \
+  --script res://capture.gd -- ferry_office.tscn /absolute/path/to/new-captures
+godot --path experiments/silver-pines-study-20261122/project --rendering-driver metal \
+  --script res://check_player.gd -- /absolute/path/to/new-player-check
+```
+
+打开已保存场景不依赖转换器、外部模型下载、MCP或 ImageGen。`build_ferry.gd` 是本轮生成来源，**不要在手工修改场景后再次运行覆盖它**。`.godot/` 为缓存，源文件旁 `.import` / `.uid` 随Git保存。
