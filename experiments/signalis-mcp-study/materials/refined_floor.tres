@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dvtl6wrnlf0rt"]
+
+[ext_resource type="Shader" uid="uid://cwio4glama8nw" path="res://shaders/floor.gdshader" id="1_c3exe"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_c3exe")
+shader_parameter/base_color = Color(0.27, 0.29, 0.27, 1)
+shader_parameter/wear = 0.05

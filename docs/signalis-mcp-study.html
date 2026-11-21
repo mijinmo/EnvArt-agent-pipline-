@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGNALIS 局部 · 校准与 MCP 实机修订</title>
+<style>
+:root{color-scheme:dark;--bg:#101413;--panel:#1b211e;--ink:#e8ece5;--muted:#aab7ac;--line:#354139;--accent:#c6dbac}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"PingFang SC",sans-serif}main{max-width:1160px;padding:52px 24px 80px;margin:auto}h1{font-size:clamp(30px,5vw,51px);line-height:1.2;margin:12px 0 22px}h2{margin:42px 0 16px;font-size:25px}h3{font-size:18px;margin:0 0 8px}p{max-width:86ch}a{color:var(--accent)}.eyebrow,.muted,figcaption{color:var(--muted)}.eyebrow{letter-spacing:.14em;font-size:13px}.lead{font-size:19px}.card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.triple{grid-template-columns:repeat(3,1fr)}blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:22px 0;background:var(--panel)}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0}button,select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);padding:7px 14px;border-radius:5px;cursor:pointer}button[aria-pressed="true"]{background:var(--accent);color:#132017}input[type=range]{accent-color:var(--accent);width:210px}.compare{position:relative;aspect-ratio:958/598;width:100%;overflow:hidden;background:#050807;border:1px solid var(--line)}.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.compare .before{clip-path:inset(0 calc(100% - var(--split,50%)) 0 0)}.divider{position:absolute;left:var(--split,50%);top:0;bottom:0;width:2px;background:#e3e8dc;pointer-events:none}.tags{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin:8px 0}figure{margin:0}figure img{width:100%;display:block;background:#090c0a}figcaption{font-size:14px;padding-top:9px}table{border-collapse:collapse;width:100%;font-size:15px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px}th{color:var(--accent)}.table-wrap{overflow:auto}code{font:13px ui-monospace,monospace;overflow-wrap:anywhere}.note{font-size:14px;color:var(--muted)}details{margin:20px 0}summary{cursor:pointer;color:var(--accent)}footer{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted)}@media(max-width:760px){main{padding:28px 14px 50px}.grid,.triple{grid-template-columns:1fr}.card{padding:16px}h2{margin-top:32px}}
+</style>
+<main>
+<div class="eyebrow">ENVIRONMENT ART / SIGNALIS / 2026.11.21</div>
+<h1>同一局部，按反馈细化一次</h1>
+<p class="lead">保留灰绿检修室与红色 CRT 的方向，改进设备使用关系、柜架暗部和门洞受光。初稿与修订均为 Godot 游戏画面。</p>
+<p class="muted">单制作会话、自改；未启动 subagent 或 effort 矩阵。流程已跑通，最终美术验收仍待用户判断。</p>
+<blockquote>用户校准：“保留当前方向，强化设备细节和光影层次”。</blockquote>
+
+<h2>同机位前后对比</h2>
+<div class="controls"><label for="view">机位</label><select id="view"><option value="detail">设备近景</option><option value="overall">整体俯视</option><option value="door">门洞过渡</option></select><button id="only-before" aria-pressed="false">只看初稿</button><button id="split" aria-pressed="true">滑动对比</button><button id="only-after" aria-pressed="false">只看修订</button><label for="slider">分界</label><input id="slider" type="range" min="0" max="100" value="50"></div>
+<div class="tags"><span>左：校准初稿 draft</span><span>右：定向修订 refined</span></div>
+<div class="compare" id="compare" style="--split:50%"><img id="after" src="../experiments/signalis-mcp-study/captures/refined/detail.png" alt="修订版设备近景"><img class="before" id="before" src="../experiments/signalis-mcp-study/captures/draft/detail.png" alt="初稿设备近景"><div class="divider" id="divider"></div></div>
+<p id="view-note" aria-live="polite">近景：拆修设备、零件盒与线缆形成组合；柜架受光和墙面投影更清楚。中央红色屏幕仍是重点。</p>
+<p class="note">原始 PNG 为 958 × 598；Metal Forward+，三个相机的变换、投影和 FOV 均保持不变。对比未调曝光、未修图。<a id="before-link" href="../experiments/signalis-mcp-study/captures/draft/detail.png">初稿原图</a> · <a id="after-link" href="../experiments/signalis-mcp-study/captures/refined/detail.png">修订原图</a>。无 JavaScript 时仍可查看下方三组原图。</p>
+<details><summary>三组原图链接与拍摄条件</summary><div class="table-wrap"><table><tr><th>机位</th><th>初稿</th><th>修订</th><th>条件</th></tr><tr><td>整体</td><td><a href="../experiments/signalis-mcp-study/captures/draft/overall.png">PNG</a></td><td><a href="../experiments/signalis-mcp-study/captures/refined/overall.png">PNG</a></td><td>HeroCamera / 正交 size 11.4</td></tr><tr><td>设备</td><td><a href="../experiments/signalis-mcp-study/captures/draft/detail.png">PNG</a></td><td><a href="../experiments/signalis-mcp-study/captures/refined/detail.png">PNG</a></td><td>DetailCamera / 透视 FOV 53°</td></tr><tr><td>门洞</td><td><a href="../experiments/signalis-mcp-study/captures/draft/door.png">PNG</a></td><td><a href="../experiments/signalis-mcp-study/captures/refined/door.png">PNG</a></td><td>DoorCamera / 透视 FOV 53°</td></tr></table></div></details>
+
+<div class="grid triple">
+<div class="card"><h3>设备细节</h3><p>改变朝向和工作状态：主终端、背向检修的 CRT、箱体支撑的待检设备。补真实线缆与零件盒，键盘移到侧工作台。</p></div>
+<div class="card"><h3>光影层次</h3><p>柜架补掠射照明，显出柜门和架体投影；门框补正面受光。降低红光溢出范围，减弱地面均匀的磨损颗粒。</p></div>
+<div class="card"><h3>白盒约束</h3><p>原始节点与碰撞保留。近景检查发现导入门框的净高不足，修订其纵向及少量横向比例；没有移动原门洞或改变相机。</p></div>
+</div>
+
+<h2>参考先看环境，而非游戏名</h2>
+<div class="grid"><figure><a href="https://store.steampowered.com/app/1262350/SIGNALIS/"><img loading="lazy" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_dcf8d44a07289d9b8ca9d1e9b9ae2a002dd76f6e.1920x1080.jpg?t=1773697315" alt="SIGNALIS 官方设备室参考截图；需联网加载"></a><figcaption>主参考 steam-7：<a href="https://store.steampowered.com/app/1262350/SIGNALIS/">官方 Steam 截图</a>。仅用于分析，原作媒体与模型不作为工程资产分发。</figcaption></figure><div class="card"><h3>这张图支持哪些决定</h3><p>CRT 外壳、边缘设备密度、中部通行空区、灰绿设施和局部红色显示光。补充参考分别用于门洞、电气面板与设备比例。</p><p>实际查看 11 张官方截图；角色特写、物品栏和外景不作为本室内局部的主参考。病房战斗图仅看建筑，不把枪口闪光当常态光照。</p><p><a href="../experiments/signalis-mcp-study/references.json">完整图像 URL、选用与排除记录</a></p></div></div>
+
+<h2>素材筛选与适配</h2>
+<div class="table-wrap"><table><tr><th>素材</th><th>实际选用</th><th>范围与判断</th></tr>
+<tr><td><a href="https://opengameart.org/content/modular-sci-fi-megakit">Quaternius Modular Sci-Fi</a><br><a href="https://opengameart.org/content/sci-fi-essentials-kit">Sci-Fi Essentials</a></td><td>墙体、门框、柜架、灯具、管线、小盒与工具箱</td><td>CC0；Standard 免费部分分别为 190 / 37 模型。重新试装缓存原资产；拒绝现代立式终端与带翼座椅作为关键道具。</td></tr>
+<tr><td><a href="https://poly.pizza/m/8jVB0zIXKCv">CRT Monitor / Jarlan Perez</a></td><td>本轮新下载的 CRT 主体，几何保持可辨识</td><td>CC BY 3.0；缩放、材质覆盖、局部屏幕发光面。作者与改动说明随工程保存。</td></tr>
+<tr><td><a href="https://poly.pizza/m/9Qc5EtYmJry">Old computer / Poly by Google</a></td><td>键盘</td><td>CC BY 3.0；实际下载内容为键盘，按实物而非素材名使用。</td></tr>
+<tr><td><a href="https://polyhaven.com/a/metal_office_desk">Poly Haven Metal Office Desk</a></td><td>左侧金属检修桌</td><td>CC0；复用可核验的原模型，降饱和与削弱高频材质响应。停止过的旧写实实验没有重启。</td></tr>
+</table></div>
+<p>统一手段为相近年代的道具轮廓、低饱和材质、点采样纹理、屏幕像素化、有限色阶和克制抖色。主要建筑与可识别设备来自真实素材；程序部分补地面、标识、纸片、围护和屏幕发光。没有用统一描边替代造型选择。</p>
+
+<h2>这次验证到什么程度</h2>
+<div class="grid"><div class="card"><h3>已实际完成</h3><p>参考筛选 → 原素材试装 → 保存初稿 → 用户校准 → MCP 修改节点、材质和灯光 → 磁盘重载 → 运行游戏 → 查看三组同机位图。Godot 4.7.2 与 Godot AI 4.4.2 的这条局部链路可用。</p><p>当前聊天未热加载原生 MCP 工具，实际使用临时 Python MCP client 经同一 stdio attach 连接；没有直接绕过 MCP 调插件内部接口。</p></div><div class="card"><h3>仍有明确不足</h3><p>墙体和门框仍有通用科幻套件感；与参考相比设备更稀疏、构图更平直，独特的旧设施细节还不够。近景改善比整体构图改善明显。</p><p>这是一个俯视 cutaway 局部：顶棚只投影，前沿低墙用于观察。不是全关卡、第一人称完整室内或原作一比一还原。</p></div></div>
+<p class="note">本轮没有“无 MCP”对照，也没有 A 自改与 B 接手的公平对照。不能从一轮成果推断 MCP 节省了多少额度，或新 agent 一定更好。用户校准确认方向，未等同于最终验收。</p>
+
+<h2>打开与接续</h2>
+<p>Godot 4.7.2 打开 <code>experiments/signalis-mcp-study/project.godot</code>，F5 运行修订版。<code>scenes/draft.tscn</code> 保留初稿；不要重新运行首版 builder 覆盖手工/MCP 修订。正常浏览不依赖 MCP 插件。</p>
+<p><a href="../experiments/signalis-mcp-study/README.md">工程使用说明</a> · <a href="../experiments/signalis-mcp-study/ENVIRONMENT.md">任务与审美记录</a> · <a href="godot-ai-mcp.md">MCP 安装及本轮发现</a> · <a href="new-machine-handoff.md">Mac mini 接续入口</a></p>
+<footer>保留原白盒、初稿、资产许可与原始实机 PNG。本次本机运行仅限这一个局部；不自动恢复其他试跑。</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id), base='../experiments/signalis-mcp-study/captures/';
+const notes={detail:'近景：拆修设备、零件盒与线缆形成组合；柜架受光和墙面投影更清楚。中央红色屏幕仍是重点。',overall:'整体：保留布局和灰绿/红光方向，柜区与入口更可读；中央仍留通行空区，整体密度尚低于参考。',door:'门洞：加强前表面受光，并修正初稿导入门框净高不足的问题。相机、原白盒位置与碰撞保持不变。'};
+function split(v){$('compare').style.setProperty('--split',v+'%');$('slider').value=v;$('divider').hidden=v==0||v==100;['only-before','split','only-after'].forEach((id,i)=>$(id).setAttribute('aria-pressed',String(i===0?v==100:i===2?v==0:v>0&&v<100)));}
+$('slider').addEventListener('input',e=>split(Number(e.target.value)));$('only-before').onclick=()=>split(100);$('only-after').onclick=()=>split(0);$('split').onclick=()=>split(50);
+$('view').addEventListener('change',e=>{const v=e.target.value;for(const [id,pass] of [['before','draft'],['after','refined']]){$(id).src=base+pass+'/'+v+'.png';$(id).alt=(pass==='draft'?'初稿':'修订')+'：'+e.target.selectedOptions[0].textContent;$(id+'-link').href=$(id).src;}$('view-note').textContent=notes[v];});
+</script>
+</html>

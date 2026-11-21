@@ -4,22 +4,22 @@
 
 ## 结论与选型
 
-值得作为**编辑器操作与反馈通道**加入。预计收益在于：少猜节点和资源状态，改完材质/灯光能直接看图，更容易发现“文件写了，但实机场景没有生效”。它不会自动改善素材眼光，也不能把成功调用工具变成美术验收通过。质量、时间及 Codex 额度收益仍需在制作机验证。
+值得作为**编辑器操作与反馈通道**加入。预计收益在于：少猜节点和资源状态，改完材质/灯光能直接看图，更容易发现“文件写了，但实机场景没有生效”。它不会自动改善素材眼光，也不能把成功调用工具变成美术验收通过。SIGNALIS 单局部已验证编辑与实机反馈链路；是否改善质量/时间及 Codex 额度，相比无 MCP 仍缺少对照。
 
 | 候选 | 对本项目的适用性 | 决定 |
 | --- | --- | --- |
-| [Godot AI](https://github.com/hi-godot/godot-ai/tree/423954f4314e250fa2602525d461debc91b1a173) | 实时场景树、资源/材质/Shader/相机操作，编辑器及游戏截图，编辑器会话选择。v4 要求 Godot 4.7+，与项目 4.7.2 的版本要求吻合。 | 接入固定发布版 **4.4.2**；实际 4.7.2 编辑器兼容性尚未在本任务运行验证。 |
+| [Godot AI](https://github.com/hi-godot/godot-ai/tree/423954f4314e250fa2602525d461debc91b1a173) | 实时场景树、资源/材质/Shader/相机操作，编辑器及游戏截图，编辑器会话选择。v4 要求 Godot 4.7+，与项目 4.7.2 的版本要求吻合。 | 接入固定发布版 **4.4.2**；已在 SIGNALIS 局部验证 4.7.2 的编辑、保存、运行与截图链路，非全部工具兼容性保证。 |
 | [Coding-Solo/godot-mcp](https://github.com/Coding-Solo/godot-mcp) | 主要提供启动、运行、日志与基本场景文件操作；与现有 CLI 脚本重叠较多。 | 本轮不安装。 |
 | [Godot Forge](https://github.com/Tann2019/godot-mcp-server) | 宣称覆盖编辑、截图、Shader 与试玩；同时包含较广的游戏开发能力。 | 本轮不并装，先验证一种编辑器桥是否有用。 |
 
 Godot AI 为 MIT 许可；安装包保留原 LICENSE。插件与 Python 服务版本必须一致。固定版来源、ZIP SHA-256、依赖发布时间上限、Python 范围及工具名单在 [godot_ai.lock.json](../tools/godot_ai.lock.json)。这里的 pin 固定主包和插件，并使用上游依赖截止策略，**不是所有传递依赖的逐包 hash lock**。
 
-## 已配置与尚未验证
+## 当前配置与验证状态
 
 - 本 MacBook：已安装插件文件，写入仓库根下本机的 `.codex/config.toml`，服务名 `godot_ai_envart`，预热固定版 Python 依赖。未修改全局 Codex 配置。
 - 当前会话没有自动出现新增 Godot 工具；重新加载 MCP 或重新打开项目会话后检查工具是否可用，不能仅凭配置文件就声称 agent 已获得工具。
-- 已做最小通信检查：`initialize`、`tools/list` 和只读 `session_manage(list)` 成功；上游返回 47 项工具，选用的 22 项全部存在，编辑器会话数为 0。325 个插件文件与发布 manifest 的 hash 相符，Codex 能读到项目级配置。实际包与 `attach --version` 均为 4.4.2；握手里的 `serverInfo.version=4.1.6` 来自 FastMCP 框架，不能用它判断插件版本。
-- 插件文件安装不等于编辑器已经连接：**本机没有启动 Godot、没有启用编辑器插件、没有改动 project.godot 或制作场景**。实际联动、游戏截图和编辑器保存待 Mac mini 验证。
+- 已做最小通信检查：`initialize`、`tools/list` 和只读 `session_manage(list)` 成功；上游返回 47 项工具，选用的 22 项全部存在，当时编辑器会话数为 0。325 个插件文件与发布 manifest 的 hash 相符，Codex 能读到项目级配置。实际包与 `attach --version` 均为 4.4.2；握手里的 `serverInfo.version=4.1.6` 来自 FastMCP 框架，不能用它判断插件版本。
+- 上述最小通信检查是安装阶段的历史结果。用户随后明确授权一次 SIGNALIS 局部试跑，已在本机启用编辑器联动并完成节点/材质/灯光编辑、保存重载与游戏截图；见下方记录和 [实图报告](signalis-mcp-study.html)。该任务已关闭，不自动恢复其他本机制作。
 - 机器路径、配置和下载的第三方插件不入 Git；安装器与版本清单入 Git。其他工程自己生成的 `.uid` / `.import` 仍照常提交。
 - 后续安装/启用 MCP 不构成恢复 MacBook 制作、启动独立矩阵或新增制作 agent 的授权。
 
@@ -96,6 +96,20 @@ Godot AI 启用后可能写入 editor_plugins、运行截图所需 helper autolo
 停用 MCP：将本地 `.codex/config.toml` 中该服务 `enabled = false`，重新加载会话。安装器也支持 `--disabled`。这不会禁用已打开的 Godot 插件；后者在 Project Settings → Plugins 单独关闭。不要结束不属于当前任务的 Godot/服务进程。
 
 第一次收益检查只需一个既有局部、一个已明确的材质或光影问题，保留同机位 before/after，并记录是否减少无效往返、有无视觉进步。不为接入 MCP 新造功能测试或完整 effort 矩阵。
+
+## 2026-11-21 SIGNALIS 实际试跑
+
+[同机位对比](signalis-mcp-study.html) / [任务记录](../experiments/signalis-mcp-study/ENVIRONMENT.md)。用户授权一个新参考局部，确认“保留当前方向，强化设备细节和光影层次”后，完成了一轮定向修订。仅一个制作会话，没有新增 agent。
+
+- **通道**：当前聊天未热加载原生 Godot MCP 工具；临时 Python MCP SDK client 使用 `.codex/config.toml` 的同一固定版 `stdio attach`，完整执行工具协议。并未证明后续每个 subagent 已能自动发现工具。
+- **实际用途**：查 Light3D 参数，另存 refined 场景，复制/实例化设备与灯具，批量摆放和灯光参数，创建独立 ShaderMaterial 并调整地面磨损，保存、磁盘重载、游戏截图。初稿由一次性脚本构建，修订通过 MCP 编辑，属于混合生产方式。
+- **保存陷阱**：本次 save_as 后，close 的已打开场景列表仍报告旧路径；`scene_open(force_reload=true)` 返回 `reloaded_from_disk=true` 后才确认重载。普通 scene_open 可能只切换到内存中已打开场景。
+- **相机陷阱**：只设置一个 Camera3D.current=true 没有清除其他相机的 Current。每次明确三者互斥，再运行拍图。已经运行时 project_run 不会自动替换运行场景，先 stop。
+- **截图**：本轮 game 原始 framebuffer 为 958×598，虽工程逻辑尺寸为 1280×800。保存 MCP 返回的原图并按实际尺寸标注，不把工具的 max_resolution 当实际尺寸；game 不使用 cinematic 的 save_to 假设。
+- **临时客户端**：PTY 对长 JSON 单行的截断造成一次批量请求未发送；改为短文件路径请求后成功。这是客户端输入问题，不应误报为 Godot 操作失败，也不需要新增常驻生产框架。
+- **可迁移性**：任务结束关闭自己的编辑器/客户端，移除 project.godot 中本机 editor_plugins/helper 引用；源场景能不依赖插件打开。插件、配置、缓存不入 Git，源旁 .uid/.import 保留。
+
+画面中柜架和门框可读性、设备使用关系得到改善，但科幻模块的年代感仍与参考有差距。MCP 提供的状态与实图促成了具体修正；这不证明它一定比现有脚本省额度。未做无 MCP 对照或 A/B 接手对照，最终美术验收仍由用户决定。
 
 ## 来源
 

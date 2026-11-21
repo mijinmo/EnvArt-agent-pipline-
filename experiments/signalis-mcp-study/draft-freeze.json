@@ -1,0 +1,6 @@
+{
+  "scenes/draft.tscn": "1058a002d065f5ddf86f5a89480b05b61f8d6696847ae197b6351d423f5f6114",
+  "shaders/surface.gdshader": "78f9f75ab11cbb5e2fde7419f07a2983171286e4ee275ffd2320cf743b8abfe9",
+  "shaders/pixel_finish.gdshader": "82634383959aee374d762850bf1ae5955d53f3b1634bb6def1523ef61d8faaec",
+  "shaders/floor.gdshader": "b552b92313909e3125e9da92b8a58ccd450bbb39caf16b64f4f750c43cbeaa89"
+}

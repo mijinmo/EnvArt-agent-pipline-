@@ -4,7 +4,11 @@
 
 当前任务、参考与选择依据见 [ENVIRONMENT.md](ENVIRONMENT.md)。这是风格研究，不包含 SIGNALIS 原作模型、贴图或角色。
 
-在 Godot 4.7.2 标准版打开本目录。主场景为 `scenes/draft.tscn`，固定俯视相机；DetailCamera / DoorCamera 为近景和门洞观察机位。原始白盒位于 `source/whitebox.tscn`，保持原位置和碰撞。未新增玩法控制器。
+在 Godot 4.7.2 标准版打开本目录。主场景为 `scenes/refined.tscn`，固定俯视相机；DetailCamera / DoorCamera 为近景和门洞观察机位。原始白盒位于 `source/whitebox.tscn`，保持原位置和碰撞。未新增玩法控制器。
+
+[同机位 HTML 对比](../../docs/signalis-mcp-study.html) 包含整体、设备和门洞三个视角。`scenes/draft.tscn` / `captures/draft/` 为校准初稿，`scenes/refined.tscn` / `captures/refined/` 为用户反馈后的定向修订；最终美术验收仍待用户判断。
+
+切换机位：在场景树选中对应 Camera3D，在 Inspector 的 Current 勾选所需相机，并取消另外两台的 Current，再保存运行（初稿请另存副本）。不要只改一台以致多台同时 Current；本轮实际游戏 PNG 为 958 × 598。
 
 MCP 插件通过根仓库命令安装：
 
