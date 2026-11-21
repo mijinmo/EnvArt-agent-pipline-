@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/hi-godot/godot-ai",
+  "version": "4.4.2",
+  "source_commit": "423954f4314e250fa2602525d461debc91b1a173",
+  "archive_url": "https://github.com/hi-godot/godot-ai/releases/download/v4.4.2/godot-ai-v4-plugin.zip",
+  "archive_sha256": "93b976b68df03352073d36c30b6daa593cdc42322cd10f6dacdec10d049ac9a0",
+  "dependency_cutoff": "2026-11-16T18:00:00Z",
+  "python_request": ">=3.11,<3.15",
+  "uv_minimum": "0.9.25",
+  "enabled_tools": [
+    "session_manage", "session_activate", "editor_state", "editor_screenshot",
+    "scene_get_hierarchy", "scene_open", "scene_save", "scene_manage",
+    "node_get_properties", "node_find", "node_create", "node_set_property", "node_manage",
+    "material_manage", "resource_manage", "camera_manage", "api_manage",
+    "filesystem_manage", "batch_execute", "project_run", "project_manage", "logs_read"
+  ]
+}

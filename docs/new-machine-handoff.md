@@ -1,12 +1,12 @@
 # 跨机器接续说明
 
-更新：2026-11-20。本文件是新主 agent 的当前接续入口；历史报告保留当时状态，不作为下一步启动指令。
+更新：2026-11-21。本文件是新主 agent 的当前接续入口；历史报告保留当时状态，不作为下一步启动指令。
 
 ## 当前状态与本次范围
 
 - 原 MacBook 已保存四游戏 × 四档的 16 组续作结果及历史 HTML。Mac mini 随后完成四游戏 × 六档的 24 组独立制作、144 张两轮三机位实图与四份独立盲评；[报告](gpt62-independent-matrix.html) 和 [正式工程/审计](../experiments/gpt62-independent-matrix-20261120/README.md) 均已在当前仓库。本轮与旧轮次的起点、参考和素材访问条件不同，小样及自查仍有已披露的遵循缺口；完成制作不代表用户美术验收。
 - 用户反馈的是 **Codex 实际额度下降明显**，并认为整体效果不如旧轮。已讨论起点、预算分散、视觉决策与主 agent 前置知识的影响；没有完整主会话证据，不能确认“主 agent 缺少上下文”就是唯一原因。
-- 用户已同意新增审美校准及明确的 A/B/主 agent 分工。本次授权落实到规则、项目审美交接、教程与 Git；**新流程的质量和额度收益仍未验证**。
+- 用户已同意新增审美校准及明确的 A/B/主 agent 分工。本次授权落实到规则、项目审美交接、教程与 Git；**SIGNALIS 已实践用户校准和自改；独立接手及额度收益仍未验证**。
 - 原 MacBook 不启动 Godot。后续制作在 Mac mini 按接续任务的范围进行；拉取文档本身不启动新试验、不自动重跑六档矩阵、不扩展全场。
 
 2026-11-20 在 Mac mini 拉取 `2c4f004`、`fe1e217` 后，与本地截至 `12659f1` 的 45 次制作/报告提交合并；保留全部场景、截图和独立历史。此次仅整合文档与规则，没有启动 Godot 或新一轮试跑。
@@ -20,6 +20,12 @@
 当前是 `awaiting_user_calibration`：协调者已逐张看四组交付图，但尚无用户美术验收。实际参考由各组独立补全，不是同游戏固定输入的 effort 对照，不自动扩展六档矩阵。下一步使用已有实图校准，不重新从白盒启动。原神素材包来源页面明确标注 AI 制作；各组仍有形体重复或纵深不足，不能将技术通过等同于风格达标。独立历史保存在 `refs/envart-local-pilots/20261120/*`，实际隔离证据及局限见 [审计](../experiments/stylized-local-pilots-20261120/audits/execution-summary.json)。
 
 私人浏览入口为 `http://100.96.75.54:8081/docs/stylized-local-pilots.html`，与旧 24 组报告共用已有 Tailscale 服务；只托管报告与图片，工程和会话日志不在浏览目录。
+
+- 2026-11-21 新增可选 Godot AI 4.4.2 MCP 接入。原 MacBook已安装插件文件和项目级客户端配置，并在下述单局部例外验证编辑器联动；Mac mini 需运行仓库安装器，不能假定 git pull 会同步原 MacBook MCP 配置。安装、启用和最小实图检查见 [Godot AI MCP](godot-ai-mcp.md)。MCP 的相对质量和额度收益尚未验证。
+
+## 原 MacBook 运行例外（2026-11-21）
+
+用户随后要求先跑通一次流程，选 SIGNALIS 新参考。原 MacBook开展单局部验证，见 [当前任务记录](../experiments/signalis-mcp-study/ENVIRONMENT.md)；不是重新开放其他原 MacBook制作或六档矩阵。原白盒与旧场景保留。本轮已完成，Godot/临时客户端已关闭；[实机对比 HTML](signalis-mcp-study.html) 包含初稿、用户反馈与三机位修订。用户已确认保留方向、强化设备与光影，最终美术验收尚未完成。修订主场景为 `experiments/signalis-mcp-study/scenes/refined.tscn`；不要运行旧 builder 覆盖它，也不因拉取而重开原 MacBook Godot。
 
 ## Mac mini 拉取后先做什么
 

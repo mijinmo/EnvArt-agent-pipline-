@@ -1,0 +1,179 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "source": "https://opengameart.org/content/sci-fi-essentials-kit",
+  "edition": "Standard / free",
+  "selection": [
+    "Prop_Chair",
+    "Prop_Desk_Small",
+    "Prop_Desk_Medium",
+    "Prop_Locker",
+    "Prop_Shelves_ThinTall",
+    "Prop_Shelves_WideShort",
+    "Prop_Ammo_Small",
+    "Prop_HealthPack",
+    "Prop_Mug",
+    "Prop_Crate",
+    "Prop_Crate_Tarp"
+  ],
+  "cached_source_downloaded": "2026-11-12",
+  "selected_on": "2026-11-21",
+  "files": [
+    {
+      "file": "License_Standard.txt",
+      "sha256": "2687fba65dca7bbd2f9ab2fb7a8c51dd0c7c8e9acd7579415612bec43f68b3f5"
+    },
+    {
+      "file": "Prop_Ammo_Small.bin",
+      "sha256": "ab5629ae246d03e005c1a6260409fd220cabc855c4233927ce67e646d34387b7"
+    },
+    {
+      "file": "Prop_Ammo_Small.gltf",
+      "sha256": "c09acd240aae611121e29071ea66dd1a3b5d41a48cb4db871845479a538a9186"
+    },
+    {
+      "file": "Prop_Chair.bin",
+      "sha256": "2a127ae035fb1efb80b50bc85bd86cb7f99acb8dec496609a759029f88b18fee"
+    },
+    {
+      "file": "Prop_Chair.gltf",
+      "sha256": "3b87c634abb635344606102d4272a7b2448b5ce64cab96cda41433cb4278d377"
+    },
+    {
+      "file": "Prop_Crate.bin",
+      "sha256": "ec472c1c9ea48727d2a40085365b4bad6031a785b75b2dae083291bc1d295752"
+    },
+    {
+      "file": "Prop_Crate.gltf",
+      "sha256": "593077978159b4d5283a60a291f5b55b80915896d82b0218dc3e5de2f92c3d6a"
+    },
+    {
+      "file": "Prop_Crate_Tarp.bin",
+      "sha256": "57dae62dbefc34f0649dfa0c2e9483be689e53a13a4fa3a83340d189f8dbe4cc"
+    },
+    {
+      "file": "Prop_Crate_Tarp.gltf",
+      "sha256": "4635986fa77090d1166bf1785856f450478c954902db9ddd8f43a7cf1ed5ab0c"
+    },
+    {
+      "file": "Prop_Desk_Medium.bin",
+      "sha256": "5eaf07f59c8cd58374c6da564210e95b17ee11fc71a86eaa53c5472abab62ed5"
+    },
+    {
+      "file": "Prop_Desk_Medium.gltf",
+      "sha256": "6f26a2a78898ca79e2593fa4bae7bd95ef9e914ca56c0a0492a65ab0217f6a6a"
+    },
+    {
+      "file": "Prop_Desk_Small.bin",
+      "sha256": "5fe24035cb2abd5cdc9c49644e6e5b26d00c94dc73abb8e4b58f0e6619b24c37"
+    },
+    {
+      "file": "Prop_Desk_Small.gltf",
+      "sha256": "b902113328237fd29e3dae13d61888fb861b1db24143705403933e7d772de6a1"
+    },
+    {
+      "file": "Prop_HealthPack.bin",
+      "sha256": "3f493562fbb728d7b3fbe7c44fec4e6a55a6d94c5d37079304823b9483a758c7"
+    },
+    {
+      "file": "Prop_HealthPack.gltf",
+      "sha256": "1272bab6b46f6011fc783e0c08fa5772cb52d1b799115f11f8612cf1fec60b0e"
+    },
+    {
+      "file": "Prop_Locker.bin",
+      "sha256": "02ff3313a5905d349db9f2116d4effb942e904577aecb0f74a77371183910736"
+    },
+    {
+      "file": "Prop_Locker.gltf",
+      "sha256": "99ce345d2d751ad23a20ef3153bc82a85d4d1cbc5787074fc1c54a3278f295c1"
+    },
+    {
+      "file": "Prop_Mug.bin",
+      "sha256": "f0f0d8556e573b4aa9f2a54bbf16ad6c346f6040a475e311b20df14c4ba6c9dc"
+    },
+    {
+      "file": "Prop_Mug.gltf",
+      "sha256": "81c6aca3656b84a338db681729f3a7e2abff11ceca19bed1fbe2739aaa8a5107"
+    },
+    {
+      "file": "Prop_Shelves_ThinTall.bin",
+      "sha256": "a72089723b62b0f6a2de6d93c9d320cb0b8f4e45dae01dea6527c6e6405ee836"
+    },
+    {
+      "file": "Prop_Shelves_ThinTall.gltf",
+      "sha256": "6fffd2c3a37d736298b3f693c601e422ac2b2f8a62b7b50c2a747d010dd92675"
+    },
+    {
+      "file": "Prop_Shelves_WideShort.bin",
+      "sha256": "721721fc19d6a9f93de487237f28e7f9539fff62ead8515afdd31d9f5411d73f"
+    },
+    {
+      "file": "Prop_Shelves_WideShort.gltf",
+      "sha256": "96f68e5e43fc23f8f781d7d1eb9f96afa82b2988f04dd005e4f963ed2d21e242"
+    },
+    {
+      "file": "T_Props_Batch2_BaseColor.png",
+      "sha256": "e94bc5ac9bd7c0d5771936da662bbed9c8fa8cb44d9ec51b59ccd6512104b4cc"
+    },
+    {
+      "file": "T_Props_Batch2_Normal.png",
+      "sha256": "5dc16d40e5e92c956f0fdbeea346d2b6792f9f25b13addee5f33d984d75072aa"
+    },
+    {
+      "file": "T_Props_Batch2_ORM.png",
+      "sha256": "30a45c78f17e41d6e85a1caedbeac5974121fe1aa8095f1a4887a9ab1ea1fab1"
+    },
+    {
+      "file": "T_Props_Crates_BaseColor.png",
+      "sha256": "79d604644b8ef63731735cfb29a4a9ded81598d20ecffe75e2af3fd9e18d255c"
+    },
+    {
+      "file": "T_Props_Crates_Normal.png",
+      "sha256": "9fe8aa4951198c0dd3e06a41cd7aca1e50e308c2629f620f4d5be53dfc835b21"
+    },
+    {
+      "file": "T_Props_Crates_ORM.png",
+      "sha256": "a36b59d07082dde265f13689f0acaacfa0cfb22b4769a2dad1bad282a39bf795"
+    },
+    {
+      "file": "T_Trim_01_BaseColor_Red.png",
+      "sha256": "15fc0e344ed35483bc771aaa95c1c2a0b0ec2349a893cf24af18b8742f0842ac"
+    },
+    {
+      "file": "T_Trim_01_Normal.png",
+      "sha256": "1aec7ad47a642fc68216b5a3119341b7dca038c1fc9493df8a15ad4aa27ddbcf"
+    },
+    {
+      "file": "T_Trim_01_ORM.png",
+      "sha256": "6ab7ad231df22867652048ebfd602684a9072d45c483ca57df0fcd4cb2cb4feb"
+    },
+    {
+      "file": "T_Trim_02_BaseColor.png",
+      "sha256": "7b13c6a7d82b434314237c4b1930b8e12ddc69a70ffef28d73cbd178d3ff6293"
+    },
+    {
+      "file": "T_Trim_02_Normal.png",
+      "sha256": "7faaa7059192f43aded9cc2f93917dd54fd14545509c37318d4e6bf0a8104960"
+    },
+    {
+      "file": "T_Trim_02_ORM.png",
+      "sha256": "2a433e6a7fbcec375b5c5e5c7aa57dbe1fd23ca6592f48c52d09dde2d622aab8"
+    },
+    {
+      "file": "T_Trim_03_BaseColor.png",
+      "sha256": "2a15eadbedbc928d771ed8f2a7a8c1a16bce89b2836a0ecf34ece7e2fab96769"
+    },
+    {
+      "file": "T_Trim_03_Cables.png",
+      "sha256": "758a95beccdc9f0621d8b8a283ee2593e04b56f1cd32776165ec85e1568e8eb8"
+    },
+    {
+      "file": "T_Trim_03_Normal.png",
+      "sha256": "b2c3238cbe2586e44df0b00179adf85e5b7ac7fed1713ec0b807482245a30738"
+    },
+    {
+      "file": "T_Trim_03_ORM.png",
+      "sha256": "c57134b5d496b39b955a87765ea32b93567b1ab494fe6b890de24c75dcfd6fe4"
+    }
+  ]
+}

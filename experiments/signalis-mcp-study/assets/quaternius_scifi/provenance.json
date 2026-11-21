@@ -1,0 +1,207 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "source": "https://opengameart.org/content/modular-sci-fi-megakit",
+  "edition": "Standard / free",
+  "selection": [
+    "Door_Frame_Square",
+    "WallAstra_Straight_Flat",
+    "BottomMetal_Straight",
+    "TopSimple_Straight",
+    "ShortWall_MetalPlates_Straight",
+    "Platform_DarkPlates",
+    "Prop_AccessPoint",
+    "Prop_Computer",
+    "Prop_Cable_1",
+    "Prop_Cable_3",
+    "Prop_Light_Wide",
+    "Prop_Light_Small",
+    "Prop_Vent_Small",
+    "Prop_Vent_Wide",
+    "Column_Pipes"
+  ],
+  "cached_source_downloaded": "2026-11-12",
+  "selected_on": "2026-11-21",
+  "files": [
+    {
+      "file": "BottomMetal_Straight.bin",
+      "sha256": "31d18e02d8080cce604877dcb88a1f04a47b481bf38e07897b3bab6885c7000d"
+    },
+    {
+      "file": "BottomMetal_Straight.gltf",
+      "sha256": "0989dd43997f9a970260e4b986865833527f8f5e8006e1b158a494d7ad08c5cd"
+    },
+    {
+      "file": "Column_Pipes.bin",
+      "sha256": "e44dc8fc69a124e983dcb6c9b11a4d7e27300ae699fd6584224c2e00a450dd2d"
+    },
+    {
+      "file": "Column_Pipes.gltf",
+      "sha256": "7b5a852e82ae98fdb717a878372b1fa70a4efedc354ad9ac8cc106171d7e97b5"
+    },
+    {
+      "file": "Door_Frame_Square.bin",
+      "sha256": "34bc96ea81fdafbf7bca0f439c7b94f125108f58278d599df4c460c08259178e"
+    },
+    {
+      "file": "Door_Frame_Square.gltf",
+      "sha256": "057175188e8899a281d5c768a2de314cf9721071210bcfe4efc193c8de5e2197"
+    },
+    {
+      "file": "License_Standard.txt",
+      "sha256": "885b700f02932c08a41163b35cc97d1abe0895a05de29d9a9062fde5132969a8"
+    },
+    {
+      "file": "Platform_DarkPlates.bin",
+      "sha256": "699fed9cc818a93f110a5a201e01ba18e40a9703e9afdfffb9f9c2fa1c7ce7b2"
+    },
+    {
+      "file": "Platform_DarkPlates.gltf",
+      "sha256": "1fb445848b118fcda47b9c8c4ecd5c25d0120c4633877a0204564b285d3b262b"
+    },
+    {
+      "file": "Prop_AccessPoint.bin",
+      "sha256": "b490a23edf6226c5c699376d8368bb4a86d30381ca95a1950264bc922143b5e8"
+    },
+    {
+      "file": "Prop_AccessPoint.gltf",
+      "sha256": "23281aebdf5904403c71217c5ca45c4e901b978b452ddfba9e968fd01b0aac77"
+    },
+    {
+      "file": "Prop_Cable_1.bin",
+      "sha256": "cc1f47046fc1f3fdf8e02d1c7e867eadc5d5501e8fb2ebfe371c2dbf168efabe"
+    },
+    {
+      "file": "Prop_Cable_1.gltf",
+      "sha256": "d121066c92686f1b22440393f40cb5faace5fd9f97da4fca81e144f0a80928f1"
+    },
+    {
+      "file": "Prop_Cable_3.bin",
+      "sha256": "c40fb11f91f3abfacc05b58a647925b859811ebdbdc265ccc9654c4d9ffddcb7"
+    },
+    {
+      "file": "Prop_Cable_3.gltf",
+      "sha256": "188197d1d0cb93daa001b326babbbe9af8936b1337585109f3ee21359862fecd"
+    },
+    {
+      "file": "Prop_Computer.bin",
+      "sha256": "4edcd2674633831714ae8aafe7174be52c2f3d21f24e009fd7e9417e27eb788d"
+    },
+    {
+      "file": "Prop_Computer.gltf",
+      "sha256": "724525353d0c24a0596f77d5d461bd3cf58685e6e2c3abc1b5df3141759912f4"
+    },
+    {
+      "file": "Prop_Light_Small.bin",
+      "sha256": "d31557d8a0bca16e31cb578cc90528cc484908b641c897b5bb0f55335e292054"
+    },
+    {
+      "file": "Prop_Light_Small.gltf",
+      "sha256": "0f9cbbe00a3ca817278dfac3e9f20eab3feec4c7a74b3d4ca32560a517e6f38a"
+    },
+    {
+      "file": "Prop_Light_Wide.bin",
+      "sha256": "2ec8fa4cbe5d26f208a1b3a4a20635d1524359bbacdfed282ddc90e2358aa96c"
+    },
+    {
+      "file": "Prop_Light_Wide.gltf",
+      "sha256": "bad2b6ffc330aaa185700edb7487f4c8315291fd23d834844f68d6c1695fff40"
+    },
+    {
+      "file": "Prop_Vent_Small.bin",
+      "sha256": "d577e41ecae119635009de90e5d18343764a5d1d0d2d08e677ca80d431020fa9"
+    },
+    {
+      "file": "Prop_Vent_Small.gltf",
+      "sha256": "4d0e84335dfba7780fe9463c631040e1f0aac7b7814effede3c589b3d4c9db72"
+    },
+    {
+      "file": "Prop_Vent_Wide.bin",
+      "sha256": "20bdac5e69a095731643b34d37a31363a44dddb54d83baae92e5bd0dfa24dea7"
+    },
+    {
+      "file": "Prop_Vent_Wide.gltf",
+      "sha256": "eb5501d4e1254f75268679f57a1c1b68e11fb47d26557159be4385399b2ea4f6"
+    },
+    {
+      "file": "ShortWall_MetalPlates_Straight.bin",
+      "sha256": "42f66326a8707e4c4f63d8e9b9dc94b0072778a59612d98e7f0aef92aaae7c92"
+    },
+    {
+      "file": "ShortWall_MetalPlates_Straight.gltf",
+      "sha256": "2208fb9ea62337f4bc39d3c51766ab3a8a337c55dcb71c861df4307a169051c0"
+    },
+    {
+      "file": "T_Decals.png",
+      "sha256": "cfd1dfe9d3c86a7f5f9bc2e516d935599a70854090f413a29aec0ced1d6c908a"
+    },
+    {
+      "file": "T_PaddedWall_BaseColor.png",
+      "sha256": "7b431c76896c8d2de736e33271049fc869f2a8a5c0632678c9f030146e90c650"
+    },
+    {
+      "file": "T_PaddedWall_Normal.png",
+      "sha256": "141c075ee32a4dda83c4b954076ea563b86e2a6329d5c536aa7ddccb6c1328bf"
+    },
+    {
+      "file": "T_PaddedWall_ORM.png",
+      "sha256": "555039f51a71803be3d617ac03eac05e840ec5b36c269de2115a50e956bff3b2"
+    },
+    {
+      "file": "T_Trim_01_BaseColor_Red.png",
+      "sha256": "15fc0e344ed35483bc771aaa95c1c2a0b0ec2349a893cf24af18b8742f0842ac"
+    },
+    {
+      "file": "T_Trim_01_Normal.png",
+      "sha256": "1aec7ad47a642fc68216b5a3119341b7dca038c1fc9493df8a15ad4aa27ddbcf"
+    },
+    {
+      "file": "T_Trim_01_ORM.png",
+      "sha256": "6ab7ad231df22867652048ebfd602684a9072d45c483ca57df0fcd4cb2cb4feb"
+    },
+    {
+      "file": "T_Trim_02_BaseColor_Red.png",
+      "sha256": "4a08abf8dc0a5bf558a0ae38dc0d70eddc328eaa8060725d07b95d7c8a75663c"
+    },
+    {
+      "file": "T_Trim_02_Normal.png",
+      "sha256": "7faaa7059192f43aded9cc2f93917dd54fd14545509c37318d4e6bf0a8104960"
+    },
+    {
+      "file": "T_Trim_02_ORM.png",
+      "sha256": "2a433e6a7fbcec375b5c5e5c7aa57dbe1fd23ca6592f48c52d09dde2d622aab8"
+    },
+    {
+      "file": "T_Trim_03_BaseColor.png",
+      "sha256": "2a15eadbedbc928d771ed8f2a7a8c1a16bce89b2836a0ecf34ece7e2fab96769"
+    },
+    {
+      "file": "T_Trim_03_Cables.png",
+      "sha256": "758a95beccdc9f0621d8b8a283ee2593e04b56f1cd32776165ec85e1568e8eb8"
+    },
+    {
+      "file": "T_Trim_03_Normal.png",
+      "sha256": "b2c3238cbe2586e44df0b00179adf85e5b7ac7fed1713ec0b807482245a30738"
+    },
+    {
+      "file": "T_Trim_03_ORM.png",
+      "sha256": "c57134b5d496b39b955a87765ea32b93567b1ab494fe6b890de24c75dcfd6fe4"
+    },
+    {
+      "file": "TopSimple_Straight.bin",
+      "sha256": "5819f09b3c4c576d38d73eebc1fa33d1026ee3c8fac59cc9bd9c7064728ff550"
+    },
+    {
+      "file": "TopSimple_Straight.gltf",
+      "sha256": "c114644c2f3133e179406eb2a788459fadad956fe1794a216d5ac85cc9e23053"
+    },
+    {
+      "file": "WallAstra_Straight_Flat.bin",
+      "sha256": "4979819c780de114f8daa39b53441808ce058de019663355b54876697ac171fe"
+    },
+    {
+      "file": "WallAstra_Straight_Flat.gltf",
+      "sha256": "cbb4cb905dcfd6a806217f3b72d57eab42e637d52fcb1faf0edfbaf8b4d89506"
+    }
+  ]
+}

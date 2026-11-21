@@ -1,0 +1,4 @@
+Metal Office Desk by Poly Haven contributors
+https://polyhaven.com/a/metal_office_desk
+CC0 1.0: https://polyhaven.com/license
+Original source files from existing verified repository cache. Scene material overrides adapt surface response.
