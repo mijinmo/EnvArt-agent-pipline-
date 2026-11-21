@@ -1,0 +1,88 @@
+{
+  "provider": "Kenney",
+  "pack": "Castle Kit 2.0",
+  "source": "https://kenney.nl/assets/castle-kit",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "retrieved": "2026-11-12",
+  "archive_sha256": "921f3f73927bb23106cae34bc21d5ab4b033a9fc120475e96f714a406e3169df",
+  "selection_reason": "Low-poly coherent architecture, foliage and rocks; small GLB files; explicit commercial-use and redistribution permission. Import only used candidates.",
+  "files": [
+    {
+      "file": "wall.glb",
+      "sha256": "b2ea00acbf4ba91ff0d4b8b942edf9fa12d821abd0b2c945c57a2b9b3153cfe3"
+    },
+    {
+      "file": "wall-half.glb",
+      "sha256": "4f0baca90eb52d96717aaabf36db98f1f2b554876f44da533b57dd92b6f67965"
+    },
+    {
+      "file": "wall-pillar.glb",
+      "sha256": "22d359abfaa3cf3dc5a2fece09a108024a07a4e263b21a4a0689da0e630699ed"
+    },
+    {
+      "file": "wall-corner.glb",
+      "sha256": "82d27b869162b6a9ee19b0d7480913f56928b6620708f3b3899131495803cc9a"
+    },
+    {
+      "file": "tower-square-base.glb",
+      "sha256": "996887e98957eeea2ba7b5d14f0d17877c91e4e99e1c5b8ee57d87b7f7c9d5e8"
+    },
+    {
+      "file": "tower-square-mid.glb",
+      "sha256": "34a43b162b0984df0c691cb12fcd169ff374412deca0de5fdfdd702a9fa0c98f"
+    },
+    {
+      "file": "tower-square-top.glb",
+      "sha256": "5e98cdf2bf4d885edc3fa514719f80d63872e11c54ee629c11859223dad8489c"
+    },
+    {
+      "file": "tower-square-arch.glb",
+      "sha256": "90ccb41a792ea3c5b8c98a3f18b710b52ebfdcd1e389024168c5ac6e591dd564"
+    },
+    {
+      "file": "tower-hexagon-base.glb",
+      "sha256": "1185110eb885e70652558465bfabd07b80bb09afaa7b4be0a2e309fd685982b9"
+    },
+    {
+      "file": "tower-hexagon-top.glb",
+      "sha256": "22a043cde795ebc6e5720daee4944f468de5f0ef62296495d0374d4b169ec892"
+    },
+    {
+      "file": "rocks-large.glb",
+      "sha256": "7ea1ee769eb063b192c3c3744cd32a11616320f7ca491fbe23289552f6655595"
+    },
+    {
+      "file": "rocks-small.glb",
+      "sha256": "d860d3a053e1fc7b5825a39f6df68f14c49bab7443c1703e1f5b28444bd60e0d"
+    },
+    {
+      "file": "tree-large.glb",
+      "sha256": "a72a7c237857a9fb04d51b05e3513e97a4d5d5572a709b3251f96b5bffd0a5ab"
+    },
+    {
+      "file": "tree-small.glb",
+      "sha256": "ad5b2d7225241eb0599dbc7f1a9f9c39915be56ccccf88ad091bc9c1b4334034"
+    },
+    {
+      "file": "tree-log.glb",
+      "sha256": "50b4d452ee818afa9b37f325a594bdd4ffc1cef0f3c87ff3908251350c9960bf"
+    },
+    {
+      "file": "tree-trunk.glb",
+      "sha256": "f07a2ed87d6a636aba46a0ec1e9ffae27b17b4c6ae019e77924bdb9b8f6fe28f"
+    },
+    {
+      "file": "flag-banner-long.glb",
+      "sha256": "e6a4433f5770b9fc31bf67d72424a877d5c010486d5b7373ce7af900566827e4"
+    },
+    {
+      "file": "flag-pennant.glb",
+      "sha256": "741368448bd21991700a488dfc5125330594c4dccd9395feecaa6bbfa682b65d"
+    },
+    {
+      "file": "Textures/colormap.png",
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    }
+  ]
+}

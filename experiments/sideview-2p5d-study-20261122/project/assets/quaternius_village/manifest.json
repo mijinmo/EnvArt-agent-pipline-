@@ -1,0 +1,434 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "edition": "Standard / free",
+  "source": "https://opengameart.org/content/medieval-village-megakit",
+  "downloaded": "2026-11-12",
+  "archive_sha256": "58c3e1b9713ee85749ade230c36e1195af5d96951435532b4411e993b46387bd",
+  "models": [
+    "DoorFrame_Flat_Brick",
+    "DoorFrame_Flat_WoodDark",
+    "Wall_UnevenBrick_Door_Flat",
+    "Wall_UnevenBrick_Straight",
+    "Wall_Plaster_Straight",
+    "Wall_Plaster_WoodGrid",
+    "Wall_Plaster_Window_Wide_Flat",
+    "Window_Wide_Flat1",
+    "WindowShutters_Wide_Flat_Open",
+    "Floor_UnevenBrick",
+    "Floor_WoodDark",
+    "Balcony_Cross_Straight",
+    "Balcony_Simple_Straight",
+    "Corner_Exterior_Wood",
+    "Corner_Exterior_Brick",
+    "Roof_Wooden_2x1",
+    "Roof_Log",
+    "Prop_ExteriorBorder_Straight1",
+    "Prop_ExteriorBorder_Straight2",
+    "Prop_Support",
+    "Prop_Vine1",
+    "Prop_Vine2",
+    "Prop_Vine4",
+    "Prop_Vine5",
+    "Prop_Brick1",
+    "Prop_Brick2",
+    "Prop_Brick3",
+    "Prop_Brick4",
+    "Prop_Wagon",
+    "Roof_RoundTile_2x1_Long",
+    "Roof_RoundTiles_4x4",
+    "Roof_RoundTiles_4x6",
+    "Roof_Front_Brick4",
+    "Roof_Tower_RoundTiles",
+    "Prop_Chimney",
+    "Prop_Chimney2",
+    "Door_1_Flat"
+  ],
+  "files": [
+    {
+      "file": "Balcony_Cross_Straight.bin",
+      "sha256": "82388737bc03af86030ec4e569df62b14ace74c1767c2ee006dc7a1130abf2a3"
+    },
+    {
+      "file": "Balcony_Cross_Straight.gltf",
+      "sha256": "4a7f10317c672de0309fea51d1911e5df6d61b6c5ab08093389b8588cf8826c9"
+    },
+    {
+      "file": "Balcony_Simple_Straight.bin",
+      "sha256": "1b74ba722dfd97e4511a630cb709e1be73bb08070cd4ad8c5d59c62f55bd51a2"
+    },
+    {
+      "file": "Balcony_Simple_Straight.gltf",
+      "sha256": "00b028b35860ca9a8c6af8e4b1946ca39a4b6cac29a8d283164f41f1d27f0360"
+    },
+    {
+      "file": "Corner_Exterior_Brick.bin",
+      "sha256": "0800f8ef9585be5632eb1446289bfee125c112ba3c16dbba1cd1c4f19f5db6f8"
+    },
+    {
+      "file": "Corner_Exterior_Brick.gltf",
+      "sha256": "5021a098ff1c69eb388b62ed73183d7db4ddfc7cf944e0dc24c48532567cc443"
+    },
+    {
+      "file": "Corner_Exterior_Wood.bin",
+      "sha256": "f3eaa2714897338fabee249e32e4be6846bac86081fee4576df0cac8d8ab6bbc"
+    },
+    {
+      "file": "Corner_Exterior_Wood.gltf",
+      "sha256": "8f1ad0c8d0cb656601be4b6a48ca1ed5574d182c814ff27508bc91c81d0959a0"
+    },
+    {
+      "file": "DoorFrame_Flat_Brick.bin",
+      "sha256": "83b377e0df1cfb8fd4cda0aec94e9b83ea250b89fa4265dc5ea9cb5301c84337"
+    },
+    {
+      "file": "DoorFrame_Flat_Brick.gltf",
+      "sha256": "494e41138191781ff96a4cc47687b3bb57ae81007d62a13a6303dd9e4cef9c75"
+    },
+    {
+      "file": "DoorFrame_Flat_WoodDark.bin",
+      "sha256": "1e59d95393867a3cfa0612bea2086018d5ddcb3252969525679391a52e16f94c"
+    },
+    {
+      "file": "DoorFrame_Flat_WoodDark.gltf",
+      "sha256": "e12b923833fe91ba7c26c3984b0d7860a498bc955f6092b2af9fc0f3012105c6"
+    },
+    {
+      "file": "Door_1_Flat.bin",
+      "sha256": "f2235efcb17e3c7c761eba632bba8901f0299e65a27483528b486fbaece29bb5"
+    },
+    {
+      "file": "Door_1_Flat.gltf",
+      "sha256": "7e69ba9bcaf45238daa22b96461e9af6c80a59f422f9effb6de7f32e1fc677d8"
+    },
+    {
+      "file": "Floor_UnevenBrick.bin",
+      "sha256": "2205075c87d65d157c735206450b45183dfc24f8185e2e5db706974ac2b5567e"
+    },
+    {
+      "file": "Floor_UnevenBrick.gltf",
+      "sha256": "8943b3e5a80a56ac7e3670ae90075e40e610f4c6fa6cbaabf643a57ff8a62dce"
+    },
+    {
+      "file": "Floor_WoodDark.bin",
+      "sha256": "cb43341c0969b62d82c11e2759caec854ea97ecba3bcb505d3300d57ebba7b81"
+    },
+    {
+      "file": "Floor_WoodDark.gltf",
+      "sha256": "2ee57724a06289164fee75ad62eb770f7f8cc9cb1b51c041da477c086775cd8d"
+    },
+    {
+      "file": "License_Standard.txt",
+      "sha256": "ec6fd5004514cb0515a7dc1065f474644d31698861597b32e1745945ffec71de"
+    },
+    {
+      "file": "Prop_Brick1.bin",
+      "sha256": "4ab322158fe5892bf1a5f2fe7f8ffaadf232588db173bfa6dd39a2f7f49783dd"
+    },
+    {
+      "file": "Prop_Brick1.gltf",
+      "sha256": "7930b8037d1b50c3510eff18bf902417b799fde476f90d3babca9e03cdb83e0b"
+    },
+    {
+      "file": "Prop_Brick2.bin",
+      "sha256": "cfac44667692361f46b9c73c7faeb421d0c77ba70f1275df88352850018cb8e8"
+    },
+    {
+      "file": "Prop_Brick2.gltf",
+      "sha256": "8b3143dfe27d409f1abeac4e2cfc6d4b9bcb1ae6d8a298ef3623de0885a733a1"
+    },
+    {
+      "file": "Prop_Brick3.bin",
+      "sha256": "86a0b05bc38513a1d381170ee541f2d9ea0bc726f42eb317820f3dbfc2ae1940"
+    },
+    {
+      "file": "Prop_Brick3.gltf",
+      "sha256": "b79e0717cd385d1ad10d27fffe15f9b96baa72442d5fb8f2c5d89940683d7125"
+    },
+    {
+      "file": "Prop_Brick4.bin",
+      "sha256": "43b46c5ffe8cdf021ad588ad9e78044c7ee3f2b0ebfda72efea8c165b73bbafb"
+    },
+    {
+      "file": "Prop_Brick4.gltf",
+      "sha256": "6801f77751b8def76043d0598cafc66d8293852bcbca36a31e0498ca7d0e3026"
+    },
+    {
+      "file": "Prop_Chimney.bin",
+      "sha256": "d8fb86bae7360511b362240c22431c6a463a38a3519059e0abf7fc343ef920f9"
+    },
+    {
+      "file": "Prop_Chimney.gltf",
+      "sha256": "eeda2bd328baa49ce2260b2df1f0280db4ebc3752fa784371b2da5752697c3ba"
+    },
+    {
+      "file": "Prop_Chimney2.bin",
+      "sha256": "07d34b621ea375292e907a92f9231da9539d44224b7b54ff0aaf8d4cc871dc09"
+    },
+    {
+      "file": "Prop_Chimney2.gltf",
+      "sha256": "45e93dfdacd304864ec90fd8a36392bf743b62a35d3b850ac3a25cb4330dc3c6"
+    },
+    {
+      "file": "Prop_ExteriorBorder_Straight1.bin",
+      "sha256": "336d4110e55f663690cd5ef1c1ac2f109f7383ee36f86ca21d3067b0234453f8"
+    },
+    {
+      "file": "Prop_ExteriorBorder_Straight1.gltf",
+      "sha256": "32d565f8338fc0b50a3493bad39e5fc4e2df536ff9e1506443708e92d969f5e4"
+    },
+    {
+      "file": "Prop_ExteriorBorder_Straight2.bin",
+      "sha256": "abf2c9055884e708bcbb3a8663e32c851f804312be85ba4f53ba2b9137274dee"
+    },
+    {
+      "file": "Prop_ExteriorBorder_Straight2.gltf",
+      "sha256": "2e7220f1567ed484f29a840c6120d61f1ab1d134a67b972871b22d82dff7d671"
+    },
+    {
+      "file": "Prop_Support.bin",
+      "sha256": "c0aa629b294c52071f66feb89e7bc771480391bfe012f33c60b5cb4aa9881897"
+    },
+    {
+      "file": "Prop_Support.gltf",
+      "sha256": "c7292aa4f0f73a3d83c2ea5d0f9f3c726e17b13156679c9dfa043646a9f08037"
+    },
+    {
+      "file": "Prop_Vine1.bin",
+      "sha256": "43970bd08ae75708cfa440706e1b4b6ec2164280ec804da6d92bf9e8ac854ece"
+    },
+    {
+      "file": "Prop_Vine1.gltf",
+      "sha256": "5326ab98fef8a68b3b4d980c066d882b21e1d0489ccbc1228fd4b156d5f21ac1"
+    },
+    {
+      "file": "Prop_Vine2.bin",
+      "sha256": "5589815dd2f594054e947fab94a4f120d4769463a795c9de1592f34788b18f2e"
+    },
+    {
+      "file": "Prop_Vine2.gltf",
+      "sha256": "773e4763b072359d9b563a63de6fd9b6e79271f145b4e1fabceb5d3481ce9e0f"
+    },
+    {
+      "file": "Prop_Vine4.bin",
+      "sha256": "0c0c57c791231ca8d2bf012a1c28556d70a44c94ad994bb44ba4d083e123652a"
+    },
+    {
+      "file": "Prop_Vine4.gltf",
+      "sha256": "6d5f7dee9b28dbbc7c7fc549ba5b5c45a66185e3f76840d6dd7240e81afdafb9"
+    },
+    {
+      "file": "Prop_Vine5.bin",
+      "sha256": "df5fed3c089bc0dbc077d82647e8064919abcdabf24732d8d99f825a1e020a3a"
+    },
+    {
+      "file": "Prop_Vine5.gltf",
+      "sha256": "a6fce6fa6dfddf0cbe51ba831eae73a24bf50389eac6961f5034edc8bd141580"
+    },
+    {
+      "file": "Prop_Wagon.bin",
+      "sha256": "2b5e35c01572b1447bdd3dcf4246fefe5aa5415d4685451b4747b80048d8f544"
+    },
+    {
+      "file": "Prop_Wagon.gltf",
+      "sha256": "f81bf401710cd59f1325a5cdb36d335c2e5277c8416d79eefffdc646ec3fae83"
+    },
+    {
+      "file": "Roof_Front_Brick4.bin",
+      "sha256": "749472d85fbbe9996b20162c8d58dbb49b7271a7d865b3856e761d0a288cc8e5"
+    },
+    {
+      "file": "Roof_Front_Brick4.gltf",
+      "sha256": "a231d35e4929f087526a6126a25a2732efa3799be6119d55107c241ca124564f"
+    },
+    {
+      "file": "Roof_Log.bin",
+      "sha256": "aa78387c070126a4b4b56f289dde263e315eb88b2733dc238d5a8d2a6ca97812"
+    },
+    {
+      "file": "Roof_Log.gltf",
+      "sha256": "10ef55acbb4cc3c9b4e6e5d8ec5b20d8ec82663ed229f993379aa7040f81536c"
+    },
+    {
+      "file": "Roof_RoundTile_2x1_Long.bin",
+      "sha256": "05e5cae2428acd091fe303bebf03e5ea586866ece05e3bb4efd5ae151eb25089"
+    },
+    {
+      "file": "Roof_RoundTile_2x1_Long.gltf",
+      "sha256": "a284ae84bd9eb0d9a6b05e42aa64e23d826f773ff8706619c80f4a346a0d279f"
+    },
+    {
+      "file": "Roof_RoundTiles_4x4.bin",
+      "sha256": "414067398f08e15e7c5c2c56b648770d3d49427489f073b0078ffde81673af67"
+    },
+    {
+      "file": "Roof_RoundTiles_4x4.gltf",
+      "sha256": "c6a7ce0649b897a7746929b44c448f4343f55ccd969ca1e4462f2f18b61676e4"
+    },
+    {
+      "file": "Roof_RoundTiles_4x6.bin",
+      "sha256": "f68f36721d6d1000c1f16d1d1482c33479aa6ea518d2872e9649ce762b01c52c"
+    },
+    {
+      "file": "Roof_RoundTiles_4x6.gltf",
+      "sha256": "4d969026106822eb2106a32a8d596416e069f63e20f53b475839076fb635ed5a"
+    },
+    {
+      "file": "Roof_Tower_RoundTiles.bin",
+      "sha256": "9b476b9ce73bb9fe17813f03316a674402a4cf9f91589cc2fbacdf2188cfbfef"
+    },
+    {
+      "file": "Roof_Tower_RoundTiles.gltf",
+      "sha256": "b484ef0275ec4012933f020a6d60d84ec8ed3816c7b97b19565db0e493cbb74e"
+    },
+    {
+      "file": "Roof_Wooden_2x1.bin",
+      "sha256": "e8f8a04efef5fbae79b450b04f93399429bc1025c7fd4bc0ce4b8634dbe85467"
+    },
+    {
+      "file": "Roof_Wooden_2x1.gltf",
+      "sha256": "8b93dcb9bfa468842f45738f3d900c05ebf96db276a8dbdd78788420372b60c0"
+    },
+    {
+      "file": "T_Brick_BaseColor.png",
+      "sha256": "5515f57e61767838f53f4b9e25aa83b1382ad345ff6b446482718b5140c33813"
+    },
+    {
+      "file": "T_Brick_Normal.png",
+      "sha256": "6349f1fb3eed9985e6f969c1de04b9e92490020a12ba19a44b96ea808fb27c1a"
+    },
+    {
+      "file": "T_Brick_Roughness.png",
+      "sha256": "981e7a4f8e3119749b2fb3d557e3d0ba0551e75a39b467cff0a3a948a9392716"
+    },
+    {
+      "file": "T_MetalOrnaments_BaseColor.png",
+      "sha256": "28603125908bb443ef7ac405d6bf2978dafdd348081c1dfd21630ac09862b668"
+    },
+    {
+      "file": "T_MetalOrnaments_Roughness.png",
+      "sha256": "2de0135d6ffc3021e2550860107f531d0e64fdd0b46b3bf06f2f85e30b818874"
+    },
+    {
+      "file": "T_Plaster_BaseColor.png",
+      "sha256": "98547ca83888307e3ffa96384ce058b7622affe0a42add3b36d0b48618c5eda4"
+    },
+    {
+      "file": "T_Plaster_Normal.png",
+      "sha256": "8b9617b561466cce00d5a0628eae7bef208dcf63445d72570e7f8e5057fed0d4"
+    },
+    {
+      "file": "T_Plaster_ORM.png",
+      "sha256": "7be9d64a6154ba12bb7086e1d6774a7d5bbbc95775efb614f6ff40a4787fe0c7"
+    },
+    {
+      "file": "T_RockTrim_BaseColor.png",
+      "sha256": "aa571cd612091a8f4c95393f8f938bd6e5d47a8cdfd9c896b60a4b37903e2c7c"
+    },
+    {
+      "file": "T_RockTrim_Normal.png",
+      "sha256": "f93f82f7e69aa0bf1900f8ab3f252390f091b771f0b84a345c5fefb0f0155cd3"
+    },
+    {
+      "file": "T_RockTrim_ORM.png",
+      "sha256": "5287dd9a4e9fb7423af8d8440a8de8bdb8910f9f37ba148f619a6eddf58d5bc8"
+    },
+    {
+      "file": "T_RoundTiles_BaseColor.png",
+      "sha256": "acf388ebd1a97346e1e5b59091cfc609ed15b4f70b83a626089f12a82a2d9997"
+    },
+    {
+      "file": "T_RoundTiles_Normal.png",
+      "sha256": "e8cf202fbc1ec36c3f5389a25ab9c99f015d49ae0ca963d0404614c3e1e8f687"
+    },
+    {
+      "file": "T_RoundTiles_Roughness.png",
+      "sha256": "02c5cdbb6768de6ac674a343265c020c5bd6ef70fd7ba555d9b9dc7445179366"
+    },
+    {
+      "file": "T_UnevenBrick_BaseColor.png",
+      "sha256": "ee0f096df6110e943cd9739680b61bc0ffd6fe00db752c5c3797941057a95ebc"
+    },
+    {
+      "file": "T_UnevenBrick_Normal.png",
+      "sha256": "bbf623cc35720d67a02079b20b9a6d9641c3686952b288cda97dec41e4b8acad"
+    },
+    {
+      "file": "T_UnevenBrick_Roughness.png",
+      "sha256": "da170cb92ac5479b93ca0c0002b783f1186a146e6e3124891ce7bfe6e1a8a942"
+    },
+    {
+      "file": "T_VineLeaf_png.png",
+      "sha256": "8c80a9835d29cf7b1360ca46c2a96cedc0bfffee59f09db892f64db6825e3188"
+    },
+    {
+      "file": "T_WoodTrim_BaseColor.png",
+      "sha256": "a59f410b07a9bc5f0664df3ba7a2c1e37acffc7979795911f3fc8730ab60e33e"
+    },
+    {
+      "file": "T_WoodTrim_Normal.png",
+      "sha256": "5847623e4ed6c206e59f32d1718ee75dcb2b49a1d55ede7ef70a254739caf4a8"
+    },
+    {
+      "file": "T_WoodTrim_Roughness.png",
+      "sha256": "e888464fd4199d458d8cf39e00fa07d56f8a0bcb658aa03b4a7c95d466ceefa3"
+    },
+    {
+      "file": "Wall_Plaster_Straight.bin",
+      "sha256": "986bf171c62e9019eea9aab709d19d07a3bd5021ff76ab749f57563f364858f3"
+    },
+    {
+      "file": "Wall_Plaster_Straight.gltf",
+      "sha256": "3bef920cbba4d124df4ca401439d893e0569f88f56049239e3480a04008fd0ac"
+    },
+    {
+      "file": "Wall_Plaster_Window_Wide_Flat.bin",
+      "sha256": "45e3b1de7fac151e1192926c6156c6a8c16918d3fa5b0f85e2f56eb0026f0df6"
+    },
+    {
+      "file": "Wall_Plaster_Window_Wide_Flat.gltf",
+      "sha256": "548aab2c01d593a744a9704511068e5485d84bee6f722c50e071cf866aa2ba62"
+    },
+    {
+      "file": "Wall_Plaster_WoodGrid.bin",
+      "sha256": "c97643db2a58aed8e5e8b4a9f62afc08a27a23354ce746af5e4a9e626ac8408c"
+    },
+    {
+      "file": "Wall_Plaster_WoodGrid.gltf",
+      "sha256": "63493359c240943f1d70a53ea021fdf9726175642bc765ab5af03967b3b8b0c0"
+    },
+    {
+      "file": "Wall_UnevenBrick_Door_Flat.bin",
+      "sha256": "6cf49baa77c62df4f7f298a049d7d1905338eabd82bc8c7a566cef538483cc15"
+    },
+    {
+      "file": "Wall_UnevenBrick_Door_Flat.gltf",
+      "sha256": "51c6364927fbe67bab7dc979bb7e95a98f2444fa59fe72dc3db6e50afce4136c"
+    },
+    {
+      "file": "Wall_UnevenBrick_Straight.bin",
+      "sha256": "4d3b14acd4c5e6fe450e13d930f6c9240f719ed22b959bb2e7674e731225f103"
+    },
+    {
+      "file": "Wall_UnevenBrick_Straight.gltf",
+      "sha256": "3b004772bace43cc43bf76f3c75d47f68dce175510a26690468efe63bfc05f95"
+    },
+    {
+      "file": "WindowShutters_Wide_Flat_Open.bin",
+      "sha256": "522cd3f266423912a6f51d6a2b58e92857da9541942415d589157b5beb9828a6"
+    },
+    {
+      "file": "WindowShutters_Wide_Flat_Open.gltf",
+      "sha256": "af66b3955894e35a88f63743984d82cf692ba4c0c00166f790ae337f50a1e240"
+    },
+    {
+      "file": "Window_Wide_Flat1.bin",
+      "sha256": "95aabb93aa96572ce4f70934e6a2b4270ef9696fca52756572f30c1ebb3e26a9"
+    },
+    {
+      "file": "Window_Wide_Flat1.gltf",
+      "sha256": "28b91e0693bac3763248c72497f234085fccb646f1adee505dc87c62b5ad8403"
+    }
+  ],
+  "modifications": "None; original glTF, buffers, and texture dependencies."
+}

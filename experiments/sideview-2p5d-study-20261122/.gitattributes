@@ -1,0 +1,3 @@
+*.bin binary
+*.glb binary
+project/assets/**/License* -whitespace

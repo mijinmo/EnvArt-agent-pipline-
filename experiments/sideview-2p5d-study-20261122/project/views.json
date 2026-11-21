@@ -1,0 +1,58 @@
+[
+  {
+    "name": "overall",
+    "position": [
+      0,
+      6,
+      28
+    ],
+    "target": [
+      0,
+      2,
+      -3
+    ],
+    "fov": 36
+  },
+  {
+    "name": "close",
+    "position": [
+      -3,
+      3.6,
+      14
+    ],
+    "target": [
+      -3,
+      1.6,
+      -4
+    ],
+    "fov": 34
+  },
+  {
+    "name": "transition",
+    "position": [
+      8,
+      4.2,
+      20
+    ],
+    "target": [
+      8,
+      2,
+      -5
+    ],
+    "fov": 36
+  },
+  {
+    "name": "structure",
+    "position": [
+      12,
+      8,
+      12
+    ],
+    "target": [
+      0,
+      1,
+      -4
+    ],
+    "fov": 66
+  }
+]
